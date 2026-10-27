@@ -129,7 +129,10 @@ $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=tru
   let owner = null;
   let storageKey = null;
   let documentUrl = null;
+  let frameGeneration = 0, revision = 0, startedAt = null;
+  let saves = Promise.resolve();
   function hide() {
+    frameGeneration++;
     panel.hidden = true;
     frame.removeAttribute('srcdoc');
     frame.src = 'about:blank';
@@ -151,12 +154,52 @@ $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=tru
     };
     Object.defineProperty(window, 'localStorage', {value: storage, configurable: false});
   }
+  async function workstationControl(action) {
+    await refresh();
+    if (!session || !member?.ativo) throw Error('Sua sessão ou autorização da Sala de Aulas não está ativa.');
+    const rpc = {status:'workstation_aula_status', start:'workstation_aula_start', end:'workstation_aula_end', summary:'workstation_progresso_summary'}[action];
+    if (!rpc) throw Error('Operação inválida.');
+    if (action !== 'status' && member.papel !== 'administradora') throw Error('Operação exclusiva da professora.');
+    const result = await request('/rest/v1/rpc/' + rpc, {method:'POST', body:JSON.stringify({})});
+    if (action === 'start') startedAt = result.started_at;
+    return result;
+  }
   window.addEventListener('message', function (event) {
-    if (event.source !== frame.contentWindow || panel.hidden || !owner || session !== owner || !storageKey) return;
-    if (event.data?.type !== 'patricia-workstation-storage' || !event.data.data || typeof event.data.data !== 'object') return;
-    const entries = Object.entries(event.data.data);
+    if (event.source !== frame.contentWindow || panel.hidden || owner === null || owner !== epoch || !session || !member?.ativo || !storageKey) return;
+    const message = event.data;
+    if (message?.type === 'patricia-workstation-control') {
+      if (typeof message.requestId !== 'string' || !/^[A-Za-z0-9_-]{1,96}$/.test(message.requestId)) return;
+      if (!['status','start','end','summary'].includes(message.action)) return;
+      const requestId = message.requestId, generation = frameGeneration;
+      (async function () {
+        let reply;
+        try { reply = {type:'patricia-workstation-control-result', requestId, ok:true, result:await workstationControl(message.action)}; }
+        catch (error) { reply = {type:'patricia-workstation-control-result', requestId, ok:false, error:error.message || 'Operação não autorizada.'}; }
+        if (generation === frameGeneration && owner !== null && owner === epoch && !panel.hidden && event.source === frame.contentWindow) frame.contentWindow.postMessage(reply, '*');
+      })();
+      return;
+    }
+    if (message?.type !== 'patricia-workstation-storage' || !message.data || typeof message.data !== 'object') return;
+    const entries = Object.entries(message.data);
     if (entries.some(([key, value]) => !key.startsWith('wrp_') || typeof value !== 'string')) return;
-    try {localStorage.setItem(storageKey, JSON.stringify(Object.fromEntries(entries)));} catch (_) {}
+    const generation = frameGeneration, currentEpoch = epoch, cacheKey = storageKey;
+    const payload = Object.fromEntries(entries);
+    if (JSON.stringify(payload).length > 1000000) return;
+    saves = saves.catch(() => {}).then(async () => {
+      if (generation !== frameGeneration || currentEpoch !== epoch || panel.hidden) return;
+      try {
+        await refresh();
+        if (generation !== frameGeneration || currentEpoch !== epoch) return;
+        const result = await request('/rest/v1/rpc/workstation_progresso_save', {method:'POST',body:JSON.stringify({p_dados:payload,p_revisao:revision,p_iniciada_em:startedAt})});
+        if (generation !== frameGeneration || currentEpoch !== epoch) return;
+        revision = result.revision;
+        try {localStorage.setItem(cacheKey, JSON.stringify(payload));} catch (_) {}
+        frame.contentWindow.postMessage({type:'patricia-workstation-save-result',ok:true}, '*');
+      } catch (error) {
+        if (generation !== frameGeneration || currentEpoch !== epoch) return;
+        frame.contentWindow.postMessage({type:'patricia-workstation-save-result',ok:false,error:error.message}, '*');
+      }
+    });
   });
   close.addEventListener('click', function () {hide(); button.focus();});
   document.getElementById('logout').addEventListener('click', hide);
@@ -168,14 +211,20 @@ $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=tru
     status.textContent = 'Abrindo a Workstation…';
     try {
       await refresh();
-      const current = epoch;
+      const current = epoch, generation = ++frameGeneration;
+      const state = await workstationControl('status');
+      if (!state.active && !state.is_admin) throw Error('A aula está encerrada. Aguarde a professora.');
+      const progress = await request('/rest/v1/rpc/workstation_progresso_load', {method:'POST',body:'{}'});
+      if (current !== epoch || generation !== frameGeneration) return;
+      revision = progress.revision; startedAt = progress.started_at;
       const rows = await request('/rest/v1/sala_recursos?select=titulo,conteudo_html&id=eq.workstation-patricia');
-      if (current !== epoch || !session || !member?.ativo) return;
+      if (current !== epoch || generation !== frameGeneration || !session || !member?.ativo) return;
       if (!rows.length || !rows[0].conteudo_html) throw Error('A Workstation não está disponível para seu acesso.');
-      owner = session;
+      owner = epoch;
       storageKey = 'patricia-workstation-v1:' + document.getElementById('identity').textContent;
       let initial = {};
-      try {initial = JSON.parse(localStorage.getItem(storageKey) || '{}');} catch (_) {}
+      if (revision > 0) initial = progress.data;
+      else {try {initial = JSON.parse(localStorage.getItem(storageKey) || '{}');} catch (_) {}}
       if (!initial || typeof initial !== 'object' || Array.isArray(initial)) initial = {};
       initial = Object.fromEntries(Object.entries(initial).filter(([key, value]) => key.startsWith('wrp_') && typeof value === 'string'));
       const safeInitial = JSON.stringify(initial).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
