@@ -43,7 +43,8 @@ begin
  end if;
  insert into public.workstation_progresso(user_id) values(uid) on conflict do nothing;
  select * into item from public.workstation_progresso where user_id=uid for update;
- if item.revisao<>expected then raise exception 'Progresso atualizado em outra sessão. Reabra a Workstation.' using errcode='40001'; end if;
+ -- A business conflict must not use 40001: PostgREST retries serialization failures.
+ if item.revisao<>expected then raise exception 'Progresso atualizado em outra sessão. Reabra a Workstation.' using errcode='PT409'; end if;
  update public.workstation_progresso set dados=payload,revisao=revisao+1,atualizado_em=clock_timestamp() where user_id=uid returning * into item;
  return jsonb_build_object('revision',item.revisao);
 end;
