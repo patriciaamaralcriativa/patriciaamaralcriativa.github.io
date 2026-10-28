@@ -15,7 +15,7 @@ begin;
 -- 5. JWT professora: start/end/summary aprovados.
 -- 6. Após commit de end, nova transação de A: save e leitura do recurso negadas.
 -- 7. Durante save concorrente, end espera lock; após seu commit, novos saves negados.
--- 8. Revisão antiga: save gera SQLSTATE 40001 sem sobrescrever.
+-- 8. Revisão antiga: save gera SQLSTATE PT409 / HTTP 409, sem retry nem sobrescrita.
 -- 9. iniciada_em antigo após reabrir aula: save negado.
 -- 10. Payload fora do namespace, JSON inválido ou >1MB: save negado.
 -- 11. Após rollback de implantação, linhas anteriores de recurso e alunos inalteradas.
