@@ -231,10 +231,10 @@ $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=tru
       const bridge = '<script>(' + storageBridge.toString() + ')(' + safeInitial + ');<\/script>';
       const content = rows[0].conteudo_html.replace(/<head\b[^>]*>/i, match => match + bridge);
       if (documentUrl) URL.revokeObjectURL(documentUrl);
-      documentUrl = URL.createObjectURL(new Blob([content], {type: 'text/html;charset=utf-8'}));
-      frame.removeAttribute('srcdoc');
+      documentUrl = null;
+      frame.removeAttribute('src');
       panel.hidden = false;
-      frame.src = documentUrl;
+      frame.srcdoc = content;
       close.focus();
       status.textContent = 'Acesso exclusivo para alunos e pessoas autorizadas.';
     } catch (error) {
