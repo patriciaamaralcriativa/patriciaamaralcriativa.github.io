@@ -294,7 +294,7 @@ if(message?.type==='patricia-workstation-education'){
       await refresh();
       const current = epoch, generation = ++frameGeneration;
       const state = await workstationControl('status');
-      if (!state.active && !state.is_admin) throw Error('A aula está encerrada. Aguarde a professora.');
+      if (!state.access_allowed && !state.active && !state.is_admin) throw Error('Seu acesso à Workstation não está autorizado.');
       const progress = await request('/rest/v1/rpc/workstation_progresso_load', {method:'POST',body:'{}'});
       if (current !== epoch || generation !== frameGeneration) return;
       revision = progress.revision; startedAt = progress.started_at;
@@ -383,6 +383,7 @@ if(message?.type==='patricia-workstation-education'){
 })();
 </script>
 </body></html>
+
 
 
 
