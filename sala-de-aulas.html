@@ -117,7 +117,31 @@ $('logout').onclick=async()=>{const token=session?.access_token;clear();message(
 $('close').onclick=()=>{$('viewer').hidden=true;$('frame').srcdoc='';};
 $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=true;try{const file=$('file').files[0];if(!file||!(/\.html?$/i.test(file.name)))throw Error('Selecione um arquivo HTML.');if(file.size>20000000)throw Error('O arquivo ultrapassa 20 MB.');const html=await file.text();await refresh();await request('/rest/v1/sala_aulas',{method:'POST',body:JSON.stringify({titulo:$('title').value.trim(),descricao:$('description').value.trim(),conteudo_html:html,publicada:$('published').checked})});$('upload').reset();message('Aula salva.');await listLessons();}catch(e){message(e.message);}finally{$('save').disabled=false;}};
 (async()=>{try{session=JSON.parse(sessionStorage.getItem(SESSION)||'null');if(session)await openRoom();}catch(e){clear();message(e.message);}})();
-</script><section id="ws-viewer" hidden aria-label="Workstation Radiológica Patrícia"><header><strong>Workstation Radiológica Patrícia</strong><button id="ws-close" type="button" class="secondary">Voltar à sala de aulas</button></header><iframe id="ws-frame" title="Workstation Radiológica Patrícia" sandbox="allow-scripts allow-forms allow-modals allow-downloads" referrerpolicy="no-referrer"></iframe></section><script id="workstation-acesso">
+</script><section id="ws-viewer" hidden aria-label="Workstation Radiológica Patrícia"><header><strong>Workstation Radiológica Patrícia</strong><button id="ws-close" type="button" class="secondary">Voltar à sala de aulas</button></header><iframe id="ws-frame" title="Workstation Radiológica Patrícia" sandbox="allow-scripts allow-forms allow-modals allow-downloads" referrerpolicy="no-referrer"></iframe></section><script>// Compartilhado pelo host autenticado de homologação e testes HTTP reais.
+function createWorkAccountStore({uid,request,raw,assertCurrent=()=>{}}){
+ const bucket='workstation-t-trabalhos',uuid=value=>{if(typeof value!=='string'||!/^[0-9a-f-]{36}$/.test(value))throw Error('Identificador inválido.');return value;};
+ const hash=async text=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),v=>v.toString(16).padStart(2,'0')).join('');
+ function pack(work){const copy={...work};if(work.files)copy.files=work.files.map(file=>{const bytes=new Uint8Array(file.buffer);let binary='';for(let i=0;i<bytes.length;i+=16384)binary+=String.fromCharCode(...bytes.subarray(i,i+16384));return {name:file.name,base64:btoa(binary)};});return JSON.stringify(copy);}
+ function unpack(work){if(work.files)work.files=work.files.map(file=>({name:file.name,buffer:Uint8Array.from(atob(file.base64),v=>v.charCodeAt(0)).buffer}));return work;}
+ return async function action(type,payload={}){
+  assertCurrent();
+  if(type==='context')return {scope:'account',maxBytes:20971520};
+  if(type==='list'){const rows=await request('/rest/v1/workstation_trabalhos_v1?select=id,paciente_id,paciente_nome,modalidade,criada_em&order=criada_em.desc');assertCurrent();return rows.map(r=>({id:r.id,kind:r.modalidade,patient:{id:r.paciente_id,nome:r.paciente_nome},savedAt:r.criada_em}));}
+  if(type==='put'){
+   const work=payload.work;if(!work||!['radiografia','tomografia'].includes(work.kind)||!work.patient?.id||!work.patient?.nome)throw Error('Identifique o paciente antes de salvar.');
+   const id=crypto.randomUUID(),path=uuid(uid)+'/'+id+'.json',text=pack({...work,id}),size=new TextEncoder().encode(text).length;if(size>20971520)throw Error('O trabalho ultrapassa 20 MB. Baixe sua cópia e preserve os arquivos originais.');
+   const digest=await hash(text);assertCurrent();await raw('/storage/v1/object/'+bucket+'/'+path,{method:'POST',headers:{'Content-Type':'application/json','x-upsert':'false'},body:text});
+   try{assertCurrent();const rows=await request('/rest/v1/workstation_trabalhos_v1',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({id,aluno_id:uid,paciente_id:work.patient.id,paciente_nome:work.patient.nome,modalidade:work.kind,objeto_path:path,tamanho:size,sha256:digest})});assertCurrent();const downloaded=await raw('/storage/v1/object/authenticated/'+bucket+'/'+path);if(await hash(downloaded)!==digest)throw Error('A verificação de integridade falhou. O resultado não foi confirmado como salvo.');return {id:rows[0].id,savedAt:rows[0].criada_em};}
+   catch(error){throw Error('Não foi possível confirmar o salvamento na conta. Mantenha o trabalho aberto e baixe uma cópia. '+error.message);}
+  }
+  if(type==='get'){
+   const rows=await request('/rest/v1/workstation_trabalhos_v1?select=*&id=eq.'+uuid(payload.id));if(!rows.length)throw Error('Trabalho indisponível para esta conta.');const row=rows[0];if(row.aluno_id!==uid)throw Error('Trabalho indisponível para esta conta.');const text=await raw('/storage/v1/object/authenticated/'+bucket+'/'+row.objeto_path);assertCurrent();if(await hash(text)!==row.sha256)throw Error('A integridade do trabalho não foi confirmada.');const work=unpack(JSON.parse(text));if(work.patient?.id!==row.paciente_id||work.kind!==row.modalidade)throw Error('A identificação do trabalho não confere.');return work;
+  }
+  throw Error('Operação não reconhecida.');
+ };
+}
+if(typeof module!=='undefined')module.exports=createWorkAccountStore;
+</script><script id="workstation-acesso">
 /* Acesso da Workstation: complemento independente da sala existente. */
 (function () {
   'use strict';
@@ -167,6 +191,63 @@ $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=tru
   window.addEventListener('message', function (event) {
     if (event.source !== frame.contentWindow || panel.hidden || owner === null || owner !== epoch || !session || !member?.ativo || !storageKey) return;
     const message = event.data;
+// Inserir dentro do handler autenticado, após validar event.source/owner/epoch.
+if(message?.type==='t:local-work'){
+ const requestId=message.requestId,generation=frameGeneration,currentEpoch=epoch;
+ if(typeof requestId!=='string'||requestId.length>100||!['context','list','put','get'].includes(message.action))return;
+ (async()=>{let reply;try{
+  await refresh();const assertCurrent=()=>{if(!session||!member?.ativo||owner!==epoch||epoch!==currentEpoch||frameGeneration!==generation)throw Error('A sessão mudou. Entre novamente antes de salvar.');};assertCurrent();
+  const user=await request('/auth/v1/user');assertCurrent();
+  const raw=async(path,options={})=>{assertCurrent();const response=await fetch(API+path,{...options,headers:{apikey:KEY,Authorization:'Bearer '+session.access_token,...options.headers}});const text=await response.text();if(!response.ok)throw Error('Armazenamento recusou a operação ('+response.status+').');assertCurrent();return text;};
+  const store=createWorkAccountStore({uid:user.id,request,raw,assertCurrent}),result=await store(message.action,message);reply={type:'t:local-work-result',requestId,ok:true,result};
+ }catch(error){reply={type:'t:local-work-result',requestId,ok:false,error:error.message};}
+ if(generation===frameGeneration&&epoch===currentEpoch&&owner!==null&&!panel.hidden&&event.source===frame.contentWindow)frame.contentWindow.postMessage(reply,'*');
+ })();return;
+}
+
+// Inserido somente no escopo autenticado da Sala de Aulas, depois da validação de event.source.
+if(message?.type==='patricia-workstation-education'){
+ const requestId=message.requestId,generation=frameGeneration,currentEpoch=epoch;
+ if(typeof requestId!=='string'||!/^[A-Za-z0-9_-]{1,96}$/.test(requestId))return;
+ const actions=['context','overview','activities','save_activity','publish_activity','close_activity','submissions','draft','save_draft','submit','cancel_draft','feedback','review','upload','image'];
+ if(!actions.includes(message.action)||!message.params||typeof message.params!=='object')return;
+ (async()=>{let reply;try{
+  await refresh();if(!session||!member?.ativo||owner!==epoch)throw Error('Entre novamente na Sala de Aulas.');
+  const p=message.params,id=value=>{if(typeof value!=='string'||!/^[0-9a-f-]{36}$/i.test(value))throw Error('Identificador inválido.');return encodeURIComponent(value);};
+  const row=async(path,method,body)=>{const rows=await request(path,{method,headers:{Prefer:'return=representation'},body:JSON.stringify(body)});if(!Array.isArray(rows)||!rows.length)throw Error('Operação não autorizada ou registro indisponível.');return rows[0];};
+  let result;
+  if(message.action==='context'){const user=await request('/auth/v1/user');result={role:member.papel,uid:user.id};}
+  if(message.action==='overview')result=await request('/rest/v1/workstation_entregas_v1?select=id,atividade_id,versao,estado,criada_em,workstation_devolutivas_v1(id,resultado,criada_em)&order=criada_em.desc');
+  if(message.action==='activities')result=await request('/rest/v1/workstation_atividades_v1?select=*&order=criada_em.desc');
+  if(message.action==='save_activity'){
+   const fields={};for(const key of ['titulo','caso_id','instrucoes','criterios','prazo','exige_imagem','referencia_path'])if(Object.prototype.hasOwnProperty.call(p.fields||{},key))fields[key]=p.fields[key];
+   result=await row('/rest/v1/workstation_atividades_v1'+(p.id?'?id=eq.'+id(p.id):''),p.id?'PATCH':'POST',fields);
+  }
+  if(message.action==='publish_activity')result=await row('/rest/v1/workstation_atividades_v1?id=eq.'+id(p.id),'PATCH',{publicada:true});
+  if(message.action==='close_activity')result=await row('/rest/v1/workstation_atividades_v1?id=eq.'+id(p.id),'PATCH',{recebendo:false});
+  if(message.action==='submissions')result=await request('/rest/v1/workstation_entregas_v1?select=*&atividade_id=eq.'+id(p.activity)+'&order=versao.desc');
+  if(message.action==='draft')result=await row('/rest/v1/workstation_entregas_v1','POST',{atividade_id:p.activity});
+  if(message.action==='save_draft'||message.action==='submit'){
+   const fields={};for(const key of ['imagem_path','justificativa','registro'])if(Object.prototype.hasOwnProperty.call(p.fields||{},key))fields[key]=p.fields[key];if(message.action==='submit')fields.estado='enviada';
+   result=await row('/rest/v1/workstation_entregas_v1?id=eq.'+id(p.id),'PATCH',fields);
+  }
+  if(message.action==='cancel_draft')result=await row('/rest/v1/workstation_entregas_v1?id=eq.'+id(p.id),'PATCH',{estado:'cancelada'});
+  if(message.action==='feedback')result=await request('/rest/v1/workstation_devolutivas_v1?select=*&entrega_id=eq.'+id(p.submission)+'&order=criada_em.asc');
+  if(message.action==='review')result=await row('/rest/v1/workstation_devolutivas_v1','POST',{entrega_id:p.submission,orientacao:p.text,resultado:p.result});
+  if(message.action==='upload'||message.action==='image'){
+   if(typeof p.path!=='string'||!/^activities\/[0-9a-f-]{36}\/[0-9a-f-]{36}\.png$|^deliveries\/[0-9a-f-]{36}\/[0-9a-f-]{36}\/image\.png$/i.test(p.path))throw Error('Caminho de imagem inválido.');
+   const route='/storage/v1/object/'+(message.action==='image'?'authenticated/':'')+'workstation-t-atividades/'+p.path.split('/').map(encodeURIComponent).join('/');
+   const options={method:message.action==='image'?'GET':'POST',headers:{apikey:KEY,Authorization:'Bearer '+session.access_token}};
+   if(message.action==='upload'){if(typeof p.data!=='string'||!p.data.startsWith('data:image/png;base64,')||p.data.length>7100000)throw Error('Escolha uma imagem PNG de até 5 MB.');const raw=atob(p.data.slice(22)),bytes=Uint8Array.from(raw,c=>c.charCodeAt(0));if(bytes.length>5242880)throw Error('Imagem ultrapassa 5 MB.');options.headers['Content-Type']='image/png';options.headers['x-upsert']='false';options.body=bytes;}
+   const response=await fetch(API+route,options);if(!response.ok){let error;try{error=await response.json();}catch(_){}throw Error(error?.message||'Acesso à imagem não autorizado.');}
+   if(message.action==='image'){const blob=await response.blob();if(blob.size>5242880)throw Error('Imagem ultrapassa o limite permitido.');result=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob);});}else result={path:p.path};
+  }
+  reply={type:'patricia-workstation-education-result',requestId,ok:true,result};
+ }catch(error){reply={type:'patricia-workstation-education-result',requestId,ok:false,error:error.message||'Operação indisponível.'};}
+ if(generation===frameGeneration&&owner!==null&&currentEpoch===epoch&&!panel.hidden&&event.source===frame.contentWindow)frame.contentWindow.postMessage(reply,'*');
+ })();return;
+}
+
     if (message?.type === 'patricia-workstation-control') {
       if (typeof message.requestId !== 'string' || !/^[A-Za-z0-9_-]{1,96}$/.test(message.requestId)) return;
       if (!['status','start','end','summary'].includes(message.action)) return;
@@ -302,4 +383,6 @@ $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=tru
 })();
 </script>
 </body></html>
+
+
 
