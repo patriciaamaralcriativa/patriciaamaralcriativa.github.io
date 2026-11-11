@@ -117,7 +117,7 @@ $('logout').onclick=async()=>{const token=session?.access_token;clear();message(
 $('close').onclick=()=>{$('viewer').hidden=true;$('frame').srcdoc='';};
 $('upload').onsubmit=async event=>{event.preventDefault();$('save').disabled=true;try{const file=$('file').files[0];if(!file||!(/\.html?$/i.test(file.name)))throw Error('Selecione um arquivo HTML.');if(file.size>20000000)throw Error('O arquivo ultrapassa 20 MB.');const html=await file.text();await refresh();await request('/rest/v1/sala_aulas',{method:'POST',body:JSON.stringify({titulo:$('title').value.trim(),descricao:$('description').value.trim(),conteudo_html:html,publicada:$('published').checked})});$('upload').reset();message('Aula salva.');await listLessons();}catch(e){message(e.message);}finally{$('save').disabled=false;}};
 (async()=>{try{session=JSON.parse(sessionStorage.getItem(SESSION)||'null');if(session)await openRoom();}catch(e){clear();message(e.message);}})();
-</script><section id="ws-viewer" hidden aria-label="Workstation Radiológica Patrícia"><header><strong>Workstation Radiológica Patrícia</strong><button id="ws-close" type="button" class="secondary">Voltar à sala de aulas</button></header><iframe id="ws-frame" title="Workstation Radiológica Patrícia" sandbox="allow-scripts allow-forms allow-modals allow-downloads" referrerpolicy="no-referrer"></iframe></section><script>// Compartilhado pelo host autenticado de homologação e testes HTTP reais.
+</script><section id="ws-viewer" hidden aria-label="Workstation Radiológica Patrícia"><header><strong>Workstation Radiológica Patrícia</strong><button id="ws-import20" type="button" hidden style="margin-left:auto;background:#d5e7f3;color:#112b43;border:1px solid #83aac6;border-radius:7px;padding:9px 13px;font-weight:700;cursor:pointer">Importar 20 treinos (rascunhos)</button><button id="ws-close" type="button" class="secondary">Voltar à sala de aulas</button></header><iframe id="ws-frame" title="Workstation Radiológica Patrícia" sandbox="allow-scripts allow-forms allow-modals allow-downloads" referrerpolicy="no-referrer"></iframe></section><script>// Compartilhado pelo host autenticado de homologação e testes HTTP reais.
 function createWorkAccountStore({uid,request,raw,assertCurrent=()=>{}}){
  const bucket='workstation-t-trabalhos',uuid=value=>{if(typeof value!=='string'||!/^[0-9a-f-]{36}$/.test(value))throw Error('Identificador inválido.');return value;};
  const hash=async text=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),v=>v.toString(16).padStart(2,'0')).join('');
@@ -380,6 +380,41 @@ if(message?.type==='patricia-workstation-education'){
  $('student-access').addEventListener('toggle',()=>{if($('student-access').open)students();});
  const hash=new URLSearchParams(location.hash.slice(1));
  if(hash.get('type')==='signup'&&hash.has('access_token')){history.replaceState(null,'',location.pathname+location.search);message('E-mail confirmado. Entre com seu e-mail e senha. O acesso às aulas depende da aprovação da professora.');}
+})();
+</script>
+<script id="ws-importador-treinos">
+(function(){
+'use strict';
+const specs=[["Tórax — PA e perfil esquerdo","PA e perfil esquerdo","coração, clavículas e hemidiafragmas","inspiração, rotação e sobreposições"],["Tórax — AP e perfil esquerdo","AP e perfil esquerdo","traqueia, campos pulmonares e arcos costais","magnificação cardíaca na AP e qualidade"],["Abdômen — decúbito e ortostática","AP em decúbito dorsal e AP ortostática","coluna lombar, pelve e psoas quando visível","distribuição de gás e níveis hidroaéreos"],["Abdômen — AP e decúbito lateral","AP em decúbito dorsal e decúbito lateral esquerdo com feixe horizontal","coluna lombar, pelve e gás intestinal","projeção horizontal e ar livre quando indicado"],["Coluna cervical — AP axial e perfil","AP axial e perfil","corpos vertebrais, processos espinhosos e espaços discais","alinhamento e visibilidade C7–T1"],["Coluna torácica — AP e perfil","AP e perfil","corpos vertebrais, pedículos na AP e espaços discais","alinhamento e sobreposições"],["Coluna lombar — AP e perfil","AP e perfil","corpos vertebrais, processos transversos e espaços discais","rotação e junção lombossacra"],["Joelho direito — AP e perfil","AP e perfil","patela, fêmur distal e tíbia proximal","lateralidade, espaços articulares e côndilos"],["Joelho esquerdo — AP e perfil","AP e perfil","côndilos femorais, patela e cabeça da fíbula","posicionamento e lateralidade"],["Crânio — PA e perfil","PA e perfil","órbitas, calvária e sela túrcica no perfil","simetria e superposições"],["Pelve — AP e oblíqua","AP e oblíqua identificada no caso","acetábulo, cabeça femoral e forame obturador","identificar corretamente a oblíqua e estruturas demonstradas"],["Quadril direito — AP e perfil","AP e lateral apropriada","cabeça femoral, colo femoral e trocânter maior","lateralidade e segurança em caso de trauma"],["Ombro — AP e Y escapular","AP e lateral transescapular (Y escapular)","cabeça umeral, glenoide e acrômio","alinhamento glenoumeral"],["Cotovelo — AP e perfil","AP e perfil","úmero distal, cabeça do rádio e olécrano","flexão e sobreposição no perfil"],["Punho — PA e perfil","PA e perfil","rádio e ulna distais e ossos do carpo","alinhamento e superposição"],["Mão — PA e oblíqua","PA e oblíqua","metacarpos, falanges e articulações","cobertura e separação dos dedos"],["Tornozelo — AP e perfil","AP e perfil","tíbia distal, fíbula distal e tálus","alinhamento tibiotalar"],["Pé — dorsoplantar e oblíqua","dorsoplantar (AP) e oblíqua medial","metatarsos, falanges e ossos do tarso","sobreposições e espaços articulares"],["Fêmur — AP e perfil","AP e perfil","diáfise e extremidades proximal e distal","cobertura das articulações"],["Tíbia e fíbula — AP e perfil","AP e perfil","diáfises e extremidades proximal e distal","inclusão do joelho e tornozelo"]];
+const button=document.getElementById('ws-import20');
+const status=document.getElementById('ws-status');
+document.getElementById('ws-open').addEventListener('click',()=>{button.hidden=!(member?.ativo&&member?.papel==='administradora');});
+document.getElementById('ws-close').addEventListener('click',()=>{button.hidden=true;});
+button.addEventListener('click',async()=>{
+ if(!member?.ativo||member?.papel!=='administradora'||!session?.access_token){alert('Entre com a conta autorizada da professora.');return;}
+ if(!confirm('Cadastrar os 20 treinos de Radiografia como RASCUNHOS, sem liberar aos alunos? Nenhuma atividade existente será alterada.'))return;
+ button.disabled=true;let added=0,existing=0;
+ try{
+  await refresh();
+  const user=await request('/auth/v1/user');
+  const titles=await request('/rest/v1/workstation_atividades_v1?select=titulo&limit=1000');
+  const known=new Set(titles.map(x=>x.titulo));
+  const criteria='Rubrica (100 pontos): paciente fictício 10; região no esqueleto 10; duas incidências corretas 20; marcações anatômicas 20; comparação técnica 15; ajustes de visualização 10; justificativa 10; salvamento e entrega 5.';
+  for(let i=0;i<specs.length;i++){
+   const [exam,views,structures,compare]=specs[i];
+   const title='TREINO '+String(i+1).padStart(2,'0')+' — '+exam;
+   if(known.has(title)){existing++;continue;}
+   const instructions=title+'\nIncidências: '+views+'.\n1. Cadastre um paciente fictício, sem dados pessoais reais.\n2. Selecione a região anatômica no esqueleto.\n3. Selecione ou importe duas radiografias reais, desidentificadas, com as incidências indicadas. Se não houver imagens adequadas, sinalize pendência.\n4. Compare as duas imagens lado a lado, verificando orientação e lateralidade.\n5. Marque em cores diferentes e com legendas, sem alterar os originais: '+structures+'. Identifique apenas estruturas visíveis.\n6. Compare posicionamento, centralização, colimação, rotação, nitidez e '+compare+'.\n7. Ajuste brilho e contraste de visualização, se disponíveis; registre os ajustes sem confundi-los com exposição.\n8. Justifique tecnicamente suas escolhas.\n9. Salve o trabalho e envie à professora, incluindo imagens, marcações e respostas. Registre qualquer recurso ainda indisponível.';
+   status.textContent='Cadastrando rascunho '+(i+1)+' de 20…';
+   const result=await request('/rest/v1/workstation_atividades_v1',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({criada_por:user.id,titulo:title,instrucoes:instructions,criterios:criteria,caso_id:null,exige_imagem:true,publicada:false,recebendo:false})});
+   if(!Array.isArray(result)||result.length!==1)throw Error('Cadastro não confirmado: '+title);
+   added++;known.add(title);
+  }
+  status.textContent='Importação concluída: '+added+' novos rascunhos, '+existing+' já existentes. Atualize as atividades na Workstation para conferir.';
+  alert(status.textContent);
+ }catch(e){status.textContent='Importação interrompida após '+added+' rascunhos: '+e.message;alert(status.textContent);}
+ finally{button.disabled=false;}
+});
 })();
 </script>
 </body></html>
