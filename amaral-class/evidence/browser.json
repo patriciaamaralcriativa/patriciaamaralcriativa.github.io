@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "mode": "Chrome real, Worker local Wrangler/workerd e D1 emulado; 20 contextos com entrada pela interface em lotes de 4; 3 páginas mantidas e 17 participações exercitadas por HTTP; não 20 computadores físicos",
+  "checks": [
+    "Entrada pública carrega com identidade própria e sem erros de JavaScript",
+    "Login da professora funciona no Worker local com cookies HttpOnly",
+    "Edição visual de questão e salvamento persistente do questionário",
+    "Importação JSON validada e persistida pela interface",
+    "Sala com código único e avaliação preparada na interface",
+    "20 contextos independentes entram pela interface em lotes de quatro; três páginas permanecem abertas e o painel recebe todos",
+    "Questão liberada em todos os contextos e layout móvel sem rolagem horizontal",
+    "20 respostas individuais recebidas e avanço automático sem sessão compartilhada",
+    "Resposta offline é reenviada após conexão; recarga recupera participação e conclusão",
+    "Pontuação no servidor, isolamento individual e painel atualizado confirmados no runtime Workers local",
+    "Encerramento, liberação explícita e exportação CSV reais no navegador",
+    "Logout revoga a sessão da professora"
+  ],
+  "errors": []
+}

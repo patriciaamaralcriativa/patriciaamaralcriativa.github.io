@@ -1,0 +1,9 @@
+{
+  "api": true,
+  "browser": true,
+  "headers": true,
+  "sourceHash": "f65fdbfa3a982dcf7b645067abd903ba24996a677ee0f6ab2d67f7421ce1bfbc",
+  "verifiedAt": "2026-11-11T08:21:20.420Z",
+  "apiGroups": 16,
+  "browserGroups": 12
+}

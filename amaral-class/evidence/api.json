@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "mode": "API do Worker com adaptador D1 sobre SQLite real em memória; sem Cloudflare remota",
+  "checks": [
+    {
+      "name": "01 instalação, login e logout da professora",
+      "ok": true,
+      "duration": 2098
+    },
+    {
+      "name": "02 criação e edição persistente de questionário com gabaritos privados",
+      "ok": true,
+      "duration": 73
+    },
+    {
+      "name": "03 importação CSV/JSON e rejeição de gabarito ausente",
+      "ok": true,
+      "duration": 334
+    },
+    {
+      "name": "04 duplicação, reutilização e arquivamento",
+      "ok": true,
+      "duration": 30
+    },
+    {
+      "name": "05 criação de sala e sessão aguardando início",
+      "ok": true,
+      "duration": 12
+    },
+    {
+      "name": "06 código inválido, nomes e duplicidade sem impersonação",
+      "ok": true,
+      "duration": 482
+    },
+    {
+      "name": "07 vinte participações simultâneas e identidades distintas",
+      "ok": true,
+      "duration": 556
+    },
+    {
+      "name": "08 início e dados públicos sem gabarito ou respostas alheias",
+      "ok": true,
+      "duration": 115
+    },
+    {
+      "name": "09 respostas, pontuação no servidor e reenvio idempotente",
+      "ok": true,
+      "duration": 649
+    },
+    {
+      "name": "10 pausa, retomada e painel individual por questão",
+      "ok": true,
+      "duration": 81
+    },
+    {
+      "name": "11 recuperação da participação por cookie após nova requisição",
+      "ok": true,
+      "duration": 15
+    },
+    {
+      "name": "12 encerramento e liberação explícita dos resultados",
+      "ok": true,
+      "duration": 37
+    },
+    {
+      "name": "13 exportação CSV para Excel e neutralização de fórmulas",
+      "ok": true,
+      "duration": 111
+    },
+    {
+      "name": "14 isolamento entre professoras e salas",
+      "ok": true,
+      "duration": 226
+    },
+    {
+      "name": "15 acesso indevido, CSRF e sessão expirada",
+      "ok": true,
+      "duration": 92
+    },
+    {
+      "name": "16 ritmo da professora, equipes e saída rápida",
+      "ok": true,
+      "duration": 152
+    }
+  ]
+}

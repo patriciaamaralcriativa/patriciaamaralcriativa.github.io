@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "type": "mc",
+      "prompt": "Quanto é 2 + 2?",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": 2,
+      "points": 1,
+      "subject": "Matemática",
+      "topic": "Adição",
+      "difficulty": "facil",
+      "explanation": "Dois mais dois resulta em quatro."
+    },
+    {
+      "type": "tf",
+      "prompt": "Dois é um número par.",
+      "answer": true,
+      "points": 1
+    },
+    {
+      "type": "short",
+      "prompt": "Escreva o resultado de 1 + 1.",
+      "answer": [
+        "2",
+        "dois"
+      ],
+      "criteria": {
+        "caseSensitive": false,
+        "ignoreAccents": true
+      },
+      "points": 1
+    }
+  ]
+}

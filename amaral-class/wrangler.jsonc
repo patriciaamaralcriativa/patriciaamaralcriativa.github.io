@@ -1,0 +1,25 @@
+{
+  "name": "amaral-class",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "amaral-class-db",
+      "database_id": "7a9597a6-d0cc-4250-a081-66992b45cd07",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "APP_ORIGIN": "https://amaral-class.pattyamaral1.workers.dev"
+  },
+  "account_id": "980c2621cb5f440dd490be78123a9650"
+}

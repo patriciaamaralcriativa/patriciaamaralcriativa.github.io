@@ -1,0 +1,4 @@
+﻿type;prompt;a;b;c;d;correct;accepted;subject;topic;difficulty;points;explanation
+mc;Quanto é 2 + 2?;2;3;4;5;3;;Matemática;Adição;facil;1;Dois mais dois resulta em quatro.
+tf;Dois é um número par.;;;;;true;;Matemática;Números;facil;1;
+short;Escreva o resultado de 1 + 1.;;;;;;2|dois;Matemática;Adição;facil;1;

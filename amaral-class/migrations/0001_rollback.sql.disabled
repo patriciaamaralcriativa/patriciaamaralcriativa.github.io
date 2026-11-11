@@ -1,0 +1,4 @@
+-- Somente instalação vazia de teste. Nunca executar contra resultados reais.
+PRAGMA foreign_keys=OFF;
+DROP TABLE IF EXISTS rate_limits; DROP TABLE IF EXISTS audit_events; DROP TABLE IF EXISTS answers; DROP TABLE IF EXISTS participants; DROP TABLE IF EXISTS assessment_sessions; DROP TABLE IF EXISTS rooms; DROP TABLE IF EXISTS quiz_questions; DROP TABLE IF EXISTS choices; DROP TABLE IF EXISTS questions; DROP TABLE IF EXISTS quizzes; DROP TABLE IF EXISTS settings; DROP TABLE IF EXISTS teacher_sessions; DROP TABLE IF EXISTS teachers;
+PRAGMA foreign_keys=ON;
