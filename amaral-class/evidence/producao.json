@@ -1,0 +1,10 @@
+{
+  "stage": "aprovado",
+  "checks": [
+    "Duas entradas fictícias no Worker publicado com cookies e contextos de navegador independentes",
+    "Respostas individuais confirmadas, gabarito ainda privado e painel docente inacessível ao aluno",
+    "Liberação real dos resultados: Alfa 1/1 e Beta 0/1, calculados pelo servidor"
+  ],
+  "ok": true,
+  "mode": "Chrome real e serviços Cloudflare Worker/D1 de produção; somente participantes e questão fictícios"
+}

@@ -2,8 +2,10 @@
   "api": true,
   "browser": true,
   "headers": true,
-  "sourceHash": "f65fdbfa3a982dcf7b645067abd903ba24996a677ee0f6ab2d67f7421ce1bfbc",
-  "verifiedAt": "2026-11-11T08:21:20.420Z",
+  "sourceHash": "e01bfc1be79c986533df816f3e02374b3a6bbb1f30be6aefc27bec6300ecb5e8",
+  "verifiedAt": "2026-11-11T08:36:06.413Z",
   "apiGroups": 16,
-  "browserGroups": 12
+  "browserGroups": 12,
+  "targetedUI": true,
+  "note": "API e bateria completa de navegador reaproveitadas sem alteração de backend; correção visual final validada em ui-final.json"
 }

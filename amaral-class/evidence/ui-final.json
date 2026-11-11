@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "mode": "Chrome e Worker/D1 locais; regressão visual direcionada",
+  "checks": [
+    "Painel de salas não mostra valores técnicos vazios",
+    "Resultados mantêm tabela e controles sem texto técnico; CSP ativa e sem erros JS"
+  ]
+}

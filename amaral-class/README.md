@@ -88,3 +88,9 @@ Referências verificadas: https://developers.cloudflare.com/workers/platform/lim
 Backups ficam em backups/, ignorado pelo Git, com versão anterior do Worker, SQL do D1, hash SHA-256 e resultado da restauração local. Reverta o Worker para workerVersion registrado pelo comando de rollback do manifesto; isso preserva o banco e as respostas recebidas depois da publicação.
 
 Restaurar D1 pode descartar dados posteriores: não é uma etapa automática de rollback do código. Só restaure com motivo concreto, novo backup do estado atual e autorização de quem responde pelos dados. A migração 0001_rollback.sql.disabled documenta reversão apenas de uma instalação vazia de teste e nunca é executada automaticamente. Em produção, prefira correção progressiva e preservação dos dados.
+
+## Homologação no serviço publicado
+
+A avaliação técnica usa exclusivamente a sala TESTE TÉCNICO e participantes Alfa/Beta fictícios. O roteiro tests/production-student.cjs exige o código dessa sala e verifica o título/enunciado antes de responder. Não o use em avaliações reais. A professora controla início, encerramento e liberação pela interface; o teste não extrai cookies nem senhas docentes.
+
+A validação real confirmou entrada e respostas em dois contextos independentes, gabaritos privados antes da liberação e notas 1/1 e 0/1 no D1. A sala técnica foi encerrada com histórico preservado. A exportação CSV foi confirmada no Chrome com Worker/D1 locais; a captura do evento de download no navegador embutido remoto não retornou evidência e não foi tratada como aprovação desse download.
