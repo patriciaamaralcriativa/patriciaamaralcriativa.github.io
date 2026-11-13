@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "renderEnabled": false,
+  "renderEnabled": true,
   "scope": "Seven exact BCS-DBT samples; noncommercial educational technical preview only",
   "geometryValidated": false,
   "orientationValidated": false,
@@ -33,7 +33,8 @@
       "sha256": "1fec3137dc88bccc6be04d280aee5f2462707b86f0bc7c103e98f2a6e8fc665b",
       "frames": 77,
       "rows": 2457,
-      "columns": 1996
+      "columns": 1996,
+      "orientationNotice": "Esta amostra apresenta divergência entre a lateralidade declarada e a heurística de bordas da coleção. Não houve correção automática."
     },
     {
       "sha256": "4c251184aadfeceedf6f66885acd44e86cfe56c85c951465f21de8f240d26403",
@@ -47,5 +48,8 @@
       "rows": 2457,
       "columns": 1890
     }
-  ]
+  ],
+  "validatedDecodeCommit": "f45aecf5dce6f13b7392fd964165c8b96cf3a31a",
+  "validatedRun": 43459406851,
+  "restriction": "Only exact reviewed scientific samples; anatomical orientation, laterality and depth remain unconfirmed"
 }
