@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "renderEnabled": true,
-  "scope": "Seven exact BCS-DBT samples; noncommercial educational technical preview only",
+  "scope": "Seven reviewed BCS-DBT cases and exact metadata-desidentified copies; educational noncommercial use",
   "geometryValidated": false,
   "orientationValidated": false,
   "files": [
@@ -47,9 +47,80 @@
       "frames": 29,
       "rows": 2457,
       "columns": 1890
+    },
+    {
+      "sha256": "f2644629ebacf2f1447d43383aa48193aa3d6fea5f88d62ea02dff0d8f456117",
+      "frames": 58,
+      "rows": 2457,
+      "columns": 1890,
+      "derivedFromSha256": "613e66760cd453995b2c9b1df0f144bb8d84ce9cf1e3767eb4e17b2672f76d36",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
+    },
+    {
+      "sha256": "b611a5e140e5482904950b9b375fa1e3eb6b2fd890e7eef015528b1e6282e48f",
+      "frames": 72,
+      "rows": 2457,
+      "columns": 1890,
+      "derivedFromSha256": "838812fd749bc6a403636b319e0b15a50828a3f0e26929d3f82eb5d1695639a1",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
+    },
+    {
+      "sha256": "a1b7df4239cb5f6324e79ab4a6787f57b5861eff76ee69d4fc8174dd5ff57b53",
+      "frames": 79,
+      "rows": 2457,
+      "columns": 1996,
+      "derivedFromSha256": "95b1efbeba2021ede5e668f0b4fa63fa50e9d2d3ac9c7187329945af4a64f24d",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
+    },
+    {
+      "sha256": "44641e88ae82b39629750b1c8da02be6e5414f21fd23a9a38a5c4d658ac4471e",
+      "frames": 49,
+      "rows": 2457,
+      "columns": 1890,
+      "derivedFromSha256": "572daf9fa7057d1669eddca19c356c1809fd87383ce687907ee8dcd9bc94f420",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
+    },
+    {
+      "sha256": "5b11a3c0ff838be485209926fa8da66d38514cbd9fdda3b559411613609b375e",
+      "frames": 77,
+      "rows": 2457,
+      "columns": 1996,
+      "orientationNotice": "Esta amostra apresenta divergência entre a lateralidade declarada e a heurística de bordas da coleção. Não houve correção automática.",
+      "derivedFromSha256": "1fec3137dc88bccc6be04d280aee5f2462707b86f0bc7c103e98f2a6e8fc665b",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
+    },
+    {
+      "sha256": "728aa5e344be051818d4f1c28c9dc725c61a3496228ea56b931c08c8ef4afcfa",
+      "frames": 59,
+      "rows": 2457,
+      "columns": 1890,
+      "derivedFromSha256": "4c251184aadfeceedf6f66885acd44e86cfe56c85c951465f21de8f240d26403",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
+    },
+    {
+      "sha256": "71ea9d9702d01454ee651e7824a8c3d1597e0c7ec5e3655169281d6b509b663a",
+      "frames": 29,
+      "rows": 2457,
+      "columns": 1890,
+      "derivedFromSha256": "d258d96a8a65d31d85138261ebf626d3233b3802b98fb196883841cc8c16c96b",
+      "pixelDataUnchanged": true,
+      "metadataDesidentified": true,
+      "anatomicalOrientationValidated": false
     }
   ],
   "validatedDecodeCommit": "f45aecf5dce6f13b7392fd964165c8b96cf3a31a",
   "validatedRun": 43459406851,
-  "restriction": "Only exact reviewed scientific samples; anatomical orientation, laterality and depth remain unconfirmed"
+  "restriction": "Exact allowlisted instances only; frame storage indices are not anatomical depth; no unvalidated anatomical orientation or laterality."
 }
