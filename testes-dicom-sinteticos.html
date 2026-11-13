@@ -312,6 +312,16 @@ const b=file({includeSyntax:false}),i=api.inspect(b);let rejected=false;
 try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Transfer Syntax UID ausente/.test(e.message)}
 assert(rejected,'transfer syntax ausente não bloqueou renderização antes do Canvas');
 });
+check('Pixel Data incompleto é rejeitado antes de acessar Canvas',()=>{
+const b=file({pixels:new Uint8Array([0,255])}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:1})}catch(e){rejected=/Pixel Data multiframe incompleto/.test(e.message)}
+assert(rejected,'Pixel Data truncado alcançou Canvas ou não foi rejeitado');
+});
+check('Quantidade zero de frames é rejeitada antes de acessar Canvas',()=>{
+const b=file({frames:0}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Quantidade de frames inválida/.test(e.message)}
+assert(rejected,'série sem frames alcançou Canvas ou não foi rejeitada');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
