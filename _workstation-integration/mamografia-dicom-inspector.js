@@ -190,6 +190,22 @@ if(sequence.element===0x9116&&item.geometry.imageOrientationPatient)observations
 return {frameIndex:index,observations,geometryValidated:false};
 });
 if(out.frameSummary.frameGeometryObservations.some(x=>x.observations.length>0))out.warnings.push("Coordenadas associadas aos índices de frame apenas para inspeção; ordem espacial e reconstrução não validadas.");
+const observations=out.frameSummary.frameGeometryObservations;
+const positionCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imagePositionPatient").length);
+const orientationCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imageOrientationPatient").length);
+out.frameSummary.geometryConsistency={
+framesInspected:observations.length,
+framesMissingPosition:positionCounts.filter(n=>n===0).length,
+framesMissingOrientation:orientationCounts.filter(n=>n===0).length,
+framesWithDuplicatePosition:positionCounts.filter(n=>n>1).length,
+framesWithDuplicateOrientation:orientationCounts.filter(n=>n>1).length,
+allFramesHaveUniquePosition:observations.length>0&&positionCounts.every(n=>n===1),
+allFramesHaveUniqueOrientation:observations.length>0&&orientationCounts.every(n=>n===1),
+spatialOrderValidated:false
+};
+if(positionCounts.some(n=>n>1)||orientationCounts.some(n=>n>1))out.warnings.push("Atributos geométricos duplicados em pelo menos um frame; verificar origem DICOM.");
+if(observations.length>0&&(positionCounts.some(n=>n===0)||orientationCounts.some(n=>n===0)))out.warnings.push("Posição ou orientação ausente na inspeção preliminar de um ou mais frames; atributos compartilhados ainda não consolidados.");
+
 out.warnings.push("Ordem dos cortes e geometria DBT não inferidas a partir do índice dos frames.");
 }
 if(!sawSyntax)out.warnings.push("Transfer Syntax UID não encontrada no cabeçalho Part 10; renderização bloqueada.");
