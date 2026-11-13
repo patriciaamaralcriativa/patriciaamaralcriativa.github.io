@@ -1,5 +1,7 @@
 # Validação técnica DICOM experimental — AMARAL RAD
 
+> Registro histórico do ponto de partida `659e87d`. A pendência de navegador foi resolvida posteriormente: 80/80 DICOM e 21/21 interface em Chromium real. Consulte [o relatório de avanço](AVANCO-MAMOGRAFIA-TOMOSSINTESE-2026-11-13.md) e seus JSONs para o resultado atual. As seções abaixo preservam o registro inicial.
+
 Data: 13/11/2026. Ramificação exclusiva: `dev/tomossintese-mamaria-20261113`.
 
 **Resultado: validação em navegador pendente por bloqueios do ambiente.** Não há aprovação clínica ou diagnóstica. Nenhum dado de paciente foi utilizado.

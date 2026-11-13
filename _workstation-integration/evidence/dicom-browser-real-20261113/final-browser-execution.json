@@ -1,0 +1,35 @@
+{
+  "executedAt": "2026-11-13T14:23:02.098Z",
+  "sourceCommit": "35d063093000dd2dbab33c257fc7b3e2bc427f86",
+  "realBrowser": true,
+  "status": "passed",
+  "logs": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+      "location": {
+        "url": "http://127.0.0.1:38183/testes-dicom-sinteticos.html",
+        "lineNumber": 243,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "requests": [],
+  "errors": [],
+  "browserVersion": "141.0.7390.37",
+  "httpStatus": 200,
+  "summary": "80 passaram; 0 falharam. API Canvas 2D disponível neste ambiente; navegador real não comprovado. Canvas: 4 de 4 testes executados, 0 não executados. Casos sintéticos; não há validação clínica.",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36",
+  "counts": {
+    "passed": 80,
+    "failed": 0,
+    "executed": 80,
+    "resultsRecorded": 80,
+    "consistent": true
+  },
+  "canvasChecks": {
+    "planned": 4,
+    "executed": 4,
+    "skipped": 0
+  }
+}

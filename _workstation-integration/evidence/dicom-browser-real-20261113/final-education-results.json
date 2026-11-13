@@ -1,0 +1,103 @@
+{
+  "executedAt": "2026-11-13T14:23:05.839Z",
+  "sourceCommit": "35d063093000dd2dbab33c257fc7b3e2bc427f86",
+  "browserVersion": "141.0.7390.37",
+  "environment": "GitHub Actions / Playwright Chromium real headless",
+  "results": [
+    {
+      "name": "Navegação entre módulos e indicação da página atual",
+      "status": "passed"
+    },
+    {
+      "name": "Rampa sintética: pixels conhecidos e alfa no Canvas real",
+      "status": "passed"
+    },
+    {
+      "name": "Troca do quadro sintético altera pixels e limites de navegação",
+      "status": "passed"
+    },
+    {
+      "name": "Janelamento e MONOCHROME1 têm efeito no Canvas real",
+      "status": "passed"
+    },
+    {
+      "name": "Checklist CC/MLO mantém observações separadas durante a sessão",
+      "status": "passed"
+    },
+    {
+      "name": "Seis questões corrigem respostas e reiniciam sem persistência",
+      "status": "passed"
+    },
+    {
+      "name": "Rotação de 90° exporta PNG sem cortar dimensões",
+      "status": "passed"
+    },
+    {
+      "name": "Trocar e limpar imagens atualiza também a identificação",
+      "status": "passed"
+    },
+    {
+      "name": "Mamografia: DICOM DBT não habilita prévia de pixels",
+      "status": "passed"
+    },
+    {
+      "name": "Limpar durante exportação DICOM assíncrona não repõe imagem",
+      "status": "passed"
+    },
+    {
+      "name": "Sem série: navegação e reprodução ficam desabilitadas",
+      "status": "passed"
+    },
+    {
+      "name": "PNG: ordenação natural, próximo corte e referência",
+      "status": "passed"
+    },
+    {
+      "name": "Inverter ordem invalida conferência e preserva corte fixado",
+      "status": "passed"
+    },
+    {
+      "name": "Remover série limpa identificação e estado dos controles",
+      "status": "passed"
+    },
+    {
+      "name": "PNG inválido é rejeitado sem criar série",
+      "status": "passed"
+    },
+    {
+      "name": "DBT: importação bloqueada e slider permanece desabilitado",
+      "status": "passed"
+    },
+    {
+      "name": "DICOM multiframe sintético permitido alterna pixels reais",
+      "status": "passed"
+    },
+    {
+      "name": "Limpar DICOM remove pixels e bloqueia comandos",
+      "status": "passed"
+    },
+    {
+      "name": "Celular sem rolagem horizontal: mamografia-digital-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Celular sem rolagem horizontal: tomossintese-mamaria-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Páginas não geram erros JavaScript",
+      "status": "passed"
+    }
+  ],
+  "logs": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "errors": [],
+  "counts": {
+    "passed": 21,
+    "failed": 0
+  }
+}

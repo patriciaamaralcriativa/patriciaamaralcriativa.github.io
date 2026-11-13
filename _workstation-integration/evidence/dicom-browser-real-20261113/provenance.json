@@ -1,0 +1,14 @@
+{
+  "run_id": 43442081186,
+  "job_id": 131941970257,
+  "run_url": "https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/actions/runs/43442081186",
+  "source_commit": "35d063093000dd2dbab33c257fc7b3e2bc427f86",
+  "artifact_id": 14046335789,
+  "artifact_sha256": "e31743652970ce3499abcd80b99f8b418b31f264c0df6374ab67aae6c5419341",
+  "artifact_expires_at": "2026-11-27T14:23:06Z",
+  "browser": "Chromium 141.0.7390.37 real headless",
+  "os": "Ubuntu 22.04 GitHub-hosted",
+  "simulated_patient_data": true,
+  "clinical_validation": false,
+  "original_reader_blob": "fc6751ea3a8e60068353b9c7fdbf2798555a0c9b"
+}
