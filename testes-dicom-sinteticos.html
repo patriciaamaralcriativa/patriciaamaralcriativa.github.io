@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>AMARAL RAD — testes sintéticos DICOM</title><style>body{font:16px system-ui;background:#101c29;color:#e7f5ff;max-width:850px;margin:40px auto;padding:16px}li{margin:8px 0}.ok{color:#85e7a3}.fail{color:#ff9c9c}</style><h1>Testes sintéticos DICOM — sem dados de pacientes</h1><p>Execute esta página em navegador com o leitor DICOM da mesma ramificação. Nenhum arquivo é enviado a servidores.</p><ol id="results"></ol><p id="summary" role="status"></p><script src="_workstation-integration/mamografia-dicom-inspector.js"></script><script>
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>AMARAL RAD — testes sintéticos DICOM</title><style>body{font:16px system-ui;background:#101c29;color:#e7f5ff;max-width:850px;margin:40px auto;padding:16px}li{margin:8px 0}.ok{color:#85e7a3}.fail{color:#ff9c9c}</style><h1>Testes sintéticos DICOM — sem dados de pacientes</h1><p>Execute esta página em navegador com o leitor DICOM da mesma ramificação. Nenhum arquivo é enviado a servidores.</p><ol id="results"></ol><p id="summary" role="status"></p><p><button type="button" id="export-report">Exportar relatório JSON desta execução</button></p><script src="_workstation-integration/mamografia-dicom-inspector.js"></script><script>
 (()=>{'use strict';const result=document.getElementById('results');let passed=0,failed=0;
 function check(name,fn){const li=document.createElement('li');try{fn();li.textContent='PASSOU — '+name;li.className='ok';passed++}catch(e){li.textContent='FALHOU — '+name+': '+e.message;li.className='fail';failed++}result.append(li)}
 function assert(cond,message){if(!cond)throw Error(message)}
@@ -256,6 +256,27 @@ const after=Array.from(realContext.getImageData(0,0,2,1).data);
 assert(rejected&&before.every((v,j)=>v===after[j]),'Canvas modificado após rejeição');
 });
 }
+const exportButton=document.getElementById('export-report');
+if(exportButton&&typeof exportButton.addEventListener==='function')exportButton.addEventListener('click',()=>{
+const results=Array.from(document.querySelectorAll('#results li')).map(li=>({
+status:li.classList.contains('fail')?'falhou':li.classList.contains('ok')?'passou':'indeterminado',
+description:li.textContent
+}));
+const report={
+schemaVersion:1,
+suite:'AMARAL RAD DICOM — testes sintéticos',
+executedAt:new Date().toISOString(),
+userAgent:navigator.userAgent,
+environment:{canvas2dAvailable:!!(realContext&&typeof realContext.getImageData==='function'),realBrowserNotProvenByReport:true},
+counts:{passed,failed,executed:passed+failed},
+results,
+limitations:['Dados exclusivamente sintéticos','Relatório gerado no cliente e não autenticado','Não comprova validação clínica, geométrica DBT ou anonimização']
+};
+const blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'});
+const url=URL.createObjectURL(blob),link=document.createElement('a');
+link.href=url;link.download='amaral-rad-dicom-testes-'+new Date().toISOString().slice(0,10)+'.json';
+document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Casos sintéticos; não há validação clínica.';})();
 </script></html>
