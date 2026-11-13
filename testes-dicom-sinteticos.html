@@ -18,5 +18,27 @@ check('Rejeita Samples per Pixel diferente de 1',()=>{const b=file({samples:3}),
 check('Rejeita Transfer Syntax ausente',()=>{const b=file({includeSyntax:false}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'Transfer Syntax ausente aceita')});
 check('Rejeita sintaxe comprimida não suportada',()=>{const b=file({syntax:'1.2.840.10008.1.2.4.50'}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'sintaxe comprimida aceita')});
 check('Rejeita arquivo sem preâmbulo Part 10',()=>{let rejected=false;try{api.inspect(new Uint8Array(200).buffer)}catch(e){rejected=true}assert(rejected,'arquivo inválido aceito')})}
+
+// Casos adicionais: valores de pixels conhecidos, sem dados de pacientes.
+function extendedFile({photo='MONOCHROME2',bits=8,stored=8,rep=0,values=[0,255],center=null,width=null}={}){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const pix=concat(values.map(v=>bits===16?u16(v&65535):new Uint8Array([v&255])));
+const parts=[pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x60,'CS','MG'),
+element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(values.length)),element(0x28,0x02,'US',u16(1)),
+element(0x28,0x04,'CS',photo),element(0x28,0x100,'US',u16(bits)),element(0x28,0x101,'US',u16(stored)),
+element(0x28,0x102,'US',u16(stored-1)),element(0x28,0x103,'US',u16(rep))];
+if(center!==null)parts.push(element(0x28,0x1050,'DS',String(center)));
+if(width!==null)parts.push(element(0x28,0x1051,'DS',String(width)));
+parts.push(element(0x7fe0,0x10,bits===16?'OW':'OB',pix));
+return concat(parts).buffer;
+}
+if(api){
+check('MONOCHROME1 inverte a escala exibida',()=>{const b=extendedFile({photo:'MONOCHROME1'}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c,{center:127.5,width:255});assert(c.pixels[0]===255&&c.pixels[4]===0,'inversão incorreta')});
+check('16 bits assinados preservam sinal',()=>{const b=extendedFile({bits:16,stored:16,rep:1,values:[-100,100]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c,{center:0,width:200});assert(v.min===-100&&v.max===100&&c.pixels[0]===0&&c.pixels[4]===255,'sinal incorreto')});
+check('Janela DICOM numérica é reconhecida',()=>{const b=extendedFile({center:100,width:200,values:[0,200]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c);assert(v.center===100&&v.width===200&&c.pixels[0]===0&&c.pixels[4]===255,'janela não aplicada')});
+check('Rejeita índice de frame negativo',()=>{const b=file(),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas(),{frameIndex:-1})}catch(e){rejected=true}assert(rejected,'índice negativo aceito')});
+check('Rejeita quantidade de frames acima do limite',()=>{const b=file({frames:501}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'501 frames aceitos')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
