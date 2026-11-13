@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "renderEnabled": true,
+  "scope": "Seven exact BCS-DBT samples; noncommercial educational technical preview only",
+  "geometryValidated": false,
+  "orientationValidated": false,
+  "files": [
+    {
+      "sha256": "613e66760cd453995b2c9b1df0f144bb8d84ce9cf1e3767eb4e17b2672f76d36",
+      "frames": 58,
+      "rows": 2457,
+      "columns": 1890
+    },
+    {
+      "sha256": "838812fd749bc6a403636b319e0b15a50828a3f0e26929d3f82eb5d1695639a1",
+      "frames": 72,
+      "rows": 2457,
+      "columns": 1890
+    },
+    {
+      "sha256": "95b1efbeba2021ede5e668f0b4fa63fa50e9d2d3ac9c7187329945af4a64f24d",
+      "frames": 79,
+      "rows": 2457,
+      "columns": 1996
+    },
+    {
+      "sha256": "572daf9fa7057d1669eddca19c356c1809fd87383ce687907ee8dcd9bc94f420",
+      "frames": 49,
+      "rows": 2457,
+      "columns": 1890
+    },
+    {
+      "sha256": "1fec3137dc88bccc6be04d280aee5f2462707b86f0bc7c103e98f2a6e8fc665b",
+      "frames": 77,
+      "rows": 2457,
+      "columns": 1996,
+      "orientationNotice": "Esta amostra apresenta divergência entre a lateralidade declarada e a heurística de bordas da coleção. Não houve correção automática."
+    },
+    {
+      "sha256": "4c251184aadfeceedf6f66885acd44e86cfe56c85c951465f21de8f240d26403",
+      "frames": 59,
+      "rows": 2457,
+      "columns": 1890
+    },
+    {
+      "sha256": "d258d96a8a65d31d85138261ebf626d3233b3802b98fb196883841cc8c16c96b",
+      "frames": 29,
+      "rows": 2457,
+      "columns": 1890
+    }
+  ],
+  "validatedDecodeCommit": "f45aecf5dce6f13b7392fd964165c8b96cf3a31a",
+  "validatedRun": 43459406851,
+  "restriction": "Only exact reviewed scientific samples; anatomical orientation, laterality and depth remain unconfirmed"
+}

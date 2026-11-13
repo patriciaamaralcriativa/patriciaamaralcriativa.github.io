@@ -1,0 +1,12 @@
+{
+  "@cornerstonejs/codec-openjpeg": "1.3.6",
+  "dicom-parser": "1.8.21",
+  "sha256": {
+    "openjpegwasm_decode.js": "8e6d4ea409ed817ee08aed0c440048616091781fce5b22b81c7cd850d80937b5",
+    "cornerstone-codecs-LICENSE.txt": "456823558d5aee9aaed81428f9eb90d97c85ba0f770975b7ccff9ce12ef61438",
+    "openjpegwasm_decode.wasm": "5aff4e65444480a402898fe7369a9d2bc77e8181f858fc0d10150b2dabf07dee",
+    "openjpeg-LICENSE.txt": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+    "dicom-parser-LICENSE.txt": "01323491c1f1f1f8f738fa558e96ab0b07f1ca9ba70c79675e0a4beb41f156c1",
+    "dicomParser.min.js": "2b990e92de021a9c0d58f7dca693c95fa76be6398648b68441df9423de284a2b"
+  }
+}
