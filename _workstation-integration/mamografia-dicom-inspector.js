@@ -90,7 +90,7 @@ for(const key of Object.keys(out.geometryAttributes)){
 const raw=out.metadata[key];
 if(raw!=null){const tokens=String(raw).split("\\").map(x=>x.trim());const values=tokens.map(Number);
 const expected=key==="imagePositionPatient"?3:key==="imageOrientationPatient"?6:1;
-if(values.length===expected&&tokens.every(x=>x!==""&&/^[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+-]?\\d+)?$/.test(x))&&values.every(Number.isFinite))out.geometryAttributes[key]=values;
+if(values.length===expected&&tokens.every(x=>x!=="")&&values.every(Number.isFinite))out.geometryAttributes[key]=values;
 else out.warnings.push("Atributo geométrico inválido ou não interpretável: "+key);
 }}
 if(out.imageType==="breast-tomosynthesis"){
