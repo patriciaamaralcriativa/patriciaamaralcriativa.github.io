@@ -192,10 +192,11 @@ async function rotaSessionHeaders(){
  if(!session?.access_token||!session?.expires_at||session.expires_at<=Date.now()/1000+30)throw Error('Entre na Sala de Aulas nesta aba.');
  return {apikey:ROTA_AUTH_KEY,Authorization:'Bearer '+session.access_token,'Content-Type':'application/json'};
 }
-async function rotaServerRequest(method,url,body){
- const headers=await rotaSessionHeaders();const response=await fetch(ROTA_AUTH_API+'/rest/v1/rota_zero_bancos'+url,{method,headers,body:body===undefined?undefined:JSON.stringify(body),cache:'no-store'});
+async function rotaServerRequest(method,url,body,prefer){
+ const headers=await rotaSessionHeaders();if(prefer)headers.Prefer=prefer;
+ const response=await fetch(ROTA_AUTH_API+'/rest/v1/rota_zero_bancos'+url,{method,headers,body:body===undefined?undefined:JSON.stringify(body),cache:'no-store'});
  if(!response.ok)throw Error('Servidor recusou a operação ('+response.status+').');
- return response.status===204?null:response.json();
+ return response.status===204||response.status===205?null:response.json();
 }
 async function rotaLoadPublished(){
  try{
@@ -213,9 +214,8 @@ $('rotaPublishBank').onclick=async()=>{
   const name=editSubject.value,items=editQuestions();
   if(!items.length||items.length>500)throw Error('Selecione uma disciplina com questões válidas.');
   if(!confirm('Publicar '+items.length+' questões de '+name+' para alunos autorizados?'))return;
-  const existing=await rotaServerRequest('GET','?select=id&disciplina=eq.'+encodeURIComponent(name));
-  if(existing.length){await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{questoes:items,publicado:true,atualizado_em:new Date().toISOString()})}
-  else{await rotaServerRequest('POST','',{disciplina:name,questoes:items,publicado:true})}
+  const saved=await rotaServerRequest('POST','?on_conflict=disciplina',{disciplina:name,questoes:items,publicado:true,atualizado_em:new Date().toISOString()},'resolution=merge-duplicates,return=representation');
+  if(!Array.isArray(saved)||saved.length!==1||saved[0].disciplina!==name||saved[0].publicado!==true)throw Error('O servidor não confirmou a publicação.');
   await rotaLoadPublished();
   status.textContent='Banco publicado no servidor. Aguarde a confirmação dos testes com contas reais.';
  }catch(e){status.textContent='Não foi possível publicar: '+e.message}
@@ -224,7 +224,8 @@ $('rotaUnpublishBank').onclick=async()=>{
  const status=$('rotaSyncStatus');try{
   if(!await rotaRequireTeacher())throw Error('Acesso exclusivo da professora.');
   const name=editSubject.value;if(!confirm('Recolher o banco '+name+'? Alunos deixarão de recebê-lo.'))return;
-  await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{publicado:false,atualizado_em:new Date().toISOString()});
+  const changed=await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{publicado:false,atualizado_em:new Date().toISOString()},'return=representation');
+  if(!Array.isArray(changed)||changed.length!==1||changed[0].publicado!==false)throw Error('Banco não encontrado ou recolhimento não confirmado.');
   await rotaLoadPublished();
   status.textContent='Solicitação de recolhimento concluída.';
  }catch(e){status.textContent='Não foi possível recolher: '+e.message}
