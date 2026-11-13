@@ -19,7 +19,7 @@ function inspect(buffer){
 if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer.");
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
-const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null};
+const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false};
 let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
 function element(p,explicit){
 if(p+8>bytes.length)return null;
@@ -40,6 +40,7 @@ while(pos<bytes.length&&count++<10000){
 const group=d.getUint16(pos,true);const meta=group===0x0002;
 const explicit=meta||syntax!=="1.2.840.10008.1.2";
 const e=element(pos,explicit);if(!e)break;
+if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
 if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=e.start;out.pixelDataLength=e.length;break;}
 if(meta&&e.element===0x0010){
 syntax=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
@@ -70,6 +71,7 @@ return out;
 function renderGrayscale(buffer,info,canvas,opts={}){
 const m=info.metadata||{},ts=info.transferSyntaxUID;
 if(!ts)throw Error("Transfer Syntax UID ausente; não é seguro interpretar pixels.");
+if(info.functionalGroupsPresent)throw Error("Sequências funcionais multiframe presentes: renderização bloqueada até interpretar os atributos por frame.");
 if(!info.pixelDataPresent||info.pixelDataOffset==null)throw Error("Pixel Data ausente.");
 if(!["1.2.840.10008.1.2","1.2.840.10008.1.2.1"].includes(ts))throw Error("Transfer Syntax não suportada para renderização.");
 const rows=Number(m.rows),cols=Number(m.columns),bits=Number(m.bitsAllocated),stored=Number(m.bitsStored),rep=Number(m.pixelRepresentation),frames=m.numberOfFrames==null?1:Number(m.numberOfFrames);
