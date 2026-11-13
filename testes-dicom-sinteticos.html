@@ -40,5 +40,12 @@ check('Rejeita índice de frame negativo',()=>{const b=file(),i=api.inspect(b);l
 check('Rejeita quantidade de frames acima do limite',()=>{const b=file({frames:501}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'501 frames aceitos')});
 }
 
+
+if(api){
+check('Janela linear com largura 1 aplica limiar binário',()=>{const b=extendedFile({center:100,width:1,values:[99,100,101]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c);assert(v.width===1&&c.pixels[0]===0&&c.pixels[4]===255&&c.pixels[8]===255,'limiar de largura 1 incorreto')});
+check('Janela linear com largura 2 preserva extremos',()=>{const b=extendedFile({center:100,width:2,values:[99,100]}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c);assert(c.pixels[0]===0&&c.pixels[4]===255,'extremos da janela incorretos')});
+check('MONOCHROME1 com largura 1 inverte limiar',()=>{const b=extendedFile({photo:'MONOCHROME1',center:100,width:1,values:[99,100]}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c);assert(c.pixels[0]===255&&c.pixels[4]===0,'limiar invertido incorreto')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
