@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "suite": "AMARAL RAD DICOM — testes sintéticos",
+  "executedAt": "2026-11-13T14:09:57.402Z",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36",
+  "environment": {
+    "canvas2dAvailable": true,
+    "realBrowserNotProvenByReport": true
+  },
+  "canvasChecks": {
+    "planned": 4,
+    "executed": 4,
+    "skipped": 0
+  },
+  "counts": {
+    "passed": 80,
+    "failed": 0,
+    "executed": 80,
+    "resultsRecorded": 80,
+    "consistent": true
+  },
+  "results": [
+    {
+      "status": "passou",
+      "description": "PASSOU — API disponível"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Identifica dois frames e modalidade MG"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Frames distintos preservam ordem de pixels"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita frame fora do intervalo"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita Pixel Data incompleto"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita High Bit incompatível"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita Samples per Pixel diferente de 1"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita Transfer Syntax ausente"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita sintaxe comprimida não suportada"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita arquivo sem preâmbulo Part 10"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — MONOCHROME1 inverte a escala exibida"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — 16 bits assinados preservam sinal"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Janela DICOM numérica é reconhecida"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita índice de frame negativo"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita quantidade de frames acima do limite"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Janela linear com largura 1 aplica limiar binário"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Janela linear com largura 2 preserva extremos"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — MONOCHROME1 com largura 1 inverte limiar"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Detecta sequências funcionais multiframe e bloqueia renderização"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — 12 bits armazenados em 16 bits sem sinal"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — 12 bits assinados com extensão de sinal"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Sequência indefinida não é interpretada como pixels"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Identifica SOP Class de tomossíntese e bloqueia pixels"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — DBT sem Number of Frames não inventa quantidade de cortes"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — DBT declara frames mas não presume ordem ou geometria"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Lê atributos geométricos top-level sem inferir geometria DBT"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita geometria top-level com valor inválido"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Registra grupos compartilhados e por frame sem interpretar geometria"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Sequência funcional com um item definido é contada sem ler geometria"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Sequência funcional com item truncado é rejeitada estruturalmente"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — DBT compara itens Per-frame com Number of Frames"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — DBT alerta quando faltam itens por frame"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — DBT alerta quando Shared Functional Groups possui dois itens"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Cabeçalhos dos itens funcionais expõem comprimentos sem interpretar pixels"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Cabeçalhos de itens inválidos não são publicados como válidos"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Geometria DICOM rejeita componente vazio"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Geometria DICOM aceita números negativos e decimais"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Lê tag interna de item funcional sem inferir geometria"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Item funcional com tag interna truncada é sinalizado"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Identifica sequência aninhada com item válido sem inferir geometria"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Sequência aninhada com item truncado não é validada"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Extrai posição geométrica de item aninhado sem validar geometria DBT"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Rejeita coordenada aninhada incompleta"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Associa posição aninhada ao índice sem validar ordem espacial"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Sequência aninhada desconhecida não cria posição espacial"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Resumo geométrico aponta orientação ausente sem validar ordem"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Resumo geométrico não considera frames vazios como geometria validada"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Geometria compartilhada complementa posição individual ausente"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Geometria efetiva não é considerada ordem espacial validada"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Diferencia orientação compartilhada e por frame sem validar geometria"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Orientações compartilhada e individual iguais não criam conflito"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Vetores unitários ortogonais passam na verificação matemática"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Vetores não unitários são sinalizados"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Vetores paralelos são sinalizados"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Calcula normal e projeção assinada sem ordenar cortes"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Não calcula normal com orientação inválida"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Distâncias entre planos preservam ordem de armazenamento"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Projeções repetidas são identificadas sem classificar cortes duplicados"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Distâncias consecutivas uniformes não geram alerta exploratório"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Variação de distâncias é sinalizada sem validar reconstrução"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Canvas 2D real recebe pixels sintéticos renderizados"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Canvas real preserva dimensões e alternância de frames sintéticos"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Canvas real não é alterado ao rejeitar frame inválido"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Canvas real aplica inversão MONOCHROME1 sintética"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — DBT não renderiza mesmo quando Canvas está disponível"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Grupos funcionais impedem renderização antes de acessar Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Índice fracionário de frame é rejeitado antes de acessar Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Índice negativo de frame é rejeitado antes de acessar Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Índice de frame não numérico é rejeitado antes do Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Índice de frame NaN é rejeitado antes do Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Canvas sem contexto 2D é rejeitado de forma explícita"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Pixel Data não é renderizado quando não há Transfer Syntax UID"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Pixel Data incompleto é rejeitado antes de acessar Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Quantidade zero de frames é rejeitada antes de acessar Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Frames acima do limite didático são rejeitados antes do Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Índice infinito de frame é rejeitado antes do Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — FrameIndex null é rejeitado antes do Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — FrameIndex booleano é rejeitado antes do Canvas"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — Limite de 500 frames é aceito com Pixel Data completo"
+    },
+    {
+      "status": "passou",
+      "description": "PASSOU — FrameIndex omitido utiliza primeiro frame"
+    }
+  ],
+  "limitations": [
+    "Dados exclusivamente sintéticos",
+    "Relatório gerado no cliente e não autenticado",
+    "Não comprova validação clínica, geométrica DBT ou anonimização"
+  ]
+}
