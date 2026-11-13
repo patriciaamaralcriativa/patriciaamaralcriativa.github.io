@@ -1,0 +1,8 @@
+{
+  "python": "3.12.14",
+  "pydicom": "3.0.2",
+  "Pillow": "13.0.0",
+  "OpenJPEG": "2.5.4",
+  "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "decoder": "jpeg2000 native; explicitly not libopenjpeg"
+}

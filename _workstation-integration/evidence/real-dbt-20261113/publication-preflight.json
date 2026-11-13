@@ -1,0 +1,100 @@
+{
+  "executedAt": "2026-11-13T16:23:05.568Z",
+  "environment": "local-candidate-real-browser",
+  "url": "loopback",
+  "browser": "141.0.7390.37",
+  "results": [
+    {
+      "name": "Scripts originais preservados: amaral-rad.html",
+      "status": "passed"
+    },
+    {
+      "name": "Scripts originais preservados: sala-de-aulas.html",
+      "status": "passed"
+    },
+    {
+      "name": "Workstation mantém iframe e abre módulos sem encerrar a sessão",
+      "status": "passed"
+    },
+    {
+      "name": "Workstation em 390 px mantém navegação sem overflow",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: mamografia-digital-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: tomossintese-mamaria-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: dbt-validacao-real.html",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/mamografia-education.js",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/mamografia-education.css",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/mamografia-dicom-inspector.js",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/dbt-real-worker.js",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/dbt-real-viewer.js",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/dbt-validation-allowlist.json",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/vendor/dicomParser.min.js",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/vendor/openjpegwasm_decode.js",
+      "status": "passed"
+    },
+    {
+      "name": "Conteúdo servido corresponde ao código testado: _workstation-integration/vendor/openjpegwasm_decode.wasm",
+      "status": "passed"
+    },
+    {
+      "name": "Página ativa em 1280 px: mamografia-digital-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Página ativa em 390 px: mamografia-digital-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Página ativa em 1280 px: tomossintese-mamaria-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Página ativa em 390 px: tomossintese-mamaria-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Página ativa em 1280 px: dbt-validacao-real.html",
+      "status": "passed"
+    },
+    {
+      "name": "Página ativa em 390 px: dbt-validacao-real.html",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 22,
+    "failed": 0
+  }
+}

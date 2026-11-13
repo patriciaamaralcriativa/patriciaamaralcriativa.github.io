@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED_BY_AUTO_REVIEW",
+  "productionUnchanged": true,
+  "officialCommit": "3de3a42cd3d28e1f369942c76f996679a1e1c290",
+  "candidateCommit": "ed6b8ef93e5da9328984dd88bda4b2f6c8166040",
+  "candidateBranch": "release/mamografia-dbt-validada-20261113",
+  "draftPR": "https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/pull/3",
+  "userExplicitlyAuthorizedPublication": true,
+  "autoReviewRejections": 2,
+  "reviewReason": "Reviewer interpreted earlier candidate-only instructions as later than the explicit publication authorization. No workaround or alternate production write attempted.",
+  "liveSiteUpdatedVersionTested": false,
+  "backupSha256": "0cd26493f217181e45c51f782e899c799ce08fa0abcd0a1bce8c3dec0d34e1cc"
+}
