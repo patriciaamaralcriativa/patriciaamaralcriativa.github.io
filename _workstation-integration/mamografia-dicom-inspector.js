@@ -19,7 +19,7 @@ function inspect(buffer){
 if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer.");
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
-const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null};
+const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null};
 let pos=132,syntax="1.2.840.10008.1.2.1";
 function element(p,explicit){
 if(p+8>bytes.length)return null;
@@ -40,7 +40,7 @@ while(pos<bytes.length&&count++<10000){
 const group=d.getUint16(pos,true);const meta=group===0x0002;
 const explicit=meta||syntax!=="1.2.840.10008.1.2";
 const e=element(pos,explicit);if(!e)break;
-if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=pos;break;}
+if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=e.start;out.pixelDataLength=e.length;break;}
 if(meta&&e.element===0x0010){
 syntax=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
 out.transferSyntaxUID=syntax;
@@ -66,5 +66,30 @@ if(!out.pixelDataPresent)out.warnings.push("Pixel Data não confirmado. A inspe�
 if(out.pixelDataPresent)out.warnings.push("Pixel Data localizado, mas não decodificado; não há garantia de exibição fiel.");
 return out;
 }
-global.AmaralMamografiaDicom={inspect};
+function renderGrayscale(buffer,info,canvas,opts={}){
+const m=info.metadata||{},ts=info.transferSyntaxUID;
+if(!info.pixelDataPresent||info.pixelDataOffset==null)throw Error("Pixel Data ausente.");
+if(!["1.2.840.10008.1.2","1.2.840.10008.1.2.1"].includes(ts))throw Error("Transfer Syntax não suportada para renderização.");
+const rows=Number(m.rows),cols=Number(m.columns),bits=Number(m.bitsAllocated),stored=Number(m.bitsStored),rep=Number(m.pixelRepresentation||0),frames=Number(m.numberOfFrames||1);
+if(!Number.isInteger(rows)||!Number.isInteger(cols)||rows<1||cols<1||rows*cols>20000000)throw Error("Dimensões inválidas ou grandes demais.");
+if(![8,16].includes(bits)||stored<1||stored>bits||![0,1].includes(rep))throw Error("Representação de pixels não suportada.");
+if(!["MONOCHROME1","MONOCHROME2"].includes(m.photometricInterpretation))throw Error("Apenas imagens monocromáticas são suportadas.");
+if(frames!==1)throw Error("Imagens multiframe ainda não suportadas.");
+const bpp=bits/8,n=rows*cols,bytes=n*bpp,offset=info.pixelDataOffset;
+if(bytes>info.pixelDataLength||offset+bytes>buffer.byteLength)throw Error("Pixel Data incompleto.");
+const dv=new DataView(buffer,offset,bytes),pixels=new Float64Array(n);
+const mask=(2**stored)-1,sign=2**(stored-1);
+let min=Infinity,max=-Infinity;
+for(let i=0;i<n;i++){let raw=bits===8?dv.getUint8(i):dv.getUint16(i*2,true);raw&=mask;if(rep&&raw>=sign)raw-=2**stored;pixels[i]=raw;if(raw<min)min=raw;if(raw>max)max=raw;}
+const center=Number.isFinite(opts.center)?opts.center:(min+max)/2;
+const width=Number.isFinite(opts.width)&&opts.width>0?opts.width:Math.max(1,max-min);
+const low=center-width/2,ctx=canvas.getContext("2d",{willReadFrequently:false});
+if(!ctx)throw Error("Canvas indisponível.");
+canvas.width=cols;canvas.height=rows;
+const image=ctx.createImageData(cols,rows),invert=m.photometricInterpretation==="MONOCHROME1";
+for(let i=0;i<n;i++){let gray=Math.max(0,Math.min(255,Math.round((pixels[i]-low)/width*255)));if(invert)gray=255-gray;const p=i*4;image.data[p]=image.data[p+1]=image.data[p+2]=gray;image.data[p+3]=255;}
+ctx.putImageData(image,0,0);
+return {rows,columns:cols,min,max,center,width,photometricInterpretation:m.photometricInterpretation,notice:"Prévia educacional: escala automática; não aplica Modality LUT, VOI LUT, Presentation LUT ou calibração diagnóstica."};
+}
+global.AmaralMamografiaDicom={inspect,renderGrayscale};
 })(typeof window!=="undefined"?window:globalThis);
