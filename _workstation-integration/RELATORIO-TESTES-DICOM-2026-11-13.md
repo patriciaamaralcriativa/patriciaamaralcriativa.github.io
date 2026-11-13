@@ -30,3 +30,7 @@ Execução do código JavaScript real obtido da ramificação de desenvolvimento
 
 ## Próximas verificações
 Executar no navegador, adicionar testes de MONOCHROME1, pixels assinados de 16 bits, janela DICOM e limites de memória; validar estudos de referência anonimizados com software DICOM confiável antes de integração.
+
+## Ampliação da bateria — execução subsequente
+
+Foram adicionados cinco casos sintéticos: MONOCHROME1, 16 bits assinados, janela DICOM, índice de frame negativo e limite de 500 frames. Execução em runtime JavaScript isolado, com substitutos de APIs do navegador: **15 passaram; 0 falharam**. Ainda não houve execução no Chrome ou validação com estudos DICOM reais. O algoritmo de janela permanece simplificado e não implementa integralmente a apresentação DICOM.
