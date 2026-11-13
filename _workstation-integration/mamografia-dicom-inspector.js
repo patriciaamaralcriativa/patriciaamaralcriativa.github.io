@@ -20,7 +20,7 @@ if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer."
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
 const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null};
-let pos=132,syntax="1.2.840.10008.1.2.1";
+let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
 function element(p,explicit){
 if(p+8>bytes.length)return null;
 const group=d.getUint16(p,true),element=d.getUint16(p+2,true);
@@ -31,7 +31,7 @@ if(!/^[A-Z]{2}$/.test(vr))throw Error("VR DICOM inválido na posição "+p);
 if(LONG.has(vr)){if(p+12>bytes.length)return null;length=d.getUint32(p+8,true);head=12;}
 else length=d.getUint16(p+6,true);
 }else length=d.getUint32(p+4,true);
-if(length===0xffffffff)throw Error("Sequência de comprimento indefinido: inspeção interrompida com segurança.");
+if(length===0xffffffff)throw Error("Elemento de comprimento indefinido: leitura interrompida com segurança.");
 if(length>bytes.length-p-head)throw Error("Comprimento de elemento DICOM excede o arquivo.");
 return {group,element,vr,length,start:p+head,next:p+head+length};
 }
@@ -43,7 +43,7 @@ const e=element(pos,explicit);if(!e)break;
 if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=e.start;out.pixelDataLength=e.length;break;}
 if(meta&&e.element===0x0010){
 syntax=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
-out.transferSyntaxUID=syntax;
+out.transferSyntaxUID=syntax;sawSyntax=true;
 if(!["1.2.840.10008.1.2","1.2.840.10008.1.2.1"].includes(syntax)){
 out.warnings.push("Transfer Syntax não suportada pelo inspetor preliminar: "+syntax);
 break;
@@ -59,6 +59,7 @@ out.metadata[key]=value;
 }
 pos=e.next;
 }
+if(!sawSyntax)out.warnings.push("Transfer Syntax UID não encontrada no cabeçalho Part 10; renderização bloqueada.");
 if(count>=10000)out.warnings.push("Limite de elementos atingido; leitura parcial.");
 if(out.metadata.modality&&out.metadata.modality!=="MG")out.warnings.push("Modalidade declarada não é MG: "+out.metadata.modality);
 if(!out.metadata.modality)out.warnings.push("Modalidade não identificada; não classificar como mamografia.");
@@ -68,11 +69,12 @@ return out;
 }
 function renderGrayscale(buffer,info,canvas,opts={}){
 const m=info.metadata||{},ts=info.transferSyntaxUID;
+if(!ts)throw Error("Transfer Syntax UID ausente; não é seguro interpretar pixels.");
 if(!info.pixelDataPresent||info.pixelDataOffset==null)throw Error("Pixel Data ausente.");
 if(!["1.2.840.10008.1.2","1.2.840.10008.1.2.1"].includes(ts))throw Error("Transfer Syntax não suportada para renderização.");
-const rows=Number(m.rows),cols=Number(m.columns),bits=Number(m.bitsAllocated),stored=Number(m.bitsStored),rep=Number(m.pixelRepresentation||0),frames=Number(m.numberOfFrames||1);
+const rows=Number(m.rows),cols=Number(m.columns),bits=Number(m.bitsAllocated),stored=Number(m.bitsStored),rep=Number(m.pixelRepresentation),frames=m.numberOfFrames==null?1:Number(m.numberOfFrames);
 if(!Number.isInteger(rows)||!Number.isInteger(cols)||rows<1||cols<1||rows*cols>20000000)throw Error("Dimensões inválidas ou grandes demais.");
-if(![8,16].includes(bits)||stored<1||stored>bits||![0,1].includes(rep))throw Error("Representação de pixels não suportada.");
+if(![8,16].includes(bits)||!Number.isInteger(stored)||stored<1||stored>bits||![0,1].includes(rep))throw Error("Representação de pixels não suportada.");
 if(Number(m.samplesPerPixel)!==1)throw Error("Apenas Samples per Pixel = 1 é suportado.");
 if(m.highBit==null||Number(m.highBit)!==stored-1)throw Error("High Bit não suportado: exige Bits Stored - 1.");
 if(!["MONOCHROME1","MONOCHROME2"].includes(m.photometricInterpretation))throw Error("Apenas imagens monocromáticas são suportadas.");
