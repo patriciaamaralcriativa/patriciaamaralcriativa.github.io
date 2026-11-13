@@ -276,17 +276,21 @@ const results=Array.from(document.querySelectorAll('#results li')).map(li=>({
 status:li.classList.contains('fail')?'falhou':li.classList.contains('ok')?'passou':'indeterminado',
 description:li.textContent
 }));
+const resultPassed=results.filter(r=>r.status==='passou').length;
+const resultFailed=results.filter(r=>r.status==='falhou').length;
+const countsConsistent=results.length===passed+failed&&resultPassed===passed&&resultFailed===failed;
 const report={
-schemaVersion:1,
+schemaVersion:2,
 suite:'AMARAL RAD DICOM — testes sintéticos',
 executedAt:new Date().toISOString(),
 userAgent:navigator.userAgent,
 environment:{canvas2dAvailable:isRealCanvas,realBrowserNotProvenByReport:true},
 canvasChecks:{planned:canvasChecksPlanned,executed:canvasChecksExecuted,skipped:canvasChecksSkipped},
-counts:{passed,failed,executed:passed+failed},
+counts:{passed,failed,executed:passed+failed,resultsRecorded:results.length,consistent:countsConsistent},
 results,
 limitations:['Dados exclusivamente sintéticos','Relatório gerado no cliente e não autenticado','Não comprova validação clínica, geométrica DBT ou anonimização']
 };
+if(!countsConsistent){document.getElementById('summary').textContent+=' ATENÇÃO: divergência entre contagem e registros; exportação interrompida.';return;}
 const blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'});
 const url=URL.createObjectURL(blob),link=document.createElement('a');
 link.href=url;link.download='amaral-rad-dicom-testes-'+new Date().toISOString().slice(0,10)+'.json';
