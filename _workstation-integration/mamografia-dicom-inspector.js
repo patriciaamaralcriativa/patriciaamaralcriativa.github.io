@@ -84,6 +84,19 @@ const declared=out.metadata.numberOfFrames==null?null:Number(out.metadata.number
 const valid=Number.isSafeInteger(declared)&&declared>0&&declared<=500;
 out.frameSummary={declaredFrames:valid?declared:null,frameCountValidated:valid,geometryValidated:false,frameOrderValidated:false};
 if(!valid)out.warnings.push("Número de frames DBT ausente, inválido ou acima do limite didático.");
+if(out.functionalGroupSummary.perFramePresent){
+const fg=out.functionalGroupSummary;
+out.frameSummary.perFrameItemCount=fg.perFrameItems;
+out.frameSummary.perFrameCountMatchesDeclared=fg.perFrameStructureValidated&&valid?fg.perFrameItems===declared:null;
+if(out.frameSummary.perFrameCountMatchesDeclared===false)out.warnings.push("Quantidade de itens Per-frame Functional Groups difere do Number of Frames.");
+if(!fg.perFrameStructureValidated)out.warnings.push("Não foi possível conferir quantidade de itens por frame: estrutura não validada.");
+}
+if(out.functionalGroupSummary.sharedPresent){
+const fg=out.functionalGroupSummary;
+out.frameSummary.sharedItemCountValid=fg.sharedStructureValidated?fg.sharedItems===1:null;
+if(out.frameSummary.sharedItemCountValid===false)out.warnings.push("Shared Functional Groups Sequence deve conter exatamente um item.");
+}
+
 out.warnings.push("Ordem dos cortes e geometria DBT não inferidas a partir do índice dos frames.");
 }
 if(!sawSyntax)out.warnings.push("Transfer Syntax UID não encontrada no cabeçalho Part 10; renderização bloqueada.");
