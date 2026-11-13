@@ -12,7 +12,7 @@ const TARGET=new Map([
 [tag(0x0018,0x5101),"viewPosition"],[tag(0x0028,0x0010),"rows"],
 [tag(0x0028,0x0011),"columns"],[tag(0x0028,0x0008),"numberOfFrames"],
 [tag(0x0028,0x0004),"photometricInterpretation"],[tag(0x0028,0x0100),"bitsAllocated"],
-[tag(0x0028,0x0101),"bitsStored"],[tag(0x0028,0x1050),"windowCenter"],[tag(0x0028,0x1051),"windowWidth"],[tag(0x0028,0x0030),"pixelSpacing"],[tag(0x0018,0x1164),"imagerPixelSpacing"],[tag(0x0028,0x0103),"pixelRepresentation"]
+[tag(0x0028,0x0101),"bitsStored"],[tag(0x0028,0x1050),"windowCenter"],[tag(0x0028,0x1051),"windowWidth"],[tag(0x0028,0x0030),"pixelSpacing"],[tag(0x0018,0x1164),"imagerPixelSpacing"],[tag(0x0028,0x0103),"pixelRepresentation"],[tag(0x0028,0x0002),"samplesPerPixel"],[tag(0x0028,0x0102),"highBit"],[tag(0x0028,0x0006),"planarConfiguration"]
 ]);
 const SHORT=new Set(["US","SS","UL","SL"]);const LONG=new Set(["OB","OD","OF","OL","OV","OW","SQ","UC","UR","UT","UN","SV","UV"]);
 function inspect(buffer){
@@ -51,7 +51,7 @@ break;
 const key=TARGET.get(tag(e.group,e.element));
 if(key){
 let value;
-if((e.vr==="US"||(!explicit&&["rows","columns","bitsAllocated","bitsStored","pixelRepresentation"].includes(key)))&&e.length===2)value=d.getUint16(e.start,true);
+if((e.vr==="US"||(!explicit&&["rows","columns","bitsAllocated","bitsStored","pixelRepresentation","samplesPerPixel","highBit","planarConfiguration"].includes(key)))&&e.length===2)value=d.getUint16(e.start,true);
 else if(e.vr==="SS"&&e.length===2)value=d.getInt16(e.start,true);
 else if((e.vr==="UL"||e.vr==="SL")&&e.length===4)value=e.vr==="SL"?d.getInt32(e.start,true):d.getUint32(e.start,true);
 else value=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
@@ -73,12 +73,15 @@ if(!["1.2.840.10008.1.2","1.2.840.10008.1.2.1"].includes(ts))throw Error("Transf
 const rows=Number(m.rows),cols=Number(m.columns),bits=Number(m.bitsAllocated),stored=Number(m.bitsStored),rep=Number(m.pixelRepresentation||0),frames=Number(m.numberOfFrames||1);
 if(!Number.isInteger(rows)||!Number.isInteger(cols)||rows<1||cols<1||rows*cols>20000000)throw Error("Dimensões inválidas ou grandes demais.");
 if(![8,16].includes(bits)||stored<1||stored>bits||![0,1].includes(rep))throw Error("Representação de pixels não suportada.");
+if(Number(m.samplesPerPixel)!==1)throw Error("Apenas Samples per Pixel = 1 é suportado.");
+if(m.highBit==null||Number(m.highBit)!==stored-1)throw Error("High Bit não suportado: exige Bits Stored - 1.");
 if(!["MONOCHROME1","MONOCHROME2"].includes(m.photometricInterpretation))throw Error("Apenas imagens monocromáticas são suportadas.");
 if(!Number.isInteger(frames)||frames<1||frames>500)throw Error("Quantidade de frames inválida ou acima do limite didático (500).");
 const frameIndex=opts.frameIndex===undefined?0:opts.frameIndex;
 if(!Number.isInteger(frameIndex)||frameIndex<0||frameIndex>=frames)throw Error("Índice do frame fora da série.");
-if(m.bitsStored==null||m.bitsAllocated==null||m.pixelRepresentation==null)throw Error("Metadados de representação dos pixels incompletos.");
+if(m.bitsStored==null||m.bitsAllocated==null||m.pixelRepresentation==null||m.samplesPerPixel==null||m.highBit==null)throw Error("Metadados de representação dos pixels incompletos.");
 const bpp=bits/8,n=rows*cols,bytes=n*bpp,offset=info.pixelDataOffset;
+if(!Number.isSafeInteger(bytes*frames)||bytes*frames>300*1024*1024)throw Error("Pixel Data acima do limite experimental.");
 if(bytes*frames>info.pixelDataLength||offset+bytes*frames>buffer.byteLength)throw Error("Pixel Data multiframe incompleto.");
 const dv=new DataView(buffer,offset+bytes*frameIndex,bytes),pixels=new Float64Array(n);
 const mask=(2**stored)-1,sign=2**(stored-1);
