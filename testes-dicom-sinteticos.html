@@ -256,9 +256,19 @@ const after=Array.from(realContext.getImageData(0,0,2,1).data);
 assert(rejected&&before.every((v,j)=>v===after[j]),'Canvas modificado após rejeição');
 });
 }
+if(api&&realContext&&typeof realContext.getImageData==='function'){
+check('Canvas real aplica inversão MONOCHROME1 sintética',()=>{
+const b=file({frames:1,pixels:new Uint8Array([0,255])});
+const i=api.inspect(b);
+i.metadata.photometricInterpretation='MONOCHROME1';
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+const pixels=realContext.getImageData(0,0,2,1).data;
+assert(pixels[0]===255&&pixels[4]===0&&pixels[3]===255&&pixels[7]===255,'inversão MONOCHROME1 não aplicada no Canvas');
+});
+}
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
-const canvasChecksPlanned=3;
-const canvasChecksExecuted=isRealCanvas&&api?3:0;
+const canvasChecksPlanned=4;
+const canvasChecksExecuted=isRealCanvas&&api?4:0;
 const canvasChecksSkipped=canvasChecksPlanned-canvasChecksExecuted;
 const exportButton=document.getElementById('export-report');
 if(exportButton&&typeof exportButton.addEventListener==='function')exportButton.addEventListener('click',()=>{
