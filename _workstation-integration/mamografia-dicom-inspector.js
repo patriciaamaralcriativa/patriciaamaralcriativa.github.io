@@ -12,7 +12,7 @@ const TARGET=new Map([
 [tag(0x0018,0x5101),"viewPosition"],[tag(0x0028,0x0010),"rows"],
 [tag(0x0028,0x0011),"columns"],[tag(0x0028,0x0008),"numberOfFrames"],
 [tag(0x0028,0x0004),"photometricInterpretation"],[tag(0x0028,0x0100),"bitsAllocated"],
-[tag(0x0028,0x0101),"bitsStored"],[tag(0x0028,0x0103),"pixelRepresentation"]
+[tag(0x0028,0x0101),"bitsStored"],[tag(0x0028,0x1050),"windowCenter"],[tag(0x0028,0x1051),"windowWidth"],[tag(0x0028,0x0030),"pixelSpacing"],[tag(0x0018,0x1164),"imagerPixelSpacing"],[tag(0x0028,0x0103),"pixelRepresentation"]
 ]);
 const SHORT=new Set(["US","SS","UL","SL"]);const LONG=new Set(["OB","OD","OF","OL","OV","OW","SQ","UC","UR","UT","UN","SV","UV"]);
 function inspect(buffer){
@@ -75,14 +75,17 @@ if(!Number.isInteger(rows)||!Number.isInteger(cols)||rows<1||cols<1||rows*cols>2
 if(![8,16].includes(bits)||stored<1||stored>bits||![0,1].includes(rep))throw Error("Representação de pixels não suportada.");
 if(!["MONOCHROME1","MONOCHROME2"].includes(m.photometricInterpretation))throw Error("Apenas imagens monocromáticas são suportadas.");
 if(frames!==1)throw Error("Imagens multiframe ainda não suportadas.");
+if(m.bitsStored==null||m.bitsAllocated==null||m.pixelRepresentation==null)throw Error("Metadados de representação dos pixels incompletos.");
 const bpp=bits/8,n=rows*cols,bytes=n*bpp,offset=info.pixelDataOffset;
 if(bytes>info.pixelDataLength||offset+bytes>buffer.byteLength)throw Error("Pixel Data incompleto.");
 const dv=new DataView(buffer,offset,bytes),pixels=new Float64Array(n);
 const mask=(2**stored)-1,sign=2**(stored-1);
 let min=Infinity,max=-Infinity;
 for(let i=0;i<n;i++){let raw=bits===8?dv.getUint8(i):dv.getUint16(i*2,true);raw&=mask;if(rep&&raw>=sign)raw-=2**stored;pixels[i]=raw;if(raw<min)min=raw;if(raw>max)max=raw;}
-const center=Number.isFinite(opts.center)?opts.center:(min+max)/2;
-const width=Number.isFinite(opts.width)&&opts.width>0?opts.width:Math.max(1,max-min);
+const dicomCenter=Number(String(m.windowCenter||"").split("\\\\")[0]);
+const dicomWidth=Number(String(m.windowWidth||"").split("\\\\")[0]);
+const center=Number.isFinite(opts.center)?opts.center:(m.windowCenter!=null&&Number.isFinite(dicomCenter)?dicomCenter:(min+max)/2);
+const width=Number.isFinite(opts.width)&&opts.width>0?opts.width:(m.windowWidth!=null&&Number.isFinite(dicomWidth)&&dicomWidth>0?dicomWidth:Math.max(1,max-min));
 const low=center-width/2,ctx=canvas.getContext("2d",{willReadFrequently:false});
 if(!ctx)throw Error("Canvas indisponível.");
 canvas.width=cols;canvas.height=rows;
