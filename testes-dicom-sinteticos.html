@@ -266,6 +266,22 @@ const pixels=realContext.getImageData(0,0,2,1).data;
 assert(pixels[0]===255&&pixels[4]===0&&pixels[3]===255&&pixels[7]===255,'inversão MONOCHROME1 não aplicada no Canvas');
 });
 }
+check('DBT não renderiza mesmo quando Canvas está disponível',()=>{
+const b=file(),i=api.inspect(b);
+i.imageType='breast-tomosynthesis';
+let rejected=false;
+const canvasGuard={getContext(){throw Error('Canvas acessado antes do bloqueio DBT')}};
+try{api.renderGrayscale(b,i,canvasGuard,{frameIndex:0})}catch(e){rejected=/Tomossíntese DICOM identificada/.test(e.message)}
+assert(rejected,'renderização DBT não foi bloqueada antes do acesso ao Canvas');
+});
+check('Grupos funcionais impedem renderização antes de acessar Canvas',()=>{
+const b=file(),i=api.inspect(b);
+i.functionalGroupsPresent=true;
+let rejected=false;
+const canvasGuard={getContext(){throw Error('Canvas acessado antes do bloqueio funcional')}};
+try{api.renderGrayscale(b,i,canvasGuard,{frameIndex:0})}catch(e){rejected=/Sequências funcionais multiframe/.test(e.message)}
+assert(rejected,'renderização de grupos funcionais não foi bloqueada antes do Canvas');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
