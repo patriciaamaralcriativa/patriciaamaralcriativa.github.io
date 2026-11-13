@@ -34,3 +34,35 @@ Executar no navegador, adicionar testes de MONOCHROME1, pixels assinados de 16 b
 ## Ampliação da bateria — execução subsequente
 
 Foram adicionados cinco casos sintéticos: MONOCHROME1, 16 bits assinados, janela DICOM, índice de frame negativo e limite de 500 frames. Execução em runtime JavaScript isolado, com substitutos de APIs do navegador: **15 passaram; 0 falharam**. Ainda não houve execução no Chrome ou validação com estudos DICOM reais. O algoritmo de janela permanece simplificado e não implementa integralmente a apresentação DICOM.
+
+
+## Consolidação de validação geométrica — 60 testes sintéticos (13/11/2026)
+
+**Execução atual:** 60 aprovados, 0 falhas. O código JavaScript do leitor e o script da página de testes foram obtidos diretamente da ramificação `dev/tomossintese-mamaria-20261113` e executados em runtime JavaScript isolado com implementações simuladas de APIs de navegador. Este resultado **não** comprova funcionamento no Chrome, renderização com canvas real ou compatibilidade com estudos clínicos.
+
+### Evidências confirmadas apenas pelos testes sintéticos
+- Identificação de metadados DICOM Part 10, transfer syntax não comprimida suportada e SOP Class de tomossíntese mamária.
+- Identificação e contagem estrutural de itens de sequências funcionais com comprimentos definidos; rejeição conservadora de truncamentos.
+- Extração limitada de posição e orientação DICOM de itens aninhados e associação observacional aos índices dos frames.
+- Consolidação preliminar de atributos compartilhados e por frame, preservando sua proveniência.
+- Detecção de diferenças entre atributos, componentes ausentes, vetores de orientação não unitários ou não ortogonais.
+- Cálculo exploratório de normais dos planos, projeções assinadas, distâncias consecutivas, projeções repetidas e desvios da mediana.
+
+### Observações exploratórias — não equivalem a validação geométrica
+- Índice do frame representa a ordem no arquivo, **não** a ordem anatômica dos cortes.
+- Comparações de orientação e espaçamento utilizam tolerâncias preliminares; diferenças podem ser legítimas conforme a aquisição.
+- O resumo de regularidade considera a ordem de armazenamento e usa tolerância relativa experimental de 5%, não um critério clínico.
+- O cálculo de projeções não valida reconstrução, espessura dos cortes, direção de aquisição ou correspondência anatômica.
+
+### Limitações e bloqueios preservados
+- O leitor não interpreta todos os tipos de sequência DICOM, incluindo sequências de comprimento indefinido e estruturas aninhadas mais complexas.
+- Não há suporte validado para todas as transfer syntaxes, compressões, VOI LUT/Presentation LUT e regras completas de apresentação.
+- Não houve teste real em Chrome/Firefox, com canvas real, dados de referência ou comparação com visualizador DICOM validado.
+- Não houve validação clínica, diagnóstica, de anonimização ou de conformidade completa com DICOM.
+- **A renderização de objetos DBT continua bloqueada** até validação apropriada; a versão oficial da Workstation não foi alterada.
+
+### Próximas ações recomendadas
+1. Executar a bateria em Chrome e Firefox reais e registrar ambiente, console e resultados.
+2. Testar casos sintéticos com sequências de comprimento indefinido, dados malformados e limites de recursos, sem abrir a renderização DBT.
+3. Conferir a interpretação de atributos específicos da modalidade com documentação DICOM e estudos de referência devidamente anonimizados.
+4. Comparar metadados e geometria com software DICOM de referência antes de considerar qualquer integração à Workstation.
