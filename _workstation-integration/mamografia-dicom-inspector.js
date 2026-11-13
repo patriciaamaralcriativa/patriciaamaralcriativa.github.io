@@ -64,11 +64,39 @@ if(group!==0xfffe||el!==0xe000||len===0xffffffff||len>end-p-8)return result;
 const itemStart=p+8,itemEnd=itemStart+len;
 const inner=inspectItemTopLevelTags(itemStart,itemEnd,explicit);
 if(!inner.valid)return result;
-result.items.push({byteLength:len,topLevelTags:inner.tags});
+result.items.push({byteLength:len,topLevelTags:inner.tags,geometry:inspectNestedGeometry(itemStart,itemEnd,explicit)});
 count++;p=itemEnd;
 }
 if(p===end){result.validated=true;result.itemCount=count;}
 else result.items=[];
+return result;
+}
+function inspectNestedGeometry(start,end,explicit){
+const result={validated:false,imagePositionPatient:null,imageOrientationPatient:null};
+let p=start,steps=0;
+while(p<end&&steps++<100){
+if(p+8>end)return result;
+const group=d.getUint16(p,true),el=d.getUint16(p+2,true);
+if(group===0xfffe)return result;
+let len,head=8,vr=null;
+if(explicit){
+vr=String.fromCharCode(bytes[p+4],bytes[p+5]);
+if(!/^[A-Z]{2}$/.test(vr))return result;
+if(LONG.has(vr)){head=12;if(p+head>end)return result;len=d.getUint32(p+8,true);}
+else len=d.getUint16(p+6,true);
+}else len=d.getUint32(p+4,true);
+if(len===0xffffffff||len>end-p-head)return result;
+const key=group===0x0020&&el===0x0032?"imagePositionPatient":group===0x0020&&el===0x0037?"imageOrientationPatient":null;
+if(key){
+if(explicit&&vr!=="DS")return result;
+const tokens=decoder.decode(bytes.subarray(p+head,p+head+len)).replace(/[\\0\\s]+$/g,"").split("\\\\").map(x=>x.trim());
+const values=tokens.map(Number),expected=key==="imagePositionPatient"?3:6;
+if(tokens.length!==expected||tokens.some(x=>x==="")||!values.every(Number.isFinite))return result;
+result[key]=values;
+}
+p+=head+len;
+}
+result.validated=p===end;
 return result;
 }
 function inspectFunctionalItemHeaders(e,explicit){
