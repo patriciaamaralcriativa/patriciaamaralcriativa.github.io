@@ -66,3 +66,13 @@ Foram adicionados cinco casos sintéticos: MONOCHROME1, 16 bits assinados, janel
 2. Testar casos sintéticos com sequências de comprimento indefinido, dados malformados e limites de recursos, sem abrir a renderização DBT.
 3. Conferir a interpretação de atributos específicos da modalidade com documentação DICOM e estudos de referência devidamente anonimizados.
 4. Comparar metadados e geometria com software DICOM de referência antes de considerar qualquer integração à Workstation.
+
+
+## Atualização de execução — 78 testes sintéticos e bloqueio do Chromium (13/11/2026)
+
+- A bateria ampliada em `testes-dicom-sinteticos.html` alcançou **78 testes sintéticos aprovados, 0 falhas**, executados em runtime JavaScript isolado, incluindo quatro verificações com **Canvas simulado**. A expressão “Canvas 2D disponível” na página não prova, isoladamente, execução em navegador real.
+- Foram adicionadas verificações de rejeição antecipada para índices de frame inválidos (negativo, fracionário, textual, `NaN`, `Infinity`, `null` e booleano), limite de frames, ausência de Transfer Syntax UID, Pixel Data incompleto, ausência de contexto 2D, DBT e grupos funcionais multiframe.
+- **Tentativa real de navegador neste ambiente:** Chromium disponível em `/usr/bin/chromium`; comando headless com `--no-sandbox --disable-gpu --disable-dev-shm-usage --disable-background-networking --dump-dom` sobre uma página HTML local mínima não retornou documento em 12 segundos (encerramento por timeout, status 124). Isso **não é resultado de teste DICOM** e não prova falha do leitor.
+- **Bloqueio de homologação:** a suíte integrada de 78 testes **não foi executada no Chromium real**; não houve conferência visual ou de pixels em browser integrado ao leitor. Não declarar validação de navegador, compatibilidade DBT, anonimização ou uso diagnóstico.
+- **Próximo passo obrigatório:** executar a suíte integral em navegador funcional, salvar JSON de resultados, registrar versão do navegador e console, conferir os quatro testes Canvas reais e comparar imagens DICOM de referência devidamente anonimizadas com visualizador validado.
+- **Preservação:** nenhuma mudança na branch principal; renderização de tomossíntese continua bloqueada.
