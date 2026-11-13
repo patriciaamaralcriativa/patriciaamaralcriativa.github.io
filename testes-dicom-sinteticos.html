@@ -117,7 +117,7 @@ check('DBT alerta quando Shared Functional Groups possui dois itens',()=>{const 
 
 
 if(api){
-check('Cabeçalhos dos itens funcionais expõem comprimentos sem interpretar pixels',()=>{const i=api.inspect(dbtFunctionalFixture(2,2));const fg=i.functionalGroupSummary;assert(fg.perFrameItemHeaders.length===2&&fg.perFrameItemHeaders.every(x=>x.byteLength===0&&x.empty)&&fg.sharedItemHeaders.length===1&&!fg.parsed,'cabeçalhos inconsistentes')});
+check('Cabeçalhos dos itens funcionais expõem comprimentos sem interpretar pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9229,'SQ',item),element(0x5200,0x9230,'SQ',concat([item,item]))]).buffer;const i=api.inspect(b);const fg=i.functionalGroupSummary;assert(fg.perFrameItemHeaders.length===2&&fg.perFrameItemHeaders.every(x=>x.byteLength===0&&x.empty)&&fg.sharedItemHeaders.length===1&&!fg.parsed,'cabeçalhos inconsistentes')});
 check('Cabeçalhos de itens inválidos não são publicados como válidos',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(99)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(!i.functionalGroupSummary.perFrameStructureValidated&&i.functionalGroupSummary.perFrameItemHeaders.length===0,'cabeçalho inválido exposto')});
 }
 
