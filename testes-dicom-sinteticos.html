@@ -226,5 +226,16 @@ check('Distâncias consecutivas uniformes não geram alerta exploratório',()=>{
 check('Variação de distâncias é sinalizada sem validar reconstrução',()=>{const i=api.inspect(regularityFixture([0,1,2,6]));const r=i.frameSummary.planeSpacingObservations.regularity;assert(r.irregularAdjacentPairs.length===1&&r.irregularAdjacentPairs[0].absoluteDistance===4&&!r.uniformSpacingConfirmed&&!i.frameSummary.geometryValidated,'variação não sinalizada')});
 }
 
-document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
+const realCanvas=document.createElement('canvas');
+const realContext=typeof realCanvas.getContext==='function'?realCanvas.getContext('2d'):null;
+if(api&&realContext&&typeof realContext.getImageData==='function'){
+check('Canvas 2D real recebe pixels sintéticos renderizados',()=>{
+const b=file({frames:1,pixels:new Uint8Array([0,255])}),i=api.inspect(b);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+const pixels=realContext.getImageData(0,0,2,1).data;
+assert(pixels[0]===0&&pixels[4]===255&&pixels[3]===255&&pixels[7]===255,'Canvas 2D real não reproduziu os pixels esperados');
+});
+}
+const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
+document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Casos sintéticos; não há validação clínica.';
 </script></html>
