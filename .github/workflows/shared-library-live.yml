@@ -1,0 +1,29 @@
+name: Biblioteca compartilhada publicada — verificação real
+on:
+  push:
+    branches: [dev/tomossintese-mamaria-20261113]
+    paths: ['_workstation-integration/shared-library-publication.json']
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Conferir versão publicada, contas e armazenamento reais
+        run: node _workstation-integration/tests/shared-library-live.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shared-library-live-${{ github.sha }}
+          path: artifacts/
+          retention-days: 14

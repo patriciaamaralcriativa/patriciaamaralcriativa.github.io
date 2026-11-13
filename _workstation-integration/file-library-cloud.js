@@ -8,7 +8,7 @@ window.AmaralCloudLibrary=(()=>{
  function assertUser(uid){if(stored()?.user?.id!==uid)throw Error('O acesso mudou. Entre novamente antes de continuar.');}
  async function call(route,{method='GET',body,raw=false,uid,signal}={}){
   let s=stored();if(uid)assertUser(uid);const headers={apikey:KEY};if(s?.access_token)headers.Authorization='Bearer '+s.access_token;
-  if(raw)headers['Content-Type']='application/octet-stream';else headers['Content-Type']='application/json';
+  if(raw){headers['Content-Type']='application/octet-stream';if(method==='POST')headers['Cache-Control']='max-age=0';}else headers['Content-Type']='application/json';
   if(method==='POST'||method==='PATCH'||method==='DELETE')headers.Prefer='return=representation';
   const r=await fetch(API+route,{method,headers,body:raw?body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal});
   if(uid)assertUser(uid);
@@ -25,8 +25,9 @@ window.AmaralCloudLibrary=(()=>{
   if(!rows?.[0]?.ativo)throw Error('Este cadastro ainda não está autorizado pela professora.');
   identity={uid:user.id,teacher:rows[0].papel==='administradora'};return {...identity};
  }
- async function login(email,password){const s=await call('/auth/v1/token?grant_type=password',{method:'POST',body:{email,password}});s.expires_at=Date.now()/1000+s.expires_in;sessionStorage.setItem(SESSION,JSON.stringify(s));identity=null;return context();}
- async function logout(){const s=stored();try{if(s?.access_token)await call('/auth/v1/logout',{method:'POST'});}finally{sessionStorage.removeItem(SESSION);identity=null;}}
+ function authChanged(uid){if(parent!==window)parent.postMessage({type:'amaral-library-auth-changed',uid},location.origin);}
+ async function login(email,password){const s=await call('/auth/v1/token?grant_type=password',{method:'POST',body:{email,password}});s.expires_at=Date.now()/1000+s.expires_in;sessionStorage.setItem(SESSION,JSON.stringify(s));identity=null;authChanged(s.user.id);return context();}
+ async function logout(){const s=stored();try{if(s?.access_token)await call('/auth/v1/logout',{method:'POST'});}finally{sessionStorage.removeItem(SESSION);identity=null;authChanged(null);}}
  async function requireUser(teacher=false){const c=await context();if(!c)throw Error('Entre com o mesmo e-mail e senha da sala de aulas.');if(teacher&&!c.teacher)throw Error('Somente a professora pode enviar, liberar ou recolher arquivos.');return c;}
  const path=(b,f,i)=>b.criada_por+'/'+b.id+'/'+f.id+'/'+String(i).padStart(5,'0')+'.bin';
  const digest=async blob=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await blob.arrayBuffer())),x=>x.toString(16).padStart(2,'0')).join('');
@@ -51,7 +52,7 @@ window.AmaralCloudLibrary=(()=>{
  async function download(id,index=null,onProgress=()=>{}){
   const c=await requireUser(),b=await details(id),source=index===null?b.files:[b.files[index]];if(!source.length||source.some(f=>!f))throw Error('Arquivo não encontrado no conjunto.');
   const files=[];let done=0;const total=source.reduce((n,f)=>n+f.tamanho,0);
-  for(const f of source){const parts=[];for(let i=0;i<f.partes;i++){const part=await call('/storage/v1/object/authenticated/'+BUCKET+'/'+path(b,f,i),{uid:c.uid,raw:true});if(part.size!==Math.min(CHUNK,f.tamanho-i*CHUNK))throw Error('Parte truncada: importação interrompida.');parts.push(part);done+=part.size;onProgress(done,total);}
+  for(const f of source){const parts=[];for(let i=0;i<f.partes;i++){const part=await call('/functions/v1/workstation-biblioteca-download?conjunto='+b.id+'&arquivo='+f.id+'&parte='+i+'&request='+crypto.randomUUID(),{uid:c.uid,raw:true});if(part.size!==Math.min(CHUNK,f.tamanho-i*CHUNK))throw Error('Parte truncada: importação interrompida.');parts.push(part);done+=part.size;onProgress(done,total);}
    const file=new File(parts,f.nome,{type:f.mime});if(file.size!==f.tamanho||await digest(file)!==f.sha256)throw Error('Integridade SHA-256 divergente: arquivo bloqueado.');files.push(file);
   }
   await window.AmaralFileLibrary.inspectFiles(files);await details(id);assertUser(c.uid);return {entry:b,files};

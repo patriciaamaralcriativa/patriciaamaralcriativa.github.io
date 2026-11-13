@@ -7,7 +7,7 @@
   const sheet=make('style');sheet.textContent='.ar-library-button{font:inherit;min-height:44px;padding:8px 12px;margin:6px;border:1px solid #71bacb;border-radius:6px;background:#163c54;color:#fff;cursor:pointer}.ar-library-dialog{width:min(1100px,96vw);height:92vh;padding:8px;border:1px solid #71bacb;background:#081526;color:#fff;max-width:96vw;max-height:96vh}.ar-library-dialog::backdrop{background:#000b}.ar-library-dialog iframe{width:100%;height:calc(100% - 54px);border:0}.ar-library-dialog button{min-height:44px;margin-bottom:6px}.ar-library-message{padding:12px;background:#153c53;color:#fff;border:1px solid #71bacb}';document.head.append(sheet);
   function close(){if(dialog?.open)dialog.close();request=null;picker?.removeAttribute('src');}
   function show(options){
-    close();request={...options,token:crypto.randomUUID()};
+    close();let uid=null;try{uid=JSON.parse(sessionStorage.getItem('patricia-sala-session-v1')||'null')?.user?.id||null;}catch{}request={...options,uid,token:crypto.randomUUID()};
     if(!dialog){dialog=make('dialog');dialog.className='ar-library-dialog';dialog.setAttribute('aria-label','Escolher na Biblioteca de arquivos');const end=make('button','Voltar ao visualizador');end.type='button';end.onclick=close;picker=make('iframe');picker.title='Biblioteca de arquivos';dialog.append(end,picker);dialog.addEventListener('cancel',close);document.body.append(dialog);}
     const u=new URL('biblioteca-arquivos.html',base);u.search=new URLSearchParams({picker:'1',token:request.token,modality:options.modality||'all',accept:options.accept||'all',multi:options.multi?'1':'0'});picker.src=u.href;dialog.showModal();
   }
@@ -28,6 +28,9 @@
       if(e.data?.type==='amaral-library-ready'&&pendingCloud){const p=pendingCloud;pendingCloud=null;loadCloudFrame(p).catch(err=>notify(err.message));}
       if(e.data?.type==='amaral-library-ready'&&pendingFrame){const p=pendingFrame;pendingFrame=null;deliver(p,p.files,p.modality);}
       return;
+    }
+    if(request&&e.source===picker?.contentWindow&&e.origin===origin&&e.data?.type==='amaral-library-auth-changed'){
+      if(e.data.uid!==request.uid){close();location.reload();}return;
     }
     if(!request||e.source!==picker?.contentWindow||e.origin!==origin||e.data?.type!=='amaral-library-pick'||e.data.token!==request.token)return;
     const r=request,files=e.data.files,modality=e.data.modality;if(!Array.isArray(files)||!files.length||files.length>1000)return;

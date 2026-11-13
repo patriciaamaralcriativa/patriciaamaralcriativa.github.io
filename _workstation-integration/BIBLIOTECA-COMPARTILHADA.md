@@ -18,7 +18,7 @@ Arquivos são guardados em partes imutáveis de até 4 MiB, evitando o limite po
 
 A liberação verifica no servidor a quantidade de arquivos e a presença/tamanho de todas as partes. As escritas em rascunhos são serializadas com a publicação. Ao abrir, o cliente reconstitui o arquivo, confere tamanho, SHA-256 e assinatura PNG/JPEG/DICOM antes de aplicar o input do visualizador existente. Não se pressupõe que o reconhecimento do arquivo valide seus pixels, geometria ou finalidade clínica.
 
-Não há URL pública ou URL assinada persistente; cada recebimento usa JWT e RLS. Recolher um conjunto impede novas consultas e downloads dos alunos. Arquivos já recebidos no dispositivo não podem ser apagados à distância. Os materiais devem ser revisados e autorizados antes da liberação. A confirmação da professora não é anonimização automática nem certificação de ausência de dados gravados nos pixels.
+Não há URL pública ou URL assinada persistente. Alunos não leem objetos diretamente do bucket. A função `workstation-biblioteca-download` verifica o JWT no Auth, consulta catálogo e arquivo sob RLS do usuário, recebe somente a parte autorizada e confere novamente a autorização antes de responder com `private, no-store`. A chave de serviço é usada exclusivamente no servidor, depois da autorização, e nunca é entregue ao cliente. A autenticação é implementada na própria função com o endpoint Auth, inclusive para contas inativas, e não depende da opção de verificação legada do gateway. O upload também usa cache de duração zero. Recolher um conjunto impede novas consultas e downloads dos alunos. Arquivos já recebidos no dispositivo não podem ser apagados à distância. Os materiais devem ser revisados e autorizados antes da liberação. A confirmação da professora não é anonimização automática nem certificação de ausência de dados gravados nos pixels.
 
 ## Modalidades e leitores
 
@@ -37,3 +37,5 @@ Scripts originais de `amaral-rad.html` e `sala-de-aulas.html` conferidos contra 
 ## Evidências
 
 Os testes do módulo compartilhado usam Chromium, Auth, PostgREST e Storage reais, com conta docente, aluno ativo e conta inativa independentes. Dados de teste: PNG com ruído sintético, padrões geométricos e o volume DICOM sintético já incluído na Workstation. Os sete DICOM científicos reais não são enviados ao acervo ou ao GitHub por esses testes. Não se trata de validação clínica nem de nova validação de geometria DICOM.
+
+A saída ou troca de conta pelo seletor recarrega o host para invalidar a identidade e limpar imagens da sessão anterior, sem reutilizar o estado autenticado de outra conta.
