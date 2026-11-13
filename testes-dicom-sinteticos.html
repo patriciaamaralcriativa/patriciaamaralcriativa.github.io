@@ -163,5 +163,16 @@ check('Geometria compartilhada complementa posição individual ausente',()=>{co
 check('Geometria efetiva não é considerada ordem espacial validada',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const frame=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',frame)]).buffer;const i=api.inspect(b);assert(i.frameSummary.effectiveGeometryObservations[0].observations.length===0&&!i.frameSummary.frameOrderValidated,'geometria inferida sem dados')});
 }
 
+
+if(api){
+function fixtureGeometryConflict(sharedText,frameText){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const wrap=(v)=>{const geom=element(0x20,0x37,'DS',v);const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9116,'SQ',nested);return concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);};
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9229,'SQ',wrap(sharedText)),element(0x5200,0x9230,'SQ',wrap(frameText))]).buffer;
+}
+check('Diferencia orientação compartilhada e por frame sem validar geometria',()=>{const i=api.inspect(fixtureGeometryConflict('1\\0\\0\\0\\1\\0','0\\1\\0\\1\\0\\0'));assert(i.frameSummary.geometryConflicts.length===1&&i.frameSummary.geometryConflicts[0].attribute==='imageOrientationPatient'&&!i.frameSummary.orientationConsistency.geometryValidated,'diferença não detectada')});
+check('Orientações compartilhada e individual iguais não criam conflito',()=>{const i=api.inspect(fixtureGeometryConflict('1\\0\\0\\0\\1\\0','1\\0\\0\\0\\1\\0'));assert(i.frameSummary.geometryConflicts.length===0&&i.frameSummary.orientationConsistency.allObservedOrientationsEqual&&!i.frameSummary.geometryValidated,'conflito falso')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
