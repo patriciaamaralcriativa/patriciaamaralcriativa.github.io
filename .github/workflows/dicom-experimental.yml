@@ -1,0 +1,47 @@
+name: DICOM experimental — navegador real
+on:
+  push:
+    branches: [dev/tomossintese-mamaria-20261113]
+    paths:
+      - '.github/workflows/dicom-experimental.yml'
+      - 'testes-dicom-sinteticos.html'
+      - '*-preview.html'
+      - '_workstation-integration/mamografia-dicom-inspector.js'
+      - '_workstation-integration/mamografia-education.*'
+      - '_workstation-integration/tests/dicom-*.cjs'
+permissions:
+  contents: read
+concurrency:
+  group: dicom-experimental-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar Playwright e Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Executar DICOM em navegador real
+        env:
+          DICOM_EVIDENCE_DIR: artifacts/dicom
+        run: node _workstation-integration/tests/dicom-browser-validation.cjs
+      - name: Testar módulos didáticos quando disponíveis
+        if: always()
+        run: |
+          if [ -f _workstation-integration/tests/dicom-education-browser.cjs ]; then
+            node _workstation-integration/tests/dicom-education-browser.cjs
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dicom-browser-${{ github.sha }}
+          path: artifacts/
+          retention-days: 14
