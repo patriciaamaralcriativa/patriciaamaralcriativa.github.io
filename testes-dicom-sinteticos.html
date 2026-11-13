@@ -342,6 +342,16 @@ const b=file(),i=api.inspect(b);let rejected=false;
 try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:true})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
 assert(rejected,'booleano foi aceito como índice de frame');
 });
+check('Limite de 500 frames é aceito com Pixel Data completo',()=>{
+const b=file({frames:500,pixels:new Uint8Array(1000)}),i=api.inspect(b),c=fakeCanvas();
+const r=api.renderGrayscale(b,i,c,{frameIndex:499,center:127.5,width:255});
+assert(r.frameIndex===499&&r.frameCount===500&&c.pixels.length===8,'limite inclusivo de 500 frames não foi respeitado');
+});
+check('FrameIndex omitido utiliza primeiro frame',()=>{
+const b=file(),i=api.inspect(b),c=fakeCanvas();
+const r=api.renderGrayscale(b,i,c,{center:127.5,width:255});
+assert(r.frameIndex===0&&c.pixels[0]===0&&c.pixels[4]===255,'frame padrão incorreto');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
