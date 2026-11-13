@@ -92,5 +92,11 @@ if(api){
 check('Registra grupos compartilhados e por frame sem interpretar geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9229,'SQ',new Uint8Array(0)),element(0x5200,0x9230,'SQ',new Uint8Array(0))]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.sharedPresent&&i.functionalGroupSummary.perFramePresent&&i.functionalGroupSummary.sharedLength===0&&i.functionalGroupSummary.perFrameLength===0&&!i.functionalGroupSummary.parsed,'resumo de sequências incorreto')});
 }
 
+
+if(api){
+check('Sequência funcional com um item definido é contada sem ler geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.perFrameItems===1&&i.functionalGroupSummary.perFrameStructureValidated&&!i.functionalGroupSummary.parsed,'item não contado corretamente')});
+check('Sequência funcional com item truncado é rejeitada estruturalmente',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(100)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.perFrameItems===null&&!i.functionalGroupSummary.perFrameStructureValidated,'item truncado aceito')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
