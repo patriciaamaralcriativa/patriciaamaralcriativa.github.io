@@ -271,6 +271,34 @@ return normals.every(n=>Math.abs(Math.abs(n.reduce((sum,v,j)=>sum+v*reference[j]
 spatialOrderValidated:false
 };
 if(out.frameSummary.planeNormalConsistency.allNormalsParallel===false)out.warnings.push("Normais dos planos observados não são paralelas; interpretação espacial requer revisão.");
+const planes=out.frameSummary.planeNormalObservations.filter(p=>p.computed);
+const commonNormal=out.frameSummary.planeNormalConsistency.allNormalsParallel===true&&planes.length>0?planes[0].normal:null;
+const projectionTolerance=1e-4;
+const projections=commonNormal?planes.map(p=>({
+frameIndex:p.frameIndex,
+projection:p.signedProjection*(p.normal.reduce((sum,v,j)=>sum+v*commonNormal[j],0)<0?-1:1)
+})):[];
+const adjacentDifferences=projections.slice(1).map((p,i)=>({
+fromFrameIndex:projections[i].frameIndex,toFrameIndex:p.frameIndex,
+signedDifference:p.projection-projections[i].projection,
+absoluteDistance:Math.abs(p.projection-projections[i].projection)
+}));
+const repeatedProjectionPairs=[];
+for(let i=0;i<projections.length;i++)for(let j=i+1;j<projections.length;j++){
+if(Math.abs(projections[i].projection-projections[j].projection)<=projectionTolerance)
+repeatedProjectionPairs.push([projections[i].frameIndex,projections[j].frameIndex]);
+}
+out.frameSummary.planeSpacingObservations={
+comparable:!!commonNormal,
+projectionTolerance,
+framesWithComparableProjections:projections.length,
+adjacentDifferences,
+repeatedProjectionPairs,
+spatialOrderValidated:false,
+spacingValidated:false
+};
+if(repeatedProjectionPairs.length)out.warnings.push("Projeções coincidentes ou próximas entre frames; não inferir cortes duplicados sem verificar aquisição.");
+
 
 
 
