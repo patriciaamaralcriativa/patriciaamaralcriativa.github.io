@@ -11,8 +11,9 @@ test('painel separa conclusão e nota, ordena acertos por questão e preserva re
  const quiz=(await req('teacher/quizzes',{title:'Teste painel',questions},admin)).data;
  const room=(await req('teacher/rooms',{title:'Teste painel'},admin)).data;
  const session=(await req('teacher/rooms/'+room.id+'/sessions',{quiz_id:quiz.id,mode:'self'},admin)).data;
- const a=(await req('join',{code:room.code,name:'Aluno Alfa'})).cookie,b=(await req('join',{code:room.code,name:'Aluno Beta'})).cookie;
  await req('teacher/sessions/'+session.id+'/control',{action:'start'},admin);
+ const a=(await req('join',{code:room.code,name:'Aluno Alfa'})).cookie,b=(await req('join',{code:room.code,name:'Aluno Beta'})).cookie;
+
  for(let i=0;i<2;i++)assert.equal((await req('student/answers',{question_id:quiz.questions[i].id,answer:i===0?0:1},a)).status,200);
  let dash=(await req('teacher/sessions/'+session.id,undefined,admin)).data;
  let alfa=dash.participants.find(p=>p.name==='Aluno Alfa'),beta=dash.participants.find(p=>p.name==='Aluno Beta');

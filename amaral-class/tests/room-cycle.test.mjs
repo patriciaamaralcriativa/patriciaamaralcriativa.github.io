@@ -11,8 +11,10 @@ test('mesma sala recebe sessões de turmas diferentes sem misturar respostas nem
  const room=(await req('teacher/rooms',{title:'Sala permanente'},admin)).data;
  const first=(await req('teacher/rooms/'+room.id+'/sessions',{quiz_id:q.id,mode:'self',group_name:'Turma A'},admin)).data;
  assert.equal((await req('teacher/rooms/'+room.id+'/sessions',{quiz_id:q.id,mode:'self'},admin)).status,409);
- const student=(await req('join',{code:room.code,name:'Aluno Fictício'})).cookie;
+ assert.equal((await req('join',{code:room.code,name:'Aluno Bloqueado'})).status,404);
  await req('teacher/sessions/'+first.id+'/control',{action:'start'},admin);
+ const student=(await req('join',{code:room.code,name:'Aluno Fictício'})).cookie;
+
  await req('student/answers',{question_id:q.questions[0].id,answer:0},student);
  await req('teacher/sessions/'+first.id+'/control',{action:'end'},admin);
  let rooms=(await req('teacher/rooms',undefined,admin)).data.rooms;
