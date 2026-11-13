@@ -51,7 +51,8 @@ break;
 const key=TARGET.get(tag(e.group,e.element));
 if(key){
 let value;
-if(SHORT.has(e.vr)&&e.length===2)value=e.vr==="SS"?d.getInt16(e.start,true):d.getUint16(e.start,true);
+if((e.vr==="US"||(!explicit&&["rows","columns","bitsAllocated","bitsStored","pixelRepresentation"].includes(key)))&&e.length===2)value=d.getUint16(e.start,true);
+else if(e.vr==="SS"&&e.length===2)value=d.getInt16(e.start,true);
 else if((e.vr==="UL"||e.vr==="SL")&&e.length===4)value=e.vr==="SL"?d.getInt32(e.start,true):d.getUint32(e.start,true);
 else value=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
 out.metadata[key]=value;
@@ -62,6 +63,7 @@ if(count>=10000)out.warnings.push("Limite de elementos atingido; leitura parcial
 if(out.metadata.modality&&out.metadata.modality!=="MG")out.warnings.push("Modalidade declarada não é MG: "+out.metadata.modality);
 if(!out.metadata.modality)out.warnings.push("Modalidade não identificada; não classificar como mamografia.");
 if(!out.pixelDataPresent)out.warnings.push("Pixel Data não confirmado. A inspeção não demonstra capacidade de renderização.");
+if(out.pixelDataPresent)out.warnings.push("Pixel Data localizado, mas não decodificado; não há garantia de exibição fiel.");
 return out;
 }
 global.AmaralMamografiaDicom={inspect};
