@@ -176,6 +176,20 @@ out.frameSummary.sharedItemCountValid=fg.sharedStructureValidated?fg.sharedItems
 if(out.frameSummary.sharedItemCountValid===false)out.warnings.push("Shared Functional Groups Sequence deve conter exatamente um item.");
 }
 
+const perFrameHeaders=out.functionalGroupSummary.perFrameItemHeaders;
+out.frameSummary.frameGeometryObservations=perFrameHeaders.map((header,index)=>{
+const observations=[];
+for(const sequence of header.nestedSequences||[]){
+if(sequence.group!==0x0020||![0x9113,0x9116].includes(sequence.element)||!sequence.validated)continue;
+for(const item of sequence.items||[]){
+if(!item.geometry?.validated)continue;
+if(sequence.element===0x9113&&item.geometry.imagePositionPatient)observations.push({attribute:"imagePositionPatient",values:item.geometry.imagePositionPatient});
+if(sequence.element===0x9116&&item.geometry.imageOrientationPatient)observations.push({attribute:"imageOrientationPatient",values:item.geometry.imageOrientationPatient});
+}
+}
+return {frameIndex:index,observations,geometryValidated:false};
+});
+if(out.frameSummary.frameGeometryObservations.some(x=>x.observations.length>0))out.warnings.push("Coordenadas associadas aos índices de frame apenas para inspeção; ordem espacial e reconstrução não validadas.");
 out.warnings.push("Ordem dos cortes e geometria DBT não inferidas a partir do índice dos frames.");
 }
 if(!sawSyntax)out.warnings.push("Transfer Syntax UID não encontrada no cabeçalho Part 10; renderização bloqueada.");
