@@ -70,5 +70,10 @@ check('12 bits assinados com extensão de sinal',()=>{const b=extendedFile({bits
 check('Sequência indefinida não é interpretada como pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const sq=concat([u16(0x5200),u16(0x9230),enc.encode('SQ'),new Uint8Array(2),u32(0xffffffff)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),sq]).buffer;let rejected=false;try{api.inspect(b)}catch(e){rejected=/indefinido/.test(e.message)}assert(rejected,'sequência indefinida não foi rejeitada')});
 }
 
+
+if(api){
+check('Identifica SOP Class de tomossíntese e bloqueia pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(8,0x60,'CS','MG'),element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(2)),element(0x28,0x02,'US',u16(1)),element(0x28,0x04,'CS','MONOCHROME2'),element(0x28,0x100,'US',u16(8)),element(0x28,0x101,'US',u16(8)),element(0x28,0x102,'US',u16(7)),element(0x28,0x103,'US',u16(0)),element(0x7fe0,0x10,'OB',new Uint8Array([0,255]))]).buffer;const i=api.inspect(b);assert(i.imageType==='breast-tomosynthesis','SOP Class DBT não reconhecida');let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'DBT não validada foi renderizada')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
