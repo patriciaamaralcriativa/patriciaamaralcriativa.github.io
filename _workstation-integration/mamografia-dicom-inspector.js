@@ -298,6 +298,25 @@ spatialOrderValidated:false,
 spacingValidated:false
 };
 if(repeatedProjectionPairs.length)out.warnings.push("Projeções coincidentes ou próximas entre frames; não inferir cortes duplicados sem verificar aquisição.");
+const distances=adjacentDifferences.map(d=>d.absoluteDistance);
+const positiveDistances=distances.filter(v=>v>projectionTolerance);
+const sortedDistances=[...positiveDistances].sort((a,b)=>a-b);
+const medianDistance=sortedDistances.length?(
+sortedDistances.length%2?sortedDistances[(sortedDistances.length-1)/2]:
+(sortedDistances[sortedDistances.length/2-1]+sortedDistances[sortedDistances.length/2])/2):null;
+const relativeTolerance=0.05;
+const irregularAdjacentPairs=medianDistance===null?[]:adjacentDifferences.filter(d=>
+d.absoluteDistance>projectionTolerance&&Math.abs(d.absoluteDistance-medianDistance)>Math.max(projectionTolerance,medianDistance*relativeTolerance)
+).map(d=>({fromFrameIndex:d.fromFrameIndex,toFrameIndex:d.toFrameIndex,absoluteDistance:d.absoluteDistance}));
+out.frameSummary.planeSpacingObservations.regularity={
+medianNonzeroAdjacentDistance:medianDistance,
+relativeTolerance,
+irregularAdjacentPairs,
+uniformSpacingConfirmed:false,
+assessment:"exploratory-storage-order-only"
+};
+if(irregularAdjacentPairs.length)out.warnings.push("Distâncias consecutivas distintas da mediana na ordem de armazenamento; não concluir irregularidade anatômica ou de reconstrução.");
+
 
 
 
