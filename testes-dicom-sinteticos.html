@@ -47,5 +47,21 @@ check('Janela linear com largura 2 preserva extremos',()=>{const b=extendedFile(
 check('MONOCHROME1 com largura 1 inverte limiar',()=>{const b=extendedFile({photo:'MONOCHROME1',center:100,width:1,values:[99,100]}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c);assert(c.pixels[0]===255&&c.pixels[4]===0,'limiar invertido incorreto')});
 }
 
+
+if(api){
+check('Detecta sequências funcionais multiframe e bloqueia renderização',()=>{
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const parts=[pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x60,'CS','MG'),
+element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(2)),element(0x28,0x02,'US',u16(1)),
+element(0x28,0x04,'CS','MONOCHROME2'),element(0x28,0x100,'US',u16(8)),element(0x28,0x101,'US',u16(8)),
+element(0x28,0x102,'US',u16(7)),element(0x28,0x103,'US',u16(0)),
+element(0x5200,0x9230,'SQ',new Uint8Array(0)),element(0x7fe0,0x10,'OB',new Uint8Array([0,255]))];
+const b=concat(parts).buffer,i=api.inspect(b);
+assert(i.functionalGroupsPresent===true,'sequência funcional não detectada');
+let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}
+assert(rejected,'renderização com functional groups aceita');
+});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
