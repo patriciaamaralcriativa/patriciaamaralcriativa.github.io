@@ -244,7 +244,7 @@ assert(realCanvas.width===2&&realCanvas.height===1,'dimensões incorretas');
 const first=Array.from(realContext.getImageData(0,0,2,1).data);
 api.renderGrayscale(b,i,realCanvas,{frameIndex:1,center:127.5,width:255});
 const second=Array.from(realContext.getImageData(0,0,2,1).data);
-assert(first[0]===0&&first[4]===255&&second[0]===100&&second[4]===201,'troca de frame não atualizou Canvas real');
+assert(first[0]===0&&first[4]===255&&second[0]===100&&second[4]===200,'troca de frame não atualizou Canvas real');
 });
 check('Canvas real não é alterado ao rejeitar frame inválido',()=>{
 const b=file(),i=api.inspect(b);
