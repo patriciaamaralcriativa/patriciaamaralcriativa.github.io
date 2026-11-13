@@ -125,7 +125,7 @@ function horrorReveal(){
  const done=()=>{if(horrorSession!==session||epoch!==rotaGameEpoch||rotaLessonClosed)return;horrorVeto()};
  video.onended=done;
  video.onerror=done;
- video.src='assets/rota-zero/'+m[1]+'-rugido-leve.mp4';
+ video.src='assets/rota-zero/'+m[1]+'-rugido-leve.mp4?v=original-completo-20261113';
  horrorAudioSync();
  const play=()=>{if(horrorSession!==session)return;video.play().then(()=>{if(horrorSession===session)$('monsterPlay').hidden=true}).catch(()=>{if(horrorSession===session)$('monsterPlay').hidden=false})};
  $('monsterPlay').onclick=play;
