@@ -1,0 +1,307 @@
+{
+  "sourceCommit": "4f47b12ce9ea5af930f7f64314729c23ecd023b0",
+  "executedAt": "2026-11-13T17:01:44.903Z",
+  "realBrowser": true,
+  "publicSite": "https://patriciaamaralcriativa.github.io/",
+  "candidateManifestOverride": false,
+  "mode": "release-smoke",
+  "tests": [
+    {
+      "name": "Reconhecimento exige ciência das limitações",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real 42201806-4db1-48a7-91f3-42cc42e131cb.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências 42201806-4db1-48a7-91f3-42cc42e131cb.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real 4926aab5-60ca-49bc-b0ce-802ee498ed65.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências 4926aab5-60ca-49bc-b0ce-802ee498ed65.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real 7072b7d9-f5c5-46bb-8edf-3408ff0372e2.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências 7072b7d9-f5c5-46bb-8edf-3408ff0372e2.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real 94454ed2-4d2a-4373-bb21-2a6d67fb188b.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências 94454ed2-4d2a-4373-bb21-2a6d67fb188b.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real 99d860ab-68c5-48b8-a54d-4e8e97fa13f9.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências 99d860ab-68c5-48b8-a54d-4e8e97fa13f9.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real dc25caea-491f-4c01-a041-237d6a0d123b.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências dc25caea-491f-4c01-a041-237d6a0d123b.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Importação de arquivo real e1d481c4-c8bc-4dc3-81b8-0f17e7890097.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Quadros planejados e três Canvas coincidem com referências e1d481c4-c8bc-4dc3-81b8-0f17e7890097.dcm",
+      "status": "passed"
+    },
+    {
+      "name": "Window/Level muda apresentação mantendo pixels originais",
+      "status": "passed"
+    },
+    {
+      "name": "Inversão complementa tons e restauração recupera imagem",
+      "status": "passed"
+    },
+    {
+      "name": "Zoom, rotação e espelhamento têm efeito reversível",
+      "status": "passed"
+    },
+    {
+      "name": "Pan e ajuste à tela",
+      "status": "passed"
+    },
+    {
+      "name": "Navegação e limites de índices",
+      "status": "passed"
+    },
+    {
+      "name": "Cabeçalho de paciente não é exposto na interface",
+      "status": "passed"
+    },
+    {
+      "name": "Tela pequena mantém exame efetivamente renderizado e legível",
+      "status": "passed"
+    },
+    {
+      "name": "Limpar remove pixels e comandos do exame anterior",
+      "status": "passed"
+    },
+    {
+      "name": "Arquivo inválido ou desconhecido é rejeitado antes da decodificação",
+      "status": "passed"
+    },
+    {
+      "name": "Sem erros JavaScript e sem envio de exames pela rede",
+      "status": "passed"
+    }
+  ],
+  "frames": [
+    {
+      "file": "42201806-4db1-48a7-91f3-42cc42e131cb.dcm",
+      "index": 0,
+      "pixelSha256": "a17af642b60788eb55ea55bc3bc72d5f8c5e7463d801bfdb577f213a73cf2c62",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "799bddf2134a95f0868b5c1a0a52911ec68291c6fdb142288f0d967d069ad7ce",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "42201806-4db1-48a7-91f3-42cc42e131cb.dcm",
+      "index": 29,
+      "pixelSha256": "2b9d9aed62cd03afbf1ae33f1047be49d50d51a7cbe8d9634e7b96298f0652aa",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "61c431f5345b36a739cf4b0d97fd7d0d7fd0b9c19d71fc213e78e70b2f8f8852",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "42201806-4db1-48a7-91f3-42cc42e131cb.dcm",
+      "index": 57,
+      "pixelSha256": "9e36185fe4da2a05d0aa79228c525822e8220dc1eecf547d85320ae14e3defc2",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "04d9d80d2fe05b149e4844c2656d9954f94e8eee128b5c955478108c78896d32",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "4926aab5-60ca-49bc-b0ce-802ee498ed65.dcm",
+      "index": 0,
+      "pixelSha256": "340519d38fd20bb724accf4bd8c8c162b9bc043c85c27a8f55dc7b9f7b535988",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "e1ba329c27eb3aaff84c8e09a4ef438fb5e1daeba823a3fd42bc03fd703b5ab2",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "4926aab5-60ca-49bc-b0ce-802ee498ed65.dcm",
+      "index": 36,
+      "pixelSha256": "7f3554531f7aff58f301477ece85313a4398f972cd1ec64f99f3e887ed58bd42",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "6adaf43ed46f0d55df784f1024cf2a92fa4b287bba59f0175c6fb9f5383042ef",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "4926aab5-60ca-49bc-b0ce-802ee498ed65.dcm",
+      "index": 71,
+      "pixelSha256": "636ca76c388eef2375253ae7a982f598ffc9a1a11643b35074e9cf4f8d283f7e",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "19d7ab5957214be65646de555a814910ea69f94235d719a7205550df4bc95c6b",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "7072b7d9-f5c5-46bb-8edf-3408ff0372e2.dcm",
+      "index": 0,
+      "pixelSha256": "d9cfb53fa5242f29b4181710fafefb334af40791077a507d8e5881bb2ec3347e",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "b8306ced15ab3e7506130a069a82055b9dd88f2e926f0053e9e757f554515777",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "7072b7d9-f5c5-46bb-8edf-3408ff0372e2.dcm",
+      "index": 39,
+      "pixelSha256": "b885628bf9093c7404977c27af1897ad44079805f224695a138ae6fde4b799a1",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "a7b3c67bf18171070d037bc3d83029f7237d57153f4904f10260a997c220312f",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "7072b7d9-f5c5-46bb-8edf-3408ff0372e2.dcm",
+      "index": 78,
+      "pixelSha256": "41f726dcf5916504020acbf60f3fd1d37a003b3fd3216fabec5d60bf8a176649",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "f5ca1afc9e3cf90352f7c85499f2b4706053053e3d4b1664fc693407bea36e88",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "94454ed2-4d2a-4373-bb21-2a6d67fb188b.dcm",
+      "index": 0,
+      "pixelSha256": "6dd59f43f889bf2c702315035eb498a2bf8b0efefac4f9e300435d597d2a6293",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "9a4aca7b83b7c906c67b39bb31de10700c5c9ad5425e5d276f6d6da91b0625e2",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "94454ed2-4d2a-4373-bb21-2a6d67fb188b.dcm",
+      "index": 24,
+      "pixelSha256": "a73098f0484686c077efdfec30f65cacaa6b95d8617fae2e83565775c5901fee",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "0234f609e21df44e3a96ab8a23f085b3a93794ee81bfc29ce9860806ae28108a",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "94454ed2-4d2a-4373-bb21-2a6d67fb188b.dcm",
+      "index": 48,
+      "pixelSha256": "4d0e876e4799324d590f8925bc4631327b4ba8f3f504a7e3c3b66073966c98e2",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "85ccf3442e91a3bbd1ca726f1d487231ce9a1fbf5c41d35d8d7bba3d6ddd7352",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "99d860ab-68c5-48b8-a54d-4e8e97fa13f9.dcm",
+      "index": 0,
+      "pixelSha256": "9fbe82b1ae10df28d4b76e46d9c548506fbf995fc760580fd6fc92d4e010a7ce",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "813cba505b9eed06ac36a26927c37e0df6b2991db720d74198d9101f0a5df988",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "99d860ab-68c5-48b8-a54d-4e8e97fa13f9.dcm",
+      "index": 38,
+      "pixelSha256": "de53bb5a4b00d5b7b6dc2dda3706a84db1151d7f908a42bb51f0f76ff3d9661c",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "a2840f8ff67cbca3cf4b16a8c2d34e618a8a67b65dc24b997faee7558b3d32a6",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "99d860ab-68c5-48b8-a54d-4e8e97fa13f9.dcm",
+      "index": 76,
+      "pixelSha256": "0590d12834c653e3a90e70bb23b133bd4a3cdb269132bc9fc0dc83164280a86c",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "69dfc0c2327a1893d8ef37056fa8d9d928e2cb88dbc4d62360c15e61619ebc2c",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "dc25caea-491f-4c01-a041-237d6a0d123b.dcm",
+      "index": 0,
+      "pixelSha256": "ad9c1c39422e7f7e974c5215471078a05f7d33fb0d1239964f4f397ab2ced616",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "6ef77c30b4e04ef9f22d2291de422c992c063ad6d3b39e6f091fe8ed33f157c5",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "dc25caea-491f-4c01-a041-237d6a0d123b.dcm",
+      "index": 29,
+      "pixelSha256": "ca8080da354c02b5ae4f5d3ae8eb3fb05f853113e3f1d7195c78535dcc152c21",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "bbfdea4578ba4835b70c3316e7bea984b02ef896365cbd5c693abb5ca7a0d73f",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "dc25caea-491f-4c01-a041-237d6a0d123b.dcm",
+      "index": 58,
+      "pixelSha256": "82c7cb837b34496c995f08f44ef47eb4d4851b40e10c4e0cc5f62a7f9266d110",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "30d4145ac2b991395ed67ef56fab68ffc6ca28f91a1e7fb88e920307c76891f1",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "e1d481c4-c8bc-4dc3-81b8-0f17e7890097.dcm",
+      "index": 0,
+      "pixelSha256": "a7bc4b6f389b2bcfcbf5a58f627e6da4720a29247bd764331f6f07e865bdec82",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "0b2da030fcf3b91eafac827b7fa7baeabfba719db453edd3aa38d8af7d795377",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "e1d481c4-c8bc-4dc3-81b8-0f17e7890097.dcm",
+      "index": 14,
+      "pixelSha256": "b3f456b090da36c69bbdfd5bd3b3a627ba406d1199e3c543219258725c12804e",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "57b106117aa266ff95752bfc5707e40c5a19841343b8a1d829e757fa19792188",
+      "rgbaReferenceMatch": true
+    },
+    {
+      "file": "e1d481c4-c8bc-4dc3-81b8-0f17e7890097.dcm",
+      "index": 28,
+      "pixelSha256": "6d5dfce5331e01f2478f5087108671763c45db644ab85c12b87d43d50ee7cafd",
+      "independentReferenceMatch": true,
+      "rgbaSha256": "7d2db730226f74b496423b1f146c74f8d8ec366d582c6c163c1a2fc3a4ef1c2b",
+      "rgbaReferenceMatch": true
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "type": "warning",
+      "text": "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+    }
+  ],
+  "outboundRequests": [],
+  "screenshots": [
+    "42201806-real-desktop.png",
+    "4926aab5-real-desktop.png",
+    "7072b7d9-real-desktop.png",
+    "94454ed2-real-desktop.png",
+    "99d860ab-real-desktop.png",
+    "dc25caea-real-desktop.png",
+    "e1d481c4-real-desktop.png",
+    "real-mobile.png"
+  ],
+  "maxWasmHeapBytes": 52428800,
+  "browserVersion": "141.0.7390.37",
+  "counts": {
+    "passed": 25,
+    "failed": 0,
+    "framesRendered": 21,
+    "pixelMatches": 21,
+    "rgbaMatches": 21
+  }
+}

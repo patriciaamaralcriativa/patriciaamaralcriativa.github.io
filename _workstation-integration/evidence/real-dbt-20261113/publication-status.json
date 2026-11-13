@@ -1,13 +1,29 @@
 {
-  "status": "BLOCKED_BY_AUTO_REVIEW",
-  "productionUnchanged": true,
-  "officialCommit": "3de3a42cd3d28e1f369942c76f996679a1e1c290",
+  "status": "PUBLISHED_AND_VERIFIED",
+  "productionUnchanged": false,
+  "officialCommit": "9e84ed65a69df3df8bb9a557cbdc17e5c79f1c21",
   "candidateCommit": "ed6b8ef93e5da9328984dd88bda4b2f6c8166040",
   "candidateBranch": "release/mamografia-dbt-validada-20261113",
   "draftPR": "https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/pull/3",
   "userExplicitlyAuthorizedPublication": true,
   "autoReviewRejections": 2,
-  "reviewReason": "Reviewer interpreted earlier candidate-only instructions as later than the explicit publication authorization. No workaround or alternate production write attempted.",
-  "liveSiteUpdatedVersionTested": false,
-  "backupSha256": "0cd26493f217181e45c51f782e899c799ce08fa0abcd0a1bce8c3dec0d34e1cc"
+  "reviewReason": "Historical: two automatic refusals before the latest confirmation. Publication is now merged and verified.",
+  "liveSiteUpdatedVersionTested": true,
+  "backupSha256": "0cd26493f217181e45c51f782e899c799ce08fa0abcd0a1bce8c3dec0d34e1cc",
+  "previousOfficialCommit": "3de3a42cd3d28e1f369942c76f996679a1e1c290",
+  "newUserConfirmationReceived": true,
+  "pagesRun": 43468209630,
+  "liveVerificationRun": 43468503265,
+  "liveVerificationCommit": "4f47b12ce9ea5af930f7f64314729c23ecd023b0",
+  "liveChecks": {
+    "publication": 22,
+    "reader": 25,
+    "failed": 0,
+    "realFramesSampled": 21,
+    "pixelMatches": 21,
+    "rgbaMatches": 21
+  },
+  "publicURL": "https://patriciaamaralcriativa.github.io/amaral-rad.html",
+  "publishedTreeEqualsApprovedCandidate": true,
+  "rollback": "git revert -m 1 9e84ed65a69df3df8bb9a557cbdc17e5c79f1c21"
 }

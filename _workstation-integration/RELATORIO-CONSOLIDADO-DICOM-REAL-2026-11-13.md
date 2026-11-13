@@ -4,13 +4,15 @@
 
 ## Situação de publicação
 
-**Não houve publicação em produção.** A revisão automática recusou duas vezes a atualização da `main`, alegando falta de autorização posterior à instrução anterior de preparar uma candidata. O usuário havia autorizado expressamente a publicação na mensagem mais recente; a autorização foi reconfirmada no contexto, os testes foram reconsultados e a `main` permaneceu inalterada após as recusas. Não se tentou contornar o bloqueio por outra ferramenta, merge ou configuração de hospedagem.
+**PUBLICADA E VERIFICADA.** Após a nova confirmação do usuário, a candidata foi incorporada à `main` pelo merge `9e84ed65a69df3df8bb9a557cbdc17e5c79f1c21`. A árvore publicada é idêntica à candidata aprovada `ed6b8ef93e5da9328984dd88bda4b2f6c8166040`.
 
-- Oficial preservada: `3de3a42cd3d28e1f369942c76f996679a1e1c290`.
-- Candidata exata para produção: `ed6b8ef93e5da9328984dd88bda4b2f6c8166040`.
-- [PR #3 em rascunho, sem mesclagem ou deploy](https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/pull/3), ramo `release/mamografia-dbt-validada-20261113`.
-- Código de produto da candidata: idêntico aos blobs testados em `043f3576dd909fd2cc5df204b7dd86fc3bbbd917`; verificações ampliadas em `e1af1fd592556f06a7c6639a8f6976ebb40b9db8` alteram somente um script de testes.
-- Verificação do site real após publicação: **NÃO EXECUTADA**, porque a mudança de produção foi bloqueada. Não confundir a prévia em navegador real com site publicado.
+- [Acessar Workstation](https://patriciaamaralcriativa.github.io/amaral-rad.html).
+- GitHub Pages: run `43468209630`, build e deploy concluídos com sucesso.
+- [Verificação do site real — run 43468503265](https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/actions/runs/43468503265): **22/22 verificações de publicação e 25/25 do leitor**, zero falhas, computador e viewport pequena. Foram abertas todas as sete amostras e conferidos 21 quadros reais/21 Canvas no site publicado, sem override do manifesto.
+- A conferência completa anterior de 423/423 quadros permanece válida; o worker publicado é o mesmo validado. Não houve repetição desnecessária de todo o volume.
+- Os hashes de 12 arquivos servidos no site, incluindo HTML, JS, CSS, JSON e WASM, coincidem com o código testado. Scripts da Workstation e Sala de Aulas continuam idênticos aos anteriores.
+- A `main` anterior era `3de3a42cd3d28e1f369942c76f996679a1e1c290`; o backup integral foi verificado e preservado antes da publicação.
+- As duas recusas automáticas anteriores ficam como registro histórico, não como estado atual. Não há pendência de autorização para esta publicação.
 
 ## A. Sete arquivos reais
 
@@ -57,7 +59,7 @@ Foram decodificados **423/423 quadros** com Pillow 13.0.0 / OpenJPEG 2.5.4 e com
 | Regressão dos módulos | Mamografia, pilhas PNG, exercícios, estados e telas pequenas | 21/21 | 0 | 0 |
 | Integração pronta para publicar | Scripts existentes preservados, arquivos servidos e páginas em 1280/390 px | 22/22 | 0 | 0 |
 | Geometria/orientação anatômica | Valores repetidos e referência anatômica externa insuficiente | — | — | 7 objetos não validados |
-| Site real após deploy | Atualização da main recusada na revisão automática | — | — | Não executado |
+| Site real após deploy | Run 43468503265, site público em Chromium real | 47/47 verificações, 21 quadros amostrados | 0 | 0 no escopo publicado |
 
 As contagens de ferramentas são grupos de verificações; os 423 quadros e os 21 Canvas são contagens de dados conferidos, não devem ser somados a elas como se fossem uma única suíte.
 
@@ -87,7 +89,7 @@ Há um aviso de desempenho Canvas sobre leituras repetidas; nenhum erro JavaScri
 | `_config.yml` | Inclui os assets de diretório com underscore no Jekyll, sem desabilitar o processamento existente |
 | Scripts e workflows de testes | Dados públicos em pasta temporária, comparação de pixels, pré-publicação e verificação futura do site |
 
-A candidata de produção contém **20 arquivos**, 18 novos e somente 2 páginas existentes modificadas para acrescentar navegação/CSS. Todos os scripts dessas páginas são idênticos ao estado oficial anterior, conferidos por hashes. O leitor experimental original permanece bloqueando DBT geral e não foi enfraquecido. A versão oficial, biblioteca privada, cadastros, turmas, progresso, jogos, questões, aulas e banco de produção não foram alterados. Login com contas reais, controle de aula e permissões de produção não foram retestados, pois seus scripts não mudaram e não se usaram dados de alunos.
+A candidata de produção contém **20 arquivos**, 18 novos e somente 2 páginas existentes modificadas para acrescentar navegação/CSS. Todos os scripts dessas páginas são idênticos ao estado oficial anterior, conferidos por hashes. O leitor experimental original permanece bloqueando DBT geral e não foi enfraquecido. A versão oficial recebeu somente os acessos aos módulos e arquivos estáticos aprovados. Biblioteca privada, cadastros, turmas, progresso, jogos, questões, aulas e banco de produção não foram alterados. Login com contas reais, controle de aula e permissões de produção não foram retestados, pois seus scripts não mudaram e não se usaram dados de alunos.
 
 ## D. Privacidade e licença
 
@@ -107,23 +109,29 @@ Referência: Buda et al. (2020), *Breast Cancer Screening – Digital Breast Tom
 | `30c765a` | Liberação somente das amostras auditadas, sem override nos testes |
 | `043f357` | Integração com scripts originais preservados |
 | `e1af1fd` | 22/22 verificações ampliadas de pré-publicação |
-| `ed6b8ef` | Candidata exata de 20 arquivos, ainda não aplicada à main |
+| `ed6b8ef` | Candidata exata de 20 arquivos, aplicada pelo merge `9e84ed6` |
+| `9e84ed6` | Publicação efetiva na main |
+| `4f47b12` | Verificação aprovada do site real |
 
 Backup integral da main: `backup-main-3de3a42.bundle`, histórico completo, verificado com `git bundle verify`, SHA-256 `0cd26493f217181e45c51f782e899c799ce08fa0abcd0a1bce8c3dec0d34e1cc`. O backup foi salvo antes das tentativas de publicação. Os backups experimentais anteriores também foram mantidos.
 
-A produção não precisa de reversão porque não foi alterada. Se a candidata `ed6b8ef` for aplicada futuramente por avanço direto, `git revert ed6b8ef93e5da9328984dd88bda4b2f6c8166040` reverte somente esse conjunto. Se for publicada por outro commit de merge, reverta o commit correspondente. Nunca restaure ou faça reset do banco de dados. Para recuperação isolada do bundle: crie um repositório separado e importe a referência `refs/remotes/origin/main` do arquivo, sem sobrescrever o checkout atual.
+Para reverter esta publicação sem resetar o histórico, use `git revert -m 1 9e84ed65a69df3df8bb9a557cbdc17e5c79f1c21`. Isso reverte somente o merge publicado, preservando o primeiro pai `3de3a42`. Não restaure o banco de dados: ele não foi modificado. Para recuperação isolada do bundle, crie outro repositório e importe `refs/remotes/origin/main` do arquivo sem sobrescrever o checkout atual.
 
 ## F. Pendências e situação final
 
 | Componente | Estado | Limite |
 |---|---|---|
-| Workstation oficial | NÃO TESTADO nesta missão em contas reais; preservada | Continua no commit `3de3a42`; publicação bloqueada pela revisão automática |
+| Workstation oficial | APROVADO COM RESTRIÇÕES | Publicada em `9e84ed6`, scripts preservados; login com contas reais não foi retestado |
 | Mamografia 2D | APROVADO COM RESTRIÇÕES | Testes sintéticos/Canvas e interface; não houve conjunto real 2D dedicado |
-| DBT das sete amostras | APROVADO COM RESTRIÇÕES na candidata | Pixels e ferramentas validados; orientação/lateralidade/profundidade não confirmadas |
+| DBT das sete amostras | APROVADO COM RESTRIÇÕES publicadas | Pixels e ferramentas validados; orientação/lateralidade/profundidade não confirmadas |
 | DBT geral | BLOQUEADO | Arquivos fora da allowlist, representações e transformações não auditadas |
 | Importação DICOM | APROVADO COM RESTRIÇÕES | Exatos SHA-256, JPEG 2000 Lossless, perfil e dimensões conferidos |
 | Ferramentas de visualização | APROVADO COM RESTRIÇÕES | Reversíveis e visuais; sem medidas espaciais ou finalidade diagnóstica |
-| Interface educacional | APROVADO na candidata | Desktop e viewport pequena; sem ensaio em celular físico |
-| Publicação e site atualizado | BLOQUEADO | Duas recusas da aprovação automática; não houve deploy |
+| Interface educacional | APROVADO | Desktop e viewport pequena; sem ensaio em celular físico |
+| Publicação e site atualizado | APROVADO COM RESTRIÇÕES | Deploy e 47/47 verificações no site real; limites técnicos e de orientação preservados |
 
-Próximos passos: resolver o bloqueio de aprovação de produção, aplicar somente a candidata revisada, aguardar Pages e executar a verificação preparada do site real. Para orientação anatômica: obter referência externa da incidência/lateralidade e confrontar em visualizador confiável, mantendo os avisos até então. Não há validação clínica, diagnóstica, de conformidade DICOM integral ou de anonimização certificada.
+Publicação e verificação do site real concluídas no escopo aprovado. Para orientação anatômica: obter referência externa da incidência/lateralidade e confrontar em visualizador confiável, mantendo os avisos até então. Não há validação clínica, diagnóstica, de conformidade DICOM integral ou de anonimização certificada.
+
+## Evidências da publicação efetiva
+
+Publicado: `9e84ed65a69df3df8bb9a557cbdc17e5c79f1c21`. Verificações do site: JSONs `live-publication-checks.json` e `live-dbt-checks.json`, capturas reais desktop/390 px e artefato `14059388404`, SHA-256 `6d12b4883722297deb139d27973a372008c0708b6e81e04a11252bf892eae5e7`. Os sete DICOM não foram publicados.
