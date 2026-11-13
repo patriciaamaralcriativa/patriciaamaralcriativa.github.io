@@ -292,6 +292,16 @@ const b=file(),i=api.inspect(b);let rejected=false;
 try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:-1})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
 assert(rejected,'índice negativo aceito ou Canvas acessado');
 });
+check('Índice de frame não numérico é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:'1'})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice textual aceito ou Canvas acessado');
+});
+check('Índice de frame NaN é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:NaN})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice NaN aceito ou Canvas acessado');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
