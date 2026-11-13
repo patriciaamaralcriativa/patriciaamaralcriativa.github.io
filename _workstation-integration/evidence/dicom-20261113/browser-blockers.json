@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-13",
+  "sourceCommit": "6dbe1218ce5b360ae08782cfca4a3cb2e0157d2f",
+  "status": "blocked-before-dicom-execution",
+  "realBrowserSuiteExecuted": false,
+  "browserVersionCommand": "Chromium 156.0.8078.79 built on Debian GNU/Linux 13 (trixie)",
+  "localLaunch": {
+    "executablePath": "/usr/lib/chromium/chromium",
+    "automation": "Playwright chromium.launch; headless; timeout 20000ms",
+    "additionalArguments": ["--no-sandbox", "--disable-dev-shm-usage"],
+    "result": "SIGABRT before page creation",
+    "stderrExcerpt": [
+      "FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)",
+      "ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)"
+    ],
+    "wrapperWarning": "/usr/bin/chromium: 9: [: 5225713664: unexpected operator",
+    "diagnosis": "Socket creation denied by environment at process singleton initialization; ptrace error in subsequent crash handling. Warning in shell wrapper is not sufficient to explain failure: direct binary also aborts."
+  },
+  "remoteBrowser": {
+    "httpAttempt": "http://127.0.0.1:42727/testes-dicom-sinteticos.html",
+    "httpResult": "net::ERR_CONNECTION_REFUSED",
+    "fileAttempt": "file:///workspace/scratch/e06b97a03979/repo/testes-dicom-sinteticos.html",
+    "fileResult": "Browser URL policy blocks file protocol; allowed protocols http and https. No workaround attempted after denial."
+  },
+  "browserConsole": {"collected": false, "reason": "DICOM test page did not load; launch stderr is not page console"},
+  "canvasChecks": {"planned": 4, "executed": 0, "skipped": 4},
+  "clinicalValidation": false
+}
