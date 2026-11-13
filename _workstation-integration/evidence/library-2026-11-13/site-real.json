@@ -1,0 +1,105 @@
+{
+  "at": "2026-11-13T17:38:42.642Z",
+  "browser": "141.0.7390.37",
+  "environment": "public-site-real-browser",
+  "results": [
+    {
+      "name": "Quatro categorias ativas e RM indisponível",
+      "status": "passed"
+    },
+    {
+      "name": "Acervo inicial vazio sem arquivos inventados",
+      "status": "passed"
+    },
+    {
+      "name": "Guardar imagem pela interface",
+      "status": "passed"
+    },
+    {
+      "name": "Persistência após recarregar",
+      "status": "passed"
+    },
+    {
+      "name": "Busca filtra título",
+      "status": "passed"
+    },
+    {
+      "name": "Assinatura falsa rejeitada sem gravar",
+      "status": "passed"
+    },
+    {
+      "name": "Revisão de privacidade obrigatória na API local",
+      "status": "passed"
+    },
+    {
+      "name": "RM não aceita arquivamento como módulo ativo",
+      "status": "passed"
+    },
+    {
+      "name": "Pacote exportado preserva bytes e metadados",
+      "status": "passed"
+    },
+    {
+      "name": "Pacote truncado não deixa importação parcial",
+      "status": "passed"
+    },
+    {
+      "name": "Pacote exige confirmação própria",
+      "status": "passed"
+    },
+    {
+      "name": "Importar pacote acrescenta sem sobrescrever",
+      "status": "passed"
+    },
+    {
+      "name": "Biblioteca responsiva em 390 px",
+      "status": "passed"
+    },
+    {
+      "name": "Abrir RX da biblioteca rende pixels no Canvas existente",
+      "status": "passed"
+    },
+    {
+      "name": "Escolher novamente pela biblioteca interna",
+      "status": "passed"
+    },
+    {
+      "name": "Mensagem de origem estranha não abre biblioteca",
+      "status": "passed"
+    },
+    {
+      "name": "Originais permanecem intactos após uso no Canvas",
+      "status": "passed"
+    },
+    {
+      "name": "TC: conjunto sintético existente passa pela biblioteca e navega no leitor",
+      "status": "passed"
+    },
+    {
+      "name": "Biblioteca integrada a mamografia-digital-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Biblioteca integrada a tomossintese-mamaria-preview.html",
+      "status": "passed"
+    },
+    {
+      "name": "Leitor DBT preserva consentimento e bloqueio de desconhecidos",
+      "status": "passed"
+    },
+    {
+      "name": "Scripts existentes das duas Workstations intactos",
+      "status": "passed"
+    },
+    {
+      "name": "Nenhum erro JavaScript nas páginas exercitadas",
+      "status": "passed"
+    }
+  ],
+  "consoleErrors": [],
+  "counts": {
+    "executed": 23,
+    "passed": 23,
+    "failed": 0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-13T17:38:38.769Z",
+  "base": "https://patriciaamaralcriativa.github.io/",
+  "results": [
+    {
+      "file": "biblioteca-arquivos.html",
+      "status": "passed",
+      "sha256": "1a00900b1ee153ec65514dda973491fc356fac5db941fc4fd5d656d891ff2d77"
+    },
+    {
+      "file": "amaral-rad.html",
+      "status": "passed",
+      "sha256": "947e02f1c22238b09bf98de098dcc419c89360068cdde5a2309b734dda892bc0"
+    },
+    {
+      "file": "sala-de-aulas.html",
+      "status": "passed",
+      "sha256": "a0398073f4802948731dbe3ad3759ffcced2fac85175c16bae146ae28a4bcfa8"
+    },
+    {
+      "file": "mamografia-digital-preview.html",
+      "status": "passed",
+      "sha256": "b876eee6dccdb3356a34fb1a3671430170dbf56eda171ffe6cb01fd5c2496f41"
+    },
+    {
+      "file": "tomossintese-mamaria-preview.html",
+      "status": "passed",
+      "sha256": "07828b8c5700e72047b338c6b976ed81f1771aee2cec9aabc558729fd2e6ceb6"
+    },
+    {
+      "file": "dbt-validacao-real.html",
+      "status": "passed",
+      "sha256": "171966859d8ec3dc97c362a281a11eb9c2954bae64d8bb2b42b98509ae1aede7"
+    },
+    {
+      "file": "_workstation-integration/file-library-store.js",
+      "status": "passed",
+      "sha256": "808f264d75027e9574277e8af75b156adc984cb1e9c01d2fa868d78257f4eb22"
+    },
+    {
+      "file": "_workstation-integration/file-library-host.js",
+      "status": "passed",
+      "sha256": "5a305f12bd3714de9fb53316740ccf43878d51eb3498fc781f9155fbc3a86efb"
+    },
+    {
+      "file": "_workstation-integration/file-library-page.js",
+      "status": "passed",
+      "sha256": "323b6be9b78dadc7688a7bc1a0848f1d45fd990ac2f00d89073471d114c34a52"
+    },
+    {
+      "file": "_workstation-integration/file-library.css",
+      "status": "passed",
+      "sha256": "9058865033e35bef25b202edb3aab51164dbc7bdeee2c277bce50a7f65c9f903"
+    }
+  ]
+}

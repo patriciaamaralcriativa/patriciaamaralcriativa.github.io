@@ -36,3 +36,17 @@ Os scripts originais de `amaral-rad.html` e `sala-de-aulas.html` permanecem byte
 Antes das alterações: HEAD experimental `1fec2c7070a333a664766fe32add684b1baff59c`; produção `9e84ed65a69df3df8bb9a557cbdc17e5c79f1c21`. Bundle completo verificado: `backup-before-file-library.bundle`, fora do repositório público.
 
 Reverter o commit de publicação por `git revert <commit-publicacao>` e republicar pelo GitHub Pages. Isso remove a interface nova e restaura os HTMLs anteriores, sem excluir o banco IndexedDB local e sem modificar o backend. Exporte os pacotes antes de limpar dados do navegador. O banco local contém somente cópias, e originais escolhidos pelo usuário nunca são modificados.
+
+## Resultado em 13/11/2026
+
+- Implementação: `cbbe80e`; revisão de testes e avisos: `bb8d283`; teste de TC: `c600105`.
+- Candidata em Chromium 141.0.7390.37: **23/23** testes da biblioteca e **21/21** regressões educacionais aprovados, execução [43474340717](https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/actions/runs/43474340717).
+- Primeira execução: 21/22, pois o teste esperava que o input de tomossíntese preservasse a seleção; o módulo intencionalmente limpa esse campo. A asserção foi substituída por verificação das dimensões da imagem efetivamente exibida. Não foi alterado o leitor para acomodar o teste.
+- Publicação: `14dc42188d0c1c97f395bae1b7baa5b16cacc406`, somente dez arquivos de produto sobre `9e84ed6`, sem mesclar o restante da ramificação experimental. Pages [43474597592](https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/actions/runs/43474597592) concluído com sucesso.
+- No endereço público, Chromium real: **23/23** testes aprovados; dez arquivos servidos com SHA-256 idêntico ao código testado; zero exceções JavaScript. Execução [43474739936](https://github.com/patriciaamaralcriativa/patriciaamaralcriativa.github.io/actions/runs/43474739936). Capturas desktop e 390 px nos artefatos dessa execução. JSONs persistidos em `evidence/library-2026-11-13/`.
+- Os testes usam padrões sintéticos, inclusive o volume sintético já existente na Workstation. Isso não constitui nova validação de exames reais, geometria ou diagnóstico. O leitor DBT manteve consentimento obrigatório e rejeitou arquivo fora das sete amostras auditadas.
+- Nenhuma escrita no banco de produção; nenhuma utilização de dados de alunos; nenhum arquivo médico real publicado. Teste autenticado com professora/aluno reais não executado nesta etapa. Preservação dos scripts originais conferida por hashes.
+- Backup imediatamente anterior à publicação: `backup-main-before-library.bundle`, história completa de `9e84ed6`, verificado. SHA-256 `319941ee08ed052d7d594e915fa6b58e0d172a66aada7458ab88508cae737b31`. A revisão anterior permanece na história pública de `main`.
+- Reversão da publicação: `git revert 14dc42188d0c1c97f395bae1b7baa5b16cacc406` seguido do fluxo normal de publicação do Pages. O banco local não é apagado por essa reversão.
+
+Pendências: armazenamento privado central e compartilhamento automático por turma; revisão individual dos materiais que futuramente serão inseridos; testes com grandes acervos e cotas reais dos dispositivos. Para pacotes, manter no máximo 1.000 arquivos e 1 GB; dividir acervos maiores. RM não implementada. Nenhum bloqueio DICOM ou aviso de orientação foi relaxado.
