@@ -214,6 +214,29 @@ else if(own.length===0&&shared.length===1)resolved.push({attribute,values:shared
 return {frameIndex:frame.frameIndex,observations:resolved,geometryValidated:false};
 });
 if(sharedGeometryObservations.length)out.warnings.push("Geometria compartilhada combinada apenas para inspeção preliminar; geometria e ordem espacial não validadas.");
+const geometryConflicts=[];
+const epsilon=1e-6;
+for(const frame of out.frameSummary.frameGeometryObservations){
+for(const attribute of ["imagePositionPatient","imageOrientationPatient"]){
+const own=frame.observations.filter(o=>o.attribute===attribute);
+const shared=sharedGeometryObservations.filter(o=>o.attribute===attribute);
+if(own.length===1&&shared.length===1){
+const differing=own[0].values.length!==shared[0].values.length||own[0].values.some((v,j)=>Math.abs(v-shared[0].values[j])>epsilon);
+if(differing)geometryConflicts.push({frameIndex:frame.frameIndex,attribute,kind:"shared-per-frame-difference"});
+}
+}
+}
+out.frameSummary.geometryConflicts=geometryConflicts;
+out.frameSummary.orientationConsistency={
+framesWithOrientation:out.frameSummary.effectiveGeometryObservations.filter(frame=>frame.observations.some(o=>o.attribute==="imageOrientationPatient")).length,
+allObservedOrientationsEqual:(()=>{
+const orientations=out.frameSummary.effectiveGeometryObservations.map(frame=>frame.observations.find(o=>o.attribute==="imageOrientationPatient")?.values).filter(Boolean);
+return orientations.length>0&&orientations.every(values=>values.length===orientations[0].length&&values.every((v,j)=>Math.abs(v-orientations[0][j])<=epsilon));
+})(),
+geometryValidated:false
+};
+if(geometryConflicts.length)out.warnings.push("Diferenças entre geometria compartilhada e por frame identificadas; avaliar atributos e semântica antes de concluir conflito.");
+
 const observations=out.frameSummary.frameGeometryObservations;
 const positionCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imagePositionPatient").length);
 const orientationCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imageOrientationPatient").length);
