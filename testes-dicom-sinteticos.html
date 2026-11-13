@@ -214,5 +214,17 @@ check('Distâncias entre planos preservam ordem de armazenamento',()=>{const i=a
 check('Projeções repetidas são identificadas sem classificar cortes duplicados',()=>{const i=api.inspect(spacingFixture([0,1,0]));const p=i.frameSummary.planeSpacingObservations;assert(p.repeatedProjectionPairs.length===1&&p.repeatedProjectionPairs[0][0]===0&&p.repeatedProjectionPairs[0][1]===2&&!p.spacingValidated,'repetição não detectada')});
 }
 
+
+if(api){
+function regularityFixture(positions){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const nested=(seq,tagElement,value)=>{const geom=element(0x20,tagElement,'DS',value);const item=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);return element(0x20,seq,'SQ',item);};
+const frames=positions.map(z=>{const inner=concat([nested(0x9113,0x32,'0\\0\\'+z),nested(0x9116,0x37,'1\\0\\0\\0\\1\\0')]);return concat([u16(0xfffe),u16(0xe000),u32(inner.length),inner]);});
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS',String(positions.length)),element(0x5200,0x9230,'SQ',concat(frames))]).buffer;
+}
+check('Distâncias consecutivas uniformes não geram alerta exploratório',()=>{const i=api.inspect(regularityFixture([0,1,2,3]));const r=i.frameSummary.planeSpacingObservations.regularity;assert(r.medianNonzeroAdjacentDistance===1&&r.irregularAdjacentPairs.length===0&&!r.uniformSpacingConfirmed,'regularidade calculada incorretamente')});
+check('Variação de distâncias é sinalizada sem validar reconstrução',()=>{const i=api.inspect(regularityFixture([0,1,2,6]));const r=i.frameSummary.planeSpacingObservations.regularity;assert(r.irregularAdjacentPairs.length===1&&r.irregularAdjacentPairs[0].absoluteDistance===4&&!r.uniformSpacingConfirmed&&!i.frameSummary.geometryValidated,'variação não sinalizada')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
