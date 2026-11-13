@@ -312,5 +312,5 @@ const url=URL.createObjectURL(blob),link=document.createElement('a');
 link.href=url;link.download='amaral-rad-dicom-testes-'+new Date().toISOString().slice(0,10)+'.json';
 document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
 });
-document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Canvas: '+canvasChecksExecuted+' de '+canvasChecksPlanned+' testes executados, '+canvasChecksSkipped+' não executados. Casos sintéticos; não há validação clínica.';})();
+document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'API Canvas 2D disponível neste ambiente; navegador real não comprovado.':'API Canvas 2D indisponível; verificações de renderização não executadas.')+' Canvas: '+canvasChecksExecuted+' de '+canvasChecksPlanned+' testes executados, '+canvasChecksSkipped+' não executados. Casos sintéticos; não há validação clínica.';})();
 </script></html>
