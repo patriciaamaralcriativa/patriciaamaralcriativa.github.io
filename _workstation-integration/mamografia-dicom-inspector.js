@@ -19,7 +19,7 @@ function inspect(buffer){
 if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer.");
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
-const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown",frameSummary:null,geometryAttributes:{imagePositionPatient:null,imageOrientationPatient:null,spacingBetweenSlices:null,sliceThickness:null},functionalGroupSummary:{sharedPresent:false,perFramePresent:false,sharedLength:null,perFrameLength:null,parsed:false}};
+const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown",frameSummary:null,geometryAttributes:{imagePositionPatient:null,imageOrientationPatient:null,spacingBetweenSlices:null,sliceThickness:null},functionalGroupSummary:{sharedPresent:false,perFramePresent:false,sharedLength:null,perFrameLength:null,sharedItems:null,perFrameItems:null,sharedStructureValidated:false,perFrameStructureValidated:false,parsed:false}};
 let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
 function element(p,explicit){
 if(p+8>bytes.length)return null;
@@ -35,12 +35,23 @@ if(length===0xffffffff)throw Error("Elemento de comprimento indefinido: leitura 
 if(length>bytes.length-p-head)throw Error("Comprimento de elemento DICOM excede o arquivo.");
 return {group,element,vr,length,start:p+head,next:p+head+length};
 }
+function summarizeFunctionalSequence(e){
+const end=e.next;let p=e.start,items=0,valid=true;
+while(p<end){
+if(p+8>end){valid=false;break;}
+const g=d.getUint16(p,true),el=d.getUint16(p+2,true),len=d.getUint32(p+4,true);
+if(g!==0xfffe||el!==0xe000||len===0xffffffff||len>end-p-8){valid=false;break;}
+p+=8+len;items++;
+if(items>500){valid=false;break;}
+}
+return {itemCount:valid&&p===end?items:null,structureValidated:valid&&p===end};
+}
 let count=0;
 while(pos<bytes.length&&count++<10000){
 const group=d.getUint16(pos,true);const meta=group===0x0002;
 const explicit=meta||syntax!=="1.2.840.10008.1.2";
 const e=element(pos,explicit);if(!e)break;
-if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;const shared=e.element===0x9229;out.functionalGroupSummary[shared?"sharedPresent":"perFramePresent"]=true;out.functionalGroupSummary[shared?"sharedLength":"perFrameLength"]=e.length;out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
+if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;const shared=e.element===0x9229;out.functionalGroupSummary[shared?"sharedPresent":"perFramePresent"]=true;out.functionalGroupSummary[shared?"sharedLength":"perFrameLength"]=e.length;const structure=summarizeFunctionalSequence(e);out.functionalGroupSummary[shared?"sharedItems":"perFrameItems"]=structure.itemCount;out.functionalGroupSummary[shared?"sharedStructureValidated":"perFrameStructureValidated"]=structure.structureValidated;if(!structure.structureValidated)out.warnings.push("Estrutura de itens da sequência funcional não validada.");out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
 if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=e.start;out.pixelDataLength=e.length;break;}
 if(meta&&e.element===0x0010){
 syntax=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
