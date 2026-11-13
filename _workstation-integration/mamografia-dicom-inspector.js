@@ -19,7 +19,7 @@ function inspect(buffer){
 if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer.");
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
-const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false};
+const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown"};
 let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
 function element(p,explicit){
 if(p+8>bytes.length)return null;
@@ -60,6 +60,7 @@ out.metadata[key]=value;
 }
 pos=e.next;
 }
+if(out.metadata.sopClassUID==="1.2.840.10008.5.1.4.1.1.13.1.3"){out.imageType="breast-tomosynthesis";out.warnings.push("SOP Class de tomossíntese mamária identificada; reconstrução, ordem dos cortes e geometria ainda não validadas.");}else if(["1.2.840.10008.5.1.4.1.1.1.2","1.2.840.10008.5.1.4.1.1.1.2.1"].includes(out.metadata.sopClassUID)){out.imageType="digital-mammography";}
 if(!sawSyntax)out.warnings.push("Transfer Syntax UID não encontrada no cabeçalho Part 10; renderização bloqueada.");
 if(count>=10000)out.warnings.push("Limite de elementos atingido; leitura parcial.");
 if(out.metadata.modality&&out.metadata.modality!=="MG")out.warnings.push("Modalidade declarada não é MG: "+out.metadata.modality);
@@ -71,6 +72,7 @@ return out;
 function renderGrayscale(buffer,info,canvas,opts={}){
 const m=info.metadata||{},ts=info.transferSyntaxUID;
 if(!ts)throw Error("Transfer Syntax UID ausente; não é seguro interpretar pixels.");
+if(info.imageType==="breast-tomosynthesis")throw Error("Tomossíntese DICOM identificada: renderização bloqueada até validar atributos e geometria dos frames.");
 if(info.functionalGroupsPresent)throw Error("Sequências funcionais multiframe presentes: renderização bloqueada até interpretar os atributos por frame.");
 if(!info.pixelDataPresent||info.pixelDataOffset==null)throw Error("Pixel Data ausente.");
 if(!["1.2.840.10008.1.2","1.2.840.10008.1.2.1"].includes(ts))throw Error("Transfer Syntax não suportada para renderização.");
