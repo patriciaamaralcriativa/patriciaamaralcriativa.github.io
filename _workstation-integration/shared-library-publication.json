@@ -1,0 +1,10 @@
+{
+  "publicationCommit": "98fb83026aa13267dae855961d1fdab390c5687c",
+  "testedCommit": "4e2a9c5c3a71fc1c0dd66d0b42228227829de519",
+  "previousOfficial": "14dc42188d0c1c97f395bae1b7baa5b16cacc406",
+  "publicBaseURL": "https://patriciaamaralcriativa.github.io/",
+  "sharedStorage": true,
+  "downloadFunction": "workstation-biblioteca-download",
+  "functionVersion": 1,
+  "validation": "24/24 Chromium with real Auth, PostgREST and private Storage"
+}
