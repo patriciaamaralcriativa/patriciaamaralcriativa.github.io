@@ -82,8 +82,8 @@ const dv=new DataView(buffer,offset,bytes),pixels=new Float64Array(n);
 const mask=(2**stored)-1,sign=2**(stored-1);
 let min=Infinity,max=-Infinity;
 for(let i=0;i<n;i++){let raw=bits===8?dv.getUint8(i):dv.getUint16(i*2,true);raw&=mask;if(rep&&raw>=sign)raw-=2**stored;pixels[i]=raw;if(raw<min)min=raw;if(raw>max)max=raw;}
-const dicomCenter=Number(String(m.windowCenter||"").split("\\\\")[0]);
-const dicomWidth=Number(String(m.windowWidth||"").split("\\\\")[0]);
+const dicomCenter=Number(String(m.windowCenter||"").split("\\")[0]);
+const dicomWidth=Number(String(m.windowWidth||"").split("\\")[0]);
 const center=Number.isFinite(opts.center)?opts.center:(m.windowCenter!=null&&Number.isFinite(dicomCenter)?dicomCenter:(min+max)/2);
 const width=Number.isFinite(opts.width)&&opts.width>0?opts.width:(m.windowWidth!=null&&Number.isFinite(dicomWidth)&&dicomWidth>0?dicomWidth:Math.max(1,max-min));
 const low=center-width/2,ctx=canvas.getContext("2d",{willReadFrequently:false});
