@@ -282,6 +282,16 @@ const canvasGuard={getContext(){throw Error('Canvas acessado antes do bloqueio f
 try{api.renderGrayscale(b,i,canvasGuard,{frameIndex:0})}catch(e){rejected=/Sequências funcionais multiframe/.test(e.message)}
 assert(rejected,'renderização de grupos funcionais não foi bloqueada antes do Canvas');
 });
+check('Índice fracionário de frame é rejeitado antes de acessar Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0.5})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice fracionário aceito ou Canvas acessado');
+});
+check('Índice negativo de frame é rejeitado antes de acessar Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:-1})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice negativo aceito ou Canvas acessado');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
