@@ -19,7 +19,7 @@ function inspect(buffer){
 if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer.");
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
-const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown"};
+const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown",frameSummary:null};
 let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
 function element(p,explicit){
 if(p+8>bytes.length)return null;
@@ -61,6 +61,13 @@ out.metadata[key]=value;
 pos=e.next;
 }
 if(out.metadata.sopClassUID==="1.2.840.10008.5.1.4.1.1.13.1.3"){out.imageType="breast-tomosynthesis";out.warnings.push("SOP Class de tomossíntese mamária identificada; reconstrução, ordem dos cortes e geometria ainda não validadas.");}else if(["1.2.840.10008.5.1.4.1.1.1.2","1.2.840.10008.5.1.4.1.1.1.2.1"].includes(out.metadata.sopClassUID)){out.imageType="digital-mammography";}
+if(out.imageType==="breast-tomosynthesis"){
+const declared=out.metadata.numberOfFrames==null?null:Number(out.metadata.numberOfFrames);
+const valid=Number.isSafeInteger(declared)&&declared>0&&declared<=500;
+out.frameSummary={declaredFrames:valid?declared:null,frameCountValidated:valid,geometryValidated:false,frameOrderValidated:false};
+if(!valid)out.warnings.push("Número de frames DBT ausente, inválido ou acima do limite didático.");
+out.warnings.push("Ordem dos cortes e geometria DBT não inferidas a partir do índice dos frames.");
+}
 if(!sawSyntax)out.warnings.push("Transfer Syntax UID não encontrada no cabeçalho Part 10; renderização bloqueada.");
 if(count>=10000)out.warnings.push("Limite de elementos atingido; leitura parcial.");
 if(out.metadata.modality&&out.metadata.modality!=="MG")out.warnings.push("Modalidade declarada não é MG: "+out.metadata.modality);
