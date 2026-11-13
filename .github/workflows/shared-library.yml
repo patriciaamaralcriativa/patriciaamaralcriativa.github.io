@@ -1,0 +1,33 @@
+name: Biblioteca compartilhada — contas e armazenamento reais
+on:
+  push:
+    branches: [dev/tomossintese-mamaria-20261113]
+    paths:
+      - '_workstation-integration/tests/shared-library-browser.cjs'
+      - '_workstation-integration/file-library-cloud.js'
+      - '_workstation-integration/file-library-shared-page.js'
+      - '.github/workflows/shared-library.yml'
+permissions:
+  contents: read
+jobs:
+  real-accounts:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Testar com contas sintéticas, Auth e Storage reais
+        run: node _workstation-integration/tests/shared-library-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shared-library-${{ github.sha }}
+          path: artifacts/
+          retention-days: 14

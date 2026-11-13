@@ -61,10 +61,10 @@ window.AmaralFileLibrary = (() => {
   const size=entry=>entry.files.reduce((n,f)=>n+f.blob.size,0);
   async function exportPackage(entries) {
     if(!entries.length)throw Error('A biblioteca está vazia.');
-    const manifest={version:1,entries:[]},parts=[];let total=0;
+    const manifest={version:1,entries:[]},parts=[];let total=0,count=0;
     for(const entry of entries){
       const m={...metadata(entry),files:[]};
-      for(const f of entry.files){total+=f.blob.size;if(total>MAX)throw Error('Exporte conjuntos menores: limite de 1 GB por pacote.');m.files.push({name:f.name,type:f.type,size:f.blob.size});parts.push(f.blob);}
+      for(const f of entry.files){if(++count>1000)throw Error('Exporte conjuntos menores: limite de 1.000 arquivos por pacote.');total+=f.blob.size;if(total>MAX)throw Error('Exporte conjuntos menores: limite de 1 GB por pacote.');m.files.push({name:f.name,type:f.type,size:f.blob.size});parts.push(f.blob);}
       manifest.entries.push(m);
     }
     const header=new TextEncoder().encode(JSON.stringify(manifest));if(header.length>1048576)throw Error('Catálogo muito grande para um pacote.');
@@ -93,5 +93,5 @@ window.AmaralFileLibrary = (() => {
     if(offset!==file.size)throw Error('O pacote contém dados excedentes.');
     await transaction('readwrite',s=>{for(const item of pending)s.add(item);});return pending.length;
   }
-  return Object.freeze({modalities,list,get,remove,add,asFiles,size,exportPackage,importPackage});
+  return Object.freeze({modalities,list,get,remove,add,asFiles,size,exportPackage,importPackage,inspectMetadata:metadata,inspectFiles:checkedFiles});
 })();
