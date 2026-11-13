@@ -1,0 +1,386 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>AMARAL RAD — testes sintéticos DICOM</title><style>body{font:16px system-ui;background:#101c29;color:#e7f5ff;max-width:850px;margin:40px auto;padding:16px}li{margin:8px 0}.ok{color:#85e7a3}.fail{color:#ff9c9c}</style><h1>Testes sintéticos DICOM — sem dados de pacientes</h1><p>Execute esta página em navegador com o leitor DICOM da mesma ramificação. Nenhum arquivo é enviado a servidores.</p><ol id="results"></ol><p id="summary" role="status"></p><p><button type="button" id="export-report">Exportar relatório JSON desta execução</button></p><script src="_workstation-integration/mamografia-dicom-inspector.js"></script><script>
+(()=>{'use strict';const result=document.getElementById('results');let passed=0,failed=0;
+function check(name,fn){const li=document.createElement('li');try{fn();li.textContent='PASSOU — '+name;li.className='ok';passed++}catch(e){li.textContent='FALHOU — '+name+': '+e.message;li.className='fail';failed++}result.append(li)}
+function assert(cond,message){if(!cond)throw Error(message)}
+const enc=new TextEncoder(),concat=parts=>{let n=parts.reduce((s,p)=>s+p.length,0),out=new Uint8Array(n),o=0;for(const p of parts){out.set(p,o);o+=p.length}return out};
+function u16(n){return new Uint8Array([n&255,(n>>>8)&255])}function u32(n){return new Uint8Array([n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255])}
+function element(g,e,vr,value){let v=typeof value==='string'?enc.encode(value):value;if(v.length%2)v=concat([v,new Uint8Array([vr==='UI'?0:32])]);const long=['OB','OW','SQ','UN','UT'].includes(vr);return concat([u16(g),u16(e),enc.encode(vr),long?new Uint8Array(2):new Uint8Array(0),long?u32(v.length):u16(v.length),v])}
+function file({syntax='1.2.840.10008.1.2.1',frames=2,highBit=7,samples=1,includeSyntax=true,pixels=new Uint8Array([0,255,100,200])}={}){const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const parts=[pre];if(includeSyntax)parts.push(element(2,0x10,'UI',syntax));parts.push(element(8,0x60,'CS','MG'),element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(2)),element(0x28,0x08,'IS',String(frames)),element(0x28,0x02,'US',u16(samples)),element(0x28,0x04,'CS','MONOCHROME2'),element(0x28,0x100,'US',u16(8)),element(0x28,0x101,'US',u16(8)),element(0x28,0x102,'US',u16(highBit)),element(0x28,0x103,'US',u16(0)),element(0x7fe0,0x10,'OB',pixels));return concat(parts).buffer}
+function fakeCanvas(){let last=null;const ctx={createImageData(w,h){return {data:new Uint8ClampedArray(w*h*4)}},putImageData(img){last=img}};return {getContext(){return ctx},get pixels(){return last?.data}}}
+const api=window.AmaralMamografiaDicom;
+check('API disponível',()=>assert(!!api,'API não carregada'));
+if(api){check('Identifica dois frames e modalidade MG',()=>{const b=file(),i=api.inspect(b);assert(i.metadata.modality==='MG'&&i.metadata.numberOfFrames==='2'&&i.pixelDataPresent,'metadados incorretos')});
+check('Frames distintos preservam ordem de pixels',()=>{const b=file(),i=api.inspect(b),c=fakeCanvas();api.renderGrayscale(b,i,c,{frameIndex:0,center:127.5,width:255});const a=[c.pixels[0],c.pixels[4]];api.renderGrayscale(b,i,c,{frameIndex:1,center:127.5,width:255});const d=[c.pixels[0],c.pixels[4]];assert(a[0]===0&&a[1]===255&&d[0]===100&&d[1]===201,'valores inesperados: '+a+'/'+d)});
+check('Rejeita frame fora do intervalo',()=>{const b=file(),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas(),{frameIndex:2})}catch(e){rejected=true}assert(rejected,'frame inválido aceito')});
+check('Rejeita Pixel Data incompleto',()=>{const b=file({pixels:new Uint8Array([1,2])}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas(),{frameIndex:1})}catch(e){rejected=true}assert(rejected,'pixels incompletos aceitos')});
+check('Rejeita High Bit incompatível',()=>{const b=file({highBit:6}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'High Bit incompatível aceito')});
+check('Rejeita Samples per Pixel diferente de 1',()=>{const b=file({samples:3}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'amostras inválidas aceitas')});
+check('Rejeita Transfer Syntax ausente',()=>{const b=file({includeSyntax:false}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'Transfer Syntax ausente aceita')});
+check('Rejeita sintaxe comprimida não suportada',()=>{const b=file({syntax:'1.2.840.10008.1.2.4.50'}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'sintaxe comprimida aceita')});
+check('Rejeita arquivo sem preâmbulo Part 10',()=>{let rejected=false;try{api.inspect(new Uint8Array(200).buffer)}catch(e){rejected=true}assert(rejected,'arquivo inválido aceito')})}
+
+// Casos adicionais: valores de pixels conhecidos, sem dados de pacientes.
+function extendedFile({photo='MONOCHROME2',bits=8,stored=8,rep=0,values=[0,255],center=null,width=null}={}){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const pix=concat(values.map(v=>bits===16?u16(v&65535):new Uint8Array([v&255])));
+const parts=[pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x60,'CS','MG'),
+element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(values.length)),element(0x28,0x02,'US',u16(1)),
+element(0x28,0x04,'CS',photo),element(0x28,0x100,'US',u16(bits)),element(0x28,0x101,'US',u16(stored)),
+element(0x28,0x102,'US',u16(stored-1)),element(0x28,0x103,'US',u16(rep))];
+if(center!==null)parts.push(element(0x28,0x1050,'DS',String(center)));
+if(width!==null)parts.push(element(0x28,0x1051,'DS',String(width)));
+parts.push(element(0x7fe0,0x10,bits===16?'OW':'OB',pix));
+return concat(parts).buffer;
+}
+if(api){
+check('MONOCHROME1 inverte a escala exibida',()=>{const b=extendedFile({photo:'MONOCHROME1'}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c,{center:127.5,width:255});assert(c.pixels[0]===255&&c.pixels[4]===0,'inversão incorreta')});
+check('16 bits assinados preservam sinal',()=>{const b=extendedFile({bits:16,stored:16,rep:1,values:[-100,100]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c,{center:0,width:200});assert(v.min===-100&&v.max===100&&c.pixels[0]===0&&c.pixels[4]===255,'sinal incorreto')});
+check('Janela DICOM numérica é reconhecida',()=>{const b=extendedFile({center:100,width:200,values:[0,200]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c);assert(v.center===100&&v.width===200&&c.pixels[0]===0&&c.pixels[4]===255,'janela não aplicada')});
+check('Rejeita índice de frame negativo',()=>{const b=file(),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas(),{frameIndex:-1})}catch(e){rejected=true}assert(rejected,'índice negativo aceito')});
+check('Rejeita quantidade de frames acima do limite',()=>{const b=file({frames:501}),i=api.inspect(b);let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'501 frames aceitos')});
+}
+
+
+if(api){
+check('Janela linear com largura 1 aplica limiar binário',()=>{const b=extendedFile({center:100,width:1,values:[99,100,101]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c);assert(v.width===1&&c.pixels[0]===0&&c.pixels[4]===255&&c.pixels[8]===255,'limiar de largura 1 incorreto')});
+check('Janela linear com largura 2 preserva extremos',()=>{const b=extendedFile({center:100,width:2,values:[99,100]}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c);assert(c.pixels[0]===0&&c.pixels[4]===255,'extremos da janela incorretos')});
+check('MONOCHROME1 com largura 1 inverte limiar',()=>{const b=extendedFile({photo:'MONOCHROME1',center:100,width:1,values:[99,100]}),c=fakeCanvas();api.renderGrayscale(b,api.inspect(b),c);assert(c.pixels[0]===255&&c.pixels[4]===0,'limiar invertido incorreto')});
+}
+
+
+if(api){
+check('Detecta sequências funcionais multiframe e bloqueia renderização',()=>{
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const parts=[pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x60,'CS','MG'),
+element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(2)),element(0x28,0x02,'US',u16(1)),
+element(0x28,0x04,'CS','MONOCHROME2'),element(0x28,0x100,'US',u16(8)),element(0x28,0x101,'US',u16(8)),
+element(0x28,0x102,'US',u16(7)),element(0x28,0x103,'US',u16(0)),
+element(0x5200,0x9230,'SQ',new Uint8Array(0)),element(0x7fe0,0x10,'OB',new Uint8Array([0,255]))];
+const b=concat(parts).buffer,i=api.inspect(b);
+assert(i.functionalGroupsPresent===true,'sequência funcional não detectada');
+let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}
+assert(rejected,'renderização com functional groups aceita');
+});
+}
+
+
+if(api){
+check('12 bits armazenados em 16 bits sem sinal',()=>{const b=extendedFile({bits:16,stored:12,rep:0,values:[0,4095]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c,{center:2047.5,width:4095});assert(v.min===0&&v.max===4095&&c.pixels[0]===0&&c.pixels[4]===255,'pixels de 12 bits incorretos')});
+check('12 bits assinados com extensão de sinal',()=>{const b=extendedFile({bits:16,stored:12,rep:1,values:[-2048,2047]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c,{center:-0.5,width:4095});assert(v.min===-2048&&v.max===2047&&c.pixels[0]===0&&c.pixels[4]===255,'sinal de 12 bits incorreto')});
+check('Sequência indefinida não é interpretada como pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const sq=concat([u16(0x5200),u16(0x9230),enc.encode('SQ'),new Uint8Array(2),u32(0xffffffff)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),sq]).buffer;let rejected=false;try{api.inspect(b)}catch(e){rejected=/indefinido/.test(e.message)}assert(rejected,'sequência indefinida não foi rejeitada')});
+}
+
+
+if(api){
+check('Identifica SOP Class de tomossíntese e bloqueia pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(8,0x60,'CS','MG'),element(0x28,0x10,'US',u16(1)),element(0x28,0x11,'US',u16(2)),element(0x28,0x02,'US',u16(1)),element(0x28,0x04,'CS','MONOCHROME2'),element(0x28,0x100,'US',u16(8)),element(0x28,0x101,'US',u16(8)),element(0x28,0x102,'US',u16(7)),element(0x28,0x103,'US',u16(0)),element(0x7fe0,0x10,'OB',new Uint8Array([0,255]))]).buffer;const i=api.inspect(b);assert(i.imageType==='breast-tomosynthesis','SOP Class DBT não reconhecida');let rejected=false;try{api.renderGrayscale(b,i,fakeCanvas())}catch(e){rejected=true}assert(rejected,'DBT não validada foi renderizada')});
+}
+
+
+if(api){
+check('DBT sem Number of Frames não inventa quantidade de cortes',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(8,0x60,'CS','MG')]).buffer;const i=api.inspect(b);assert(i.imageType==='breast-tomosynthesis'&&i.frameSummary.declaredFrames===null&&!i.frameSummary.frameCountValidated&&!i.frameSummary.geometryValidated,'quantidade ou geometria inferida indevidamente')});
+check('DBT declara frames mas não presume ordem ou geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(8,0x60,'CS','MG'),element(0x28,0x08,'IS','12')]).buffer;const i=api.inspect(b);assert(i.frameSummary.declaredFrames===12&&i.frameSummary.frameCountValidated&&!i.frameSummary.geometryValidated&&!i.frameSummary.frameOrderValidated,'resumo incorreto')});
+}
+
+
+if(api){
+check('Lê atributos geométricos top-level sem inferir geometria DBT',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(8,0x60,'CS','MG'),element(0x18,0x50,'DS','1.5'),element(0x20,0x32,'DS','1\\2\\3'),element(0x20,0x37,'DS','1\\0\\0\\0\\1\\0')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.sliceThickness[0]===1.5&&i.geometryAttributes.imagePositionPatient.length===3&&i.geometryAttributes.imageOrientationPatient.length===6&&!i.frameSummary.geometryValidated,'geometria indevidamente inferida')});
+check('Rejeita geometria top-level com valor inválido',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','1\\ABC\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient===null&&i.warnings.some(w=>w.includes('imagePositionPatient')),'geometria inválida aceita')});
+}
+
+
+if(api){
+check('Registra grupos compartilhados e por frame sem interpretar geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9229,'SQ',new Uint8Array(0)),element(0x5200,0x9230,'SQ',new Uint8Array(0))]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.sharedPresent&&i.functionalGroupSummary.perFramePresent&&i.functionalGroupSummary.sharedLength===0&&i.functionalGroupSummary.perFrameLength===0&&!i.functionalGroupSummary.parsed,'resumo de sequências incorreto')});
+}
+
+
+if(api){
+check('Sequência funcional com um item definido é contada sem ler geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.perFrameItems===1&&i.functionalGroupSummary.perFrameStructureValidated&&!i.functionalGroupSummary.parsed,'item não contado corretamente')});
+check('Sequência funcional com item truncado é rejeitada estruturalmente',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(100)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.perFrameItems===null&&!i.functionalGroupSummary.perFrameStructureValidated,'item truncado aceito')});
+}
+
+
+if(api){
+function dbtFunctionalFixture(declared,perItems,sharedItems=1){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const item=()=>concat([u16(0xfffe),u16(0xe000),u32(0)]);
+const many=n=>concat(Array.from({length:n},item));
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),
+element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),
+element(8,0x60,'CS','MG'),element(0x28,0x08,'IS',String(declared)),
+element(0x5200,0x9229,'SQ',many(sharedItems)),
+element(0x5200,0x9230,'SQ',many(perItems))]).buffer;
+}
+check('DBT compara itens Per-frame com Number of Frames',()=>{const i=api.inspect(dbtFunctionalFixture(3,3));assert(i.frameSummary.perFrameCountMatchesDeclared===true&&i.frameSummary.sharedItemCountValid===true&&!i.frameSummary.geometryValidated,'comparação incorreta')});
+check('DBT alerta quando faltam itens por frame',()=>{const i=api.inspect(dbtFunctionalFixture(3,2));assert(i.frameSummary.perFrameCountMatchesDeclared===false&&i.warnings.some(w=>w.includes('difere')),'divergência não detectada')});
+check('DBT alerta quando Shared Functional Groups possui dois itens',()=>{const i=api.inspect(dbtFunctionalFixture(2,2,2));assert(i.frameSummary.sharedItemCountValid===false&&i.warnings.some(w=>w.includes('exatamente um item')),'quantidade compartilhada incorreta')});
+}
+
+
+if(api){
+check('Cabeçalhos dos itens funcionais expõem comprimentos sem interpretar pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9229,'SQ',item),element(0x5200,0x9230,'SQ',concat([item,item]))]).buffer;const i=api.inspect(b);const fg=i.functionalGroupSummary;assert(fg.perFrameItemHeaders.length===2&&fg.perFrameItemHeaders.every(x=>x.byteLength===0&&x.empty)&&fg.sharedItemHeaders.length===1&&!fg.parsed,'cabeçalhos inconsistentes')});
+check('Cabeçalhos de itens inválidos não são publicados como válidos',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(99)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(!i.functionalGroupSummary.perFrameStructureValidated&&i.functionalGroupSummary.perFrameItemHeaders.length===0,'cabeçalho inválido exposto')});
+}
+
+
+if(api){
+check('Geometria DICOM rejeita componente vazio',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','1\\\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient===null,'componente vazio foi convertido em zero')});
+check('Geometria DICOM aceita números negativos e decimais',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','-1.5\\0.25\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient?.[0]===-1.5&&i.geometryAttributes.imagePositionPatient?.[1]===0.25,'valores válidos rejeitados')});
+}
+
+
+if(api){
+check('Lê tag interna de item funcional sem inferir geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nested=element(0x20,0x32,'DS','1\\2\\3');const item=concat([u16(0xfffe),u16(0xe000),u32(nested.length),nested]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b),h=i.functionalGroupSummary.perFrameItemHeaders[0];assert(h.topLevelTagsValidated&&h.topLevelTags.length===1&&h.topLevelTags[0].element===0x32&&!i.functionalGroupSummary.parsed,'tag interna não identificada')});
+check('Item funcional com tag interna truncada é sinalizado',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nested=concat([u16(0x20),u16(0x32),u16(0x5344),u16(20)]);const item=concat([u16(0xfffe),u16(0xe000),u32(nested.length),nested]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b),h=i.functionalGroupSummary.perFrameItemHeaders[0];assert(!h.topLevelTagsValidated&&h.topLevelTags.length===0,'tag truncada aceita')});
+}
+
+
+if(api){
+check('Identifica sequência aninhada com item válido sem inferir geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nestedItem=concat([u16(0xfffe),u16(0xe000),u32(0)]);const sq=element(0x20,0x9113,'SQ',nestedItem);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const h=i.functionalGroupSummary.perFrameItemHeaders[0];assert(h.nestedSequences.length===1&&h.nestedSequences[0].validated&&h.nestedSequences[0].itemCount===1&&!i.functionalGroupSummary.parsed,'sequência aninhada não reconhecida')});
+check('Sequência aninhada com item truncado não é validada',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nestedItem=concat([u16(0xfffe),u16(0xe000),u32(40)]);const sq=element(0x20,0x9113,'SQ',nestedItem);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const n=i.functionalGroupSummary.perFrameItemHeaders[0].nestedSequences[0];assert(!n.validated&&n.itemCount===null,'item truncado validado indevidamente')});
+}
+
+
+if(api){
+check('Extrai posição geométrica de item aninhado sem validar geometria DBT',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','-1.5\\2\\3');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9113,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const g=i.functionalGroupSummary.perFrameItemHeaders[0].nestedSequences[0].items[0].geometry;assert(g.validated&&g.imagePositionPatient?.[0]===-1.5&&!i.functionalGroupSummary.parsed,'posição aninhada incorreta')});
+check('Rejeita coordenada aninhada incompleta',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','1\\2');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9113,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const g=i.functionalGroupSummary.perFrameItemHeaders[0].nestedSequences[0].items[0].geometry;assert(!g.validated&&g.imagePositionPatient===null,'coordenada incompleta aceita')});
+}
+
+
+if(api){
+check('Associa posição aninhada ao índice sem validar ordem espacial',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','1\\2\\3');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9113,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const x=i.frameSummary.frameGeometryObservations[0];assert(x.frameIndex===0&&x.observations[0].attribute==='imagePositionPatient'&&x.observations[0].values[2]===3&&!x.geometryValidated&&!i.frameSummary.frameOrderValidated,'associação indevida')});
+check('Sequência aninhada desconhecida não cria posição espacial',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','1\\2\\3');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9999,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(i.frameSummary.frameGeometryObservations[0].observations.length===0,'tag desconhecida interpretada como geometria')});
+}
+
+
+if(api){
+check('Resumo geométrico aponta orientação ausente sem validar ordem',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','1\\2\\3');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9113,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b),c=i.frameSummary.geometryConsistency;assert(c.framesInspected===1&&c.framesMissingPosition===0&&c.framesMissingOrientation===1&&!c.spatialOrderValidated,'ausência não detectada')});
+check('Resumo geométrico não considera frames vazios como geometria validada',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','2'),element(0x5200,0x9230,'SQ',concat([item,item]))]).buffer;const i=api.inspect(b),c=i.frameSummary.geometryConsistency;assert(c.framesMissingPosition===2&&c.framesMissingOrientation===2&&!c.allFramesHaveUniquePosition&&!i.frameSummary.geometryValidated,'frames vazios aceitos')});
+}
+
+
+if(api){
+check('Geometria compartilhada complementa posição individual ausente',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x37,'DS','1\\0\\0\\0\\1\\0');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9116,'SQ',nested);const shared=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const frame=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9229,'SQ',shared),element(0x5200,0x9230,'SQ',frame)]).buffer;const i=api.inspect(b),o=i.frameSummary.effectiveGeometryObservations[0].observations;assert(o.length===1&&o[0].source==='shared'&&o[0].attribute==='imageOrientationPatient'&&!i.frameSummary.geometryValidated,'orientação compartilhada não reconhecida')});
+check('Geometria efetiva não é considerada ordem espacial validada',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const frame=concat([u16(0xfffe),u16(0xe000),u32(0)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',frame)]).buffer;const i=api.inspect(b);assert(i.frameSummary.effectiveGeometryObservations[0].observations.length===0&&!i.frameSummary.frameOrderValidated,'geometria inferida sem dados')});
+}
+
+
+if(api){
+function fixtureGeometryConflict(sharedText,frameText){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const wrap=(v)=>{const geom=element(0x20,0x37,'DS',v);const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9116,'SQ',nested);return concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);};
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9229,'SQ',wrap(sharedText)),element(0x5200,0x9230,'SQ',wrap(frameText))]).buffer;
+}
+check('Diferencia orientação compartilhada e por frame sem validar geometria',()=>{const i=api.inspect(fixtureGeometryConflict('1\\0\\0\\0\\1\\0','0\\1\\0\\1\\0\\0'));assert(i.frameSummary.geometryConflicts.length===1&&i.frameSummary.geometryConflicts[0].attribute==='imageOrientationPatient'&&!i.frameSummary.orientationConsistency.geometryValidated,'diferença não detectada')});
+check('Orientações compartilhada e individual iguais não criam conflito',()=>{const i=api.inspect(fixtureGeometryConflict('1\\0\\0\\0\\1\\0','1\\0\\0\\0\\1\\0'));assert(i.frameSummary.geometryConflicts.length===0&&i.frameSummary.orientationConsistency.allObservedOrientationsEqual&&!i.frameSummary.geometryValidated,'conflito falso')});
+}
+
+
+if(api){
+function orientationVectorFixture(values){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const geom=element(0x20,0x37,'DS',values);
+const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);
+const sq=element(0x20,0x9116,'SQ',nested);
+const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',item)]).buffer;
+}
+check('Vetores unitários ortogonais passam na verificação matemática',()=>{const i=api.inspect(orientationVectorFixture('1\\0\\0\\0\\1\\0'));const c=i.frameSummary.orientationVectorChecks[0];assert(c.present&&c.valid&&c.dotProduct===0&&!i.frameSummary.geometryValidated,'orientação ortogonal rejeitada')});
+check('Vetores não unitários são sinalizados',()=>{const i=api.inspect(orientationVectorFixture('2\\0\\0\\0\\1\\0'));const c=i.frameSummary.orientationVectorChecks[0];assert(c.present&&!c.valid&&c.rowNorm===2,'vetor não unitário aceito')});
+check('Vetores paralelos são sinalizados',()=>{const i=api.inspect(orientationVectorFixture('1\\0\\0\\1\\0\\0'));const c=i.frameSummary.orientationVectorChecks[0];assert(c.present&&!c.valid&&c.dotProduct===1,'vetores paralelos aceitos')});
+}
+
+
+if(api){
+function planeFixture(pos,orient){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const nested=(group,el,value)=>{const geom=element(0x20,el,'DS',value);const sub=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);return element(0x20,group,'SQ',sub);};
+const inner=concat([nested(0x9113,0x32,pos),nested(0x9116,0x37,orient)]);
+const frame=concat([u16(0xfffe),u16(0xe000),u32(inner.length),inner]);
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',frame)]).buffer;
+}
+check('Calcula normal e projeção assinada sem ordenar cortes',()=>{const i=api.inspect(planeFixture('0\\0\\5','1\\0\\0\\0\\1\\0'));const p=i.frameSummary.planeNormalObservations[0];assert(p.computed&&p.normal[2]===1&&p.signedProjection===5&&!p.spatialOrderValidated&&!i.frameSummary.frameOrderValidated,'normal ou projeção incorreta')});
+check('Não calcula normal com orientação inválida',()=>{const i=api.inspect(planeFixture('0\\0\\5','2\\0\\0\\0\\1\\0'));const p=i.frameSummary.planeNormalObservations[0];assert(!p.computed&&p.reason==='orientation-not-validated','normal inválida calculada')});
+}
+
+
+if(api){
+function spacingFixture(positions){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const nested=(sequence,tagElement,value)=>{const geom=element(0x20,tagElement,'DS',value);const sub=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);return element(0x20,sequence,'SQ',sub);};
+const frames=positions.map(z=>{const inner=concat([nested(0x9113,0x32,'0\\0\\'+z),nested(0x9116,0x37,'1\\0\\0\\0\\1\\0')]);return concat([u16(0xfffe),u16(0xe000),u32(inner.length),inner]);});
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS',String(positions.length)),element(0x5200,0x9230,'SQ',concat(frames))]).buffer;
+}
+check('Distâncias entre planos preservam ordem de armazenamento',()=>{const i=api.inspect(spacingFixture([0,2,1]));const p=i.frameSummary.planeSpacingObservations;assert(p.comparable&&p.adjacentDifferences.length===2&&p.adjacentDifferences[0].signedDifference===2&&p.adjacentDifferences[1].signedDifference===-1&&!p.spatialOrderValidated,'distâncias incorretas')});
+check('Projeções repetidas são identificadas sem classificar cortes duplicados',()=>{const i=api.inspect(spacingFixture([0,1,0]));const p=i.frameSummary.planeSpacingObservations;assert(p.repeatedProjectionPairs.length===1&&p.repeatedProjectionPairs[0][0]===0&&p.repeatedProjectionPairs[0][1]===2&&!p.spacingValidated,'repetição não detectada')});
+}
+
+
+if(api){
+function regularityFixture(positions){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const nested=(seq,tagElement,value)=>{const geom=element(0x20,tagElement,'DS',value);const item=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);return element(0x20,seq,'SQ',item);};
+const frames=positions.map(z=>{const inner=concat([nested(0x9113,0x32,'0\\0\\'+z),nested(0x9116,0x37,'1\\0\\0\\0\\1\\0')]);return concat([u16(0xfffe),u16(0xe000),u32(inner.length),inner]);});
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS',String(positions.length)),element(0x5200,0x9230,'SQ',concat(frames))]).buffer;
+}
+check('Distâncias consecutivas uniformes não geram alerta exploratório',()=>{const i=api.inspect(regularityFixture([0,1,2,3]));const r=i.frameSummary.planeSpacingObservations.regularity;assert(r.medianNonzeroAdjacentDistance===1&&r.irregularAdjacentPairs.length===0&&!r.uniformSpacingConfirmed,'regularidade calculada incorretamente')});
+check('Variação de distâncias é sinalizada sem validar reconstrução',()=>{const i=api.inspect(regularityFixture([0,1,2,6]));const r=i.frameSummary.planeSpacingObservations.regularity;assert(r.irregularAdjacentPairs.length===1&&r.irregularAdjacentPairs[0].absoluteDistance===4&&!r.uniformSpacingConfirmed&&!i.frameSummary.geometryValidated,'variação não sinalizada')});
+}
+
+const realCanvas=document.createElement('canvas');
+const realContext=typeof realCanvas.getContext==='function'?realCanvas.getContext('2d'):null;
+if(api&&realContext&&typeof realContext.getImageData==='function'){
+check('Canvas 2D real recebe pixels sintéticos renderizados',()=>{
+const b=file({frames:1,pixels:new Uint8Array([0,255])}),i=api.inspect(b);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+const pixels=realContext.getImageData(0,0,2,1).data;
+assert(pixels[0]===0&&pixels[4]===255&&pixels[3]===255&&pixels[7]===255,'Canvas 2D real não reproduziu os pixels esperados');
+});
+}
+if(api&&realContext&&typeof realContext.getImageData==='function'){
+check('Canvas real preserva dimensões e alternância de frames sintéticos',()=>{
+const b=file(),i=api.inspect(b);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+assert(realCanvas.width===2&&realCanvas.height===1,'dimensões incorretas');
+const first=Array.from(realContext.getImageData(0,0,2,1).data);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:1,center:127.5,width:255});
+const second=Array.from(realContext.getImageData(0,0,2,1).data);
+assert(first[0]===0&&first[4]===255&&second[0]===100&&second[4]===201,'troca de frame não atualizou Canvas real');
+});
+check('Canvas real não é alterado ao rejeitar frame inválido',()=>{
+const b=file(),i=api.inspect(b);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+const before=Array.from(realContext.getImageData(0,0,2,1).data);
+let rejected=false;
+try{api.renderGrayscale(b,i,realCanvas,{frameIndex:2})}catch(e){rejected=true}
+const after=Array.from(realContext.getImageData(0,0,2,1).data);
+assert(rejected&&before.every((v,j)=>v===after[j]),'Canvas modificado após rejeição');
+});
+}
+if(api&&realContext&&typeof realContext.getImageData==='function'){
+check('Canvas real aplica inversão MONOCHROME1 sintética',()=>{
+const b=file({frames:1,pixels:new Uint8Array([0,255])});
+const i=api.inspect(b);
+i.metadata.photometricInterpretation='MONOCHROME1';
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+const pixels=realContext.getImageData(0,0,2,1).data;
+assert(pixels[0]===255&&pixels[4]===0&&pixels[3]===255&&pixels[7]===255,'inversão MONOCHROME1 não aplicada no Canvas');
+});
+}
+check('DBT não renderiza mesmo quando Canvas está disponível',()=>{
+const b=file(),i=api.inspect(b);
+i.imageType='breast-tomosynthesis';
+let rejected=false;
+const canvasGuard={getContext(){throw Error('Canvas acessado antes do bloqueio DBT')}};
+try{api.renderGrayscale(b,i,canvasGuard,{frameIndex:0})}catch(e){rejected=/Tomossíntese DICOM identificada/.test(e.message)}
+assert(rejected,'renderização DBT não foi bloqueada antes do acesso ao Canvas');
+});
+check('Grupos funcionais impedem renderização antes de acessar Canvas',()=>{
+const b=file(),i=api.inspect(b);
+i.functionalGroupsPresent=true;
+let rejected=false;
+const canvasGuard={getContext(){throw Error('Canvas acessado antes do bloqueio funcional')}};
+try{api.renderGrayscale(b,i,canvasGuard,{frameIndex:0})}catch(e){rejected=/Sequências funcionais multiframe/.test(e.message)}
+assert(rejected,'renderização de grupos funcionais não foi bloqueada antes do Canvas');
+});
+check('Índice fracionário de frame é rejeitado antes de acessar Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0.5})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice fracionário aceito ou Canvas acessado');
+});
+check('Índice negativo de frame é rejeitado antes de acessar Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:-1})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice negativo aceito ou Canvas acessado');
+});
+check('Índice de frame não numérico é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:'1'})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice textual aceito ou Canvas acessado');
+});
+check('Índice de frame NaN é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:NaN})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice NaN aceito ou Canvas acessado');
+});
+check('Canvas sem contexto 2D é rejeitado de forma explícita',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){return null}},{frameIndex:0})}catch(e){rejected=/Canvas indisponível/.test(e.message)}
+assert(rejected,'ausência de contexto 2D não foi rejeitada corretamente');
+});
+check('Pixel Data não é renderizado quando não há Transfer Syntax UID',()=>{
+const b=file({includeSyntax:false}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Transfer Syntax UID ausente/.test(e.message)}
+assert(rejected,'transfer syntax ausente não bloqueou renderização antes do Canvas');
+});
+check('Pixel Data incompleto é rejeitado antes de acessar Canvas',()=>{
+const b=file({pixels:new Uint8Array([0,255])}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:1})}catch(e){rejected=/Pixel Data multiframe incompleto/.test(e.message)}
+assert(rejected,'Pixel Data truncado alcançou Canvas ou não foi rejeitado');
+});
+check('Quantidade zero de frames é rejeitada antes de acessar Canvas',()=>{
+const b=file({frames:0}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Quantidade de frames inválida/.test(e.message)}
+assert(rejected,'série sem frames alcançou Canvas ou não foi rejeitada');
+});
+check('Frames acima do limite didático são rejeitados antes do Canvas',()=>{
+const b=file({frames:501}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Quantidade de frames inválida/.test(e.message)}
+assert(rejected,'série acima de 500 frames alcançou Canvas ou não foi rejeitada');
+});
+check('Índice infinito de frame é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:Infinity})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice infinito alcançou Canvas ou não foi rejeitado');
+});
+check('FrameIndex null é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:null})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'null foi aceito como índice de frame');
+});
+check('FrameIndex booleano é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:true})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'booleano foi aceito como índice de frame');
+});
+check('Limite de 500 frames é aceito com Pixel Data completo',()=>{
+const b=file({frames:500,pixels:new Uint8Array(1000)}),i=api.inspect(b),c=fakeCanvas();
+const r=api.renderGrayscale(b,i,c,{frameIndex:499,center:127.5,width:255});
+assert(r.frameIndex===499&&r.frameCount===500&&c.pixels.length===8,'limite inclusivo de 500 frames não foi respeitado');
+});
+check('FrameIndex omitido utiliza primeiro frame',()=>{
+const b=file(),i=api.inspect(b),c=fakeCanvas();
+const r=api.renderGrayscale(b,i,c,{center:127.5,width:255});
+assert(r.frameIndex===0&&c.pixels[0]===0&&c.pixels[4]===255,'frame padrão incorreto');
+});
+const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
+const canvasChecksPlanned=4;
+const canvasChecksExecuted=isRealCanvas&&api?4:0;
+const canvasChecksSkipped=canvasChecksPlanned-canvasChecksExecuted;
+const exportButton=document.getElementById('export-report');
+if(exportButton&&typeof exportButton.addEventListener==='function')exportButton.addEventListener('click',()=>{
+const results=Array.from(document.querySelectorAll('#results li')).map(li=>({
+status:li.classList.contains('fail')?'falhou':li.classList.contains('ok')?'passou':'indeterminado',
+description:li.textContent
+}));
+const resultPassed=results.filter(r=>r.status==='passou').length;
+const resultFailed=results.filter(r=>r.status==='falhou').length;
+const countsConsistent=results.length===passed+failed&&resultPassed===passed&&resultFailed===failed;
+const report={
+schemaVersion:2,
+suite:'AMARAL RAD DICOM — testes sintéticos',
+executedAt:new Date().toISOString(),
+userAgent:navigator.userAgent,
+environment:{canvas2dAvailable:isRealCanvas,realBrowserNotProvenByReport:true},
+canvasChecks:{planned:canvasChecksPlanned,executed:canvasChecksExecuted,skipped:canvasChecksSkipped},
+counts:{passed,failed,executed:passed+failed,resultsRecorded:results.length,consistent:countsConsistent},
+results,
+limitations:['Dados exclusivamente sintéticos','Relatório gerado no cliente e não autenticado','Não comprova validação clínica, geométrica DBT ou anonimização']
+};
+if(!countsConsistent){document.getElementById('summary').textContent+=' ATENÇÃO: divergência entre contagem e registros; exportação interrompida.';return;}
+const blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'});
+const url=URL.createObjectURL(blob),link=document.createElement('a');
+link.href=url;link.download='amaral-rad-dicom-testes-'+new Date().toISOString().slice(0,10)+'.json';
+document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
+});
+document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'API Canvas 2D disponível neste ambiente; navegador real não comprovado.':'API Canvas 2D indisponível; verificações de renderização não executadas.')+' Canvas: '+canvasChecksExecuted+' de '+canvasChecksPlanned+' testes executados, '+canvasChecksSkipped+' não executados. Casos sintéticos; não há validação clínica.';})();
+</script></html>
