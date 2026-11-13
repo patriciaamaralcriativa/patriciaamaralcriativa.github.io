@@ -34,7 +34,7 @@ body:has(#doorScreen:not(.hidden)) .cinema-door{min-height:0}
 @media(prefers-reduced-motion:reduce){.cinema-door.opened-3d,.cinema-door.open{animation:none;transform:rotateY(-80deg)}}
 @media(max-width:750px){.cinema-door span{font-size:clamp(10px,2vw,20px)}}
 </style><style id="horrorAnimation">
-.horror-creature{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;box-sizing:border-box;animation:rotaVideoFade .45s ease-out}
+.horror-creature{position:fixed;inset:0;z-index:10000;overflow:hidden;background:rgba(0,0,0,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;box-sizing:border-box;animation:rotaVideoFade .45s ease-out}
 .horror-creature canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(28px) brightness(.38);transform:scale(1.08);pointer-events:none}
 .horror-creature video,.horror-creature strong,.horror-creature .video-actions{position:relative;z-index:1}
 .horror-creature video{display:block;width:100%;height:calc(100dvh - 115px);flex:1;min-height:0;max-height:920px;object-fit:contain;background:transparent}
