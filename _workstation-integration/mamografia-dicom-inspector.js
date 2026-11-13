@@ -19,7 +19,7 @@ function inspect(buffer){
 if(!(buffer instanceof ArrayBuffer))throw Error("É necessário um ArrayBuffer.");
 const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
-const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown",frameSummary:null,geometryAttributes:{imagePositionPatient:null,imageOrientationPatient:null,spacingBetweenSlices:null,sliceThickness:null}};
+const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown",frameSummary:null,geometryAttributes:{imagePositionPatient:null,imageOrientationPatient:null,spacingBetweenSlices:null,sliceThickness:null},functionalGroupSummary:{sharedPresent:false,perFramePresent:false,sharedLength:null,perFrameLength:null,parsed:false}};
 let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
 function element(p,explicit){
 if(p+8>bytes.length)return null;
@@ -40,7 +40,7 @@ while(pos<bytes.length&&count++<10000){
 const group=d.getUint16(pos,true);const meta=group===0x0002;
 const explicit=meta||syntax!=="1.2.840.10008.1.2";
 const e=element(pos,explicit);if(!e)break;
-if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
+if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;const shared=e.element===0x9229;out.functionalGroupSummary[shared?"sharedPresent":"perFramePresent"]=true;out.functionalGroupSummary[shared?"sharedLength":"perFrameLength"]=e.length;out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
 if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=e.start;out.pixelDataLength=e.length;break;}
 if(meta&&e.element===0x0010){
 syntax=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
