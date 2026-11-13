@@ -302,6 +302,16 @@ const b=file(),i=api.inspect(b);let rejected=false;
 try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:NaN})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
 assert(rejected,'índice NaN aceito ou Canvas acessado');
 });
+check('Canvas sem contexto 2D é rejeitado de forma explícita',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){return null}},{frameIndex:0})}catch(e){rejected=/Canvas indisponível/.test(e.message)}
+assert(rejected,'ausência de contexto 2D não foi rejeitada corretamente');
+});
+check('Pixel Data não é renderizado quando não há Transfer Syntax UID',()=>{
+const b=file({includeSyntax:false}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Transfer Syntax UID ausente/.test(e.message)}
+assert(rejected,'transfer syntax ausente não bloqueou renderização antes do Canvas');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
