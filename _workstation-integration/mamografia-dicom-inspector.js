@@ -88,9 +88,9 @@ pos=e.next;
 if(out.metadata.sopClassUID==="1.2.840.10008.5.1.4.1.1.13.1.3"){out.imageType="breast-tomosynthesis";out.warnings.push("SOP Class de tomossíntese mamária identificada; reconstrução, ordem dos cortes e geometria ainda não validadas.");}else if(["1.2.840.10008.5.1.4.1.1.1.2","1.2.840.10008.5.1.4.1.1.1.2.1"].includes(out.metadata.sopClassUID)){out.imageType="digital-mammography";}
 for(const key of Object.keys(out.geometryAttributes)){
 const raw=out.metadata[key];
-if(raw!=null){const values=String(raw).split("\\").map(x=>Number(x.trim()));
+if(raw!=null){const tokens=String(raw).split("\\").map(x=>x.trim());const values=tokens.map(Number);
 const expected=key==="imagePositionPatient"?3:key==="imageOrientationPatient"?6:1;
-if(values.length===expected&&values.every(Number.isFinite))out.geometryAttributes[key]=values;
+if(values.length===expected&&tokens.every(x=>x!==""&&/^[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+-]?\\d+)?$/.test(x))&&values.every(Number.isFinite))out.geometryAttributes[key]=values;
 else out.warnings.push("Atributo geométrico inválido ou não interpretável: "+key);
 }}
 if(out.imageType==="breast-tomosynthesis"){
