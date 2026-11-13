@@ -93,13 +93,13 @@ const dicomCenter=Number(String(m.windowCenter||"").split("\\")[0]);
 const dicomWidth=Number(String(m.windowWidth||"").split("\\")[0]);
 const center=Number.isFinite(opts.center)?opts.center:(m.windowCenter!=null&&Number.isFinite(dicomCenter)?dicomCenter:(min+max)/2);
 const width=Number.isFinite(opts.width)&&opts.width>0?opts.width:(m.windowWidth!=null&&Number.isFinite(dicomWidth)&&dicomWidth>0?dicomWidth:Math.max(1,max-min));
-const low=center-width/2,ctx=canvas.getContext("2d",{willReadFrequently:false});
+const ctx=canvas.getContext("2d",{willReadFrequently:false});
 if(!ctx)throw Error("Canvas indisponível.");
 canvas.width=cols;canvas.height=rows;
 const image=ctx.createImageData(cols,rows),invert=m.photometricInterpretation==="MONOCHROME1";
-for(let i=0;i<n;i++){let gray=Math.max(0,Math.min(255,Math.round((pixels[i]-low)/width*255)));if(invert)gray=255-gray;const p=i*4;image.data[p]=image.data[p+1]=image.data[p+2]=gray;image.data[p+3]=255;}
+for(let i=0;i<n;i++){let gray;if(width<=1){gray=pixels[i]<=center-0.5?0:255}else{const normalized=(pixels[i]-(center-0.5))/(width-1)+0.5;gray=Math.max(0,Math.min(255,Math.round(normalized*255)))}if(invert)gray=255-gray;const p=i*4;image.data[p]=image.data[p+1]=image.data[p+2]=gray;image.data[p+3]=255;}
 ctx.putImageData(image,0,0);
-return {rows,columns:cols,frameIndex,frameCount:frames,min,max,center,width,photometricInterpretation:m.photometricInterpretation,notice:"Prévia educacional: escala automática; não aplica Modality LUT, VOI LUT, Presentation LUT ou calibração diagnóstica."};
+return {rows,columns:cols,frameIndex,frameCount:frames,min,max,center,width,photometricInterpretation:m.photometricInterpretation,notice:"Prévia educacional: janela linear DICOM (quando disponível), sem Modality LUT, VOI LUT por sequência, Presentation LUT ou calibração diagnóstica."};
 }
 global.AmaralMamografiaDicom={inspect,renderGrayscale};
 })(typeof window!=="undefined"?window:globalThis);
