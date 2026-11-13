@@ -139,5 +139,11 @@ check('Identifica sequência aninhada com item válido sem inferir geometria',()
 check('Sequência aninhada com item truncado não é validada',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nestedItem=concat([u16(0xfffe),u16(0xe000),u32(40)]);const sq=element(0x20,0x9113,'SQ',nestedItem);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const n=i.functionalGroupSummary.perFrameItemHeaders[0].nestedSequences[0];assert(!n.validated&&n.itemCount===null,'item truncado validado indevidamente')});
 }
 
+
+if(api){
+check('Extrai posição geométrica de item aninhado sem validar geometria DBT',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','-1.5\\2\\3');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9113,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const g=i.functionalGroupSummary.perFrameItemHeaders[0].nestedSequences[0].items[0].geometry;assert(g.validated&&g.imagePositionPatient?.[0]===-1.5&&!i.functionalGroupSummary.parsed,'posição aninhada incorreta')});
+check('Rejeita coordenada aninhada incompleta',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const geom=element(0x20,0x32,'DS','1\\2');const nested=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);const sq=element(0x20,0x9113,'SQ',nested);const item=concat([u16(0xfffe),u16(0xe000),u32(sq.length),sq]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);const g=i.functionalGroupSummary.perFrameItemHeaders[0].nestedSequences[0].items[0].geometry;assert(!g.validated&&g.imagePositionPatient===null,'coordenada incompleta aceita')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
