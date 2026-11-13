@@ -229,7 +229,7 @@ $('rotaUnpublishBank').onclick=async()=>{
   status.textContent='Solicitação de recolhimento concluída.';
  }catch(e){status.textContent='Não foi possível recolher: '+e.message}
 };
-rotaLoadPublished();
+rotaLoadPublished().catch(()=>{});
 
 window.addEventListener('focus',async()=>{if(!$('teacherPanel').classList.contains('hidden')&&!await rotaRequireTeacher()){$('teacherPanel').classList.add('hidden');$('bankStatus').textContent='Sessão administrativa encerrada. Entre novamente na Sala de Aulas.'}});
 
