@@ -54,6 +54,23 @@ p+=head+len;
 }
 return {valid:p===end,tags:p===end?tags:[]};
 }
+function inspectNestedSequenceHeaders(start,end,explicit){
+const result={validated:false,itemCount:null,items:[]};
+let p=start,count=0;
+while(p<end&&count<500){
+if(p+8>end)return result;
+const group=d.getUint16(p,true),el=d.getUint16(p+2,true),len=d.getUint32(p+4,true);
+if(group!==0xfffe||el!==0xe000||len===0xffffffff||len>end-p-8)return result;
+const itemStart=p+8,itemEnd=itemStart+len;
+const inner=inspectItemTopLevelTags(itemStart,itemEnd,explicit);
+if(!inner.valid)return result;
+result.items.push({byteLength:len,topLevelTags:inner.tags});
+count++;p=itemEnd;
+}
+if(p===end){result.validated=true;result.itemCount=count;}
+else result.items=[];
+return result;
+}
 function inspectFunctionalItemHeaders(e,explicit){
 const result={itemCount:0,structureValidated:false,items:[]};let p=e.start;
 while(p<e.next&&result.itemCount<500){
@@ -61,7 +78,8 @@ if(p+8>e.next)return result;
 const group=d.getUint16(p,true),el=d.getUint16(p+2,true),len=d.getUint32(p+4,true);
 if(group!==0xfffe||el!==0xe000||len===0xffffffff||len>e.next-p-8)return result;
 const start=p+8,end=start+len;
-const content=inspectItemTopLevelTags(start,end,explicit);result.items.push({byteLength:len,empty:len===0,topLevelTags:content.tags,topLevelTagsValidated:content.valid});
+const content=inspectItemTopLevelTags(start,end,explicit);const nestedSequences=content.valid?content.tags.filter(t=>t.vr==="SQ").map(t=>{let q=start;while(q<end){const inner=element(q,explicit);if(!inner||inner.next>end)break;if(inner.group===t.group&&inner.element===t.element)return {group:t.group,element:t.element,...inspectNestedSequenceHeaders(inner.start,inner.next,explicit)};q=inner.next;}return {group:t.group,element:t.element,validated:false,itemCount:null,items:[]};}):[];
+result.items.push({byteLength:len,empty:len===0,topLevelTags:content.tags,topLevelTagsValidated:content.valid,nestedSequences});
 result.itemCount++;p=end;
 }
 result.structureValidated=p===e.next;
