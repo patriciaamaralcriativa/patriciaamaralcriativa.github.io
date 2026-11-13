@@ -43,7 +43,7 @@ body:has(#doorScreen:not(.hidden)) .cinema-door{min-height:0}
 @keyframes horrorRoar{to{transform:translateY(15px) scaleY(1.25)}}@keyframes horrorEyes{to{filter:drop-shadow(0 0 15px red)}}@keyframes horrorClaws{to{transform:rotate(9deg)}}
 @media(prefers-reduced-motion:reduce){.horror-creature svg,.horror-creature .jaw,.horror-creature .eyes,.horror-creature .claws{animation:none}}
 </style><style id="tacticsStyle">.tactics{margin:16px auto;padding:12px;border:2px solid #6a7898;border-radius:14px;max-width:1000px}.tactics .btn{margin:5px;min-height:56px}.team .stat{line-height:1.6}</style><style>.subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:9px;margin:12px 0}.subject-grid label{padding:12px;border:1px solid #7181a4;border-radius:10px;background:#1b2640;color:white}.subject-check{width:22px;height:22px}#mixMode{padding:12px;margin:12px;background:#18213a;color:white}</style><style>body.teacher-reduced-motion *,body.teacher-reduced-motion *::before,body.teacher-reduced-motion *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}</style></head><body><div class="shell"><header class="top"><div><div class="brand">✦ OPERAÇÃO ROTA ZERO</div><div class="tiny">SHOW DAS PORTAS · DESAFIO DE RADIOLOGIA</div></div><div class="row"><button class="chip" id="teacherToggle" type="button">⚙️ PAINEL DA PROFESSORA</button><button class="chip" id="audio">🔊 SOM LIGADO</button><button class="chip" id="fullscreen">⛶ TELA CHEIA</button></div></header><aside id="teacherPanel" class="hidden" style="padding:18px;margin:12px 0;border:2px solid #7783ad;border-radius:16px;background:#18213a;color:white"><h2>⚙️ CONTROLES DA PROFESSORA</h2><label for="teacherVolume">Volume dos efeitos</label><input type="range" id="teacherVolume" min="0" max="100" value="50" style="width:100%"><p><label><input type="checkbox" id="teacherScares" checked> Permitir aparições assustadoras</label></p><p><label><input type="checkbox" id="teacherMotion" checked> Permitir animações</label></p><p class="muted">Configurações locais para esta sessão. O áudio geral também pode ser desligado pelo botão SOM.</p>
-<section id="teacherBankFiles" style="border-top:1px solid #7783ad;padding-top:14px"><h3>ARQUIVOS E BACKUPS</h3><div class="row"><label for="bankFile">Importar banco JSON (salvo neste navegador)</label><input id="bankFile" type="file" accept=".json,application/json"></div><button type="button" class="btn" id="downloadBankTemplate">⬇ BAIXAR MODELO JSON</button><p id="bankStatus" class="muted" aria-live="polite"></p><div class="row"><label for="restoreBanks">Restaurar backup JSON</label><input id="restoreBanks" type="file" accept=".json,application/json"></div><p><button type="button" id="exportBanks" class="btn">💾 EXPORTAR BACKUP DOS BANCOS</button></p><p class="muted">Os bancos estão armazenados somente neste navegador. Faça backup regularmente.</p><p class="muted">O banco original de Gerência de Rejeitos é usado somente quando Proteção Radiológica está selecionada e nenhum banco próprio foi importado.</p></section>
+<section id="teacherSync"><h3>BANCOS COMPARTILHADOS</h3><p class="muted">Envie somente bancos revisados. Publicar libera as questões aos alunos autorizados.</p><button type="button" id="rotaPublishBank">PUBLICAR DISCIPLINA SELECIONADA</button> <button type="button" id="rotaUnpublishBank">RECOLHER DISCIPLINA SELECIONADA</button><p id="rotaSyncStatus" aria-live="polite"></p></section><section id="teacherBankFiles" style="border-top:1px solid #7783ad;padding-top:14px"><h3>ARQUIVOS E BACKUPS</h3><div class="row"><label for="bankFile">Importar banco JSON (salvo neste navegador)</label><input id="bankFile" type="file" accept=".json,application/json"></div><button type="button" class="btn" id="downloadBankTemplate">⬇ BAIXAR MODELO JSON</button><p id="bankStatus" class="muted" aria-live="polite"></p><div class="row"><label for="restoreBanks">Restaurar backup JSON</label><input id="restoreBanks" type="file" accept=".json,application/json"></div><p><button type="button" id="exportBanks" class="btn">💾 EXPORTAR BACKUP DOS BANCOS</button></p><p class="muted">Os bancos estão armazenados somente neste navegador. Faça backup regularmente.</p><p class="muted">O banco original de Gerência de Rejeitos é usado somente quando Proteção Radiológica está selecionada e nenhum banco próprio foi importado.</p></section>
 <section id="teacherQuestions" style="border-top:1px solid #7783ad;padding-top:14px">
 <h3>GERENCIAR QUESTÕES</h3><p><label for="editRecovery">Cópia anterior</label><select id="editRecovery"><option value="">Selecione</option><option value="antes-edicao">Antes da edição</option><option value="antes-exclusao">Antes da exclusão</option><option value="antes-importacao">Antes da importação</option><option value="antes-restauracao">Antes da restauração</option></select> <button id="editRecover" type="button">RECUPERAR CÓPIA</button></p><p class="muted">Editor local de bancos importados. Não é autenticação: não compartilhe este arquivo como painel administrativo. Exporte um backup antes de editar.</p>
 <label for="editSubject">Disciplina</label><select id="editSubject"></select>
@@ -145,7 +145,7 @@ function normalizeQuestion(q){if(Array.isArray(q))return validQuestion(q)?q.slic
 function bankList(){const selected=[...document.querySelectorAll('.subject-check:checked')].map(x=>subjectNames[Number(x.value)]);return selected}
 function prepareSelectedQuestions(){
  const selected=bankList();if(!selected.length){alert('Selecione pelo menos uma disciplina.');return null}
- const groups=selected.map(name=>({name,items:(importedBanks[name]||[]).map(normalizeQuestion).filter(Boolean)})).filter(g=>g.items.length);
+ const groups=selected.map(name=>({name,items:(window.rotaSharedBanks?.[name]||importedBanks[name]||[]).map(normalizeQuestion).filter(Boolean)})).filter(g=>g.items.length);
  if(selected.includes('Proteção Radiológica')&&!groups.some(g=>g.name==='Proteção Radiológica'))groups.push({name:'Proteção Radiológica',items:BANK});
  if(!groups.length){alert('Nenhum banco de questões disponível para as disciplinas selecionadas. Importe um JSON primeiro.');return null}
  const unique=new Set(),result=[],mode=$('mixMode').value;
@@ -187,6 +187,47 @@ async function rotaTeacherAllowed(){
 }
 // Restringir a interface de gestão; não substitui regras de autorização no servidor.
 async function rotaRequireTeacher(){try{return await rotaTeacherAllowed()}catch(e){return false}}
+async function rotaSessionHeaders(){
+ const session=JSON.parse(sessionStorage.getItem('patricia-sala-session-v1')||'null');
+ if(!session?.access_token||!session?.expires_at||session.expires_at<=Date.now()/1000+30)throw Error('Entre na Sala de Aulas nesta aba.');
+ return {apikey:ROTA_AUTH_KEY,Authorization:'Bearer '+session.access_token,'Content-Type':'application/json'};
+}
+async function rotaServerRequest(method,url,body){
+ const headers=await rotaSessionHeaders();const response=await fetch(ROTA_AUTH_API+'/rest/v1/rota_zero_bancos'+url,{method,headers,body:body===undefined?undefined:JSON.stringify(body),cache:'no-store'});
+ if(!response.ok)throw Error('Servidor recusou a operação ('+response.status+').');
+ return response.status===204?null:response.json();
+}
+async function rotaLoadPublished(){
+ try{
+  const rows=await rotaServerRequest('GET','?select=disciplina,questoes&publicado=eq.true');
+  if(!Array.isArray(rows))throw Error('Resposta inválida.');
+  const next={};for(const row of rows){if(!subjectNames.includes(row.disciplina)||!Array.isArray(row.questoes))continue;const qs=row.questoes.map(normalizeQuestion);if(qs.length&&qs.every(Boolean))next[row.disciplina]=qs}
+  window.rotaSharedBanks=next;
+  $('subjectSummary').textContent='Bancos compartilhados carregados: '+Object.keys(next).length+'.';
+ }catch(e){window.rotaSharedBanks={};$('subjectSummary').textContent='Bancos compartilhados indisponíveis. '+e.message}
+}
+$('rotaPublishBank').onclick=async()=>{
+ const status=$('rotaSyncStatus');try{
+  if(!await rotaRequireTeacher())throw Error('Acesso exclusivo da professora.');
+  const name=editSubject.value,items=editQuestions();
+  if(!items.length||items.length>500)throw Error('Selecione uma disciplina com questões válidas.');
+  if(!confirm('Publicar '+items.length+' questões de '+name+' para alunos autorizados?'))return;
+  const existing=await rotaServerRequest('GET','?select=id&disciplina=eq.'+encodeURIComponent(name));
+  if(existing.length){await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{questoes:items,publicado:true,atualizado_em:new Date().toISOString()})}
+  else{await rotaServerRequest('POST','',{disciplina:name,questoes:items,publicado:true})}
+  status.textContent='Banco publicado no servidor. Aguarde a confirmação dos testes com contas reais.';
+ }catch(e){status.textContent='Não foi possível publicar: '+e.message}
+};
+$('rotaUnpublishBank').onclick=async()=>{
+ const status=$('rotaSyncStatus');try{
+  if(!await rotaRequireTeacher())throw Error('Acesso exclusivo da professora.');
+  const name=editSubject.value;if(!confirm('Recolher o banco '+name+'? Alunos deixarão de recebê-lo.'))return;
+  await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{publicado:false,atualizado_em:new Date().toISOString()});
+  status.textContent='Solicitação de recolhimento concluída.';
+ }catch(e){status.textContent='Não foi possível recolher: '+e.message}
+};
+rotaLoadPublished();
+
 window.addEventListener('focus',async()=>{if(!$('teacherPanel').classList.contains('hidden')&&!await rotaRequireTeacher()){$('teacherPanel').classList.add('hidden');$('bankStatus').textContent='Sessão administrativa encerrada. Entre novamente na Sala de Aulas.'}});
 
 $('teacherToggle').onclick=async()=>{const panel=$('teacherPanel');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');return}const btn=$('teacherToggle');btn.disabled=true;try{if(!await rotaTeacherAllowed()){if(confirm('Acesso exclusivo da professora. Entre na Minha Sala de Aulas nesta mesma aba e depois retorne pelo botão Voltar do navegador. Abrir a Sala agora?')){location.href='sala-de-aulas.html'}return}panel.classList.remove('hidden')}catch(e){alert('Não foi possível verificar sua autorização. O painel continuará fechado.')}finally{btn.disabled=false}};
