@@ -43,7 +43,7 @@ body:has(#doorScreen:not(.hidden)) .cinema-door{min-height:0}
 @keyframes horrorRoar{to{transform:translateY(15px) scaleY(1.25)}}@keyframes horrorEyes{to{filter:drop-shadow(0 0 15px red)}}@keyframes horrorClaws{to{transform:rotate(9deg)}}
 @media(prefers-reduced-motion:reduce){.horror-creature svg,.horror-creature .jaw,.horror-creature .eyes,.horror-creature .claws{animation:none}}
 </style><style id="tacticsStyle">.tactics{margin:16px auto;padding:12px;border:2px solid #6a7898;border-radius:14px;max-width:1000px}.tactics .btn{margin:5px;min-height:56px}.team .stat{line-height:1.6}</style><style>.subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:9px;margin:12px 0}.subject-grid label{padding:12px;border:1px solid #7181a4;border-radius:10px;background:#1b2640;color:white}.subject-check{width:22px;height:22px}#mixMode{padding:12px;margin:12px;background:#18213a;color:white}</style><style>body.teacher-reduced-motion *,body.teacher-reduced-motion *::before,body.teacher-reduced-motion *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}</style></head><body><div class="shell"><header class="top"><div><div class="brand">✦ OPERAÇÃO ROTA ZERO</div><div class="tiny">SHOW DAS PORTAS · DESAFIO DE RADIOLOGIA</div></div><div class="row"><button class="chip" id="teacherToggle" type="button">⚙️ PAINEL DA PROFESSORA</button><button class="chip" id="audio">🔊 SOM LIGADO</button><button class="chip" id="fullscreen">⛶ TELA CHEIA</button></div></header><aside id="teacherPanel" class="hidden" style="padding:18px;margin:12px 0;border:2px solid #7783ad;border-radius:16px;background:#18213a;color:white"><h2>⚙️ CONTROLES DA PROFESSORA</h2><label for="teacherVolume">Volume dos efeitos</label><input type="range" id="teacherVolume" min="0" max="100" value="50" style="width:100%"><p><label><input type="checkbox" id="teacherScares" checked> Permitir aparições assustadoras</label></p><p><label><input type="checkbox" id="teacherMotion" checked> Permitir animações</label></p><p class="muted">Configurações locais para esta sessão. O áudio geral também pode ser desligado pelo botão SOM.</p>
-<section id="teacherSync"><h3>BANCOS COMPARTILHADOS</h3><p class="muted">Envie somente bancos revisados. Publicar libera as questões aos alunos autorizados.</p><button type="button" id="rotaPublishBank">PUBLICAR DISCIPLINA SELECIONADA</button> <button type="button" id="rotaUnpublishBank">RECOLHER DISCIPLINA SELECIONADA</button><p id="rotaSyncStatus" aria-live="polite"></p></section><section id="teacherBankFiles" style="border-top:1px solid #7783ad;padding-top:14px"><h3>ARQUIVOS E BACKUPS</h3><div class="row"><label for="bankFile">Importar banco JSON (salvo neste navegador)</label><input id="bankFile" type="file" accept=".json,application/json"></div><button type="button" class="btn" id="downloadBankTemplate">⬇ BAIXAR MODELO JSON</button><p id="bankStatus" class="muted" aria-live="polite"></p><div class="row"><label for="restoreBanks">Restaurar backup JSON</label><input id="restoreBanks" type="file" accept=".json,application/json"></div><p><button type="button" id="exportBanks" class="btn">💾 EXPORTAR BACKUP DOS BANCOS</button></p><p class="muted">Os bancos estão armazenados somente neste navegador. Faça backup regularmente.</p><p class="muted">O banco original de Gerência de Rejeitos é usado somente quando Proteção Radiológica está selecionada e nenhum banco próprio foi importado.</p></section>
+<section id="teacherSync"><h3>BANCOS COMPARTILHADOS</h3><p class="muted">Envie somente bancos revisados. Publicar libera as questões aos alunos autorizados.</p><button type="button" id="rotaPublishBank">PUBLICAR DISCIPLINA SELECIONADA</button> <button type="button" id="rotaUnpublishBank">RECOLHER DISCIPLINA SELECIONADA</button> <button type="button" id="rotaDownloadServerBanks">CARREGAR BANCOS DO SERVIDOR PARA EDIÇÃO</button><p id="rotaSyncStatus" aria-live="polite"></p></section><section id="teacherBankFiles" style="border-top:1px solid #7783ad;padding-top:14px"><h3>ARQUIVOS E BACKUPS</h3><div class="row"><label for="bankFile">Importar banco JSON (salvo neste navegador)</label><input id="bankFile" type="file" accept=".json,application/json"></div><button type="button" class="btn" id="downloadBankTemplate">⬇ BAIXAR MODELO JSON</button><p id="bankStatus" class="muted" aria-live="polite"></p><div class="row"><label for="restoreBanks">Restaurar backup JSON</label><input id="restoreBanks" type="file" accept=".json,application/json"></div><p><button type="button" id="exportBanks" class="btn">💾 EXPORTAR BACKUP DOS BANCOS</button></p><p class="muted">Os bancos estão armazenados somente neste navegador. Faça backup regularmente.</p><p class="muted">O banco original de Gerência de Rejeitos é usado somente quando Proteção Radiológica está selecionada e nenhum banco próprio foi importado.</p></section>
 <section id="teacherQuestions" style="border-top:1px solid #7783ad;padding-top:14px">
 <h3>GERENCIAR QUESTÕES</h3><p><label for="editRecovery">Cópia anterior</label><select id="editRecovery"><option value="">Selecione</option><option value="antes-edicao">Antes da edição</option><option value="antes-exclusao">Antes da exclusão</option><option value="antes-importacao">Antes da importação</option><option value="antes-restauracao">Antes da restauração</option></select> <button id="editRecover" type="button">RECUPERAR CÓPIA</button></p><p class="muted">Editor local de bancos importados. Não é autenticação: não compartilhe este arquivo como painel administrativo. Exporte um backup antes de editar.</p>
 <label for="editSubject">Disciplina</label><select id="editSubject"></select>
@@ -208,6 +208,35 @@ async function rotaLoadPublished(){
   $('subjectSummary').textContent+=' | Bancos publicados: '+Object.keys(next).length+'.';
  }catch(e){window.rotaSharedBanks={};refreshSubjects();$('subjectSummary').textContent+=' | Servidor indisponível: '+e.message;throw e}
 }
+$('rotaDownloadServerBanks').onclick=async()=>{
+ const status=$('rotaSyncStatus'),button=$('rotaDownloadServerBanks');
+ button.disabled=true;
+ try{
+  if(!await rotaRequireTeacher())throw Error('Acesso exclusivo da professora.');
+  const rows=await rotaServerRequest('GET','?select=disciplina,questoes,publicado&order=disciplina.asc');
+  if(!Array.isArray(rows))throw Error('Resposta inválida do servidor.');
+  const received={};
+  for(const row of rows){
+   if(!subjectNames.includes(row.disciplina)||!Array.isArray(row.questoes)||row.questoes.length<1||row.questoes.length>500)throw Error('Banco remoto incompatível: '+String(row.disciplina));
+   const normalized=row.questoes.map(normalizeQuestion);
+   if(normalized.some(q=>!q))throw Error('Questões inválidas no servidor: '+row.disciplina);
+   received[row.disciplina]=normalized;
+  }
+  const names=Object.keys(received);
+  if(!names.length){status.textContent='Não existem bancos no servidor para carregar.';return}
+  const collisions=names.filter(name=>Object.prototype.hasOwnProperty.call(importedBanks,name));
+  const msg='Carregar '+names.length+' banco(s) do servidor para edição neste navegador?'+(collisions.length?' ATENÇÃO: '+collisions.length+' banco(s) local(is) com o mesmo nome serão substituídos.':'')+' Será criado um backup local antes da alteração. Isso NÃO publica nem recolhe bancos.';
+  if(!confirm(msg)){status.textContent='Carregamento cancelado; bancos locais preservados.';return}
+  const previous=JSON.stringify(importedBanks);
+  const next={...importedBanks,...received};
+  localStorage.setItem(bankStorageKey+'-antes-sincronizacao',previous);
+  localStorage.setItem(bankStorageKey,JSON.stringify(next));
+  importedBanks=next;
+  editRefresh();
+  status.textContent='Carregados '+names.length+' banco(s) do servidor para edição local. Backup anterior salvo neste navegador. Para enviar alterações aos alunos, use PUBLICAR.';
+ }catch(e){status.textContent='Não foi possível carregar bancos: '+e.message}
+ finally{button.disabled=false}
+};
 $('rotaPublishBank').onclick=async()=>{
  const status=$('rotaSyncStatus');try{
   if(!await rotaRequireTeacher())throw Error('Acesso exclusivo da professora.');
