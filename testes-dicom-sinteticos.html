@@ -98,5 +98,22 @@ check('Sequência funcional com um item definido é contada sem ler geometria',(
 check('Sequência funcional com item truncado é rejeitada estruturalmente',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(100)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.perFrameItems===null&&!i.functionalGroupSummary.perFrameStructureValidated,'item truncado aceito')});
 }
 
+
+if(api){
+function dbtFunctionalFixture(declared,perItems,sharedItems=1){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const item=()=>concat([u16(0xfffe),u16(0xe000),u32(0)]);
+const many=n=>concat(Array.from({length:n},item));
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),
+element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),
+element(8,0x60,'CS','MG'),element(0x28,0x08,'IS',String(declared)),
+element(0x5200,0x9229,'SQ',many(sharedItems)),
+element(0x5200,0x9230,'SQ',many(perItems))]).buffer;
+}
+check('DBT compara itens Per-frame com Number of Frames',()=>{const i=api.inspect(dbtFunctionalFixture(3,3));assert(i.frameSummary.perFrameCountMatchesDeclared===true&&i.frameSummary.sharedItemCountValid===true&&!i.frameSummary.geometryValidated,'comparação incorreta')});
+check('DBT alerta quando faltam itens por frame',()=>{const i=api.inspect(dbtFunctionalFixture(3,2));assert(i.frameSummary.perFrameCountMatchesDeclared===false&&i.warnings.some(w=>w.includes('difere')),'divergência não detectada')});
+check('DBT alerta quando Shared Functional Groups possui dois itens',()=>{const i=api.inspect(dbtFunctionalFixture(2,2,2));assert(i.frameSummary.sharedItemCountValid===false&&i.warnings.some(w=>w.includes('exatamente um item')),'quantidade compartilhada incorreta')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
