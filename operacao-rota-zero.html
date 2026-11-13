@@ -203,8 +203,9 @@ async function rotaLoadPublished(){
   if(!Array.isArray(rows))throw Error('Resposta inválida.');
   const next={};for(const row of rows){if(!subjectNames.includes(row.disciplina)||!Array.isArray(row.questoes))continue;const qs=row.questoes.map(normalizeQuestion);if(qs.length&&qs.every(Boolean))next[row.disciplina]=qs}
   window.rotaSharedBanks=next;
-  $('subjectSummary').textContent='Bancos compartilhados carregados: '+Object.keys(next).length+'.';
- }catch(e){window.rotaSharedBanks={};$('subjectSummary').textContent='Bancos compartilhados indisponíveis. '+e.message}
+  refreshSubjects();
+  $('subjectSummary').textContent+=' | Bancos publicados: '+Object.keys(next).length+'.';
+ }catch(e){window.rotaSharedBanks={};refreshSubjects();$('subjectSummary').textContent+=' | Servidor indisponível: '+e.message;throw e}
 }
 $('rotaPublishBank').onclick=async()=>{
  const status=$('rotaSyncStatus');try{
@@ -215,6 +216,7 @@ $('rotaPublishBank').onclick=async()=>{
   const existing=await rotaServerRequest('GET','?select=id&disciplina=eq.'+encodeURIComponent(name));
   if(existing.length){await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{questoes:items,publicado:true,atualizado_em:new Date().toISOString()})}
   else{await rotaServerRequest('POST','',{disciplina:name,questoes:items,publicado:true})}
+  await rotaLoadPublished();
   status.textContent='Banco publicado no servidor. Aguarde a confirmação dos testes com contas reais.';
  }catch(e){status.textContent='Não foi possível publicar: '+e.message}
 };
@@ -223,6 +225,7 @@ $('rotaUnpublishBank').onclick=async()=>{
   if(!await rotaRequireTeacher())throw Error('Acesso exclusivo da professora.');
   const name=editSubject.value;if(!confirm('Recolher o banco '+name+'? Alunos deixarão de recebê-lo.'))return;
   await rotaServerRequest('PATCH','?disciplina=eq.'+encodeURIComponent(name),{publicado:false,atualizado_em:new Date().toISOString()});
+  await rotaLoadPublished();
   status.textContent='Solicitação de recolhimento concluída.';
  }catch(e){status.textContent='Não foi possível recolher: '+e.message}
 };
@@ -232,5 +235,5 @@ window.addEventListener('focus',async()=>{if(!$('teacherPanel').classList.contai
 
 $('teacherToggle').onclick=async()=>{const panel=$('teacherPanel');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');return}const btn=$('teacherToggle');btn.disabled=true;try{if(!await rotaTeacherAllowed()){if(confirm('Acesso exclusivo da professora. Entre na Minha Sala de Aulas nesta mesma aba e depois retorne pelo botão Voltar do navegador. Abrir a Sala agora?')){location.href='sala-de-aulas.html'}return}panel.classList.remove('hidden')}catch(e){alert('Não foi possível verificar sua autorização. O painel continuará fechado.')}finally{btn.disabled=false}};
 $('teacherVolume').oninput=e=>{effectVolume=Number(e.target.value)/100};$('teacherScares').onchange=e=>{scaresEnabled=e.target.checked;if(!scaresEnabled)horrorHide()};$('teacherMotion').onchange=e=>{document.body.classList.toggle('teacher-reduced-motion',!e.target.checked)};
-$('audio').onclick=()=>{sound=!sound;$('audio').textContent=sound?'🔊 SOM LIGADO':'🔇 SOM DESLIGADO';if(sound)fx('intro')};$('fullscreen').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};$('start').onclick=()=>{audioReady();teams=NAMES.map((n,i)=>({name:$('n'+i).value.trim()||'Equipe '+n,points:100,lives:3,skip:false,done:0,blocks:3,shields:0,streak:0}));activeBank=prepareSelectedQuestions();if(!activeBank)return;pools=Array.from({length:5},(_,sec)=>shuffle(Array.from({length:8},(_,i)=>sec*8+i)));round=answered=0;turnTransition=false;forcedTeam=null;blockedThisRound=false;stealAttempts=[0,0,0,0];fx('intro');nextTurn()};$('goDoors').onclick=doors;document.querySelectorAll('.door').forEach(b=>b.onclick=()=>openDoor(Number(b.dataset.door)));$('pause').onclick=()=>{if(!current)return;paused=!paused;if(paused){remaining=Math.max(1,Math.ceil((deadline-Date.now())/1000));clearInterval(timerHandle);$('pause').textContent='▶ CONTINUAR'}else{$('pause').textContent='⏸ PAUSAR';startTimer()}};$('next').onclick=nextTurn;
+$('audio').onclick=()=>{sound=!sound;$('audio').textContent=sound?'🔊 SOM LIGADO':'🔇 SOM DESLIGADO';if(sound)fx('intro')};$('fullscreen').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};$('start').onclick=async()=>{const startButton=$('start');startButton.disabled=true;try{await rotaLoadPublished()}catch(e){if(bankList().some(name=>name!=='Proteção Radiológica'&&!importedBanks[name])){alert('Não foi possível consultar os bancos publicados. Verifique a sessão da Sala de Aulas e tente novamente.');startButton.disabled=false;return}}finally{startButton.disabled=false}audioReady();teams=NAMES.map((n,i)=>({name:$('n'+i).value.trim()||'Equipe '+n,points:100,lives:3,skip:false,done:0,blocks:3,shields:0,streak:0}));activeBank=prepareSelectedQuestions();if(!activeBank)return;pools=Array.from({length:5},(_,sec)=>shuffle(Array.from({length:8},(_,i)=>sec*8+i)));round=answered=0;turnTransition=false;forcedTeam=null;blockedThisRound=false;stealAttempts=[0,0,0,0];fx('intro');nextTurn()};$('goDoors').onclick=doors;document.querySelectorAll('.door').forEach(b=>b.onclick=()=>openDoor(Number(b.dataset.door)));$('pause').onclick=()=>{if(!current)return;paused=!paused;if(paused){remaining=Math.max(1,Math.ceil((deadline-Date.now())/1000));clearInterval(timerHandle);$('pause').textContent='▶ CONTINUAR'}else{$('pause').textContent='⏸ PAUSAR';startTimer()}};$('next').onclick=nextTurn;
 </script></body></html>
