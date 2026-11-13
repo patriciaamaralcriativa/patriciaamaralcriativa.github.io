@@ -89,7 +89,7 @@ if(len===0xffffffff||len>end-p-head)return result;
 const key=group===0x0020&&el===0x0032?"imagePositionPatient":group===0x0020&&el===0x0037?"imageOrientationPatient":null;
 if(key){
 if(explicit&&vr!=="DS")return result;
-const tokens=decoder.decode(bytes.subarray(p+head,p+head+len)).replace(/[\\0\\s]+$/g,"").split("\\\\").map(x=>x.trim());
+const tokens=decoder.decode(bytes.subarray(p+head,p+head+len)).replace(/[\0\s]+$/g,"").split("\\").map(x=>x.trim());
 const values=tokens.map(Number),expected=key==="imagePositionPatient"?3:6;
 if(tokens.length!==expected||tokens.some(x=>x==="")||!values.every(Number.isFinite))return result;
 result[key]=values;
