@@ -189,5 +189,18 @@ check('Vetores não unitários são sinalizados',()=>{const i=api.inspect(orient
 check('Vetores paralelos são sinalizados',()=>{const i=api.inspect(orientationVectorFixture('1\\0\\0\\1\\0\\0'));const c=i.frameSummary.orientationVectorChecks[0];assert(c.present&&!c.valid&&c.dotProduct===1,'vetores paralelos aceitos')});
 }
 
+
+if(api){
+function planeFixture(pos,orient){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const nested=(group,el,value)=>{const geom=element(0x20,el,'DS',value);const sub=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);return element(0x20,group,'SQ',sub);};
+const inner=concat([nested(0x9113,0x32,pos),nested(0x9116,0x37,orient)]);
+const frame=concat([u16(0xfffe),u16(0xe000),u32(inner.length),inner]);
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS','1'),element(0x5200,0x9230,'SQ',frame)]).buffer;
+}
+check('Calcula normal e projeção assinada sem ordenar cortes',()=>{const i=api.inspect(planeFixture('0\\0\\5','1\\0\\0\\0\\1\\0'));const p=i.frameSummary.planeNormalObservations[0];assert(p.computed&&p.normal[2]===1&&p.signedProjection===5&&!p.spatialOrderValidated&&!i.frameSummary.frameOrderValidated,'normal ou projeção incorreta')});
+check('Não calcula normal com orientação inválida',()=>{const i=api.inspect(planeFixture('0\\0\\5','2\\0\\0\\0\\1\\0'));const p=i.frameSummary.planeNormalObservations[0];assert(!p.computed&&p.reason==='orientation-not-validated','normal inválida calculada')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
