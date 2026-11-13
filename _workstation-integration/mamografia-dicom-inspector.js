@@ -236,6 +236,21 @@ return orientations.length>0&&orientations.every(values=>values.length===orienta
 geometryValidated:false
 };
 if(geometryConflicts.length)out.warnings.push("Diferenças entre geometria compartilhada e por frame identificadas; avaliar atributos e semântica antes de concluir conflito.");
+function checkOrientationVectors(values){
+if(!Array.isArray(values)||values.length!==6||!values.every(Number.isFinite))return {valid:false,reason:"invalid-components"};
+const a=values.slice(0,3),b=values.slice(3,6);
+const norm=v=>Math.hypot(...v);
+const na=norm(a),nb=norm(b),dot=a.reduce((sum,v,i)=>sum+v*b[i],0);
+const tolerance=1e-4;
+return {valid:Math.abs(na-1)<=tolerance&&Math.abs(nb-1)<=tolerance&&Math.abs(dot)<=tolerance,
+rowNorm:na,columnNorm:nb,dotProduct:dot,tolerance};
+}
+out.frameSummary.orientationVectorChecks=out.frameSummary.effectiveGeometryObservations.map(frame=>{
+const orientation=frame.observations.find(o=>o.attribute==="imageOrientationPatient");
+return {frameIndex:frame.frameIndex,present:!!orientation,...(orientation?checkOrientationVectors(orientation.values):{valid:false,reason:"not-observed"})};
+});
+if(out.frameSummary.orientationVectorChecks.some(x=>x.present&&!x.valid))out.warnings.push("Vetores de orientação observados não satisfazem os critérios matemáticos preliminares de normalização e ortogonalidade.");
+
 
 const observations=out.frameSummary.frameGeometryObservations;
 const positionCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imagePositionPatient").length);
