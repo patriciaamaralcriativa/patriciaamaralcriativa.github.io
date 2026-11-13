@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src blob: data:; script-src blob: 'unsafe-inline'; style-src 'unsafe-inline'; object-src 'none'; base-uri 'none'"><title>Workstation Amaral Rad</title><style>
+<meta http-equiv="Content-Security-Policy" content="default-src blob: data:; script-src 'self' blob: 'unsafe-inline'; connect-src 'self'; frame-src 'self' blob: data:; style-src 'unsafe-inline'; object-src 'none'; base-uri 'none'"><title>Workstation Amaral Rad</title><style>
 :root{--ar-ink:#eaf8ff;--ar-muted:#a9c8dc;--ar-cyan:#64e8f5;--ar-line:#315c73;--ar-surface:#0d2335;color-scheme:dark}
 body{color:var(--ar-ink);background:radial-gradient(ellipse at 78% -25%,#154160 0,transparent 58%),#060f1e}
 body>header{background:linear-gradient(115deg,#0b2639,#081426);border-color:#318193}
@@ -105,8 +105,9 @@ iframe{width:100%;height:calc(100dvh - 96px);min-height:500px;border:0;display:b
 </style><style>.amaral-mamaria-links{display:flex;gap:7px;flex-wrap:wrap}.amaral-mamaria-links a{display:inline-block;font:600 13px system-ui;padding:7px 10px;border:1px solid #6d91a8;border-radius:7px;text-decoration:none;background:#153b50;color:#edf9ff}.amaral-mamaria-links a:focus-visible{outline:3px solid #60cfe9;outline-offset:2px}#ws-viewer>header{flex-wrap:wrap}@media(max-width:650px){.amaral-mamaria-links{width:100%}.amaral-mamaria-links a{flex:1;text-align:center}}</style></head>
 <body>
 <header><div><p class="ar-tag">LABORATÓRIO DIDÁTICO</p><strong>Workstation Amaral Rad</strong><p>Use somente dados fictícios e arquivos sintéticos. A sessão é local ao navegador.</p></div>
-<nav class="amaral-mamaria-links" aria-label="Mamografia e tomossíntese"><a href="mamografia-digital-preview.html" target="_blank" rel="noopener">Mamografia digital</a><a href="tomossintese-mamaria-preview.html" target="_blank" rel="noopener">Tomossíntese didática</a><a href="dbt-validacao-real.html" target="_blank" rel="noopener">DBT real restrita</a></nav></header>
+<nav class="amaral-mamaria-links" aria-label="Mamografia e tomossíntese"><a href="mamografia-digital-preview.html" target="_blank" rel="noopener">Mamografia digital</a><a href="tomossintese-mamaria-preview.html" target="_blank" rel="noopener">Tomossíntese didática</a><a href="dbt-validacao-real.html" target="_blank" rel="noopener">DBT real restrita</a> <a href="biblioteca-arquivos.html" target="_blank" rel="noopener">Biblioteca de arquivos</a></nav></header>
 <iframe sandbox="allow-scripts allow-forms allow-modals allow-downloads" id="app" title="Workstation Amaral Rad"></iframe>
+<script src="_workstation-integration/file-library-store.js"></script><script src="_workstation-integration/file-library-host.js"></script>
 <script>(()=>{const frame=document.getElementById('app'),profile={value:'aluno'};
 window.addEventListener('message',e=>{
  if(e.origin!=='null'||e.source!==frame.contentWindow)return;
