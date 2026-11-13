@@ -63,5 +63,12 @@ assert(rejected,'renderização com functional groups aceita');
 });
 }
 
+
+if(api){
+check('12 bits armazenados em 16 bits sem sinal',()=>{const b=extendedFile({bits:16,stored:12,rep:0,values:[0,4095]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c,{center:2047.5,width:4095});assert(v.min===0&&v.max===4095&&c.pixels[0]===0&&c.pixels[4]===255,'pixels de 12 bits incorretos')});
+check('12 bits assinados com extensão de sinal',()=>{const b=extendedFile({bits:16,stored:12,rep:1,values:[-2048,2047]}),c=fakeCanvas();const v=api.renderGrayscale(b,api.inspect(b),c,{center:-0.5,width:4095});assert(v.min===-2048&&v.max===2047&&c.pixels[0]===0&&c.pixels[4]===255,'sinal de 12 bits incorreto')});
+check('Sequência indefinida não é interpretada como pixels',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const sq=concat([u16(0x5200),u16(0x9230),enc.encode('SQ'),new Uint8Array(2),u32(0xffffffff)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),sq]).buffer;let rejected=false;try{api.inspect(b)}catch(e){rejected=/indefinido/.test(e.message)}assert(rejected,'sequência indefinida não foi rejeitada')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
