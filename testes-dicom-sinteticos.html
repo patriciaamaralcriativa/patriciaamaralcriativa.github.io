@@ -87,5 +87,10 @@ check('Lê atributos geométricos top-level sem inferir geometria DBT',()=>{cons
 check('Rejeita geometria top-level com valor inválido',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','1\\ABC\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient===null&&i.warnings.some(w=>w.includes('imagePositionPatient')),'geometria inválida aceita')});
 }
 
+
+if(api){
+check('Registra grupos compartilhados e por frame sem interpretar geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9229,'SQ',new Uint8Array(0)),element(0x5200,0x9230,'SQ',new Uint8Array(0))]).buffer;const i=api.inspect(b);assert(i.functionalGroupSummary.sharedPresent&&i.functionalGroupSummary.perFramePresent&&i.functionalGroupSummary.sharedLength===0&&i.functionalGroupSummary.perFrameLength===0&&!i.functionalGroupSummary.parsed,'resumo de sequências incorreto')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
