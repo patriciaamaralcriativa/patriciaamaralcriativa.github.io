@@ -127,5 +127,11 @@ check('Geometria DICOM rejeita componente vazio',()=>{const pre=new Uint8Array(1
 check('Geometria DICOM aceita números negativos e decimais',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','-1.5\\0.25\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient?.[0]===-1.5&&i.geometryAttributes.imagePositionPatient?.[1]===0.25,'valores válidos rejeitados')});
 }
 
+
+if(api){
+check('Lê tag interna de item funcional sem inferir geometria',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nested=element(0x20,0x32,'DS','1\\2\\3');const item=concat([u16(0xfffe),u16(0xe000),u32(nested.length),nested]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b),h=i.functionalGroupSummary.perFrameItemHeaders[0];assert(h.topLevelTagsValidated&&h.topLevelTags.length===1&&h.topLevelTags[0].element===0x32&&!i.functionalGroupSummary.parsed,'tag interna não identificada')});
+check('Item funcional com tag interna truncada é sinalizado',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const nested=concat([u16(0x20),u16(0x32),u16(0x5344),u16(20)]);const item=concat([u16(0xfffe),u16(0xe000),u32(nested.length),nested]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b),h=i.functionalGroupSummary.perFrameItemHeaders[0];assert(!h.topLevelTagsValidated&&h.topLevelTags.length===0,'tag truncada aceita')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
