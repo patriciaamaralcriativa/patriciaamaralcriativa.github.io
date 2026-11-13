@@ -35,14 +35,33 @@ if(length===0xffffffff)throw Error("Elemento de comprimento indefinido: leitura 
 if(length>bytes.length-p-head)throw Error("Comprimento de elemento DICOM excede o arquivo.");
 return {group,element,vr,length,start:p+head,next:p+head+length};
 }
-function inspectFunctionalItemHeaders(e){
+function inspectItemTopLevelTags(start,end,explicit){
+const tags=[];let p=start,steps=0;
+while(p<end&&steps++<1000){
+if(p+8>end)return {valid:false,tags:[]};
+const group=d.getUint16(p,true),elementNumber=d.getUint16(p+2,true);
+if(group===0xfffe)return {valid:false,tags:[]};
+let head=8,len,vr=null;
+if(explicit){
+vr=String.fromCharCode(bytes[p+4],bytes[p+5]);
+if(!/^[A-Z]{2}$/.test(vr))return {valid:false,tags:[]};
+if(LONG.has(vr)){head=12;if(p+head>end)return {valid:false,tags:[]};len=d.getUint32(p+8,true);}
+else len=d.getUint16(p+6,true);
+}else len=d.getUint32(p+4,true);
+if(len===0xffffffff||len>end-p-head)return {valid:false,tags:[]};
+tags.push({group,element:elementNumber,vr,byteLength:len});
+p+=head+len;
+}
+return {valid:p===end,tags:p===end?tags:[]};
+}
+function inspectFunctionalItemHeaders(e,explicit){
 const result={itemCount:0,structureValidated:false,items:[]};let p=e.start;
 while(p<e.next&&result.itemCount<500){
 if(p+8>e.next)return result;
 const group=d.getUint16(p,true),el=d.getUint16(p+2,true),len=d.getUint32(p+4,true);
 if(group!==0xfffe||el!==0xe000||len===0xffffffff||len>e.next-p-8)return result;
 const start=p+8,end=start+len;
-result.items.push({byteLength:len,empty:len===0});
+const content=inspectItemTopLevelTags(start,end,explicit);result.items.push({byteLength:len,empty:len===0,topLevelTags:content.tags,topLevelTagsValidated:content.valid});
 result.itemCount++;p=end;
 }
 result.structureValidated=p===e.next;
@@ -65,7 +84,7 @@ while(pos<bytes.length&&count++<10000){
 const group=d.getUint16(pos,true);const meta=group===0x0002;
 const explicit=meta||syntax!=="1.2.840.10008.1.2";
 const e=element(pos,explicit);if(!e)break;
-if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;const shared=e.element===0x9229;out.functionalGroupSummary[shared?"sharedPresent":"perFramePresent"]=true;out.functionalGroupSummary[shared?"sharedLength":"perFrameLength"]=e.length;const structure=summarizeFunctionalSequence(e);const headers=inspectFunctionalItemHeaders(e);out.functionalGroupSummary[shared?"sharedItemHeaders":"perFrameItemHeaders"]=headers.structureValidated?headers.items:[];out.functionalGroupSummary[shared?"sharedItems":"perFrameItems"]=structure.itemCount;out.functionalGroupSummary[shared?"sharedStructureValidated":"perFrameStructureValidated"]=structure.structureValidated;if(!structure.structureValidated)out.warnings.push("Estrutura de itens da sequência funcional não validada.");out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
+if(e.group===0x5200&&(e.element===0x9229||e.element===0x9230)){out.functionalGroupsPresent=true;const shared=e.element===0x9229;out.functionalGroupSummary[shared?"sharedPresent":"perFramePresent"]=true;out.functionalGroupSummary[shared?"sharedLength":"perFrameLength"]=e.length;const structure=summarizeFunctionalSequence(e);const headers=inspectFunctionalItemHeaders(e,explicit);out.functionalGroupSummary[shared?"sharedItemHeaders":"perFrameItemHeaders"]=headers.structureValidated?headers.items:[];out.functionalGroupSummary[shared?"sharedItems":"perFrameItems"]=structure.itemCount;out.functionalGroupSummary[shared?"sharedStructureValidated":"perFrameStructureValidated"]=structure.structureValidated;if(!structure.structureValidated)out.warnings.push("Estrutura de itens da sequência funcional não validada.");out.warnings.push("Sequências funcionais multiframe identificadas; conteúdo por frame não interpretado.");}
 if(e.group===0x7fe0&&e.element===0x0010){out.pixelDataPresent=true;out.pixelDataOffset=e.start;out.pixelDataLength=e.length;break;}
 if(meta&&e.element===0x0010){
 syntax=decoder.decode(bytes.subarray(e.start,e.next)).replace(/[\0\s]+$/g,"");
