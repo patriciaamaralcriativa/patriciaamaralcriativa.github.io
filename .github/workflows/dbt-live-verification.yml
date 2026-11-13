@@ -1,0 +1,42 @@
+name: Verificar Workstation publicada
+on:
+  push:
+    branches: [dev/tomossintese-mamaria-20261113]
+    paths: ['_workstation-integration/publication-target.json']
+permissions:
+  contents: read
+jobs:
+  live-site:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Preparar Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Conferir versão publicada e scripts preservados
+        env:
+          DBT_PUBLIC_BASE_URL: https://patriciaamaralcriativa.github.io/
+        run: node _workstation-integration/tests/publication-smoke.cjs
+      - name: Obter cópias públicas para verificação real em memória
+        run: python3 _workstation-integration/tests/real-dbt/fetch-fixtures.py "$RUNNER_TEMP/dbt-real"
+      - name: Validar importação, pixels e ferramentas no site publicado
+        env:
+          DBT_PUBLIC_BASE_URL: https://patriciaamaralcriativa.github.io/
+          DBT_REAL_INPUT_DIR: ${{ runner.temp }}/dbt-real
+        run: node _workstation-integration/tests/dbt-real-browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workstation-publicada-${{ github.sha }}
+          path: artifacts/
+          retention-days: 14
+      - name: Remover cópias de trabalho
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/dbt-real"

@@ -1,0 +1,21 @@
+{
+  "officialBase": "3de3a42cd3d28e1f369942c76f996679a1e1c290",
+  "files": {
+    "amaral-rad.html": {
+      "fileSha256": "43b537e61474a97039814344c8d2f4feb7dfe7f923cee25272a09ee070c593e9",
+      "scriptSha256": [
+        "064cbc97bf3b34769f526884dc4faa5209e549977c47c26e215cbe7fc121b6c2"
+      ]
+    },
+    "sala-de-aulas.html": {
+      "fileSha256": "4cc6f8838d3cfbc1db3e422a162c38eeaaa08f92f821a5fefbecf67419f275e2",
+      "scriptSha256": [
+        "0bb8d352e29f7a79db86d1aa51bca64ec38b8a44b44113997558bc66dcc6f0f8",
+        "eac401d210687ebc956344a6f09a4eb323390d3fe82df9b17d9aacad8f4f2c3f",
+        "4fcaf1406a17f626b8328227251cf37835eb64b0c0eb5247f384e6c4dc47e379",
+        "7ffbc31638abe28df537e44c208b3e957143e14b4f9da44d0e9a2dbf2f51669b",
+        "668e001f2ae06bde47289f6489578ce39690148cf641347a0e0b14ec08bde43e"
+      ]
+    }
+  }
+}

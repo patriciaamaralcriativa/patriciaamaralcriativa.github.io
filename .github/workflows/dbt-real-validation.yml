@@ -4,6 +4,10 @@ on:
     branches: [dev/tomossintese-mamaria-20261113]
     paths:
       - '.github/workflows/dbt-real-validation.yml'
+      - 'amaral-rad.html'
+      - 'sala-de-aulas.html'
+      - '_config.yml'
+      - '_workstation-integration/tests/publication-smoke.cjs'
       - 'dbt-validacao-real.html'
       - '_workstation-integration/dbt-real-*.js'
       - '_workstation-integration/dbt-validation-allowlist.json'
@@ -36,6 +40,9 @@ jobs:
       - name: Regressão dos módulos afetados
         if: always()
         run: node _workstation-integration/tests/dicom-education-browser.cjs
+      - name: Conferir integração preservando scripts originais
+        if: always()
+        run: node _workstation-integration/tests/publication-smoke.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
