@@ -74,11 +74,13 @@ const rows=Number(m.rows),cols=Number(m.columns),bits=Number(m.bitsAllocated),st
 if(!Number.isInteger(rows)||!Number.isInteger(cols)||rows<1||cols<1||rows*cols>20000000)throw Error("Dimensões inválidas ou grandes demais.");
 if(![8,16].includes(bits)||stored<1||stored>bits||![0,1].includes(rep))throw Error("Representação de pixels não suportada.");
 if(!["MONOCHROME1","MONOCHROME2"].includes(m.photometricInterpretation))throw Error("Apenas imagens monocromáticas são suportadas.");
-if(frames!==1)throw Error("Imagens multiframe ainda não suportadas.");
+if(!Number.isInteger(frames)||frames<1||frames>500)throw Error("Quantidade de frames inválida ou acima do limite didático (500).");
+const frameIndex=opts.frameIndex===undefined?0:opts.frameIndex;
+if(!Number.isInteger(frameIndex)||frameIndex<0||frameIndex>=frames)throw Error("Índice do frame fora da série.");
 if(m.bitsStored==null||m.bitsAllocated==null||m.pixelRepresentation==null)throw Error("Metadados de representação dos pixels incompletos.");
 const bpp=bits/8,n=rows*cols,bytes=n*bpp,offset=info.pixelDataOffset;
-if(bytes>info.pixelDataLength||offset+bytes>buffer.byteLength)throw Error("Pixel Data incompleto.");
-const dv=new DataView(buffer,offset,bytes),pixels=new Float64Array(n);
+if(bytes*frames>info.pixelDataLength||offset+bytes*frames>buffer.byteLength)throw Error("Pixel Data multiframe incompleto.");
+const dv=new DataView(buffer,offset+bytes*frameIndex,bytes),pixels=new Float64Array(n);
 const mask=(2**stored)-1,sign=2**(stored-1);
 let min=Infinity,max=-Infinity;
 for(let i=0;i<n;i++){let raw=bits===8?dv.getUint8(i):dv.getUint16(i*2,true);raw&=mask;if(rep&&raw>=sign)raw-=2**stored;pixels[i]=raw;if(raw<min)min=raw;if(raw>max)max=raw;}
@@ -92,7 +94,7 @@ canvas.width=cols;canvas.height=rows;
 const image=ctx.createImageData(cols,rows),invert=m.photometricInterpretation==="MONOCHROME1";
 for(let i=0;i<n;i++){let gray=Math.max(0,Math.min(255,Math.round((pixels[i]-low)/width*255)));if(invert)gray=255-gray;const p=i*4;image.data[p]=image.data[p+1]=image.data[p+2]=gray;image.data[p+3]=255;}
 ctx.putImageData(image,0,0);
-return {rows,columns:cols,min,max,center,width,photometricInterpretation:m.photometricInterpretation,notice:"Prévia educacional: escala automática; não aplica Modality LUT, VOI LUT, Presentation LUT ou calibração diagnóstica."};
+return {rows,columns:cols,frameIndex,frameCount:frames,min,max,center,width,photometricInterpretation:m.photometricInterpretation,notice:"Prévia educacional: escala automática; não aplica Modality LUT, VOI LUT, Presentation LUT ou calibração diagnóstica."};
 }
 global.AmaralMamografiaDicom={inspect,renderGrayscale};
 })(typeof window!=="undefined"?window:globalThis);
