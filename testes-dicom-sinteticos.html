@@ -236,6 +236,26 @@ const pixels=realContext.getImageData(0,0,2,1).data;
 assert(pixels[0]===0&&pixels[4]===255&&pixels[3]===255&&pixels[7]===255,'Canvas 2D real não reproduziu os pixels esperados');
 });
 }
+if(api&&realContext&&typeof realContext.getImageData==='function'){
+check('Canvas real preserva dimensões e alternância de frames sintéticos',()=>{
+const b=file(),i=api.inspect(b);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+assert(realCanvas.width===2&&realCanvas.height===1,'dimensões incorretas');
+const first=Array.from(realContext.getImageData(0,0,2,1).data);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:1,center:127.5,width:255});
+const second=Array.from(realContext.getImageData(0,0,2,1).data);
+assert(first[0]===0&&first[4]===255&&second[0]===100&&second[4]===201,'troca de frame não atualizou Canvas real');
+});
+check('Canvas real não é alterado ao rejeitar frame inválido',()=>{
+const b=file(),i=api.inspect(b);
+api.renderGrayscale(b,i,realCanvas,{frameIndex:0,center:127.5,width:255});
+const before=Array.from(realContext.getImageData(0,0,2,1).data);
+let rejected=false;
+try{api.renderGrayscale(b,i,realCanvas,{frameIndex:2})}catch(e){rejected=true}
+const after=Array.from(realContext.getImageData(0,0,2,1).data);
+assert(rejected&&before.every((v,j)=>v===after[j]),'Canvas modificado após rejeição');
+});
+}
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Casos sintéticos; não há validação clínica.';})();
 </script></html>
