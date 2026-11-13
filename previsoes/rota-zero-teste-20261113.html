@@ -206,7 +206,7 @@ async function rotaLoadPublished(){
   window.rotaSharedBanks=next;
   refreshSubjects();
   $('subjectSummary').textContent+=' | Bancos publicados: '+Object.keys(next).length+'.';
- }catch(e){window.rotaSharedBanks={};refreshSubjects();$('subjectSummary').textContent+=' | Servidor indisponível: '+e.message;throw e}
+ }catch(e){window.rotaSharedBanks={};refreshSubjects();$('subjectSummary').textContent+=' | '+(e.message.includes('Entre na Sala de Aulas')?'ACESSO NÃO AUTENTICADO: entre na Minha Sala de Aulas nesta aba, faça login e use Voltar para retornar ao jogo.':'Falha ao consultar os bancos compartilhados: '+e.message);throw e}
 }
 $('rotaCheckServerBanks').onclick=async()=>{
  const status=$('rotaSyncStatus'),button=$('rotaCheckServerBanks');
