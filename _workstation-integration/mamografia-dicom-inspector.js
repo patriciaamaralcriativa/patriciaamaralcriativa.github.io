@@ -190,6 +190,30 @@ if(sequence.element===0x9116&&item.geometry.imageOrientationPatient)observations
 return {frameIndex:index,observations,geometryValidated:false};
 });
 if(out.frameSummary.frameGeometryObservations.some(x=>x.observations.length>0))out.warnings.push("Coordenadas associadas aos índices de frame apenas para inspeção; ordem espacial e reconstrução não validadas.");
+const sharedHeaders=out.functionalGroupSummary.sharedItemHeaders;
+const sharedGeometryObservations=[];
+if(sharedHeaders.length===1){
+for(const sequence of sharedHeaders[0].nestedSequences||[]){
+if(sequence.group!==0x0020||![0x9113,0x9116].includes(sequence.element)||!sequence.validated)continue;
+for(const item of sequence.items||[]){
+if(!item.geometry?.validated)continue;
+if(sequence.element===0x9113&&item.geometry.imagePositionPatient)sharedGeometryObservations.push({attribute:"imagePositionPatient",values:item.geometry.imagePositionPatient});
+if(sequence.element===0x9116&&item.geometry.imageOrientationPatient)sharedGeometryObservations.push({attribute:"imageOrientationPatient",values:item.geometry.imageOrientationPatient});
+}
+}
+}
+out.frameSummary.sharedGeometryObservations=sharedGeometryObservations;
+out.frameSummary.effectiveGeometryObservations=out.frameSummary.frameGeometryObservations.map(frame=>{
+const resolved=[];
+for(const attribute of ["imagePositionPatient","imageOrientationPatient"]){
+const own=frame.observations.filter(x=>x.attribute===attribute);
+const shared=sharedGeometryObservations.filter(x=>x.attribute===attribute);
+if(own.length===1)resolved.push({attribute,values:own[0].values,source:"per-frame"});
+else if(own.length===0&&shared.length===1)resolved.push({attribute,values:shared[0].values,source:"shared"});
+}
+return {frameIndex:frame.frameIndex,observations:resolved,geometryValidated:false};
+});
+if(sharedGeometryObservations.length)out.warnings.push("Geometria compartilhada combinada apenas para inspeção preliminar; geometria e ordem espacial não validadas.");
 const observations=out.frameSummary.frameGeometryObservations;
 const positionCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imagePositionPatient").length);
 const orientationCounts=observations.map(f=>f.observations.filter(o=>o.attribute==="imageOrientationPatient").length);
