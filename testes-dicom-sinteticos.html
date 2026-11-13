@@ -256,6 +256,10 @@ const after=Array.from(realContext.getImageData(0,0,2,1).data);
 assert(rejected&&before.every((v,j)=>v===after[j]),'Canvas modificado após rejeição');
 });
 }
+const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
+const canvasChecksPlanned=3;
+const canvasChecksExecuted=isRealCanvas&&api?3:0;
+const canvasChecksSkipped=canvasChecksPlanned-canvasChecksExecuted;
 const exportButton=document.getElementById('export-report');
 if(exportButton&&typeof exportButton.addEventListener==='function')exportButton.addEventListener('click',()=>{
 const results=Array.from(document.querySelectorAll('#results li')).map(li=>({
@@ -267,7 +271,8 @@ schemaVersion:1,
 suite:'AMARAL RAD DICOM — testes sintéticos',
 executedAt:new Date().toISOString(),
 userAgent:navigator.userAgent,
-environment:{canvas2dAvailable:!!(realContext&&typeof realContext.getImageData==='function'),realBrowserNotProvenByReport:true},
+environment:{canvas2dAvailable:isRealCanvas,realBrowserNotProvenByReport:true},
+canvasChecks:{planned:canvasChecksPlanned,executed:canvasChecksExecuted,skipped:canvasChecksSkipped},
 counts:{passed,failed,executed:passed+failed},
 results,
 limitations:['Dados exclusivamente sintéticos','Relatório gerado no cliente e não autenticado','Não comprova validação clínica, geométrica DBT ou anonimização']
@@ -277,6 +282,5 @@ const url=URL.createObjectURL(blob),link=document.createElement('a');
 link.href=url;link.download='amaral-rad-dicom-testes-'+new Date().toISOString().slice(0,10)+'.json';
 document.body.append(link);link.click();link.remove();URL.revokeObjectURL(url);
 });
-const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
-document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Casos sintéticos; não há validação clínica.';})();
+document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Canvas: '+canvasChecksExecuted+' de '+canvasChecksPlanned+' testes executados, '+canvasChecksSkipped+' não executados. Casos sintéticos; não há validação clínica.';})();
 </script></html>
