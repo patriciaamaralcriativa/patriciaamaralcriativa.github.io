@@ -121,5 +121,11 @@ check('Cabeçalhos dos itens funcionais expõem comprimentos sem interpretar pix
 check('Cabeçalhos de itens inválidos não são publicados como válidos',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const item=concat([u16(0xfffe),u16(0xe000),u32(99)]);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x5200,0x9230,'SQ',item)]).buffer;const i=api.inspect(b);assert(!i.functionalGroupSummary.perFrameStructureValidated&&i.functionalGroupSummary.perFrameItemHeaders.length===0,'cabeçalho inválido exposto')});
 }
 
+
+if(api){
+check('Geometria DICOM rejeita componente vazio',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','1\\\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient===null,'componente vazio foi convertido em zero')});
+check('Geometria DICOM aceita números negativos e decimais',()=>{const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);const b=concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(0x20,0x32,'DS','-1.5\\0.25\\3')]).buffer;const i=api.inspect(b);assert(i.geometryAttributes.imagePositionPatient?.[0]===-1.5&&i.geometryAttributes.imagePositionPatient?.[1]===0.25,'valores válidos rejeitados')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
