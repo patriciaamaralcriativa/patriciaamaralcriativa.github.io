@@ -250,6 +250,28 @@ const orientation=frame.observations.find(o=>o.attribute==="imageOrientationPati
 return {frameIndex:frame.frameIndex,present:!!orientation,...(orientation?checkOrientationVectors(orientation.values):{valid:false,reason:"not-observed"})};
 });
 if(out.frameSummary.orientationVectorChecks.some(x=>x.present&&!x.valid))out.warnings.push("Vetores de orientação observados não satisfazem os critérios matemáticos preliminares de normalização e ortogonalidade.");
+out.frameSummary.planeNormalObservations=out.frameSummary.effectiveGeometryObservations.map((frame,index)=>{
+const position=frame.observations.find(o=>o.attribute==="imagePositionPatient")?.values;
+const orientation=frame.observations.find(o=>o.attribute==="imageOrientationPatient")?.values;
+const validOrientation=out.frameSummary.orientationVectorChecks[index]?.valid===true;
+if(!position||!validOrientation)return {frameIndex:frame.frameIndex,computed:false,reason:!position?"position-not-observed":"orientation-not-validated"};
+const a=orientation.slice(0,3),b=orientation.slice(3,6);
+const normal=[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const signedProjection=position.reduce((sum,v,j)=>sum+v*normal[j],0);
+return {frameIndex:frame.frameIndex,computed:true,normal,signedProjection,spatialOrderValidated:false};
+});
+out.frameSummary.planeNormalConsistency={
+computedFrames:out.frameSummary.planeNormalObservations.filter(o=>o.computed).length,
+allNormalsParallel:(()=>{
+const normals=out.frameSummary.planeNormalObservations.filter(o=>o.computed).map(o=>o.normal);
+if(!normals.length)return null;
+const reference=normals[0],epsilon=1e-4;
+return normals.every(n=>Math.abs(Math.abs(n.reduce((sum,v,j)=>sum+v*reference[j],0))-1)<=epsilon);
+})(),
+spatialOrderValidated:false
+};
+if(out.frameSummary.planeNormalConsistency.allNormalsParallel===false)out.warnings.push("Normais dos planos observados não são paralelas; interpretação espacial requer revisão.");
+
 
 
 const observations=out.frameSummary.frameGeometryObservations;
