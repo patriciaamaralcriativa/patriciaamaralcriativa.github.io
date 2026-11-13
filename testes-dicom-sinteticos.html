@@ -322,6 +322,16 @@ const b=file({frames:0}),i=api.inspect(b);let rejected=false;
 try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Quantidade de frames inválida/.test(e.message)}
 assert(rejected,'série sem frames alcançou Canvas ou não foi rejeitada');
 });
+check('Frames acima do limite didático são rejeitados antes do Canvas',()=>{
+const b=file({frames:501}),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:0})}catch(e){rejected=/Quantidade de frames inválida/.test(e.message)}
+assert(rejected,'série acima de 500 frames alcançou Canvas ou não foi rejeitada');
+});
+check('Índice infinito de frame é rejeitado antes do Canvas',()=>{
+const b=file(),i=api.inspect(b);let rejected=false;
+try{api.renderGrayscale(b,i,{getContext(){throw Error('Canvas acessado indevidamente')}},{frameIndex:Infinity})}catch(e){rejected=/Índice do frame fora da série/.test(e.message)}
+assert(rejected,'índice infinito alcançou Canvas ou não foi rejeitado');
+});
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
 const canvasChecksPlanned=4;
 const canvasChecksExecuted=isRealCanvas&&api?4:0;
