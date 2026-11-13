@@ -9,7 +9,7 @@ window.AmaralCloudLibrary=(()=>{
  async function call(route,{method='GET',body,raw=false,uid,signal}={}){
   let s=stored();if(uid)assertUser(uid);const headers={apikey:KEY};if(s?.access_token)headers.Authorization='Bearer '+s.access_token;
   if(raw)headers['Content-Type']='application/octet-stream';else headers['Content-Type']='application/json';
-  if(method==='POST'||method==='PATCH')headers.Prefer='return=representation';
+  if(method==='POST'||method==='PATCH'||method==='DELETE')headers.Prefer='return=representation';
   const r=await fetch(API+route,{method,headers,body:raw?body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal});
   if(uid)assertUser(uid);
   if(!r.ok){let msg;try{const e=await r.json();msg=e.message||e.msg||e.error_description||e.error;}catch{}if(r.status===401)throw Error('Sua sessão terminou. Entre novamente na sala ou na biblioteca.');throw Error(msg||'Operação recusada pelo armazenamento ('+r.status+').');}
@@ -46,7 +46,7 @@ window.AmaralCloudLibrary=(()=>{
  async function publish(id,value){const c=await requireUser(true);const r=await call('/rest/v1/'+SETS+'?id=eq.'+id,{method:'PATCH',uid:c.uid,body:{publicado:!!value}});if(r?.length!==1)throw Error('A alteração de disponibilidade não foi confirmada.');return r[0];}
  async function remove(id){const c=await requireUser(true),b=await details(id);if(b.publicado)throw Error('Recolha o conjunto antes de remover.');if(b.criada_por!==c.uid)throw Error('Este rascunho pertence a outro responsável.');
   const prefixes=b.files.flatMap(f=>Array.from({length:f.partes},(_,i)=>path(b,f,i)));for(let i=0;i<prefixes.length;i+=100)await call('/storage/v1/object/'+BUCKET,{method:'DELETE',uid:c.uid,body:{prefixes:prefixes.slice(i,i+100)}});
-  await call('/rest/v1/'+SETS+'?id=eq.'+id,{method:'DELETE',uid:c.uid});
+  const deleted=await call('/rest/v1/'+SETS+'?id=eq.'+id,{method:'DELETE',uid:c.uid});if(deleted?.length!==1)throw Error('Remoção não confirmada. Atualize o acervo e confira se o conjunto foi recolhido.');
  }
  async function download(id,index=null,onProgress=()=>{}){
   const c=await requireUser(),b=await details(id),source=index===null?b.files:[b.files[index]];if(!source.length||source.some(f=>!f))throw Error('Arquivo não encontrado no conjunto.');
