@@ -237,5 +237,5 @@ assert(pixels[0]===0&&pixels[4]===255&&pixels[3]===255&&pixels[7]===255,'Canvas 
 });
 }
 const isRealCanvas=!!(realContext&&typeof realContext.getImageData==='function');
-document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Casos sintéticos; não há validação clínica.';
+document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. '+(isRealCanvas?'Canvas 2D real disponível.':'Canvas 2D real não disponível; teste de navegador não executado.')+' Casos sintéticos; não há validação clínica.';})();
 </script></html>
