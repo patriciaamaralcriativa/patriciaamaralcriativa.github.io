@@ -202,5 +202,17 @@ check('Calcula normal e projeção assinada sem ordenar cortes',()=>{const i=api
 check('Não calcula normal com orientação inválida',()=>{const i=api.inspect(planeFixture('0\\0\\5','2\\0\\0\\0\\1\\0'));const p=i.frameSummary.planeNormalObservations[0];assert(!p.computed&&p.reason==='orientation-not-validated','normal inválida calculada')});
 }
 
+
+if(api){
+function spacingFixture(positions){
+const pre=new Uint8Array(132);pre.set(enc.encode('DICM'),128);
+const nested=(sequence,tagElement,value)=>{const geom=element(0x20,tagElement,'DS',value);const sub=concat([u16(0xfffe),u16(0xe000),u32(geom.length),geom]);return element(0x20,sequence,'SQ',sub);};
+const frames=positions.map(z=>{const inner=concat([nested(0x9113,0x32,'0\\0\\'+z),nested(0x9116,0x37,'1\\0\\0\\0\\1\\0')]);return concat([u16(0xfffe),u16(0xe000),u32(inner.length),inner]);});
+return concat([pre,element(2,0x10,'UI','1.2.840.10008.1.2.1'),element(8,0x16,'UI','1.2.840.10008.5.1.4.1.1.13.1.3'),element(0x28,0x08,'IS',String(positions.length)),element(0x5200,0x9230,'SQ',concat(frames))]).buffer;
+}
+check('Distâncias entre planos preservam ordem de armazenamento',()=>{const i=api.inspect(spacingFixture([0,2,1]));const p=i.frameSummary.planeSpacingObservations;assert(p.comparable&&p.adjacentDifferences.length===2&&p.adjacentDifferences[0].signedDifference===2&&p.adjacentDifferences[1].signedDifference===-1&&!p.spatialOrderValidated,'distâncias incorretas')});
+check('Projeções repetidas são identificadas sem classificar cortes duplicados',()=>{const i=api.inspect(spacingFixture([0,1,0]));const p=i.frameSummary.planeSpacingObservations;assert(p.repeatedProjectionPairs.length===1&&p.repeatedProjectionPairs[0][0]===0&&p.repeatedProjectionPairs[0][1]===2&&!p.spacingValidated,'repetição não detectada')});
+}
+
 document.getElementById('summary').textContent=passed+' passaram; '+failed+' falharam. Resultado apenas deste navegador e destes casos sintéticos.'})();
 </script></html>
