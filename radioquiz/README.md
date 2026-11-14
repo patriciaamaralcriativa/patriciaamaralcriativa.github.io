@@ -1,19 +1,23 @@
-# RADIOQUIZ — UNITERP
+# RADIOQUIZ — backend setup
 
-Plataforma de quiz competitivo para aulas de Radiologia, com partidas em duplas.
+## Current repository state
+- `index.html`: responsive visual prototype for teacher and student views.
+- `supabase/migrations/202611140001_radioquiz_schema.sql`: isolated database schema foundation.
 
-## Estado atual
-Esta primeira entrega publica a estrutura visual responsiva das telas do professor e dos alunos. **Ainda não cria salas reais nem sincroniza celulares.** Esses recursos dependem da configuração do backend em tempo real e de testes com vários dispositivos.
+## Important: not connected yet
+The SQL file is a starting schema proposal, not a live database deployment. It has **not** been applied to any Supabase project. The migration enables Row Level Security and revokes direct browser access to every table. A subsequent migration must add narrowly scoped server-side RPC functions for teacher authentication, room creation, PIN-based team entry, question delivery, answer submission, scoring and room state. Never expose a Supabase service-role key in browser code.
 
-## Próximas etapas
-1. Configurar projeto de backend e políticas de segurança.
-2. Implementar criação de sala, PIN, entrada e presença das duplas.
-3. Implementar perguntas, temporizador, recebimento de respostas e pontuação no servidor.
-4. Testar em vários celulares e no computador do professor.
-5. Só então adicionar poderes e recursos especiais.
+## Apply only after the project is confirmed
+1. Open the Supabase project intended for RADIOQUIZ.
+2. Confirm it is a dedicated project or that the owner explicitly approves adding the isolated `radioquiz_*` tables.
+3. Review the migration in the SQL Editor or use the Supabase CLI against a staging environment.
+4. Do not paste service-role keys, database passwords, or private tokens into chat or GitHub.
+5. After applying the schema, implement and test the RPC layer before enabling the buttons in the website.
 
-## Princípios
-- Uma resposta por dupla por pergunta.
-- O servidor é a fonte oficial de PIN, estado da partida, respostas e pontuação.
-- O placar individual das duplas não precisa aparecer na projeção.
-- Não armazenar dados pessoais desnecessários dos estudantes.
+## Game rules captured for implementation
+- Teams consist of exactly two students.
+- Each team submits one answer per question.
+- Score and answer validation must be calculated on the server, not trusted from the browser.
+- A room uses a short join PIN, stored as a digest rather than plain text.
+- Student-facing screens should not reveal the correct answer before the teacher advances the game.
+- Collect only the minimum student information required for the classroom activity.
