@@ -8,7 +8,7 @@
 - A pasta `/radioquiz/` já continha interface visual e uma migração de fundação. Foram preservadas.
 - Supabase exclusivo: projeto exclusivo verificado, nome `RADIOQUIZ - UNITERP`, região São Paulo.
 - Organização conferida pela conexão autorizada; plano confirmado `free`.
-- Inspeção remota: nenhuma tabela pública, nenhuma migração aplicada e nenhuma conta de aplicativo.
+- Inspeção remota: antes da aplicação: nenhuma tabela pública, nenhuma migração aplicada e nenhuma conta de aplicativo.
 - Disponíveis: GitHub, Supabase (SQL, migrações, documentação, verificadores), execução local de Node/PostgreSQL via PGlite e navegador de conferência.
 - Nenhuma criação de projeto, contratação ou alteração de plano foi executada.
 - Os projetos Minha Sala de Aulas e Homologação Workstation T não foram alterados.
@@ -31,7 +31,7 @@ O servidor define início e prazo. Mesmo sem clientes conectados, respostas tard
 
 | Etapa | Trabalho | Situação atual |
 | --- | --- | --- |
-| 1 | Analisar, preservar, preparar banco e segurança | Análise e migração preparadas; testes locais concluídos; aplicação remota aguarda autorização |
+| 1 | Analisar, preservar, preparar banco e segurança | Concluída: duas migrações aplicadas após autorização; 9 tabelas com RLS; teste funcional remoto por SQL passou |
 | 2 | Criar sala, receber duplas, controlar questões, calcular pontos | Motor implementado e exercitado localmente; interface funcional e validação HTTP pendentes |
 | 3 | Sincronização e reconexão | Canal seguro preparado; Auth/Realtime reais e testes em quatro aparelhos pendentes |
 | 4 | Biblioteca e histórico | Operações de banco preparadas/testadas localmente; telas de cadastro, seleção e histórico pendentes |
@@ -57,16 +57,26 @@ Resultado: **38 verificações passaram**. A suíte executa as duas migrações 
 
 O verificador remoto encontrou permissões amplas na função preexistente `public.rls_auto_enable()`, que é um event trigger da plataforma. Nada foi alterado nela; revisar o alerta antes da liberação, distinguindo privilégio listado de possibilidade real de invocação de event trigger.
 
-## Próxima ação concreta que requer autorização
+## Aplicação autorizada e realizada
 
-Aplicar exclusivamente em projeto exclusivo verificado, nesta ordem:
+Após autorização expressa da professora, aplicadas exclusivamente no projeto dedicado, nesta ordem:
 1. `202611140001_radioquiz_schema.sql` (fundação existente, preservada).
 2. `202611140002_radioquiz_engine.sql` (motor e segurança preparados nesta etapa).
 
-Isso cria as tabelas/funções do RADIOQUIZ e adiciona somente `radioquiz_signals` à publicação Realtime. Não altera outros projetos nem contrata recursos. A professora pediu confirmação antes de alterar um projeto existente; portanto a aplicação remota ficou aguardando autorização, apesar de este ser exclusivo e estar vazio.
+Isso cria as tabelas/funções do RADIOQUIZ e adiciona somente `radioquiz_signals` à publicação Realtime. Não altera outros projetos nem contrata recursos. A professora autorizou a aplicação em 14/11/2026. As duas migrações foram confirmadas no serviço: `20261114210508_radioquiz_schema` e `20261114210545_radioquiz_engine`. O e-mail administrativo foi configurado exclusivamente na tabela privada, sem publicação no código.
 
-Depois: verificar migrações e segurança no serviço real, configurar e testar Auth anônimo e login confirmado da professora, implementar interfaces, executar testes HTTP/Realtime e somente então publicar `/radioquiz/`. Não enviar e-mail automaticamente nem inventar senha.
+Próximo passo: configurar e testar Auth anônimo e login confirmado da professora, implementar interfaces, executar testes HTTP/Realtime e somente então publicar `/radioquiz/`. Não enviar e-mail automaticamente nem inventar senha.
 
 ## Recuperação
 
 Antes de qualquer publicação da interface, preservar a branch de backup. Reverter os arquivos de `/radioquiz/` para o commit inicial recupera a prévia sem tocar no restante do site. Não apagar o banco para reverter uma tela. Se a migração ainda não tiver sido aplicada, basta não aplicá-la. Após aplicação com dados de alunos, qualquer reversão de banco exige plano separado que preserve os registros.
+
+## Verificação remota após aplicação
+
+O arquivo `tests/remote-smoke.sql` passou no PostgreSQL do Supabase. Em transação revertida, criou identidades sintéticas, questionário, sala e três duplas; iniciou questão, registrou respostas, recusou duplicatas, impediu leitura de biblioteca por aluno, calculou pontos, verificou projeção sem ranking e encerrou com histórico. As identidades foram simuladas dentro da transação; isso não testa autenticação por token HTTP ou conexões simultâneas.
+
+A conferência posterior confirmou zero salas e zero contas sintéticas remanescentes, uma entrada administrativa privada, nove tabelas com RLS, API inacessível ao papel `anon` e tabela de perguntas sem leitura direta por `authenticated`. Apenas `radioquiz_signals` pertence à publicação Realtime.
+
+Os avisos informativos de RLS sem políticas nas tabelas fechadas são esperados: o acesso direto foi revogado e o acesso ocorre pela API validada. Os dois avisos preexistentes sobre o event trigger `rls_auto_enable` permanecem para revisão; nenhuma permissão foi alterada nessa função da plataforma.
+
+A configuração de provedores Auth exige painel web, pois o conector não oferece essa operação. O navegador não estava autenticado. A opção ChatGPT foi selecionada no formulário seguro, mas a continuação da autenticação foi bloqueada pela revisão automática por exigir autorização específica do método/conta. Não houve mudança nas configurações Auth. Não solicitar senha no chat.
