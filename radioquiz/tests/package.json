@@ -1,0 +1,1 @@
+{"name":"radioquiz-database-tests","private":true,"type":"module","scripts":{"test":"node engine.test.mjs"},"devDependencies":{"@electric-sql/pglite":"0.5.16"}}
