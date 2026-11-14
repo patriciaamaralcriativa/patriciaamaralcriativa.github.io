@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b50">
+<title>RADIOQUIZ | UNITERP</title>
+<style>
+:root{--navy:#102b50;--blue:#1769aa;--orange:#f39a35;--ink:#17283c;--muted:#66758a;--paper:#f4f7fb;--line:#dce5ef;--white:#fff;--green:#198754}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.top{background:linear-gradient(115deg,#102b50,#174c7c);color:#fff;padding:26px max(22px,calc((100% - 1120px)/2));}
+.brand{display:flex;align-items:center;gap:14px}.mark{width:48px;height:48px;border-radius:14px;background:var(--orange);display:grid;place-items:center;color:#102b50;font-weight:900;font-size:22px}.brand h1{font-size:clamp(24px,4vw,34px);letter-spacing:.04em;margin:0}.brand p{margin:3px 0 0;color:#c8d9ea;font-size:12px;letter-spacing:.16em;font-weight:700}
+main{max-width:1120px;margin:28px auto;padding:0 20px 60px}.intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:22px}.intro h2{font-size:clamp(22px,3vw,30px);margin:0 0 6px}.intro p{margin:0;color:var(--muted);max-width:650px;line-height:1.6}
+.status{display:inline-flex;align-items:center;gap:8px;background:#fff7e9;border:1px solid #f3d5a9;color:#805018;padding:9px 12px;border-radius:999px;font-size:12px;font-weight:800}.dot{width:8px;height:8px;background:var(--orange);border-radius:50%}
+.switch{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.switch button{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:12px;padding:12px 17px;font-weight:800;cursor:pointer}.switch button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 35px #102b500c;overflow:hidden}.panel-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.panel-head h3{margin:0;font-size:19px}.tag{background:#eaf2fb;color:#16558c;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800}
+.panel-body{padding:22px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.card{background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:18px}.card h4{margin:0 0 12px;font-size:15px}.steps{display:grid;gap:12px}.step{display:flex;gap:12px;align-items:flex-start}.num{flex:0 0 28px;height:28px;border-radius:9px;background:#e5effa;color:#14558c;display:grid;place-items:center;font-weight:900;font-size:13px}.step strong{display:block;font-size:14px;margin-bottom:3px}.step span{font-size:12px;color:var(--muted);line-height:1.45}
+.preview{background:var(--navy);color:#fff;border-radius:16px;padding:22px;text-align:center;min-height:245px;display:flex;flex-direction:column;align-items:center;justify-content:center}.preview .mini{font-size:11px;letter-spacing:.18em;color:#b9d2e8;font-weight:800}.preview h3{font-size:25px;margin:10px 0}.preview p{font-size:13px;color:#d6e3ef;line-height:1.5;max-width:330px}.pin{font-size:34px;letter-spacing:.2em;font-weight:900;color:#ffc06c;margin:10px 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:11px;padding:12px 16px;font-weight:800;background:var(--orange);color:#182b40}.btn.secondary{background:#eaf2fb;color:#174f7f}.btn:disabled{opacity:.55;cursor:not-allowed}
+.note{margin-top:16px;padding:13px 15px;border-left:4px solid var(--orange);background:#fff8ed;border-radius:8px;color:#674a25;font-size:12px;line-height:1.55}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:18px}.feature{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}.feature b{display:block;font-size:13px;margin-bottom:5px}.feature span{color:var(--muted);font-size:12px;line-height:1.45}
+footer{text-align:center;color:#8390a0;font-size:11px;padding:20px}
+[hidden]{display:none!important}
+@media(max-width:760px){.panel-body{grid-template-columns:1fr}.features{grid-template-columns:1fr}.top{padding:22px 18px}.panel-body{padding:15px}.panel-head{padding:17px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand"><div class="mark">RX</div><div><h1>RADIOQUIZ</h1><p>DESAFIO DO CONHECIMENTO · UNITERP</p></div></div></header>
+<main>
+<section class="intro"><div><h2>Aprender também é competir.</h2><p>Uma plataforma de desafios em Radiologia para jogar em duplas, com perguntas projetadas na sala e respostas enviadas pelos celulares.</p></div><div class="status"><span class="dot"></span> Primeira etapa · estrutura em construção</div></section>
+<div class="switch" role="tablist" aria-label="Prévia das telas">
+<button class="active" id="hostTab" role="tab" aria-selected="true">Tela do professor</button>
+<button id="studentTab" role="tab" aria-selected="false">Tela da dupla</button>
+</div>
+<section class="panel" id="hostPanel">
+<div class="panel-head"><h3>Painel do professor</h3><span class="tag">VISÃO DO COMPUTADOR</span></div>
+<div class="panel-body">
+<div>
+<div class="card"><h4>Preparar uma partida</h4><div class="steps">
+<div class="step"><div class="num">1</div><div><strong>Escolha um questionário</strong><span>Biblioteca de atividades por disciplina e tema.</span></div></div>
+<div class="step"><div class="num">2</div><div><strong>Abra uma sala</strong><span>O sistema deverá gerar um PIN exclusivo para a turma.</span></div></div>
+<div class="step"><div class="num">3</div><div><strong>Receba as duplas</strong><span>Acompanhe os nomes das duplas que entrarem na sala.</span></div></div>
+<div class="step"><div class="num">4</div><div><strong>Inicie o desafio</strong><span>As perguntas aparecem na tela grande; as respostas chegam pelo celular.</span></div></div>
+</div></div>
+<div class="note"><b>Transparência:</b> esta primeira publicação é a estrutura visual. A criação de salas e a sincronização entre aparelhos só serão ativadas depois da conexão com o banco de dados em tempo real e dos testes.</div>
+<div class="actions"><button class="btn" disabled title="Será ativado após a configuração do servidor">Criar sala · em configuração</button><button class="btn secondary" disabled>Biblioteca de questionários</button></div>
+</div>
+<div class="preview"><div class="mini">RADIOQUIZ · UNITERP</div><h3>A sala de desafios começa aqui</h3><p>Quando o serviço online estiver conectado, o PIN da partida aparecerá nesta área para os alunos entrarem.</p><div class="pin">—— ——</div><span class="mini">AGUARDANDO CONFIGURAÇÃO ONLINE</span></div>
+</div>
+</section>
+<section class="panel" id="studentPanel" hidden>
+<div class="panel-head"><h3>Entrada da dupla</h3><span class="tag">VISÃO DO CELULAR</span></div>
+<div class="panel-body">
+<div><div class="card"><h4>Como a dupla vai entrar</h4><div class="steps">
+<div class="step"><div class="num">1</div><div><strong>Digite o PIN da sala</strong><span>O código será exibido pelo professor na tela da sala.</span></div></div>
+<div class="step"><div class="num">2</div><div><strong>Escolha o nome da dupla</strong><span>Um nome curto e divertido para aparecer no placar.</span></div></div>
+<div class="step"><div class="num">3</div><div><strong>Informe os integrantes</strong><span>Os dois estudantes ficam vinculados à mesma pontuação.</span></div></div>
+<div class="step"><div class="num">4</div><div><strong>Responda em conjunto</strong><span>Uma resposta por dupla em cada pergunta.</span></div></div>
+</div></div><div class="note">A tela de entrada será liberada quando o servidor estiver configurado. Nenhum dado de aluno é solicitado nesta prévia.</div></div>
+<div class="preview"><div class="mini">ENTRAR NO RADIOQUIZ</div><h3>Sua dupla está pronta?</h3><p>Em breve, vocês poderão entrar com o PIN fornecido pela professora.</p><div class="pin">PIN DA SALA</div><span class="mini">TELA DE ACESSO EM CONSTRUÇÃO</span></div>
+</div>
+</section>
+<div class="features">
+<div class="feature"><b>Duplas como padrão</b><span>Uma equipe, uma resposta e uma pontuação compartilhada.</span></div>
+<div class="feature"><b>Competição transparente</b><span>O placar de cada dupla fica disponível no celular; a projeção pode ocultar o ranking individual.</span></div>
+<div class="feature"><b>Primeiro estabilidade</b><span>Recursos especiais só entram depois que a partida básica passar nos testes.</span></div>
+</div>
+</main>
+<footer>RADIOQUIZ · Projeto educacional independente · UNITERP</footer>
+<script>
+const hostTab=document.getElementById('hostTab'),studentTab=document.getElementById('studentTab'),hostPanel=document.getElementById('hostPanel'),studentPanel=document.getElementById('studentPanel');
+function show(which){const host=which==='host';hostPanel.hidden=!host;studentPanel.hidden=host;hostTab.classList.toggle('active',host);studentTab.classList.toggle('active',!host);hostTab.setAttribute('aria-selected',String(host));studentTab.setAttribute('aria-selected',String(!host));}
+hostTab.addEventListener('click',()=>show('host'));studentTab.addEventListener('click',()=>show('student'));
+</script>
+</body></html>
