@@ -1,0 +1,456 @@
+{
+  "title": "Física das Radiações — RADIOQUIZ",
+  "subject": "Física das Radiações",
+  "questions": [
+    {
+      "prompt": "Uma onda eletromagnética passa do ar para outro meio. Qual grandeza permanece determinada pela fonte?",
+      "options": [
+        "Frequência",
+        "Velocidade",
+        "Comprimento de onda",
+        "Direção de propagação"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Frequência.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "O elétron permanece no átomo após receber energia e muda de nível. Que fenômeno ocorreu?",
+      "options": [
+        "Fissão",
+        "Excitação",
+        "Ionização",
+        "Aniquilação"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Excitação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Um fóton transfere toda sua energia a um elétron ligado e desaparece. Qual interação ocorreu?",
+      "options": [
+        "Produção de pares",
+        "Espalhamento coerente",
+        "Efeito fotoelétrico",
+        "Espalhamento Compton"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Efeito fotoelétrico.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Um fóton muda de direção e transfere parte de sua energia a um elétron. Qual interação ocorreu?",
+      "options": [
+        "Efeito fotoelétrico",
+        "Absorção completa",
+        "Emissão característica",
+        "Espalhamento Compton"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Espalhamento Compton.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "A radiação é produzida pela desaceleração de elétrons próximos ao núcleo do alvo. Qual processo?",
+      "options": [
+        "Frenagem",
+        "Fluorescência óptica",
+        "Decaimento alfa",
+        "Fusão nuclear"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Frenagem.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Um elétron preenche uma vacância de camada interna do átomo do alvo. Qual radiação pode surgir?",
+      "options": [
+        "Alfa",
+        "Característica",
+        "Cósmica",
+        "Beta menos"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Característica.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "No tubo de raios X, de onde partem os elétrons acelerados?",
+      "options": [
+        "Colimador",
+        "Receptor",
+        "Cátodo",
+        "Ânodo"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Cátodo.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "No tubo de raios X, qual componente recebe o impacto dos elétrons?",
+      "options": [
+        "Filamento",
+        "Copo focalizador",
+        "Filtro",
+        "Ânodo"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Ânodo.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Ao aumentar a tensão do tubo, o que pode aumentar no espectro produzido?",
+      "options": [
+        "Energia máxima dos fótons",
+        "Massa dos elétrons",
+        "Número atômico do alvo",
+        "Carga do elétron"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Energia máxima dos fótons.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Ao aumentar a corrente do tubo, mantendo os demais parâmetros, o que aumenta?",
+      "options": [
+        "Velocidade da luz",
+        "Quantidade de elétrons por tempo",
+        "Energia máxima de cada fóton",
+        "Número atômico do alvo"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Quantidade de elétrons por tempo.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual componente remove preferencialmente fótons de baixa energia do feixe?",
+      "options": [
+        "Mesa",
+        "Colimador",
+        "Filtro",
+        "Receptor"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Filtro.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual componente define os limites geométricos do campo irradiado?",
+      "options": [
+        "Filamento",
+        "Ânodo",
+        "Transformador",
+        "Colimador"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Colimador.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Ao atravessar matéria, o feixe perde intensidade por absorção e espalhamento. Qual processo?",
+      "options": [
+        "Atenuação",
+        "Amplificação",
+        "Refração exclusiva",
+        "Ressonância"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Atenuação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual propriedade do material favorece a interação fotoelétrica em energias diagnósticas mais baixas?",
+      "options": [
+        "Menor espessura",
+        "Maior número atômico",
+        "Menor densidade eletrônica sempre",
+        "Maior temperatura"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Maior número atômico.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual grandeza expressa a espessura que reduz a intensidade do feixe à metade, em condições definidas?",
+      "options": [
+        "Tempo de exposição",
+        "Corrente do tubo",
+        "Camada semirredutora",
+        "Distância focal"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Camada semirredutora.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual partícula possui carga negativa e participa da formação de raios X no tubo?",
+      "options": [
+        "Próton",
+        "Nêutron",
+        "Fóton",
+        "Elétron"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Elétron.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual partícula do núcleo possui carga positiva?",
+      "options": [
+        "Próton",
+        "Nêutron",
+        "Elétron",
+        "Fóton"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Próton.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual partícula nuclear é eletricamente neutra?",
+      "options": [
+        "Pósitron",
+        "Nêutron",
+        "Próton",
+        "Elétron"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Nêutron.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual grandeza da onda corresponde às oscilações por segundo?",
+      "options": [
+        "Comprimento de onda",
+        "Intensidade",
+        "Frequência",
+        "Amplitude"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Frequência.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual grandeza espacial mede a distância entre cristas consecutivas?",
+      "options": [
+        "Frequência",
+        "Energia",
+        "Período",
+        "Comprimento de onda"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Comprimento de onda.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "No vácuo, quando a frequência aumenta, o comprimento de onda faz o quê?",
+      "options": [
+        "Diminui",
+        "Aumenta",
+        "Permanece necessariamente igual",
+        "Torna-se nulo"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Diminui.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fenômeno permite que ondas contornem obstáculos?",
+      "options": [
+        "Emissão termoiônica",
+        "Difração",
+        "Ionização",
+        "Absorção fotoelétrica"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Difração.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fenômeno produz reforço e cancelamento pela superposição de ondas?",
+      "options": [
+        "Ionização",
+        "Filtração",
+        "Interferência",
+        "Atenuação"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Interferência.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fenômeno consiste no retorno de uma onda ao atingir uma interface?",
+      "options": [
+        "Refração",
+        "Frenagem",
+        "Fluorescência",
+        "Reflexão"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Reflexão.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fenômeno envolve alteração da direção de propagação ao passar entre meios?",
+      "options": [
+        "Refração",
+        "Reflexão",
+        "Ionização",
+        "Decaimento"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Refração.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual processo libera elétrons de um filamento metálico aquecido?",
+      "options": [
+        "Decaimento beta",
+        "Emissão termoiônica",
+        "Produção de pares",
+        "Espalhamento coerente"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: Emissão termoiônica.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Por que o ânodo giratório ajuda a suportar cargas térmicas?",
+      "options": [
+        "Elimina toda produção de calor",
+        "Impede a radiação característica",
+        "Distribui o calor em área maior",
+        "Reduz a carga do elétron"
+      ],
+      "answer_index": 2,
+      "explanation": "Conceito: Distribui o calor em área maior.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual componente ajuda a concentrar o feixe de elétrons em direção ao alvo?",
+      "options": [
+        "Colimador de luz",
+        "Grade antidifusora",
+        "Detector",
+        "Copo focalizador"
+      ],
+      "answer_index": 3,
+      "explanation": "Conceito: Copo focalizador.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fenômeno nuclear pode emitir elétrons no decaimento beta menos?",
+      "options": [
+        "Transformação de nêutron em próton",
+        "Transformação de próton em nêutron",
+        "Captura de fóton óptico",
+        "Fissão obrigatória"
+      ],
+      "answer_index": 0,
+      "explanation": "Conceito: Transformação de nêutron em próton.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual característica distingue raios X de partículas alfa?",
+      "options": [
+        "Possuem massa de repouso elevada",
+        "São radiação eletromagnética",
+        "Possuem carga positiva",
+        "São núcleos de hélio"
+      ],
+      "answer_index": 1,
+      "explanation": "Conceito: São radiação eletromagnética.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Física das Radiações",
+      "image_url": ""
+    }
+  ]
+}
