@@ -1,0 +1,396 @@
+{
+  "disciplina": "Tomografia Computadorizada",
+  "questoes": [
+    {
+      "titulo": "TOMOGRAFIA 1",
+      "pergunta": "Na aquisição de tórax, o paciente não consegue sustentar apneia longa. Qual ajuste pode ajudar a reduzir movimento?",
+      "alternativas": [
+        "Utilizar aquisição mais rápida e orientação respiratória compatível",
+        "Reconstruir cortes mais espessos como única medida preventiva",
+        "Utilizar aquisição mais rápida e orientação respiratória compatível",
+        "Aplicar janela pulmonar antes da aquisição"
+      ],
+      "correta": 2,
+      "explicacao": "Tempo de aquisição menor pode reduzir movimento quando a apneia é limitada.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 2",
+      "pergunta": "Uma lesão de 3 mm aparece menos definida em reconstruções de 5 mm que em 1 mm. Qual mecanismo explica isso?",
+      "alternativas": [
+        "Média de diferentes tecidos no voxel espesso",
+        "Média de diferentes tecidos no voxel espesso",
+        "Aumento da concentração do contraste",
+        "Aumento do número de detectores após aquisição"
+      ],
+      "correta": 1,
+      "explicacao": "Cortes espessos intensificam volume parcial e podem diluir pequenos achados.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 3",
+      "pergunta": "Em TC de abdome contrastada, a fase arterial não demonstra opacificação adequada. Qual variável deve ser revista primeiro?",
+      "alternativas": [
+        "Sincronização entre injeção e início da aquisição",
+        "Largura de janela da reconstrução óssea",
+        "Tamanho da fonte de luz da sala",
+        "Sincronização entre injeção e início da aquisição"
+      ],
+      "correta": 3,
+      "explicacao": "Realce arterial depende criticamente do momento da aquisição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 4",
+      "pergunta": "Uma ROI do bolus tracking foi posicionada na aorta para estudar artérias pulmonares. Qual problema pode ocorrer?",
+      "alternativas": [
+        "Disparo inadequado para a fase de realce pulmonar desejada",
+        "Aumento da resolução espacial do parênquima",
+        "Disparo inadequado para a fase de realce pulmonar desejada",
+        "Aumento automático da espessura de colimação"
+      ],
+      "correta": 2,
+      "explicacao": "Para angio-TC pulmonar, monitorar a artéria pulmonar costuma ser mais apropriado.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 5",
+      "pergunta": "Para avaliar extensão de fratura facial em diferentes planos, a melhor estratégia é:",
+      "alternativas": [
+        "Aquisição fina e reconstruções multiplanares orientadas à anatomia",
+        "Aquisição fina e reconstruções multiplanares orientadas à anatomia",
+        "Apenas cortes axiais espessos sem reformatação",
+        "Janela de tecidos moles como substituta de MPR"
+      ],
+      "correta": 0,
+      "explicacao": "Dados finos favorecem demonstração de linhas de fratura em múltiplos planos.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 6",
+      "pergunta": "Uma reconstrução MIP espessa mostra calcificação densa encobrindo parte do lúmen arterial. Qual alternativa ajuda?",
+      "alternativas": [
+        "Analisar cortes finos e MPR/CPR além da MIP",
+        "Analisar cortes finos e MPR/CPR além da MIP",
+        "Aumentar somente a espessura da MIP",
+        "Reduzir a janela para apagar a calcificação"
+      ],
+      "correta": 1,
+      "explicacao": "Projeções máximas podem sobrepor calcificações ao lúmen, exigindo análise das imagens-fonte.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 7",
+      "pergunta": "A fase sem contraste em estudo de adrenal pode ser útil para:",
+      "alternativas": [
+        "Avaliar atenuação basal de lesões antes do realce",
+        "Substituir toda avaliação morfológica",
+        "Avaliar atenuação basal de lesões antes do realce",
+        "Medir realce arterial máximo"
+      ],
+      "correta": 2,
+      "explicacao": "Atenuação basal pode contribuir para caracterização de algumas lesões adrenais.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 8",
+      "pergunta": "Em TC de crânio, uma área hiperdensa pode representar sangue ou calcificação. Qual informação adicional ajuda?",
+      "alternativas": [
+        "Localização anatômica e comparação com exames prévios",
+        "Localização anatômica e comparação com exames prévios",
+        "Apenas mudar a cor da interface",
+        "Medir a altura da mesa após a aquisição"
+      ],
+      "correta": 0,
+      "explicacao": "Contexto anatômico e comparação auxiliam na diferenciação de hiperdensidades.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 9",
+      "pergunta": "Ao reconstruir a mesma aquisição com FOV menor e matriz fixa, espera-se:",
+      "alternativas": [
+        "Pixel menor e maior detalhamento amostrado no plano, dentro dos limites do sistema",
+        "Pixel maior e mais volume parcial longitudinal",
+        "Mais detectores físicos ativados retroativamente",
+        "Pixel menor e maior detalhamento amostrado no plano, dentro dos limites do sistema"
+      ],
+      "correta": 3,
+      "explicacao": "Reduzir FOV de reconstrução diminui o tamanho do pixel sem mudar a dose já aplicada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 10",
+      "pergunta": "Uma lesão próxima ao diafragma é mal delimitada por movimento respiratório. Qual medida pré-aquisição é apropriada?",
+      "alternativas": [
+        "Padronizar comando respiratório e otimizar duração da aquisição",
+        "Aumentar a largura de janela depois do exame",
+        "Padronizar comando respiratório e otimizar duração da aquisição",
+        "Realizar apenas reconstrução 3D de superfície"
+      ],
+      "correta": 2,
+      "explicacao": "A consistência respiratória reduz discrepâncias de posição durante a coleta.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 11",
+      "pergunta": "Na uro-TC, o objetivo de uma aquisição tardia após contraste é:",
+      "alternativas": [
+        "Demonstrar contraste excretado no sistema coletor",
+        "Demonstrar contraste excretado no sistema coletor",
+        "Maximizar opacificação arterial precoce",
+        "Medir apenas densidade basal do cálculo"
+      ],
+      "correta": 1,
+      "explicacao": "A fase tardia permite avaliar o sistema urinário opacificado por excreção.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 12",
+      "pergunta": "Na avaliação de cálculos ureterais, a fase sem contraste é valiosa porque:",
+      "alternativas": [
+        "Evita confusão entre contraste excretado e focos hiperatenuantes",
+        "Mostra sempre melhor realce cortical renal",
+        "Aumenta a atenuação do cálculo por injeção",
+        "Evita confusão entre contraste excretado e focos hiperatenuantes"
+      ],
+      "correta": 3,
+      "explicacao": "Sem contraste excretado, muitos cálculos são reconhecidos como focos de alta atenuação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 13",
+      "pergunta": "Uma série de cortes de 1 mm com intervalo de 0,5 mm representa:",
+      "alternativas": [
+        "Reconstruções sobrepostas",
+        "Reconstruções sobrepostas",
+        "Aquisição com pitch obrigatoriamente 0,5",
+        "Reconstruções com lacunas de 0,5 mm"
+      ],
+      "correta": 0,
+      "explicacao": "Intervalo menor que espessura indica sobreposição entre imagens.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 14",
+      "pergunta": "Para avaliar mediastino e pulmão a partir da mesma TC, é correto:",
+      "alternativas": [
+        "Usar janelas específicas sobre os dados adquiridos",
+        "Aplicar sempre duas doses de contraste",
+        "Usar janelas específicas sobre os dados adquiridos",
+        "Alterar o pitch na estação de trabalho"
+      ],
+      "correta": 2,
+      "explicacao": "Janelas alteram visualização de HU e podem ser ajustadas sem nova aquisição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 15",
+      "pergunta": "Em uma janela de tecidos moles, osso cortical aparece saturado em branco. Isso ocorre porque:",
+      "alternativas": [
+        "Seus HU ultrapassam a faixa superior exibida",
+        "A atenuação do osso passou a ser igual à água",
+        "O pixel deixou de representar osso",
+        "Seus HU ultrapassam a faixa superior exibida"
+      ],
+      "correta": 3,
+      "explicacao": "Valores fora da faixa da janela são mapeados para os extremos da escala exibida.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 16",
+      "pergunta": "A colimação total do feixe em TC multidetectores depende de:",
+      "alternativas": [
+        "Configuração e largura total das fileiras de detectores utilizadas",
+        "Configuração e largura total das fileiras de detectores utilizadas",
+        "Somente da largura da janela",
+        "Apenas do FOV de reconstrução"
+      ],
+      "correta": 1,
+      "explicacao": "A colimação de aquisição determina a cobertura longitudinal do feixe.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 17",
+      "pergunta": "Com avanço da mesa de 32 mm por rotação e colimação total de 64 mm, o pitch é:",
+      "alternativas": [
+        "0,5",
+        "0,5",
+        "2,0",
+        "1,5"
+      ],
+      "correta": 0,
+      "explicacao": "Pitch = 32/64 = 0,5.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 18",
+      "pergunta": "Em um paciente com histórico de reação imediata importante ao contraste iodado, qual conduta precede a injeção?",
+      "alternativas": [
+        "Avaliação de risco, alternativas e medidas conforme protocolo institucional",
+        "Aplicar o mesmo contraste sem revisão se a dose for menor",
+        "Aumentar velocidade de injeção para reduzir exposição",
+        "Avaliação de risco, alternativas e medidas conforme protocolo institucional"
+      ],
+      "correta": 3,
+      "explicacao": "Histórico de reação relevante demanda avaliação clínica e plano seguro antes da administração.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 19",
+      "pergunta": "Durante injeção, o paciente relata dor e surge edema no acesso. A prioridade é:",
+      "alternativas": [
+        "Interromper a infusão e avaliar possível extravasamento",
+        "Interromper a infusão e avaliar possível extravasamento",
+        "Aumentar a pressão para manter o tempo da fase",
+        "Concluir a injeção e examinar o braço ao final"
+      ],
+      "correta": 0,
+      "explicacao": "Dor e edema podem indicar extravasamento, exigindo interrupção e avaliação.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 20",
+      "pergunta": "Para reconstrução coronal de alta qualidade em abdome, deve-se priorizar:",
+      "alternativas": [
+        "Dados finos e amostragem longitudinal adequada",
+        "Somente reconstrução axial de 10 mm",
+        "Dados finos e amostragem longitudinal adequada",
+        "Janela mais estreita como substituta de cortes finos"
+      ],
+      "correta": 2,
+      "explicacao": "Cortes finos e voxels próximos de isotrópicos melhoram MPR.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 21",
+      "pergunta": "Uma lesão é mais evidente na janela hepática do que na janela óssea porque:",
+      "alternativas": [
+        "O ajuste de largura e nível privilegia diferenças de HU do parênquima",
+        "O ajuste de largura e nível privilegia diferenças de HU do parênquima",
+        "A janela hepática aumenta fisicamente o realce",
+        "A janela óssea elimina os dados do fígado"
+      ],
+      "correta": 1,
+      "explicacao": "Janelas diferentes realçam faixas distintas de atenuação sem alterar os dados.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 22",
+      "pergunta": "Na reconstrução curva de uma artéria tortuosa, o operador precisa definir:",
+      "alternativas": [
+        "Trajeto central anatômico coerente do vaso",
+        "Trajeto central anatômico coerente do vaso",
+        "Apenas o maior HU de toda a imagem",
+        "Um plano axial fixo sem acompanhamento do vaso"
+      ],
+      "correta": 0,
+      "explicacao": "CPR acompanha a linha central escolhida no volume.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 23",
+      "pergunta": "Em TC de abdome, uma fase portal adquirida precocemente demais pode:",
+      "alternativas": [
+        "Apresentar realce parenquimatoso e venoso ainda inadequado",
+        "Mostrar excreção urinária tardia completa",
+        "Produzir necessariamente imagem sem contraste",
+        "Apresentar realce parenquimatoso e venoso ainda inadequado"
+      ],
+      "correta": 3,
+      "explicacao": "O realce portal depende do intervalo após a injeção.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 24",
+      "pergunta": "Ao comparar densidade de lesão entre exames, a análise de HU deve considerar:",
+      "alternativas": [
+        "Fase contrastada, ROI e parâmetros técnicos comparáveis",
+        "Somente a cor da imagem exibida",
+        "Fase contrastada, ROI e parâmetros técnicos comparáveis",
+        "Apenas o nome da janela selecionada"
+      ],
+      "correta": 2,
+      "explicacao": "Fase e posicionamento da ROI alteram a atenuação medida e sua comparabilidade.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 25",
+      "pergunta": "Um corte com ROI incluindo lesão e gordura adjacente apresenta HU médio pouco representativo. A causa é:",
+      "alternativas": [
+        "Mistura de tecidos na região medida",
+        "Mistura de tecidos na região medida",
+        "Mudança da unidade HU para g/cm²",
+        "Aumento automático da colimação"
+      ],
+      "correta": 0,
+      "explicacao": "ROI deve representar a estrutura-alvo, evitando mistura de tecidos.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 26",
+      "pergunta": "Em uma TC de crânio, alinhamento inadequado pode ser corrigido na apresentação por MPR, mas:",
+      "alternativas": [
+        "A orientação na aquisição e a cobertura anatômica ainda devem ser verificadas",
+        "MPR recupera tecido não adquirido",
+        "MPR corrige qualquer movimento do paciente",
+        "A orientação na aquisição e a cobertura anatômica ainda devem ser verificadas"
+      ],
+      "correta": 3,
+      "explicacao": "Reformatação não recupera anatomia fora do volume adquirido nem corrige todo movimento.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 27",
+      "pergunta": "Uma reconstrução 3D de vasos depende da segmentação; um limiar inadequado pode:",
+      "alternativas": [
+        "Excluir ramos de menor realce ou incluir estruturas indesejadas",
+        "Excluir ramos de menor realce ou incluir estruturas indesejadas",
+        "Aumentar a concentração real de contraste",
+        "Mudar o tempo de circulação sanguínea"
+      ],
+      "correta": 1,
+      "explicacao": "Limiar de segmentação influencia quais voxels entram no modelo 3D.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 28",
+      "pergunta": "O uso de contraste iodado intravenoso em exame não deve ser decidido apenas por:",
+      "alternativas": [
+        "Presença de solicitação genérica, sem revisar indicação e riscos",
+        "Necessidade clínica de caracterizar realce",
+        "Protocolo específico do órgão estudado",
+        "Presença de solicitação genérica, sem revisar indicação e riscos"
+      ],
+      "correta": 3,
+      "explicacao": "A indicação e os riscos devem ser avaliados conforme o protocolo e a situação clínica.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "TOMOGRAFIA 29",
+      "pergunta": "Para distinguir aorta de veias adjacentes em angio-TC arterial, é crucial:",
+      "alternativas": [
+        "Sincronizar a aquisição com o pico de realce arterial",
+        "Sincronizar a aquisição com o pico de realce arterial",
+        "Usar exclusivamente janela óssea",
+        "Reconstruir apenas cortes de 10 mm"
+      ],
+      "correta": 1,
+      "explicacao": "O tempo de aquisição influencia a diferença de opacificação arterial e venosa.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "TOMOGRAFIA 30",
+      "pergunta": "Uma massa pequena junto ao osso pode ser mascarada em MIP espessa. Qual avaliação adicional é indicada?",
+      "alternativas": [
+        "Imagens-fonte finas e MPR apropriadas",
+        "Imagens-fonte finas e MPR apropriadas",
+        "Somente aumentar a espessura da MIP",
+        "Alterar a matriz de aquisição após exame"
+      ],
+      "correta": 0,
+      "explicacao": "A MIP espessa projeta estruturas de maior atenuação, que podem encobrir achados próximos.",
+      "dificuldade": "dificil"
+    }
+  ],
+  "status": "revisado"
+}
