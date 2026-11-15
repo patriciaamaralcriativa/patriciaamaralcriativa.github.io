@@ -6,11 +6,11 @@
       "prompt": "Na incidência CC, o principal objetivo da tração da mama antes da compressão é:",
       "options": [
         "Deslocar a porção medial para obter perfil mais tangencial",
-        "Incluir o máximo possível de tecido posterior na projeção",
         "Distribuir o tecido central sem priorizar a parede torácica",
+        "Incluir o máximo possível de tecido posterior na projeção",
         "Destacar o complexo aréolo-papilar mantendo o tecido posterior estável"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "explanation": "A tração em CC aproxima o tecido posterior do receptor e amplia a inclusão anatômica; centralizar apenas o mamilo não garante cobertura posterior.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -48,11 +48,11 @@
       "prompt": "Em MLO, o sulco inframamário não está demonstrado. Qual ajuste é mais pertinente?",
       "options": [
         "Diminuir a angulação para tentar projetar o sulco no centro",
-        "Aplicar tração apenas na região superior, sem ajustar a inferior",
         "Reavaliar elevação e tração da mama durante o posicionamento",
+        "Aplicar tração apenas na região superior, sem ajustar a inferior",
         "Aumentar a compressão mantendo a mama na mesma altura"
       ],
-      "answer_index": 2,
+      "answer_index": 1,
       "explanation": "A abertura do sulco inframamário depende da elevação e tração adequadas da mama, não apenas da força de compressão.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -62,11 +62,11 @@
       "prompt": "Na crivagem mamográfica de rotina, as projeções bilaterais usuais são:",
       "options": [
         "CC e mediolateral verdadeira",
-        "CC e MLO",
         "CC e lateromedial verdadeira",
-        "MLO e mediolateral verdadeira"
+        "MLO e mediolateral verdadeira",
+        "CC e MLO"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "explanation": "Na crivagem, CC e MLO são as incidências básicas complementares: uma demonstra o tecido no eixo craniocaudal e a outra na projeção oblíqua.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -75,12 +75,12 @@
     {
       "prompt": "Uma assimetria aparece apenas na CC de rastreamento. Qual estratégia inicial ajuda a esclarecer sobreposição?",
       "options": [
-        "Incidência complementar com deslocamento de tecidos, conforme localização",
         "Magnificação localizada antes de verificar a localização em outra projeção",
+        "Incidência complementar com deslocamento de tecidos, conforme localização",
         "Tangencial imediata sem evidência de localização superficial",
         "MLO repetida sem adaptação nem comparação"
       ],
-      "answer_index": 0,
+      "answer_index": 1,
       "explanation": "Uma assimetria em apenas uma projeção pode ser somação; projeções adicionais adequadas à localização ajudam a distinguir persistência de sobreposição.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -89,12 +89,12 @@
     {
       "prompt": "Na técnica de mama enrolada, o princípio para investigar uma densidade duvidosa é:",
       "options": [
+        "Deslocar diferencialmente tecidos sobrepostos mantendo projeção apropriada",
         "Aumentar a compressão central sem deslocamento relativo dos tecidos",
         "Rodar a mama para produzir projeção mediolateral verdadeira",
-        "Modificar a distância objeto-receptor para separar densidades",
-        "Deslocar diferencialmente tecidos sobrepostos mantendo projeção apropriada"
+        "Modificar a distância objeto-receptor para separar densidades"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "explanation": "O rolamento desloca diferencialmente planos teciduais, permitindo testar se a densidade decorre de estruturas sobrepostas.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -131,12 +131,12 @@
     {
       "prompt": "Para caracterizar a morfologia de microcalcificações agrupadas, pode ser indicada:",
       "options": [
-        "Compressão seletiva com magnificação",
         "Compressão seletiva sem magnificação, se a dúvida é exclusivamente morfológica",
         "Incidência axilar para caracterizar calcificações centrais",
-        "Rolamento mamário como substituto sistemático da ampliação"
+        "Rolamento mamário como substituto sistemático da ampliação",
+        "Compressão seletiva com magnificação"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "explanation": "A magnificação facilita a análise da morfologia de calcificações pequenas; a compressão seletiva delimita a área de interesse.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -147,10 +147,10 @@
       "options": [
         "Reduzir a distância objeto-receptor mantendo a mesma posição da mama",
         "Aumentar apenas a distância foco-receptor sem elevar a mama",
-        "Elevar a mama sem modificar sua distância em relação ao receptor",
-        "Aumentar a distância objeto-receptor com posicionamento específico"
+        "Aumentar a distância objeto-receptor com posicionamento específico",
+        "Elevar a mama sem modificar sua distância em relação ao receptor"
       ],
-      "answer_index": 3,
+      "answer_index": 2,
       "explanation": "A magnificação geométrica depende do aumento da distância objeto-receptor, com suporte e técnica próprios para manter a região de interesse.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -159,12 +159,12 @@
     {
       "prompt": "Em paciente com implante, a manobra de Eklund busca:",
       "options": [
+        "Deslocar o implante posteriormente e tracionar tecido mamário anteriormente",
         "Manter o implante anterior e comprimir todo o conjunto",
         "Deslocar lateralmente a prótese sem mobilizar o tecido mamário",
-        "Deslocar o implante posteriormente e tracionar tecido mamário anteriormente",
         "Tracionar o implante anteriormente e manter a glândula junto à parede torácica"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "explanation": "Eklund desloca o implante posteriormente e traciona o tecido mamário anteriormente para permitir compressão preferencial do parênquima.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -187,12 +187,12 @@
     {
       "prompt": "Em mama com implante, por que se obtêm projeções com implante incluído e deslocado quando viáveis?",
       "options": [
-        "São complementares na demonstração do implante e do tecido mamário",
         "As incluídas substituem a necessidade de deslocamento quando a glândula é densa",
         "As deslocadas demonstram melhor o implante e pior o parênquima anterior",
+        "São complementares na demonstração do implante e do tecido mamário",
         "As duas técnicas são equivalentes para visualização de tecido anterior"
       ],
-      "answer_index": 0,
+      "answer_index": 2,
       "explanation": "Projeções com implante incluído e deslocado fornecem informações complementares, pois a presença do implante pode ocultar parênquima.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -201,12 +201,12 @@
     {
       "prompt": "Para demonstrar tecido do prolongamento axilar, a incidência complementar é:",
       "options": [
+        "Axilar",
         "Tangencial de região retroareolar",
         "Mediolateral verdadeira do quadrante inferior",
-        "Compressão seletiva de região central",
-        "Axilar"
+        "Compressão seletiva de região central"
       ],
-      "answer_index": 3,
+      "answer_index": 0,
       "explanation": "A incidência axilar é complementar quando a área de interesse está no prolongamento superolateral, insuficientemente incluído nas projeções básicas.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -217,10 +217,10 @@
       "options": [
         "Magnificação centrada na região retroareolar",
         "Oblíqua mediolateral sem marcação da alteração",
-        "Tangencial",
-        "Craniocaudal com rolamento medial"
+        "Craniocaudal com rolamento medial",
+        "Tangencial"
       ],
-      "answer_index": 2,
+      "answer_index": 3,
       "explanation": "A tangencial posiciona a área superficial no contorno da mama, auxiliando a demonstrar relação do achado com a pele.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -230,11 +230,11 @@
       "prompt": "Qual estrutura é particularmente importante na orientação da MLO?",
       "options": [
         "Músculo peitoral menor",
-        "Músculo peitoral maior",
         "Músculo serrátil anterior",
+        "Músculo peitoral maior",
         "Músculo latíssimo do dorso"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "explanation": "O peitoral maior é referência de posicionamento da MLO, que procura incluir tecido mamário posterior e prolongamento axilar.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -243,12 +243,12 @@
     {
       "prompt": "Os ligamentos suspensores da mama relacionam-se principalmente a:",
       "options": [
-        "Sustentação do tecido mamário e conexão com estruturas superficiais",
         "Delimitação do ducto terminal e do lóbulo",
+        "Sustentação do tecido mamário e conexão com estruturas superficiais",
         "Formação da cápsula fibrosa de implantes",
         "Drenagem linfática exclusiva do complexo aréolo-papilar"
       ],
-      "answer_index": 0,
+      "answer_index": 1,
       "explanation": "Os ligamentos de Cooper formam estruturas fibrosas de sustentação entre o parênquima e planos superficiais.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -271,12 +271,12 @@
     {
       "prompt": "Uma massa de margens espiculadas exige atenção porque a morfologia é:",
       "options": [
+        "Suspeita e demanda avaliação conforme o contexto",
         "Massa oval com margem circunscrita",
         "Massa irregular com margem espiculada",
-        "Suspeita e demanda avaliação conforme o contexto",
         "Massa oval com margem obscurecida"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "explanation": "Margens espiculadas são achado morfológico suspeito; a categoria final depende da avaliação diagnóstica, não equivale a confirmação histológica.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -286,11 +286,11 @@
       "prompt": "Uma massa oval, circunscrita e paralela à pele não deve ser automaticamente considerada benigna porque:",
       "options": [
         "A orientação paralela à pele define benignidade sem outros critérios",
-        "A avaliação depende do conjunto de achados e da comparação",
         "A morfologia isolada determina acompanhamento semestral em qualquer contexto",
+        "A avaliação depende do conjunto de achados e da comparação",
         "O formato oval permite dispensar avaliação de margens"
       ],
-      "answer_index": 1,
+      "answer_index": 2,
       "explanation": "Forma oval, margem circunscrita e orientação paralela podem favorecer benignidade, mas não dispensam análise conjunta nem comparação prévia.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -299,12 +299,12 @@
     {
       "prompt": "Microcalcificações finas lineares e ramificadas podem sugerir:",
       "options": [
-        "Depósitos em distribuição ductal com morfologia suspeita",
         "Calcificações grosseiras com centro radiolúcido",
         "Calcificações vasculares paralelas em trilho",
-        "Calcificações cutâneas arredondadas e periféricas"
+        "Calcificações cutâneas arredondadas e periféricas",
+        "Depósitos em distribuição ductal com morfologia suspeita"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "explanation": "Calcificações finas lineares ou ramificadas podem refletir deposição em ductos e têm morfologia suspeita.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -314,11 +314,11 @@
       "prompt": "Calcificações com padrão em trilho acompanhando vasos favorecem:",
       "options": [
         "Distribuição linear fina dentro de ductos",
+        "Origem vascular",
         "Distribuição segmentar de calcificações pleomórficas",
-        "Agrupamento de calcificações amorfas",
-        "Origem vascular"
+        "Agrupamento de calcificações amorfas"
       ],
-      "answer_index": 3,
+      "answer_index": 1,
       "explanation": "Calcificações paralelas em trilho que seguem vasos são tipicamente de origem vascular, diferindo de morfologia intraductal suspeita.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -327,12 +327,12 @@
     {
       "prompt": "A distribuição segmentar de calcificações merece atenção por poder refletir:",
       "options": [
+        "Distribuição ao longo de sistema ductal",
         "Distribuição regional de calcificações grosseiras",
         "Distribuição agrupada sem relação anatômica ductal definida",
-        "Distribuição ao longo de sistema ductal",
         "Distribuição difusa bilateral de calcificações puntiformes"
       ],
-      "answer_index": 2,
+      "answer_index": 0,
       "explanation": "Distribuição segmentar pode acompanhar um sistema ductal e modifica a avaliação de suspeição em conjunto com a morfologia.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -342,11 +342,11 @@
       "prompt": "BI-RADS 0 em exame de rastreamento significa:",
       "options": [
         "BI-RADS 4A — achado suspeito",
-        "Avaliação incompleta, necessitando complementação e/ou comparação",
         "BI-RADS 3 — provavelmente benigno",
-        "BI-RADS 2 — achado benigno"
+        "BI-RADS 2 — achado benigno",
+        "Avaliação incompleta, necessitando complementação e/ou comparação"
       ],
-      "answer_index": 1,
+      "answer_index": 3,
       "explanation": "BI-RADS 0 significa que a avaliação ainda não está completa; imagens adicionais e/ou comparação podem ser necessárias.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -371,10 +371,10 @@
       "options": [
         "BI-RADS 4 significa suspeita muito alta e 5, suspeita baixa",
         "BI-RADS 4 e 5 diferem apenas pela densidade mamária",
-        "BI-RADS 5 corresponde a malignidade comprovada por biópsia",
-        "Ambos são suspeitos, mas 5 indica probabilidade de malignidade muito elevada"
+        "Ambos são suspeitos, mas 5 indica probabilidade de malignidade muito elevada",
+        "BI-RADS 5 corresponde a malignidade comprovada por biópsia"
       ],
-      "answer_index": 3,
+      "answer_index": 2,
       "explanation": "BI-RADS 4 é suspeito em graus variáveis; BI-RADS 5 corresponde a achado altamente sugestivo de malignidade, sem equivaler a biópsia positiva.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -384,11 +384,11 @@
       "prompt": "BI-RADS 6 refere-se a:",
       "options": [
         "Achado suspeito sem confirmação histológica",
-        "Achado provavelmente benigno em seguimento",
         "Malignidade já comprovada histologicamente",
+        "Achado provavelmente benigno em seguimento",
         "Achado altamente sugestivo de malignidade ainda não biopsiado"
       ],
-      "answer_index": 2,
+      "answer_index": 1,
       "explanation": "BI-RADS 6 é usado quando a malignidade já foi comprovada por exame histopatológico.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -397,12 +397,12 @@
     {
       "prompt": "Uma compressão excessivamente focalizada fora da área de interesse pode:",
       "options": [
-        "Aumentar a área comprimida sem mudar a centralização",
         "Deixar o achado fora do campo de avaliação",
+        "Aumentar a área comprimida sem mudar a centralização",
         "Reduzir a superposição de tecidos no local originalmente identificado",
         "Demonstrar melhor o prolongamento axilar"
       ],
-      "answer_index": 1,
+      "answer_index": 0,
       "explanation": "Compressão seletiva fora da área de interesse não permite avaliar adequadamente o achado; a localização prévia orienta o posicionamento.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -411,12 +411,12 @@
     {
       "prompt": "Em lesão localizada na região axilar, a escolha da incidência complementar deve priorizar:",
       "options": [
-        "A inclusão anatômica da área suspeita e a correlação com a incidência inicial",
         "Manter a centralização padrão mesmo se a área suspeita ficar periférica",
         "Priorizar o complexo aréolo-papilar independentemente da localização",
-        "Escolher a região de compressão apenas pelo tamanho da mama"
+        "Escolher a região de compressão apenas pelo tamanho da mama",
+        "A inclusão anatômica da área suspeita e a correlação com a incidência inicial"
       ],
-      "answer_index": 0,
+      "answer_index": 3,
       "explanation": "Para achado axilar, a incidência complementar deve incluir a área de interesse e permitir correlação com imagens anteriores.",
       "time_limit_seconds": 45,
       "points": 1000,
@@ -424,5 +424,5 @@
     }
   ],
   "status": "revisado-tecnica-pedagogicamente",
-  "revision_note": "Revisão de gabaritos, distratores e justificativas individualizadas; não integrado ao jogo."
+  "revision_note": "30 questões revisadas com justificativas individualizadas, quatro alternativas e gabarito distribuído sem repetição cíclica."
 }
