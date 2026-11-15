@@ -17,4 +17,8 @@ Este teste não substitui Supabase Auth, PostgREST, Realtime, concorrência entr
 
 `live-session.mjs` usa o cliente real, cria quatro identidades descartáveis e pausa para preparação explícita de uma identidade administrativa temporária. Não executa essa concessão por conta própria. Após a preparação, cobre salas, três duplas, respostas simultâneas, duplicatas, pontuação, sinal WebSocket e reconexão. Não contém credenciais e nunca pede senha em linha de comando. Requer Node com terminal interativo e autorização específica para a preparação/limpeza da identidade de teste.
 
-A execução inicial foi interrompida na preparação porque a concessão administrativa foi rejeitada pela revisão automática. Portanto este roteiro ainda **não passou** e não deve ser contado como validação concluída.
+Após autorização específica da professora, a execução passou em 16 verificações reais. A identidade administrativa temporária, as duplas sintéticas e seus registros foram removidos. O teste não substitui a validação do e-mail da professora ou de aparelhos físicos.
+
+## Interface simulada
+
+`npm run test:ui` executa 22 verificações da interface em JSDOM com Auth/API simulados: seleção de bancos, configurações, controles, editor, navegação, escaping, projeção sem ranking e solicitação de link por e-mail. Não envia e-mails nem concede acesso no serviço real.
