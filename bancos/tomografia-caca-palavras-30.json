@@ -1,0 +1,126 @@
+{
+  "title": "Tomografia Computadorizada — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual parâmetro é a razão entre avanço da mesa por rotação e colimação total?",
+      "answer": "PITCH"
+    },
+    {
+      "question": "Qual modo de aquisição usa movimento contínuo da mesa durante rotações?",
+      "answer": "HELICOIDAL"
+    },
+    {
+      "question": "Qual recurso limita a largura longitudinal do feixe?",
+      "answer": "COLIMAÇÃO"
+    },
+    {
+      "question": "Qual termo designa a espessura longitudinal da imagem reconstruída?",
+      "answer": "ESPESSURA"
+    },
+    {
+      "question": "Qual termo designa o espaçamento entre centros de imagens consecutivas?",
+      "answer": "INTERVALO"
+    },
+    {
+      "question": "Qual efeito mistura atenuações de estruturas diferentes no mesmo voxel?",
+      "answer": "PARCIAL"
+    },
+    {
+      "question": "Qual sobrenome identifica a escala HU?",
+      "answer": "HOUNSFIELD"
+    },
+    {
+      "question": "Qual material tem HU de referência próximo de zero?",
+      "answer": "ÁGUA"
+    },
+    {
+      "question": "Qual material tem HU de referência próximo de menos mil?",
+      "answer": "AR"
+    },
+    {
+      "question": "Qual parâmetro da janela define a amplitude de HU exibida?",
+      "answer": "LARGURA"
+    },
+    {
+      "question": "Qual parâmetro da janela define o centro da faixa exibida?",
+      "answer": "NÍVEL"
+    },
+    {
+      "question": "Qual sigla identifica a região usada para medir HU?",
+      "answer": "ROI"
+    },
+    {
+      "question": "Qual palavra completa a técnica bolus ___ de disparo por limiar de HU?",
+      "answer": "TRACKING"
+    },
+    {
+      "question": "Qual fase busca o pico de realce arterial?",
+      "answer": "ARTERIAL"
+    },
+    {
+      "question": "Qual fase abdominal privilegia realce do sistema porta?",
+      "answer": "PORTAL"
+    },
+    {
+      "question": "Qual fase tardia permite avaliar vias urinárias opacificadas?",
+      "answer": "EXCRETORA"
+    },
+    {
+      "question": "Qual sigla indica reconstrução multiplanar?",
+      "answer": "MPR"
+    },
+    {
+      "question": "Qual sigla indica projeção de intensidade máxima?",
+      "answer": "MIP"
+    },
+    {
+      "question": "Qual sigla indica reformatação planar curva?",
+      "answer": "CPR"
+    },
+    {
+      "question": "Qual termo designa a reconstrução tridimensional de um volume?",
+      "answer": "VOLUMÉTRICA"
+    },
+    {
+      "question": "Qual propriedade descreve voxels com dimensões semelhantes nos três eixos?",
+      "answer": "ISOTROPIA"
+    },
+    {
+      "question": "Qual sigla identifica o campo de visão de reconstrução?",
+      "answer": "FOV"
+    },
+    {
+      "question": "Qual termo designa a grade de pixels da imagem?",
+      "answer": "MATRIZ"
+    },
+    {
+      "question": "Qual unidade volumétrica representa amostra de tecido na TC?",
+      "answer": "VOXEL"
+    },
+    {
+      "question": "Qual unidade bidimensional forma a matriz da imagem?",
+      "answer": "PIXEL"
+    },
+    {
+      "question": "Qual termo descreve atenuação maior que a dos tecidos de referência?",
+      "answer": "HIPERDENSIDADE"
+    },
+    {
+      "question": "Qual termo descreve atenuação menor que a dos tecidos de referência?",
+      "answer": "HIPODENSIDADE"
+    },
+    {
+      "question": "Qual termo define vazamento de contraste no tecido junto ao acesso?",
+      "answer": "EXTRAVASAMENTO"
+    },
+    {
+      "question": "Qual elemento químico caracteriza o contraste intravenoso usual em TC?",
+      "answer": "IODO"
+    },
+    {
+      "question": "Qual processo matemático transforma projeções adquiridas em imagens?",
+      "answer": "RECONSTRUÇÃO"
+    }
+  ],
+  "status": "revisado"
+}
