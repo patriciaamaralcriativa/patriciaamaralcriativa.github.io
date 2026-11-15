@@ -1,0 +1,132 @@
+{
+  "disciplina": "Proteção Radiológica",
+  "sets": [
+    [
+      [
+        "Princípio que exige benefício clínico esperado superior ao detrimento da exposição",
+        "Justificação"
+      ],
+      [
+        "Princípio de buscar exposição adequada à finalidade clínica sem excessos",
+        "Otimização"
+      ],
+      [
+        "Ajuste físico que limita a área irradiada",
+        "Colimação"
+      ],
+      [
+        "Fator de proteção reduzido quando o trabalhador permanece menos tempo exposto",
+        "Tempo"
+      ],
+      [
+        "Fator de proteção aumentado ao afastar o trabalhador da fonte",
+        "Distância"
+      ],
+      [
+        "Proteção interposta para atenuar radiação",
+        "Blindagem"
+      ],
+      [
+        "Unidade SI de dose absorvida",
+        "Gray"
+      ],
+      [
+        "Unidade SI de dose equivalente",
+        "Sievert"
+      ],
+      [
+        "Unidade SI de atividade radioativa",
+        "Becquerel"
+      ],
+      [
+        "Radiação originada do tubo fora do feixe útil",
+        "Fuga"
+      ]
+    ],
+    [
+      [
+        "Radiação desviada durante interações no paciente",
+        "Espalhada"
+      ],
+      [
+        "Proteção projetada para interceptar o feixe útil direto",
+        "Barreira primária"
+      ],
+      [
+        "Proteção projetada para radiação de fuga e espalhada",
+        "Barreira secundária"
+      ],
+      [
+        "Equipamento de acompanhamento da exposição ocupacional individual",
+        "Dosímetro"
+      ],
+      [
+        "Verificação periódica do desempenho e da segurança do equipamento",
+        "Controle de qualidade"
+      ],
+      [
+        "Avaliação de taxas de dose em pontos da instalação",
+        "Levantamento radiométrico"
+      ],
+      [
+        "Processo de investigação de imagens descartadas e exames repetidos",
+        "Análise de rejeição"
+      ],
+      [
+        "Aumento progressivo e desnecessário da exposição em imagem digital",
+        "Dose creep"
+      ],
+      [
+        "Pessoa que auxilia paciente durante exame e não integra equipe ocupacional",
+        "Acompanhante"
+      ],
+      [
+        "Procedimento que verifica integridade de barreiras protetoras",
+        "Inspeção"
+      ]
+    ],
+    [
+      [
+        "Aviso que identifica risco de exposição ionizante",
+        "Sinalização"
+      ],
+      [
+        "Ação que verifica indicação antes da exposição",
+        "Justificar"
+      ],
+      [
+        "Estrutura que absorve parte do feixe antes de alcançar área protegida",
+        "Barreira"
+      ],
+      [
+        "Ajuste de exposição proporcional ao tamanho do paciente",
+        "Adaptação técnica"
+      ],
+      [
+        "Método de registro sistemático de exposições profissionais",
+        "Monitoração"
+      ],
+      [
+        "Ação de investigar falha antes de repetir exame",
+        "Correção"
+      ],
+      [
+        "Radiação direcionada à região anatômica de interesse",
+        "Feixe útil"
+      ],
+      [
+        "Elemento usado para reduzir transmissão através de barreira",
+        "Atenuador"
+      ],
+      [
+        "Fator que relaciona intensidade e distância de fonte puntiforme",
+        "Inverso do quadrado"
+      ],
+      [
+        "Revisão técnica após manutenção com impacto no desempenho",
+        "Verificação"
+      ]
+    ]
+  ],
+  "status": "revisao-editorial-inicial"
+}
