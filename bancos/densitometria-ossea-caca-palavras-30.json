@@ -1,0 +1,126 @@
+{
+  "title": "Densitometria Óssea — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual sigla identifica a absorciometria de dupla energia?",
+      "answer": "DXA"
+    },
+    {
+      "question": "Qual escore compara DMO a adultos jovens de referência?",
+      "answer": "TSCORE"
+    },
+    {
+      "question": "Qual escore compara DMO com referência de mesma idade?",
+      "answer": "ZSCORE"
+    },
+    {
+      "question": "Qual sigla designa densidade mineral óssea?",
+      "answer": "DMO"
+    },
+    {
+      "question": "Qual sigla indica conteúdo mineral ósseo?",
+      "answer": "BMC"
+    },
+    {
+      "question": "Qual sigla identifica a menor mudança significativa?",
+      "answer": "LSC"
+    },
+    {
+      "question": "Qual sigla designa a região de interesse na análise?",
+      "answer": "ROI"
+    },
+    {
+      "question": "Qual índice avalia textura trabecular lombar como complemento à DMO?",
+      "answer": "TBS"
+    },
+    {
+      "question": "Qual ferramenta estima probabilidade de fratura em dez anos?",
+      "answer": "FRAX"
+    },
+    {
+      "question": "Qual sigla designa avaliação de fratura vertebral por DXA?",
+      "answer": "VFA"
+    },
+    {
+      "question": "Qual doença corresponde à categoria densitométrica de T-score ≤ −2,5?",
+      "answer": "OSTEOPOROSE"
+    },
+    {
+      "question": "Qual alteração degenerativa óssea pode superestimar DMO lombar?",
+      "answer": "OSTEÓFITO"
+    },
+    {
+      "question": "Qual alteração de alinhamento pode comprometer segmentação vertebral?",
+      "answer": "ESCOLIOSE"
+    },
+    {
+      "question": "Qual artefato por material implantado pode invalidar um sítio femoral?",
+      "answer": "PRÓTESE"
+    },
+    {
+      "question": "Qual processo compara leituras de aparelhos distintos para seguimento?",
+      "answer": "CALIBRAÇÃO"
+    },
+    {
+      "question": "Qual teste avalia reprodutibilidade das medições DXA?",
+      "answer": "PRECISÃO"
+    },
+    {
+      "question": "Qual processo delimita as estruturas analisadas na imagem?",
+      "answer": "SEGMENTAÇÃO"
+    },
+    {
+      "question": "Qual procedimento de padronização do fêmur envolve orientação do membro?",
+      "answer": "ROTAÇÃO"
+    },
+    {
+      "question": "Qual estrutura do fêmur proximal pode ser usada para classificação?",
+      "answer": "COLO"
+    },
+    {
+      "question": "Qual osso do antebraço é usado na região de 33%?",
+      "answer": "RÁDIO"
+    },
+    {
+      "question": "Qual região da coluna é normalmente medida na DXA axial?",
+      "answer": "LOMBAR"
+    },
+    {
+      "question": "Qual tipo de osso predomina no rádio 33%?",
+      "answer": "CORTICAL"
+    },
+    {
+      "question": "Qual tecido ósseo predomina nos corpos vertebrais?",
+      "answer": "TRABECULAR"
+    },
+    {
+      "question": "Qual termo indica redução de massa óssea em comparação com referência?",
+      "answer": "OSTEOPENIA"
+    },
+    {
+      "question": "Qual fenômeno pode elevar artificialmente a medida por depósitos arteriais?",
+      "answer": "CALCIFICAÇÃO"
+    },
+    {
+      "question": "Qual termo descreve perda da continuidade do osso por trauma?",
+      "answer": "FRATURA"
+    },
+    {
+      "question": "Qual fator do FRAX inclui histórico de fratura de baixa energia?",
+      "answer": "ANTECEDENTE"
+    },
+    {
+      "question": "Qual alteração de medida ultrapassa a menor mudança significativa?",
+      "answer": "SIGNIFICATIVA"
+    },
+    {
+      "question": "Qual avaliação periódica verifica estabilidade do densitômetro?",
+      "answer": "QUALIDADE"
+    },
+    {
+      "question": "Qual processo de acompanhar a DMO ao longo do tempo é chamado de quê?",
+      "answer": "MONITORAMENTO"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
