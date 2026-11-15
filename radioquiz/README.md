@@ -1,23 +1,41 @@
-# RADIOQUIZ — backend setup
+# RADIOQUIZ — UNITERP
 
-## Current repository state
-- `index.html`: responsive visual prototype for teacher and student views.
-- `supabase/migrations/202611140001_radioquiz_schema.sql`: isolated database schema foundation.
+Frontend estático independente para GitHub Pages, com Supabase Auth, Postgres e Realtime.
 
-## Important: not connected yet
-The SQL file is a starting schema proposal, not a live database deployment. It has **not** been applied to any Supabase project. The migration enables Row Level Security and revokes direct browser access to every table. A subsequent migration must add narrowly scoped server-side RPC functions for teacher authentication, room creation, PIN-based team entry, question delivery, answer submission, scoring and room state. Never expose a Supabase service-role key in browser code.
+## Acessos
 
-## Apply only after the project is confirmed
-1. Open the Supabase project intended for RADIOQUIZ.
-2. Confirm it is a dedicated project or that the owner explicitly approves adding the isolated `radioquiz_*` tables.
-3. Review the migration in the SQL Editor or use the Supabase CLI against a staging environment.
-4. Do not paste service-role keys, database passwords, or private tokens into chat or GitHub.
-5. After applying the schema, implement and test the RPC layer before enabling the buttons in the website.
+- Alunos: `/radioquiz/` — um aparelho por dupla, entrada com PIN, nome e dois integrantes.
+- Professora: `/radioquiz/?view=teacher` — conta confirmada cujo e-mail está autorizado no banco privado.
+- Projetor: aberto pelo botão da sala, em nova aba no computador da professora. Não mostra ranking.
 
-## Game rules captured for implementation
-- Teams consist of exactly two students.
-- Each team submits one answer per question.
-- Score and answer validation must be calculated on the server, not trusted from the browser.
-- A room uses a short join PIN, stored as a digest rather than plain text.
-- Student-facing screens should not reveal the correct answer before the teacher advances the game.
-- Collect only the minimum student information required for the classroom activity.
+O login administrativo do aplicativo é separado do login do dashboard Supabase. O painel da professora permite criar questionários, selecionar perguntas de vários bancos, configurar tempo/pontos/penalidade, criar salas, controlar questões, bloquear duplas e consultar histórico.
+
+O primeiro cadastro da professora depende de confirmação de e-mail. Antes da publicação funcional, conferir no Supabase Auth a URL do site e os redirecionamentos exatos para `https://patriciaamaralcriativa.github.io/radioquiz/`.
+
+## Banco e configuração
+
+As duas migrações foram aplicadas exclusivamente ao projeto dedicado, após autorização. As tabelas têm RLS; leitura e escrita diretas estão revogadas, exceto pelo sinal seguro de atualização. O e-mail autorizado fica somente na tabela privada, nunca no repositório. `config.js` contém apenas URL pública e chave **publishable**, apropriada para frontend. Nunca adicionar chaves secretas/service_role.
+
+Perguntas e gabaritos ficam no servidor. As respostas são únicas por dupla/pergunta; o servidor valida o prazo e calcula os pontos. Snapshots das questões preservam cada partida. O relógio da tela usa o prazo e a hora do servidor. Uma consulta de recuperação complementa Realtime após desconexões ou perda de mensagens.
+
+## Reproduzir
+
+```sh
+cd radioquiz
+npm ci
+npm run build
+npm run check
+cd tests
+npm ci
+npm test
+```
+
+O bundle do SDK é versionado em `vendor/`, para que a página não dependa de CDN. Versões estão fixadas nos lockfiles.
+
+## Estado e limites
+
+Leia `IMPLEMENTACAO.md` para testes concluídos e pendências. A interface conectada está na branch de desenvolvimento; a página principal do site foi preservada. Não anunciar como plataforma concluída antes dos testes da competição completa por HTTP/Realtime e em dispositivos independentes.
+
+O botão Repetir cria uma nova sala sem apagar a anterior e depende da configuração guardada neste navegador. Em outro computador, prepare a nova partida pela biblioteca. O PIN é exibido a partir do registro local da sessão que criou a sala; não é recuperável do digest armazenado no banco. Preserve a sessão do computador da professora durante a aula.
+
+Recursos especiais (roubo, escudo, bônus e desempate) pertencem à etapa posterior e ainda não foram implementados.

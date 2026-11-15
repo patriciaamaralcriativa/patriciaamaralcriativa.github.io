@@ -80,3 +80,28 @@ A conferência posterior confirmou zero salas e zero contas sintéticas remanesc
 Os avisos informativos de RLS sem políticas nas tabelas fechadas são esperados: o acesso direto foi revogado e o acesso ocorre pela API validada. Os dois avisos preexistentes sobre o event trigger `rls_auto_enable` permanecem para revisão; nenhuma permissão foi alterada nessa função da plataforma.
 
 A configuração de provedores Auth exige painel web, pois o conector não oferece essa operação. O navegador não estava autenticado. A opção ChatGPT foi selecionada no formulário seguro, mas a continuação da autenticação foi bloqueada pela revisão automática por exigir autorização específica do método/conta. Não houve mudança nas configurações Auth. Não solicitar senha no chat.
+
+## Interfaces conectadas — 15/11/2026
+
+Implementados na branch de desenvolvimento: entrada das duplas com sessão Auth anônima; login/cadastro separado da professora; editor de questionários com quatro alternativas, gabarito, explicação, tempo/pontos, assunto e imagem HTTPS; importação/exportação JSON; seleção individual de perguntas de vários questionários; configuração de sala; controles de início/encerramento/avanço; projeção sem ranking; confirmação de envio; pontuação e classificação nos celulares; bloqueio e liberação; histórico e exportação de resultados. Repetir sala cria uma sala nova com a seleção guardada no mesmo navegador.
+
+A configuração necessária `Allow anonymous sign-ins` foi confirmada habilitada e salva no dashboard. Nenhuma nova migração foi aplicada nesta etapa.
+
+Conferências concluídas nesta etapa:
+- `npm run build` gerou o bundle local do SDK com versões fixadas.
+- `npm run check` passou para os módulos da aplicação.
+- A suíte das 38 verificações locais de PostgreSQL passou novamente.
+- Uma chamada real ao Supabase Auth criou sessão anônima; a API retornou `teacher: false` corretamente.
+- No navegador, a entrada dos alunos consultou o serviço real e exibiu `PIN não encontrado` para `000000`, liberando o botão para nova tentativa.
+- A tela separada de login da professora abriu sem expor painel ou gabaritos para a sessão de aluno.
+
+Pendências objetivas:
+- A revisão automática bloqueou a concessão administrativa de uma identidade sintética para teste completo por HTTP/Realtime. Não houve concessão. O teste parou na confirmação de que a sessão ainda não é professora; isso é bloqueio de preparação, não um teste de partida aprovado.
+- `tests/live-session.mjs` contém o roteiro do teste simultâneo, mas exige uma identidade temporária autorizada previamente. Só executar com preparação explícita e limpeza dos registros gerados.
+- Os testes criaram sessões anônimas descartáveis. A limpeza deve visar apenas os IDs de teste registrados, nunca contas de alunos ou da professora.
+- Cadastro confirmado da professora e redirecionamento de confirmação ainda não foram testados.
+- Realtime, reconexão distribuída, testes em celulares reais, responsividade completa e teste de carga ainda não foram validados nesta etapa.
+- O fluxo administrativo e a partida completa na interface aguardam o teste com a identidade autorizada.
+- O sinal Realtime é emitido por resposta e pode alcançar o limite gratuito em rajadas de muitas duplas; a consulta periódica recupera estado, mas a capacidade real de uma turma ainda deve ser medida.
+
+Nenhuma alteração da página principal. Não foi feita publicação desta interface na branch principal nesta etapa.
