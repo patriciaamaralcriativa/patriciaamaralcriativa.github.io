@@ -1,0 +1,132 @@
+{
+  "disciplina": "Tomografia Computadorizada",
+  "sets": [
+    [
+      [
+        "Relação entre avanço da mesa por rotação e colimação total",
+        "Pitch"
+      ],
+      [
+        "Avanço longitudinal contínuo durante rotação do tubo",
+        "Aquisição helicoidal"
+      ],
+      [
+        "Limitação longitudinal do feixe de raios X",
+        "Colimação"
+      ],
+      [
+        "Espessura longitudinal da imagem reconstruída",
+        "Espessura de corte"
+      ],
+      [
+        "Distância entre centros de imagens reconstruídas consecutivas",
+        "Intervalo de reconstrução"
+      ],
+      [
+        "Média de atenuações de tecidos diferentes no mesmo voxel",
+        "Volume parcial"
+      ],
+      [
+        "Escala de atenuação usada em tomografia",
+        "Unidades Hounsfield"
+      ],
+      [
+        "Referência aproximada de zero HU",
+        "Água"
+      ],
+      [
+        "Material de referência aproximado de −1000 HU",
+        "Ar"
+      ],
+      [
+        "Ajuste da faixa de atenuações exibida",
+        "Largura de janela"
+      ]
+    ],
+    [
+      [
+        "Ajuste do centro da faixa de HU exibida",
+        "Nível de janela"
+      ],
+      [
+        "Área escolhida para medir atenuação ou acompanhar realce",
+        "Região de interesse"
+      ],
+      [
+        "Monitoramento de HU vascular para disparar aquisição",
+        "Bolus tracking"
+      ],
+      [
+        "Aquisição destinada ao pico de realce arterial",
+        "Fase arterial"
+      ],
+      [
+        "Fase abdominal que favorece realce do sistema porta",
+        "Fase portal"
+      ],
+      [
+        "Fase tardia para demonstrar contraste no sistema coletor",
+        "Fase excretora"
+      ],
+      [
+        "Reconstrução de cortes em planos alternativos",
+        "MPR"
+      ],
+      [
+        "Projeção que privilegia os maiores valores de atenuação",
+        "MIP"
+      ],
+      [
+        "Reformatação que acompanha o trajeto curvo de um vaso",
+        "CPR"
+      ],
+      [
+        "Representação tridimensional com seleção de estruturas",
+        "Renderização volumétrica"
+      ]
+    ],
+    [
+      [
+        "Propriedade de voxels com dimensões semelhantes nos três eixos",
+        "Isotropia"
+      ],
+      [
+        "Campo selecionado para reconstrução da imagem",
+        "FOV"
+      ],
+      [
+        "Grade de pixels da imagem reconstruída",
+        "Matriz"
+      ],
+      [
+        "Unidade de volume representada na TC",
+        "Voxel"
+      ],
+      [
+        "Unidade bidimensional da imagem digital",
+        "Pixel"
+      ],
+      [
+        "Atenuação alta típica do osso cortical",
+        "Hiperdensidade"
+      ],
+      [
+        "Atenuação baixa típica de gordura em relação a tecidos moles",
+        "Hipodensidade"
+      ],
+      [
+        "Saída de contraste do vaso para tecidos no acesso",
+        "Extravasamento"
+      ],
+      [
+        "Substância intravenosa que modifica o realce de vasos e órgãos",
+        "Contraste iodado"
+      ],
+      [
+        "Processo matemático que transforma projeções em imagens",
+        "Reconstrução"
+      ]
+    ]
+  ],
+  "status": "revisado"
+}
