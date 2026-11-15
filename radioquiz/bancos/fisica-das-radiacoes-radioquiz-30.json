@@ -3,425 +3,425 @@
   "subject": "Física das Radiações",
   "questions": [
     {
-      "prompt": "Um tubo opera a 80 kVp. Qual é a energia máxima possível de um fóton de bremsstrahlung nesse feixe?",
+      "prompt": "Um átomo neutro perde um elétron. O que se forma?",
       "options": [
-        "40 keV",
-        "80 keV",
-        "160 keV",
-        "80 MeV"
-      ],
-      "answer_index": 1,
-      "explanation": "O máximo corresponde à energia adquirida por um elétron através da diferença de potencial de 80 kV.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Uma corrente de 250 mA atua por 0,08 s. Qual mAs é produzido?",
-      "options": [
-        "31,25 mAs",
-        "200 mAs",
-        "3,125 mAs",
-        "20 mAs"
-      ],
-      "answer_index": 3,
-      "explanation": "250 × 0,08 = 20 mAs.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Um protocolo mantém 30 mAs ao passar de 150 para 300 mA. O tempo muda de 0,20 s para:",
-      "options": [
-        "0,10 s",
-        "0,05 s",
-        "0,30 s",
-        "0,40 s"
-      ],
-      "answer_index": 0,
-      "explanation": "30/300 = 0,10 s.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Um feixe de 100 unidades atravessa uma camada semiespessura e depois outra idêntica. Qual intensidade permanece?",
-      "options": [
-        "50 unidades",
-        "75 unidades",
-        "25 unidades",
-        "12,5 unidades"
+        "Um ânion, pois a perda aumenta sua carga negativa.",
+        "Um isótopo, pois o núcleo ganha nêutrons.",
+        "Um cátion, pois passa a ter carga líquida positiva.",
+        "Um novo elemento, pois muda seu número atômico."
       ],
       "answer_index": 2,
-      "explanation": "Cada camada semirredutora reduz a intensidade pela metade: 100→50→25.",
-      "time_limit_seconds": 60,
+      "explanation": "A perda de elétron gera íon positivo sem modificar os prótons.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Atomística"
     },
     {
-      "prompt": "Uma fonte puntiforme fornece 80 µGy/h a 1 m em condições ideais. A 2 m, a taxa será aproximadamente:",
+      "prompt": "Dois átomos possuem o mesmo número de prótons e diferentes quantidades de nêutrons. Eles são:",
       "options": [
-        "40 µGy/h",
-        "160 µGy/h",
-        "20 µGy/h",
-        "320 µGy/h"
-      ],
-      "answer_index": 2,
-      "explanation": "Dobrar distância reduz intensidade por fator quatro.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Uma fonte pontual tem taxa de 36 µSv/h a 2 m. A 3 m, em campo livre, qual valor aproximado?",
-      "options": [
-        "16 µSv/h",
-        "24 µSv/h",
-        "54 µSv/h",
-        "81 µSv/h"
+        "Isótopos de um mesmo elemento.",
+        "Isóbaros com número atômico necessariamente diferente.",
+        "Íons com cargas necessariamente opostas.",
+        "Elementos distintos com a mesma eletrosfera."
       ],
       "answer_index": 0,
-      "explanation": "36 × (2/3)² = 16 µSv/h.",
-      "time_limit_seconds": 60,
+      "explanation": "O número de prótons define o elemento; nêutrons diferentes definem isótopos.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Atomística"
     },
     {
-      "prompt": "Um detector registra 1200 contagens em 4 minutos. Qual taxa média?",
+      "prompt": "Um átomo recebe elétrons sem sofrer alteração nuclear. Qual grandeza permanece necessariamente igual?",
       "options": [
-        "4800 contagens/min",
-        "200 contagens/min",
-        "1200 contagens/min",
-        "300 contagens/min"
+        "A carga elétrica total.",
+        "A quantidade de elétrons.",
+        "O número de partículas negativas.",
+        "O número atômico."
       ],
       "answer_index": 3,
-      "explanation": "1200/4 = 300 contagens por minuto.",
-      "time_limit_seconds": 60,
+      "explanation": "O número atômico corresponde ao número de prótons, que não mudou.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Atomística"
     },
     {
-      "prompt": "Um radionuclídeo com meia-vida de 6 h inicia com 800 MBq. Após 18 h restam:",
+      "prompt": "Um estudante diz que número de massa e massa atômica são sinônimos exatos. Qual correção é adequada?",
       "options": [
-        "200 MBq",
-        "100 MBq",
-        "400 MBq",
-        "50 MBq"
+        "Ambos contam apenas os elétrons da camada externa.",
+        "Número de massa conta prótons e nêutrons de um nuclídeo; massa atômica é uma grandeza de massa.",
+        "Número de massa é sempre uma média ponderada de isótopos.",
+        "Massa atômica é o número de prótons em qualquer átomo."
       ],
       "answer_index": 1,
-      "explanation": "Três meias-vidas: 800→400→200→100 MBq.",
-      "time_limit_seconds": 60,
+      "explanation": "Número de massa é inteiro; massa atômica é massa expressa em unidades apropriadas.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Atomística"
     },
     {
-      "prompt": "Um material possui coeficiente de atenuação linear µ=0,2 cm⁻¹. Qual espessura semirredutora aproximada?",
+      "prompt": "Um núcleo sofre transformação que modifica a quantidade de prótons. O que ocorre com a identidade química?",
       "options": [
-        "3,47 cm",
-        "0,14 cm",
-        "5,00 cm",
-        "6,93 cm"
-      ],
-      "answer_index": 0,
-      "explanation": "CSR=ln(2)/µ≈0,693/0,2=3,47 cm.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Se o número de fótons detectados quadruplica e predomina ruído quântico, a relação sinal-ruído melhora por fator aproximado de:",
-      "options": [
-        "4",
-        "8",
-        "2",
-        "16"
-      ],
-      "answer_index": 2,
-      "explanation": "Para estatística de Poisson, SNR cresce aproximadamente com raiz quadrada de N.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Um detector registra 400 fótons em média por elemento. O desvio-padrão quântico esperado é próximo de:",
-      "options": [
-        "40",
-        "20",
-        "200",
-        "400"
+        "O elemento permanece obrigatoriamente o mesmo.",
+        "O elemento químico pode mudar.",
+        "A mudança afeta apenas a carga dos elétrons.",
+        "O número atômico deixa de ter significado."
       ],
       "answer_index": 1,
-      "explanation": "Para Poisson, σ≈√400=20.",
-      "time_limit_seconds": 60,
+      "explanation": "A identidade do elemento depende do número de prótons.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Atomística"
     },
     {
-      "prompt": "Qual grandeza expressa energia depositada por unidade de massa?",
+      "prompt": "Por que um átomo pode tornar-se ânion sem alterar seu núcleo?",
       "options": [
-        "Atividade",
-        "Fluência",
-        "Taxa de contagem",
-        "Dose absorvida"
+        "Porque perde prótons e permanece o mesmo elemento.",
+        "Porque ganha nêutrons e muda de número atômico.",
+        "Porque emite fótons e elimina a eletrosfera.",
+        "Porque ganha elétrons e adquire carga negativa."
       ],
       "answer_index": 3,
-      "explanation": "Dose absorvida é energia depositada por unidade de massa, em gray.",
-      "time_limit_seconds": 60,
+      "explanation": "Ânions resultam de ganho de elétrons.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Íons"
     },
     {
-      "prompt": "Um tecido absorve 0,02 J em 0,5 kg. Qual dose absorvida média?",
+      "prompt": "Uma emissão alfa ocorre em um núcleo instável. Qual descrição identifica a partícula emitida?",
       "options": [
-        "0,01 Gy",
-        "0,25 Gy",
-        "0,04 Gy",
-        "25 Gy"
+        "Núcleo de hélio com dois prótons e dois nêutrons.",
+        "Elétron emitido da eletrosfera por aquecimento.",
+        "Fóton sem massa de repouso e sem carga.",
+        "Nêutron isolado acompanhado de luz visível."
+      ],
+      "answer_index": 0,
+      "explanation": "A partícula alfa é formada por dois prótons e dois nêutrons.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Radioatividade"
+    },
+    {
+      "prompt": "Ao comparar emissões alfa e gama, qual diferença é fundamental?",
+      "options": [
+        "Ambas são fótons de frequências distintas.",
+        "Gama é formada por dois prótons e dois nêutrons.",
+        "Alfa é corpuscular e carregada; gama é radiação eletromagnética.",
+        "Alfa é uma onda eletromagnética sem carga."
       ],
       "answer_index": 2,
-      "explanation": "D=0,02/0,5=0,04 J/kg=0,04 Gy.",
-      "time_limit_seconds": 60,
+      "explanation": "Alfa consiste em partículas materiais; gama consiste em fótons.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Radioatividade"
     },
     {
-      "prompt": "Um radionuclídeo apresenta 1 MBq. Isso corresponde a quantas desintegrações por segundo?",
+      "prompt": "Uma emissão beta menos ocorre no núcleo. Qual partícula é emitida nesse processo?",
       "options": [
-        "1 milhão",
-        "Mil",
-        "Um bilhão",
-        "Uma por minuto"
-      ],
-      "answer_index": 0,
-      "explanation": "1 Bq equivale a uma desintegração por segundo.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Ao elevar kVp mantendo os demais fatores, qual efeito físico é mais esperado no espectro?",
-      "options": [
-        "Mesma energia máxima com apenas mais fótons",
-        "Maior energia máxima e alteração da distribuição de energias",
-        "Redução obrigatória da energia máxima",
-        "Transformação dos fótons em elétrons antes de sair do tubo"
-      ],
-      "answer_index": 1,
-      "explanation": "A energia máxima dos fótons acompanha a tensão de pico aplicada.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Uma filtração adicional remove preferencialmente fótons de baixa energia. Qual efeito é esperado?",
-      "options": [
-        "Redução da energia média por seleção dos mais energéticos",
-        "Aumento obrigatório do número total de fótons transmitidos",
-        "Eliminação completa da radiação espalhada",
-        "Aumento da energia média do feixe transmitido"
+        "Um próton livre, acompanhado de um fóton visível.",
+        "Um núcleo de hélio.",
+        "Um fóton gama com carga negativa.",
+        "Um elétron, acompanhado de um antineutrino eletrônico."
       ],
       "answer_index": 3,
-      "explanation": "O endurecimento do feixe aumenta a energia média do espectro transmitido.",
-      "time_limit_seconds": 60,
+      "explanation": "No decaimento beta menos, um nêutron converte-se em próton, emitindo elétron e antineutrino.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Radioatividade"
     },
     {
-      "prompt": "O número de fótons incidentes é 1000 e o transmitido é 300. Qual fração transmitida?",
+      "prompt": "Um aluno afirma que raios X e raios gama diferem obrigatoriamente pela energia. Qual avaliação é correta?",
       "options": [
-        "0,30",
-        "0,70",
-        "3,33",
-        "0,03"
+        "Raios X são partículas com massa e gama são ondas.",
+        "A distinção convencional está associada à origem, e suas energias podem se sobrepor.",
+        "Gama tem sempre energia inferior à luz visível.",
+        "Raios X não pertencem ao espectro eletromagnético."
       ],
-      "answer_index": 0,
-      "explanation": "Transmissão é 300/1000=0,30.",
-      "time_limit_seconds": 60,
+      "answer_index": 1,
+      "explanation": "Raios X e gama são fótons; a classificação costuma considerar seu mecanismo de origem.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Radioatividade"
     },
     {
-      "prompt": "Um feixe tem transmissão de 40% em uma barreira. Qual fração foi removida do feixe primário?",
+      "prompt": "Qual situação caracteriza fissão nuclear?",
       "options": [
-        "40%",
-        "20%",
-        "60%",
-        "140%"
+        "Dois núcleos leves se unem para formar um mais pesado.",
+        "Um elétron muda de orbital sem alteração nuclear.",
+        "Um núcleo pesado se divide em fragmentos menores, com liberação de energia.",
+        "Uma onda muda de direção ao atravessar uma interface."
       ],
       "answer_index": 2,
-      "explanation": "Se 40% permanece, 60% foi atenuado do feixe primário.",
-      "time_limit_seconds": 60,
+      "explanation": "Fissão envolve divisão de núcleo pesado, geralmente com emissão de nêutrons.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Nuclear"
     },
     {
-      "prompt": "Dois protocolos produzem 10 e 40 mAs, com kVp e condições constantes. Qual razão nominal de quantidade de radiação produzida?",
+      "prompt": "Qual descrição corresponde à fusão nuclear?",
       "options": [
-        "1:2",
-        "4:1",
-        "1:16",
-        "1:4"
+        "Núcleos leves se combinam formando um núcleo mais pesado, sob condições adequadas.",
+        "Um núcleo pesado se divide em dois fragmentos menores.",
+        "Um átomo neutro captura elétron da eletrosfera de outro átomo.",
+        "Um fóton sofre reflexão em uma superfície metálica."
       ],
-      "answer_index": 3,
-      "explanation": "A quantidade de radiação produzida é aproximadamente proporcional ao mAs.",
-      "time_limit_seconds": 60,
+      "answer_index": 0,
+      "explanation": "Fusão é a união de núcleos leves.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Nuclear"
     },
     {
-      "prompt": "Uma fonte tem atividade inicial de 640 MBq e meia-vida de 2 h. Após 6 h sua atividade é:",
+      "prompt": "Um campo magnético variável pode produzir campo elétrico. Qual fenômeno físico fundamenta essa relação?",
       "options": [
-        "160 MBq",
-        "80 MBq",
-        "320 MBq",
-        "40 MBq"
+        "Decaimento alfa.",
+        "Indução eletromagnética.",
+        "Ionização por captura eletrônica.",
+        "Atenuação por camada semirredutora."
       ],
       "answer_index": 1,
-      "explanation": "Três meias-vidas reduzem 640 para 80 MBq.",
-      "time_limit_seconds": 60,
+      "explanation": "Campos elétricos e magnéticos variáveis estão relacionados pelas equações do eletromagnetismo.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Eletromagnetismo"
     },
     {
-      "prompt": "Em um circuito, a tensão é 100 V e a corrente 2 A. Qual potência elétrica?",
+      "prompt": "Uma onda sonora propaga-se no ar. Por que ela é classificada como mecânica?",
       "options": [
-        "50 W",
-        "102 W",
-        "200 W",
-        "0,02 W"
+        "Porque é constituída exclusivamente por fótons.",
+        "Porque pode propagar-se no vácuo sem interação.",
+        "Porque transporta prótons de uma região para outra.",
+        "Porque necessita de meio material para sua propagação."
+      ],
+      "answer_index": 3,
+      "explanation": "O som depende das oscilações de partículas de um meio.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Ondulatória"
+    },
+    {
+      "prompt": "Uma onda eletromagnética atravessa o vácuo. Qual afirmação é correta?",
+      "options": [
+        "Ela exige moléculas de ar para transmitir energia.",
+        "Ela é sempre longitudinal no vácuo.",
+        "Ela não necessita de meio material para se propagar.",
+        "Ela transporta necessariamente elétrons entre fonte e receptor."
       ],
       "answer_index": 2,
-      "explanation": "P=VI=100×2=200 W.",
-      "time_limit_seconds": 60,
+      "explanation": "Ondas eletromagnéticas podem propagar-se no vácuo.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "Um aparelho fornece 120 kV e 0,2 A ao tubo por 0,1 s. Qual energia elétrica nominal entregue nesse intervalo?",
+      "prompt": "Em uma onda transversal ideal, qual é a relação entre vibração e propagação?",
       "options": [
-        "2400 J",
-        "240 J",
-        "24 J",
-        "24 000 J"
+        "A vibração ocorre perpendicularmente à direção de propagação.",
+        "A vibração ocorre necessariamente paralela à propagação.",
+        "Não há oscilação de nenhuma grandeza.",
+        "A propagação exige deslocamento líquido de matéria até o destino."
       ],
       "answer_index": 0,
-      "explanation": "E=VIt=120000×0,2×0,1=2400 J.",
-      "time_limit_seconds": 60,
+      "explanation": "A característica transversal é a perpendicularidade entre vibração e propagação.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "Um feixe atravessa três camadas semirredutoras. Qual fração primária permanece?",
+      "prompt": "Em uma onda longitudinal, como se orientam as oscilações do meio?",
       "options": [
-        "1/3",
-        "1/6",
-        "1/16",
-        "1/8"
+        "Perpendicularmente à direção de propagação.",
+        "Sempre em círculos no plano transversal.",
+        "Sem qualquer relação com a direção de propagação.",
+        "Paralelamente à direção de propagação."
       ],
       "answer_index": 3,
-      "explanation": "A fração é (1/2)³=1/8.",
-      "time_limit_seconds": 60,
+      "explanation": "Em ondas longitudinais, as oscilações são paralelas à propagação.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "Uma imagem apresenta maior ruído após redução da exposição, mantendo processamento. Qual mecanismo físico pode explicar?",
+      "prompt": "Uma onda atravessa uma abertura e se espalha para além da região diretamente alinhada. Qual fenômeno é ilustrado?",
       "options": [
-        "Maior número de fótons e menor ruído quântico",
-        "Menor número de fótons detectados e maior flutuação relativa",
-        "Aumento da energia máxima causado pelo ruído",
-        "Desaparecimento do sinal eletrônico"
+        "Reflexão especular.",
+        "Difração.",
+        "Fissão nuclear.",
+        "Ionização por efeito fotoelétrico."
       ],
       "answer_index": 1,
-      "explanation": "Menos fótons aumentam a flutuação relativa de contagens.",
-      "time_limit_seconds": 60,
+      "explanation": "Difração é o espalhamento de ondas ao contornar obstáculos ou atravessar aberturas.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "Um feixe de 60 keV tem comprimento de onda menor que outro de 30 keV porque:",
+      "prompt": "Um feixe luminoso muda de direção ao passar obliquamente do ar para a água. Qual fenômeno explica isso?",
       "options": [
-        "Energia e comprimento de onda são inversamente proporcionais",
-        "A velocidade dos fótons de 60 keV é duas vezes maior",
-        "Fótons de 30 keV não são eletromagnéticos",
-        "A frequência não se relaciona à energia"
+        "Refração.",
+        "Difração nuclear.",
+        "Emissão beta.",
+        "Reflexão total em qualquer ângulo."
       ],
       "answer_index": 0,
-      "explanation": "E=hc/λ, portanto maior energia implica menor comprimento de onda.",
-      "time_limit_seconds": 60,
+      "explanation": "A refração pode alterar a direção da propagação ao mudar a velocidade da onda entre meios.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "Um elétron é acelerado por 70 kV e perde toda a energia cinética em uma interação. Qual limite superior de energia de um único fóton gerado?",
+      "prompt": "A luz incide em um espelho plano e retorna ao meio de origem. Qual fenômeno predomina?",
       "options": [
-        "140 keV",
-        "35 keV",
-        "7 MeV",
-        "70 keV"
-      ],
-      "answer_index": 3,
-      "explanation": "A energia do fóton não pode exceder a energia cinética disponível do elétron.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Uma taxa de dose de 12 µSv/h permanece constante por 45 min. Qual dose acumulada aproximada?",
-      "options": [
-        "16 µSv",
-        "27 µSv",
-        "9 µSv",
-        "0,27 µSv"
+        "Fusão.",
+        "Ionização.",
+        "Reflexão.",
+        "Decaimento gama."
       ],
       "answer_index": 2,
-      "explanation": "45 min=0,75 h; 12×0,75=9 µSv.",
-      "time_limit_seconds": 60,
+      "explanation": "Reflexão é o retorno da onda ao meio de origem em uma interface.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "A atividade de uma fonte cai de 400 para 100 MBq em 10 dias. Qual meia-vida física?",
+      "prompt": "Uma fonte luminosa emite luz com maior frequência que outra. No vácuo, qual relação física é correta?",
       "options": [
-        "10 dias",
-        "5 dias",
-        "2,5 dias",
-        "20 dias"
+        "Sua luz necessariamente tem maior amplitude.",
+        "Sua luz propaga-se mais rapidamente no vácuo.",
+        "Sua luz possui menor comprimento de onda.",
+        "Sua luz deixa de ser eletromagnética."
       ],
-      "answer_index": 1,
-      "explanation": "A redução para um quarto corresponde a duas meias-vidas em 10 dias.",
-      "time_limit_seconds": 60,
+      "answer_index": 2,
+      "explanation": "No vácuo, frequência e comprimento de onda são inversamente proporcionais.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
     },
     {
-      "prompt": "Em uma região com 900 contagens e outra com 100, qual é a razão de contagens entre as regiões?",
+      "prompt": "Duas ondas luminosas de mesma frequência têm amplitudes diferentes. Qual característica está diretamente associada à amplitude do campo elétrico?",
       "options": [
-        "3:1",
-        "1:9",
-        "90:1",
-        "9:1"
-      ],
-      "answer_index": 3,
-      "explanation": "900/100=9.",
-      "time_limit_seconds": 60,
-      "points": 1000,
-      "topic": "Física das Radiações"
-    },
-    {
-      "prompt": "Em um detector, uma região recebe 1600 fótons e outra 400. Se o ruído for quântico, a razão entre desvios-padrão é:",
-      "options": [
-        "2:1",
-        "4:1",
-        "1:2",
-        "16:1"
+        "A intensidade da onda, em condições comparáveis.",
+        "A identidade do elemento químico emissor.",
+        "A velocidade da luz no vácuo.",
+        "O número de prótons do núcleo."
       ],
       "answer_index": 0,
-      "explanation": "√1600/√400=40/20=2.",
-      "time_limit_seconds": 60,
+      "explanation": "A intensidade eletromagnética é proporcional ao quadrado da amplitude do campo elétrico.",
+      "time_limit_seconds": 55,
       "points": 1000,
-      "topic": "Física das Radiações"
+      "topic": "Ondulatória"
+    },
+    {
+      "prompt": "Qual sequência está organizada da menor para a maior frequência?",
+      "options": [
+        "Gama, raios X, visível, infravermelho, micro-ondas, rádio.",
+        "Ondas de rádio, micro-ondas, infravermelho, visível, ultravioleta, raios X, gama.",
+        "Rádio, raios X, micro-ondas, visível, infravermelho, gama.",
+        "Visível, rádio, gama, micro-ondas, infravermelho, raios X."
+      ],
+      "answer_index": 1,
+      "explanation": "No espectro eletromagnético, essa é a ordem usual de frequência crescente.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Espectro eletromagnético"
+    },
+    {
+      "prompt": "Uma onda de rádio e um raio X atravessam o vácuo. Qual propriedade compartilham?",
+      "options": [
+        "Ambos exigem um meio material.",
+        "Ambos possuem necessariamente o mesmo comprimento de onda.",
+        "Ambos são feixes de partículas alfa.",
+        "Ambos são radiações eletromagnéticas e propagam-se à mesma velocidade no vácuo."
+      ],
+      "answer_index": 3,
+      "explanation": "Todas as ondas eletromagnéticas propagam-se à velocidade da luz no vácuo.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Espectro eletromagnético"
+    },
+    {
+      "prompt": "No efeito fotoelétrico, qual interação caracteriza o processo?",
+      "options": [
+        "Um fóton é absorvido e um elétron é ejetado do material.",
+        "Um fóton é desviado e permanece com a mesma energia em toda interação.",
+        "Dois núcleos se unem e emitem um nêutron.",
+        "Um elétron perde massa e se converte em próton."
+      ],
+      "answer_index": 0,
+      "explanation": "No efeito fotoelétrico, a energia do fóton é transferida ao elétron, que pode ser ejetado.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Interações"
+    },
+    {
+      "prompt": "No espalhamento Compton, o que ocorre com o fóton incidente?",
+      "options": [
+        "Ele é sempre totalmente absorvido sem fóton emergente.",
+        "Ele se transforma em uma partícula alfa.",
+        "Ele é espalhado com energia menor após interagir com um elétron.",
+        "Ele aumenta obrigatoriamente sua energia após a interação com elétron inicialmente em repouso."
+      ],
+      "answer_index": 2,
+      "explanation": "No espalhamento Compton, o fóton transfere parte da energia ao elétron e emerge espalhado.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Interações"
+    },
+    {
+      "prompt": "Uma experiência evidencia interferência luminosa, enquanto outra demonstra transferência localizada de energia em fótons. Qual conceito reúne essas observações?",
+      "options": [
+        "Teoria de que a luz é apenas uma onda mecânica.",
+        "Ausência de quantização da energia luminosa.",
+        "Transformação de todos os fótons em nêutrons.",
+        "Dualidade onda-partícula da luz."
+      ],
+      "answer_index": 3,
+      "explanation": "A luz apresenta comportamentos ondulatórios e corpusculares conforme o fenômeno observado.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Dualidade"
+    },
+    {
+      "prompt": "Um elétron muda de um nível de maior energia para outro de menor energia em um átomo. O que pode acontecer?",
+      "options": [
+        "Aumento obrigatório do número de prótons.",
+        "Emissão de um fóton correspondente à diferença de energia entre níveis.",
+        "Formação de um novo isótopo por mudança de elétrons.",
+        "Divisão espontânea do núcleo em dois fragmentos."
+      ],
+      "answer_index": 1,
+      "explanation": "Transições eletrônicas podem produzir emissão de radiação eletromagnética.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Estrutura atômica"
+    },
+    {
+      "prompt": "Qual situação distingue radiação corpuscular de eletromagnética?",
+      "options": [
+        "Um feixe de elétrons é corpuscular; um feixe de raios X é eletromagnético.",
+        "Um feixe de raios X é composto de prótons.",
+        "Radiação alfa é uma onda eletromagnética.",
+        "Luz visível consiste em nêutrons em movimento."
+      ],
+      "answer_index": 0,
+      "explanation": "Elétrons são partículas materiais; raios X são fótons.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Radiações"
+    },
+    {
+      "prompt": "Uma onda encontra obstáculo e outra atravessa uma interface entre meios. Qual associação identifica corretamente os fenômenos?",
+      "options": [
+        "Contornar o obstáculo é fissão; mudar direção é fusão.",
+        "Ambos os fenômenos são necessariamente reflexão.",
+        "Ambos são decaimentos radioativos.",
+        "Contornar o obstáculo relaciona-se à difração; mudar direção na interface relaciona-se à refração."
+      ],
+      "answer_index": 3,
+      "explanation": "Difração e refração são fenômenos ondulatórios distintos.",
+      "time_limit_seconds": 55,
+      "points": 1000,
+      "topic": "Ondulatória"
     }
   ],
-  "status": "revisao-editorial-inicial"
+  "status": "revisao-de-conteudo-conforme-programa-docente-pendente-validacao-em-partida"
 }
