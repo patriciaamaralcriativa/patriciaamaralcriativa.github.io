@@ -1,0 +1,396 @@
+{
+  "disciplina": "Radioterapia",
+  "questoes": [
+    {
+      "titulo": "RADIOTERAPIA 1",
+      "pergunta": "Em um caso de próstata com enchimento vesical variável entre frações, qual é a principal consequência potencial?",
+      "alternativas": [
+        "Alteração espontânea da prescrição",
+        "Mudança da geometria entre alvo e órgãos de risco",
+        "Mudança da energia nominal do feixe",
+        "Eliminação do erro de setup"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Mudança da geometria entre alvo e órgãos de risco.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 2",
+      "pergunta": "Uma variação importante do volume retal no tratamento pélvico pode:",
+      "alternativas": [
+        "Tornar a máscara termoplástica mais rígida",
+        "Substituir a necessidade de IGRT",
+        "Deslocar o alvo e alterar doses em tecidos adjacentes",
+        "Modificar o comprimento de onda do feixe"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Deslocar o alvo e alterar doses em tecidos adjacentes.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 3",
+      "pergunta": "Na comparação entre plano 3D conformacional e IMRT, o ganho da IMRT deve ser avaliado considerando:",
+      "alternativas": [
+        "Somente o número de campos",
+        "Apenas a dose prescrita",
+        "Exclusivamente o tempo de planejamento",
+        "Conformação, órgãos de risco e complexidade de entrega"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Conformação, órgãos de risco e complexidade de entrega.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 4",
+      "pergunta": "Uma imagem de verificação alinhada por osso não coincide com o tumor móvel. Qual a conduta técnica?",
+      "alternativas": [
+        "Aplicar estratégia de registro apropriada ao alvo e protocolo",
+        "Aceitar sempre o alinhamento ósseo",
+        "Desconsiderar movimento tumoral",
+        "Alterar o diagnóstico histológico"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Aplicar estratégia de registro apropriada ao alvo e protocolo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 5",
+      "pergunta": "A margem interna de movimento do alvo se relaciona principalmente a:",
+      "alternativas": [
+        "Apenas calibração absoluta de dose",
+        "Variações fisiológicas internas como respiração",
+        "Somente erro mecânico do colimador",
+        "Exclusivamente posicionamento inicial da mesa"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Variações fisiológicas internas como respiração.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 6",
+      "pergunta": "No tratamento de pulmão, a compressão abdominal pode ser considerada para:",
+      "alternativas": [
+        "Aumentar sempre o volume-alvo",
+        "Substituir a delimitação do tumor",
+        "Reduzir amplitude de movimento respiratório em casos selecionados",
+        "Eliminar a necessidade de imagem de verificação"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Reduzir amplitude de movimento respiratório em casos selecionados.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 7",
+      "pergunta": "Uma alteração anatômica importante durante o curso de radioterapia pode justificar:",
+      "alternativas": [
+        "Aumento automático da dose diária",
+        "Supressão do controle de qualidade",
+        "Manutenção obrigatória do plano sem revisão",
+        "Reavaliação dosimétrica e eventual replanejamento"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Reavaliação dosimétrica e eventual replanejamento.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 8",
+      "pergunta": "Em braquiterapia ginecológica, a relação aplicador-alvo-órgãos de risco deve ser verificada porque:",
+      "alternativas": [
+        "Pequenas mudanças geométricas podem causar grandes diferenças de dose",
+        "A dose é espacialmente uniforme em todo tecido",
+        "A posição do aplicador não influencia a distribuição",
+        "O planejamento depende apenas do tempo total"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Pequenas mudanças geométricas podem causar grandes diferenças de dose.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 9",
+      "pergunta": "Uma fonte HDR não retorna ao cofre após o tratamento. Qual prioridade?",
+      "alternativas": [
+        "Desligar apenas o monitor de imagem",
+        "Acionar o procedimento institucional de emergência radiológica",
+        "Reiniciar ciclos sem comunicação",
+        "Remover manualmente a fonte sem treinamento"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Acionar o procedimento institucional de emergência radiológica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 10",
+      "pergunta": "Na radioterapia com elétrons, heterogeneidades de superfície podem:",
+      "alternativas": [
+        "Eliminar a penumbra lateral",
+        "Tornar a energia independente do tecido",
+        "Alterar a distribuição de dose e a cobertura distal",
+        "Impedir toda interação por espalhamento"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Alterar a distribuição de dose e a cobertura distal.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 11",
+      "pergunta": "Um feixe de fótons de maior energia pode ser selecionado por:",
+      "alternativas": [
+        "Desejo de máxima dose superficial em todos os casos",
+        "Dispensa de correção de heterogeneidade",
+        "Necessidade de remover o efeito build-up",
+        "Necessidade de cobertura de alvo profundo e avaliação de distribuição"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Necessidade de cobertura de alvo profundo e avaliação de distribuição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 12",
+      "pergunta": "A avaliação de risco em hipofracionamento deve considerar:",
+      "alternativas": [
+        "Dose por fração e tolerância dos tecidos normais",
+        "Somente a dose total física",
+        "Apenas o número de arcos",
+        "Exclusivamente a energia nominal"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Dose por fração e tolerância dos tecidos normais.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 13",
+      "pergunta": "Dois esquemas têm mesma dose total física, mas doses por fração distintas. Qual afirmação é correta?",
+      "alternativas": [
+        "A eficácia independe do tecido irradiado",
+        "O efeito biológico pode diferir entre esquemas",
+        "O efeito biológico é necessariamente igual",
+        "A dose aos órgãos de risco não muda"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: O efeito biológico pode diferir entre esquemas.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 14",
+      "pergunta": "No planejamento com prótons, a incerteza de alcance é particularmente relevante porque:",
+      "alternativas": [
+        "A dose máxima ocorre sempre na entrada",
+        "A técnica não sofre efeito de heterogeneidade",
+        "Pode deslocar a região distal de deposição de dose",
+        "A energia depositada é uniforme após o alcance"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Pode deslocar a região distal de deposição de dose.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 15",
+      "pergunta": "Na técnica de arco, um erro na sincronização entre MLC e gantry pode:",
+      "alternativas": [
+        "Alterar o volume biológico do tumor",
+        "Modificar a densidade física do paciente",
+        "Aumentar a meia-vida do feixe",
+        "Comprometer a fluência planejada e distribuição de dose"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Comprometer a fluência planejada e distribuição de dose.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 16",
+      "pergunta": "Uma distribuição que cobre bem o PTV mas viola restrição crítica de medula deve:",
+      "alternativas": [
+        "Ser revista antes da aprovação",
+        "Ser aprovada por cobertura adequada",
+        "Ser aceita se o tempo de entrega for curto",
+        "Ser mantida se houver boa conformidade"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Ser revista antes da aprovação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 17",
+      "pergunta": "Em radioterapia de cabeça e pescoço, perda ponderal relevante durante tratamento pode:",
+      "alternativas": [
+        "Reduzir a necessidade de IGRT",
+        "Alterar geometria e ajuste da máscara, exigindo reavaliação",
+        "Aumentar obrigatoriamente a energia do feixe",
+        "Impedir formação de penumbra"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Alterar geometria e ajuste da máscara, exigindo reavaliação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 18",
+      "pergunta": "O cálculo de dose em regiões pulmonares exige atenção a:",
+      "alternativas": [
+        "Exclusivamente a cor do mapa de dose",
+        "Apenas a temperatura da sala",
+        "Heterogeneidade de densidade e transporte de partículas",
+        "Somente espessura da pele"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Heterogeneidade de densidade e transporte de partículas.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 19",
+      "pergunta": "Em radiocirurgia intracraniana, múltiplas metástases pequenas demandam avaliação de:",
+      "alternativas": [
+        "Somente dose média de todo o crânio",
+        "Apenas volume do maior alvo",
+        "Exclusivamente número de imagens",
+        "Cobertura individual, gradiente e dose ao encéfalo normal"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Cobertura individual, gradiente e dose ao encéfalo normal.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 20",
+      "pergunta": "Uma prescrição para irradiação de mama com boost requer:",
+      "alternativas": [
+        "Definição clara dos volumes e doses de cada etapa",
+        "Uso obrigatório de braquiterapia em todos os casos",
+        "Mesmo volume-alvo em todas as etapas",
+        "Exclusão de avaliação de dose cutânea"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Definição clara dos volumes e doses de cada etapa.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 21",
+      "pergunta": "A dose em órgão de risco avaliada por DVH deve ser complementada por:",
+      "alternativas": [
+        "Exclusivamente marcação cutânea",
+        "Inspeção espacial e critérios clínicos do protocolo",
+        "Somente contagem de segmentos",
+        "Apenas tempo de sala"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Inspeção espacial e critérios clínicos do protocolo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 22",
+      "pergunta": "Na IGRT, uma correção rotacional relevante pode exigir:",
+      "alternativas": [
+        "Ignorar a rotação se houver marcação cutânea",
+        "Alterar a dose prescrita diretamente",
+        "Verificar capacidade da mesa e tolerâncias do protocolo",
+        "Aplicar sempre apenas translação"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Verificar capacidade da mesa e tolerâncias do protocolo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 23",
+      "pergunta": "No planejamento com margens pequenas, o risco cresce se:",
+      "alternativas": [
+        "A verificação diária for robusta",
+        "O movimento for caracterizado",
+        "O controle de qualidade for consistente",
+        "Incertezas de posicionamento não forem adequadamente controladas"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Incertezas de posicionamento não forem adequadamente controladas.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 24",
+      "pergunta": "Em um plano de IMRT, uma área de alta dose fora do alvo deve ser:",
+      "alternativas": [
+        "Localizada e avaliada frente a estruturas e restrições",
+        "Ignorada quando a dose média do PTV é boa",
+        "Aceita sempre que o número de segmentos é baixo",
+        "Corrigida apenas no mapa de cores"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Localizada e avaliada frente a estruturas e restrições.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 25",
+      "pergunta": "A presença de prótese metálica na trajetória do feixe exige:",
+      "alternativas": [
+        "Manter qualquer ângulo de entrada sem análise",
+        "Avaliar artefatos de CT e incertezas de cálculo de dose",
+        "Assumir densidade equivalente à água",
+        "Dispensar correção de heterogeneidade"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Avaliar artefatos de CT e incertezas de cálculo de dose.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 26",
+      "pergunta": "O tratamento estereotáxico extracraniano requer controle de movimento porque:",
+      "alternativas": [
+        "Não há órgãos de risco adjacentes",
+        "A imobilização não altera reprodutibilidade",
+        "Altas doses por fração e margens reduzidas amplificam impacto geométrico",
+        "O feixe é independente da posição do alvo"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Altas doses por fração e margens reduzidas amplificam impacto geométrico.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 27",
+      "pergunta": "Em QA de VMAT, uma discrepância localizada em região de alto gradiente deve:",
+      "alternativas": [
+        "Ser sempre descartada como ruído",
+        "Ser corrigida alterando somente a escala de exibição",
+        "Ser ignorada se a dose total for convencional",
+        "Ser investigada considerando critérios de análise e impacto clínico"
+      ],
+      "correta": 3,
+      "explicacao": "Gabarito: Ser investigada considerando critérios de análise e impacto clínico.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 28",
+      "pergunta": "A decisão de interromper tratamento por evento de segurança deve ser:",
+      "alternativas": [
+        "Documentada e comunicada conforme protocolo institucional",
+        "Tomada sem registro para preservar fluxo",
+        "Substituída por dose compensatória automática",
+        "Baseada apenas no tempo restante"
+      ],
+      "correta": 0,
+      "explicacao": "Gabarito: Documentada e comunicada conforme protocolo institucional.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 29",
+      "pergunta": "Na simulação de radioterapia, a posição do paciente deve ser escolhida para:",
+      "alternativas": [
+        "Dispensar referência para posicionamento",
+        "Equilibrar reprodutibilidade, conforto e viabilidade dos feixes",
+        "Maximizar movimentos voluntários",
+        "Priorizar apenas rapidez da aquisição"
+      ],
+      "correta": 1,
+      "explicacao": "Gabarito: Equilibrar reprodutibilidade, conforto e viabilidade dos feixes.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "RADIOTERAPIA 30",
+      "pergunta": "Um plano de radioterapia deve ser aprovado considerando simultaneamente:",
+      "alternativas": [
+        "Apenas a dose máxima no PTV",
+        "Exclusivamente o tempo de irradiação",
+        "Cobertura, homogeneidade, conformidade e limites dos órgãos de risco",
+        "Somente o valor de prescrição"
+      ],
+      "correta": 2,
+      "explicacao": "Gabarito: Cobertura, homogeneidade, conformidade e limites dos órgãos de risco.",
+      "dificuldade": "dificil"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
