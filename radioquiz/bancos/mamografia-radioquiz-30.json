@@ -5,13 +5,13 @@
     {
       "prompt": "Na incidência CC, o principal objetivo da tração da mama antes da compressão é:",
       "options": [
-        "Substituir a avaliação da região lateral",
+        "Deslocar a porção medial para obter perfil mais tangencial",
         "Incluir o máximo possível de tecido posterior na projeção",
-        "Priorizar apenas a região retroareolar",
-        "Centralizar exclusivamente o mamilo"
+        "Distribuir o tecido central sem priorizar a parede torácica",
+        "Destacar o complexo aréolo-papilar mantendo o tecido posterior estável"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: Incluir o máximo possível de tecido posterior na projeção",
+      "explanation": "A resposta correta é: Incluir o máximo possível de tecido posterior na projeção. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -20,12 +20,12 @@
       "prompt": "Uma CC demonstra pouco tecido posterior em comparação com a MLO. A primeira ação técnica é:",
       "options": [
         "Reavaliar tração e posicionamento da mama sobre o receptor",
-        "Aumentar a compressão sem reposicionar",
-        "Inclinar o tubo como em uma MLO",
-        "Realizar automaticamente incidência tangencial"
+        "Repetir a CC com rotação lateral do tubo",
+        "Acrescentar apenas incidência MLO contralateral",
+        "Aplicar magnificação sem corrigir a inclusão posterior"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: Reavaliar tração e posicionamento da mama sobre o receptor",
+      "explanation": "A resposta correta é: Reavaliar tração e posicionamento da mama sobre o receptor. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -33,13 +33,13 @@
     {
       "prompt": "Na MLO, a angulação do receptor é escolhida principalmente segundo:",
       "options": [
-        "O tamanho aparente do mamilo na CC",
-        "A classificação BI-RADS anterior",
-        "A presença de calcificações retroareolares",
+        "A orientação do sulco inframamário, independentemente do peitoral",
+        "A distância entre mamilo e parede torácica na CC",
+        "A projeção preferencial da região retroareolar",
         "A orientação do músculo peitoral e a anatomia da paciente"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: A orientação do músculo peitoral e a anatomia da paciente",
+      "explanation": "A resposta correta é: A orientação do músculo peitoral e a anatomia da paciente. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -47,13 +47,13 @@
     {
       "prompt": "Em MLO, o sulco inframamário não está demonstrado. Qual ajuste é mais pertinente?",
       "options": [
-        "Substituir a MLO por compressão seletiva",
-        "Realizar apenas ampliação do quadrante superior",
+        "Diminuir a angulação para tentar projetar o sulco no centro",
+        "Aplicar tração apenas na região superior, sem ajustar a inferior",
         "Reavaliar elevação e tração da mama durante o posicionamento",
-        "Diminuir a inclinação do tubo em todos os casos"
+        "Aumentar a compressão mantendo a mama na mesma altura"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Reavaliar elevação e tração da mama durante o posicionamento",
+      "explanation": "A resposta correta é: Reavaliar elevação e tração da mama durante o posicionamento. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -61,13 +61,13 @@
     {
       "prompt": "Na crivagem mamográfica de rotina, as projeções bilaterais usuais são:",
       "options": [
-        "CC e axilar",
+        "CC e compressão seletiva",
         "CC e MLO",
-        "CC e perfil mediolateral",
-        "MLO e tangencial"
+        "CC e mediolateral verdadeira",
+        "MLO e lateromedial verdadeira"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: CC e MLO",
+      "explanation": "A resposta correta é: CC e MLO. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -76,12 +76,12 @@
       "prompt": "Uma assimetria aparece apenas na CC de rastreamento. Qual estratégia inicial ajuda a esclarecer sobreposição?",
       "options": [
         "Incidência complementar com deslocamento de tecidos, conforme localização",
-        "Classificação imediata como massa maligna",
-        "Ampliação obrigatória sem localização",
-        "Repetição idêntica da CC sem alteração"
+        "Magnificação localizada antes de verificar a localização em outra projeção",
+        "Tangencial imediata sem evidência de localização superficial",
+        "MLO repetida sem adaptação nem comparação"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: Incidência complementar com deslocamento de tecidos, conforme localização",
+      "explanation": "A resposta correta é: Incidência complementar com deslocamento de tecidos, conforme localização. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -89,13 +89,13 @@
     {
       "prompt": "Na técnica de mama enrolada, o princípio para investigar uma densidade duvidosa é:",
       "options": [
-        "Comprimir apenas a pele para identificar calcificações",
-        "Deslocar a prótese para trás do peitoral",
-        "Girar o tubo para produzir magnificação",
+        "Aumentar a compressão central sem deslocamento relativo dos tecidos",
+        "Rodar a mama para produzir projeção mediolateral verdadeira",
+        "Modificar a distância objeto-receptor para separar densidades",
         "Deslocar diferencialmente tecidos sobrepostos mantendo projeção apropriada"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: Deslocar diferencialmente tecidos sobrepostos mantendo projeção apropriada",
+      "explanation": "A resposta correta é: Deslocar diferencialmente tecidos sobrepostos mantendo projeção apropriada. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -103,13 +103,13 @@
     {
       "prompt": "Uma densidade suspeita desaparece após incidência com mama enrolada. Isso favorece:",
       "options": [
-        "Microcalcificações pleomórficas",
-        "Lesão cutânea tangencial",
+        "Assimetria focal persistente e necessariamente suspeita",
+        "Microcalcificações de distribuição segmentar",
         "Sobreposição de tecido fibroglandular",
-        "Confirmação de nódulo sólido"
+        "Massa circunscrita comprovada por persistência na CC inicial"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Sobreposição de tecido fibroglandular",
+      "explanation": "A resposta correta é: Sobreposição de tecido fibroglandular. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -117,13 +117,13 @@
     {
       "prompt": "Uma área focal observada na CC precisa de melhor separação tecidual. A compressão seletiva pode:",
       "options": [
-        "Eliminar necessidade de correlação anatômica",
+        "Deslocar o implante e o tecido simultaneamente",
         "Reduzir superposição e delimitar melhor o achado",
-        "Substituir a avaliação das demais incidências",
-        "Determinar sozinha a histologia do achado"
+        "Diferenciar a localização cutânea da parenquimatosa sem outras projeções",
+        "Aumentar o campo da CC sem modificar a distribuição tecidual"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: Reduzir superposição e delimitar melhor o achado",
+      "explanation": "A resposta correta é: Reduzir superposição e delimitar melhor o achado. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -132,12 +132,12 @@
       "prompt": "Para caracterizar a morfologia de microcalcificações agrupadas, pode ser indicada:",
       "options": [
         "Compressão seletiva com magnificação",
-        "Incidência axilar isolada",
-        "Manobra de Eklund sem implante",
-        "Mama enrolada sem ampliação"
+        "Compressão seletiva sem magnificação, se a dúvida é exclusivamente morfológica",
+        "Incidência axilar para caracterizar calcificações centrais",
+        "Rolamento mamário como substituto sistemático da ampliação"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: Compressão seletiva com magnificação",
+      "explanation": "A resposta correta é: Compressão seletiva com magnificação. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -145,13 +145,13 @@
     {
       "prompt": "Na ampliação mamográfica, o aumento geométrico é obtido principalmente por:",
       "options": [
-        "Aproximar a mama do receptor sem mudança geométrica",
-        "Aumentar somente a compressão da mama",
-        "Reduzir a distância foco-receptor mantendo a mama apoiada",
+        "Reduzir a distância objeto-receptor mantendo a mesma posição da mama",
+        "Aumentar apenas a distância foco-receptor sem elevar a mama",
+        "Elevar a mama sem modificar sua distância em relação ao receptor",
         "Aumentar a distância objeto-receptor com posicionamento específico"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: Aumentar a distância objeto-receptor com posicionamento específico",
+      "explanation": "A resposta correta é: Aumentar a distância objeto-receptor com posicionamento específico. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -159,13 +159,13 @@
     {
       "prompt": "Em paciente com implante, a manobra de Eklund busca:",
       "options": [
-        "Comprimir diretamente o implante até a parede torácica",
-        "Substituir todas as projeções com implante incluído",
+        "Manter o implante anterior e comprimir todo o conjunto",
+        "Deslocar lateralmente a prótese sem mobilizar o tecido mamário",
         "Deslocar o implante posteriormente e tracionar tecido mamário anteriormente",
-        "Projetar o implante anterior ao tecido glandular"
+        "Tracionar o implante anteriormente e manter a glândula junto à parede torácica"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Deslocar o implante posteriormente e tracionar tecido mamário anteriormente",
+      "explanation": "A resposta correta é: Deslocar o implante posteriormente e tracionar tecido mamário anteriormente. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -173,13 +173,13 @@
     {
       "prompt": "A técnica de deslocamento do implante pode ser limitada quando há:",
       "options": [
-        "Possibilidade de tração anterior da mama",
+        "Parênquima anterior facilmente tracionável",
         "Contratura capsular ou pouca mobilidade do implante",
-        "Implante móvel e tecido mamário acessível",
-        "Posicionamento adequado do mamilo"
+        "Implante móvel em posição retroglandular com tecido anterior acessível",
+        "Ausência de dor e boa tolerância à compressão"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: Contratura capsular ou pouca mobilidade do implante",
+      "explanation": "A resposta correta é: Contratura capsular ou pouca mobilidade do implante. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -188,12 +188,12 @@
       "prompt": "Em mama com implante, por que se obtêm projeções com implante incluído e deslocado quando viáveis?",
       "options": [
         "São complementares na demonstração do implante e do tecido mamário",
-        "As deslocadas avaliam apenas a integridade da cápsula",
-        "As incluídas dispensam demonstração do parênquima",
-        "Ambas reproduzem exatamente o mesmo tecido"
+        "As incluídas substituem a necessidade de deslocamento quando a glândula é densa",
+        "As deslocadas demonstram melhor o implante e pior o parênquima anterior",
+        "As duas técnicas são equivalentes para visualização de tecido anterior"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: São complementares na demonstração do implante e do tecido mamário",
+      "explanation": "A resposta correta é: São complementares na demonstração do implante e do tecido mamário. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -201,13 +201,13 @@
     {
       "prompt": "Para demonstrar tecido do prolongamento axilar, a incidência complementar é:",
       "options": [
-        "Tangencial",
-        "Compressão seletiva retroareolar",
-        "Magnificação craniocaudal",
+        "Tangencial de região retroareolar",
+        "Mediolateral verdadeira do quadrante inferior",
+        "Compressão seletiva de região central",
         "Axilar"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: Axilar",
+      "explanation": "A resposta correta é: Axilar. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -215,13 +215,13 @@
     {
       "prompt": "Uma alteração palpável superficial precisa ser demonstrada em relação à pele. Qual incidência é útil?",
       "options": [
-        "Axilar isolada",
-        "Craniocaudal com mama enrolada",
+        "Magnificação centrada na região retroareolar",
+        "Oblíqua mediolateral sem marcação da alteração",
         "Tangencial",
-        "MLO com implante incluído"
+        "Craniocaudal com rolamento medial"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Tangencial",
+      "explanation": "A resposta correta é: Tangencial. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -229,13 +229,13 @@
     {
       "prompt": "Qual estrutura é particularmente importante na orientação da MLO?",
       "options": [
-        "Músculo peitoral menor como referência única",
+        "Músculo serrátil anterior",
         "Músculo peitoral maior",
-        "Ligamento redondo uterino",
-        "Músculo serrátil anterior isolado"
+        "Músculo peitoral menor",
+        "Músculo latíssimo do dorso"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: Músculo peitoral maior",
+      "explanation": "A resposta correta é: Músculo peitoral maior. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -244,12 +244,12 @@
       "prompt": "Os ligamentos suspensores da mama relacionam-se principalmente a:",
       "options": [
         "Sustentação do tecido mamário e conexão com estruturas superficiais",
-        "Drenagem exclusiva da linfa axilar",
-        "Formação dos ductos terminais",
-        "Produção hormonal do tecido adiposo"
+        "Delimitação do ducto terminal e do lóbulo",
+        "Formação da cápsula fibrosa de implantes",
+        "Drenagem linfática exclusiva do complexo aréolo-papilar"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: Sustentação do tecido mamário e conexão com estruturas superficiais",
+      "explanation": "A resposta correta é: Sustentação do tecido mamário e conexão com estruturas superficiais. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -257,13 +257,13 @@
     {
       "prompt": "A unidade ductolobular terminal é relevante porque:",
       "options": [
-        "Constitui apenas tecido adiposo",
-        "Está restrita à região axilar",
-        "É a cápsula que envolve implantes",
+        "É responsável principalmente pela drenagem linfática axilar",
+        "Corresponde ao plano adiposo retromamário",
+        "Forma o revestimento fibroso do músculo peitoral",
         "É origem de grande parte das lesões epiteliais mamárias"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: É origem de grande parte das lesões epiteliais mamárias",
+      "explanation": "A resposta correta é: É origem de grande parte das lesões epiteliais mamárias. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -271,13 +271,13 @@
     {
       "prompt": "Uma massa de margens espiculadas exige atenção porque a morfologia é:",
       "options": [
-        "Equivalente a calcificação vascular",
-        "Suficiente para categoria BI-RADS 2",
+        "Indicativa de malignidade comprovada sem correlação",
+        "Definidora de BI-RADS 3 quando a massa é pequena",
         "Suspeita e demanda avaliação conforme o contexto",
-        "Característica exclusiva de cisto simples"
+        "Compatível exclusivamente com lesão benigna se não houver calcificações"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Suspeita e demanda avaliação conforme o contexto",
+      "explanation": "A resposta correta é: Suspeita e demanda avaliação conforme o contexto. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -285,13 +285,13 @@
     {
       "prompt": "Uma massa oval, circunscrita e paralela à pele não deve ser automaticamente considerada benigna porque:",
       "options": [
-        "A margem circunscrita impede investigação",
+        "A orientação paralela à pele define benignidade sem outros critérios",
         "A avaliação depende do conjunto de achados e da comparação",
-        "Toda massa oval é maligna",
-        "O formato isolado determina BI-RADS 5"
+        "A morfologia isolada determina acompanhamento semestral em qualquer contexto",
+        "O formato oval permite dispensar avaliação de margens"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: A avaliação depende do conjunto de achados e da comparação",
+      "explanation": "A resposta correta é: A avaliação depende do conjunto de achados e da comparação. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -300,12 +300,12 @@
       "prompt": "Microcalcificações finas lineares e ramificadas podem sugerir:",
       "options": [
         "Depósitos em distribuição ductal com morfologia suspeita",
-        "Calcificações cutâneas sempre benignas",
-        "Calcificações vasculares obrigatórias",
-        "Macrocalcificações grosseiras involutivas"
+        "Calcificações grosseiras com centro radiolúcido",
+        "Calcificações vasculares paralelas em trilho",
+        "Calcificações cutâneas arredondadas e periféricas"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: Depósitos em distribuição ductal com morfologia suspeita",
+      "explanation": "A resposta correta é: Depósitos em distribuição ductal com morfologia suspeita. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -313,13 +313,13 @@
     {
       "prompt": "Calcificações com padrão em trilho acompanhando vasos favorecem:",
       "options": [
-        "Deposição intraductal linear fina",
-        "Calcificação pleomórfica segmentar",
-        "Necrose gordurosa em casca de ovo",
+        "Distribuição linear fina dentro de ductos",
+        "Distribuição segmentar de calcificações pleomórficas",
+        "Agrupamento de calcificações amorfas",
         "Origem vascular"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: Origem vascular",
+      "explanation": "A resposta correta é: Origem vascular. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -327,13 +327,13 @@
     {
       "prompt": "A distribuição segmentar de calcificações merece atenção por poder refletir:",
       "options": [
-        "Padrão vascular bilateral obrigatório",
-        "Achado invariavelmente benigno",
+        "Distribuição regional de calcificações grosseiras",
+        "Distribuição agrupada sem relação anatômica ductal definida",
         "Distribuição ao longo de sistema ductal",
-        "Distribuição exclusivamente cutânea"
+        "Distribuição difusa bilateral de calcificações puntiformes"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Distribuição ao longo de sistema ductal",
+      "explanation": "A resposta correta é: Distribuição ao longo de sistema ductal. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -341,13 +341,13 @@
     {
       "prompt": "BI-RADS 0 em exame de rastreamento significa:",
       "options": [
-        "Exame negativo sem necessidade de análise adicional",
+        "Achado suspeito já caracterizado e com indicação de biópsia",
         "Avaliação incompleta, necessitando complementação e/ou comparação",
-        "Achado provavelmente benigno com seguimento",
-        "Achado altamente sugestivo de malignidade"
+        "Achado provavelmente benigno após avaliação completa",
+        "Achado benigno típico com recomendação de rotina"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: Avaliação incompleta, necessitando complementação e/ou comparação",
+      "explanation": "A resposta correta é: Avaliação incompleta, necessitando complementação e/ou comparação. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -356,12 +356,12 @@
       "prompt": "BI-RADS 3 deve ser empregado quando:",
       "options": [
         "Após avaliação diagnóstica completa, achado é provavelmente benigno",
-        "Qualquer imagem isolada apresenta baixa definição",
-        "Toda massa palpável é vista apenas na MLO",
-        "Apenas a primeira incidência de rastreamento foi feita"
+        "O achado ainda depende de incidências complementares não realizadas",
+        "O achado apresenta morfologia altamente suspeita",
+        "A malignidade já foi comprovada histologicamente"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: Após avaliação diagnóstica completa, achado é provavelmente benigno",
+      "explanation": "A resposta correta é: Após avaliação diagnóstica completa, achado é provavelmente benigno. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -369,13 +369,13 @@
     {
       "prompt": "Qual distinção entre BI-RADS 4 e 5 é correta?",
       "options": [
-        "4 é sempre benigno e 5 é inconclusivo",
-        "4 exige apenas seguimento anual e 5 rastreamento",
-        "5 descreve apenas lesão já comprovada por biópsia",
+        "BI-RADS 4 significa suspeita muito alta e 5, suspeita baixa",
+        "BI-RADS 4 e 5 diferem apenas pela densidade mamária",
+        "BI-RADS 5 corresponde a malignidade comprovada por biópsia",
         "Ambos são suspeitos, mas 5 indica probabilidade de malignidade muito elevada"
       ],
       "answer_index": 3,
-      "explanation": "Gabarito provisório: Ambos são suspeitos, mas 5 indica probabilidade de malignidade muito elevada",
+      "explanation": "A resposta correta é: Ambos são suspeitos, mas 5 indica probabilidade de malignidade muito elevada. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -383,13 +383,13 @@
     {
       "prompt": "BI-RADS 6 refere-se a:",
       "options": [
-        "Achado provavelmente benigno",
-        "Suspeita moderada sem biópsia",
+        "Achado suspeito sem confirmação histológica",
+        "Achado provavelmente benigno em seguimento",
         "Malignidade já comprovada histologicamente",
-        "Achado negativo em rastreamento"
+        "Achado altamente sugestivo de malignidade ainda não biopsiado"
       ],
       "answer_index": 2,
-      "explanation": "Gabarito provisório: Malignidade já comprovada histologicamente",
+      "explanation": "A resposta correta é: Malignidade já comprovada histologicamente. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -397,13 +397,13 @@
     {
       "prompt": "Uma compressão excessivamente focalizada fora da área de interesse pode:",
       "options": [
-        "Substituir a marcação do local palpável",
+        "Aumentar a área comprimida sem mudar a centralização",
         "Deixar o achado fora do campo de avaliação",
-        "Melhorar necessariamente a localização do achado",
-        "Transformar calcificações em massas"
+        "Reduzir a superposição de tecidos no local originalmente identificado",
+        "Demonstrar melhor o prolongamento axilar"
       ],
       "answer_index": 1,
-      "explanation": "Gabarito provisório: Deixar o achado fora do campo de avaliação",
+      "explanation": "A resposta correta é: Deixar o achado fora do campo de avaliação. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
@@ -412,16 +412,17 @@
       "prompt": "Em lesão localizada na região axilar, a escolha da incidência complementar deve priorizar:",
       "options": [
         "A inclusão anatômica da área suspeita e a correlação com a incidência inicial",
-        "A repetição exclusiva da CC central",
-        "A realização obrigatória de Eklund",
-        "A ampliação sem posicionamento da região"
+        "Manter a centralização padrão mesmo se a área suspeita ficar periférica",
+        "Priorizar o complexo aréolo-papilar independentemente da localização",
+        "Escolher a região de compressão apenas pelo tamanho da mama"
       ],
       "answer_index": 0,
-      "explanation": "Gabarito provisório: A inclusão anatômica da área suspeita e a correlação com a incidência inicial",
+      "explanation": "A resposta correta é: A inclusão anatômica da área suspeita e a correlação com a incidência inicial. A interpretação deve considerar a finalidade da técnica e o contexto da avaliação mamográfica.",
       "time_limit_seconds": 45,
       "points": 1000,
       "topic": "Mamografia"
     }
   ],
-  "status": "rascunho-para-revisao"
+  "status": "revisao-tecnica-parcial",
+  "revision_note": "Distratores substituídos; pendente validação científica individual e explicações específicas."
 }
