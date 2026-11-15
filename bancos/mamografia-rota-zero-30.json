@@ -11,7 +11,7 @@
         "Repetir a CC com compressão global idêntica"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Localizar e caracterizar o achado com incidências complementares apropriadas. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Uma assimetria visível em apenas uma projeção não pode ser classificada definitivamente sem localizar e caracterizar o achado.",
       "dificuldade": "normal"
     },
     {
@@ -24,7 +24,7 @@
         "Rodar o tubo para perfil verdadeiro sem reposicionar a mama"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Reposicionar a mama, com atenção ao sulco e à tração inferior. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A dobra inferior e o sulco fechado indicam falha de posicionamento; reposicionar e tracionar a porção inferior é mais útil que apenas aumentar compressão.",
       "dificuldade": "dificil"
     },
     {
@@ -37,7 +37,7 @@
         "Substituir a CC por uma incidência axilar"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Corrigir centralização e inclusão da região medial. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A CC deve incluir tecido medial e lateral; mamilo deslocado e exclusão medial justificam recentralização e tração adequadas.",
       "dificuldade": "dificil"
     },
     {
@@ -50,7 +50,7 @@
         "Adaptar-se à anatomia e à direção do músculo peitoral"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: Adaptar-se à anatomia e à direção do músculo peitoral. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A orientação do peitoral varia com a anatomia, por isso a angulação MLO é individualizada.",
       "dificuldade": "normal"
     },
     {
@@ -63,7 +63,7 @@
         "Persistência de massa com margem espiculada"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Somação de tecidos que se separaram com o deslocamento. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "O desaparecimento com rolamento indica separação de planos superpostos, favorecendo imagem de somação.",
       "dificuldade": "dificil"
     },
     {
@@ -76,7 +76,7 @@
         "Atribuir categoria final somente pela incidência localizada"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Prosseguir avaliação diagnóstica conforme morfologia e correlação. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A persistência de massa não circunscrita exige avaliação de morfologia, incidências e correlação, sem classificação automática.",
       "dificuldade": "dificil"
     },
     {
@@ -89,7 +89,7 @@
         "Avaliação do prolongamento axilar em projeção oblíqua"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Morfologia e distribuição de microcalcificações. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A combinação de compressão localizada e magnificação favorece estudo de calcificações finas e de sua distribuição.",
       "dificuldade": "normal"
     },
     {
@@ -102,7 +102,7 @@
         "Confirmar localização superficial do achado"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: Confirmar localização superficial do achado. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A tangencial pode demonstrar que calcificações estão na pele, diferenciando-as de achados parenquimatosos.",
       "dificuldade": "dificil"
     },
     {
@@ -115,7 +115,7 @@
         "Manter compressão intensa independentemente da mobilidade"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Reconhecer limitação e adaptar incidências conforme segurança e protocolo. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Se o implante não se desloca com segurança, deve-se documentar a limitação e adaptar a técnica; não se força a manobra.",
       "dificuldade": "dificil"
     },
     {
@@ -128,7 +128,7 @@
         "Região axilar com implante centralizado"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Tecido mamário anterior deslocado, quando a manobra é possível. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Em Eklund, desloca-se o implante para trás e comprime-se preferencialmente o tecido mamário tracionado anteriormente.",
       "dificuldade": "normal"
     },
     {
@@ -141,7 +141,7 @@
         "Considerar desnecessária distinção entre técnicas"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Identificar incidências com implante incluído e com deslocamento. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Identificar projeções com implante incluído e deslocado evita confusão entre campos anatômicos distintos.",
       "dificuldade": "dificil"
     },
     {
@@ -154,20 +154,20 @@
         "No prolongamento axilar, pouco incluído nas incidências usuais"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: No prolongamento axilar, pouco incluído nas incidências usuais. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "O prolongamento axilar é extensão superolateral da mama e pode exigir incidência específica para demonstrar o achado.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "MAMOGRAFIA 13",
       "pergunta": "Na avaliação de uma massa mamária, qual característica descreve contorno e não densidade?",
       "alternativas": [
-        "Forma irregular",
+        "Densidade alta",
         "Margem espiculada",
         "Margem microlobulada",
-        "Margem circunscrita"
+        "Densidade igual"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Margem microlobulada. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Margem microlobulada descreve o contorno; densidade descreve atenuação. A questão exige distinguir descritores diferentes.",
       "dificuldade": "normal"
     },
     {
@@ -180,7 +180,7 @@
         "Forma oval e margem indistinta são categorias equivalentes"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Forma e margens integram a estimativa de suspeição. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Forma irregular e margem indistinta elevam a suspeição em relação a massa oval circunscrita; nenhuma característica isolada confirma histologia.",
       "dificuldade": "dificil"
     },
     {
@@ -193,7 +193,7 @@
         "O agrupamento isoladamente define malignidade"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Morfologia e distribuição modificam o grau de suspeição. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Calcificações amorfas e grosseiras têm morfologias distintas; distribuição e contexto influenciam a suspeição.",
       "dificuldade": "dificil"
     },
     {
@@ -206,7 +206,7 @@
         "Avaliação diagnóstica da morfologia e distribuição, com conduta conforme BI-RADS"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: Avaliação diagnóstica da morfologia e distribuição, com conduta conforme BI-RADS. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Calcificações finas pleomórficas requerem avaliação de morfologia e distribuição antes de definir categoria e conduta.",
       "dificuldade": "normal"
     },
     {
@@ -219,7 +219,7 @@
         "Ser equivalente a calcificações lineares finas ramificadas"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Favorecer etiologia benigna. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Centro radiolúcido pode corresponder a padrão benigno em contexto apropriado; não é sinônimo de calcificação fina ramificada.",
       "dificuldade": "dificil"
     },
     {
@@ -232,7 +232,7 @@
         "Avaliar apenas a densidade do nódulo"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Conjunto dos achados, e não apenas o contorno da massa. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Uma massa associada a calcificações suspeitas deve ser analisada pelo conjunto dos descritores e sua distribuição.",
       "dificuldade": "dificil"
     },
     {
@@ -245,7 +245,7 @@
         "Tornar desnecessárias projeções complementares"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Detecção de algumas lesões por sobreposição de densidades. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Parênquima fibroglandular denso pode mascarar lesões por superposição de tecidos de atenuação semelhante.",
       "dificuldade": "normal"
     },
     {
@@ -258,7 +258,7 @@
         "Relativamente mais radiotransparente"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: Relativamente mais radiotransparente. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "O tecido adiposo atenua menos os raios X que o fibroglandular, aparecendo relativamente mais radiotransparente.",
       "dificuldade": "dificil"
     },
     {
@@ -271,7 +271,7 @@
         "A projeção inferior do tecido mamário junto ao sulco"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Extensão superolateral do tecido mamário em direção à axila. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A cauda axilar é a extensão superolateral do parênquima mamário em direção à axila.",
       "dificuldade": "dificil"
     },
     {
@@ -284,7 +284,7 @@
         "Ser considerada negativa na ausência de palpação"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Ser encaminhada à avaliação diagnóstica complementar. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Na crivagem, achado não caracterizado deve ser complementado para definir a avaliação diagnóstica.",
       "dificuldade": "normal"
     },
     {
@@ -297,7 +297,7 @@
         "Concluir BI-RADS 2 sem estudo adicional"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Complementar avaliação antes de concluir a categoria final. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "BI-RADS 0 é incompleto e exige complementação e/ou comparação apropriada antes de categoria conclusiva.",
       "dificuldade": "dificil"
     },
     {
@@ -310,7 +310,7 @@
         "BI-RADS 6"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: BI-RADS 6. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "BI-RADS 6 requer malignidade comprovada por biópsia; BI-RADS 5 representa suspeição muito elevada sem essa confirmação.",
       "dificuldade": "dificil"
     },
     {
@@ -323,7 +323,7 @@
         "Probabilidade de malignidade superior a 95%"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Baixa suspeição de malignidade, mas com indicação de investigação tecidual conforme conduta. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "BI-RADS 4A indica baixa suspeição, mas ainda dentro da categoria suspeita que demanda avaliação tecidual conforme a indicação.",
       "dificuldade": "normal"
     },
     {
@@ -336,7 +336,7 @@
         "4A"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: 3. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "BI-RADS 3 descreve achado provavelmente benigno após avaliação diagnóstica completa, geralmente com acompanhamento de curto intervalo.",
       "dificuldade": "dificil"
     },
     {
@@ -349,7 +349,7 @@
         "CC de rotina isolada, sem identificação do achado"
       ],
       "correta": 0,
-      "explicacao": "A resposta correta é: Marcação do local e incidência tangencial quando indicada. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A marcação da área palpável e a tangencial, quando indicada, ajudam a relacionar a alteração com a pele.",
       "dificuldade": "dificil"
     },
     {
@@ -362,7 +362,7 @@
         "Espalhar tecidos e reduzir sobreposição, com estabilização"
       ],
       "correta": 3,
-      "explicacao": "A resposta correta é: Espalhar tecidos e reduzir sobreposição, com estabilização. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "A compressão estabiliza e espalha o parênquima, reduzindo superposição; a magnificação exige geometria própria.",
       "dificuldade": "normal"
     },
     {
@@ -375,7 +375,7 @@
         "Abranger sempre o maior volume de tecido possível, sem centralização específica"
       ],
       "correta": 2,
-      "explicacao": "A resposta correta é: Corresponder ao local do achado previamente identificado. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Na compressão seletiva, a pá deve abranger precisamente o achado localizado nas incidências iniciais.",
       "dificuldade": "dificil"
     },
     {
@@ -388,10 +388,10 @@
         "Concluir benignidade apenas pela persistência"
       ],
       "correta": 1,
-      "explicacao": "A resposta correta é: Justifica caracterização adicional conforme o aspecto e contexto. A decisão depende da finalidade da incidência e da correlação técnica do achado.",
+      "explicacao": "Persistência de assimetria focal demanda caracterização por morfologia, comparação e contexto, sem diagnóstico automático.",
       "dificuldade": "dificil"
     }
   ],
-  "status": "revisao-tecnica-parcial",
-  "revision_note": "Distratores substituídos; pendente validação científica individual e explicações específicas."
+  "status": "revisado-tecnica-pedagogicamente",
+  "revision_note": "Revisão de gabaritos, distratores e justificativas individualizadas; não integrado ao jogo."
 }
