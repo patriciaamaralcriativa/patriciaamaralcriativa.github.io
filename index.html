@@ -142,6 +142,7 @@ html,body{width:100%;max-width:100%;overflow-x:clip}
 
 /* Vitrine compacta dos seis laboratórios */
 .lab-collection-head{margin:28px 0 18px}.lab-collection-head h3{font:normal clamp(26px,3vw,35px) Georgia,serif;margin:4px 0 6px}.lab-collection-head p{color:var(--muted);margin:0}.lab-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:0 0 28px}.lab-tile{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:21px 20px;border:1px solid #ecdcd6;border-radius:19px;background:#fff;text-decoration:none;box-shadow:0 5px 18px #5b403508;transition:transform .2s,box-shadow .2s}.lab-tile:hover{transform:translateY(-3px);box-shadow:0 12px 25px #5b403514}.lab-icon{display:grid;place-items:center;width:39px;height:39px;background:#fff1ef;color:#bb536a;border-radius:12px;font-size:23px}.lab-tile strong{font:normal 21px Georgia,serif;line-height:1.22}.lab-desc{font-size:13px;color:var(--muted);line-height:1.5;flex:1}.lab-go{font-size:12px;font-weight:bold;color:var(--rose);margin-top:5px}@media(max-width:650px){.lab-showcase{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lab-tile{padding:14px 12px;border-radius:15px;gap:8px}.lab-tile strong{font-size:17px}.lab-desc{font-size:12px}.lab-go{font-size:11px}}@media(max-width:350px){.lab-showcase{grid-template-columns:1fr}}
+.jogos-dupla{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:24px 0}.jogo-dupla-card{margin:0;min-width:0;text-align:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:10px 10px 18px;overflow:hidden}.jogo-dupla-card>a:first-child{display:block;border-radius:13px;overflow:hidden}.jogo-dupla-card img{display:block;width:100%;height:auto;aspect-ratio:1671/941;object-fit:contain;border-radius:13px}.jogo-dupla-card .section-link{margin-top:14px;font-size:13px;padding:12px 16px}.jogo-dupla-card a:focus-visible{outline:3px solid #a76bff;outline-offset:3px}@media(max-width:700px){.jogos-dupla{grid-template-columns:1fr;gap:18px}}
 </style>
 <style>
 /* Cartões ilustrados - vitrine dos laboratórios */
@@ -261,13 +262,16 @@ a.lab-art-card:hover,a.lab-art-card:focus-visible{transform:translateY(-3px);box
     <img src="missao-radioativa-banner.png" alt="Missão Radioativa: jogo da memória sobre gerenciamento de rejeitos radioativos. Jogar agora." width="1672" height="941" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:18px">
   </a>
 </article>
-<article id="radioquiz-acesso" aria-label="RADIOQUIZ — UNITERP" style="margin:24px 0">
-  <a href="/radioquiz/" aria-label="Jogar RADIOQUIZ — Desafio do Conhecimento em Radiologia" style="display:block;border-radius:18px">
-    <img src="/radioquiz/assets/radioquiz-banner-alegre.webp" alt="Professora Patrícia convida para o RADIOQUIZ — Desafio do Conhecimento em Radiologia. Jogar agora." width="1671" height="941" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:18px">
-  </a>
-  <p style="text-align:center;margin:12px 0"><a class="section-link" href="/radioquiz/">▶ JOGAR RADIOQUIZ AGORA</a></p>
+<div class="jogos-dupla" aria-label="Jogos de questionários">
+<article id="radioquiz-acesso" class="jogo-dupla-card" aria-label="RADIOQUIZ — UNITERP">
+<a href="/radioquiz/" aria-label="Jogar RADIOQUIZ"><img src="/radioquiz/assets/radioquiz-banner-alegre.webp" alt="Professora Patrícia convida para o RADIOQUIZ — Desafio do Conhecimento em Radiologia" width="1671" height="941" loading="lazy" decoding="async"></a>
+<a class="section-link" href="/radioquiz/">▶ JOGAR RADIOQUIZ AGORA</a>
 </article>
-<article id="caca-palavras-acesso" style="margin:24px 0;padding:28px;border:1px solid #dcd0f0;border-radius:20px;background:linear-gradient(120deg,#f1e9ff,#e6faf4)"><h3 style="color:#512698;margin-top:0">🔎 CAÇA-PALAVRAS DA PATTY</h3><p>Suas perguntas viram pistas, suas respostas viram palavras. Escolha o questionário, gere novas grades, jogue e imprima.</p><a class="section-link" href="/caca-palavras.html">CRIAR E JOGAR CAÇA-PALAVRAS →</a></article>
+<article id="caca-palavras-acesso" class="jogo-dupla-card" aria-label="Caça-palavras da Patty">
+<a href="/caca-palavras.html" aria-label="Jogar Caça-palavras da Patty"><img src="/assets/caca-palavras-patty-banner.webp" alt="Caça-palavras da Patty — perguntas que viram desafios. Jogar agora." width="1672" height="941" loading="lazy" decoding="async"></a>
+<a class="section-link" href="/caca-palavras.html">🔎 JOGAR CAÇA-PALAVRAS</a>
+</article>
+</div>
 <div class="education-highlights">
   <article style="grid-column:1/-1">
     <h3>OPERAÇÃO ROTA ZERO</h3>
