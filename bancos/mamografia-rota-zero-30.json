@@ -31,12 +31,12 @@
       "titulo": "MAMOGRAFIA 3",
       "pergunta": "Em CC, o mamilo está muito deslocado lateralmente e há perda de tecido medial. A prioridade é:",
       "alternativas": [
-        "Corrigir centralização e inclusão da região medial",
         "Manter a mama centrada pelo mamilo mesmo com perda medial",
         "Priorizar o tecido lateral e aceitar exclusão medial",
-        "Substituir a CC por uma incidência axilar"
+        "Substituir a CC por uma incidência axilar",
+        "Corrigir centralização e inclusão da região medial"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "A CC deve incluir tecido medial e lateral; mamilo deslocado e exclusão medial justificam recentralização e tração adequadas.",
       "dificuldade": "dificil"
     },
@@ -46,10 +46,10 @@
       "alternativas": [
         "Usar angulação padronizada fixa independentemente da direção peitoral",
         "Escolher angulação pela posição do mamilo na CC",
-        "Ajustar apenas pela altura do receptor, sem considerar o peitoral",
-        "Adaptar-se à anatomia e à direção do músculo peitoral"
+        "Adaptar-se à anatomia e à direção do músculo peitoral",
+        "Ajustar apenas pela altura do receptor, sem considerar o peitoral"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "A orientação do peitoral varia com a anatomia, por isso a angulação MLO é individualizada.",
       "dificuldade": "normal"
     },
@@ -57,12 +57,12 @@
       "titulo": "MAMOGRAFIA 5",
       "pergunta": "Uma densidade desaparece em CC com mama enrolada, mas persiste na CC convencional. A hipótese mais compatível é:",
       "alternativas": [
+        "Somação de tecidos que se separaram com o deslocamento",
         "Calcificações lineares finas em distribuição ductal",
         "Distorção arquitetural comprovada na região",
-        "Somação de tecidos que se separaram com o deslocamento",
         "Persistência de massa com margem espiculada"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "O desaparecimento com rolamento indica separação de planos superpostos, favorecendo imagem de somação.",
       "dificuldade": "dificil"
     },
@@ -83,12 +83,12 @@
       "titulo": "MAMOGRAFIA 7",
       "pergunta": "A compressão seletiva com magnificação é especialmente útil quando a questão diagnóstica é:",
       "alternativas": [
-        "Morfologia e distribuição de microcalcificações",
         "Localização da lesão cutânea por projeção tangencial",
         "Demonstração do músculo peitoral e sulco inframamário",
+        "Morfologia e distribuição de microcalcificações",
         "Avaliação do prolongamento axilar em projeção oblíqua"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "A combinação de compressão localizada e magnificação favorece estudo de calcificações finas e de sua distribuição.",
       "dificuldade": "normal"
     },
@@ -96,12 +96,12 @@
       "titulo": "MAMOGRAFIA 8",
       "pergunta": "Para investigar calcificações próximas à pele, a tangencial pode ajudar a:",
       "alternativas": [
+        "Confirmar localização superficial do achado",
         "Demonstrar a relação de calcificações com ductos profundos",
         "Estimar a mobilidade de prótese retroglandular",
-        "Substituir a comparação de CC e MLO em massas profundas",
-        "Confirmar localização superficial do achado"
+        "Substituir a comparação de CC e MLO em massas profundas"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "A tangencial pode demonstrar que calcificações estão na pele, diferenciando-as de achados parenquimatosos.",
       "dificuldade": "dificil"
     },
@@ -111,10 +111,10 @@
       "alternativas": [
         "Dispensar registro de limitação de posicionamento",
         "Repetir Eklund até obter deslocamento completo",
-        "Reconhecer limitação e adaptar incidências conforme segurança e protocolo",
-        "Manter compressão intensa independentemente da mobilidade"
+        "Manter compressão intensa independentemente da mobilidade",
+        "Reconhecer limitação e adaptar incidências conforme segurança e protocolo"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "Se o implante não se desloca com segurança, deve-se documentar a limitação e adaptar a técnica; não se força a manobra.",
       "dificuldade": "dificil"
     },
@@ -123,11 +123,11 @@
       "pergunta": "Na manobra de Eklund, a compressão se aplica prioritariamente sobre:",
       "alternativas": [
         "Parede torácica posterior, sem mobilizar a glândula",
-        "Tecido mamário anterior deslocado, quando a manobra é possível",
         "Implante e tecido mamário juntos, sem deslocamento",
+        "Tecido mamário anterior deslocado, quando a manobra é possível",
         "Região axilar com implante centralizado"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "Em Eklund, desloca-se o implante para trás e comprime-se preferencialmente o tecido mamário tracionado anteriormente.",
       "dificuldade": "normal"
     },
@@ -135,12 +135,12 @@
       "titulo": "MAMOGRAFIA 11",
       "pergunta": "Ao documentar exame com implantes, qual distinção técnica é essencial?",
       "alternativas": [
-        "Identificar incidências com implante incluído e com deslocamento",
         "Registrar apenas as incidências com deslocamento",
+        "Identificar incidências com implante incluído e com deslocamento",
         "Identificar somente o lado da prótese",
         "Considerar desnecessária distinção entre técnicas"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "Identificar projeções com implante incluído e deslocado evita confusão entre campos anatômicos distintos.",
       "dificuldade": "dificil"
     },
@@ -161,12 +161,12 @@
       "titulo": "MAMOGRAFIA 13",
       "pergunta": "Na descrição BI-RADS de uma massa, qual dos termos abaixo corresponde a uma característica de margem, e não de forma ou densidade?",
       "alternativas": [
+        "Margem microlobulada",
         "Densidade alta",
         "Forma irregular",
-        "Margem microlobulada",
         "Forma oval"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "Margem microlobulada descreve o contorno de uma massa; forma oval e irregular são descritores de forma, enquanto densidade alta é descritor de atenuação.",
       "dificuldade": "normal"
     },
@@ -175,11 +175,11 @@
       "pergunta": "Uma massa irregular com margem indistinta requer interpretação diferente de massa oval circunscrita porque:",
       "alternativas": [
         "A margem indistinta indica sempre um cisto simples",
-        "Forma e margens integram a estimativa de suspeição",
         "Morfologia de margens não influencia avaliação quando a massa é densa",
+        "Forma e margens integram a estimativa de suspeição",
         "Forma oval e margem indistinta são categorias equivalentes"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "Forma irregular e margem indistinta elevam a suspeição em relação a massa oval circunscrita; nenhuma característica isolada confirma histologia.",
       "dificuldade": "dificil"
     },
@@ -187,12 +187,12 @@
       "titulo": "MAMOGRAFIA 15",
       "pergunta": "Calcificações amorfas agrupadas devem ser distinguidas de calcificações grosseiras porque:",
       "alternativas": [
-        "Morfologia e distribuição modificam o grau de suspeição",
         "Calcificações grosseiras possuem sempre distribuição segmentar",
         "Morfologia amorfa é equivalente à calcificação vascular típica",
-        "O agrupamento isoladamente define malignidade"
+        "O agrupamento isoladamente define malignidade",
+        "Morfologia e distribuição modificam o grau de suspeição"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "Calcificações amorfas e grosseiras têm morfologias distintas; distribuição e contexto influenciam a suspeição.",
       "dificuldade": "dificil"
     },
@@ -201,11 +201,11 @@
       "pergunta": "Um agrupamento de calcificações finas pleomórficas exige:",
       "alternativas": [
         "Categoria BI-RADS 2 sem outras imagens",
+        "Avaliação diagnóstica da morfologia e distribuição, com conduta conforme BI-RADS",
         "BI-RADS 3 automático em qualquer distribuição",
-        "Dispensa de caracterização quando o exame é de rastreamento",
-        "Avaliação diagnóstica da morfologia e distribuição, com conduta conforme BI-RADS"
+        "Dispensa de caracterização quando o exame é de rastreamento"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "Calcificações finas pleomórficas requerem avaliação de morfologia e distribuição antes de definir categoria e conduta.",
       "dificuldade": "normal"
     },
@@ -213,12 +213,12 @@
       "titulo": "MAMOGRAFIA 17",
       "pergunta": "Uma calcificação com centro radiolúcido, em contexto apropriado, tende a:",
       "alternativas": [
+        "Favorecer etiologia benigna",
         "Definir malignidade sem considerar contexto",
         "Exigir BI-RADS 5 em todos os casos",
-        "Favorecer etiologia benigna",
         "Ser equivalente a calcificações lineares finas ramificadas"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "Centro radiolúcido pode corresponder a padrão benigno em contexto apropriado; não é sinônimo de calcificação fina ramificada.",
       "dificuldade": "dificil"
     },
@@ -227,11 +227,11 @@
       "pergunta": "Uma massa com calcificações suspeitas associadas deve ser avaliada considerando:",
       "alternativas": [
         "Usar somente a projeção em que a massa é maior",
-        "Conjunto dos achados, e não apenas o contorno da massa",
         "Desconsiderar calcificações quando a massa é circunscrita",
-        "Avaliar apenas a densidade do nódulo"
+        "Avaliar apenas a densidade do nódulo",
+        "Conjunto dos achados, e não apenas o contorno da massa"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Uma massa associada a calcificações suspeitas deve ser analisada pelo conjunto dos descritores e sua distribuição.",
       "dificuldade": "dificil"
     },
@@ -254,10 +254,10 @@
       "alternativas": [
         "Ser relativamente mais radiopaco",
         "Apresentar a mesma atenuação que o músculo",
-        "Ser sempre indistinguível de tecido fibroglandular",
-        "Relativamente mais radiotransparente"
+        "Relativamente mais radiotransparente",
+        "Ser sempre indistinguível de tecido fibroglandular"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "O tecido adiposo atenua menos os raios X que o fibroglandular, aparecendo relativamente mais radiotransparente.",
       "dificuldade": "dificil"
     },
@@ -266,11 +266,11 @@
       "pergunta": "O prolongamento axilar corresponde a:",
       "alternativas": [
         "A extensão medial em direção ao esterno",
-        "O espaço retromamário atrás do músculo peitoral",
         "Extensão superolateral do tecido mamário em direção à axila",
+        "O espaço retromamário atrás do músculo peitoral",
         "A projeção inferior do tecido mamário junto ao sulco"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "A cauda axilar é a extensão superolateral do parênquima mamário em direção à axila.",
       "dificuldade": "dificil"
     },
@@ -278,12 +278,12 @@
       "titulo": "MAMOGRAFIA 22",
       "pergunta": "Na crivagem, uma imagem suspeita ainda não caracterizada deve:",
       "alternativas": [
-        "Ser classificada como BI-RADS 6 sem biópsia",
         "Ser encaminhada à avaliação diagnóstica complementar",
+        "Ser classificada como BI-RADS 6 sem biópsia",
         "Ser concluída como BI-RADS 3 sem complementação",
         "Ser considerada negativa na ausência de palpação"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "Na crivagem, achado não caracterizado deve ser complementado para definir a avaliação diagnóstica.",
       "dificuldade": "normal"
     },
@@ -291,12 +291,12 @@
       "titulo": "MAMOGRAFIA 23",
       "pergunta": "Um exame de rastreamento recebe BI-RADS 0. A conduta coerente é:",
       "alternativas": [
-        "Complementar avaliação antes de concluir a categoria final",
         "Aguardar apenas rastreamento de rotina",
         "Classificar imediatamente como BI-RADS 4C",
-        "Concluir BI-RADS 2 sem estudo adicional"
+        "Concluir BI-RADS 2 sem estudo adicional",
+        "Complementar avaliação antes de concluir a categoria final"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "BI-RADS 0 é incompleto e exige complementação e/ou comparação apropriada antes de categoria conclusiva.",
       "dificuldade": "dificil"
     },
@@ -306,10 +306,10 @@
       "alternativas": [
         "BI-RADS 5, porque o resultado histológico é conhecido",
         "BI-RADS 4C, independentemente da biópsia",
-        "BI-RADS 3, enquanto não houver cirurgia",
-        "BI-RADS 6"
+        "BI-RADS 6",
+        "BI-RADS 3, enquanto não houver cirurgia"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "BI-RADS 6 requer malignidade comprovada por biópsia; BI-RADS 5 representa suspeição muito elevada sem essa confirmação.",
       "dificuldade": "dificil"
     },
@@ -317,12 +317,12 @@
       "titulo": "MAMOGRAFIA 25",
       "pergunta": "Uma lesão classificada como BI-RADS 4A significa:",
       "alternativas": [
+        "Baixa suspeição de malignidade, mas com indicação de investigação tecidual conforme conduta",
         "Malignidade já confirmada por histologia",
         "Achado provavelmente benigno com seguimento curto",
-        "Baixa suspeição de malignidade, mas com indicação de investigação tecidual conforme conduta",
         "Probabilidade de malignidade superior a 95%"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "BI-RADS 4A indica baixa suspeição, mas ainda dentro da categoria suspeita que demanda avaliação tecidual conforme a indicação.",
       "dificuldade": "normal"
     },
@@ -331,11 +331,11 @@
       "pergunta": "Qual categoria BI-RADS corresponde a achado provavelmente benigno após avaliação completa?",
       "alternativas": [
         "5",
-        "3",
         "2",
-        "4A"
+        "4A",
+        "3"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "BI-RADS 3 descreve achado provavelmente benigno após avaliação diagnóstica completa, geralmente com acompanhamento de curto intervalo.",
       "dificuldade": "dificil"
     },
@@ -343,12 +343,12 @@
       "titulo": "MAMOGRAFIA 27",
       "pergunta": "Em uma paciente com alteração cutânea palpável e calcificação superficial, qual combinação é mais pertinente?",
       "alternativas": [
-        "Marcação do local e incidência tangencial quando indicada",
         "Incidência axilar sem marcação do local",
+        "Marcação do local e incidência tangencial quando indicada",
         "Compressão seletiva retroareolar sem localização",
         "CC de rotina isolada, sem identificação do achado"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "A marcação da área palpável e a tangencial, quando indicada, ajudam a relacionar a alteração com a pele.",
       "dificuldade": "dificil"
     },
@@ -370,11 +370,11 @@
       "pergunta": "Ao selecionar compressão seletiva, a região comprimida deve:",
       "alternativas": [
         "Ser posicionada apenas segundo o quadrante oposto ao achado",
-        "Priorizar a aréola em qualquer localização da lesão",
         "Corresponder ao local do achado previamente identificado",
+        "Priorizar a aréola em qualquer localização da lesão",
         "Abranger sempre o maior volume de tecido possível, sem centralização específica"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "Na compressão seletiva, a pá deve abranger precisamente o achado localizado nas incidências iniciais.",
       "dificuldade": "dificil"
     },
@@ -382,16 +382,16 @@
       "titulo": "MAMOGRAFIA 30",
       "pergunta": "Na investigação de assimetria focal, a persistência após incidências complementares:",
       "alternativas": [
-        "Dispensar outras avaliações porque a compressão foi realizada",
         "Justifica caracterização adicional conforme o aspecto e contexto",
+        "Dispensar outras avaliações porque a compressão foi realizada",
         "Confirmar malignidade apenas pela persistência",
         "Concluir benignidade apenas pela persistência"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "Persistência de assimetria focal demanda caracterização por morfologia, comparação e contexto, sem diagnóstico automático.",
       "dificuldade": "dificil"
     }
   ],
   "status": "revisado-tecnica-pedagogicamente",
-  "revision_note": "Revisão de gabaritos, distratores e justificativas individualizadas; não integrado ao jogo."
+  "revision_note": "30 questões revisadas com justificativas individualizadas, quatro alternativas e gabarito distribuído sem repetição cíclica."
 }
