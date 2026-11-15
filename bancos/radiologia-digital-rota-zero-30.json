@@ -1,0 +1,395 @@
+{
+  "disciplina": "Radiologia Digital",
+  "questoes": [
+    {
+      "titulo": "DESAFIO DIGITAL 1",
+      "pergunta": "No sistema CR, qual receptor armazena a imagem latente?",
+      "alternativas": [
+        "Placa de fósforo fotoestimulável",
+        "Painel de selênio amorfo",
+        "Filme convencional",
+        "Intensificador de imagem"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Placa de fósforo fotoestimulável.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 2",
+      "pergunta": "No CR, qual etapa libera o sinal armazenado na placa?",
+      "alternativas": [
+        "Aquecimento do chassi",
+        "Varredura a laser",
+        "Revelação química",
+        "Fixação química"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Varredura a laser.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 3",
+      "pergunta": "Após a leitura do CR, por que se apaga a placa?",
+      "alternativas": [
+        "Reduzir o tamanho do pixel",
+        "Converter DICOM em JPEG",
+        "Remover sinal residual",
+        "Aumentar a tensão do tubo"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Remover sinal residual.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 4",
+      "pergunta": "Na DR indireta, qual componente transforma raios X em luz?",
+      "alternativas": [
+        "Fotodiodo isolado",
+        "Conversor analógico-digital",
+        "Grade antidifusora",
+        "Cintilador"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: Cintilador.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 5",
+      "pergunta": "Na DR direta com selênio amorfo, qual transformação ocorre primeiro?",
+      "alternativas": [
+        "Raios X em cargas elétricas",
+        "Raios X em luz visível",
+        "Luz em calor",
+        "Elétrons em ultrassom"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Raios X em cargas elétricas.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 6",
+      "pergunta": "Em detectores indiretos, qual material cintilador é frequentemente utilizado?",
+      "alternativas": [
+        "Tungstênio metálico",
+        "Iodeto de césio",
+        "Selênio amorfo",
+        "Chumbo puro"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Iodeto de césio.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 7",
+      "pergunta": "Qual elemento converte luz do cintilador em sinal elétrico?",
+      "alternativas": [
+        "Filtro adicional",
+        "Tubo de raios X",
+        "Fotodiodo",
+        "Colimador"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Fotodiodo.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 8",
+      "pergunta": "O que representa a matriz de imagem digital?",
+      "alternativas": [
+        "Quantidade de exames no PACS",
+        "Tempo de exposição",
+        "Número de detectores de sala",
+        "Arranjo de pixels"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: Arranjo de pixels.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 9",
+      "pergunta": "Qual propriedade indica o tamanho da região representada por um pixel?",
+      "alternativas": [
+        "Espaçamento de pixel",
+        "Tensão do tubo",
+        "Índice de exposição",
+        "Largura de janela"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Espaçamento de pixel.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 10",
+      "pergunta": "Qual processo transforma sinal analógico em valores digitais?",
+      "alternativas": [
+        "Filtração",
+        "Conversão analógico-digital",
+        "Colimação",
+        "Fluorescência"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Conversão analógico-digital.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 11",
+      "pergunta": "Qual parâmetro descreve a quantidade de níveis de cinza codificáveis?",
+      "alternativas": [
+        "Tamanho do campo",
+        "Velocidade do obturador",
+        "Profundidade de bits",
+        "Distância foco-receptor"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Profundidade de bits.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 12",
+      "pergunta": "Qual ferramenta altera a amplitude dos valores de cinza exibidos?",
+      "alternativas": [
+        "Tensão de pico",
+        "Distância foco-receptor",
+        "Tempo de leitura",
+        "Largura de janela"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: Largura de janela.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 13",
+      "pergunta": "Qual ferramenta desloca o centro da faixa de valores exibidos?",
+      "alternativas": [
+        "Nível de janela",
+        "Colimação física",
+        "Filtração do feixe",
+        "Correção de posicionamento"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Nível de janela.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 14",
+      "pergunta": "Qual sistema armazena e distribui imagens médicas?",
+      "alternativas": [
+        "AEC",
+        "PACS",
+        "RIS isoladamente",
+        "HIS isoladamente"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: PACS.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 15",
+      "pergunta": "Qual padrão organiza comunicação e arquivos de imagens médicas?",
+      "alternativas": [
+        "CSV",
+        "HTML",
+        "DICOM",
+        "JPEG como padrão clínico universal"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: DICOM.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 16",
+      "pergunta": "Qual sistema gerencia fluxos administrativos e informações radiológicas?",
+      "alternativas": [
+        "PACS exclusivamente",
+        "Detector DR",
+        "Grade",
+        "RIS"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: RIS.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 17",
+      "pergunta": "Qual propriedade define a capacidade de distinguir detalhes pequenos?",
+      "alternativas": [
+        "Resolução espacial",
+        "Brilho do monitor",
+        "Tamanho do arquivo apenas",
+        "Dose absorvida"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Resolução espacial.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 18",
+      "pergunta": "Qual propriedade define a capacidade de distinguir pequenas diferenças de sinal?",
+      "alternativas": [
+        "Velocidade de impressão",
+        "Resolução de contraste",
+        "Tamanho do chassi",
+        "Distância entre salas"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Resolução de contraste.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 19",
+      "pergunta": "Qual fenômeno aparece como granulação em imagens com poucos fótons detectados?",
+      "alternativas": [
+        "Distorção geométrica",
+        "Persistência de imagem",
+        "Ruído quântico",
+        "Aliasing exclusivamente"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Ruído quântico.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 20",
+      "pergunta": "Qual prática reduz a exposição fora da anatomia necessária?",
+      "alternativas": [
+        "Ampliação indiscriminada do campo",
+        "Repetição preventiva",
+        "Retirada da grade em qualquer exame",
+        "Colimação adequada"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: Colimação adequada.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 21",
+      "pergunta": "Qual conceito descreve aumento gradual de exposição sem necessidade clínica?",
+      "alternativas": [
+        "Dose creep",
+        "Fluorescência",
+        "Saturação óptica",
+        "Reconstrução volumétrica"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Dose creep.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 22",
+      "pergunta": "Qual recurso automático pode mascarar visualmente superexposição?",
+      "alternativas": [
+        "Movimento do paciente",
+        "Reescalonamento da imagem",
+        "Revelação química",
+        "Fusão nuclear"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Reescalonamento da imagem.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 23",
+      "pergunta": "Qual recurso auxilia no controle da exposição recebida pelo detector?",
+      "alternativas": [
+        "Nome do arquivo",
+        "Cor do chassi",
+        "Índice de exposição",
+        "Tamanho do monitor"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Índice de exposição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 24",
+      "pergunta": "Qual cuidado é necessário ao comparar índices de exposição de fabricantes?",
+      "alternativas": [
+        "Assumir escala universal idêntica",
+        "Ignorar protocolos",
+        "Usar brilho do monitor como dose",
+        "Considerar definições e calibração"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: Considerar definições e calibração.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 25",
+      "pergunta": "Qual mecanismo pode gerar imagem fantasma por sinal anterior no detector?",
+      "alternativas": [
+        "Persistência de imagem",
+        "Ampliação geométrica",
+        "Movimento voluntário",
+        "Filtração inerente"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Persistência de imagem.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 26",
+      "pergunta": "Qual artefato pode surgir por defeito de linha ou coluna do detector?",
+      "alternativas": [
+        "Magnificação",
+        "Faixa linear",
+        "Desfoque por movimento",
+        "Rotação do paciente"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Faixa linear.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 27",
+      "pergunta": "Qual procedimento verifica uniformidade e funcionamento do detector?",
+      "alternativas": [
+        "Recorte estético",
+        "Compressão irreversível",
+        "Controle de qualidade",
+        "Aumento automático do mAs"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Controle de qualidade.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 28",
+      "pergunta": "Qual cuidado deve anteceder a aplicação de recorte eletrônico?",
+      "alternativas": [
+        "Aumento do campo irradiado",
+        "Dispensa de identificação",
+        "Remoção do marcador anatômico",
+        "Colimação física correta"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta: Colimação física correta.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 29",
+      "pergunta": "Qual recurso permite visualizar diferenças de tons sem nova exposição?",
+      "alternativas": [
+        "Ajuste de janela",
+        "Nova incidência",
+        "Aumento de mAs",
+        "Troca de colimador"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Ajuste de janela.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DESAFIO DIGITAL 30",
+      "pergunta": "Qual prática evita atribuir ao pós-processamento a correção de erro de aquisição?",
+      "alternativas": [
+        "Excluir metadados",
+        "Revisar posicionamento e técnica",
+        "Aplicar nitidez máxima sempre",
+        "Aumentar contraste indiscriminadamente"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Revisar posicionamento e técnica.",
+      "dificuldade": "dificil"
+    }
+  ]
+}
