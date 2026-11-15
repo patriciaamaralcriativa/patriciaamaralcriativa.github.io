@@ -1,0 +1,126 @@
+{
+  "title": "Física das Radiações — 30 perguntas",
+  "level": "medio",
+  "rows": [
+    {
+      "question": "Qual partícula possui carga elétrica negativa e integra a eletrosfera?",
+      "answer": "ELÉTRON"
+    },
+    {
+      "question": "Qual partícula do núcleo apresenta carga positiva?",
+      "answer": "PRÓTON"
+    },
+    {
+      "question": "Qual partícula nuclear não possui carga elétrica?",
+      "answer": "NÊUTRON"
+    },
+    {
+      "question": "Qual região atômica contém prótons e nêutrons?",
+      "answer": "NÚCLEO"
+    },
+    {
+      "question": "Qual nome recebe um átomo que perdeu ou ganhou elétrons?",
+      "answer": "ÍON"
+    },
+    {
+      "question": "Qual fenômeno ocorre quando um elétron é removido de um átomo?",
+      "answer": "IONIZAÇÃO"
+    },
+    {
+      "question": "Qual fenômeno eleva um elétron a um estado energético superior sem removê-lo do átomo?",
+      "answer": "EXCITAÇÃO"
+    },
+    {
+      "question": "Qual partícula de luz transporta energia eletromagnética?",
+      "answer": "FÓTON"
+    },
+    {
+      "question": "Qual propriedade de uma onda indica o número de oscilações por segundo?",
+      "answer": "FREQUÊNCIA"
+    },
+    {
+      "question": "Qual propriedade espacial de uma onda corresponde à distância entre cristas sucessivas?",
+      "answer": "COMPRIMENTO"
+    },
+    {
+      "question": "Qual fenômeno consiste no desvio de uma onda ao atravessar uma interface entre meios?",
+      "answer": "REFRAÇÃO"
+    },
+    {
+      "question": "Qual fenômeno ocorre quando uma onda retorna ao encontrar uma interface?",
+      "answer": "REFLEXÃO"
+    },
+    {
+      "question": "Qual fenômeno de ondas produz regiões de reforço e cancelamento?",
+      "answer": "INTERFERÊNCIA"
+    },
+    {
+      "question": "Qual fenômeno permite que ondas contornem obstáculos e aberturas?",
+      "answer": "DIFRAÇÃO"
+    },
+    {
+      "question": "Qual propriedade do fóton é proporcional à frequência?",
+      "answer": "ENERGIA"
+    },
+    {
+      "question": "Qual interação produz ejeção de elétron ligado por absorção completa do fóton incidente?",
+      "answer": "FOTOELÉTRICO"
+    },
+    {
+      "question": "Qual interação envolve espalhamento de fóton por elétron, com transferência de energia?",
+      "answer": "COMPTON"
+    },
+    {
+      "question": "Qual processo de produção de raios X resulta da desaceleração de elétrons no alvo?",
+      "answer": "BREMSSTRAHLUNG"
+    },
+    {
+      "question": "Qual material é comumente utilizado no alvo de tubos radiográficos?",
+      "answer": "TUNGSTÊNIO"
+    },
+    {
+      "question": "Qual eletrodo do tubo de raios X recebe os elétrons acelerados?",
+      "answer": "ÂNODO"
+    },
+    {
+      "question": "Qual eletrodo do tubo de raios X emite elétrons por aquecimento do filamento?",
+      "answer": "CÁTODO"
+    },
+    {
+      "question": "Qual fenômeno de emissão de elétrons ocorre por aquecimento de um filamento?",
+      "answer": "TERMOIÔNICA"
+    },
+    {
+      "question": "Qual grandeza elétrica entre cátodo e ânodo acelera elétrons no tubo?",
+      "answer": "TENSÃO"
+    },
+    {
+      "question": "Qual grandeza elétrica indica fluxo de carga no circuito do tubo?",
+      "answer": "CORRENTE"
+    },
+    {
+      "question": "Qual processo reduz a intensidade do feixe ao atravessar a matéria?",
+      "answer": "ATENUAÇÃO"
+    },
+    {
+      "question": "Qual componente do equipamento limita geometricamente o campo irradiado?",
+      "answer": "COLIMADOR"
+    },
+    {
+      "question": "Qual componente remove preferencialmente fótons de baixa energia do feixe?",
+      "answer": "FILTRO"
+    },
+    {
+      "question": "Qual propriedade do feixe descreve sua capacidade de atravessar materiais?",
+      "answer": "PENETRAÇÃO"
+    },
+    {
+      "question": "Qual fenômeno caracteriza a emissão espontânea por núcleos instáveis?",
+      "answer": "RADIOATIVIDADE"
+    },
+    {
+      "question": "Qual transformação nuclear pode alterar o número de prótons de um núcleo?",
+      "answer": "DECAIMENTO"
+    }
+  ]
+}
