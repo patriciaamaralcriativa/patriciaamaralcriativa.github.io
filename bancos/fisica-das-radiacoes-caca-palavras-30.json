@@ -2,125 +2,125 @@
   "title": "Física das Radiações",
   "rows": [
     {
-      "question": "Unidade SI da energia depositada por quilograma",
-      "answer": "GRAY"
+      "question": "Partícula nuclear de carga positiva",
+      "answer": "PROTON"
     },
     {
-      "question": "Unidade SI de desintegrações por segundo",
-      "answer": "BECQUEREL"
+      "question": "Partícula nuclear eletricamente neutra",
+      "answer": "NEUTRON"
     },
     {
-      "question": "Unidade SI de dose equivalente",
-      "answer": "SIEVERT"
+      "question": "Partícula negativa da eletrosfera",
+      "answer": "ELETRON"
     },
     {
-      "question": "Intervalo de redução da atividade pela metade",
-      "answer": "MEIAVIDA"
+      "question": "Íon positivo por perda de elétrons",
+      "answer": "CATION"
     },
     {
-      "question": "Quantidade de transformações nucleares por segundo",
-      "answer": "ATIVIDADE"
+      "question": "Íon negativo por ganho de elétrons",
+      "answer": "ANION"
     },
     {
-      "question": "Redução da intensidade ao atravessar matéria",
-      "answer": "ATENUACAO"
+      "question": "Átomos de mesmo número atômico e diferentes nêutrons",
+      "answer": "ISOTOPOS"
     },
     {
-      "question": "Fração do feixe que atravessa um material",
-      "answer": "TRANSMISSAO"
+      "question": "Número que identifica o elemento químico",
+      "answer": "ATOMICO"
     },
     {
-      "question": "Espessura que reduz intensidade primária pela metade",
-      "answer": "SEMIRREDUTORA"
+      "question": "Soma de prótons e nêutrons do núcleo",
+      "answer": "MASSA"
     },
     {
-      "question": "Emissão contínua causada por desaceleração de elétrons",
-      "answer": "BREMSSTRAHLUNG"
+      "question": "Radiação de núcleos de hélio",
+      "answer": "ALFA"
     },
     {
-      "question": "Emissão por transição entre camadas eletrônicas",
-      "answer": "CARACTERISTICA"
+      "question": "Emissão nuclear de elétrons",
+      "answer": "BETA"
     },
     {
-      "question": "Produto da corrente do tubo pelo tempo",
-      "answer": "MAS"
+      "question": "Radiação eletromagnética de origem nuclear",
+      "answer": "GAMA"
     },
     {
-      "question": "Tensão máxima do tubo",
-      "answer": "KVP"
+      "question": "Divisão de núcleo pesado",
+      "answer": "FISSAO"
     },
     {
-      "question": "Variação estatística de contagens de fótons",
-      "answer": "POISSON"
+      "question": "União de núcleos leves",
+      "answer": "FUSAO"
     },
     {
-      "question": "Flutuação decorrente de número finito de fótons",
-      "answer": "QUANTICO"
+      "question": "Radiação constituída por partículas materiais",
+      "answer": "CORPUSCULAR"
     },
     {
-      "question": "Grandeza que relaciona energia e frequência do fóton",
-      "answer": "PLANCK"
+      "question": "Relação entre eletricidade e magnetismo",
+      "answer": "ELETROMAGNETISMO"
     },
     {
-      "question": "Distância entre cristas sucessivas de uma onda",
-      "answer": "COMPRIMENTO"
+      "question": "Onda que necessita de meio material",
+      "answer": "MECANICA"
     },
     {
-      "question": "Número de ciclos por segundo",
+      "question": "Onda que pode propagar-se no vácuo",
+      "answer": "ELETROMAGNETICA"
+    },
+    {
+      "question": "Onda com vibração paralela à propagação",
+      "answer": "LONGITUDINAL"
+    },
+    {
+      "question": "Onda com vibração perpendicular à propagação",
+      "answer": "TRANSVERSAL"
+    },
+    {
+      "question": "Oscilações por unidade de tempo",
       "answer": "FREQUENCIA"
     },
     {
-      "question": "Redução da exposição pela interposição de material",
-      "answer": "BLINDAGEM"
+      "question": "Distância entre cristas consecutivas",
+      "answer": "COMPRIMENTO"
     },
     {
-      "question": "Aumento da energia média após filtração",
-      "answer": "ENDURECIMENTO"
+      "question": "Magnitude máxima de uma oscilação",
+      "answer": "AMPLITUDE"
     },
     {
-      "question": "Remoção preferencial de fótons de baixa energia",
-      "answer": "FILTRACAO"
+      "question": "Espalhamento de ondas ao atravessar aberturas",
+      "answer": "DIFRACAO"
     },
     {
-      "question": "Grandeza medida em watts",
-      "answer": "POTENCIA"
+      "question": "Mudança de direção entre meios",
+      "answer": "REFRACAO"
     },
     {
-      "question": "Unidade SI de energia",
-      "answer": "JOULE"
+      "question": "Retorno da luz ao meio de origem",
+      "answer": "REFLEXAO"
     },
     {
-      "question": "Unidade SI de corrente elétrica",
-      "answer": "AMPERE"
+      "question": "Região do espectro percebida pelo olho",
+      "answer": "VISIVEL"
     },
     {
-      "question": "Unidade SI de diferença de potencial",
-      "answer": "VOLT"
+      "question": "Efeito que ejeta elétron após absorção de fóton",
+      "answer": "FOTOELETRICO"
     },
     {
-      "question": "Unidade de energia comum em física radiológica",
-      "answer": "KEV"
+      "question": "Espalhamento de fóton com perda de energia",
+      "answer": "COMPTON"
     },
     {
-      "question": "Medida de dose por unidade de tempo",
-      "answer": "TAXA"
+      "question": "Natureza ondulatória e corpuscular da luz",
+      "answer": "DUALIDADE"
     },
     {
-      "question": "Quantidade de fótons por área",
-      "answer": "FLUENCIA"
-    },
-    {
-      "question": "Interação de fótons com matéria que reduz o feixe primário",
-      "answer": "INTERACAO"
-    },
-    {
-      "question": "Aumento da capacidade de atravessar matéria com maior energia",
-      "answer": "PENETRACAO"
-    },
-    {
-      "question": "Produção de raios X por elétrons acelerados no alvo",
-      "answer": "FRENAGEM"
+      "question": "Partícula associada à luz",
+      "answer": "FOTON"
     }
   ],
-  "status": "revisao-editorial-inicial"
+  "status": "conteudo-reformulado-sem-calculos"
 }
