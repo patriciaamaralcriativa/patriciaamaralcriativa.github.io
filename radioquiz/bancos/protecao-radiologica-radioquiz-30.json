@@ -11,7 +11,7 @@
         "Ampliar o campo e reduzir o brilho"
       ],
       "answer_index": 2,
-      "explanation": "Colimação física limita a área irradiada; recorte eletrônico não reduz a exposição.",
+      "explanation": "Resposta correta: Restringir fisicamente a colimação à área de interesse.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -24,8 +24,8 @@
         "Aproximar-se do paciente para enxergar o receptor",
         "Retirar a barreira para facilitar comunicação"
       ],
-      "answer_index": 0,
-      "explanation": "Distância e blindagem reduzem exposição ocupacional à radiação espalhada.",
+      "answer_index": 1,
+      "explanation": "Resposta correta: Afastar-se da fonte de espalhamento e usar barreira apropriada.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -38,8 +38,8 @@
         "Quatro vezes",
         "Metade"
       ],
-      "answer_index": 3,
-      "explanation": "Pela lei do inverso do quadrado, a intensidade cai a um quarto.",
+      "answer_index": 1,
+      "explanation": "Resposta correta: Um quarto.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -52,8 +52,8 @@
         "Usar processamento para corrigir qualquer rotação",
         "Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário"
       ],
-      "answer_index": 1,
-      "explanation": "Repetições devem ser justificadas e o erro de aquisição corrigido.",
+      "answer_index": 3,
+      "explanation": "Resposta correta: Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -67,7 +67,7 @@
         "Aumento da dose para evitar ruído"
       ],
       "answer_index": 1,
-      "explanation": "A justificação compara benefício clínico esperado e risco da exposição.",
+      "explanation": "Resposta correta: Justificação.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -80,8 +80,8 @@
         "Ignorar a exposição se a imagem for digital",
         "Aumentar dose até eliminar todo ruído"
       ],
-      "answer_index": 3,
-      "explanation": "Otimização busca qualidade diagnóstica adequada sem exposição desnecessária.",
+      "answer_index": 0,
+      "explanation": "Resposta correta: Otimização da proteção.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -94,8 +94,8 @@
         "Não são aplicados como limites de dose ao paciente; valem justificação e otimização",
         "Proíbem qualquer exame repetido"
       ],
-      "answer_index": 0,
-      "explanation": "Exposições médicas de pacientes não são controladas pelos limites ocupacionais de dose.",
+      "answer_index": 2,
+      "explanation": "Resposta correta: Não são aplicados como limites de dose ao paciente; valem justificação e otimização.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -108,8 +108,8 @@
         "Permanecer no feixe primário",
         "Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados"
       ],
-      "answer_index": 2,
-      "explanation": "A permanência deve ser excepcional e com medidas de proteção adequadas.",
+      "answer_index": 3,
+      "explanation": "Resposta correta: Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -123,7 +123,7 @@
         "5 µSv"
       ],
       "answer_index": 3,
-      "explanation": "0,25 h × 20 µSv/h = 5 µSv.",
+      "explanation": "Resposta correta: 5 µSv.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -136,8 +136,8 @@
         "A taxa de dose da sala aumenta",
         "O dosímetro passa a medir apenas energia do tubo"
       ],
-      "answer_index": 1,
-      "explanation": "O monitoramento individual exige uso conforme o programa de proteção radiológica.",
+      "answer_index": 0,
+      "explanation": "Resposta correta: O registro deixa de representar a exposição ocupacional durante o trabalho.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -150,8 +150,8 @@
         "Na parede de proteção secundária obrigatoriamente",
         "Exclusivamente no dosímetro individual"
       ],
-      "answer_index": 2,
-      "explanation": "O feixe útil é direcionado à região examinada e ao receptor.",
+      "answer_index": 1,
+      "explanation": "Resposta correta: No paciente e no receptor alinhados ao feixe.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -164,8 +164,8 @@
         "Blindagem de contato",
         "Barreira secundária"
       ],
-      "answer_index": 0,
-      "explanation": "Barreiras secundárias são dimensionadas para radiação espalhada e de fuga.",
+      "answer_index": 3,
+      "explanation": "Resposta correta: Barreira secundária.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -179,7 +179,7 @@
         "Conversão de raios X em radiação não ionizante"
       ],
       "answer_index": 1,
-      "explanation": "Mais mAs pode aumentar exposição sem benefício diagnóstico justificável.",
+      "explanation": "Resposta correta: Exposição desnecessariamente elevada sem ganho clínico proporcional.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -192,8 +192,8 @@
         "Coulomb por quilograma exclusivamente",
         "Becquerel"
       ],
-      "answer_index": 3,
-      "explanation": "Gray corresponde a joule por quilograma de energia depositada.",
+      "answer_index": 0,
+      "explanation": "Resposta correta: Gray.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -206,8 +206,8 @@
         "Gray por segundo",
         "Watt"
       ],
-      "answer_index": 2,
-      "explanation": "O sievert é a unidade SI para dose equivalente e efetiva.",
+      "answer_index": 1,
+      "explanation": "Resposta correta: Sievert.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -220,8 +220,8 @@
         "Desligar apenas o monitor da sala",
         "Comunicar e seguir o procedimento institucional de segurança e manutenção"
       ],
-      "answer_index": 0,
-      "explanation": "Sistemas de sinalização e segurança devem funcionar conforme o programa e normas aplicáveis.",
+      "answer_index": 3,
+      "explanation": "Resposta correta: Comunicar e seguir o procedimento institucional de segurança e manutenção.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -235,7 +235,7 @@
         "Esclarecer a indicação com o responsável e verificar a justificação"
       ],
       "answer_index": 3,
-      "explanation": "A indicação deve ser esclarecida antes da exposição.",
+      "explanation": "Resposta correta: Esclarecer a indicação com o responsável e verificar a justificação.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -248,8 +248,8 @@
         "Tamanho da tela de visualização",
         "Número de impressoras"
       ],
-      "answer_index": 1,
-      "explanation": "A análise sistemática de rejeições orienta correções de posicionamento e técnica.",
+      "answer_index": 0,
+      "explanation": "Resposta correta: Análise de rejeição e repetição por motivo.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -262,8 +262,8 @@
         "Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo",
         "Dispensar avaliação por não ser trabalhador"
       ],
-      "answer_index": 0,
-      "explanation": "A presença deve ser necessária e protegida, conforme as normas e protocolos.",
+      "answer_index": 2,
+      "explanation": "Resposta correta: Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -276,8 +276,8 @@
         "Aumento do contraste do receptor",
         "Redução da exposição à radiação dispersa com maior distância"
       ],
-      "answer_index": 2,
-      "explanation": "A distância reduz a exposição à radiação espalhada.",
+      "answer_index": 3,
+      "explanation": "Resposta correta: Redução da exposição à radiação dispersa com maior distância.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -291,7 +291,7 @@
         "Radiação emitida somente após desligar o tubo"
       ],
       "answer_index": 2,
-      "explanation": "Radiação de fuga provém do conjunto do tubo fora da abertura útil.",
+      "explanation": "Resposta correta: Radiação que escapa do conjunto do tubo fora do feixe útil.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -304,8 +304,8 @@
         "A colimação física torna-se desnecessária",
         "A dose do paciente é sempre reduzida à metade"
       ],
-      "answer_index": 0,
-      "explanation": "O recorte posterior não altera a exposição já realizada.",
+      "answer_index": 1,
+      "explanation": "Resposta correta: O recorte altera a exibição, mas não desfaz a irradiação.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -318,8 +318,8 @@
         "Adequar técnica e campo ao tamanho e à indicação clínica",
         "Usar repetição de rotina para confirmar o resultado"
       ],
-      "answer_index": 1,
-      "explanation": "A otimização pediátrica requer adaptação da técnica e colimação.",
+      "answer_index": 2,
+      "explanation": "Resposta correta: Adequar técnica e campo ao tamanho e à indicação clínica.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -332,8 +332,8 @@
         "Para permitir interpretação e comparação reprodutíveis dos resultados",
         "Para substituir toda avaliação do equipamento"
       ],
-      "answer_index": 3,
-      "explanation": "Contexto de operação e geometria são essenciais à interpretação de medições.",
+      "answer_index": 2,
+      "explanation": "Resposta correta: Para permitir interpretação e comparação reprodutíveis dos resultados.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -347,7 +347,7 @@
         "A dose do paciente é sempre igual à do operador"
       ],
       "answer_index": 0,
-      "explanation": "São grandezas e métodos de avaliação com finalidades distintas.",
+      "explanation": "Resposta correta: O monitoramento ocupacional não substitui a estimativa de dose do paciente.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -360,8 +360,8 @@
         "Aumentar o kV para atravessar a abertura",
         "Reduzir o brilho do monitor"
       ],
-      "answer_index": 2,
-      "explanation": "Descontinuidades podem comprometer a proteção projetada.",
+      "answer_index": 0,
+      "explanation": "Resposta correta: Solicitar avaliação da integridade e adequação da blindagem.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -374,8 +374,8 @@
         "Revelação, fixação e secagem",
         "Brilho, contraste e matriz"
       ],
-      "answer_index": 3,
-      "explanation": "Reduzir tempo, aumentar distância e interpor blindagem adequada limita exposição externa.",
+      "answer_index": 1,
+      "explanation": "Resposta correta: Tempo, distância e blindagem.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -388,8 +388,8 @@
         "Ignorar disponibilidade e contexto clínico",
         "Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição"
       ],
-      "answer_index": 1,
-      "explanation": "A seleção do método considera a questão clínica e alternativas disponíveis.",
+      "answer_index": 3,
+      "explanation": "Resposta correta: Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -403,7 +403,7 @@
         "A troca do nome da sala"
       ],
       "answer_index": 0,
-      "explanation": "Mudanças técnicas podem exigir verificações de qualidade e segurança.",
+      "explanation": "Resposta correta: Ensaios e verificações pertinentes de desempenho e segurança.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
@@ -416,12 +416,12 @@
         "O que gera o maior arquivo digital",
         "O de maior dose por padrão"
       ],
-      "answer_index": 3,
-      "explanation": "A otimização favorece qualidade suficiente com exposição tão baixa quanto razoavelmente possível.",
+      "answer_index": 0,
+      "explanation": "Resposta correta: O otimizado que atende à finalidade clínica.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Proteção Radiológica"
     }
   ],
-  "status": "revisao-editorial-inicial"
+  "status": "gabaritos-corrigidos-e-conferidos-30-questoes"
 }
