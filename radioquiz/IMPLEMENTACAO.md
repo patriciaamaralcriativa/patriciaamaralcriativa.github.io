@@ -2,7 +2,7 @@
 
 ## Estado atual
 
-O banco dedicado foi instalado e a interface está conectada a Supabase Auth, Postgres e Realtime. O código está na branch `dev/radioquiz-engine`, em revisão no PR #4. A página principal permanece preservada. A interface conectada ainda não foi publicada em `main`.
+O banco dedicado foi instalado e a interface está conectada a Supabase Auth, Postgres e Realtime. A versão básica foi publicada em `/radioquiz/`, pelo PR #4, merge `22f21d564981643bbe0dc44d42932ba5b084726a`. A execução GitHub Pages `43732257759` concluiu build e deploy com sucesso. O painel público foi aberto e conferido no navegador. A página principal permanece preservada, com o mesmo blob de `index.html` anterior à publicação.
 
 ## Preservação e arquitetura
 
@@ -40,7 +40,7 @@ A configuração inicial do dashboard Supabase Auth foi substituída, com autori
 - Site URL: `https://patriciaamaralcriativa.github.io/radioquiz/`.
 - Retorno autorizado exato: `https://patriciaamaralcriativa.github.io/radioquiz/?view=teacher`.
 
-A configuração foi autorizada e salva no projeto exclusivo em 15/11/2026: o retorno exato foi adicionado e o Site URL foi atualizado. Próximo passo: publicar a versão básica somente em `/radioquiz/`, conferir o primeiro acesso por e-mail da professora e validar os alunos em aparelhos reais. Não declarar entrega integral antes dessas validações. Recursos especiais permanecem na etapa posterior.
+A configuração foi autorizada e salva no projeto exclusivo em 15/11/2026: o retorno exato foi adicionado e o Site URL foi atualizado. A versão básica já foi publicada somente em `/radioquiz/`. Próximo passo: conferir o primeiro acesso por e-mail da professora e validar os alunos em aparelhos reais. Não declarar entrega integral antes dessas validações. Recursos especiais permanecem na etapa posterior.
 
 ## Limites do plano
 

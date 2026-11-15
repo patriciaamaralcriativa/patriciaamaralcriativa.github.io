@@ -34,7 +34,7 @@ O bundle do SDK é versionado em `vendor/`, para que a página não dependa de C
 
 ## Estado e limites
 
-Leia `IMPLEMENTACAO.md` para testes concluídos e pendências. A interface conectada está na branch de desenvolvimento; a página principal do site foi preservada. Não anunciar como plataforma concluída antes dos testes da competição completa por HTTP/Realtime e em dispositivos independentes.
+Leia `IMPLEMENTACAO.md` para testes concluídos e pendências. A versão básica conectada foi publicada em `/radioquiz/`; a página principal do site foi preservada. O primeiro acesso da professora por e-mail e os aparelhos físicos ainda precisam de validação. Não anunciar como plataforma concluída antes dos testes da competição completa por HTTP/Realtime e em dispositivos independentes.
 
 O botão Repetir cria uma nova sala sem apagar a anterior e depende da configuração guardada neste navegador. Em outro computador, prepare a nova partida pela biblioteca. O PIN é exibido a partir do registro local da sessão que criou a sala; não é recuperável do digest armazenado no banco. Preserve a sessão do computador da professora durante a aula.
 

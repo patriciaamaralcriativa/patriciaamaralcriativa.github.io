@@ -43,7 +43,7 @@ As duas salas e o questionário da professora temporária foram removidos, assim
 
 - Concluído após autorização: Site URL público e retorno exato da professora salvos e conferidos no Supabase Auth.
 - Testar o recebimento e uso do link por e-mail pela professora, sem inventar credenciais ou enviar mensagem automaticamente.
-- Publicar a interface de desenvolvimento em `/radioquiz/` após o ajuste e as verificações finais.
+- Publicação concluída: GitHub Pages `43732257759`, commit `22f21d564981643bbe0dc44d42932ba5b084726a`; painel público aberto e conferido. A página principal conservou o mesmo conteúdo.
 - Validar em computador e celulares físicos distintos, incluindo perda real de internet e capacidade da turma.
 - Medir/corrigir eventual excesso de mensagens em rajadas de muitas respostas no plano Free. A consulta periódica complementa o WebSocket, mas não equivale a um teste de carga.
 - Implementar os recursos especiais somente após a validação da competição básica pela professora.
