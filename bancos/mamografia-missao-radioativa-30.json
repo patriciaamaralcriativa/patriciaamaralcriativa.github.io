@@ -1,0 +1,132 @@
+{
+  "disciplina": "Mamografia",
+  "sets": [
+    [
+      [
+        "Incidência básica que projeta a mama de superior para inferior",
+        "Craniocaudal"
+      ],
+      [
+        "Incidência básica oblíqua adaptada à direção do peitoral",
+        "Mediolateral oblíqua"
+      ],
+      [
+        "Programa de detecção precoce em pessoas assintomáticas",
+        "Crivagem"
+      ],
+      [
+        "Incidência que desloca tecidos por rolamento para investigar somação",
+        "Mama enrolada"
+      ],
+      [
+        "Técnica que comprime área localizada para separar estruturas",
+        "Compressão seletiva"
+      ],
+      [
+        "Técnica com afastamento objeto-receptor para detalhar calcificações",
+        "Magnificação"
+      ],
+      [
+        "Manobra que desloca implante posteriormente e tecido anteriormente",
+        "Eklund"
+      ],
+      [
+        "Imagem em que a prótese permanece dentro do campo mamográfico",
+        "Implante incluído"
+      ],
+      [
+        "Imagem com tecido anterior tracionado após deslocamento do implante",
+        "Implante deslocado"
+      ],
+      [
+        "Incidência complementar do prolongamento axilar",
+        "Axilar"
+      ]
+    ],
+    [
+      [
+        "Incidência para demonstrar relação de achado superficial com a pele",
+        "Tangencial"
+      ],
+      [
+        "Estrutura muscular usada como referência na MLO",
+        "Peitoral maior"
+      ],
+      [
+        "Região inferior de transição da mama com parede torácica",
+        "Sulco inframamário"
+      ],
+      [
+        "Prolongamento superolateral do tecido mamário",
+        "Cauda axilar"
+      ],
+      [
+        "Estruturas fibrosas suspensoras da mama",
+        "Ligamentos de Cooper"
+      ],
+      [
+        "Unidade anatômica importante na origem de lesões epiteliais",
+        "Unidade ductolobular terminal"
+      ],
+      [
+        "Estruturas responsáveis pela condução de secreções lobulares",
+        "Ductos mamários"
+      ],
+      [
+        "Tecido relativamente radiotransparente da mama",
+        "Adiposo"
+      ],
+      [
+        "Tecido relativamente radiopaco da mama",
+        "Fibroglandular"
+      ],
+      [
+        "Lesão ocupando espaço descrita por forma e margens",
+        "Massa"
+      ]
+    ],
+    [
+      [
+        "Achado de pequenas deposições de cálcio no parênquima",
+        "Microcalcificações"
+      ],
+      [
+        "Margem com linhas radiadas que aumenta suspeição",
+        "Espiculada"
+      ],
+      [
+        "Calcificações de forma e tamanho variados, potencialmente suspeitas",
+        "Pleomórficas"
+      ],
+      [
+        "Calcificações finas que podem seguir ductos e ramificar",
+        "Lineares ramificadas"
+      ],
+      [
+        "Distribuição de calcificações que acompanha sistema ductal",
+        "Segmentar"
+      ],
+      [
+        "BI-RADS que exige avaliação complementar antes da conclusão",
+        "Categoria 0"
+      ],
+      [
+        "BI-RADS para achado provavelmente benigno após avaliação completa",
+        "Categoria 3"
+      ],
+      [
+        "BI-RADS de achado suspeito que pode requerer biópsia",
+        "Categoria 4"
+      ],
+      [
+        "BI-RADS altamente sugestivo de malignidade",
+        "Categoria 5"
+      ],
+      [
+        "BI-RADS de malignidade comprovada histologicamente",
+        "Categoria 6"
+      ]
+    ]
+  ],
+  "status": "rascunho-para-revisao"
+}
