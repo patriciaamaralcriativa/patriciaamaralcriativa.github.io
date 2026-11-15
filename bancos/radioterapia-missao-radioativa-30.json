@@ -1,0 +1,132 @@
+{
+  "disciplina": "Radioterapia",
+  "sets": [
+    [
+      [
+        "Modulação de fluência para conformação de dose",
+        "IMRT"
+      ],
+      [
+        "Entrega de fluência modulada durante rotação do gantry",
+        "VMAT"
+      ],
+      [
+        "Verificação geométrica com imagens durante tratamento",
+        "IGRT"
+      ],
+      [
+        "Radioterapia estereotáxica de alvos extracranianos",
+        "SBRT"
+      ],
+      [
+        "Radiocirurgia estereotáxica intracraniana",
+        "SRS"
+      ],
+      [
+        "Volume tumoral visível ou palpável",
+        "GTV"
+      ],
+      [
+        "Volume que inclui possível extensão microscópica",
+        "CTV"
+      ],
+      [
+        "Volume que incorpora margens para incertezas geométricas",
+        "PTV"
+      ],
+      [
+        "Estrutura saudável sujeita a restrições de dose",
+        "Órgão de risco"
+      ],
+      [
+        "Histograma que relaciona volume e dose",
+        "DVH"
+      ]
+    ],
+    [
+      [
+        "Dispositivo de lâminas móveis que conforma o feixe",
+        "MLC"
+      ],
+      [
+        "Imagem volumétrica obtida por feixe cônico",
+        "CBCT"
+      ],
+      [
+        "Material equivalente a tecido usado para aumentar dose superficial",
+        "Bolus"
+      ],
+      [
+        "Região inicial de aumento de dose em fótons de megavoltagem",
+        "Build-up"
+      ],
+      [
+        "Imobilizador moldável usado em cabeça e pescoço",
+        "Máscara termoplástica"
+      ],
+      [
+        "Técnica com fonte próxima ou dentro do alvo",
+        "Braquiterapia"
+      ],
+      [
+        "Técnica de alta taxa de dose em braquiterapia",
+        "HDR"
+      ],
+      [
+        "Aquisição que caracteriza movimento ao longo do ciclo respiratório",
+        "Tomografia 4D"
+      ],
+      [
+        "Ajuste do plano após alteração anatômica significativa",
+        "Replanejamento"
+      ],
+      [
+        "Verificação específica da entrega antes da primeira fração",
+        "QA do paciente"
+      ]
+    ],
+    [
+      [
+        "Região de transição lateral de intensidade do feixe",
+        "Penumbra"
+      ],
+      [
+        "Ponto de referência geométrico de rotação do equipamento",
+        "Isocentro"
+      ],
+      [
+        "Processo de definir contornos de volumes e estruturas",
+        "Delineamento"
+      ],
+      [
+        "Medida da dose absorvida ou entregue",
+        "Dosimetria"
+      ],
+      [
+        "Parâmetro que representa dose em cada sessão",
+        "Dose por fração"
+      ],
+      [
+        "Distribuição relativa da dose dentro do alvo",
+        "Homogeneidade"
+      ],
+      [
+        "Grau de ajuste espacial da dose ao volume-alvo",
+        "Conformidade"
+      ],
+      [
+        "Imagem adquirida para verificar posicionamento do paciente",
+        "Imagem de verificação"
+      ],
+      [
+        "Técnica que usa inspiração sustentada para afastar coração",
+        "DIBH"
+      ],
+      [
+        "Procedimento de emergência diante de fonte HDR que não recolhe",
+        "Plano de emergência"
+      ]
+    ]
+  ],
+  "status": "rascunho-para-revisao"
+}
