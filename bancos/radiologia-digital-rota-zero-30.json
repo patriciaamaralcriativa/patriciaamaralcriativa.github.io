@@ -5,12 +5,12 @@
       "titulo": "Caso técnico 1",
       "pergunta": "Um serviço utiliza cassetes CR e percebe que não surge imagem imediatamente após a exposição. Em qual componente permanece a informação antes da leitura?",
       "alternativas": [
+        "Matriz de fotodiodos do painel DR",
+        "Camada de selênio amorfo",
         "Placa de fósforo fotoestimulável",
-        "Painel de selênio amorfo",
-        "Filme convencional",
-        "Intensificador de imagem"
+        "Cintilador acoplado diretamente à estação"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "Resposta: Placa de fósforo fotoestimulável.",
       "dificuldade": "normal"
     },
@@ -18,12 +18,12 @@
       "titulo": "Caso técnico 2",
       "pergunta": "Um cassete CR foi exposto e levado à processadora. Qual operação permite recuperar a informação registrada na placa?",
       "alternativas": [
-        "Aquecimento do chassi",
         "Varredura a laser",
-        "Revelação química",
-        "Fixação química"
+        "Leitura óptica por câmera de vídeo",
+        "Conversão direta no fotocondutor",
+        "Amplificação de sinal por intensificador"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "Resposta: Varredura a laser.",
       "dificuldade": "normal"
     },
@@ -31,12 +31,12 @@
       "titulo": "Caso técnico 3",
       "pergunta": "Após várias utilizações, uma placa CR apresenta vestígios de exames anteriores. Qual etapa do ciclo deve ser verificada primeiro?",
       "alternativas": [
-        "Reduzir o tamanho do pixel",
-        "Converter DICOM em JPEG",
-        "Remover sinal residual",
-        "Aumentar a tensão do tubo"
+        "Calibração da matriz de pixels",
+        "Ajuste do índice de exposição",
+        "Alteração do intervalo entre exposições",
+        "Remover sinal residual"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "Resposta: Remover sinal residual.",
       "dificuldade": "normal"
     },
@@ -45,11 +45,11 @@
       "pergunta": "Uma equipe compara um painel DR indireto com um detector direto. No painel indireto, qual componente executa a primeira conversão após a absorção dos raios X?",
       "alternativas": [
         "Fotodiodo isolado",
-        "Conversor analógico-digital",
-        "Grade antidifusora",
-        "Cintilador"
+        "Cintilador",
+        "Camada fotocondutora de selênio",
+        "Conversor analógico-digital"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "Resposta: Cintilador.",
       "dificuldade": "normal"
     },
@@ -57,12 +57,12 @@
       "titulo": "Caso técnico 5",
       "pergunta": "Um detector de selênio amorfo é instalado para evitar uma etapa intermediária luminosa. Qual conversão física caracteriza sua aquisição?",
       "alternativas": [
-        "Raios X em cargas elétricas",
-        "Raios X em luz visível",
-        "Luz em calor",
-        "Elétrons em ultrassom"
+        "Raios X em luz no cintilador",
+        "Luz emitida em cargas no fotodiodo",
+        "Sinal elétrico em níveis digitais",
+        "Raios X em cargas elétricas"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "Resposta: Raios X em cargas elétricas.",
       "dificuldade": "normal"
     },
@@ -70,10 +70,10 @@
       "titulo": "Caso técnico 6",
       "pergunta": "Um fabricante especifica detector DR indireto com cristais colunares para condução da luz. Qual material é compatível com essa arquitetura?",
       "alternativas": [
-        "Tungstênio metálico",
+        "Oxissulfeto de gadolínio",
         "Iodeto de césio",
         "Selênio amorfo",
-        "Chumbo puro"
+        "Silício amorfo"
       ],
       "correta": 1,
       "explicacao": "Resposta: Iodeto de césio.",
@@ -83,12 +83,12 @@
       "titulo": "Caso técnico 7",
       "pergunta": "Em um painel DR indireto, a luz já foi produzida pelo cintilador. Qual dispositivo participa de sua conversão em sinal elétrico?",
       "alternativas": [
-        "Filtro adicional",
-        "Tubo de raios X",
         "Fotodiodo",
-        "Colimador"
+        "Fotocondutor de selênio amorfo",
+        "Circuito de leitura TFT",
+        "Conversor analógico-digital"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "Resposta: Fotodiodo.",
       "dificuldade": "normal"
     },
@@ -96,12 +96,12 @@
       "titulo": "Caso técnico 8",
       "pergunta": "Um aluno observa uma imagem de 2048 por 2048 elementos. O que esses números descrevem na estrutura da imagem?",
       "alternativas": [
-        "Quantidade de exames no PACS",
-        "Tempo de exposição",
-        "Número de detectores de sala",
-        "Arranjo de pixels"
+        "Dimensões físicas do painel detector",
+        "Quantidade de bits por pixel",
+        "Arranjo de pixels",
+        "Número de amostras por segundo"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "Resposta: Arranjo de pixels.",
       "dificuldade": "normal"
     },
@@ -109,12 +109,12 @@
       "titulo": "Caso técnico 9",
       "pergunta": "Dois sistemas usam matriz idêntica, mas cobrem áreas físicas diferentes. Qual propriedade deve ser comparada para estimar a dimensão representada por cada pixel?",
       "alternativas": [
+        "Profundidade de bits",
         "Espaçamento de pixel",
-        "Tensão do tubo",
         "Índice de exposição",
         "Largura de janela"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "Resposta: Espaçamento de pixel.",
       "dificuldade": "normal"
     },
@@ -122,12 +122,12 @@
       "titulo": "Caso técnico 10",
       "pergunta": "Durante a leitura de um detector, a eletrônica recebe um sinal contínuo que precisa ser armazenado numericamente. Qual processo realiza essa etapa?",
       "alternativas": [
-        "Filtração",
-        "Conversão analógico-digital",
-        "Colimação",
-        "Fluorescência"
+        "Normalização de campo plano",
+        "Reescalonamento de janela",
+        "Compressão de dados sem perdas",
+        "Conversão analógico-digital"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Resposta: Conversão analógico-digital.",
       "dificuldade": "normal"
     },
@@ -135,10 +135,10 @@
       "titulo": "Caso técnico 11",
       "pergunta": "Uma imagem de 12 bits e outra de 16 bits têm dimensões iguais. Qual parâmetro distingue a capacidade de codificação dos valores de sinal?",
       "alternativas": [
-        "Tamanho do campo",
-        "Velocidade do obturador",
+        "Espaçamento de pixel",
+        "Matriz de aquisição",
         "Profundidade de bits",
-        "Distância foco-receptor"
+        "Amplitude da janela"
       ],
       "correta": 2,
       "explicacao": "Resposta: Profundidade de bits.",
@@ -148,12 +148,12 @@
       "titulo": "Caso técnico 12",
       "pergunta": "Uma radiografia contém diferenças sutis, mas o operador deseja exibir uma faixa mais estreita de valores. Qual ajuste deve ser utilizado?",
       "alternativas": [
-        "Tensão de pico",
-        "Distância foco-receptor",
-        "Tempo de leitura",
-        "Largura de janela"
+        "Largura de janela",
+        "Nível de janela",
+        "Índice de exposição",
+        "Profundidade de bits"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "Resposta: Largura de janela.",
       "dificuldade": "normal"
     },
@@ -161,12 +161,12 @@
       "titulo": "Caso técnico 13",
       "pergunta": "Em uma estação de trabalho, a faixa de valores exibidos tem amplitude adequada, porém está centrada em intensidade inadequada. Qual controle deve ser ajustado?",
       "alternativas": [
-        "Nível de janela",
         "Colimação física",
         "Filtração do feixe",
+        "Nível de janela",
         "Correção de posicionamento"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "Resposta: Nível de janela.",
       "dificuldade": "normal"
     },
@@ -189,10 +189,10 @@
       "alternativas": [
         "CSV",
         "HTML",
-        "DICOM",
-        "JPEG como padrão clínico universal"
+        "JPEG como padrão clínico universal",
+        "DICOM"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "Resposta: DICOM.",
       "dificuldade": "normal"
     },
@@ -200,12 +200,12 @@
       "titulo": "Caso técnico 16",
       "pergunta": "O setor precisa acompanhar solicitações, agenda e laudos, além das imagens armazenadas. Qual sistema atende ao fluxo de informação radiológica?",
       "alternativas": [
+        "RIS",
         "PACS exclusivamente",
         "Detector DR",
-        "Grade",
-        "RIS"
+        "Grade"
       ],
-      "correta": 3,
+      "correta": 0,
       "explicacao": "Resposta: RIS.",
       "dificuldade": "normal"
     },
@@ -213,12 +213,12 @@
       "titulo": "Caso técnico 17",
       "pergunta": "Um detector apresenta dificuldade em separar estruturas muito próximas apesar de bom contraste entre elas. Qual propriedade está mais diretamente limitada?",
       "alternativas": [
-        "Resolução espacial",
         "Brilho do monitor",
+        "Resolução espacial",
         "Tamanho do arquivo apenas",
         "Dose absorvida"
       ],
-      "correta": 0,
+      "correta": 1,
       "explicacao": "Resposta: Resolução espacial.",
       "dificuldade": "normal"
     },
@@ -226,12 +226,12 @@
       "titulo": "Caso técnico 18",
       "pergunta": "Em uma imagem, duas regiões extensas com sinais próximos tornam-se difíceis de diferenciar, embora suas bordas sejam grandes. Qual propriedade deve ser analisada?",
       "alternativas": [
-        "Velocidade de impressão",
         "Resolução de contraste",
+        "Velocidade de impressão",
         "Tamanho do chassi",
         "Distância entre salas"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "Resposta: Resolução de contraste.",
       "dificuldade": "normal"
     },
@@ -241,10 +241,10 @@
       "alternativas": [
         "Distorção geométrica",
         "Persistência de imagem",
-        "Ruído quântico",
-        "Aliasing exclusivamente"
+        "Aliasing exclusivamente",
+        "Ruído quântico"
       ],
-      "correta": 2,
+      "correta": 3,
       "explicacao": "Resposta: Ruído quântico.",
       "dificuldade": "normal"
     },
@@ -254,10 +254,10 @@
       "alternativas": [
         "Ampliação indiscriminada do campo",
         "Repetição preventiva",
-        "Retirada da grade em qualquer exame",
-        "Colimação adequada"
+        "Colimação adequada",
+        "Retirada da grade em qualquer exame"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "Resposta: Colimação adequada.",
       "dificuldade": "normal"
     },
@@ -265,12 +265,12 @@
       "titulo": "Caso técnico 21",
       "pergunta": "Um setor observa aumento progressivo dos indicadores de exposição, embora a aparência das imagens permaneça semelhante. Qual fenômeno merece investigação?",
       "alternativas": [
-        "Dose creep",
         "Fluorescência",
         "Saturação óptica",
-        "Reconstrução volumétrica"
+        "Reconstrução volumétrica",
+        "Dose creep"
       ],
-      "correta": 0,
+      "correta": 3,
       "explicacao": "Resposta: Dose creep.",
       "dificuldade": "dificil"
     },
@@ -279,11 +279,11 @@
       "pergunta": "Uma radiografia excessivamente exposta continua visualmente aceitável após processamento automático. Qual mecanismo ajuda a explicar isso?",
       "alternativas": [
         "Movimento do paciente",
-        "Reescalonamento da imagem",
         "Revelação química",
+        "Reescalonamento da imagem",
         "Fusão nuclear"
       ],
-      "correta": 1,
+      "correta": 2,
       "explicacao": "Resposta: Reescalonamento da imagem.",
       "dificuldade": "dificil"
     },
@@ -291,12 +291,12 @@
       "titulo": "Caso técnico 23",
       "pergunta": "Uma imagem digital apresenta aparência satisfatória, mas o serviço precisa avaliar a exposição recebida pelo receptor. Qual informação do sistema deve ser consultada?",
       "alternativas": [
+        "Índice de exposição",
         "Nome do arquivo",
         "Cor do chassi",
-        "Índice de exposição",
         "Tamanho do monitor"
       ],
-      "correta": 2,
+      "correta": 0,
       "explicacao": "Resposta: Índice de exposição.",
       "dificuldade": "dificil"
     },
@@ -305,11 +305,11 @@
       "pergunta": "Dois aparelhos apresentam números de exposição diferentes para situações semelhantes. Antes de compará-los diretamente, qual precaução é indispensável?",
       "alternativas": [
         "Assumir escala universal idêntica",
+        "Considerar definições e calibração",
         "Ignorar protocolos",
-        "Usar brilho do monitor como dose",
-        "Considerar definições e calibração"
+        "Usar brilho do monitor como dose"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "Resposta: Considerar definições e calibração.",
       "dificuldade": "dificil"
     },
@@ -331,11 +331,11 @@
       "pergunta": "Uma imagem apresenta uma linha vertical repetitiva no mesmo local do painel em vários exames. Qual manifestação é compatível com falha de linha ou coluna?",
       "alternativas": [
         "Magnificação",
-        "Faixa linear",
         "Desfoque por movimento",
-        "Rotação do paciente"
+        "Rotação do paciente",
+        "Faixa linear"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Resposta: Faixa linear.",
       "dificuldade": "dificil"
     },
@@ -344,11 +344,11 @@
       "pergunta": "Uma sequência de exames mostra não uniformidade persistente no detector, mesmo com técnica adequada. Qual rotina técnica deve ser acionada?",
       "alternativas": [
         "Recorte estético",
-        "Compressão irreversível",
         "Controle de qualidade",
+        "Compressão irreversível",
         "Aumento automático do mAs"
       ],
-      "correta": 2,
+      "correta": 1,
       "explicacao": "Resposta: Controle de qualidade.",
       "dificuldade": "dificil"
     },
@@ -358,10 +358,10 @@
       "alternativas": [
         "Aumento do campo irradiado",
         "Dispensa de identificação",
-        "Remoção do marcador anatômico",
-        "Colimação física correta"
+        "Colimação física correta",
+        "Remoção do marcador anatômico"
       ],
-      "correta": 3,
+      "correta": 2,
       "explicacao": "Resposta: Colimação física correta.",
       "dificuldade": "dificil"
     },
@@ -369,12 +369,12 @@
       "titulo": "Caso técnico 29",
       "pergunta": "Uma radiografia já adquirida precisa ser examinada com diferentes apresentações de contraste sem irradiar novamente o paciente. Qual ferramenta atende a essa necessidade?",
       "alternativas": [
-        "Ajuste de janela",
         "Nova incidência",
         "Aumento de mAs",
+        "Ajuste de janela",
         "Troca de colimador"
       ],
-      "correta": 0,
+      "correta": 2,
       "explicacao": "Resposta: Ajuste de janela.",
       "dificuldade": "dificil"
     },
@@ -382,15 +382,15 @@
       "titulo": "Caso técnico 30",
       "pergunta": "Após identificar anatomia cortada na imagem, o operador tenta corrigir somente com processamento digital. Qual conduta é tecnicamente necessária antes de decidir nova aquisição?",
       "alternativas": [
-        "Excluir metadados",
         "Revisar posicionamento e técnica",
+        "Excluir metadados",
         "Aplicar nitidez máxima sempre",
         "Aumentar contraste indiscriminadamente"
       ],
-      "correta": 1,
+      "correta": 0,
       "explicacao": "Resposta: Revisar posicionamento e técnica.",
       "dificuldade": "dificil"
     }
   ],
-  "status": "enunciados-contextualizados-pendente-revisao-distratores"
+  "status": "revisao-parcial-distratores-12-de-30"
 }
