@@ -39,3 +39,7 @@ Leia `IMPLEMENTACAO.md` para testes concluídos e pendências. A versão básica
 O botão Repetir cria uma nova sala sem apagar a anterior e depende da configuração guardada neste navegador. Em outro computador, prepare a nova partida pela biblioteca. O PIN é exibido a partir do registro local da sessão que criou a sala; não é recuperável do digest armazenado no banco. Preserve a sessão do computador da professora durante a aula.
 
 Recursos especiais (roubo, escudo, bônus e desempate) pertencem à etapa posterior e ainda não foram implementados.
+
+## Visual e mascotes
+
+A nova proposta visual e os limites da extensão de mascotes estão em `VISUAL.md`. A migração de aparência está preparada, mas ainda não foi aplicada ao projeto remoto; o salvamento do editor permanece local até a autorização.

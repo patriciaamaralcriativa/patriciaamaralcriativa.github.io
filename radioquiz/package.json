@@ -1,1 +1,19 @@
-{"name": "radioquiz-uniterp", "private": true, "type": "module", "scripts": {"build": "esbuild vendor-entry.js --bundle --format=esm --platform=browser --minify --outfile=vendor/supabase.js", "check": "node --check app.js && node --check game-client.js", "test": "npm --prefix tests test && npm --prefix tests run test:ui"}, "dependencies": {"@supabase/supabase-js": "2.119.0"}, "devDependencies": {"esbuild": "0.28.2"}}
+{
+  "name": "radioquiz-uniterp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild vendor-entry.js --bundle --format=esm --platform=browser --minify --outfile=vendor/supabase.js && esbuild mascot3d-entry.js --bundle --format=esm --platform=browser --minify --outfile=vendor/mascot3d.js && esbuild node_modules/qrcode/lib/core/qrcode.js --bundle --format=esm --platform=browser --minify --outfile=vendor/qrcode.js",
+    "check": "node --check app.js && node --check game-client.js && node --check experience.js && node --check looks.js && node --check mascot3d-entry.js && node --check invitation.js",
+    "test": "npm --prefix tests test && npm --prefix tests run test:ui && npm --prefix tests run test:experience && node tests/invitation.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "qrcode": "1.5.4",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "jsqr": "1.4.0"
+  }
+}
