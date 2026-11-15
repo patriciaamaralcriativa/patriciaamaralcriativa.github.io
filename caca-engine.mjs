@@ -1,4 +1,4 @@
-export const normalize=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z]/g,'');
+export const normalize=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]/g,'');
 export function validate(rows){
  if(!Array.isArray(rows)||!rows.length)throw Error('Inclua pelo menos uma pergunta e uma resposta.');
  if(rows.length>24)throw Error('Use até 24 perguntas por atividade. Divida questionários maiores.');
@@ -6,7 +6,7 @@ export function validate(rows){
  return rows.map((r,i)=>{const question=String(r.question??'').trim(),answer=String(r.answer??'').trim(),word=normalize(answer);
  if(!question||!answer)throw Error(`Complete a pergunta e a resposta da linha ${i+1}.`);
  if(question.length>500||answer.length>100)throw Error(`Texto muito longo na linha ${i+1}.`);
- if(word.length<2||word.length>24)throw Error(`A resposta da linha ${i+1} precisa ter de 2 a 24 letras. Use um termo-chave.`);
+ if(word.length<2||word.length>24)throw Error(`A resposta da linha ${i+1} precisa ter de 2 a 24 letras ou números. Use um termo-chave.`);
  if(seen.has(word))throw Error(`Resposta repetida: ${answer}. Use termos diferentes.`);seen.add(word);return {question,answer,word};});
 }
 export function parse(text){
