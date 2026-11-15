@@ -45,8 +45,12 @@ protectionControls.innerHTML='<button type="button" id="protectionRound1" class=
 document.querySelector('#editor .toolbar')?.before(protectionControls);
 if(!document.getElementById('protectionRound1')) document.getElementById('generate')?.parentElement?.before(protectionControls);
 for(const [round,id] of [[0,'protectionRound1'],[1,'protectionRound2']]){
- document.getElementById(id)?.addEventListener('click',()=>safe(()=>{
-  const q={title:'Proteção Radiológica — rodada '+(round+1),level:'medio',rows:protectionBank.rows.slice(round*15,(round+1)*15)};
+ document.getElementById(id)?.addEventListener('click',()=>safe(async()=>{
+  const response=await fetch('/bancos/protecao-radiologica-caca-palavras-30.json',{cache:'no-store'});
+  if(!response.ok)throw Error('Banco atualizado de Proteção Radiológica indisponível');
+  const bank=await response.json();
+  if(!Array.isArray(bank.rows)||bank.rows.length!==30)throw Error('Banco de Proteção Radiológica incompleto');
+  const q={title:'Proteção Radiológica — rodada '+(round+1),level:'medio',rows:validate(bank.rows.slice(round*15,(round+1)*15))};
   setEditor(q);start(q);
  }));
 }
