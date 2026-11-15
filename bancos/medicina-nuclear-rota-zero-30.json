@@ -2,8 +2,8 @@
   "disciplina": "Medicina Nuclear",
   "questoes": [
     {
-      "titulo": "MEDICINA NUCLEAR — 1",
-      "pergunta": "Em uma cintilografia óssea com 99mTc-fosfonato, a captação focal aumentada indica principalmente:",
+      "titulo": "Interpretação em Medicina Nuclear 1",
+      "pergunta": "Uma cintilografia óssea mostra foco de hipercaptação, mas a hipótese clínica ainda é incerta. Qual processo fisiológico a imagem reflete principalmente?",
       "alternativas": [
         "Presença obrigatória de fratura aguda",
         "Redução do remodelamento ósseo",
@@ -15,8 +15,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 2",
-      "pergunta": "Em um estudo renal dinâmico, a fase inicial de perfusão deve ser interpretada considerando:",
+      "titulo": "Interpretação em Medicina Nuclear 2",
+      "pergunta": "Na avaliação renal dinâmica, as primeiras imagens são obtidas imediatamente após a administração. Que informação predomina nessa etapa?",
       "alternativas": [
         "Exclusivamente a excreção vesical tardia",
         "Apenas a meia-vida física do radionuclídeo",
@@ -28,8 +28,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 3",
-      "pergunta": "Na avaliação de obstrução urinária por renografia diurética, a interpretação adequada exige:",
+      "titulo": "Interpretação em Medicina Nuclear 3",
+      "pergunta": "Uma curva renográfica mostra esvaziamento lento após diurético. Qual conjunto de informações deve ser integrado antes de concluir por obstrução?",
       "alternativas": [
         "Curvas, imagens, função renal e condições de hidratação",
         "Apenas o tempo de pico isolado",
@@ -41,8 +41,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 4",
-      "pergunta": "Em um exame SPECT, a principal vantagem da aquisição em múltiplas projeções é:",
+      "titulo": "Interpretação em Medicina Nuclear 4",
+      "pergunta": "Em um estudo planar, duas estruturas sobrepostas dificultam a localização de um foco. Qual recurso da aquisição SPECT ajuda a resolver essa limitação?",
       "alternativas": [
         "Substituir a colimação por coincidência",
         "Reconstruir a distribuição tridimensional da atividade",
@@ -54,8 +54,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 5",
-      "pergunta": "A imagem PET é formada principalmente pela detecção de:",
+      "titulo": "Interpretação em Medicina Nuclear 5",
+      "pergunta": "Uma equipe compara SPECT e PET. Que evento físico é utilizado para localizar a origem do sinal na PET?",
       "alternativas": [
         "Partículas beta diretamente no cristal",
         "Elétrons Auger detectados externamente",
@@ -67,8 +67,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 6",
-      "pergunta": "A energia de cada fóton resultante da aniquilação pósitron-elétron é aproximadamente:",
+      "titulo": "Interpretação em Medicina Nuclear 6",
+      "pergunta": "Durante uma discussão de PET, o aluno precisa reconhecer a energia dos fótons de aniquilação. Qual valor caracteriza cada fóton?",
       "alternativas": [
         "140 keV",
         "364 keV",
@@ -80,8 +80,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 7",
-      "pergunta": "Na PET com 18F-FDG, hipercaptação pode ocorrer também em:",
+      "titulo": "Interpretação em Medicina Nuclear 7",
+      "pergunta": "Um foco hipermetabólico aparece em PET com FDG próximo a processo inflamatório conhecido. Por que não deve ser automaticamente classificado como tumor?",
       "alternativas": [
         "Processos inflamatórios com elevado metabolismo glicolítico",
         "Apenas tumores malignos confirmados",
@@ -93,8 +93,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 8",
-      "pergunta": "A captação fisiológica cerebral de 18F-FDG é explicada principalmente por:",
+      "titulo": "Interpretação em Medicina Nuclear 8",
+      "pergunta": "Uma PET cerebral com FDG apresenta captação fisiológica importante no córtex. Qual característica do tecido explica esse padrão?",
       "alternativas": [
         "Ligação específica ao cálcio ósseo",
         "Alto consumo de glicose pelo tecido nervoso",
@@ -106,8 +106,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 9",
-      "pergunta": "Na gama-câmara, o colimador de furos paralelos tem como função principal:",
+      "titulo": "Interpretação em Medicina Nuclear 9",
+      "pergunta": "Uma gama-câmara recebe fótons de várias direções. Qual componente limita geometricamente os trajetos aceitos para formar a imagem?",
       "alternativas": [
         "Converter radiação gama em luz",
         "Determinar a meia-vida biológica",
@@ -119,8 +119,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 10",
-      "pergunta": "Uma troca inadequada de colimador pode resultar em:",
+      "titulo": "Interpretação em Medicina Nuclear 10",
+      "pergunta": "Um exame foi realizado com colimador inadequado para a energia do radionuclídeo. Qual prejuízo físico pode resultar?",
       "alternativas": [
         "Mudança da meia-vida física do radiofármaco",
         "Alteração da identidade química do traçador",
@@ -132,8 +132,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 11",
-      "pergunta": "O cristal cintilador da gama-câmara tem como função:",
+      "titulo": "Interpretação em Medicina Nuclear 11",
+      "pergunta": "Um aluno confunde a função do cristal da gama-câmara com a do colimador. O que o cristal realiza quando recebe fótons gama?",
       "alternativas": [
         "Converter energia dos fótons incidentes em luz",
         "Emitir os fótons gama administrados",
@@ -145,8 +145,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 12",
-      "pergunta": "A janela energética em SPECT é utilizada para:",
+      "titulo": "Interpretação em Medicina Nuclear 12",
+      "pergunta": "Durante SPECT, a equipe define uma janela em torno do fotopico. Qual é o objetivo dessa seleção?",
       "alternativas": [
         "Eliminar a atenuação por tecidos profundos",
         "Selecionar eventos próximos ao fotopico do radionuclídeo",
@@ -158,8 +158,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 13",
-      "pergunta": "Uma janela energética excessivamente ampla pode:",
+      "titulo": "Interpretação em Medicina Nuclear 13",
+      "pergunta": "Uma aquisição usa janela energética excessivamente ampla. Que contribuição indesejada pode aumentar?",
       "alternativas": [
         "Reduzir a sensibilidade a zero necessariamente",
         "Melhorar sempre a resolução espacial",
@@ -171,8 +171,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 14",
-      "pergunta": "O teste de uniformidade da gama-câmara busca identificar:",
+      "titulo": "Interpretação em Medicina Nuclear 14",
+      "pergunta": "Um teste de rotina identifica áreas do campo de visão com respostas diferentes sob irradiação uniforme. Qual controle está sendo avaliado?",
       "alternativas": [
         "Somente a concentração do radiofármaco",
         "A distribuição anatômica do paciente",
@@ -184,8 +184,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 15",
-      "pergunta": "O controle de centro de rotação em SPECT é importante porque erros podem:",
+      "titulo": "Interpretação em Medicina Nuclear 15",
+      "pergunta": "Em SPECT, um desalinhamento do centro de rotação é detectado antes do exame. Qual consequência justifica corrigir essa falha?",
       "alternativas": [
         "Gerar distorções e artefatos na reconstrução",
         "Alterar a energia emitida pelo radionuclídeo",
@@ -197,8 +197,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 16",
-      "pergunta": "A correção de atenuação em SPECT/PET procura compensar:",
+      "titulo": "Interpretação em Medicina Nuclear 16",
+      "pergunta": "Uma região profunda aparece com menos contagens por perda de fótons nos tecidos. Que correção pode reduzir esse viés na reconstrução?",
       "alternativas": [
         "Excesso de resolução do detector",
         "Perda de fótons por interação com tecidos",
@@ -210,8 +210,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 17",
-      "pergunta": "O registro incorreto entre CT e PET pode provocar:",
+      "titulo": "Interpretação em Medicina Nuclear 17",
+      "pergunta": "Em PET/CT, a imagem anatômica e a funcional ficam desalinhadas por movimento do paciente. Que tipo de problema pode surgir?",
       "alternativas": [
         "Mudança da energia de aniquilação",
         "Redução da meia-vida física do 18F",
@@ -223,8 +223,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 18",
-      "pergunta": "A meia-vida efetiva de um radiofármaco no organismo depende de:",
+      "titulo": "Interpretação em Medicina Nuclear 18",
+      "pergunta": "Um radiofármaco perde atividade tanto por decaimento quanto por eliminação do organismo. Que fatores determinam sua meia-vida efetiva?",
       "alternativas": [
         "Apenas da meia-vida física",
         "Somente da atividade inicial da seringa",
@@ -236,8 +236,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 19",
-      "pergunta": "Se o radionuclídeo é eliminado biologicamente, a meia-vida efetiva será:",
+      "titulo": "Interpretação em Medicina Nuclear 19",
+      "pergunta": "Um radiofármaco é eliminado do corpo além de sofrer decaimento físico. Como se compara sua meia-vida efetiva à física?",
       "alternativas": [
         "Menor ou igual à meia-vida física",
         "Sempre maior que a meia-vida física",
@@ -249,8 +249,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 20",
-      "pergunta": "O tecnécio-99m é amplamente usado em diagnóstico por:",
+      "titulo": "Interpretação em Medicina Nuclear 20",
+      "pergunta": "Um serviço escolhe 99mTc para várias cintilografias. Qual combinação de propriedades favorece seu uso diagnóstico?",
       "alternativas": [
         "Produção exclusiva de pares de aniquilação",
         "Emissão gama adequada à detecção e meia-vida física relativamente curta",
@@ -262,8 +262,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 21",
-      "pergunta": "Na eluição de gerador 99Mo/99mTc, o produto usualmente coletado é:",
+      "titulo": "Interpretação em Medicina Nuclear 21",
+      "pergunta": "Após eluição de gerador de molibdênio-tecnécio, qual espécie radioativa é usualmente obtida para preparação de radiofármacos?",
       "alternativas": [
         "Fluordesoxiglicose marcada com 18F",
         "Cloreto de tálio contendo 201Tl",
@@ -275,8 +275,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 22",
-      "pergunta": "A verificação de pureza radionuclídica do eluato do gerador busca detectar:",
+      "titulo": "Interpretação em Medicina Nuclear 22",
+      "pergunta": "Um laboratório verifica possível passagem de molibdênio-99 no eluato do gerador. Que parâmetro de qualidade está avaliando?",
       "alternativas": [
         "Somente alterações do pH",
         "Apenas o volume do eluato",
@@ -288,8 +288,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 23",
-      "pergunta": "A pureza radioquímica de um radiofármaco indica:",
+      "titulo": "Interpretação em Medicina Nuclear 23",
+      "pergunta": "Uma preparação contém atividade radioativa em formas químicas diferentes da desejada. Qual controle detecta esse problema?",
       "alternativas": [
         "Fração da atividade na forma química desejada",
         "Ausência absoluta de qualquer microrganismo",
@@ -301,8 +301,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 24",
-      "pergunta": "Uma marcação radioquímica inadequada pode resultar em:",
+      "titulo": "Interpretação em Medicina Nuclear 24",
+      "pergunta": "Uma cintilografia apresenta biodistribuição inesperada após preparação inadequada do radiofármaco. Qual falha deve ser investigada?",
       "alternativas": [
         "Correção espontânea do exame por software",
         "Biodistribuição não esperada e prejuízo diagnóstico",
@@ -314,8 +314,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 25",
-      "pergunta": "Na cintilografia de tireoide, o padrão de captação deve ser interpretado com:",
+      "titulo": "Interpretação em Medicina Nuclear 25",
+      "pergunta": "Uma cintilografia tireoidiana é interpretada sem considerar medicamentos e dados laboratoriais. Que informações clínicas devem acompanhar a avaliação?",
       "alternativas": [
         "Somente a distância entre paciente e detector",
         "Exclusivamente a idade do equipamento",
@@ -327,8 +327,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 26",
-      "pergunta": "No exame de perfusão miocárdica, a comparação estresse-repouso auxilia a distinguir:",
+      "titulo": "Interpretação em Medicina Nuclear 26",
+      "pergunta": "Na perfusão miocárdica, um defeito observado sob estresse desaparece em repouso. Que comparação permitiu identificar essa característica?",
       "alternativas": [
         "Somente alterações da frequência cardíaca",
         "Exclusivamente o volume ventricular anatômico",
@@ -340,8 +340,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 27",
-      "pergunta": "A aquisição gated-SPECT permite avaliar adicionalmente:",
+      "titulo": "Interpretação em Medicina Nuclear 27",
+      "pergunta": "Além da perfusão, a equipe deseja avaliar movimento das paredes ventriculares. Qual modalidade de aquisição pode fornecer essa informação?",
       "alternativas": [
         "Movimento parietal e função ventricular",
         "Apenas a concentração sérica de troponina",
@@ -353,8 +353,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 28",
-      "pergunta": "Em PET, o efeito de volume parcial tende a:",
+      "titulo": "Interpretação em Medicina Nuclear 28",
+      "pergunta": "Uma lesão pequena tem captação aparente inferior à esperada em PET. Qual limitação de resolução pode contribuir para isso?",
       "alternativas": [
         "Produzir apenas artefatos por movimento",
         "Subestimar atividade em estruturas pequenas em relação à resolução",
@@ -366,8 +366,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 29",
-      "pergunta": "O SUV em PET deve ser interpretado com cautela porque é influenciado por:",
+      "titulo": "Interpretação em Medicina Nuclear 29",
+      "pergunta": "Duas PETs do mesmo paciente mostram SUVs diferentes. Que fatores técnicos e fisiológicos devem ser avaliados antes de concluir mudança biológica?",
       "alternativas": [
         "Somente pela posição da mesa no hospital",
         "Exclusivamente pelo número de imagens exportadas",
@@ -379,8 +379,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "MEDICINA NUCLEAR — 30",
-      "pergunta": "No extravasamento de um radiofármaco durante a injeção, a conduta técnica adequada inclui:",
+      "titulo": "Interpretação em Medicina Nuclear 30",
+      "pergunta": "Durante injeção, parte do radiofármaco extravasa no local da punção. Qual providência é adequada para avaliar a validade do exame?",
       "alternativas": [
         "Ignorar o local se a aquisição puder iniciar",
         "Aumentar automaticamente a atividade sem avaliação",
@@ -392,5 +392,5 @@
       "dificuldade": "dificil"
     }
   ],
-  "status": "rascunho-para-revisao"
+  "status": "30-casos-reformulados-pendente-revisao-dos-distratores"
 }
