@@ -1,0 +1,457 @@
+{
+  "title": "Tomografia Computadorizada — RADIOQUIZ",
+  "subject": "Tomografia Computadorizada",
+  "questions": [
+    {
+      "prompt": "Em TC helicoidal, aumentar o pitch mantendo os demais parâmetros constantes tende a:",
+      "options": [
+        "Aumentar o avanço da mesa por rotação em relação à colimação total",
+        "Aumentar o número de rotações por unidade de comprimento",
+        "Aumentar o avanço da mesa por rotação em relação à colimação total",
+        "Reduzir o avanço longitudinal por rotação"
+      ],
+      "answer_index": 2,
+      "explanation": "Pitch relaciona avanço da mesa por rotação à largura total do feixe colimado.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "Em aquisição helicoidal com colimação total de 40 mm e avanço de 60 mm por rotação, o pitch é:",
+      "options": [
+        "1,5",
+        "1,5",
+        "0,67",
+        "1,0"
+      ],
+      "answer_index": 0,
+      "explanation": "Pitch = 60/40 = 1,5.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "A escolha de cortes reconstruídos mais finos em TC, mantendo a aquisição, geralmente:",
+      "options": [
+        "Melhora a resolução no eixo z, mas aumenta o ruído por imagem",
+        "Reduz o ruído sem alterar a resolução longitudinal",
+        "Aumenta o campo de visão anatômico",
+        "Melhora a resolução no eixo z, mas aumenta o ruído por imagem"
+      ],
+      "answer_index": 3,
+      "explanation": "Menor espessura reduz efeito de volume parcial, porém há menos fótons por imagem reconstruída.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Uma pequena calcificação perde conspicuidade em corte espesso devido principalmente a:",
+      "options": [
+        "Efeito de volume parcial",
+        "Efeito de volume parcial",
+        "Artefato de endurecimento do feixe",
+        "Desalinhamento do centro isocêntrico"
+      ],
+      "answer_index": 1,
+      "explanation": "A média de atenuações de tecidos no mesmo voxel pode mascarar estruturas pequenas.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "Em TC, uma estrutura mede aproximadamente −950 HU. O material mais compatível é:",
+      "options": [
+        "Ar",
+        "Gordura",
+        "Água",
+        "Ar"
+      ],
+      "answer_index": 3,
+      "explanation": "Ar aproxima-se de −1000 HU; água é referência próxima de 0 HU.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Para avaliar parênquima pulmonar e mediastino na mesma aquisição, a conduta habitual é:",
+      "options": [
+        "Aplicar janelas distintas aos mesmos dados reconstruídos",
+        "Aplicar janelas distintas aos mesmos dados reconstruídos",
+        "Repetir sempre a aquisição com kVp diferente",
+        "Modificar a concentração do contraste após aquisição"
+      ],
+      "answer_index": 1,
+      "explanation": "Janelamento altera a apresentação da faixa de HU, não a aquisição dos dados.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Uma janela muito estreita para estruturas com grande variação de HU tende a:",
+      "options": [
+        "Aumentar contraste aparente em faixa limitada e saturar valores externos",
+        "Aumentar contraste aparente em faixa limitada e saturar valores externos",
+        "Mostrar toda a amplitude de atenuações com contraste uniforme",
+        "Alterar fisicamente o valor HU armazenado"
+      ],
+      "answer_index": 0,
+      "explanation": "Largura menor expande diferenças dentro da faixa escolhida e satura valores fora dela.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "No exame de abdome, o contraste intravenoso é usado principalmente para:",
+      "options": [
+        "Caracterizar realce vascular e parenquimatoso em fases apropriadas",
+        "Aumentar o HU de todas as estruturas de forma igual",
+        "Caracterizar realce vascular e parenquimatoso em fases apropriadas",
+        "Eliminar o efeito de volume parcial"
+      ],
+      "answer_index": 2,
+      "explanation": "O realce depende da perfusão e do tempo de aquisição após a injeção.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Uma aquisição arterial feita tarde demais pode comprometer a avaliação de artérias porque:",
+      "options": [
+        "A relação de realce entre artérias e tecidos adjacentes muda com o tempo",
+        "A relação de realce entre artérias e tecidos adjacentes muda com o tempo",
+        "O contraste deixa de atenuar raios X após 30 segundos",
+        "A matriz do detector passa a ser menor"
+      ],
+      "answer_index": 1,
+      "explanation": "O sincronismo com a chegada do contraste determina o realce arterial.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "O bolus tracking permite iniciar a aquisição a partir de:",
+      "options": [
+        "Um limiar de atenuação medido em região de interesse vascular",
+        "Uma espessura de corte previamente reconstruída",
+        "Uma janela mediastinal fixa",
+        "Um limiar de atenuação medido em região de interesse vascular"
+      ],
+      "answer_index": 3,
+      "explanation": "O monitoramento de HU na ROI acompanha a chegada do contraste ao vaso.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "Na angiotomografia pulmonar, uma ROI para disparo costuma ser posicionada:",
+      "options": [
+        "No tronco da artéria pulmonar",
+        "Na veia cava inferior",
+        "No tronco da artéria pulmonar",
+        "Na aorta abdominal"
+      ],
+      "answer_index": 2,
+      "explanation": "A ROI no tronco pulmonar acompanha a opacificação do território arterial pulmonar.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Para demonstrar planos coronal e sagital com boa definição a partir de TC axial, é vantajoso:",
+      "options": [
+        "Adquirir dados com voxels próximos do isotrópico",
+        "Adquirir dados com voxels próximos do isotrópico",
+        "Reconstruir apenas cortes axiais muito espessos",
+        "Aumentar a largura da janela"
+      ],
+      "answer_index": 0,
+      "explanation": "Voxels isotrópicos ou próximos disso favorecem qualidade nas reconstruções multiplanares.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "MPR difere de MIP porque:",
+      "options": [
+        "MPR reamostra o volume em planos; MIP seleciona valores máximos ao longo de projeções",
+        "MPR reamostra o volume em planos; MIP seleciona valores máximos ao longo de projeções",
+        "MPR mostra somente vasos contrastados; MIP somente ossos",
+        "MPR exige nova irradiação; MIP não"
+      ],
+      "answer_index": 1,
+      "explanation": "MPR cria cortes em planos escolhidos; MIP projeta máximos ao longo de uma espessura.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "A MIP pode dificultar a análise de vaso opacificado quando há:",
+      "options": [
+        "Calcificação densa sobreposta ao trajeto na projeção",
+        "Apenas gordura adjacente de baixa atenuação",
+        "Calcificação densa sobreposta ao trajeto na projeção",
+        "Água de HU próximo de zero fora do vaso"
+      ],
+      "answer_index": 2,
+      "explanation": "Estruturas muito densas podem dominar a projeção de intensidade máxima.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Para visualizar vias aéreas com reconstrução 3D, a segmentação adequada depende sobretudo de:",
+      "options": [
+        "Limiares de atenuação e delimitação anatômica coerentes",
+        "Limiares de atenuação e delimitação anatômica coerentes",
+        "Apenas aumento da dose de contraste intravenoso",
+        "Seleção de janela óssea na tela sem segmentação"
+      ],
+      "answer_index": 0,
+      "explanation": "O volume 3D depende de selecionar corretamente as estruturas nos dados adquiridos.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Em TC com contraste, uma história de reação prévia ao mesmo tipo de agente exige:",
+      "options": [
+        "Avaliação de risco e conduta segundo protocolo antes da administração",
+        "Administração automática sem revisão por ser exame de TC",
+        "Aumento da velocidade de injeção para reduzir reação",
+        "Avaliação de risco e conduta segundo protocolo antes da administração"
+      ],
+      "answer_index": 3,
+      "explanation": "Reação prévia relevante demanda avaliação clínica e protocolo de segurança.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "Em paciente com função renal comprometida, antes de contraste iodado intravenoso deve-se:",
+      "options": [
+        "Avaliar indicação, contexto clínico e função renal conforme protocolo",
+        "Presumir contraindicação absoluta em qualquer alteração de creatinina",
+        "Avaliar indicação, contexto clínico e função renal conforme protocolo",
+        "Substituir contraste iodado por bário intravenoso"
+      ],
+      "answer_index": 2,
+      "explanation": "A decisão é individualizada conforme risco renal, necessidade clínica e diretrizes locais.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Extravasamento de contraste durante injeção exige inicialmente:",
+      "options": [
+        "Interromper injeção e avaliar o local segundo protocolo",
+        "Interromper injeção e avaliar o local segundo protocolo",
+        "Aumentar pressão para completar o volume",
+        "Manter infusão e apenas reduzir fluxo"
+      ],
+      "answer_index": 1,
+      "explanation": "A interrupção previne maior extravasamento e permite avaliação clínica.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "A fase portal em TC abdominal é particularmente útil para:",
+      "options": [
+        "Avaliar realce parenquimatoso abdominal e sistema porta",
+        "Demonstrar exclusivamente artérias antes de realce venoso",
+        "Identificar apenas cálculos sem contraste",
+        "Avaliar realce parenquimatoso abdominal e sistema porta"
+      ],
+      "answer_index": 3,
+      "explanation": "Na fase portal há realce venoso e de órgãos como fígado, favorecendo avaliação parenquimatosa.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "A fase excretora em uro-TC busca principalmente:",
+      "options": [
+        "Opacificação do sistema coletor e vias urinárias",
+        "Opacificação do sistema coletor e vias urinárias",
+        "Máximo realce arterial renal",
+        "Ausência completa de contraste nos ureteres"
+      ],
+      "answer_index": 0,
+      "explanation": "Após intervalo adequado, contraste filtrado opacifica o trato excretor.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Um cálculo urinário pode ser avaliado em TC sem contraste porque:",
+      "options": [
+        "Sua atenuação pode diferir dos tecidos e da urina circundantes",
+        "Somente contraste intravenoso torna cálculos visíveis",
+        "Sua atenuação pode diferir dos tecidos e da urina circundantes",
+        "A janela pulmonar converte cálculos em ar"
+      ],
+      "answer_index": 2,
+      "explanation": "Muitos cálculos são hiperatenuantes e detectáveis sem contraste.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "O FOV de reconstrução menor, mantendo matriz 512 × 512, resulta em:",
+      "options": [
+        "Pixels menores no plano reconstruído",
+        "Pixels maiores e menor amostragem espacial",
+        "Mais fileiras físicas de detectores",
+        "Pixels menores no plano reconstruído"
+      ],
+      "answer_index": 3,
+      "explanation": "Tamanho do pixel é aproximadamente FOV dividido pelo número de pixels da matriz.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "Com FOV de 256 mm e matriz de 512, o pixel no plano mede aproximadamente:",
+      "options": [
+        "0,5 mm",
+        "0,5 mm",
+        "2 mm",
+        "1 mm"
+      ],
+      "answer_index": 1,
+      "explanation": "256/512 = 0,5 mm por pixel.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "A rotação inadequada da cabeça na TC de crânio pode:",
+      "options": [
+        "Produzir assimetria de planos e dificultar comparações anatômicas",
+        "Produzir assimetria de planos e dificultar comparações anatômicas",
+        "Alterar a atenuação física da água",
+        "Eliminar a necessidade de reformatação"
+      ],
+      "answer_index": 0,
+      "explanation": "Alinhamento do paciente afeta orientação e interpretação dos planos.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Na avaliação de hemorragia intracraniana aguda, a TC sem contraste é frequentemente escolhida porque:",
+      "options": [
+        "Sangue agudo costuma apresentar hiperatenuação em relação ao parênquima",
+        "Contraste intravenoso é indispensável para visualizar sangue agudo",
+        "Sangue agudo tem sempre HU igual ao ar",
+        "Sangue agudo costuma apresentar hiperatenuação em relação ao parênquima"
+      ],
+      "answer_index": 3,
+      "explanation": "O sangue agudo pode ser hiperdenso na TC sem contraste, permitindo avaliação inicial.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "A diferença entre espessura de aquisição e intervalo de reconstrução é que:",
+      "options": [
+        "O intervalo determina o espaçamento entre imagens, podendo ser menor que a espessura",
+        "O intervalo determina o espaçamento entre imagens, podendo ser menor que a espessura",
+        "São necessariamente iguais em qualquer TC",
+        "O intervalo define apenas a energia do tubo"
+      ],
+      "answer_index": 0,
+      "explanation": "Reconstruções sobrepostas podem ter intervalo menor que sua espessura.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Reconstruções sobrepostas são úteis para MPR porque:",
+      "options": [
+        "Reduzem degraus de amostragem longitudinal entre imagens",
+        "Aumentam a dose depois que a aquisição terminou",
+        "Reduzem degraus de amostragem longitudinal entre imagens",
+        "Diminuem automaticamente a resolução do detector"
+      ],
+      "answer_index": 2,
+      "explanation": "Intervalo menor melhora continuidade longitudinal do conjunto reconstruído.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "A correção de heterogeneidade por algoritmos de reconstrução depende de:",
+      "options": [
+        "Dados de projeção e modelo matemático aplicado à reconstrução",
+        "Dados de projeção e modelo matemático aplicado à reconstrução",
+        "Somente da cor de exibição da imagem",
+        "Apenas da espessura física da mesa"
+      ],
+      "answer_index": 1,
+      "explanation": "Algoritmos transformam dados medidos em imagens e podem incorporar modelos de ruído e sistema.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "medio"
+    },
+    {
+      "prompt": "Na avaliação de vasos tortuosos, uma reconstrução curva (CPR) permite:",
+      "options": [
+        "Seguir o eixo do vaso ao longo de seu trajeto",
+        "Seguir o eixo do vaso ao longo de seu trajeto",
+        "Eliminar placas calcificadas dos dados originais",
+        "Transformar uma imagem sem contraste em angiografia"
+      ],
+      "answer_index": 0,
+      "explanation": "CPR reamostra o volume acompanhando uma linha central curva.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    },
+    {
+      "prompt": "Se o paciente se move durante a aquisição, a melhor prevenção técnica envolve:",
+      "options": [
+        "Orientação, imobilização apropriada e protocolo compatível com sua capacidade de colaboração",
+        "Aumentar apenas a largura de janela após a aquisição",
+        "Reduzir o FOV de reconstrução para corrigir movimento",
+        "Orientação, imobilização apropriada e protocolo compatível com sua capacidade de colaboração"
+      ],
+      "answer_index": 3,
+      "explanation": "Movimento altera as projeções adquiridas; reconstrução e janelamento não restauram integralmente dados inconsistentes.",
+      "topic": "Tomografia Computadorizada",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "difficulty": "dificil"
+    }
+  ],
+  "status": "revisado"
+}
