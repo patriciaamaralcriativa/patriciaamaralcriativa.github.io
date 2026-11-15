@@ -24,11 +24,11 @@ seletor.style.cssText='width:100%;padding:10px;border-radius:9px;background:#fff
 document.querySelector('aside')?.insertBefore(seletor,document.querySelector('aside').children[1]);
 const bancosMissao={mamografia:'mamografia',tomografia:'tomografia','radiologia-industrial':'radiologia-industrial','formacao-da-imagem':'formacao-da-imagem','protecao-radiologica':'protecao-radiologica','fisica-das-radiacoes':'fisica-das-radiacoes','radiologia-digital':'radiologia-digital','radiologia-veterinaria':'radiologia-veterinaria','radiologia-odontologica':'radiologia-odontologica','medicina-nuclear':'medicina-nuclear','densitometria-ossea':'densitometria-ossea','radioterapia':'radioterapia'};
 for(const [id,label] of [['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial'],['formacao-da-imagem','Formação da Imagem Radiográfica'],['protecao-radiologica','Proteção Radiológica'],['fisica-das-radiacoes','Física das Radiações'],['radiologia-digital','Radiologia Digital'],['radiologia-veterinaria','Radiologia Veterinária'],['radiologia-odontologica','Radiologia Odontológica'],['medicina-nuclear','Medicina Nuclear'],['densitometria-ossea','Densitometria Óssea'],['radioterapia','Radioterapia']]){const option=document.createElement('option');option.value=id;option.textContent=label;seletor.appendChild(option);}
-const conjuntosOriginais={rejeitos:rejeitosSets,protecao:protecaoSets};
+const conjuntosOriginais={rejeitos:rejeitosSets};
 seletor.addEventListener('change',async()=>{
  const escolha=seletor.value;
  try{
-  if(conjuntosOriginais[escolha]){sets=conjuntosOriginais[escolha];level=0;build();return;}
+  if(escolha==='rejeitos'){sets=rejeitosSets;level=0;build();return;}
   const resp=await fetch('/bancos/'+bancosMissao[escolha]+'-missao-radioativa-30.json',{cache:'no-store'});
   if(!resp.ok)throw new Error('Banco não encontrado');
   const dados=await resp.json();
