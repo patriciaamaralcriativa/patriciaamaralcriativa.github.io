@@ -2,8 +2,8 @@
   "disciplina": "Radiologia Odontológica",
   "questoes": [
     {
-      "titulo": "ODONTOLOGIA — 1",
-      "pergunta": "Na técnica periapical do paralelismo, o receptor deve permanecer em qual relação com o longo eixo do dente?",
+      "titulo": "Caso clínico radiográfico 1",
+      "pergunta": "Um paciente apresenta ápices cortados na imagem obtida pela técnica do paralelismo. Antes de alterar parâmetros de exposição, que relação geométrica deve ser verificada entre dente e receptor?",
       "alternativas": [
         "Paralelo",
         "Perpendicular",
@@ -15,8 +15,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 2",
-      "pergunta": "Na técnica da bissetriz, o raio central é dirigido perpendicularmente a qual referência?",
+      "titulo": "Caso clínico radiográfico 2",
+      "pergunta": "Um paciente não tolera posicionador de paralelismo e será examinado pela bissetriz. Em relação a qual linha imaginária o feixe deve ser orientado perpendicularmente?",
       "alternativas": [
         "Superfície do receptor",
         "Bissetriz do ângulo dente-receptor",
@@ -28,8 +28,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 3",
-      "pergunta": "Em uma periapical com alongamento, qual erro geométrico é mais provável?",
+      "titulo": "Caso clínico radiográfico 3",
+      "pergunta": "Na repetição de uma periapical, as raízes aparecem mais compridas do que o esperado. Que falha de projeção deve ser investigada primeiro?",
       "alternativas": [
         "Centralização horizontal perfeita",
         "Receptor excessivamente apical",
@@ -41,8 +41,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 4",
-      "pergunta": "Em uma periapical com encurtamento, qual erro geométrico é mais provável?",
+      "titulo": "Caso clínico radiográfico 4",
+      "pergunta": "Em uma periapical, as raízes aparecem artificialmente curtas, embora o receptor tenha incluído os ápices. Qual ajuste deve ser revisto?",
       "alternativas": [
         "Angulação vertical insuficiente",
         "Aumento da distância foco-receptor",
@@ -54,8 +54,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 5",
-      "pergunta": "Na interproximal, qual ajuste é fundamental para reduzir sobreposição dos contatos?",
+      "titulo": "Caso clínico radiográfico 5",
+      "pergunta": "Uma interproximal mostra contatos posteriores sobrepostos, com exposição adequada. Qual parâmetro geométrico é prioritário para correção?",
       "alternativas": [
         "Angulação horizontal",
         "Angulação vertical isoladamente",
@@ -67,8 +67,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 6",
-      "pergunta": "Para avaliar simultaneamente coroas posteriores e cristas alveolares, qual técnica intraoral é apropriada?",
+      "titulo": "Caso clínico radiográfico 6",
+      "pergunta": "Um cirurgião-dentista precisa comparar coroas posteriores e nível da crista alveolar sem priorizar os ápices. Qual incidência é mais adequada?",
       "alternativas": [
         "Telerradiografia",
         "Interproximal",
@@ -80,8 +80,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 7",
-      "pergunta": "Para examinar a região periapical de um incisivo, qual técnica intraoral é mais indicada?",
+      "titulo": "Caso clínico radiográfico 7",
+      "pergunta": "Uma lesão suspeita encontra-se junto ao ápice de incisivo. Qual aquisição intraoral fornece avaliação direcionada dessa região?",
       "alternativas": [
         "Panorâmica isolada",
         "Telerradiografia lateral",
@@ -93,8 +93,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 8",
-      "pergunta": "Qual técnica intraoral é particularmente útil para observar uma área ampla do arco em projeção oclusal?",
+      "titulo": "Caso clínico radiográfico 8",
+      "pergunta": "É necessário observar área extensa de um arco em uma única projeção intraoral. Qual técnica é mais pertinente?",
       "alternativas": [
         "Interproximal",
         "Periapical de paralelismo",
@@ -106,8 +106,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 9",
-      "pergunta": "Na panorâmica, o posicionamento fora da camada focal tende a produzir qual alteração?",
+      "titulo": "Caso clínico radiográfico 9",
+      "pergunta": "Na panorâmica, um paciente saiu da região de nitidez definida pelo equipamento. Qual consequência de imagem é mais provável?",
       "alternativas": [
         "Perda de nitidez e distorção",
         "Aumento uniforme da resolução",
@@ -119,8 +119,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 10",
-      "pergunta": "Na panorâmica, o paciente muito à frente da camada focal tende a apresentar dentes anteriores como?",
+      "titulo": "Caso clínico radiográfico 10",
+      "pergunta": "Na panorâmica, os incisivos parecem muito estreitos e pouco nítidos. Qual erro de posicionamento anteroposterior é compatível?",
       "alternativas": [
         "Aumentados apenas verticalmente",
         "Estreitos e borrados",
@@ -132,8 +132,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 11",
-      "pergunta": "Na panorâmica, o paciente muito atrás da camada focal tende a apresentar dentes anteriores como?",
+      "titulo": "Caso clínico radiográfico 11",
+      "pergunta": "Na panorâmica, os incisivos aparecem excessivamente largos e pouco nítidos. Qual erro anteroposterior é compatível?",
       "alternativas": [
         "Sem distorção horizontal",
         "Apenas mais radiopacos",
@@ -145,8 +145,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 12",
-      "pergunta": "Na panorâmica, a língua afastada do palato pode criar qual imagem?",
+      "titulo": "Caso clínico radiográfico 12",
+      "pergunta": "Uma faixa radiolúcida obscurece parte dos ápices superiores na panorâmica. Qual instrução ao paciente pode prevenir esse artefato?",
       "alternativas": [
         "Faixa radiopaca sobre ápices inferiores",
         "Imagem dupla do côndilo",
@@ -158,8 +158,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 13",
-      "pergunta": "Na panorâmica, a postura com coluna cervical projetada anteriormente pode produzir qual artefato?",
+      "titulo": "Caso clínico radiográfico 13",
+      "pergunta": "Uma opacidade vertical se projeta na região anterior da panorâmica. Qual falha postural merece investigação?",
       "alternativas": [
         "Opacidade na linha média anterior",
         "Radiolucidez exclusiva dos seios maxilares",
@@ -171,8 +171,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 14",
-      "pergunta": "Em telerradiografia lateral, qual medida de posicionamento contribui para reprodutibilidade?",
+      "titulo": "Caso clínico radiográfico 14",
+      "pergunta": "Uma sequência de telerradiografias laterais será comparada longitudinalmente. Que recurso ajuda a padronizar a posição craniana?",
       "alternativas": [
         "Distância foco-receptor variável",
         "Estabilização cefalométrica",
@@ -184,8 +184,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 15",
-      "pergunta": "Qual plano de referência passa aproximadamente pelo pório e pelo orbitário?",
+      "titulo": "Caso clínico radiográfico 15",
+      "pergunta": "Durante a preparação de telerradiografia, o operador precisa identificar o plano definido por pório e orbitário. Qual é ele?",
       "alternativas": [
         "Oclusal funcional",
         "Camper",
@@ -197,8 +197,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 16",
-      "pergunta": "Qual plano anatômico divide a cabeça em metades direita e esquerda?",
+      "titulo": "Caso clínico radiográfico 16",
+      "pergunta": "Para avaliar simetria, o aluno identifica o plano que separa as metades direita e esquerda da cabeça. Qual é esse plano?",
       "alternativas": [
         "Frankfurt",
         "Coronal",
@@ -210,8 +210,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 17",
-      "pergunta": "Na nomenclatura FDI, qual quadrante corresponde aos dentes permanentes superiores direitos?",
+      "titulo": "Caso clínico radiográfico 17",
+      "pergunta": "Em prontuário, o elemento 11 precisa ser localizado segundo FDI. Qual quadrante permanente corresponde ao primeiro dígito?",
       "alternativas": [
         "Primeiro",
         "Segundo",
@@ -223,8 +223,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 18",
-      "pergunta": "Na nomenclatura FDI, qual quadrante corresponde aos dentes permanentes inferiores esquerdos?",
+      "titulo": "Caso clínico radiográfico 18",
+      "pergunta": "Um dente permanente inferior esquerdo será registrado pelo sistema FDI. Qual primeiro dígito deve ser utilizado?",
       "alternativas": [
         "Quarto",
         "Terceiro",
@@ -236,8 +236,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 19",
-      "pergunta": "Na nomenclatura FDI, qual quadrante corresponde aos dentes decíduos superiores esquerdos?",
+      "titulo": "Caso clínico radiográfico 19",
+      "pergunta": "Na numeração FDI da dentição decídua, qual quadrante corresponde ao arco superior esquerdo?",
       "alternativas": [
         "Sétimo",
         "Oitavo",
@@ -249,8 +249,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 20",
-      "pergunta": "Qual estrutura radiográfica aparece como linha radiopaca fina que delimita o alvéolo dentário?",
+      "titulo": "Caso clínico radiográfico 20",
+      "pergunta": "Uma linha radiopaca fina acompanha o contorno do alvéolo de um dente. Qual estrutura está representada?",
       "alternativas": [
         "Espaço periodontal",
         "Canal radicular",
@@ -262,8 +262,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 21",
-      "pergunta": "Qual estrutura costuma aparecer como linha radiolúcida entre raiz e lâmina dura?",
+      "titulo": "Caso clínico radiográfico 21",
+      "pergunta": "Entre a raiz e a linha radiopaca alveolar observa-se estreita faixa radiolúcida. Que estrutura anatômica corresponde a ela?",
       "alternativas": [
         "Espaço do ligamento periodontal",
         "Crista alveolar cortical",
@@ -275,8 +275,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 22",
-      "pergunta": "Na radiografia dentária, qual tecido geralmente apresenta maior radiopacidade?",
+      "titulo": "Caso clínico radiográfico 22",
+      "pergunta": "Em uma periapical normal, qual tecido dentário tende a apresentar maior radiopacidade?",
       "alternativas": [
         "Espaço periodontal",
         "Esmalte",
@@ -288,8 +288,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 23",
-      "pergunta": "Qual alteração de projeção pode gerar contatos proximais sobrepostos em uma periapical?",
+      "titulo": "Caso clínico radiográfico 23",
+      "pergunta": "Uma radiografia mostra contatos proximais sobrepostos, apesar da cobertura anatômica adequada. Qual erro de incidência é provável?",
       "alternativas": [
         "Subexposição uniforme",
         "Posicionamento do avental",
@@ -301,8 +301,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 24",
-      "pergunta": "Uma periapical apresenta corte dos ápices radiculares. Qual falha deve ser considerada primeiro?",
+      "titulo": "Caso clínico radiográfico 24",
+      "pergunta": "A região coronária está presente, mas os ápices foram cortados da periapical. Que etapa do posicionamento deve ser revista?",
       "alternativas": [
         "Angulação horizontal isolada",
         "Excesso de contraste digital",
@@ -314,8 +314,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 25",
-      "pergunta": "Qual técnica permite avaliar estruturas maxilofaciais em volume, com reconstruções multiplanares?",
+      "titulo": "Caso clínico radiográfico 25",
+      "pergunta": "Para investigar relação espacial tridimensional de estruturas maxilofaciais, qual modalidade é mais apropriada?",
       "alternativas": [
         "Tomografia computadorizada de feixe cônico",
         "Radiografia interproximal",
@@ -327,8 +327,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 26",
-      "pergunta": "Na TCFC, qual decisão deve orientar a seleção do campo de visão?",
+      "titulo": "Caso clínico radiográfico 26",
+      "pergunta": "Antes de uma TCFC localizada, o operador escolhe entre campo de visão pequeno e amplo. Qual critério deve determinar essa seleção?",
       "alternativas": [
         "Tamanho do monitor",
         "Região e indicação clínica",
@@ -340,8 +340,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 27",
-      "pergunta": "Na técnica do paralelismo, qual acessório favorece geometria e centralização reproduzíveis?",
+      "titulo": "Caso clínico radiográfico 27",
+      "pergunta": "Na técnica do paralelismo, a equipe busca reduzir variações de alinhamento entre exposições. Qual acessório é mais útil?",
       "alternativas": [
         "Afastador labial isolado",
         "Régua cefalométrica",
@@ -353,8 +353,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 28",
-      "pergunta": "Uma imagem periapical mostra o ápice, mas não a região coronária necessária. Qual ação é prioritária?",
+      "titulo": "Caso clínico radiográfico 28",
+      "pergunta": "Uma periapical mostra os ápices, mas deixa fora parte da coroa de interesse. Qual correção é prioritária?",
       "alternativas": [
         "Aumentar a nitidez digital",
         "Alterar apenas o brilho",
@@ -366,8 +366,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 29",
-      "pergunta": "Na panorâmica, por que a remoção de objetos metálicos removíveis da cabeça e pescoço é importante?",
+      "titulo": "Caso clínico radiográfico 29",
+      "pergunta": "Uma imagem fantasma surge após panorâmica em paciente com adorno metálico removível. Qual medida preventiva é indicada?",
       "alternativas": [
         "Reduzir artefatos e imagens fantasmas",
         "Aumentar a camada focal",
@@ -379,8 +379,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "ODONTOLOGIA — 30",
-      "pergunta": "Qual princípio exige que uma aquisição odontológica com radiação tenha benefício clínico esperado?",
+      "titulo": "Caso clínico radiográfico 30",
+      "pergunta": "Um exame odontológico foi solicitado sem finalidade clínica definida. Qual princípio de proteção precisa ser considerado antes da exposição?",
       "alternativas": [
         "Monitoração individual",
         "Justificação",
@@ -392,5 +392,5 @@
       "dificuldade": "dificil"
     }
   ],
-  "status": "rascunho-para-revisao"
+  "status": "30-casos-reformulados-pendente-auditoria-de-alternativas"
 }
