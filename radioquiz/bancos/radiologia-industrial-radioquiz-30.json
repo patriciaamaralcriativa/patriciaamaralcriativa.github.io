@@ -5,10 +5,10 @@
     {
       "prompt": "Em END, o que distingue uma indicação de uma descontinuidade?",
       "options": [
-        "Toda indicação é uma descontinuidade rejeitável",
+        "Avaliação da perda de seção por medição direta de espessura",
         "A indicação é uma resposta observada que requer interpretação para identificar sua origem",
-        "Descontinuidade é sempre um defeito crítico",
-        "Indicação e defeito são sinônimos normativos"
+        "Detecção de variações de permeabilidade magnética",
+        "Identificação exclusiva de descontinuidades superficiais"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -20,9 +20,9 @@
     {
       "prompt": "Uma peça tem trinca superficial aberta e geometria complexa. Qual método pode evidenciá-la sem acesso à face oposta?",
       "options": [
-        "Ultrassom por transmissão obrigatoriamente",
-        "Radiografia apenas com filme rígido",
-        "Ensaio visual somente após corte da peça",
+        "Ultrassom por pulso-eco com transdutor normal",
+        "Radiografia de transmissão com acesso unilateral ao detector",
+        "Inspeção visual ampliada com iluminação direcionada",
         "Líquido penetrante, desde que a superfície seja adequada"
       ],
       "answer_index": 3,
@@ -36,9 +36,9 @@
       "prompt": "Uma descontinuidade interna planar é investigada por ultrassom. Qual variável afeta fortemente sua detecção?",
       "options": [
         "Orientação do refletor em relação ao feixe ultrassônico",
-        "Cor do acoplante",
-        "Tipo de envelope do filme radiográfico",
-        "Tempo de revelação de um filme não utilizado"
+        "Apenas a amplitude máxima do eco",
+        "Distância entre os ecos sem considerar orientação",
+        "Frequência do transdutor isoladamente"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -50,10 +50,10 @@
     {
       "prompt": "O líquido penetrante é limitado na detecção de:",
       "options": [
-        "Trincas superficiais abertas",
-        "Poros abertos à superfície",
+        "Descontinuidades rasas abertas à superfície",
+        "Descontinuidades alongadas com abertura acessível",
         "Descontinuidades internas sem abertura à superfície",
-        "Dobras com abertura superficial"
+        "Poros superficiais conectados ao exterior"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -66,9 +66,9 @@
       "prompt": "A limpeza prévia no ensaio penetrante busca:",
       "options": [
         "Remover contaminantes que impeçam entrada do penetrante nas aberturas",
-        "Aumentar a rugosidade indiscriminadamente",
-        "Fechar descontinuidades rasas",
-        "Substituir o tempo de penetração"
+        "Reduzir a tensão superficial do líquido por aquecimento excessivo",
+        "Garantir remoção completa do penetrante após aplicação",
+        "Ampliar mecanicamente a abertura das descontinuidades"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -80,9 +80,9 @@
     {
       "prompt": "A remoção excessiva do penetrante após o tempo de penetração pode:",
       "options": [
-        "Melhorar sempre a sensibilidade",
-        "Aumentar a profundidade das trincas",
-        "Eliminar a necessidade de revelador",
+        "Remover somente o excesso superficial e preservar o líquido retido",
+        "Reduzir o fundo superficial sem atingir as aberturas",
+        "Aplicar revelador após remoção compatível com o processo",
         "Retirar penetrante das descontinuidades e reduzir indicações"
       ],
       "answer_index": 3,
@@ -95,10 +95,10 @@
     {
       "prompt": "No ensaio por líquido penetrante, o revelador contribui para:",
       "options": [
-        "Fechar poros abertos à superfície",
+        "Reduzir o contraste de fundo pela remoção do excesso",
         "Extrair penetrante retido e melhorar contraste das indicações",
-        "Transformar trincas internas em superficiais",
-        "Substituir a limpeza inicial"
+        "Promover a entrada inicial do penetrante nas aberturas",
+        "Substituir a etapa de remoção do penetrante"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -110,10 +110,10 @@
     {
       "prompt": "Uma peça porosa não metálica será inspecionada por penetrante. O principal cuidado é:",
       "options": [
-        "O método só funciona em materiais ferromagnéticos",
-        "O penetrante atravessa qualquer espessura",
+        "O excesso de absorção superficial pode mascarar indicações",
+        "A retenção pode ser confundida com indicações relevantes",
         "A porosidade pode reter penetrante e gerar fundo excessivo",
-        "O revelador dispensa secagem"
+        "O método pode ter aplicação limitada pela condição da superfície"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -125,9 +125,9 @@
     {
       "prompt": "No ultrassom por pulso-eco, a profundidade de um refletor é estimada por:",
       "options": [
-        "Cor do eco na tela",
-        "Espessura do filme radiográfico",
-        "Distância entre fonte de raios X e detector",
+        "Amplitude do eco e ganho do receptor",
+        "Frequência nominal e ângulo de incidência",
+        "Espessura nominal e amplitude do eco",
         "Tempo de voo e velocidade acústica no material"
       ],
       "answer_index": 3,
@@ -143,7 +143,7 @@
         "59 mm",
         "118 mm",
         "29,5 mm",
-        "590 mm"
+        "11,8 mm"
       ],
       "answer_index": 0,
       "explanation": "O tempo é de ida e volta: d = v×t/2 = 6000×20×10⁻⁶/2 = 0,06 m = 60 mm.",
@@ -155,10 +155,10 @@
     {
       "prompt": "O acoplante no ultrassom de contato é necessário principalmente para:",
       "options": [
-        "Aumentar a energia elétrica do gerador de raios X",
-        "Diminuir a velocidade do som no aço",
+        "Aumentar a amplitude do eco sem afetar transmissão",
+        "Reduzir a atenuação intrínseca do material",
         "Reduzir a barreira de ar entre transdutor e peça",
-        "Eliminar qualquer reflexão interna"
+        "Impedir a reflexão de qualquer interface interna"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -170,10 +170,10 @@
     {
       "prompt": "Ao aumentar a frequência ultrassônica, em geral ocorre:",
       "options": [
-        "Maior penetração sem perda de resolução",
+        "Melhor resolução com menor penetração em materiais atenuantes",
         "Melhor resolução para pequenos refletores, com maior atenuação",
-        "Menor resolução com menor comprimento de onda",
-        "Independência completa da microestrutura"
+        "Menor comprimento de onda com sensibilidade a detalhes menores",
+        "Maior espalhamento em materiais de grão grosseiro"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -186,9 +186,9 @@
       "prompt": "Uma superfície rugosa compromete o ultrassom de contato principalmente por:",
       "options": [
         "Acoplamento irregular e instabilidade da transmissão acústica",
-        "Aumento da meia-vida do material",
-        "Mudança na classe do filme",
-        "Redução da espessura real da peça"
+        "Maior variação do acoplamento ao longo da varredura",
+        "Redução da área efetiva de contato do transdutor",
+        "Instabilidade da amplitude dos ecos recebidos"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -200,10 +200,10 @@
     {
       "prompt": "O ensaio por raios X industrial baseia-se em:",
       "options": [
-        "Reflexão de ondas mecânicas em interfaces",
-        "Capilaridade de líquido nas trincas",
+        "Diferenças de transmissão após atravessar regiões de atenuação distinta",
+        "Formação de imagem por projeção do volume atravessado",
         "Atenuação diferencial do feixe ao atravessar a peça",
-        "Emissão de luz visível por descontinuidades"
+        "Variação do sinal registrado conforme espessura e composição"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -215,9 +215,9 @@
     {
       "prompt": "Comparado ao ensaio por raios gama, um equipamento de raios X permite normalmente:",
       "options": [
-        "Ajustar diretamente a velocidade do som na peça",
-        "Usar revelador como controle de energia",
-        "Alterar a composição da peça durante o ensaio",
+        "Controlar energia máxima por ajuste de tensão elétrica",
+        "Variar corrente do tubo para ajustar quantidade de fótons",
+        "Controlar o tempo de emissão com acionamento elétrico",
         "Ajustar parâmetros elétricos de produção do feixe"
       ],
       "answer_index": 3,
@@ -230,10 +230,10 @@
     {
       "prompt": "Uma região com menor espessura aparece mais escura no filme radiográfico negativo porque:",
       "options": [
-        "Menos fótons atingem o filme",
+        "Maior exposição local devido à menor atenuação",
         "Mais radiação atinge o filme e aumenta o enegrecimento após processamento adequado",
-        "O material se torna mais denso",
-        "O cassete amplifica a espessura"
+        "Maior transmissão local de fótons ao detector",
+        "Menor absorção no trajeto atravessado"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -245,10 +245,10 @@
     {
       "prompt": "A escolha da classe de filme radiográfico industrial deve considerar:",
       "options": [
-        "Somente o tamanho externo do cassete",
-        "A cor do holder de papelão",
+        "Gradiente característico e granularidade",
+        "Velocidade relativa e resposta de contraste",
         "Granulação, contraste, velocidade e sensibilidade exigida",
-        "A marca do acoplante ultrassônico"
+        "Sensibilidade exigida pelo procedimento"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -261,9 +261,9 @@
       "prompt": "Filmes industriais de grão mais fino tendem a:",
       "options": [
         "Oferecer melhor definição, frequentemente com menor velocidade",
-        "Exigir sempre menor exposição e ter menor definição",
-        "Eliminar necessidade de processamento",
-        "Apresentar sensibilidade idêntica a todos os filmes"
+        "Granularidade mais baixa com potencial de maior detalhe",
+        "Maior resolução com possível necessidade de maior exposição",
+        "Melhor reprodução de detalhes pequenos em condições adequadas"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -275,9 +275,9 @@
     {
       "prompt": "A classificação de filmes segundo ISO 11699-1 considera propriedades como:",
       "options": [
-        "Apenas comprimento da embalagem",
-        "Exclusivamente espessura do cassete",
-        "Somente densidade do material inspecionado",
+        "Gradiente médio e granularidade",
+        "Relação sinal-ruído e velocidade",
+        "Propriedades sensitométricas e de ruído",
         "Granularidade, gradiente e relação sinal-ruído"
       ],
       "answer_index": 3,
@@ -290,10 +290,10 @@
     {
       "prompt": "Um cassete radiográfico industrial tem como função:",
       "options": [
-        "Gerar o feixe de raios X",
+        "Manter contato adequado entre filme e telas quando utilizadas",
         "Proteger e manter o filme adequadamente posicionado durante a exposição",
-        "Medir a velocidade ultrassônica",
-        "Revelar o filme automaticamente"
+        "Proteger o filme de luz e danos de manuseio",
+        "Acondicionar filme conforme dimensões e geometria"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -305,9 +305,9 @@
     {
       "prompt": "Um holder flexível pode ser vantajoso quando:",
       "options": [
-        "A peça exige filme rigidamente plano em qualquer posição",
-        "O método é exclusivamente ultrassônico",
-        "Não há necessidade de proteger o filme da luz",
+        "Melhor adaptação a superfícies de curvatura acentuada",
+        "Redução de afastamento local entre filme e peça curva",
+        "Posicionamento próximo em contornos não planos",
         "É necessário acomodar o filme ao contorno curvo da peça"
       ],
       "answer_index": 3,
@@ -320,10 +320,10 @@
     {
       "prompt": "Um holder de papelão é escolhido considerando principalmente:",
       "options": [
-        "Capacidade de produzir raios gama",
-        "Aumento da velocidade do som",
+        "Adequação a superfícies relativamente planas",
+        "Resistência mecânica do suporte e proteção do filme",
         "Adequação dimensional, proteção do filme e condições do procedimento",
-        "Substituição do processamento químico"
+        "Compatibilidade do acondicionamento com a técnica"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -335,10 +335,10 @@
     {
       "prompt": "O contato inadequado entre filme e tela intensificadora pode:",
       "options": [
-        "Aumentar a frequência do ultrassom",
+        "Produzir perda localizada de nitidez",
         "Prejudicar a definição da imagem em sistemas que utilizam telas",
-        "Corrigir automaticamente a geometria",
-        "Eliminar o espalhamento na peça"
+        "Aumentar a separação entre superfícies de contato",
+        "Prejudicar a transferência espacial de informação"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -351,9 +351,9 @@
       "prompt": "A luz ambiente pode velar filme radiográfico não processado quando:",
       "options": [
         "A embalagem ou o sistema de proteção não é estanque à luz",
-        "O cassete está corretamente fechado",
-        "O filme já foi fixado e lavado",
-        "O holder está dentro da especificação"
+        "Entrada de luz durante acondicionamento inadequado",
+        "Vedação incompleta em armazenamento ou manuseio",
+        "Exposição acidental do filme antes do processamento"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -365,10 +365,10 @@
     {
       "prompt": "Sub-revelação do filme pode resultar em:",
       "options": [
-        "Aumento garantido da definição",
-        "Maior sensibilidade do penetrante",
+        "Densidade insuficiente por revelação incompleta",
+        "Alteração da curva sensitométrica por processamento inadequado",
         "Densidade e contraste inferiores aos esperados",
-        "Aumento da energia do feixe"
+        "Redução do enegrecimento em relação ao esperado"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -380,10 +380,10 @@
     {
       "prompt": "Fixação inadequada do filme pode ocasionar:",
       "options": [
-        "Maior velocidade acústica",
+        "Remoção incompleta de haletos não revelados",
         "Resíduos de haletos não removidos e deterioração da imagem",
-        "Melhor revelação tardia espontânea",
-        "Aumento da espessura da peça"
+        "Instabilidade da imagem processada com o tempo",
+        "Deterioração posterior por resíduos químicos"
       ],
       "answer_index": 1,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -396,9 +396,9 @@
       "prompt": "Uma imagem radiográfica muito clara pode decorrer de:",
       "options": [
         "Exposição insuficiente ou processamento inadequado",
-        "Somente excesso de exposição",
-        "Somente maior espessura do holder",
-        "Exclusivamente maior frequência ultrassônica"
+        "Exposição insuficiente do filme",
+        "Processamento químico incompleto",
+        "Baixo enegrecimento em relação à densidade requerida"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -410,9 +410,9 @@
     {
       "prompt": "Em ensaios não destrutivos, a seleção do método deve considerar:",
       "options": [
-        "Apenas custo do filme",
-        "Somente preferência do operador",
-        "Apenas a dimensão externa da embalagem",
+        "Acessibilidade e geometria do componente",
+        "Sensibilidade exigida para a descontinuidade procurada",
+        "Requisitos de procedimento e material ensaiado",
         "Material, geometria, localização esperada da descontinuidade e critério de aceitação"
       ],
       "answer_index": 3,
@@ -425,10 +425,10 @@
     {
       "prompt": "Para detectar descontinuidade superficial aberta em peça não porosa, o método mais diretamente aplicável é:",
       "options": [
-        "Radiografia de qualquer direção sem análise",
-        "Ultrassom apenas por transmissão",
+        "Líquido penetrante para abertura superficial acessível",
+        "Inspeção visual associada quando apropriada",
         "Líquido penetrante com preparação superficial adequada",
-        "Medição de densidade óptica do filme"
+        "Preparação superficial compatível com penetrante"
       ],
       "answer_index": 2,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -441,9 +441,9 @@
       "prompt": "A principal diferença física entre radiografia e ultrassom industrial é:",
       "options": [
         "A primeira usa radiação eletromagnética ionizante; o segundo usa ondas mecânicas",
-        "Ambos utilizam apenas ondas mecânicas",
-        "Ambos dependem de capilaridade",
-        "Ultrassom utiliza fótons gama"
+        "Ondas eletromagnéticas ionizantes versus ondas elásticas",
+        "Atenuação de fótons versus reflexão acústica",
+        "Projeção radiográfica versus tempo de voo ultrassônico"
       ],
       "answer_index": 0,
       "explanation": "A resposta considera o princípio físico e as limitações do método, conforme o procedimento técnico.",
@@ -453,6 +453,6 @@
       "difficulty": "dificil"
     }
   ],
-  "status": "revisado",
-  "revision_note": "Escopo restrito a END por raios X/gama, penetrante, ultrassom, filmes, cassetes e holders. Alternativas reordenadas sem padrão cíclico."
+  "status": "revisao-pedagogica-pendente",
+  "revision_note": "Alternativas do mesmo domínio técnico, gabaritos não cíclicos; requer revisão de unicidade semântica antes de aprovação."
 }
