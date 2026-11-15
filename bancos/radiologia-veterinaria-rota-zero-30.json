@@ -2,8 +2,8 @@
   "disciplina": "Radiologia Veterinária",
   "questoes": [
     {
-      "titulo": "VETERINÁRIA — 1",
-      "pergunta": "Em qual decúbito o animal fica com o dorso apoiado na mesa?",
+      "titulo": "Situação clínica 1",
+      "pergunta": "Um cão será examinado em projeção ventrodorsal e precisa permanecer com o dorso apoiado no receptor. Como se denomina o decúbito utilizado?",
       "alternativas": [
         "Dorsal",
         "Ventral",
@@ -15,8 +15,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 2",
-      "pergunta": "Em qual decúbito o animal fica apoiado sobre o esterno?",
+      "titulo": "Situação clínica 2",
+      "pergunta": "Um animal dispneico não tolera ficar de costas; a equipe mantém o tórax apoiado sobre o esterno para uma projeção dorsoventral. Qual decúbito foi adotado?",
       "alternativas": [
         "Oblíquo",
         "Esternal",
@@ -28,8 +28,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 3",
-      "pergunta": "Na projeção ventrodorsal, por onde o feixe entra?",
+      "titulo": "Situação clínica 3",
+      "pergunta": "Uma imagem foi identificada como ventrodorsal. Ao conferir a direção do feixe, qual superfície deve corresponder à entrada dos raios X?",
       "alternativas": [
         "Lado direito",
         "Lado esquerdo",
@@ -41,8 +41,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 4",
-      "pergunta": "Na projeção dorsoventral, por onde o feixe entra?",
+      "titulo": "Situação clínica 4",
+      "pergunta": "Durante a conferência de uma projeção dorsoventral de tórax, qual superfície do animal corresponde ao lado de entrada do feixe?",
       "alternativas": [
         "Face ventral",
         "Lado direito",
@@ -54,8 +54,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 5",
-      "pergunta": "Em uma projeção laterolateral direita, qual lado do animal fica junto ao receptor?",
+      "titulo": "Situação clínica 5",
+      "pergunta": "Em uma projeção lateral direita de tórax, o marcador foi colocado no lado oposto ao apoiado. Qual lado deveria estar junto ao receptor?",
       "alternativas": [
         "Direito",
         "Esquerdo",
@@ -67,8 +67,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 6",
-      "pergunta": "Qual plano divide o corpo em porções direita e esquerda?",
+      "titulo": "Situação clínica 6",
+      "pergunta": "Para descrever uma alteração que separa regiões direita e esquerda do corpo, qual plano anatômico é a referência principal?",
       "alternativas": [
         "Horizontal",
         "Sagital",
@@ -80,8 +80,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 7",
-      "pergunta": "Qual plano divide o corpo em porções cranial e caudal?",
+      "titulo": "Situação clínica 7",
+      "pergunta": "Um corte de referência separa uma região mais próxima da cabeça de outra mais próxima da cauda. Qual plano foi utilizado?",
       "alternativas": [
         "Mediano",
         "Dorsal",
@@ -93,8 +93,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 8",
-      "pergunta": "Qual termo indica direção voltada à cabeça do animal?",
+      "titulo": "Situação clínica 8",
+      "pergunta": "Uma lesão vertebral está situada em direção à cabeça em relação a outra. Qual termo de direção descreve essa posição?",
       "alternativas": [
         "Caudal",
         "Distal",
@@ -106,8 +106,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 9",
-      "pergunta": "Qual termo indica direção voltada à cauda?",
+      "titulo": "Situação clínica 9",
+      "pergunta": "Em uma avaliação abdominal, a estrutura de interesse está situada em direção à cauda em relação ao fígado. Qual termo direcional se aplica?",
       "alternativas": [
         "Caudal",
         "Cranial",
@@ -119,8 +119,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 10",
-      "pergunta": "Nos membros, qual termo indica proximidade da origem do membro?",
+      "titulo": "Situação clínica 10",
+      "pergunta": "Um achado no úmero está mais próximo da articulação escapuloumeral que outro achado no mesmo osso. Qual termo o descreve?",
       "alternativas": [
         "Plantar",
         "Proximal",
@@ -132,8 +132,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 11",
-      "pergunta": "Nos membros, qual termo indica afastamento da origem do membro?",
+      "titulo": "Situação clínica 11",
+      "pergunta": "Em um membro torácico, uma fratura está mais afastada do tronco que outra. Qual termo indica essa localização?",
       "alternativas": [
         "Cranial",
         "Dorsal",
@@ -145,8 +145,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 12",
-      "pergunta": "Na extremidade distal do membro torácico, qual termo indica a superfície oposta à dorsal?",
+      "titulo": "Situação clínica 12",
+      "pergunta": "Um cão apresenta ferida na superfície de apoio da extremidade distal do membro torácico. Qual termo anatômico deve constar no registro?",
       "alternativas": [
         "Plantar",
         "Cranial",
@@ -158,8 +158,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 13",
-      "pergunta": "Na extremidade distal do membro pélvico, qual termo indica a superfície oposta à dorsal?",
+      "titulo": "Situação clínica 13",
+      "pergunta": "Uma lesão ocorre na superfície de apoio da extremidade distal do membro pélvico. Qual termo anatômico diferencia essa superfície da palmar?",
       "alternativas": [
         "Plantar",
         "Palmar",
@@ -171,8 +171,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 14",
-      "pergunta": "Qual osso forma a maior parte do braço do cão?",
+      "titulo": "Situação clínica 14",
+      "pergunta": "Em uma radiografia do membro torácico, uma lesão ocupa o osso entre a escápula e o cotovelo. Qual osso está envolvido?",
       "alternativas": [
         "Fêmur",
         "Úmero",
@@ -184,8 +184,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 15",
-      "pergunta": "Qual osso longo da coxa articula-se com o acetábulo?",
+      "titulo": "Situação clínica 15",
+      "pergunta": "Uma radiografia mostra fratura do osso que se articula proximalmente com o acetábulo. Qual é o osso?",
       "alternativas": [
         "Úmero",
         "Fíbula",
@@ -197,8 +197,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "VETERINÁRIA — 16",
-      "pergunta": "Qual estrutura óssea articula-se com a cabeça do fêmur?",
+      "titulo": "Situação clínica 16",
+      "pergunta": "Um laudo descreve incongruência entre a cabeça femoral e a cavidade da pelve que a recebe. Qual estrutura da pelve deve ser avaliada?",
       "alternativas": [
         "Olécrano",
         "Escápula",
@@ -210,8 +210,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 17",
-      "pergunta": "Qual osso contém o olécrano?",
+      "titulo": "Situação clínica 17",
+      "pergunta": "Uma fratura acomete o osso que forma a proeminência do olécrano no cotovelo. Qual osso está envolvido?",
       "alternativas": [
         "Ulna",
         "Rádio",
@@ -223,8 +223,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 18",
-      "pergunta": "Qual osso participa diretamente da articulação femorotibiopatelar?",
+      "titulo": "Situação clínica 18",
+      "pergunta": "Na avaliação do joelho canino, a estrutura sesamoide anterior à articulação femorotibial apresenta deslocamento. Qual é ela?",
       "alternativas": [
         "Calcâneo",
         "Patela",
@@ -236,8 +236,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 19",
-      "pergunta": "Qual osso forma a principal superfície de sustentação da perna do cão?",
+      "titulo": "Situação clínica 19",
+      "pergunta": "Um exame da perna canina demonstra alteração no principal osso de suporte de carga, medial à fíbula. Qual osso é esse?",
       "alternativas": [
         "Fêmur",
         "Ulna",
@@ -249,8 +249,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 20",
-      "pergunta": "Qual região anatômica abriga os pulmões?",
+      "titulo": "Situação clínica 20",
+      "pergunta": "Um exame solicitado para avaliar parênquima pulmonar deve concentrar o campo de imagem em qual região anatômica?",
       "alternativas": [
         "Abdome",
         "Pelve",
@@ -262,8 +262,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 21",
-      "pergunta": "Qual músculo separa as cavidades torácica e abdominal?",
+      "titulo": "Situação clínica 21",
+      "pergunta": "Na radiografia lateral, observa-se uma estrutura muscular separando as cavidades torácica e abdominal. Qual é a estrutura?",
       "alternativas": [
         "Diafragma",
         "Intercostal externo",
@@ -275,8 +275,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 22",
-      "pergunta": "Qual órgão abdominal aparece frequentemente como silhueta de tecido mole cranial no abdome?",
+      "titulo": "Situação clínica 22",
+      "pergunta": "Na radiografia abdominal, uma silhueta de tecido mole cranial ao estômago é avaliada quanto a tamanho e contornos. Qual órgão é o principal candidato?",
       "alternativas": [
         "Cólon",
         "Fígado",
@@ -288,8 +288,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 23",
-      "pergunta": "Qual órgão oco é identificado caudoventralmente quando distendido por urina?",
+      "titulo": "Situação clínica 23",
+      "pergunta": "Em um cão com suspeita de retenção urinária, identifica-se estrutura de tecido mole arredondada na região caudoventral do abdome. Qual órgão pode estar distendido?",
       "alternativas": [
         "Baço",
         "Vesícula biliar",
@@ -301,8 +301,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 24",
-      "pergunta": "Qual estrutura tubular conduz ar da laringe aos brônquios?",
+      "titulo": "Situação clínica 24",
+      "pergunta": "Um exame torácico mostra deslocamento da coluna aérea que conecta a laringe aos brônquios principais. Qual estrutura está sendo avaliada?",
       "alternativas": [
         "Esôfago",
         "Aorta",
@@ -314,8 +314,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 25",
-      "pergunta": "Qual projeção torácica exige atenção à fase respiratória para melhor avaliação pulmonar?",
+      "titulo": "Situação clínica 25",
+      "pergunta": "Um cão colaborativo será radiografado para avaliar o parênquima pulmonar. Qual fase respiratória, quando possível, favorece a expansão pulmonar?",
       "alternativas": [
         "Inspiratória",
         "Expiratória obrigatória",
@@ -327,8 +327,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 26",
-      "pergunta": "Qual fator pode gerar borramento das estruturas durante a exposição?",
+      "titulo": "Situação clínica 26",
+      "pergunta": "Em uma radiografia de animal agitado, as bordas de estruturas ficam indefinidas apesar de foco e receptor adequados. Qual fator deve ser investigado?",
       "alternativas": [
         "Imobilização correta",
         "Movimento",
@@ -340,8 +340,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 27",
-      "pergunta": "Qual recurso reduz a área irradiada sem mudar a projeção?",
+      "titulo": "Situação clínica 27",
+      "pergunta": "Um exame abrange área corporal muito maior que a região solicitada. Qual ajuste físico do equipamento reduz a exposição fora do campo necessário?",
       "alternativas": [
         "Repetição",
         "Aumento do tempo",
@@ -353,8 +353,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 28",
-      "pergunta": "Qual marcador deve indicar o lado anatômico em uma projeção lateral?",
+      "titulo": "Situação clínica 28",
+      "pergunta": "Uma projeção lateral foi armazenada sem indicação do lado apoiado. Qual informação essencial de identificação está ausente?",
       "alternativas": [
         "Número do aparelho",
         "Nome do fabricante",
@@ -366,8 +366,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 29",
-      "pergunta": "Qual procedimento é preferível à contenção manual quando tecnicamente viável?",
+      "titulo": "Situação clínica 29",
+      "pergunta": "Um animal inquieto exige contenção para uma radiografia. Antes de recorrer à contenção manual de pessoas, qual alternativa deve ser considerada quando viável e segura?",
       "alternativas": [
         "Imobilização mecânica",
         "Segurar com as mãos no feixe",
@@ -379,8 +379,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "VETERINÁRIA — 30",
-      "pergunta": "Qual profissional deve definir a necessidade de sedação e sua condução clínica?",
+      "titulo": "Situação clínica 30",
+      "pergunta": "Um paciente veterinário não tolera o posicionamento mesmo com medidas ambientais e contenção apropriada. Quem deve avaliar e conduzir eventual sedação?",
       "alternativas": [
         "Recepcionista",
         "Médico-veterinário",
@@ -391,5 +391,6 @@
       "explicacao": "Conceito anatômico ou técnico: Médico-veterinário.",
       "dificuldade": "dificil"
     }
-  ]
+  ],
+  "status": "enunciados-contextualizados-pendente-revisao-alternativas"
 }
