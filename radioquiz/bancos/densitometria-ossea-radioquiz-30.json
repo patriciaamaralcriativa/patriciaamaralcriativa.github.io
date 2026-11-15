@@ -1,0 +1,427 @@
+{
+  "title": "Densitometria Óssea — RADIOQUIZ",
+  "subject": "Densitometria Óssea",
+  "questions": [
+    {
+      "prompt": "Em mulheres após a menopausa, qual escore é usado para classificação densitométrica segundo critérios da OMS?",
+      "options": [
+        "T-score",
+        "Z-score",
+        "BMC isolado",
+        "Área projetada"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: T-score.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em adultos jovens antes da menopausa, qual parâmetro é preferido para comparação com pares da mesma idade?",
+      "options": [
+        "BMC",
+        "Z-score",
+        "T-score",
+        "TBS"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Z-score.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Um T-score de -2,7 no colo femoral, em mulher pós-menopausa, corresponde à classificação densitométrica de:",
+      "options": [
+        "Normalidade",
+        "Osteoporose grave obrigatoriamente",
+        "Osteoporose",
+        "Baixa massa óssea"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Osteoporose.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Um T-score de -1,8 em sítio diagnóstico válido corresponde a:",
+      "options": [
+        "Osteoporose",
+        "Normalidade",
+        "Osteoporose grave",
+        "Baixa massa óssea"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Baixa massa óssea.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Na DXA, o resultado de DMO areal é expresso habitualmente em:",
+      "options": [
+        "g/cm²",
+        "g/cm³",
+        "mg/dL",
+        "HU"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: g/cm².",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Por que a DXA pode superestimar a DMO lombar em idosos?",
+      "options": [
+        "Redução da espessura vertebral",
+        "Alterações degenerativas e calcificações projetadas",
+        "Aumento real obrigatório de massa trabecular",
+        "Ausência de tecido mole na projeção"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Alterações degenerativas e calcificações projetadas.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Na análise lombar, uma vértebra com artefato estrutural relevante deve ser:",
+      "options": [
+        "Substituída pela vértebra torácica adjacente",
+        "Corrigida apenas aumentando o contraste",
+        "Excluída segundo critérios técnicos, documentando a decisão",
+        "Mantida sempre para preservar quatro níveis"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Excluída segundo critérios técnicos, documentando a decisão.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Quando apenas uma vértebra lombar permanece avaliável, a conduta é:",
+      "options": [
+        "Classificar pelo T-score da única vértebra",
+        "Calcular média com L5",
+        "Adotar automaticamente o menor Z-score",
+        "Não usar essa região isoladamente para classificação"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Não usar essa região isoladamente para classificação.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Na DXA de quadril, qual região é aceita para classificação diagnóstica em adultos indicados?",
+      "options": [
+        "Colo femoral ou quadril total",
+        "Triângulo de Ward isolado",
+        "Grande trocânter isolado",
+        "Diáfise femoral isolada"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Colo femoral ou quadril total.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "A rotação interna adequada do membro inferior no exame de quadril visa principalmente:",
+      "options": [
+        "Imobilizar a coluna lombar",
+        "Padronizar a projeção do colo femoral",
+        "Eliminar toda sobreposição de tecidos moles",
+        "Aumentar artificialmente a DMO"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Padronizar a projeção do colo femoral.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Uma mudança de DMO entre exames só deve ser considerada significativa quando:",
+      "options": [
+        "O T-score muda de categoria",
+        "Há diferença visual no mapa colorido",
+        "Ultrapassa a menor mudança significativa validada do serviço",
+        "É maior que qualquer variação de 0,1%"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Ultrapassa a menor mudança significativa validada do serviço.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "A menor mudança significativa (LSC) depende sobretudo de:",
+      "options": [
+        "Apenas da idade do paciente",
+        "Somente do fabricante do aparelho",
+        "Apenas do valor do T-score",
+        "Estudo local de precisão e nível de confiança"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Estudo local de precisão e nível de confiança.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Na comparação longitudinal, por que é importante usar o mesmo equipamento ou calibração cruzada?",
+      "options": [
+        "Reduzir viés de medição entre sistemas",
+        "Uniformizar obrigatoriamente o T-score",
+        "Dispensar análise de precisão",
+        "Eliminar necessidade de posicionamento"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Reduzir viés de medição entre sistemas.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em paciente com prótese unilateral de quadril, a avaliação densitométrica do quadril deve priorizar:",
+      "options": [
+        "Apenas o triângulo de Ward",
+        "Quadril contralateral sem artefato relevante",
+        "Quadril com prótese, incluindo metal",
+        "Média dos dois quadris"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Quadril contralateral sem artefato relevante.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Na presença de escoliose lombar importante, o operador deve:",
+      "options": [
+        "Ignorar alterações anatômicas",
+        "Excluir toda a coluna sem inspeção",
+        "Avaliar posicionamento, segmentação e validade de cada vértebra",
+        "Forçar simetria por edição da DMO"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Avaliar posicionamento, segmentação e validade de cada vértebra.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Qual parâmetro estima aspectos da microarquitetura trabecular a partir da textura da imagem DXA lombar?",
+      "options": [
+        "BMC",
+        "Z-score",
+        "LSC",
+        "TBS"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: TBS.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "O TBS deve ser interpretado como:",
+      "options": [
+        "Informação complementar à DMO e ao risco clínico",
+        "Substituto universal do T-score",
+        "Medida direta da resistência mecânica",
+        "Diagnóstico isolado de fratura"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Informação complementar à DMO e ao risco clínico.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em pacientes com obesidade importante, a DXA pode ser limitada por:",
+      "options": [
+        "Ausência de atenuação em tecidos moles",
+        "Espessura tecidual, posicionamento e capacidade do equipamento",
+        "Alteração do número atômico do cálcio",
+        "Aumento da meia-vida do feixe"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Espessura tecidual, posicionamento e capacidade do equipamento.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em criança, a interpretação densitométrica deve privilegiar:",
+      "options": [
+        "Classificação OMS de osteoporose isolada",
+        "Apenas BMC sem contexto",
+        "Z-score e ajuste contextual para crescimento",
+        "T-score com limites de adulto"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Z-score e ajuste contextual para crescimento.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em crianças, um Z-score baixo isoladamente permite diagnosticar osteoporose?",
+      "options": [
+        "Sim, independentemente de fraturas",
+        "Sim, se inferior a -1,0",
+        "Sim, se a área óssea for pequena",
+        "Não; requer critérios clínicos e/ou fraturas específicos"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Não; requer critérios clínicos e/ou fraturas específicos.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em adultos jovens, Z-score igual ou inferior a -2,0 é descrito como:",
+      "options": [
+        "Abaixo do esperado para a idade",
+        "Osteoporose pela OMS obrigatoriamente",
+        "Baixa massa óssea pela OMS",
+        "Normal para a idade"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Abaixo do esperado para a idade.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Qual sítio alternativo é indicado quando quadril e coluna não podem ser medidos ou interpretados adequadamente?",
+      "options": [
+        "Clavícula",
+        "Rádio 33%",
+        "Rádio ultradistal isolado",
+        "Úmero proximal"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Rádio 33%.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Em hiperparatireoidismo, qual região é particularmente útil na avaliação por DXA?",
+      "options": [
+        "Patela",
+        "Calcâneo isolado",
+        "Rádio 33%",
+        "Falange distal"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Rádio 33%.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Na DXA, a DMO areal pode ser influenciada por:",
+      "options": [
+        "Somente conteúdo mineral volumétrico",
+        "Apenas a densidade cortical",
+        "Somente idade cronológica",
+        "Tamanho e geometria óssea"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Tamanho e geometria óssea.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Uma fratura vertebral por fragilidade pode modificar a avaliação clínica mesmo com T-score acima de -2,5 porque:",
+      "options": [
+        "Risco e diagnóstico clínico não dependem apenas do T-score",
+        "O T-score sempre está incorreto",
+        "O Z-score substitui a investigação",
+        "A DXA mede diretamente resistência óssea"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Risco e diagnóstico clínico não dependem apenas do T-score.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "No exame lombar, incluir incorretamente costelas ou pelve na região analisada pode:",
+      "options": [
+        "Reduzir obrigatoriamente a DMO",
+        "Introduzir erro de segmentação e DMO",
+        "Melhorar sempre a precisão",
+        "Corrigir a projeção vertebral"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Introduzir erro de segmentação e DMO.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Ao posicionar a coluna lombar em decúbito dorsal, a flexão de quadris e joelhos pode:",
+      "options": [
+        "Eliminar qualquer rotação axial",
+        "Impedir a visualização de L4",
+        "Reduzir lordose lombar e melhorar alinhamento",
+        "Aumentar propositalmente a lordose"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Reduzir lordose lombar e melhorar alinhamento.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Para monitorar tratamento, qual medida deve ser comparada preferencialmente entre exames?",
+      "options": [
+        "Apenas a cor do mapa",
+        "Apenas a categoria do T-score",
+        "Somente a idade óssea estimada",
+        "DMO em g/cm² e sua mudança frente à LSC"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: DMO em g/cm² e sua mudança frente à LSC.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "O FRAX integra principalmente:",
+      "options": [
+        "Fatores clínicos de risco, podendo incluir DMO do colo femoral",
+        "Somente TBS e BMC",
+        "Apenas T-score lombar",
+        "Somente histórico de quedas"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Fatores clínicos de risco, podendo incluir DMO do colo femoral.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    },
+    {
+      "prompt": "Qual situação torna especialmente importante a inspeção da imagem antes de aceitar a DMO?",
+      "options": [
+        "Exame de controle no mesmo equipamento",
+        "Presença de artefatos metálicos ou alterações estruturais",
+        "Resultado dentro da normalidade",
+        "Paciente sem sintomas"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Presença de artefatos metálicos ou alterações estruturais.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Densitometria Óssea"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
