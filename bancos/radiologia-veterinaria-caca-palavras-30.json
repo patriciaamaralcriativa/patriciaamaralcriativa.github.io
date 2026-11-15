@@ -1,0 +1,126 @@
+{
+  "title": "Radiologia Veterinária — 30 pistas",
+  "level": "medio",
+  "rows": [
+    {
+      "question": "Como se chama a posição em que o animal permanece com o dorso apoiado?",
+      "answer": "DORSAL"
+    },
+    {
+      "question": "Como se chama o decúbito com o esterno apoiado?",
+      "answer": "ESTERNAL"
+    },
+    {
+      "question": "Qual superfície corporal corresponde à entrada do feixe na incidência ventrodorsal?",
+      "answer": "VENTRAL"
+    },
+    {
+      "question": "Qual o nome da incidência cujo feixe entra pelo dorso e sai pelo ventre?",
+      "answer": "DORSOVENTRAL"
+    },
+    {
+      "question": "Qual lado permanece junto ao detector na projeção laterolateral direita?",
+      "answer": "DIREITO"
+    },
+    {
+      "question": "Qual plano anatômico divide o corpo em direita e esquerda?",
+      "answer": "SAGITAL"
+    },
+    {
+      "question": "Qual plano anatômico separa as regiões cranial e caudal?",
+      "answer": "TRANSVERSAL"
+    },
+    {
+      "question": "Qual direção anatômica aponta para a cabeça?",
+      "answer": "CRANIAL"
+    },
+    {
+      "question": "Qual direção anatômica aponta para a cauda?",
+      "answer": "CAUDAL"
+    },
+    {
+      "question": "Qual termo descreve a região mais próxima da origem do membro?",
+      "answer": "PROXIMAL"
+    },
+    {
+      "question": "Qual termo descreve a região mais afastada da origem do membro?",
+      "answer": "DISTAL"
+    },
+    {
+      "question": "Qual superfície da extremidade do membro torácico se opõe à dorsal?",
+      "answer": "PALMAR"
+    },
+    {
+      "question": "Qual superfície da extremidade do membro pélvico se opõe à dorsal?",
+      "answer": "PLANTAR"
+    },
+    {
+      "question": "Qual osso compõe o braço do cão?",
+      "answer": "ÚMERO"
+    },
+    {
+      "question": "Qual osso longo ocupa a coxa?",
+      "answer": "FÊMUR"
+    },
+    {
+      "question": "Qual cavidade óssea recebe a cabeça do fêmur?",
+      "answer": "ACETÁBULO"
+    },
+    {
+      "question": "Qual osso do antebraço apresenta o olécrano?",
+      "answer": "ULNA"
+    },
+    {
+      "question": "Qual osso sesamoide participa da articulação do joelho?",
+      "answer": "PATELA"
+    },
+    {
+      "question": "Qual osso principal da perna articula-se com o fêmur?",
+      "answer": "TÍBIA"
+    },
+    {
+      "question": "Qual região contém os pulmões?",
+      "answer": "TÓRAX"
+    },
+    {
+      "question": "Qual músculo separa tórax e abdome?",
+      "answer": "DIAFRAGMA"
+    },
+    {
+      "question": "Qual órgão abdominal está situado predominantemente junto ao diafragma?",
+      "answer": "FÍGADO"
+    },
+    {
+      "question": "Qual órgão armazena a urina?",
+      "answer": "BEXIGA"
+    },
+    {
+      "question": "Qual estrutura conduz o ar da laringe aos brônquios?",
+      "answer": "TRAQUEIA"
+    },
+    {
+      "question": "Qual fase respiratória costuma ser preferida na radiografia torácica para avaliar os pulmões?",
+      "answer": "INSPIRAÇÃO"
+    },
+    {
+      "question": "Qual fator causa borramento por deslocamento durante a exposição?",
+      "answer": "MOVIMENTO"
+    },
+    {
+      "question": "Qual procedimento restringe o campo irradiado à região de interesse?",
+      "answer": "COLIMAÇÃO"
+    },
+    {
+      "question": "Qual identificação diferencia o lado direito do esquerdo na imagem?",
+      "answer": "LATERALIDADE"
+    },
+    {
+      "question": "Qual procedimento reduz deslocamentos sem exigir que alguém segure o animal?",
+      "answer": "IMOBILIZAÇÃO"
+    },
+    {
+      "question": "Qual profissional responde pela decisão clínica de sedar o animal?",
+      "answer": "VETERINÁRIO"
+    }
+  ]
+}
