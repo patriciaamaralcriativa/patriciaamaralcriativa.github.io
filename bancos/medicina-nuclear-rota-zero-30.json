@@ -5,392 +5,392 @@
       "titulo": "Interpretação em Medicina Nuclear 1",
       "pergunta": "Uma cintilografia óssea mostra foco de hipercaptação, mas a hipótese clínica ainda é incerta. Qual processo fisiológico a imagem reflete principalmente?",
       "alternativas": [
-        "Presença obrigatória de fratura aguda",
-        "Redução do remodelamento ósseo",
-        "Aumento local da atividade osteoblástica e perfusão",
-        "Diagnóstico específico de metástase óssea"
+        "Atividade osteoblástica aumentada que confirma metástase independentemente da clínica",
+        "Aumento local de remodelamento osteoblástico associado à perfusão, sem especificidade etiológica",
+        "Inflamação isolada comprovada pelo traçador ósseo",
+        "Redução de atividade osteoblástica com maior excreção urinária"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Aumento local da atividade osteoblástica e perfusão.",
-      "dificuldade": "dificil"
+      "correta": 1,
+      "explicacao": "A alternativa correta é: Aumento local de remodelamento osteoblástico associado à perfusão, sem especificidade etiológica.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 2",
       "pergunta": "Na avaliação renal dinâmica, as primeiras imagens são obtidas imediatamente após a administração. Que informação predomina nessa etapa?",
       "alternativas": [
-        "Exclusivamente a excreção vesical tardia",
-        "Apenas a meia-vida física do radionuclídeo",
-        "Somente o tamanho renal na imagem estática",
-        "Chegada vascular do traçador aos rins"
+        "Eliminação tardia do traçador para a bexiga",
+        "Distribuição cortical estática após equilíbrio",
+        "Captação tireoidiana do radiofármaco",
+        "Chegada vascular do radiofármaco aos rins"
       ],
       "correta": 3,
-      "explicacao": "Resposta correta: Chegada vascular do traçador aos rins.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Chegada vascular do radiofármaco aos rins.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 3",
       "pergunta": "Uma curva renográfica mostra esvaziamento lento após diurético. Qual conjunto de informações deve ser integrado antes de concluir por obstrução?",
       "alternativas": [
-        "Curvas, imagens, função renal e condições de hidratação",
-        "Apenas o tempo de pico isolado",
-        "Somente a atividade acumulada na bexiga",
-        "Exclusivamente o valor máximo de contagens"
+        "Curvas de drenagem, imagens sequenciais, função renal e estado de hidratação",
+        "Somente o tempo de meia-excreção isolado, sem função renal",
+        "Apenas a intensidade da primeira imagem vascular",
+        "Somente o volume de contraste iodado administrado"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: Curvas, imagens, função renal e condições de hidratação.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Curvas de drenagem, imagens sequenciais, função renal e estado de hidratação.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 4",
       "pergunta": "Em um estudo planar, duas estruturas sobrepostas dificultam a localização de um foco. Qual recurso da aquisição SPECT ajuda a resolver essa limitação?",
       "alternativas": [
-        "Substituir a colimação por coincidência",
-        "Reconstruir a distribuição tridimensional da atividade",
-        "Medir diretamente a dose absorvida em cada órgão",
-        "Eliminar a necessidade de correção de atenuação"
+        "Aquisição de pares de fótons de aniquilação em coincidência",
+        "Transformação do radiofármaco em contraste radiográfico",
+        "Reconstrução tomográfica da distribuição de atividade a partir de projeções angulares",
+        "Eliminação de atenuação e movimento sem correções"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Reconstruir a distribuição tridimensional da atividade.",
-      "dificuldade": "dificil"
+      "correta": 2,
+      "explicacao": "A alternativa correta é: Reconstrução tomográfica da distribuição de atividade a partir de projeções angulares.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 5",
       "pergunta": "Uma equipe compara SPECT e PET. Que evento físico é utilizado para localizar a origem do sinal na PET?",
       "alternativas": [
-        "Partículas beta diretamente no cristal",
-        "Elétrons Auger detectados externamente",
-        "Pares de fótons de aniquilação em coincidência",
-        "Fótons únicos selecionados por colimador paralelo"
+        "Detecção de fótons gama únicos por colimador mecânico paralelo",
+        "Detecção externa direta dos pósitrons antes de aniquilação",
+        "Detecção em coincidência de fótons originados da aniquilação pósitron-elétron",
+        "Detecção de elétrons beta menos por cristal de NaI"
       ],
       "correta": 2,
-      "explicacao": "Resposta correta: Pares de fótons de aniquilação em coincidência.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Detecção em coincidência de fótons originados da aniquilação pósitron-elétron.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 6",
       "pergunta": "Durante uma discussão de PET, o aluno precisa reconhecer a energia dos fótons de aniquilação. Qual valor caracteriza cada fóton?",
       "alternativas": [
-        "140 keV",
-        "364 keV",
-        "159 keV",
-        "511 keV"
+        "511 keV por fóton de aniquilação",
+        "140 keV, energia principal do 99mTc",
+        "364 keV, energia característica do 131I",
+        "159 keV, fotopico associado ao 123I"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: 511 keV.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: 511 keV por fóton de aniquilação.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 7",
       "pergunta": "Um foco hipermetabólico aparece em PET com FDG próximo a processo inflamatório conhecido. Por que não deve ser automaticamente classificado como tumor?",
       "alternativas": [
-        "Processos inflamatórios com elevado metabolismo glicolítico",
-        "Apenas tumores malignos confirmados",
-        "Exclusivamente tecidos com ausência de perfusão",
-        "Somente lesões com necrose completa"
+        "Toda hipercaptação de FDG representa malignidade",
+        "A captação inflamatória só ocorre em ausência de perfusão",
+        "A FDG não se acumula em células imunológicas ativadas",
+        "Inflamação também pode elevar captação de FDG pelo metabolismo glicolítico celular"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Processos inflamatórios com elevado metabolismo glicolítico.",
-      "dificuldade": "dificil"
+      "correta": 3,
+      "explicacao": "A alternativa correta é: Inflamação também pode elevar captação de FDG pelo metabolismo glicolítico celular.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 8",
       "pergunta": "Uma PET cerebral com FDG apresenta captação fisiológica importante no córtex. Qual característica do tecido explica esse padrão?",
       "alternativas": [
-        "Ligação específica ao cálcio ósseo",
-        "Alto consumo de glicose pelo tecido nervoso",
-        "Ausência de metabolismo energético cerebral",
-        "Excreção predominante do traçador pela bile"
+        "Captação exclusiva de FDG por células malignas",
+        "Alto metabolismo de glicose no tecido cerebral",
+        "Excreção fisiológica predominante pela bile",
+        "Ausência de consumo energético no córtex cerebral"
       ],
       "correta": 1,
-      "explicacao": "Resposta correta: Alto consumo de glicose pelo tecido nervoso.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Alto metabolismo de glicose no tecido cerebral.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 9",
       "pergunta": "Uma gama-câmara recebe fótons de várias direções. Qual componente limita geometricamente os trajetos aceitos para formar a imagem?",
       "alternativas": [
-        "Converter radiação gama em luz",
-        "Determinar a meia-vida biológica",
-        "Selecionar a direção de incidência dos fótons",
-        "Aumentar a energia dos fótons detectados"
+        "Colimador, que seleciona direções de chegada dos fótons",
+        "Cristal cintilador, que converte luz em radiação gama",
+        "Fotomultiplicadora, que bloqueia fótons oblíquos antes do cristal",
+        "Janela energética, que determina a direção espacial de incidência"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Selecionar a direção de incidência dos fótons.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: Colimador, que seleciona direções de chegada dos fótons.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 10",
       "pergunta": "Um exame foi realizado com colimador inadequado para a energia do radionuclídeo. Qual prejuízo físico pode resultar?",
       "alternativas": [
-        "Mudança da meia-vida física do radiofármaco",
-        "Alteração da identidade química do traçador",
-        "Eliminação de espalhamento no paciente",
-        "Perda de resolução ou penetração septal conforme energia"
+        "Mudança na meia-vida física do radionuclídeo",
+        "Alteração da fórmula química do radiofármaco após injeção",
+        "Perda de resolução e/ou penetração septal conforme energia do fóton",
+        "Impossibilidade de produzir cintilações no cristal em qualquer energia"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Perda de resolução ou penetração septal conforme energia.",
-      "dificuldade": "dificil"
+      "correta": 2,
+      "explicacao": "A alternativa correta é: Perda de resolução e/ou penetração septal conforme energia do fóton.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 11",
       "pergunta": "Um aluno confunde a função do cristal da gama-câmara com a do colimador. O que o cristal realiza quando recebe fótons gama?",
       "alternativas": [
-        "Converter energia dos fótons incidentes em luz",
-        "Emitir os fótons gama administrados",
-        "Bloquear a emissão de pósitrons no paciente",
-        "Substituir o circuito de posicionamento"
+        "Seleção mecânica de trajetórias por orifícios de chumbo",
+        "Conversão da energia depositada pelos fótons em cintilações luminosas",
+        "Produção do radiofármaco a partir de molibdênio",
+        "Conversão de fótons gama em pósitrons emitidos pelo paciente"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Converter energia dos fótons incidentes em luz.",
-      "dificuldade": "dificil"
+      "correta": 1,
+      "explicacao": "A alternativa correta é: Conversão da energia depositada pelos fótons em cintilações luminosas.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 12",
       "pergunta": "Durante SPECT, a equipe define uma janela em torno do fotopico. Qual é o objetivo dessa seleção?",
       "alternativas": [
-        "Eliminar a atenuação por tecidos profundos",
-        "Selecionar eventos próximos ao fotopico do radionuclídeo",
-        "Determinar diretamente a atividade injetada",
-        "Corrigir integralmente o movimento do paciente"
+        "Correção completa da atenuação por tecidos",
+        "Medição direta da dose absorvida por órgão",
+        "Eliminação de todos os artefatos de movimento",
+        "Seleção de eventos próximos à energia do fotopico desejado"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Selecionar eventos próximos ao fotopico do radionuclídeo.",
-      "dificuldade": "dificil"
+      "correta": 3,
+      "explicacao": "A alternativa correta é: Seleção de eventos próximos à energia do fotopico desejado.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 13",
       "pergunta": "Uma aquisição usa janela energética excessivamente ampla. Que contribuição indesejada pode aumentar?",
       "alternativas": [
-        "Reduzir a sensibilidade a zero necessariamente",
-        "Melhorar sempre a resolução espacial",
-        "Aumentar a contribuição de fótons espalhados",
-        "Eliminar todos os eventos Compton"
+        "Redução obrigatória de todos os eventos verdadeiros a zero",
+        "Eliminação completa de fótons Compton",
+        "Maior inclusão de eventos de fótons espalhados",
+        "Melhora garantida de resolução espacial sem perda de contraste"
       ],
       "correta": 2,
-      "explicacao": "Resposta correta: Aumentar a contribuição de fótons espalhados.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Maior inclusão de eventos de fótons espalhados.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 14",
       "pergunta": "Um teste de rotina identifica áreas do campo de visão com respostas diferentes sob irradiação uniforme. Qual controle está sendo avaliado?",
       "alternativas": [
-        "Somente a concentração do radiofármaco",
-        "A distribuição anatômica do paciente",
-        "Exclusivamente a atividade residual da seringa",
-        "Variações não esperadas na resposta do campo de visão"
+        "Uniformidade da resposta da gama-câmara ao longo do campo de visão",
+        "Distribuição fisiológica do traçador no paciente",
+        "Concentração plasmática de radiofármaco",
+        "Exclusivamente atividade residual no frasco"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Variações não esperadas na resposta do campo de visão.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: Uniformidade da resposta da gama-câmara ao longo do campo de visão.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 15",
       "pergunta": "Em SPECT, um desalinhamento do centro de rotação é detectado antes do exame. Qual consequência justifica corrigir essa falha?",
       "alternativas": [
-        "Gerar distorções e artefatos na reconstrução",
-        "Alterar a energia emitida pelo radionuclídeo",
-        "Modificar a meia-vida efetiva do paciente",
-        "Impedir a emissão de fótons gama"
+        "Mudança da energia emitida pelo radionuclídeo",
+        "Distorções e artefatos de reconstrução tomográfica",
+        "Aumento real da perfusão dos órgãos",
+        "Alteração da meia-vida efetiva do radiofármaco"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Gerar distorções e artefatos na reconstrução.",
-      "dificuldade": "dificil"
+      "correta": 1,
+      "explicacao": "A alternativa correta é: Distorções e artefatos de reconstrução tomográfica.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 16",
       "pergunta": "Uma região profunda aparece com menos contagens por perda de fótons nos tecidos. Que correção pode reduzir esse viés na reconstrução?",
       "alternativas": [
-        "Excesso de resolução do detector",
-        "Perda de fótons por interação com tecidos",
-        "Aumento espontâneo da atividade administrada",
-        "Degradação química obrigatória do traçador"
+        "Aumento da atividade do radionuclídeo após administração",
+        "Movimento involuntário corrigido exclusivamente por janela energética",
+        "Erro de rotulagem do radiofármaco detectado por pH",
+        "Perda de fótons por atenuação nos tecidos do paciente"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Perda de fótons por interação com tecidos.",
-      "dificuldade": "dificil"
+      "correta": 3,
+      "explicacao": "A alternativa correta é: Perda de fótons por atenuação nos tecidos do paciente.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 17",
       "pergunta": "Em PET/CT, a imagem anatômica e a funcional ficam desalinhadas por movimento do paciente. Que tipo de problema pode surgir?",
       "alternativas": [
-        "Mudança da energia de aniquilação",
-        "Redução da meia-vida física do 18F",
-        "Erros de localização e artefatos de correção de atenuação",
-        "Aumento real do metabolismo celular"
+        "Desalinhamento de localização e artefatos na correção de atenuação",
+        "Mudança física na energia de aniquilação do 18F",
+        "Aumento biológico real do metabolismo por causa do software",
+        "Alteração do tempo de meia-vida física do radionuclídeo"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Erros de localização e artefatos de correção de atenuação.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: Desalinhamento de localização e artefatos na correção de atenuação.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 18",
       "pergunta": "Um radiofármaco perde atividade tanto por decaimento quanto por eliminação do organismo. Que fatores determinam sua meia-vida efetiva?",
       "alternativas": [
-        "Apenas da meia-vida física",
-        "Somente da atividade inicial da seringa",
-        "Exclusivamente do volume de injeção",
-        "Decaimento físico e eliminação biológica"
+        "Somente a atividade inicial administrada",
+        "Apenas o volume injetado e a massa corporal",
+        "Decaimento físico e eliminação biológica do radiofármaco",
+        "Somente a meia-vida física, independentemente da eliminação"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Decaimento físico e eliminação biológica.",
-      "dificuldade": "dificil"
+      "correta": 2,
+      "explicacao": "A alternativa correta é: Decaimento físico e eliminação biológica do radiofármaco.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 19",
       "pergunta": "Um radiofármaco é eliminado do corpo além de sofrer decaimento físico. Como se compara sua meia-vida efetiva à física?",
       "alternativas": [
-        "Menor ou igual à meia-vida física",
-        "Sempre maior que a meia-vida física",
-        "Independente da meia-vida biológica",
-        "Igual ao dobro da meia-vida física"
+        "A meia-vida efetiva sempre excede a física",
+        "A meia-vida efetiva é independente de eliminação biológica",
+        "A meia-vida efetiva corresponde sempre ao dobro da física",
+        "A meia-vida efetiva não supera a física quando há eliminação biológica"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Menor ou igual à meia-vida física.",
-      "dificuldade": "dificil"
+      "correta": 3,
+      "explicacao": "A alternativa correta é: A meia-vida efetiva não supera a física quando há eliminação biológica.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 20",
       "pergunta": "Um serviço escolhe 99mTc para várias cintilografias. Qual combinação de propriedades favorece seu uso diagnóstico?",
       "alternativas": [
-        "Produção exclusiva de pares de aniquilação",
-        "Emissão gama adequada à detecção e meia-vida física relativamente curta",
-        "Emissão alfa predominante para imagem externa",
-        "Meia-vida física de vários anos"
+        "Emissão predominante de partículas alfa para detecção externa",
+        "Emissão gama útil para imagem externa e meia-vida relativamente curta",
+        "Fótons de aniquilação em coincidência como emissão principal",
+        "Meia-vida física de décadas para permitir aquisições longas"
       ],
       "correta": 1,
-      "explicacao": "Resposta correta: Emissão gama adequada à detecção e meia-vida física relativamente curta.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Emissão gama útil para imagem externa e meia-vida relativamente curta.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 21",
       "pergunta": "Após eluição de gerador de molibdênio-tecnécio, qual espécie radioativa é usualmente obtida para preparação de radiofármacos?",
       "alternativas": [
-        "Fluordesoxiglicose marcada com 18F",
-        "Cloreto de tálio contendo 201Tl",
-        "Pertecnetato de sódio contendo 99mTc",
-        "Iodeto de sódio contendo 131I"
+        "Fluordesoxiglicose marcada com flúor-18",
+        "Iodeto de sódio contendo iodo-131",
+        "Pertecnetato de sódio contendo tecnécio-99m",
+        "Cloreto de tálio contendo tálio-201"
       ],
       "correta": 2,
-      "explicacao": "Resposta correta: Pertecnetato de sódio contendo 99mTc.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Pertecnetato de sódio contendo tecnécio-99m.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 22",
       "pergunta": "Um laboratório verifica possível passagem de molibdênio-99 no eluato do gerador. Que parâmetro de qualidade está avaliando?",
       "alternativas": [
-        "Somente alterações do pH",
-        "Apenas o volume do eluato",
-        "Exclusivamente partículas visíveis",
-        "Contaminação por 99Mo acima do limite aceitável"
+        "Pureza radionuclídica, verificando possível presença de molibdênio-99",
+        "Pureza radioquímica, medindo apenas formas do pertecnetato",
+        "Esterilidade, pela inspeção visual de partículas",
+        "Uniformidade intrínseca do cristal da gama-câmara"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Contaminação por 99Mo acima do limite aceitável.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: Pureza radionuclídica, verificando possível presença de molibdênio-99.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 23",
       "pergunta": "Uma preparação contém atividade radioativa em formas químicas diferentes da desejada. Qual controle detecta esse problema?",
       "alternativas": [
-        "Fração da atividade na forma química desejada",
-        "Ausência absoluta de qualquer microrganismo",
-        "Energia máxima dos fótons emitidos",
-        "Tempo de aquisição recomendado"
+        "Pureza radionuclídica, referente apenas à ausência de bactérias",
+        "Pureza radioquímica, referente à atividade na forma química pretendida",
+        "Atividade total, que garante automaticamente a forma química correta",
+        "Resolução espacial, medida pela concentração do eluato"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Fração da atividade na forma química desejada.",
-      "dificuldade": "dificil"
+      "correta": 1,
+      "explicacao": "A alternativa correta é: Pureza radioquímica, referente à atividade na forma química pretendida.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 24",
       "pergunta": "Uma cintilografia apresenta biodistribuição inesperada após preparação inadequada do radiofármaco. Qual falha deve ser investigada?",
       "alternativas": [
-        "Correção espontânea do exame por software",
-        "Biodistribuição não esperada e prejuízo diagnóstico",
-        "Aumento automático da resolução do sistema",
-        "Redução obrigatória da atividade injetada"
+        "Correção automática da marcação pelo detector",
+        "Aumento garantido da resolução espacial",
+        "Desaparecimento de toda atividade extravasada",
+        "Biodistribuição inesperada e possível comprometimento da interpretação"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Biodistribuição não esperada e prejuízo diagnóstico.",
-      "dificuldade": "dificil"
+      "correta": 3,
+      "explicacao": "A alternativa correta é: Biodistribuição inesperada e possível comprometimento da interpretação.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 25",
       "pergunta": "Uma cintilografia tireoidiana é interpretada sem considerar medicamentos e dados laboratoriais. Que informações clínicas devem acompanhar a avaliação?",
       "alternativas": [
-        "Somente a distância entre paciente e detector",
-        "Exclusivamente a idade do equipamento",
-        "História clínica, função tireoidiana e possível interferência medicamentosa",
-        "Apenas a cor da escala de imagem"
+        "História clínica, dados funcionais e medicamentos que interfiram na captação",
+        "Apenas a distância foco-detector",
+        "Somente a cor do mapa de intensidade",
+        "Exclusivamente o número de projeções do SPECT"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: História clínica, função tireoidiana e possível interferência medicamentosa.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: História clínica, dados funcionais e medicamentos que interfiram na captação.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 26",
       "pergunta": "Na perfusão miocárdica, um defeito observado sob estresse desaparece em repouso. Que comparação permitiu identificar essa característica?",
       "alternativas": [
-        "Somente alterações da frequência cardíaca",
-        "Exclusivamente o volume ventricular anatômico",
-        "Apenas a concentração plasmática de glicose",
-        "Defeitos reversíveis e persistentes de perfusão"
+        "Comparação de diferentes colimadores para estimar anatomia coronariana",
+        "Medição isolada da glicemia para classificar defeitos de perfusão",
+        "Comparação de perfusão entre estresse e repouso para reconhecer reversibilidade",
+        "Avaliação exclusiva da frequência cardíaca, sem imagens"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Defeitos reversíveis e persistentes de perfusão.",
-      "dificuldade": "dificil"
+      "correta": 2,
+      "explicacao": "A alternativa correta é: Comparação de perfusão entre estresse e repouso para reconhecer reversibilidade.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 27",
       "pergunta": "Além da perfusão, a equipe deseja avaliar movimento das paredes ventriculares. Qual modalidade de aquisição pode fornecer essa informação?",
       "alternativas": [
-        "Movimento parietal e função ventricular",
-        "Apenas a concentração sérica de troponina",
-        "Somente a anatomia coronariana luminal",
-        "Exclusivamente o fluxo coronariano absoluto"
+        "Janela energética isolada para determinar contratilidade",
+        "Eluição de gerador para visualizar a parede ventricular",
+        "Colimador de alta energia para medir troponina",
+        "Aquisição sincronizada ao ECG, permitindo estimar movimento parietal e função ventricular"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Movimento parietal e função ventricular.",
-      "dificuldade": "dificil"
+      "correta": 3,
+      "explicacao": "A alternativa correta é: Aquisição sincronizada ao ECG, permitindo estimar movimento parietal e função ventricular.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 28",
       "pergunta": "Uma lesão pequena tem captação aparente inferior à esperada em PET. Qual limitação de resolução pode contribuir para isso?",
       "alternativas": [
-        "Produzir apenas artefatos por movimento",
-        "Subestimar atividade em estruturas pequenas em relação à resolução",
-        "Aumentar sempre o SUV em lesões pequenas",
-        "Eliminar a necessidade de calibração cruzada"
+        "Aumento obrigatório de SUV em qualquer lesão menor que a resolução",
+        "Efeito de volume parcial, que pode subestimar atividade de estruturas pequenas",
+        "Ausência completa de influência da resolução no SUV",
+        "Conversão de pósitrons em fótons de menor energia na reconstrução"
       ],
       "correta": 1,
-      "explicacao": "Resposta correta: Subestimar atividade em estruturas pequenas em relação à resolução.",
-      "dificuldade": "dificil"
+      "explicacao": "A alternativa correta é: Efeito de volume parcial, que pode subestimar atividade de estruturas pequenas.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 29",
       "pergunta": "Duas PETs do mesmo paciente mostram SUVs diferentes. Que fatores técnicos e fisiológicos devem ser avaliados antes de concluir mudança biológica?",
       "alternativas": [
-        "Somente pela posição da mesa no hospital",
-        "Exclusivamente pelo número de imagens exportadas",
-        "Tempo pós-injeção, glicemia, técnica e reconstrução",
-        "Apenas pelo nome comercial do detector"
+        "Tempo após administração, glicemia, protocolo e reconstrução da imagem",
+        "Apenas o nome comercial do tomógrafo",
+        "Somente o número de imagens exportadas para o laudo",
+        "Exclusivamente a posição da mesa na sala"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Tempo pós-injeção, glicemia, técnica e reconstrução.",
-      "dificuldade": "dificil"
+      "correta": 0,
+      "explicacao": "A alternativa correta é: Tempo após administração, glicemia, protocolo e reconstrução da imagem.",
+      "dificuldade": "medio-dificil"
     },
     {
       "titulo": "Interpretação em Medicina Nuclear 30",
       "pergunta": "Durante injeção, parte do radiofármaco extravasa no local da punção. Qual providência é adequada para avaliar a validade do exame?",
       "alternativas": [
-        "Ignorar o local se a aquisição puder iniciar",
+        "Ignorar o extravasamento se o paciente estiver assintomático",
         "Aumentar automaticamente a atividade sem avaliação",
-        "Excluir o registro para evitar viés",
-        "Registrar o evento e avaliar impacto na biodistribuição e quantificação"
+        "Registrar o extravasamento e avaliar efeitos sobre biodistribuição e quantificação",
+        "Omitir o evento para evitar alterações no laudo"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Registrar o evento e avaliar impacto na biodistribuição e quantificação.",
-      "dificuldade": "dificil"
+      "correta": 2,
+      "explicacao": "A alternativa correta é: Registrar o extravasamento e avaliar efeitos sobre biodistribuição e quantificação.",
+      "dificuldade": "medio-dificil"
     }
   ],
-  "status": "30-casos-reformulados-pendente-revisao-dos-distratores"
+  "status": "30-casos-com-distratores-revisados-pendente-validacao-docente"
 }
