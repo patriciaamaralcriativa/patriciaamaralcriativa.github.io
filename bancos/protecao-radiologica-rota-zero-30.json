@@ -11,7 +11,7 @@
         "Ampliar o campo e reduzir o brilho"
       ],
       "correta": 2,
-      "explicacao": "Colimação física limita a área irradiada; recorte eletrônico não reduz a exposição.",
+      "explicacao": "Resposta correta: Restringir fisicamente a colimação à área de interesse.",
       "dificuldade": "dificil"
     },
     {
@@ -23,21 +23,21 @@
         "Aproximar-se do paciente para enxergar o receptor",
         "Retirar a barreira para facilitar comunicação"
       ],
-      "correta": 0,
-      "explicacao": "Distância e blindagem reduzem exposição ocupacional à radiação espalhada.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Afastar-se da fonte de espalhamento e usar barreira apropriada.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 3",
-      "pergunta": "Uma imagem foi recortada digitalmente após irradiar área maior que a necessária. Qual recurso deveria ter sido usado antes?",
+      "pergunta": "Em campo livre, a distância a uma fonte puntiforme é duplicada. Qual fração aproximada da intensidade original permanece?",
       "alternativas": [
         "O dobro",
         "Um quarto",
         "Quatro vezes",
         "Metade"
       ],
-      "correta": 3,
-      "explicacao": "Pela lei do inverso do quadrado, a intensidade cai a um quarto.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Um quarto.",
       "dificuldade": "dificil"
     },
     {
@@ -49,8 +49,8 @@
         "Usar processamento para corrigir qualquer rotação",
         "Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário"
       ],
-      "correta": 1,
-      "explicacao": "Repetições devem ser justificadas e o erro de aquisição corrigido.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário.",
       "dificuldade": "dificil"
     },
     {
@@ -63,7 +63,7 @@
         "Aumento da dose para evitar ruído"
       ],
       "correta": 1,
-      "explicacao": "A justificação compara benefício clínico esperado e risco da exposição.",
+      "explicacao": "Resposta correta: Justificação.",
       "dificuldade": "dificil"
     },
     {
@@ -75,8 +75,8 @@
         "Ignorar a exposição se a imagem for digital",
         "Aumentar dose até eliminar todo ruído"
       ],
-      "correta": 3,
-      "explicacao": "Otimização busca qualidade diagnóstica adequada sem exposição desnecessária.",
+      "correta": 0,
+      "explicacao": "Resposta correta: Otimização da proteção.",
       "dificuldade": "dificil"
     },
     {
@@ -88,8 +88,8 @@
         "Não são aplicados como limites de dose ao paciente; valem justificação e otimização",
         "Proíbem qualquer exame repetido"
       ],
-      "correta": 0,
-      "explicacao": "Exposições médicas de pacientes não são controladas pelos limites ocupacionais de dose.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Não são aplicados como limites de dose ao paciente; valem justificação e otimização.",
       "dificuldade": "dificil"
     },
     {
@@ -101,13 +101,13 @@
         "Permanecer no feixe primário",
         "Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados"
       ],
-      "correta": 2,
-      "explicacao": "A permanência deve ser excepcional e com medidas de proteção adequadas.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 9",
-      "pergunta": "Um inventário registra transformações nucleares por segundo. Qual unidade deve usar?",
+      "pergunta": "Uma taxa de dose constante de 20 µSv/h atua por 15 minutos. Qual dose acumulada é estimada?",
       "alternativas": [
         "20 µSv",
         "80 µSv",
@@ -115,7 +115,7 @@
         "5 µSv"
       ],
       "correta": 3,
-      "explicacao": "0,25 h × 20 µSv/h = 5 µSv.",
+      "explicacao": "Resposta correta: 5 µSv.",
       "dificuldade": "dificil"
     },
     {
@@ -127,8 +127,8 @@
         "A taxa de dose da sala aumenta",
         "O dosímetro passa a medir apenas energia do tubo"
       ],
-      "correta": 1,
-      "explicacao": "O monitoramento individual exige uso conforme o programa de proteção radiológica.",
+      "correta": 0,
+      "explicacao": "Resposta correta: O registro deixa de representar a exposição ocupacional durante o trabalho.",
       "dificuldade": "dificil"
     },
     {
@@ -140,8 +140,8 @@
         "Na parede de proteção secundária obrigatoriamente",
         "Exclusivamente no dosímetro individual"
       ],
-      "correta": 2,
-      "explicacao": "O feixe útil é direcionado à região examinada e ao receptor.",
+      "correta": 1,
+      "explicacao": "Resposta correta: No paciente e no receptor alinhados ao feixe.",
       "dificuldade": "dificil"
     },
     {
@@ -153,8 +153,8 @@
         "Blindagem de contato",
         "Barreira secundária"
       ],
-      "correta": 0,
-      "explicacao": "Barreiras secundárias são dimensionadas para radiação espalhada e de fuga.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Barreira secundária.",
       "dificuldade": "dificil"
     },
     {
@@ -167,7 +167,7 @@
         "Conversão de raios X em radiação não ionizante"
       ],
       "correta": 1,
-      "explicacao": "Mais mAs pode aumentar exposição sem benefício diagnóstico justificável.",
+      "explicacao": "Resposta correta: Exposição desnecessariamente elevada sem ganho clínico proporcional.",
       "dificuldade": "dificil"
     },
     {
@@ -179,8 +179,8 @@
         "Coulomb por quilograma exclusivamente",
         "Becquerel"
       ],
-      "correta": 3,
-      "explicacao": "Gray corresponde a joule por quilograma de energia depositada.",
+      "correta": 0,
+      "explicacao": "Resposta correta: Gray.",
       "dificuldade": "dificil"
     },
     {
@@ -192,8 +192,8 @@
         "Gray por segundo",
         "Watt"
       ],
-      "correta": 2,
-      "explicacao": "O sievert é a unidade SI para dose equivalente e efetiva.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Sievert.",
       "dificuldade": "dificil"
     },
     {
@@ -205,8 +205,8 @@
         "Desligar apenas o monitor da sala",
         "Comunicar e seguir o procedimento institucional de segurança e manutenção"
       ],
-      "correta": 0,
-      "explicacao": "Sistemas de sinalização e segurança devem funcionar conforme o programa e normas aplicáveis.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Comunicar e seguir o procedimento institucional de segurança e manutenção.",
       "dificuldade": "dificil"
     },
     {
@@ -219,7 +219,7 @@
         "Esclarecer a indicação com o responsável e verificar a justificação"
       ],
       "correta": 3,
-      "explicacao": "A indicação deve ser esclarecida antes da exposição.",
+      "explicacao": "Resposta correta: Esclarecer a indicação com o responsável e verificar a justificação.",
       "dificuldade": "dificil"
     },
     {
@@ -231,8 +231,8 @@
         "Tamanho da tela de visualização",
         "Número de impressoras"
       ],
-      "correta": 1,
-      "explicacao": "A análise sistemática de rejeições orienta correções de posicionamento e técnica.",
+      "correta": 0,
+      "explicacao": "Resposta correta: Análise de rejeição e repetição por motivo.",
       "dificuldade": "dificil"
     },
     {
@@ -244,8 +244,8 @@
         "Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo",
         "Dispensar avaliação por não ser trabalhador"
       ],
-      "correta": 0,
-      "explicacao": "A presença deve ser necessária e protegida, conforme as normas e protocolos.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo.",
       "dificuldade": "dificil"
     },
     {
@@ -257,8 +257,8 @@
         "Aumento do contraste do receptor",
         "Redução da exposição à radiação dispersa com maior distância"
       ],
-      "correta": 2,
-      "explicacao": "A distância reduz a exposição à radiação espalhada.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Redução da exposição à radiação dispersa com maior distância.",
       "dificuldade": "dificil"
     },
     {
@@ -271,7 +271,7 @@
         "Radiação emitida somente após desligar o tubo"
       ],
       "correta": 2,
-      "explicacao": "Radiação de fuga provém do conjunto do tubo fora da abertura útil.",
+      "explicacao": "Resposta correta: Radiação que escapa do conjunto do tubo fora do feixe útil.",
       "dificuldade": "dificil"
     },
     {
@@ -283,8 +283,8 @@
         "A colimação física torna-se desnecessária",
         "A dose do paciente é sempre reduzida à metade"
       ],
-      "correta": 0,
-      "explicacao": "O recorte posterior não altera a exposição já realizada.",
+      "correta": 1,
+      "explicacao": "Resposta correta: O recorte altera a exibição, mas não desfaz a irradiação.",
       "dificuldade": "dificil"
     },
     {
@@ -296,8 +296,8 @@
         "Adequar técnica e campo ao tamanho e à indicação clínica",
         "Usar repetição de rotina para confirmar o resultado"
       ],
-      "correta": 1,
-      "explicacao": "A otimização pediátrica requer adaptação da técnica e colimação.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Adequar técnica e campo ao tamanho e à indicação clínica.",
       "dificuldade": "dificil"
     },
     {
@@ -309,8 +309,8 @@
         "Para permitir interpretação e comparação reprodutíveis dos resultados",
         "Para substituir toda avaliação do equipamento"
       ],
-      "correta": 3,
-      "explicacao": "Contexto de operação e geometria são essenciais à interpretação de medições.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Para permitir interpretação e comparação reprodutíveis dos resultados.",
       "dificuldade": "dificil"
     },
     {
@@ -323,7 +323,7 @@
         "A dose do paciente é sempre igual à do operador"
       ],
       "correta": 0,
-      "explicacao": "São grandezas e métodos de avaliação com finalidades distintas.",
+      "explicacao": "Resposta correta: O monitoramento ocupacional não substitui a estimativa de dose do paciente.",
       "dificuldade": "dificil"
     },
     {
@@ -335,8 +335,8 @@
         "Aumentar o kV para atravessar a abertura",
         "Reduzir o brilho do monitor"
       ],
-      "correta": 2,
-      "explicacao": "Descontinuidades podem comprometer a proteção projetada.",
+      "correta": 0,
+      "explicacao": "Resposta correta: Solicitar avaliação da integridade e adequação da blindagem.",
       "dificuldade": "dificil"
     },
     {
@@ -348,8 +348,8 @@
         "Revelação, fixação e secagem",
         "Brilho, contraste e matriz"
       ],
-      "correta": 3,
-      "explicacao": "Reduzir tempo, aumentar distância e interpor blindagem adequada limita exposição externa.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Tempo, distância e blindagem.",
       "dificuldade": "dificil"
     },
     {
@@ -361,8 +361,8 @@
         "Ignorar disponibilidade e contexto clínico",
         "Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição"
       ],
-      "correta": 1,
-      "explicacao": "A seleção do método considera a questão clínica e alternativas disponíveis.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição.",
       "dificuldade": "dificil"
     },
     {
@@ -375,7 +375,7 @@
         "A troca do nome da sala"
       ],
       "correta": 0,
-      "explicacao": "Mudanças técnicas podem exigir verificações de qualidade e segurança.",
+      "explicacao": "Resposta correta: Ensaios e verificações pertinentes de desempenho e segurança.",
       "dificuldade": "dificil"
     },
     {
@@ -387,10 +387,10 @@
         "O que gera o maior arquivo digital",
         "O de maior dose por padrão"
       ],
-      "correta": 3,
-      "explicacao": "A otimização favorece qualidade suficiente com exposição tão baixa quanto razoavelmente possível.",
+      "correta": 0,
+      "explicacao": "Resposta correta: O otimizado que atende à finalidade clínica.",
       "dificuldade": "dificil"
     }
   ],
-  "status": "30-casos-contextualizados-pendente-revisao-de-distratores"
+  "status": "gabaritos-corrigidos-e-conferidos-30-questoes"
 }
