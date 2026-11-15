@@ -11,10 +11,10 @@ await db.exec(`create role anon;create role authenticated;create schema auth;cre
 create table auth.users(id uuid primary key,email text,email_confirmed_at timestamptz,is_anonymous boolean default false);
 create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
 grant usage on schema auth to authenticated;grant execute on function auth.uid() to authenticated;`);
-for(const file of ['202611140001_radioquiz_schema.sql','202611140002_radioquiz_engine.sql']){
+for(const file of ['202611140001_radioquiz_schema.sql','202611140002_radioquiz_engine.sql','202611150003_radioquiz_mascots.sql']){
  await db.exec(await readFile(new URL(`../supabase/migrations/${file}`,import.meta.url),'utf8'));
 }
-check(true,'Both unchanged migrations execute against PostgreSQL (PGlite)');
+check(true,'All three migrations execute against PostgreSQL (PGlite)');
 await db.query('insert into auth.users values($1,$2,now(),false)',[teacher,'teacher@example.invalid']);
 await db.query('insert into radioquiz_private.teachers values($1)',['teacher@example.invalid']);
 for(const id of students)await db.query('insert into auth.users(id,is_anonymous)values($1,true)',[id]);
@@ -35,6 +35,12 @@ await denied(()=>api('join',{pin:'000000',team_name:'Inválida',member_one:'A',m
 const teams=[];
 for(let i=0;i<3;i++){await as(students[i]);teams.push(await api('join',{pin:room.pin,team_name:`Dupla ${i+1}`,member_one:`Aluno ${i*2+1}`,member_two:`Aluno ${i*2+2}`}))}
 check(teams.length===3,'Three independent authenticated teams join');
+await as(students[0]);await api('set_mascot',{room_id:room.room_id,look:{kind:'cat',color:'pink',accessory:'glasses'}});
+check((await api('state',{room_id:room.room_id})).ranking.find(t=>t.id===teams[0].team_id).mascot.color==='pink','A team saves and retrieves its own mascot');
+await denied(()=>api('set_mascot',{room_id:room.room_id,look:{kind:'<script>',color:'pink',accessory:'none'}}),'Arbitrary mascot values rejected on server');
+await as(teacher);check((await api('state',{room_id:room.room_id})).teams.find(t=>t.id===teams[0].team_id).mascot.kind==='cat','Teacher sees the mascot stored by the team');
+await denied(()=>api('set_mascot',{room_id:room.room_id,look:{kind:'cat',color:'pink',accessory:'none'}}),'Teacher cannot impersonate a team to set its mascot');
+await as(students[3]);await denied(()=>api('set_mascot',{room_id:room.room_id,look:{kind:'cat',color:'pink',accessory:'none'}}),'Nonmember cannot change a room mascot');
 await as(students[3]);await denied(()=>api('join',{pin:room.pin,team_name:'  DUPLA 1 ',member_one:'A',member_two:'B'}),'Case-insensitive duplicate team name rejected');
 await denied(()=>api('state',{room_id:room.room_id}),'Known room UUID does not grant a nonmember access');
 check((await db.query('select * from public.radioquiz_signals')).rows.length===0,'Nonmembers cannot read Realtime room signals');

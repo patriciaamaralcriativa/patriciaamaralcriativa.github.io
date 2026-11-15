@@ -2,7 +2,7 @@
 import {JSDOM} from 'jsdom';
 import {readFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
-const source=(await readFile(new URL('../app.js',import.meta.url),'utf8')).replace(/^import .*\n/,'');
+const source=(await readFile(new URL('../app.js',import.meta.url),'utf8')).replace(/^import .*\n/gm,'');
 const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
 let count=0;const check=(ok,label)=>{assert.ok(ok,label);console.log(`PASS ${++count}: ${label}`)};
 const q=(id,position)=>({id,position,prompt:'Pergunta de teste '+id,options:['A','B','C','D'],answer_index:0,explanation:'Explicação técnica.',time_limit_seconds:30,points:1000,topic:'',image_url:null});
@@ -11,7 +11,7 @@ let current={room_id:'room1',title:'Sala de teste',phase:'lobby',position:0,tota
 const calls=[];let stops=0,watchCallback;
 const clone=x=>structuredClone(x);
 const fake={db:{auth:{getSession:async()=>({data:{session:{user:{id:'teacher-fixture'}}}}),signOut:async()=>{}}},watch(_room,fn){watchCallback=fn;return{stop(){stops++}}},rpc:async(op,p={})=>{calls.push({op,p:clone(p)});if(op==='identity')return{teacher:true};if(op==='library')return clone(library);if(op==='create_room'){current={...current,phase:'lobby',position:0,total:p.question_ids.length,question:null};return{room_id:'room1',pin:'342123'}}if(op==='state')return clone(current);if(op==='control'){if(p.action==='next'){current.position++;current.phase='question';current.question={...q('q1',current.position)};delete current.question.answer_index;delete current.question.explanation;current.deadline=new Date(Date.now()+30000).toISOString();}if(p.action==='close'){current.phase='result';current.question={...q('q1',current.position)};}if(p.action==='finish'){current.phase='finished';current.answers=[];}return{ok:true}}if(op==='save_quiz'){library.push({...clone(p),id:'newquiz'});return{id:'newquiz'}}if(op==='history')return[{id:'room1',title:'Sala de teste',phase:'finished',current_position:current.position,created_at:new Date().toISOString()}];if(op==='block'){current.teams[0].blocked=p.blocked;return{ok:true}}throw Error('Unexpected operation: '+op);}};
-function environment(url,client){const dom=new JSDOM(html,{url,runScripts:'outside-only'});const w=dom.window;w.structuredClone=structuredClone;w.__client=client;w.eval('var createGameClient=()=>window.__client;var remainingSeconds=(s)=>s?.phase==="question"?10:0;');w.confirm=()=>true;w.setInterval=()=>0;w.clearInterval=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};w.eval(source);return w;}
+function environment(url,client){const dom=new JSDOM(html,{url,runScripts:'outside-only'});const w=dom.window;w.structuredClone=structuredClone;w.__client=client;w.experience={card:()=>'',mini:()=>'',badge:()=>'',initExperience:()=>{},reactToState:()=>{}};w.eval('var createGameClient=()=>window.__client;var remainingSeconds=(s)=>s?.phase==="question"?10:0;');w.confirm=()=>true;w.setInterval=()=>0;w.clearInterval=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};w.eval(source);return w;}
 const tick=()=>new Promise(r=>setTimeout(r,0));
 async function until(fn,label){for(let i=0;i<100;i++){if(fn())return;await tick()}throw Error('Timed out: '+label)}
 const w=environment('https://radioquiz.example.invalid/?view=teacher',fake),d=w.document;
