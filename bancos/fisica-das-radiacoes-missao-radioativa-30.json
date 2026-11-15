@@ -1,0 +1,132 @@
+{
+  "disciplina": "Física das Radiações",
+  "sets": [
+    [
+      [
+        "Energia por unidade de massa depositada em material",
+        "Dose absorvida"
+      ],
+      [
+        "Unidade SI da dose absorvida",
+        "Gray"
+      ],
+      [
+        "Unidade SI da atividade de radionuclídeo",
+        "Becquerel"
+      ],
+      [
+        "Grandeza associada à desintegração nuclear por unidade de tempo",
+        "Atividade"
+      ],
+      [
+        "Intervalo para redução de atividade à metade",
+        "Meia-vida"
+      ],
+      [
+        "Grandeza que relaciona fótons por unidade de área",
+        "Fluência"
+      ],
+      [
+        "Redução exponencial da intensidade ao atravessar matéria",
+        "Atenuação"
+      ],
+      [
+        "Espessura que reduz a intensidade primária à metade",
+        "Camada semirredutora"
+      ],
+      [
+        "Coeficiente que descreve probabilidade de interação por unidade de percurso",
+        "Coeficiente de atenuação linear"
+      ],
+      [
+        "Relação geométrica da intensidade de fonte puntiforme com distância",
+        "Inverso do quadrado"
+      ]
+    ],
+    [
+      [
+        "Fótons gerados por desaceleração de elétrons no alvo",
+        "Bremsstrahlung"
+      ],
+      [
+        "Radiação de energias discretas por transições eletrônicas atômicas",
+        "Radiação característica"
+      ],
+      [
+        "Unidade de energia usada para fótons diagnósticos",
+        "Quiloelétron-volt"
+      ],
+      [
+        "Produto de corrente do tubo e tempo",
+        "mAs"
+      ],
+      [
+        "Tensão máxima aplicada ao tubo",
+        "kVp"
+      ],
+      [
+        "Quantidade de eventos registrada por intervalo de tempo",
+        "Taxa de contagem"
+      ],
+      [
+        "Distribuição estatística que descreve contagens independentes",
+        "Poisson"
+      ],
+      [
+        "Variação estatística relativa por quantidade finita de fótons",
+        "Ruído quântico"
+      ],
+      [
+        "Relação entre sinal médio e variação do ruído",
+        "Relação sinal-ruído"
+      ],
+      [
+        "Aumento da energia média após remoção de fótons menos energéticos",
+        "Endurecimento do feixe"
+      ]
+    ],
+    [
+      [
+        "Processo que reduz fótons de baixa energia do feixe",
+        "Filtração"
+      ],
+      [
+        "Fração do feixe incidente que atravessa o material",
+        "Transmissão"
+      ],
+      [
+        "Razão entre potência e tempo de fornecimento de energia",
+        "Energia"
+      ],
+      [
+        "Produto da tensão pela corrente",
+        "Potência elétrica"
+      ],
+      [
+        "Energia de um fóton proporcional à sua frequência",
+        "Relação de Planck"
+      ],
+      [
+        "Grandeza inversamente proporcional à energia do fóton",
+        "Comprimento de onda"
+      ],
+      [
+        "Energia máxima de fóton no tubo limitada pela energia do elétron",
+        "Energia de corte"
+      ],
+      [
+        "Intensidade medida por unidade de tempo de exposição",
+        "Taxa de dose"
+      ],
+      [
+        "Propriedade de fótons de maior energia atravessarem mais facilmente certos materiais",
+        "Penetração"
+      ],
+      [
+        "Material que absorve parte do feixe para proteção",
+        "Blindagem"
+      ]
+    ]
+  ],
+  "status": "revisao-editorial-inicial"
+}
