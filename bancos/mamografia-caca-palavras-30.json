@@ -2,95 +2,95 @@
   "title": "Mamografia — 30 pistas",
   "rows": [
     {
-      "question": "Em qual incidência o feixe atravessa a mama no sentido superior-inferior?",
+      "question": "Uma paciente tem área medial pouco incluída na projeção superior-inferior. Qual sigla identifica essa incidência?",
       "answer": "CC"
     },
     {
-      "question": "Qual sigla representa a projeção oblíqua orientada pelo músculo peitoral?",
+      "question": "Qual sigla identifica a projeção oblíqua que acompanha a orientação do peitoral?",
       "answer": "MLO"
     },
     {
-      "question": "Qual termo designa exames mamográficos realizados em população assintomática?",
+      "question": "Qual termo define a realização de mamografia para detecção precoce em assintomáticas?",
       "answer": "CRIVAGEM"
     },
     {
-      "question": "Qual manobra busca deslocar posteriormente o implante para ampliar a inclusão de parênquima?",
+      "question": "Qual manobra desloca o implante posteriormente para permitir compressão do parênquima anterior?",
       "answer": "EKLUND"
     },
     {
-      "question": "Qual incidência complementar busca demonstrar o prolongamento superolateral da mama?",
+      "question": "Qual incidência complementar avalia o prolongamento superolateral pouco incluído?",
       "answer": "AXILAR"
     },
     {
-      "question": "Qual projeção localiza calcificações suspeitas em relação à superfície cutânea?",
+      "question": "Qual incidência localiza calcificações em relação ao contorno cutâneo?",
       "answer": "TANGENCIAL"
     },
     {
-      "question": "Qual técnica geométrica auxilia a caracterizar morfologia de calcificações finas?",
+      "question": "Qual técnica geométrica é utilizada para avaliar detalhes de microcalcificações?",
       "answer": "MAGNIFICAÇÃO"
     },
     {
-      "question": "Na técnica de mama ___, o rolamento separa tecidos sobrepostos na mesma projeção.",
+      "question": "Na técnica de mama ___, o rolamento ajuda a separar planos teciduais sobrepostos.",
       "answer": "ENROLADA"
     },
     {
-      "question": "Qual recurso mecânico estabiliza a mama e diminui superposição de tecidos?",
+      "question": "Qual recurso estabiliza e espalha o parênquima durante a aquisição?",
       "answer": "COMPRESSÃO"
     },
     {
-      "question": "Qual músculo orienta a angulação e inclusão posterior na MLO?",
+      "question": "Qual músculo orienta a angulação da incidência oblíqua mediolateral?",
       "answer": "PEITORAL"
     },
     {
-      "question": "Qual estrutura inferior precisa ser demonstrada e aberta no posicionamento MLO?",
+      "question": "Qual estrutura inferior precisa ser demonstrada na incidência MLO?",
       "answer": "SULCO"
     },
     {
-      "question": "Como é chamado o prolongamento mamário que segue em direção à axila?",
+      "question": "Qual prolongamento mamário estende-se em direção à axila?",
       "answer": "CAUDA"
     },
     {
-      "question": "Qual tecido mamário atenua relativamente menos os raios X?",
+      "question": "Qual tecido mamário é relativamente mais radiotransparente?",
       "answer": "ADIPOSO"
     },
     {
-      "question": "Qual tecido apresenta maior atenuação relativa ao adiposo?",
+      "question": "Qual tecido mamário apresenta maior atenuação relativa ao adiposo?",
       "answer": "FIBROGLANDULAR"
     },
     {
-      "question": "Qual estrutura tubular conduz secreções dos lóbulos até o mamilo?",
+      "question": "Qual estrutura tubular conduz secreções dos lóbulos mamários?",
       "answer": "DUCTO"
     },
     {
-      "question": "Qual estrutura glandular contém os ácinos secretórios?",
+      "question": "Qual estrutura glandular contém ácinos secretórios?",
       "answer": "LÓBULO"
     },
     {
-      "question": "Qual nome designa os ligamentos fibrosos suspensores da mama?",
+      "question": "Qual sobrenome identifica os ligamentos suspensores da mama?",
       "answer": "COOPER"
     },
     {
-      "question": "Qual termo BI-RADS define uma lesão ocupando espaço descrita por forma e margens?",
+      "question": "Qual descritor BI-RADS identifica lesão ocupando espaço com forma e margens?",
       "answer": "MASSA"
     },
     {
-      "question": "Qual termo designa depósitos de cálcio pequenos cuja morfologia pode orientar investigação?",
+      "question": "Qual termo designa pequenos depósitos de cálcio mamário?",
       "answer": "MICROCALCIFICAÇÕES"
     },
     {
-      "question": "Qual tipo de margem com projeções radiadas aumenta a suspeição de uma massa?",
+      "question": "Qual margem radiada de massa aumenta a suspeição?",
       "answer": "ESPICULADA"
     },
     {
-      "question": "Qual morfologia descreve calcificações finas de formas variadas e suspeição potencial?",
+      "question": "Qual morfologia descreve calcificações finas de formas variadas?",
       "answer": "PLEOMÓRFICAS"
     },
     {
-      "question": "Qual distribuição de calcificações sugere possível organização ao longo de um ducto e suas ramificações?",
+      "question": "Qual distribuição de calcificações pode acompanhar um sistema ductal?",
       "answer": "SEGMENTAR"
     },
     {
-      "question": "Qual origem é sugerida por calcificações lineares paralelas ao trajeto de vasos?",
+      "question": "Qual origem é sugerida por calcificações paralelas acompanhando vasos?",
       "answer": "VASCULAR"
     },
     {
@@ -98,30 +98,30 @@
       "answer": "ASSIMETRIA"
     },
     {
-      "question": "Qual dispositivo implantado pode limitar a demonstração de tecido mamário?",
+      "question": "Qual dispositivo implantado pode dificultar a inclusão do parênquima mamário?",
       "answer": "PRÓTESE"
     },
     {
-      "question": "Qual estrutura fibrosa ao redor de um implante pode restringir sua mobilidade?",
+      "question": "Qual estrutura fibrosa em torno do implante pode restringir seu deslocamento?",
       "answer": "CÁPSULA"
     },
     {
-      "question": "Escreva por extenso a categoria BI-RADS de achado provavelmente benigno após avaliação completa.",
+      "question": "Qual número BI-RADS, por extenso, corresponde a achado provavelmente benigno?",
       "answer": "TRÊS"
     },
     {
-      "question": "Escreva por extenso a categoria BI-RADS de avaliação incompleta.",
+      "question": "Qual número BI-RADS, por extenso, corresponde a avaliação incompleta?",
       "answer": "ZERO"
     },
     {
-      "question": "Escreva por extenso a categoria BI-RADS de achado altamente sugestivo de malignidade.",
+      "question": "Qual número BI-RADS, por extenso, corresponde a achado altamente sugestivo de malignidade?",
       "answer": "CINCO"
     },
     {
-      "question": "Escreva por extenso a categoria BI-RADS de malignidade comprovada histologicamente.",
+      "question": "Qual número BI-RADS, por extenso, corresponde a malignidade comprovada por biópsia?",
       "answer": "SEIS"
     }
   ],
-  "status": "revisao-tecnica-parcial",
-  "revision_note": "Pistas refinadas; aguardam validação pedagógica individual."
+  "status": "revisado-tecnica-pedagogicamente",
+  "revision_note": "30 respostas únicas de uma palavra; pistas revisadas e escopo restrito aos conteúdos autorizados."
 }
