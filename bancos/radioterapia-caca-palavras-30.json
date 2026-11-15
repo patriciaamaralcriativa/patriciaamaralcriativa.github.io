@@ -1,0 +1,126 @@
+{
+  "title": "Radioterapia — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual sigla designa radioterapia de intensidade modulada?",
+      "answer": "IMRT"
+    },
+    {
+      "question": "Qual sigla designa radioterapia em arco volumétrico modulado?",
+      "answer": "VMAT"
+    },
+    {
+      "question": "Qual sigla designa radioterapia guiada por imagem?",
+      "answer": "IGRT"
+    },
+    {
+      "question": "Qual sigla designa radioterapia estereotáxica corporal?",
+      "answer": "SBRT"
+    },
+    {
+      "question": "Qual sigla designa radiocirurgia estereotáxica?",
+      "answer": "SRS"
+    },
+    {
+      "question": "Qual sigla identifica o volume tumoral macroscópico?",
+      "answer": "GTV"
+    },
+    {
+      "question": "Qual sigla identifica o volume-alvo clínico?",
+      "answer": "CTV"
+    },
+    {
+      "question": "Qual sigla identifica o volume-alvo de planejamento?",
+      "answer": "PTV"
+    },
+    {
+      "question": "Qual sigla identifica órgão de risco?",
+      "answer": "OAR"
+    },
+    {
+      "question": "Qual sigla designa histograma dose-volume?",
+      "answer": "DVH"
+    },
+    {
+      "question": "Qual sigla designa colimador multilâminas?",
+      "answer": "MLC"
+    },
+    {
+      "question": "Qual sigla designa tomografia de feixe cônico?",
+      "answer": "CBCT"
+    },
+    {
+      "question": "Qual processo define contornos anatômicos para cálculo de dose?",
+      "answer": "DELINEAMENTO"
+    },
+    {
+      "question": "Qual material aplicado à pele aumenta dose superficial em certas técnicas?",
+      "answer": "BOLUS"
+    },
+    {
+      "question": "Qual região de aumento inicial de dose ocorre em feixes de megavoltagem?",
+      "answer": "BUILDUP"
+    },
+    {
+      "question": "Qual acessório moldável imobiliza cabeça e pescoço?",
+      "answer": "MÁSCARA"
+    },
+    {
+      "question": "Qual modalidade utiliza fontes próximas ou dentro do alvo?",
+      "answer": "BRAQUITERAPIA"
+    },
+    {
+      "question": "Qual técnica entrega dose por fonte de alta taxa?",
+      "answer": "HDR"
+    },
+    {
+      "question": "Qual propriedade geométrica mede proximidade entre dose prescrita e alvo?",
+      "answer": "CONFORMIDADE"
+    },
+    {
+      "question": "Qual característica descreve uniformidade de dose dentro do alvo?",
+      "answer": "HOMOGENEIDADE"
+    },
+    {
+      "question": "Qual ponto geométrico de referência pode ser usado para alinhamento dos feixes?",
+      "answer": "ISOCENTRO"
+    },
+    {
+      "question": "Qual fenômeno fisiológico desloca tumores torácicos durante o tratamento?",
+      "answer": "RESPIRAÇÃO"
+    },
+    {
+      "question": "Qual técnica de imagem caracteriza movimento respiratório no planejamento?",
+      "answer": "TOMOGRAFIA4D"
+    },
+    {
+      "question": "Qual sigla identifica o programa de garantia de qualidade da entrega?",
+      "answer": "QA"
+    },
+    {
+      "question": "Qual procedimento modifica o plano após mudança anatômica relevante?",
+      "answer": "REPLANEJAMENTO"
+    },
+    {
+      "question": "Qual processo quantifica a dose absorvida ou entregue?",
+      "answer": "DOSIMETRIA"
+    },
+    {
+      "question": "Qual termo indica a borda de transição da intensidade do feixe?",
+      "answer": "PENUMBRA"
+    },
+    {
+      "question": "Qual efeito clínico envolve lesão de tecidos normais por radiação?",
+      "answer": "TOXICIDADE"
+    },
+    {
+      "question": "Qual conceito descreve a dose entregue em cada sessão?",
+      "answer": "FRAÇÃO"
+    },
+    {
+      "question": "Qual parâmetro indica quantas sessões compõem o tratamento?",
+      "answer": "FRACIONAMENTO"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
