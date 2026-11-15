@@ -1,0 +1,132 @@
+{
+  "disciplina": "Radiologia Odontológica",
+  "sets": [
+    [
+      [
+        "Técnica intraoral que evidencia ápices radiculares e tecidos periapicais",
+        "Periapical"
+      ],
+      [
+        "Técnica intraoral indicada para contatos proximais e cristas alveolares",
+        "Interproximal"
+      ],
+      [
+        "Técnica intraoral que abrange área ampla do arco dentário",
+        "Oclusal"
+      ],
+      [
+        "Técnica periapical que mantém receptor paralelo ao eixo longo dentário",
+        "Paralelismo"
+      ],
+      [
+        "Técnica em que o raio central é perpendicular à bissetriz geométrica",
+        "Bissetriz"
+      ],
+      [
+        "Erro de imagem que torna dentes projetados artificialmente mais curtos",
+        "Encurtamento"
+      ],
+      [
+        "Erro de imagem que torna dentes projetados artificialmente mais longos",
+        "Alongamento"
+      ],
+      [
+        "Sobreposição dos contatos proximais indica erro sobretudo de qual angulação?",
+        "Horizontal"
+      ],
+      [
+        "Projeção extraoral que registra os arcos dentários em uma imagem ampla",
+        "Panorâmica"
+      ],
+      [
+        "Região espacial em que estruturas ficam relativamente nítidas na panorâmica",
+        "Camada focal"
+      ]
+    ],
+    [
+      [
+        "Faixa radiolúcida sobre raízes superiores por língua afastada do palato",
+        "Espaço palatoglosso"
+      ],
+      [
+        "Imagem deslocada e ampliada de objeto denso na panorâmica",
+        "Imagem fantasma"
+      ],
+      [
+        "Exame cefalométrico extraoral obtido em projeção lateral",
+        "Telerradiografia lateral"
+      ],
+      [
+        "Plano de referência definido por pório e orbitário",
+        "Frankfurt"
+      ],
+      [
+        "Sistema internacional de numeração dentária por dois dígitos",
+        "FDI"
+      ],
+      [
+        "Tecido mais radiopaco da coroa dentária",
+        "Esmalte"
+      ],
+      [
+        "Revestimento radiopaco que delimita radiograficamente o alvéolo",
+        "Lâmina dura"
+      ],
+      [
+        "Linha radiolúcida entre raiz e lâmina dura",
+        "Espaço periodontal"
+      ],
+      [
+        "Cavidade central radiolúcida que contém tecido pulpar",
+        "Câmara pulpar"
+      ],
+      [
+        "Porção mineralizada entre esmalte ou cemento e polpa",
+        "Dentina"
+      ]
+    ],
+    [
+      [
+        "Estrutura que reveste externamente a raiz dentária",
+        "Cemento"
+      ],
+      [
+        "Ponto de união entre coroa e raiz anatômicas",
+        "Junção amelocementária"
+      ],
+      [
+        "Parte do dente que se projeta no interior do alvéolo",
+        "Raiz"
+      ],
+      [
+        "Porção coronária recoberta por esmalte",
+        "Coroa"
+      ],
+      [
+        "Estrutura óssea que sustenta as raízes dentárias",
+        "Osso alveolar"
+      ],
+      [
+        "Técnica volumétrica com feixe cônico para avaliação maxilofacial",
+        "TCFC"
+      ],
+      [
+        "Elemento do posicionador que auxilia alinhamento do feixe",
+        "Anel localizador"
+      ],
+      [
+        "Princípio que exige indicação clínica antes da exposição",
+        "Justificação"
+      ],
+      [
+        "Princípio que busca dose adequada à finalidade diagnóstica",
+        "Otimização"
+      ],
+      [
+        "Recurso de restrição geométrica da área irradiada",
+        "Colimação"
+      ]
+    ]
+  ],
+  "status": "rascunho-para-revisao"
+}
