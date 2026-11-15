@@ -51,7 +51,7 @@ for(const [round,id] of [[0,'protectionRound1'],[1,'protectionRound2']]){
  }));
 }
 
-const disciplinasPublicadas=[['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial']];
+const disciplinasPublicadas=[['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial'],['formacao-da-imagem','Formação da Imagem Radiográfica']];
 const controleDisciplinas=document.createElement('div');controleDisciplinas.className='toolbar';
 for(const [slug,nome] of disciplinasPublicadas){for(let rodada=0;rodada<2;rodada++){const botao=document.createElement('button');botao.type='button';botao.className='secondary';botao.textContent=nome+' — rodada '+(rodada+1);botao.addEventListener('click',()=>safe(async()=>{const resp=await fetch('/bancos/'+slug+'-caca-palavras-30.json',{cache:'no-store'});if(!resp.ok)throw Error('Banco indisponível');const dados=await resp.json();if(!Array.isArray(dados.rows)||dados.rows.length!==30)throw Error('Banco incompleto');const q={title:nome+' — rodada '+(rodada+1),level:'medio',rows:validate(dados.rows.slice(rodada*15,(rodada+1)*15))};setEditor(q);start(q);}));controleDisciplinas.appendChild(botao);}}
 document.querySelector('#editor .toolbar')?.before(controleDisciplinas);
