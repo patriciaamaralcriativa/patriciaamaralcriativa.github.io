@@ -1,0 +1,126 @@
+{
+  "title": "Proteção Radiológica",
+  "rows": [
+    {
+      "question": "Princípio que exige avaliar benefício e risco antes de irradiar",
+      "answer": "JUSTIFICACAO"
+    },
+    {
+      "question": "Princípio de reduzir exposições desnecessárias mantendo qualidade adequada",
+      "answer": "OTIMIZACAO"
+    },
+    {
+      "question": "Restrição física do campo irradiado",
+      "answer": "COLIMACAO"
+    },
+    {
+      "question": "Grandeza de permanência sob exposição",
+      "answer": "TEMPO"
+    },
+    {
+      "question": "Separação espacial que reduz exposição externa",
+      "answer": "DISTANCIA"
+    },
+    {
+      "question": "Proteção que atenua radiação incidente",
+      "answer": "BLINDAGEM"
+    },
+    {
+      "question": "Unidade SI de dose absorvida",
+      "answer": "GRAY"
+    },
+    {
+      "question": "Unidade SI de dose equivalente",
+      "answer": "SIEVERT"
+    },
+    {
+      "question": "Unidade SI de atividade",
+      "answer": "BECQUEREL"
+    },
+    {
+      "question": "Equipamento de monitoramento individual",
+      "answer": "DOSIMETRO"
+    },
+    {
+      "question": "Radiação desviada ao interagir com matéria",
+      "answer": "ESPALHAMENTO"
+    },
+    {
+      "question": "Radiação emitida fora do feixe útil pelo conjunto do tubo",
+      "answer": "FUGA"
+    },
+    {
+      "question": "Proteção estrutural contra o feixe primário",
+      "answer": "BARREIRA"
+    },
+    {
+      "question": "Avaliação de doses ambientais em instalação",
+      "answer": "LEVANTAMENTO"
+    },
+    {
+      "question": "Verificação de desempenho de equipamento",
+      "answer": "QUALIDADE"
+    },
+    {
+      "question": "Análise sistemática de exames descartados",
+      "answer": "REJEICAO"
+    },
+    {
+      "question": "Repetição de exposição após erro técnico",
+      "answer": "REPETICAO"
+    },
+    {
+      "question": "Aumento gradual e desnecessário da exposição digital",
+      "answer": "DOSECREEP"
+    },
+    {
+      "question": "Pessoa que auxilia paciente durante aquisição",
+      "answer": "ACOMPANHANTE"
+    },
+    {
+      "question": "Aviso visual de risco de radiação",
+      "answer": "SINALIZACAO"
+    },
+    {
+      "question": "Processo de tornar uma exposição clinicamente aceitável",
+      "answer": "JUSTIFICAR"
+    },
+    {
+      "question": "Medida que acompanha exposição ocupacional",
+      "answer": "MONITORACAO"
+    },
+    {
+      "question": "Redução da intensidade de radiação na matéria",
+      "answer": "ATENUACAO"
+    },
+    {
+      "question": "Radiação dirigida à anatomia examinada",
+      "answer": "FEIXE"
+    },
+    {
+      "question": "Componente físico que limita a abertura do campo",
+      "answer": "COLIMADOR"
+    },
+    {
+      "question": "Verificação após reparo do equipamento",
+      "answer": "INSPECAO"
+    },
+    {
+      "question": "Relação matemática da intensidade com a distância",
+      "answer": "QUADRADO"
+    },
+    {
+      "question": "Proteção adicional usada em situações indicadas",
+      "answer": "AVENTAL"
+    },
+    {
+      "question": "Profissional responsável por cumprir procedimentos de segurança",
+      "answer": "OPERADOR"
+    },
+    {
+      "question": "Ação de reduzir erro antes de nova aquisição",
+      "answer": "CORRECAO"
+    }
+  ],
+  "status": "revisao-editorial-inicial"
+}
