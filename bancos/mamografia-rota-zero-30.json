@@ -159,15 +159,15 @@
     },
     {
       "titulo": "MAMOGRAFIA 13",
-      "pergunta": "Na avaliação de uma massa mamária, qual característica descreve contorno e não densidade?",
+      "pergunta": "Na descrição BI-RADS de uma massa, qual dos termos abaixo corresponde a uma característica de margem, e não de forma ou densidade?",
       "alternativas": [
         "Densidade alta",
-        "Margem espiculada",
+        "Forma irregular",
         "Margem microlobulada",
-        "Densidade igual"
+        "Forma oval"
       ],
       "correta": 2,
-      "explicacao": "Margem microlobulada descreve o contorno; densidade descreve atenuação. A questão exige distinguir descritores diferentes.",
+      "explicacao": "Margem microlobulada descreve o contorno de uma massa; forma oval e irregular são descritores de forma, enquanto densidade alta é descritor de atenuação.",
       "dificuldade": "normal"
     },
     {
