@@ -1,0 +1,131 @@
+{
+  "disciplina": "Radiologia Digital",
+  "sets": [
+    [
+      [
+        "No sistema CR, qual receptor armazena a imagem latente?",
+        "Placa de fósforo fotoestimulável"
+      ],
+      [
+        "No CR, qual etapa libera o sinal armazenado na placa?",
+        "Varredura a laser"
+      ],
+      [
+        "Após a leitura do CR, por que se apaga a placa?",
+        "Remover sinal residual"
+      ],
+      [
+        "Na DR indireta, qual componente transforma raios X em luz?",
+        "Cintilador"
+      ],
+      [
+        "Na DR direta com selênio amorfo, qual transformação ocorre primeiro?",
+        "Raios X em cargas elétricas"
+      ],
+      [
+        "Em detectores indiretos, qual material cintilador é frequentemente utilizado?",
+        "Iodeto de césio"
+      ],
+      [
+        "Qual elemento converte luz do cintilador em sinal elétrico?",
+        "Fotodiodo"
+      ],
+      [
+        "O que representa a matriz de imagem digital?",
+        "Arranjo de pixels"
+      ],
+      [
+        "Qual propriedade indica o tamanho da região representada por um pixel?",
+        "Espaçamento de pixel"
+      ],
+      [
+        "Qual processo transforma sinal analógico em valores digitais?",
+        "Conversão analógico-digital"
+      ]
+    ],
+    [
+      [
+        "Qual parâmetro descreve a quantidade de níveis de cinza codificáveis?",
+        "Profundidade de bits"
+      ],
+      [
+        "Qual ferramenta altera a amplitude dos valores de cinza exibidos?",
+        "Largura de janela"
+      ],
+      [
+        "Qual ferramenta desloca o centro da faixa de valores exibidos?",
+        "Nível de janela"
+      ],
+      [
+        "Qual sistema armazena e distribui imagens médicas?",
+        "PACS"
+      ],
+      [
+        "Qual padrão organiza comunicação e arquivos de imagens médicas?",
+        "DICOM"
+      ],
+      [
+        "Qual sistema gerencia fluxos administrativos e informações radiológicas?",
+        "RIS"
+      ],
+      [
+        "Qual propriedade define a capacidade de distinguir detalhes pequenos?",
+        "Resolução espacial"
+      ],
+      [
+        "Qual propriedade define a capacidade de distinguir pequenas diferenças de sinal?",
+        "Resolução de contraste"
+      ],
+      [
+        "Qual fenômeno aparece como granulação em imagens com poucos fótons detectados?",
+        "Ruído quântico"
+      ],
+      [
+        "Qual prática reduz a exposição fora da anatomia necessária?",
+        "Colimação adequada"
+      ]
+    ],
+    [
+      [
+        "Qual conceito descreve aumento gradual de exposição sem necessidade clínica?",
+        "Dose creep"
+      ],
+      [
+        "Qual recurso automático pode mascarar visualmente superexposição?",
+        "Reescalonamento da imagem"
+      ],
+      [
+        "Qual recurso auxilia no controle da exposição recebida pelo detector?",
+        "Índice de exposição"
+      ],
+      [
+        "Qual cuidado é necessário ao comparar índices de exposição de fabricantes?",
+        "Considerar definições e calibração"
+      ],
+      [
+        "Qual mecanismo pode gerar imagem fantasma por sinal anterior no detector?",
+        "Persistência de imagem"
+      ],
+      [
+        "Qual artefato pode surgir por defeito de linha ou coluna do detector?",
+        "Faixa linear"
+      ],
+      [
+        "Qual procedimento verifica uniformidade e funcionamento do detector?",
+        "Controle de qualidade"
+      ],
+      [
+        "Qual cuidado deve anteceder a aplicação de recorte eletrônico?",
+        "Colimação física correta"
+      ],
+      [
+        "Qual recurso permite visualizar diferenças de tons sem nova exposição?",
+        "Ajuste de janela"
+      ],
+      [
+        "Qual prática evita atribuir ao pós-processamento a correção de erro de aquisição?",
+        "Revisar posicionamento e técnica"
+      ]
+    ]
+  ]
+}
