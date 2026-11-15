@@ -2,8 +2,8 @@
   "disciplina": "Física das Radiações",
   "questoes": [
     {
-      "titulo": "Decisão técnica 1",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um tubo opera a 80 kVp. Qual é a energia máxima possível de um fóton de bremsstrahlung nesse feixe?",
+      "titulo": "Problema aplicado 1",
+      "pergunta": "Um equipamento passa de 70 para 90 kVp. Qual grandeza do espectro tem limite superior diretamente relacionado à tensão aplicada?",
       "alternativas": [
         "40 keV",
         "80 keV",
@@ -15,8 +15,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 2",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Uma corrente de 250 mA atua por 0,08 s. Qual mAs é produzido?",
+      "titulo": "Problema aplicado 2",
+      "pergunta": "Um protocolo fornece 240 mA durante 0,125 s. Qual é o produto corrente-tempo?",
       "alternativas": [
         "31,25 mAs",
         "200 mAs",
@@ -28,8 +28,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 3",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Um protocolo mantém 30 mAs ao passar de 150 para 300 mA. O tempo muda de 0,20 s para:",
+      "titulo": "Problema aplicado 3",
+      "pergunta": "Para manter 24 mAs, o operador troca 120 mA por 300 mA. Qual tempo deve selecionar?",
       "alternativas": [
         "0,10 s",
         "0,05 s",
@@ -41,8 +41,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 4",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um feixe de 100 unidades atravessa uma camada semiespessura e depois outra idêntica. Qual intensidade permanece?",
+      "titulo": "Problema aplicado 4",
+      "pergunta": "Um feixe atravessa duas camadas semirredutoras sucessivas. Qual fração da intensidade primária resta?",
       "alternativas": [
         "50 unidades",
         "75 unidades",
@@ -54,8 +54,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 5",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Uma fonte puntiforme fornece 80 µGy/h a 1 m em condições ideais. A 2 m, a taxa será aproximadamente:",
+      "titulo": "Problema aplicado 5",
+      "pergunta": "Em condições de fonte puntiforme e campo livre, qual mudança é esperada ao dobrar a distância?",
       "alternativas": [
         "40 µGy/h",
         "160 µGy/h",
@@ -67,8 +67,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 6",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Uma fonte pontual tem taxa de 36 µSv/h a 2 m. A 3 m, em campo livre, qual valor aproximado?",
+      "titulo": "Problema aplicado 6",
+      "pergunta": "Uma fonte pontual fornece taxa de 36 µSv/h a 2 m. Qual taxa aproximada a 3 m?",
       "alternativas": [
         "16 µSv/h",
         "24 µSv/h",
@@ -80,8 +80,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 7",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um detector registra 1200 contagens em 4 minutos. Qual taxa média?",
+      "titulo": "Problema aplicado 7",
+      "pergunta": "Um contador registra 1200 eventos em quatro minutos. Qual é a taxa média por minuto?",
       "alternativas": [
         "4800 contagens/min",
         "200 contagens/min",
@@ -93,8 +93,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 8",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um radionuclídeo com meia-vida de 6 h inicia com 800 MBq. Após 18 h restam:",
+      "titulo": "Problema aplicado 8",
+      "pergunta": "Uma amostra de 800 MBq tem meia-vida física de 6 h. Qual atividade resta após 18 h?",
       "alternativas": [
         "200 MBq",
         "100 MBq",
@@ -106,8 +106,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 9",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Um material possui coeficiente de atenuação linear µ=0,2 cm⁻¹. Qual espessura semirredutora aproximada?",
+      "titulo": "Problema aplicado 9",
+      "pergunta": "Um material apresenta coeficiente linear de atenuação de 0,2 cm⁻¹. Qual é sua camada semirredutora aproximada?",
       "alternativas": [
         "3,47 cm",
         "0,14 cm",
@@ -119,8 +119,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 10",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Se o número de fótons detectados quadruplica e predomina ruído quântico, a relação sinal-ruído melhora por fator aproximado de:",
+      "titulo": "Problema aplicado 10",
+      "pergunta": "Se a contagem média de fótons detectados quadruplica e domina ruído quântico, como varia a relação sinal-ruído?",
       "alternativas": [
         "4",
         "8",
@@ -132,8 +132,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 11",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um detector registra 400 fótons em média por elemento. O desvio-padrão quântico esperado é próximo de:",
+      "titulo": "Problema aplicado 11",
+      "pergunta": "Um elemento do detector recebe, em média, 400 fótons. Qual desvio-padrão quântico é esperado?",
       "alternativas": [
         "40",
         "20",
@@ -145,8 +145,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 12",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Qual grandeza expressa energia depositada por unidade de massa?",
+      "titulo": "Problema aplicado 12",
+      "pergunta": "Um relatório registra energia depositada em uma massa de tecido. Qual grandeza física descreve essa razão?",
       "alternativas": [
         "Atividade",
         "Fluência",
@@ -158,8 +158,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 13",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um tecido absorve 0,02 J em 0,5 kg. Qual dose absorvida média?",
+      "titulo": "Problema aplicado 13",
+      "pergunta": "Uma amostra de 0,5 kg absorve 0,02 J. Qual dose absorvida média?",
       "alternativas": [
         "0,01 Gy",
         "0,25 Gy",
@@ -171,8 +171,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 14",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um radionuclídeo apresenta 1 MBq. Isso corresponde a quantas desintegrações por segundo?",
+      "titulo": "Problema aplicado 14",
+      "pergunta": "Um radionuclídeo apresenta atividade de 1 MBq. Quantas transformações por segundo isso representa?",
       "alternativas": [
         "1 milhão",
         "Mil",
@@ -184,8 +184,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 15",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Ao elevar kVp mantendo os demais fatores, qual efeito físico é mais esperado no espectro?",
+      "titulo": "Problema aplicado 15",
+      "pergunta": "Um técnico aumenta kVp sem mudar o material do alvo. Qual tendência ocorre no limite superior do espectro de raios X?",
       "alternativas": [
         "Mesma energia máxima com apenas mais fótons",
         "Maior energia máxima e alteração da distribuição de energias",
@@ -197,8 +197,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 16",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Uma filtração adicional remove preferencialmente fótons de baixa energia. Qual efeito é esperado?",
+      "titulo": "Problema aplicado 16",
+      "pergunta": "Uma filtragem adicional remove preferencialmente fótons de baixa energia. Como tende a mudar a energia média do feixe transmitido?",
       "alternativas": [
         "Redução da energia média por seleção dos mais energéticos",
         "Aumento obrigatório do número total de fótons transmitidos",
@@ -210,8 +210,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 17",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: O número de fótons incidentes é 1000 e o transmitido é 300. Qual fração transmitida?",
+      "titulo": "Problema aplicado 17",
+      "pergunta": "Em um experimento, 1000 fótons atingem a barreira e 300 a atravessam. Qual é a transmissão?",
       "alternativas": [
         "0,30",
         "0,70",
@@ -223,8 +223,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 18",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Um feixe tem transmissão de 40% em uma barreira. Qual fração foi removida do feixe primário?",
+      "titulo": "Problema aplicado 18",
+      "pergunta": "Uma barreira permite passar 40% do feixe primário. Que fração foi atenuada?",
       "alternativas": [
         "40%",
         "20%",
@@ -236,8 +236,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 19",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Dois protocolos produzem 10 e 40 mAs, com kVp e condições constantes. Qual razão nominal de quantidade de radiação produzida?",
+      "titulo": "Problema aplicado 19",
+      "pergunta": "Dois protocolos utilizam 10 e 40 mAs sob o mesmo kVp. Qual é a razão aproximada de quantidade de radiação produzida?",
       "alternativas": [
         "1:2",
         "4:1",
@@ -249,8 +249,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 20",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Uma fonte tem atividade inicial de 640 MBq e meia-vida de 2 h. Após 6 h sua atividade é:",
+      "titulo": "Problema aplicado 20",
+      "pergunta": "Uma fonte de 640 MBq passa por três meias-vidas. Qual é sua atividade remanescente?",
       "alternativas": [
         "160 MBq",
         "80 MBq",
@@ -262,8 +262,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 21",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Em um circuito, a tensão é 100 V e a corrente 2 A. Qual potência elétrica?",
+      "titulo": "Problema aplicado 21",
+      "pergunta": "Um circuito mantém 100 V e 2 A. Qual é sua potência elétrica?",
       "alternativas": [
         "50 W",
         "102 W",
@@ -275,8 +275,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 22",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um aparelho fornece 120 kV e 0,2 A ao tubo por 0,1 s. Qual energia elétrica nominal entregue nesse intervalo?",
+      "titulo": "Problema aplicado 22",
+      "pergunta": "Um tubo recebe 120 kV e 0,2 A por 0,1 s. Qual energia elétrica nominal foi fornecida?",
       "alternativas": [
         "2400 J",
         "240 J",
@@ -288,8 +288,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 23",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um feixe atravessa três camadas semirredutoras. Qual fração primária permanece?",
+      "titulo": "Problema aplicado 23",
+      "pergunta": "Um feixe atravessa três camadas semirredutoras. Que fração primária resta?",
       "alternativas": [
         "1/3",
         "1/6",
@@ -301,8 +301,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 24",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Uma imagem apresenta maior ruído após redução da exposição, mantendo processamento. Qual mecanismo físico pode explicar?",
+      "titulo": "Problema aplicado 24",
+      "pergunta": "Um detector recebe menos fótons por pixel após redução da exposição. Qual efeito estatístico tende a aumentar relativamente?",
       "alternativas": [
         "Maior número de fótons e menor ruído quântico",
         "Menor número de fótons detectados e maior flutuação relativa",
@@ -314,8 +314,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 25",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um feixe de 60 keV tem comprimento de onda menor que outro de 30 keV porque:",
+      "titulo": "Problema aplicado 25",
+      "pergunta": "Dois fótons têm energias de 60 e 30 keV. Qual relação existe entre suas energias e comprimentos de onda?",
       "alternativas": [
         "Energia e comprimento de onda são inversamente proporcionais",
         "A velocidade dos fótons de 60 keV é duas vezes maior",
@@ -327,8 +327,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 26",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um elétron é acelerado por 70 kV e perde toda a energia cinética em uma interação. Qual limite superior de energia de um único fóton gerado?",
+      "titulo": "Problema aplicado 26",
+      "pergunta": "Um elétron acelerado por 70 kV converte toda sua energia em um fóton. Qual limite máximo de energia do fóton?",
       "alternativas": [
         "140 keV",
         "35 keV",
@@ -340,8 +340,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 27",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Uma taxa de dose de 12 µSv/h permanece constante por 45 min. Qual dose acumulada aproximada?",
+      "titulo": "Problema aplicado 27",
+      "pergunta": "Uma pessoa permanece 45 minutos em local de taxa constante de 12 µSv/h. Qual dose acumulada?",
       "alternativas": [
         "16 µSv",
         "27 µSv",
@@ -353,8 +353,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 28",
-      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: A atividade de uma fonte cai de 400 para 100 MBq em 10 dias. Qual meia-vida física?",
+      "titulo": "Problema aplicado 28",
+      "pergunta": "A atividade de uma fonte cai de 400 para 100 MBq em dez dias. Qual é sua meia-vida?",
       "alternativas": [
         "10 dias",
         "5 dias",
@@ -366,8 +366,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 29",
-      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Em uma região com 900 contagens e outra com 100, qual é a razão de contagens entre as regiões?",
+      "titulo": "Problema aplicado 29",
+      "pergunta": "Uma região do detector recebe 900 contagens e outra 100. Qual razão entre as contagens?",
       "alternativas": [
         "3:1",
         "1:9",
@@ -379,8 +379,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Decisão técnica 30",
-      "pergunta": "Na revisão de um exame, surge a questão técnica: Em um detector, uma região recebe 1600 fótons e outra 400. Se o ruído for quântico, a razão entre desvios-padrão é:",
+      "titulo": "Problema aplicado 30",
+      "pergunta": "Duas regiões recebem 1600 e 400 fótons. Se o ruído é quântico, qual a razão entre os desvios-padrão?",
       "alternativas": [
         "2:1",
         "4:1",
@@ -392,5 +392,5 @@
       "dificuldade": "dificil"
     }
   ],
-  "status": "rascunho-questoes-sobrepostas-ao-radioquiz-revisao-obrigatoria"
+  "status": "30-problemas-reformulados-pendente-originalidade-e-distratores"
 }
