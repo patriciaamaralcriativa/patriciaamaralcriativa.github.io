@@ -1,0 +1,427 @@
+{
+  "title": "Medicina Nuclear — RADIOQUIZ",
+  "subject": "Medicina Nuclear",
+  "questions": [
+    {
+      "prompt": "Em uma cintilografia óssea com 99mTc-fosfonato, a captação focal aumentada indica principalmente:",
+      "options": [
+        "Aumento local da atividade osteoblástica e perfusão",
+        "Diagnóstico específico de metástase óssea",
+        "Presença obrigatória de fratura aguda",
+        "Redução do remodelamento ósseo"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Aumento local da atividade osteoblástica e perfusão.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Em um estudo renal dinâmico, a fase inicial de perfusão deve ser interpretada considerando:",
+      "options": [
+        "Somente o tamanho renal na imagem estática",
+        "Chegada vascular do traçador aos rins",
+        "Exclusivamente a excreção vesical tardia",
+        "Apenas a meia-vida física do radionuclídeo"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Chegada vascular do traçador aos rins.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Na avaliação de obstrução urinária por renografia diurética, a interpretação adequada exige:",
+      "options": [
+        "Somente a atividade acumulada na bexiga",
+        "Exclusivamente o valor máximo de contagens",
+        "Curvas, imagens, função renal e condições de hidratação",
+        "Apenas o tempo de pico isolado"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Curvas, imagens, função renal e condições de hidratação.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Em um exame SPECT, a principal vantagem da aquisição em múltiplas projeções é:",
+      "options": [
+        "Medir diretamente a dose absorvida em cada órgão",
+        "Eliminar a necessidade de correção de atenuação",
+        "Substituir a colimação por coincidência",
+        "Reconstruir a distribuição tridimensional da atividade"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Reconstruir a distribuição tridimensional da atividade.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A imagem PET é formada principalmente pela detecção de:",
+      "options": [
+        "Pares de fótons de aniquilação em coincidência",
+        "Fótons únicos selecionados por colimador paralelo",
+        "Partículas beta diretamente no cristal",
+        "Elétrons Auger detectados externamente"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Pares de fótons de aniquilação em coincidência.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A energia de cada fóton resultante da aniquilação pósitron-elétron é aproximadamente:",
+      "options": [
+        "159 keV",
+        "511 keV",
+        "140 keV",
+        "364 keV"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: 511 keV.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Na PET com 18F-FDG, hipercaptação pode ocorrer também em:",
+      "options": [
+        "Exclusivamente tecidos com ausência de perfusão",
+        "Somente lesões com necrose completa",
+        "Processos inflamatórios com elevado metabolismo glicolítico",
+        "Apenas tumores malignos confirmados"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Processos inflamatórios com elevado metabolismo glicolítico.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A captação fisiológica cerebral de 18F-FDG é explicada principalmente por:",
+      "options": [
+        "Ausência de metabolismo energético cerebral",
+        "Excreção predominante do traçador pela bile",
+        "Ligação específica ao cálcio ósseo",
+        "Alto consumo de glicose pelo tecido nervoso"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Alto consumo de glicose pelo tecido nervoso.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Na gama-câmara, o colimador de furos paralelos tem como função principal:",
+      "options": [
+        "Selecionar a direção de incidência dos fótons",
+        "Aumentar a energia dos fótons detectados",
+        "Converter radiação gama em luz",
+        "Determinar a meia-vida biológica"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Selecionar a direção de incidência dos fótons.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Uma troca inadequada de colimador pode resultar em:",
+      "options": [
+        "Eliminação de espalhamento no paciente",
+        "Perda de resolução ou penetração septal conforme energia",
+        "Mudança da meia-vida física do radiofármaco",
+        "Alteração da identidade química do traçador"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Perda de resolução ou penetração septal conforme energia.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "O cristal cintilador da gama-câmara tem como função:",
+      "options": [
+        "Bloquear a emissão de pósitrons no paciente",
+        "Substituir o circuito de posicionamento",
+        "Converter energia dos fótons incidentes em luz",
+        "Emitir os fótons gama administrados"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Converter energia dos fótons incidentes em luz.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A janela energética em SPECT é utilizada para:",
+      "options": [
+        "Determinar diretamente a atividade injetada",
+        "Corrigir integralmente o movimento do paciente",
+        "Eliminar a atenuação por tecidos profundos",
+        "Selecionar eventos próximos ao fotopico do radionuclídeo"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Selecionar eventos próximos ao fotopico do radionuclídeo.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Uma janela energética excessivamente ampla pode:",
+      "options": [
+        "Aumentar a contribuição de fótons espalhados",
+        "Eliminar todos os eventos Compton",
+        "Reduzir a sensibilidade a zero necessariamente",
+        "Melhorar sempre a resolução espacial"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Aumentar a contribuição de fótons espalhados.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "O teste de uniformidade da gama-câmara busca identificar:",
+      "options": [
+        "Exclusivamente a atividade residual da seringa",
+        "Variações não esperadas na resposta do campo de visão",
+        "Somente a concentração do radiofármaco",
+        "A distribuição anatômica do paciente"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Variações não esperadas na resposta do campo de visão.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "O controle de centro de rotação em SPECT é importante porque erros podem:",
+      "options": [
+        "Modificar a meia-vida efetiva do paciente",
+        "Impedir a emissão de fótons gama",
+        "Gerar distorções e artefatos na reconstrução",
+        "Alterar a energia emitida pelo radionuclídeo"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Gerar distorções e artefatos na reconstrução.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A correção de atenuação em SPECT/PET procura compensar:",
+      "options": [
+        "Aumento espontâneo da atividade administrada",
+        "Degradação química obrigatória do traçador",
+        "Excesso de resolução do detector",
+        "Perda de fótons por interação com tecidos"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Perda de fótons por interação com tecidos.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "O registro incorreto entre CT e PET pode provocar:",
+      "options": [
+        "Erros de localização e artefatos de correção de atenuação",
+        "Aumento real do metabolismo celular",
+        "Mudança da energia de aniquilação",
+        "Redução da meia-vida física do 18F"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Erros de localização e artefatos de correção de atenuação.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A meia-vida efetiva de um radiofármaco no organismo depende de:",
+      "options": [
+        "Exclusivamente do volume de injeção",
+        "Decaimento físico e eliminação biológica",
+        "Apenas da meia-vida física",
+        "Somente da atividade inicial da seringa"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Decaimento físico e eliminação biológica.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Se o radionuclídeo é eliminado biologicamente, a meia-vida efetiva será:",
+      "options": [
+        "Independente da meia-vida biológica",
+        "Igual ao dobro da meia-vida física",
+        "Menor ou igual à meia-vida física",
+        "Sempre maior que a meia-vida física"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Menor ou igual à meia-vida física.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "O tecnécio-99m é amplamente usado em diagnóstico por:",
+      "options": [
+        "Emissão alfa predominante para imagem externa",
+        "Meia-vida física de vários anos",
+        "Produção exclusiva de pares de aniquilação",
+        "Emissão gama adequada à detecção e meia-vida física relativamente curta"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Emissão gama adequada à detecção e meia-vida física relativamente curta.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Na eluição de gerador 99Mo/99mTc, o produto usualmente coletado é:",
+      "options": [
+        "Pertecnetato de sódio contendo 99mTc",
+        "Iodeto de sódio contendo 131I",
+        "Fluordesoxiglicose marcada com 18F",
+        "Cloreto de tálio contendo 201Tl"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Pertecnetato de sódio contendo 99mTc.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A verificação de pureza radionuclídica do eluato do gerador busca detectar:",
+      "options": [
+        "Exclusivamente partículas visíveis",
+        "Contaminação por 99Mo acima do limite aceitável",
+        "Somente alterações do pH",
+        "Apenas o volume do eluato"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Contaminação por 99Mo acima do limite aceitável.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A pureza radioquímica de um radiofármaco indica:",
+      "options": [
+        "Energia máxima dos fótons emitidos",
+        "Tempo de aquisição recomendado",
+        "Fração da atividade na forma química desejada",
+        "Ausência absoluta de qualquer microrganismo"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Fração da atividade na forma química desejada.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Uma marcação radioquímica inadequada pode resultar em:",
+      "options": [
+        "Aumento automático da resolução do sistema",
+        "Redução obrigatória da atividade injetada",
+        "Correção espontânea do exame por software",
+        "Biodistribuição não esperada e prejuízo diagnóstico"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Biodistribuição não esperada e prejuízo diagnóstico.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Na cintilografia de tireoide, o padrão de captação deve ser interpretado com:",
+      "options": [
+        "História clínica, função tireoidiana e possível interferência medicamentosa",
+        "Apenas a cor da escala de imagem",
+        "Somente a distância entre paciente e detector",
+        "Exclusivamente a idade do equipamento"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: História clínica, função tireoidiana e possível interferência medicamentosa.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "No exame de perfusão miocárdica, a comparação estresse-repouso auxilia a distinguir:",
+      "options": [
+        "Apenas a concentração plasmática de glicose",
+        "Defeitos reversíveis e persistentes de perfusão",
+        "Somente alterações da frequência cardíaca",
+        "Exclusivamente o volume ventricular anatômico"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Defeitos reversíveis e persistentes de perfusão.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "A aquisição gated-SPECT permite avaliar adicionalmente:",
+      "options": [
+        "Somente a anatomia coronariana luminal",
+        "Exclusivamente o fluxo coronariano absoluto",
+        "Movimento parietal e função ventricular",
+        "Apenas a concentração sérica de troponina"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Movimento parietal e função ventricular.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "Em PET, o efeito de volume parcial tende a:",
+      "options": [
+        "Aumentar sempre o SUV em lesões pequenas",
+        "Eliminar a necessidade de calibração cruzada",
+        "Produzir apenas artefatos por movimento",
+        "Subestimar atividade em estruturas pequenas em relação à resolução"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Subestimar atividade em estruturas pequenas em relação à resolução.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "O SUV em PET deve ser interpretado com cautela porque é influenciado por:",
+      "options": [
+        "Tempo pós-injeção, glicemia, técnica e reconstrução",
+        "Apenas pelo nome comercial do detector",
+        "Somente pela posição da mesa no hospital",
+        "Exclusivamente pelo número de imagens exportadas"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Tempo pós-injeção, glicemia, técnica e reconstrução.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    },
+    {
+      "prompt": "No extravasamento de um radiofármaco durante a injeção, a conduta técnica adequada inclui:",
+      "options": [
+        "Excluir o registro para evitar viés",
+        "Registrar o evento e avaliar impacto na biodistribuição e quantificação",
+        "Ignorar o local se a aquisição puder iniciar",
+        "Aumentar automaticamente a atividade sem avaliação"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Registrar o evento e avaliar impacto na biodistribuição e quantificação.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Medicina Nuclear"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
