@@ -1,0 +1,457 @@
+{
+  "title": "Radiologia Odontológica — RADIOQUIZ",
+  "subject": "Radiologia Odontológica",
+  "questions": [
+    {
+      "prompt": "Na técnica periapical do paralelismo, o receptor deve permanecer em qual relação com o longo eixo do dente?",
+      "options": [
+        "Tangencial",
+        "Paralelo",
+        "Perpendicular",
+        "Oblíquo"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Paralelo.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na técnica da bissetriz, o raio central é dirigido perpendicularmente a qual referência?",
+      "options": [
+        "Plano oclusal",
+        "Superfície do receptor",
+        "Bissetriz do ângulo dente-receptor",
+        "Longo eixo do dente"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Bissetriz do ângulo dente-receptor.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Em uma periapical com alongamento, qual erro geométrico é mais provável?",
+      "options": [
+        "Angulação vertical excessiva",
+        "Centralização horizontal perfeita",
+        "Receptor excessivamente apical",
+        "Angulação vertical insuficiente"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Angulação vertical insuficiente.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Em uma periapical com encurtamento, qual erro geométrico é mais provável?",
+      "options": [
+        "Angulação vertical excessiva",
+        "Angulação vertical insuficiente",
+        "Aumento da distância foco-receptor",
+        "Redução da exposição"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Angulação vertical excessiva.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na interproximal, qual ajuste é fundamental para reduzir sobreposição dos contatos?",
+      "options": [
+        "Alteração do tempo de exposição",
+        "Angulação horizontal",
+        "Angulação vertical isoladamente",
+        "Aumento da distância objeto-receptor"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Angulação horizontal.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Para avaliar simultaneamente coroas posteriores e cristas alveolares, qual técnica intraoral é apropriada?",
+      "options": [
+        "Oclusal",
+        "Telerradiografia",
+        "Interproximal",
+        "Periapical"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Interproximal.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Para examinar a região periapical de um incisivo, qual técnica intraoral é mais indicada?",
+      "options": [
+        "Interproximal",
+        "Panorâmica isolada",
+        "Telerradiografia lateral",
+        "Periapical"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Periapical.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual técnica intraoral é particularmente útil para observar uma área ampla do arco em projeção oclusal?",
+      "options": [
+        "Oclusal",
+        "Interproximal",
+        "Periapical de paralelismo",
+        "Telerradiografia"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Oclusal.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na panorâmica, o posicionamento fora da camada focal tende a produzir qual alteração?",
+      "options": [
+        "Eliminação de sobreposições",
+        "Perda de nitidez e distorção",
+        "Aumento uniforme da resolução",
+        "Ausência de magnificação"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Perda de nitidez e distorção.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na panorâmica, o paciente muito à frente da camada focal tende a apresentar dentes anteriores como?",
+      "options": [
+        "Com dimensões invariáveis",
+        "Aumentados apenas verticalmente",
+        "Estreitos e borrados",
+        "Largos e nítidos"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Estreitos e borrados.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na panorâmica, o paciente muito atrás da camada focal tende a apresentar dentes anteriores como?",
+      "options": [
+        "Estreitos e nítidos",
+        "Sem distorção horizontal",
+        "Apenas mais radiopacos",
+        "Largos e borrados"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Largos e borrados.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na panorâmica, a língua afastada do palato pode criar qual imagem?",
+      "options": [
+        "Faixa radiolúcida sobre raízes superiores",
+        "Faixa radiopaca sobre ápices inferiores",
+        "Imagem dupla do côndilo",
+        "Deslocamento do canal mandibular"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Faixa radiolúcida sobre raízes superiores.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na panorâmica, a postura com coluna cervical projetada anteriormente pode produzir qual artefato?",
+      "options": [
+        "Duplicação obrigatória da mandíbula",
+        "Opacidade na linha média anterior",
+        "Radiolucidez exclusiva dos seios maxilares",
+        "Ausência das estruturas cervicais"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Opacidade na linha média anterior.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Em telerradiografia lateral, qual medida de posicionamento contribui para reprodutibilidade?",
+      "options": [
+        "Inclinação variável do plano de Frankfurt",
+        "Distância foco-receptor variável",
+        "Estabilização cefalométrica",
+        "Rotação livre da cabeça"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Estabilização cefalométrica.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual plano de referência passa aproximadamente pelo pório e pelo orbitário?",
+      "options": [
+        "Sagital mediano",
+        "Oclusal funcional",
+        "Camper",
+        "Frankfurt"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Frankfurt.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual plano anatômico divide a cabeça em metades direita e esquerda?",
+      "options": [
+        "Sagital mediano",
+        "Frankfurt",
+        "Coronal",
+        "Oclusal"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Sagital mediano.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na nomenclatura FDI, qual quadrante corresponde aos dentes permanentes superiores direitos?",
+      "options": [
+        "Quarto",
+        "Primeiro",
+        "Segundo",
+        "Terceiro"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Primeiro.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na nomenclatura FDI, qual quadrante corresponde aos dentes permanentes inferiores esquerdos?",
+      "options": [
+        "Segundo",
+        "Quarto",
+        "Terceiro",
+        "Primeiro"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Terceiro.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na nomenclatura FDI, qual quadrante corresponde aos dentes decíduos superiores esquerdos?",
+      "options": [
+        "Quinto",
+        "Sétimo",
+        "Oitavo",
+        "Sexto"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Sexto.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual estrutura radiográfica aparece como linha radiopaca fina que delimita o alvéolo dentário?",
+      "options": [
+        "Lâmina dura",
+        "Espaço periodontal",
+        "Canal radicular",
+        "Polpa coronária"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Lâmina dura.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual estrutura costuma aparecer como linha radiolúcida entre raiz e lâmina dura?",
+      "options": [
+        "Lâmina dura",
+        "Espaço do ligamento periodontal",
+        "Crista alveolar cortical",
+        "Esmalte"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Espaço do ligamento periodontal.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na radiografia dentária, qual tecido geralmente apresenta maior radiopacidade?",
+      "options": [
+        "Polpa",
+        "Espaço periodontal",
+        "Esmalte",
+        "Dentina"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Esmalte.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual alteração de projeção pode gerar contatos proximais sobrepostos em uma periapical?",
+      "options": [
+        "Erro de identificação do paciente",
+        "Subexposição uniforme",
+        "Posicionamento do avental",
+        "Erro de angulação horizontal"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Erro de angulação horizontal.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Uma periapical apresenta corte dos ápices radiculares. Qual falha deve ser considerada primeiro?",
+      "options": [
+        "Posicionamento inadequado do receptor",
+        "Angulação horizontal isolada",
+        "Excesso de contraste digital",
+        "Aumento da distância foco-receptor"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Posicionamento inadequado do receptor.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual técnica permite avaliar estruturas maxilofaciais em volume, com reconstruções multiplanares?",
+      "options": [
+        "Telerradiografia lateral",
+        "Tomografia computadorizada de feixe cônico",
+        "Radiografia interproximal",
+        "Radiografia oclusal"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Tomografia computadorizada de feixe cônico.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na TCFC, qual decisão deve orientar a seleção do campo de visão?",
+      "options": [
+        "Preferência estética da imagem",
+        "Tamanho do monitor",
+        "Região e indicação clínica",
+        "Maior campo disponível em todos os exames"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Região e indicação clínica.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na técnica do paralelismo, qual acessório favorece geometria e centralização reproduzíveis?",
+      "options": [
+        "Espelho intraoral",
+        "Afastador labial isolado",
+        "Régua cefalométrica",
+        "Posicionador com anel localizador"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Posicionador com anel localizador.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Uma imagem periapical mostra o ápice, mas não a região coronária necessária. Qual ação é prioritária?",
+      "options": [
+        "Reavaliar posicionamento e cobertura do receptor",
+        "Aumentar a nitidez digital",
+        "Alterar apenas o brilho",
+        "Inverter a escala de cinza"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Reavaliar posicionamento e cobertura do receptor.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na panorâmica, por que a remoção de objetos metálicos removíveis da cabeça e pescoço é importante?",
+      "options": [
+        "Eliminar a magnificação geométrica",
+        "Reduzir artefatos e imagens fantasmas",
+        "Aumentar a camada focal",
+        "Reduzir a rotação do equipamento"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Reduzir artefatos e imagens fantasmas.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual princípio exige que uma aquisição odontológica com radiação tenha benefício clínico esperado?",
+      "options": [
+        "Limitação de dose ocupacional",
+        "Monitoração individual",
+        "Justificação",
+        "Otimização"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Justificação.",
+      "time_limit_seconds": 45,
+      "points": 1000,
+      "topic": "Radiologia Odontológica",
+      "image_url": ""
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
