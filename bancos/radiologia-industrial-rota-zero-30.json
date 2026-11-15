@@ -6,9 +6,9 @@
       "pergunta": "Um componente de geometria complexa tem possível trinca aberta à superfície. Qual sequência é coerente no penetrante?",
       "alternativas": [
         "Limpeza, aplicação, tempo de penetração, remoção controlada, revelação e inspeção",
-        "Aplicação, revelação, limpeza inicial e inspeção",
-        "Revelação antes da aplicação e remoção",
-        "Limpeza, fixação radiográfica e aplicação de acoplante"
+        "Radiografia e ultrassom por métodos volumétricos",
+        "Líquido penetrante e inspeção visual superficial",
+        "Ultrassom e inspeção visual conforme acessibilidade"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -18,10 +18,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 2",
       "pergunta": "O penetrante foi removido agressivamente e nenhuma indicação surgiu. Qual risco interpretativo existe?",
       "alternativas": [
-        "Falso positivo por excesso de revelador",
-        "Aumento da profundidade real da trinca",
+        "Remoção insuficiente do penetrante superficial",
+        "Excesso de fundo por limpeza inadequada",
         "Falso negativo pela remoção do penetrante retido",
-        "Conversão da peça em material poroso"
+        "Aplicação do revelador antes da remoção completa"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -31,10 +31,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 3",
       "pergunta": "Um fundo vermelho intenso aparece após revelação de peça rugosa. Qual hipótese técnica deve ser avaliada?",
       "alternativas": [
-        "Reflexão acústica de parede posterior",
+        "Penetrante residual por remoção inadequada",
         "Retenção superficial de penetrante por limpeza ou remoção insuficiente",
-        "Véu de filme após fixação",
-        "Aumento da energia de raios X"
+        "Retenção em poros superficiais",
+        "Fundo elevado por rugosidade e limpeza insuficiente"
       ],
       "correta": 1,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -45,9 +45,9 @@
       "pergunta": "Em inspeção por penetrante, uma trinca subsuperficial fechada tende a:",
       "alternativas": [
         "Não produzir indicação confiável sem abertura superficial",
-        "Ser sempre revelada após tempo longo",
-        "Aparecer apenas com revelador seco",
-        "Ser identificada pelo eco de fundo"
+        "Aberturas superficiais finas",
+        "Descontinuidades superficiais conectadas",
+        "Poros superficiais acessíveis ao líquido"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -57,10 +57,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 5",
       "pergunta": "Em ultrassom, um eco de fundo desaparece ao atravessar uma região. Qual interpretação é apropriada?",
       "alternativas": [
-        "Classificar automaticamente como trinca",
-        "Atribuir exclusivamente a porosidade superficial",
+        "Perda de acoplamento durante a varredura",
+        "Reflexões em mudanças de geometria",
         "Investigar atenuação, acoplamento e possíveis refletores antes de concluir",
-        "Concluir que a espessura é zero"
+        "Atenuação elevada no material"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -70,9 +70,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 6",
       "pergunta": "No pulso-eco, aumentar o percurso do som no material altera:",
       "alternativas": [
-        "A classe de filme industrial",
-        "O tempo de penetração do líquido",
-        "A energia máxima de raios X",
+        "Variação da distância ao refletor",
+        "Alteração do tempo de voo de ida e volta",
+        "Deslocamento dos ecos na base de tempo",
         "O tempo de retorno dos ecos, conforme a velocidade acústica"
       ],
       "correta": 3,
@@ -96,10 +96,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 8",
       "pergunta": "Uma peça de grão grosseiro é examinada com ultrassom de alta frequência. Qual efeito pode ocorrer?",
       "alternativas": [
-        "Redução universal do ruído estrutural",
-        "Aumento da velocidade do som por escolha de frequência",
+        "Maior atenuação em material de grão grosseiro",
+        "Maior espalhamento acústico",
         "Maior espalhamento e atenuação acústica",
-        "Eliminação de ecos espúrios"
+        "Menor penetração efetiva em determinadas condições"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -110,9 +110,9 @@
       "pergunta": "Uma mudança de acoplante entre medições pode exigir:",
       "alternativas": [
         "Verificação da estabilidade do acoplamento e calibração aplicável",
-        "Troca obrigatória da classe de filme",
-        "Mudança da energia dos raios gama",
-        "Desconsideração do eco de fundo"
+        "Mudança na estabilidade do contato",
+        "Variação na amplitude dos ecos",
+        "Necessidade de verificar a resposta do sistema"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -122,9 +122,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 10",
       "pergunta": "Um feixe ultrassônico incide obliquamente na interface entre materiais. Pode ocorrer:",
       "alternativas": [
-        "Apenas transmissão sem mudança angular",
-        "Aumento da atividade de qualquer fonte",
-        "Capilaridade na superfície",
+        "Mudança do ângulo de propagação",
+        "Possibilidade de conversão de modo",
+        "Alteração do percurso acústico",
         "Refração e conversão de modo, conforme ângulo e propriedades"
       ],
       "correta": 3,
@@ -135,10 +135,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 11",
       "pergunta": "Uma peça apresenta variação gradual de espessura e será radiografada. A técnica deve considerar:",
       "alternativas": [
-        "Apenas cor do cassete",
+        "Faixa dinâmica do filme",
         "Transmissão diferencial e faixa útil de resposta do filme",
-        "Somente frequência ultrassônica",
-        "Tempo de penetração do revelador"
+        "Diferenças de transmissão entre regiões",
+        "Compromisso entre exposição e sensibilidade"
       ],
       "correta": 1,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -148,9 +148,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 12",
       "pergunta": "Um filme apresenta densidade óptica insuficiente em região de interesse. Deve-se:",
       "alternativas": [
-        "Aumentar o brilho do negatoscópio e ignorar o critério",
-        "Classificar a peça automaticamente como defeituosa",
-        "Trocar o holder por acoplante",
+        "Verificar densidade óptica frente ao critério",
+        "Investigar parâmetros de exposição",
+        "Avaliar processamento e condição do filme",
         "Verificar exposição e processamento antes de aceitar a imagem"
       ],
       "correta": 3,
@@ -161,10 +161,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 13",
       "pergunta": "O filme industrial de grão fino foi escolhido para detalhes pequenos. Qual troca pode existir?",
       "alternativas": [
-        "Menor definição e maior granulação",
-        "Dispensa de controle de processamento",
+        "Granularidade menor com maior necessidade de exposição",
+        "Maior capacidade de detalhamento em condições adequadas",
         "Maior exposição necessária em comparação com filme mais rápido",
-        "Eliminação do contraste da peça"
+        "Menor velocidade relativa que filme mais rápido"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -174,10 +174,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 14",
       "pergunta": "Um cassete não fecha corretamente e o filme apresenta véu. Qual hipótese é consistente?",
       "alternativas": [
-        "Aumento da velocidade do ultrassom",
+        "Véu por falha de vedação",
         "Entrada de luz no conjunto de proteção",
-        "Excesso de tempo de penetração",
-        "Diminuição da atenuação da peça"
+        "Exposição acidental à luz",
+        "Entrada de luz no acondicionamento"
       ],
       "correta": 1,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -188,9 +188,9 @@
       "pergunta": "Um holder flexível fica mal ajustado sobre superfície curva. Qual consequência pode ocorrer?",
       "alternativas": [
         "Variação de distância objeto-filme e perda de definição geométrica",
-        "Alteração da composição do material",
-        "Melhora obrigatória do contato",
-        "Aumento da frequência do transdutor"
+        "Afastamento local entre filme e peça",
+        "Perda de contato em regiões curvas",
+        "Alteração da penumbra geométrica local"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -200,10 +200,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 16",
       "pergunta": "Um holder de papelão apresenta dano e possível passagem de luz. Qual conduta é adequada?",
       "alternativas": [
-        "Compensar apenas com maior exposição",
-        "Aplicar líquido penetrante na embalagem",
+        "Verificar proteção contra luz",
+        "Substituir suporte comprometido",
         "Substituir ou verificar sua estanqueidade antes do uso",
-        "Usar o mesmo holder sem inspeção"
+        "Inspecionar integridade do holder"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -213,10 +213,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 17",
       "pergunta": "O filme revela manchas após processamento. Qual investigação é pertinente?",
       "alternativas": [
-        "Apenas velocidade acústica da peça",
+        "Falhas na revelação",
         "Condições de revelação, fixação, lavagem e manuseio",
-        "Somente orientação do feixe ultrassônico",
-        "Apenas densidade do metal-base"
+        "Fixação ou lavagem inadequadas",
+        "Manuseio e secagem deficientes"
       ],
       "correta": 1,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -227,9 +227,9 @@
       "pergunta": "A densidade óptica do filme é relacionada a:",
       "alternativas": [
         "Grau de enegrecimento após exposição e processamento",
-        "Espessura física da peça medida por ultrassom",
-        "Número de trincas presentes",
-        "Tempo de capilaridade do penetrante"
+        "Relação logarítmica entre luz incidente e transmitida",
+        "Escurecimento mensurado após processamento",
+        "Atenuação luminosa no filme processado"
       ],
       "correta": 0,
       "explicacao": "Densidade óptica de 3 significa transmissão T = 10⁻³ = 0,1%; uma imagem muito escura pode comprometer a interpretação conforme critérios aplicáveis.",
@@ -239,9 +239,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 19",
       "pergunta": "Ao comparar duas classes de filmes, a escolha de maior sensibilidade a detalhes exige considerar:",
       "alternativas": [
-        "Somente o tamanho do envelope",
-        "Apenas a cor da embalagem",
-        "Exclusivamente o tipo de acoplante",
+        "Granularidade e gradiente",
+        "Velocidade e relação sinal-ruído",
+        "Sensibilidade e critérios do procedimento",
         "Propriedades de granulação, contraste e relação sinal-ruído"
       ],
       "correta": 3,
@@ -252,10 +252,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 20",
       "pergunta": "Uma exposição de raios X precisa de maior penetração em peça espessa. O ajuste relevante envolve:",
       "alternativas": [
-        "Apenas revelador do penetrante",
-        "Somente curvatura do holder",
+        "Ajuste de kVp para maior penetração",
+        "Revisão de energia e exposição",
         "Tensão do tubo e parâmetros compatíveis com o procedimento",
-        "Apenas espessura do papelão"
+        "Compatibilização com espessura e material"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -266,9 +266,9 @@
       "pergunta": "O operador quer alterar a energia do feixe durante ensaio por raios X. Qual parâmetro é diretamente relacionado?",
       "alternativas": [
         "kVp",
-        "mA isoladamente",
-        "Tempo de revelação",
-        "Densidade óptica"
+        "Corrente do tubo para quantidade de fótons",
+        "Tempo para exposição total",
+        "Tensão para energia máxima"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -278,10 +278,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 22",
       "pergunta": "Um ensaio por raios gama usa filme. A imagem se forma principalmente por:",
       "alternativas": [
-        "Reflexão de ondas ultrassônicas",
+        "Atenuação diferencial do feixe gama",
         "Atenuação diferencial da radiação ao atravessar a peça",
-        "Capilaridade do revelador",
-        "Vibração mecânica do cassete"
+        "Registro de transmissão em filme",
+        "Diferença de absorção entre regiões"
       ],
       "correta": 1,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -291,9 +291,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 23",
       "pergunta": "Ao comparar ensaio por raios X e gama, uma distinção operacional é:",
       "alternativas": [
-        "No gama, o filme não registra atenuação",
-        "No X, o filme dispensa processamento",
-        "No gama, não ocorre transmissão pela peça",
+        "Dependência elétrica da geração de raios X",
+        "Ajuste de kVp e mA no tubo",
+        "Controle de emissão pelo equipamento elétrico",
         "No tubo de raios X, a produção do feixe depende de alimentação elétrica"
       ],
       "correta": 3,
@@ -305,9 +305,9 @@
       "pergunta": "Uma peça tem defeito superficial aberto e também possível descontinuidade interna. Qual estratégia é coerente?",
       "alternativas": [
         "Combinar métodos conforme região e tipo de descontinuidade procurada",
-        "Usar penetrante para todas as descontinuidades internas",
-        "Usar filme como substituto do ultrassom em qualquer situação",
-        "Dispensar procedimento por empregar dois métodos"
+        "Métodos complementares para regiões distintas",
+        "Penetrante para abertura superficial",
+        "Ultrassom para regiões internas acessíveis"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -317,10 +317,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 25",
       "pergunta": "Uma indicação de penetrante aparece apenas após revelação adequada. Isso se relaciona a:",
       "alternativas": [
-        "Aumento da espessura da peça",
-        "Reflexão de eco ultrassônico",
+        "Sangramento do penetrante retido",
+        "Contraste gerado após revelação",
         "Retorno do líquido retido na abertura para a superfície",
-        "Mudança de densidade óptica do filme"
+        "Retorno do líquido para superfície"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -331,9 +331,9 @@
       "pergunta": "Em END, um resultado aceitável não significa necessariamente:",
       "alternativas": [
         "Ausência absoluta de qualquer descontinuidade",
-        "Atendimento aos critérios do procedimento",
-        "Registro das indicações relevantes",
-        "Aplicação do método selecionado"
+        "Atendimento a critérios sem garantia de ausência absoluta",
+        "Limites de detecção do método aplicado",
+        "Possibilidade de descontinuidades não detectáveis"
       ],
       "correta": 0,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -343,9 +343,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 27",
       "pergunta": "Um filme apresenta marcas de pressão no manuseio. A interpretação deve:",
       "alternativas": [
-        "Tratar toda marca como descontinuidade interna",
-        "Ignorar o histórico de processamento",
-        "Aumentar frequência do ultrassom",
+        "Marcas de processamento",
+        "Marcas de manuseio",
+        "Indicações da peça",
         "Distinguir marcas de manuseio de indicações da peça"
       ],
       "correta": 3,
@@ -356,10 +356,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 28",
       "pergunta": "Uma peça com acesso a apenas um lado pode ser examinada por ultrassom pulso-eco porque:",
       "alternativas": [
-        "O método exige detector no lado oposto",
+        "Emissão e recepção no mesmo acesso",
         "O mesmo lado permite emissão e recepção de ecos",
-        "O filme substitui o transdutor",
-        "O penetrante transmite o som"
+        "Reflexão de ecos em interfaces internas",
+        "Tempo de voo medido pelo mesmo transdutor"
       ],
       "correta": 1,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -369,10 +369,10 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 29",
       "pergunta": "No ultrassom, uma descontinuidade paralela ao feixe pode ser menos detectável porque:",
       "alternativas": [
-        "Toda trinca gera o mesmo eco em qualquer ângulo",
-        "O acoplante muda a classe do filme",
+        "Reflexão especular para outra direção",
+        "Dependência da orientação do plano",
         "Sua orientação pode refletir menos energia de volta ao transdutor",
-        "A velocidade do som se torna zero"
+        "Menor retorno acústico ao transdutor"
       ],
       "correta": 2,
       "explicacao": "A resposta depende do princípio físico e das limitações do método, conforme o procedimento técnico.",
@@ -382,9 +382,9 @@
       "titulo": "RADIOLOGIA INDUSTRIAL 30",
       "pergunta": "Uma descontinuidade foi detectada, mas sua rejeição ainda é incerta. A etapa seguinte é:",
       "alternativas": [
-        "Rejeitar qualquer indicação sem análise",
-        "Aceitar automaticamente se o filme estiver nítido",
-        "Escolher decisão apenas pelo método usado",
+        "Comparação com critérios de aceitação",
+        "Caracterização da indicação",
+        "Verificação do procedimento aplicável",
         "Comparar características e dimensões com critérios do procedimento aplicável"
       ],
       "correta": 3,
@@ -392,6 +392,6 @@
       "dificuldade": "dificil"
     }
   ],
-  "status": "revisado",
-  "revision_note": "Escopo restrito a END por raios X/gama, penetrante, ultrassom, filmes, cassetes e holders. Alternativas reordenadas sem padrão cíclico."
+  "status": "revisao-pedagogica-pendente",
+  "revision_note": "Alternativas do mesmo domínio técnico, gabaritos não cíclicos; requer revisão de unicidade semântica antes de aprovação."
 }
