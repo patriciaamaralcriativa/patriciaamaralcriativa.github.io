@@ -3,119 +3,119 @@
   "sets": [
     [
       [
-        "Incidência básica que projeta a mama de superior para inferior",
-        "Craniocaudal"
+        "Em rastreamento bilateral, projeção superior-inferior de rotina",
+        "Craniocaudal (CC)"
       ],
       [
-        "Incidência básica oblíqua adaptada à direção do peitoral",
-        "Mediolateral oblíqua"
+        "Em rastreamento bilateral, projeção oblíqua orientada pelo peitoral",
+        "Mediolateral oblíqua (MLO)"
       ],
       [
-        "Programa de detecção precoce em pessoas assintomáticas",
-        "Crivagem"
-      ],
-      [
-        "Incidência que desloca tecidos por rolamento para investigar somação",
+        "Investigação de densidade por deslocamento relativo de planos",
         "Mama enrolada"
       ],
       [
-        "Técnica que comprime área localizada para separar estruturas",
+        "Separação localizada de tecidos sobrepostos",
         "Compressão seletiva"
       ],
       [
-        "Técnica com afastamento objeto-receptor para detalhar calcificações",
+        "Caracterização de calcificações finas por aumento geométrico",
         "Magnificação"
       ],
       [
-        "Manobra que desloca implante posteriormente e tecido anteriormente",
-        "Eklund"
+        "Deslocamento posterior do implante com tração anterior do parênquima",
+        "Manobra de Eklund"
       ],
       [
-        "Imagem em que a prótese permanece dentro do campo mamográfico",
+        "Projeção que mantém o implante no campo mamográfico",
         "Implante incluído"
       ],
       [
-        "Imagem com tecido anterior tracionado após deslocamento do implante",
+        "Projeção em que o parênquima é tracionado à frente do implante",
         "Implante deslocado"
       ],
       [
-        "Incidência complementar do prolongamento axilar",
-        "Axilar"
+        "Complemento para região superolateral pouco incluída",
+        "Incidência axilar"
+      ],
+      [
+        "Projeção para localizar calcificação superficial na pele",
+        "Tangencial"
       ]
     ],
     [
       [
-        "Incidência para demonstrar relação de achado superficial com a pele",
-        "Tangencial"
-      ],
-      [
-        "Estrutura muscular usada como referência na MLO",
+        "Estrutura muscular de referência na MLO",
         "Peitoral maior"
       ],
       [
-        "Região inferior de transição da mama com parede torácica",
+        "Região inferior que deve ser aberta na MLO",
         "Sulco inframamário"
       ],
       [
-        "Prolongamento superolateral do tecido mamário",
+        "Extensão mamária em direção à axila",
         "Cauda axilar"
       ],
       [
-        "Estruturas fibrosas suspensoras da mama",
+        "Estruturas fibrosas suspensoras do parênquima",
         "Ligamentos de Cooper"
       ],
       [
-        "Unidade anatômica importante na origem de lesões epiteliais",
+        "Unidade de origem frequente de lesões epiteliais",
         "Unidade ductolobular terminal"
       ],
       [
-        "Estruturas responsáveis pela condução de secreções lobulares",
+        "Estruturas condutoras de secreção até o mamilo",
         "Ductos mamários"
       ],
       [
-        "Tecido relativamente radiotransparente da mama",
-        "Adiposo"
+        "Tecido de menor atenuação relativa na mamografia",
+        "Tecido adiposo"
       ],
       [
-        "Tecido relativamente radiopaco da mama",
-        "Fibroglandular"
+        "Tecido de maior atenuação relativa ao adiposo",
+        "Tecido fibroglandular"
       ],
       [
-        "Lesão ocupando espaço descrita por forma e margens",
+        "Achado ocupando espaço descrito por forma, margem e densidade",
         "Massa"
+      ],
+      [
+        "Alteração de densidade sem critérios completos de massa",
+        "Assimetria"
       ]
     ],
     [
       [
-        "Achado de pequenas deposições de cálcio no parênquima",
+        "Pequenos depósitos de cálcio cuja morfologia orienta a investigação",
         "Microcalcificações"
       ],
       [
-        "Margem com linhas radiadas que aumenta suspeição",
+        "Margem radiada associada a suspeição",
         "Espiculada"
       ],
       [
-        "Calcificações de forma e tamanho variados, potencialmente suspeitas",
-        "Pleomórficas"
+        "Calcificações finas com formatos variados",
+        "Finas pleomórficas"
       ],
       [
-        "Calcificações finas que podem seguir ductos e ramificar",
-        "Lineares ramificadas"
+        "Calcificações finas que seguem e ramificam ductos",
+        "Finas lineares ramificadas"
       ],
       [
-        "Distribuição de calcificações que acompanha sistema ductal",
-        "Segmentar"
+        "Padrão que pode acompanhar um sistema ductal",
+        "Distribuição segmentar"
       ],
       [
-        "BI-RADS que exige avaliação complementar antes da conclusão",
+        "BI-RADS de avaliação ainda incompleta",
         "Categoria 0"
       ],
       [
-        "BI-RADS para achado provavelmente benigno após avaliação completa",
+        "BI-RADS de achado provavelmente benigno após avaliação completa",
         "Categoria 3"
       ],
       [
-        "BI-RADS de achado suspeito que pode requerer biópsia",
+        "BI-RADS de achado suspeito com indicação de avaliação tecidual",
         "Categoria 4"
       ],
       [
@@ -123,10 +123,11 @@
         "Categoria 5"
       ],
       [
-        "BI-RADS de malignidade comprovada histologicamente",
+        "BI-RADS de malignidade histologicamente comprovada",
         "Categoria 6"
       ]
     ]
   ],
-  "status": "rascunho-para-revisao"
+  "status": "revisado-tecnica-pedagogicamente",
+  "revision_note": "30 associações distintas em 3 conjuntos; apenas escopo autorizado."
 }
