@@ -1,0 +1,456 @@
+{
+  "title": "Proteção Radiológica — RADIOQUIZ PR-01",
+  "subject": "Proteção Radiológica",
+  "questions": [
+    {
+      "prompt": "Um exame não tem indicação clínica documentada. Qual princípio exige avaliar sua necessidade?",
+      "options": [
+        "Justificação",
+        "Otimização",
+        "Monitoração",
+        "Blindagem"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Justificação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual medida reduz a intensidade de radiação que chega ao trabalhador sem mudar a fonte?",
+      "options": [
+        "Remoção do colimador",
+        "Blindagem",
+        "Aumento do tempo",
+        "Redução da distância"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Blindagem.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual princípio orienta manter as exposições tão baixas quanto razoavelmente exequível?",
+      "options": [
+        "Classificação",
+        "Segregação",
+        "Otimização",
+        "Justificação"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Otimização.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O dosímetro individual é utilizado principalmente para quê?",
+      "options": [
+        "Medir a pressão arterial",
+        "Identificar a anatomia",
+        "Corrigir a imagem digital",
+        "Acompanhar a exposição ocupacional"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Acompanhar a exposição ocupacional.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual situação caracteriza contaminação radioativa?",
+      "options": [
+        "Deposição de material radioativo na pele",
+        "Exposição a um feixe externo sem deposição",
+        "Visualização de imagem radiográfica",
+        "Permanência em sala sem fonte"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Deposição de material radioativo na pele.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual evento caracteriza a incorporação de radionuclídeos?",
+      "options": [
+        "Redução do tempo de exame",
+        "Entrada de material radioativo no organismo",
+        "Exposição externa sem material radioativo",
+        "Atenuação em barreira"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Entrada de material radioativo no organismo.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual ação reduz a exposição quando é possível afastar-se de uma fonte?",
+      "options": [
+        "Retirar a barreira",
+        "Ampliar o campo",
+        "Aumentar a distância",
+        "Aumentar a permanência"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Aumentar a distância.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual efeito é descrito por probabilidade de ocorrência associada à dose, sem limiar demonstrado para proteção?",
+      "options": [
+        "Reação tecidual",
+        "Mecânico",
+        "Térmico",
+        "Estocástico"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Estocástico.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual tipo de efeito costuma apresentar limiar de dose?",
+      "options": [
+        "Reação tecidual",
+        "Efeito estocástico",
+        "Refração",
+        "Espalhamento óptico"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Reação tecidual.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O que significa radiolise da água?",
+      "options": [
+        "Condensação por resfriamento",
+        "Alterações químicas da água induzidas pela radiação",
+        "Evaporação por aquecimento externo",
+        "Filtração de sais"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Alterações químicas da água induzidas pela radiação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O dano ao DNA causado por radicais livres formados na água é classificado como?",
+      "options": [
+        "Ação mecânica",
+        "Ação acústica",
+        "Ação indireta",
+        "Ação direta"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Ação indireta.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O dano produzido por interação da radiação com o próprio DNA é chamado de?",
+      "options": [
+        "Ação indireta",
+        "Ação térmica",
+        "Ação elétrica",
+        "Ação direta"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Ação direta.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual medida limita a região irradiada em um exame de raios X?",
+      "options": [
+        "Colimação",
+        "Aumento indiscriminado do campo",
+        "Repetição do exame",
+        "Remoção da proteção estrutural"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Colimação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Uma pessoa irradiada externamente torna-se necessariamente radioativa?",
+      "options": [
+        "Somente se estiver de pé",
+        "Não",
+        "Sim, sempre",
+        "Somente se usar dosímetro"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Não.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fonte apresenta material radioativo encapsulado para impedir dispersão em condições previstas?",
+      "options": [
+        "Fonte não selada",
+        "Fonte dispersa",
+        "Fonte selada",
+        "Fonte aberta"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Fonte selada.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fonte pode exigir maior atenção ao risco de dispersão de radionuclídeos?",
+      "options": [
+        "Fonte encapsulada íntegra",
+        "Tubo de raios X desligado",
+        "Lâmpada comum",
+        "Fonte não selada"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Fonte não selada.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual medida administrativa é adequada em área com acesso controlado?",
+      "options": [
+        "Respeitar sinalização e regras de entrada",
+        "Ignorar avisos",
+        "Permitir entrada irrestrita",
+        "Remover controles de acesso"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Respeitar sinalização e regras de entrada.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual é a finalidade principal da monitoração de área?",
+      "options": [
+        "Calibrar o monitor de vídeo",
+        "Avaliar condições radiológicas do ambiente",
+        "Avaliar glicemia",
+        "Medir frequência cardíaca"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Avaliar condições radiológicas do ambiente.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Uma exposição é feita por fonte localizada fora do corpo. Qual classificação é adequada?",
+      "options": [
+        "Incorporação",
+        "Exposição interna obrigatória",
+        "Exposição externa",
+        "Contaminação interna obrigatória"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Exposição externa.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Radionuclídeos depositados em órgãos após incorporação podem causar qual tipo de exposição?",
+      "options": [
+        "Apenas externa",
+        "Apenas luminosa",
+        "Apenas acústica",
+        "Interna"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Interna.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O que caracteriza ionização?",
+      "options": [
+        "Remoção ou adição de elétrons, formando íons",
+        "Mudança exclusiva de temperatura",
+        "Alteração da cor sem interação",
+        "Emissão de som"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Remoção ou adição de elétrons, formando íons.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O que caracteriza radiossensibilidade?",
+      "options": [
+        "Peso da blindagem",
+        "Variação da resposta de células e tecidos à radiação",
+        "Capacidade de um metal refletir luz",
+        "Intensidade do som"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Variação da resposta de células e tecidos à radiação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual consequência pode ocorrer após dano a células germinativas, caso uma alteração seja transmitida?",
+      "options": [
+        "Efeito térmico",
+        "Efeito óptico",
+        "Efeito hereditário",
+        "Efeito somático exclusivamente"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Efeito hereditário.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Um efeito observado no próprio indivíduo exposto é classificado como?",
+      "options": [
+        "Hereditário necessariamente",
+        "Ambiental",
+        "Meteorológico",
+        "Somático"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Somático.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Uma manifestação anos após a exposição pode ser chamada de?",
+      "options": [
+        "Tardia",
+        "Imediata",
+        "Instantânea",
+        "Prévia"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Tardia.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual procedimento procura retirar material radioativo de uma superfície contaminada?",
+      "options": [
+        "Filtração de imagem",
+        "Descontaminação",
+        "Colimação",
+        "Imobilização"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Descontaminação.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fator pode modificar a eficiência de uma blindagem?",
+      "options": [
+        "Nome do operador",
+        "Formato do prontuário",
+        "Material e espessura",
+        "Cor da etiqueta"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta correta: Material e espessura.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "O que é atenuação de um feixe de radiação ao atravessar matéria?",
+      "options": [
+        "Aumento obrigatório de sua intensidade",
+        "Transformação em som",
+        "Ausência de interação",
+        "Redução de sua intensidade"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta correta: Redução de sua intensidade.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual medida evita repetições desnecessárias de radiografias?",
+      "options": [
+        "Posicionamento e técnica adequados",
+        "Ampliação aleatória do campo",
+        "Ignorar identificação",
+        "Repetir por rotina"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta correta: Posicionamento e técnica adequados.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual conduta está alinhada à proteção radiológica na prática?",
+      "options": [
+        "Dispensar monitoração exigida",
+        "Planejar e justificar exposições necessárias",
+        "Repetir exames sem motivo",
+        "Ignorar o controle de qualidade"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta correta: Planejar e justificar exposições necessárias.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Proteção Radiológica",
+      "image_url": ""
+    }
+  ]
+}
