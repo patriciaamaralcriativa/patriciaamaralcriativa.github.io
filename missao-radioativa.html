@@ -22,8 +22,8 @@ const seletor=document.createElement('select');seletor.id='disciplina-missao';se
 seletor.innerHTML='<option value="rejeitos">Gerenciamento de Rejeitos</option><option value="protecao">Proteção Radiológica</option>';
 seletor.style.cssText='width:100%;padding:10px;border-radius:9px;background:#fff;color:#17183b;font-weight:700';
 document.querySelector('aside')?.insertBefore(seletor,document.querySelector('aside').children[1]);
-const bancosMissao={mamografia:'mamografia',tomografia:'tomografia','radiologia-industrial':'radiologia-industrial'};
-for(const [id,label] of [['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial']]){const option=document.createElement('option');option.value=id;option.textContent=label;seletor.appendChild(option);}
+const bancosMissao={mamografia:'mamografia',tomografia:'tomografia','radiologia-industrial':'radiologia-industrial','formacao-da-imagem':'formacao-da-imagem'};
+for(const [id,label] of [['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial'],['formacao-da-imagem','Formação da Imagem Radiográfica']]){const option=document.createElement('option');option.value=id;option.textContent=label;seletor.appendChild(option);}
 const conjuntosOriginais={rejeitos:rejeitosSets,protecao:protecaoSets};
 seletor.addEventListener('change',async()=>{
  const escolha=seletor.value;
