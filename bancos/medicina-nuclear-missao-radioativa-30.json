@@ -1,0 +1,132 @@
+{
+  "disciplina": "Medicina Nuclear",
+  "sets": [
+    [
+      [
+        "Modalidade tomográfica que detecta fótons únicos com colimador",
+        "SPECT"
+      ],
+      [
+        "Modalidade que registra pares de fótons de aniquilação",
+        "PET"
+      ],
+      [
+        "Equipamento com detector cintilador para imagens planares",
+        "Gama-câmara"
+      ],
+      [
+        "Componente que seleciona a direção dos fótons na gama-câmara",
+        "Colimador"
+      ],
+      [
+        "Faixa de energias aceita para registrar eventos próximos ao fotopico",
+        "Janela energética"
+      ],
+      [
+        "Processo que compensa a perda de fótons nos tecidos",
+        "Correção de atenuação"
+      ],
+      [
+        "Erro de alinhamento entre modalidades de um exame híbrido",
+        "Desregistro"
+      ],
+      [
+        "Medida que combina decaimento físico e eliminação biológica",
+        "Meia-vida efetiva"
+      ],
+      [
+        "Material radioativo empregado em exames diagnósticos após associação a molécula carreadora",
+        "Radiofármaco"
+      ],
+      [
+        "Medida da fração de atividade na forma química pretendida",
+        "Pureza radioquímica"
+      ]
+    ],
+    [
+      [
+        "Radionuclídeo eluído do gerador molibdênio-tecnécio",
+        "Tecnécio-99m"
+      ],
+      [
+        "Radionuclídeo pai no gerador de tecnécio",
+        "Molibdênio-99"
+      ],
+      [
+        "Forma química usual do tecnécio eluído do gerador",
+        "Pertecnetato"
+      ],
+      [
+        "Teste que identifica resposta desigual do campo do detector",
+        "Uniformidade"
+      ],
+      [
+        "Teste SPECT que verifica alinhamento geométrico da reconstrução",
+        "Centro de rotação"
+      ],
+      [
+        "Exame que compara perfusão cardíaca sob esforço farmacológico ou físico e repouso",
+        "Cintilografia miocárdica"
+      ],
+      [
+        "Aquisição sincronizada ao ECG para avaliar função ventricular",
+        "Gated-SPECT"
+      ],
+      [
+        "Radiotraçador glicolítico muito utilizado em oncologia PET",
+        "18F-FDG"
+      ],
+      [
+        "Medida semiquantitativa normalizada de captação em PET",
+        "SUV"
+      ],
+      [
+        "Efeito que subestima atividade em lesões pequenas",
+        "Volume parcial"
+      ]
+    ],
+    [
+      [
+        "Interação que pode alterar a direção e energia do fóton detectado",
+        "Compton"
+      ],
+      [
+        "Interação que pode absorver completamente o fóton incidente",
+        "Fotoelétrico"
+      ],
+      [
+        "Evento físico que gera dois fótons de 511 keV",
+        "Aniquilação"
+      ],
+      [
+        "Partícula emitida em decaimento beta positivo",
+        "Pósitron"
+      ],
+      [
+        "Processo de saída do radiofármaco do local de punção para tecidos adjacentes",
+        "Extravasamento"
+      ],
+      [
+        "Distribuição do traçador pelos tecidos após administração",
+        "Biodistribuição"
+      ],
+      [
+        "Fase inicial que avalia chegada do traçador em estudo renal dinâmico",
+        "Perfusão"
+      ],
+      [
+        "Estudo renal que pode usar estímulo diurético para avaliar drenagem",
+        "Renografia"
+      ],
+      [
+        "Exame com fosfonatos marcados para estudar atividade osteoblástica",
+        "Cintilografia óssea"
+      ],
+      [
+        "Princípio que exige indicação clínica e benefício esperado da exposição",
+        "Justificação"
+      ]
+    ]
+  ],
+  "status": "rascunho-para-revisao"
+}
