@@ -379,18 +379,18 @@
       "dificuldade": "medio"
     },
     {
-      "titulo": "Física aplicada — 30",
-      "pergunta": "Qual propriedade das ondas explica a mudança de direção na interface entre meios?",
+      "titulo": "Interpretação da polarização",
+      "pergunta": "Em uma demonstração, um filtro polarizador reduz a luz transmitida quando é girado em relação a outro filtro. Que propriedade da luz esse experimento evidencia?",
       "alternativas": [
-        "Reflexão",
-        "Fissão",
-        "Refração",
-        "Ionização"
+        "A luz é uma onda exclusivamente longitudinal",
+        "A luz pode apresentar polarização por ser uma onda transversal",
+        "A luz exige um meio material para se propagar",
+        "A polarização altera a carga elétrica dos fótons"
       ],
-      "correta": 2,
-      "explicacao": "Resposta: Refração.",
+      "correta": 1,
+      "explicacao": "A polarização é característica de ondas transversais, como as ondas eletromagnéticas.",
       "dificuldade": "medio"
     }
   ],
-  "status": "conteudo-corrigido-sem-calculos-pendente-revisao-de-distratores"
+  "status": "30-questoes-conceituais-sem-calculos-revisadas"
 }
