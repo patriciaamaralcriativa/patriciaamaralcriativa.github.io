@@ -1,0 +1,126 @@
+{
+  "title": "Radiologia Industrial — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual sigla representa ensaios não destrutivos?",
+      "answer": "END"
+    },
+    {
+      "question": "Qual radiação eletromagnética é gerada em tubo por aceleração de elétrons?",
+      "answer": "RAIOSX"
+    },
+    {
+      "question": "Qual radiação eletromagnética pode formar imagem por transmissão sem tubo de raios X?",
+      "answer": "GAMA"
+    },
+    {
+      "question": "Qual método utiliza capilaridade para detectar descontinuidades abertas à superfície?",
+      "answer": "PENETRANTE"
+    },
+    {
+      "question": "Qual método usa ondas mecânicas de alta frequência para inspecionar materiais?",
+      "answer": "ULTRASSOM"
+    },
+    {
+      "question": "Qual etapa remove contaminantes antes da aplicação do penetrante?",
+      "answer": "LIMPEZA"
+    },
+    {
+      "question": "Qual fenômeno favorece entrada de líquido em aberturas estreitas?",
+      "answer": "CAPILARIDADE"
+    },
+    {
+      "question": "Qual produto evidencia o penetrante retido nas aberturas?",
+      "answer": "REVELADOR"
+    },
+    {
+      "question": "Qual tipo de indicação do penetrante apresenta formato alongado?",
+      "answer": "LINEAR"
+    },
+    {
+      "question": "Qual característica da superfície pode gerar fundo elevado no penetrante?",
+      "answer": "POROSIDADE"
+    },
+    {
+      "question": "Qual meio é usado entre transdutor e peça para transmitir ondas?",
+      "answer": "ACOPLANTE"
+    },
+    {
+      "question": "Qual sinal ultrassônico retorna de uma interface refletora?",
+      "answer": "ECO"
+    },
+    {
+      "question": "Qual parâmetro acústico é necessário para calcular profundidade por tempo de voo?",
+      "answer": "VELOCIDADE"
+    },
+    {
+      "question": "Qual procedimento ajusta a escala de distância do aparelho ultrassônico?",
+      "answer": "CALIBRAÇÃO"
+    },
+    {
+      "question": "Qual parâmetro do tubo de raios X determina energia máxima dos fótons?",
+      "answer": "KVP"
+    },
+    {
+      "question": "Qual parâmetro do tubo controla corrente de elétrons?",
+      "answer": "MA"
+    },
+    {
+      "question": "Qual fenômeno reduz a intensidade transmitida ao atravessar material?",
+      "answer": "ATENUAÇÃO"
+    },
+    {
+      "question": "Qual termo designa o desfoque associado à geometria do feixe?",
+      "answer": "PENUMBRA"
+    },
+    {
+      "question": "Qual suporte sensível registra imagem radiográfica após processamento?",
+      "answer": "FILME"
+    },
+    {
+      "question": "Qual propriedade do filme relaciona-se ao tamanho de grão?",
+      "answer": "GRANULARIDADE"
+    },
+    {
+      "question": "Qual característica do filme descreve exposição necessária para obter densidade?",
+      "answer": "VELOCIDADE"
+    },
+    {
+      "question": "Qual norma ISO classifica sistemas de filmes industriais?",
+      "answer": "ISO116991"
+    },
+    {
+      "question": "Qual medida logarítmica quantifica o enegrecimento do filme?",
+      "answer": "DENSIDADE"
+    },
+    {
+      "question": "Qual invólucro protetor acondiciona o filme radiográfico?",
+      "answer": "CASSETE"
+    },
+    {
+      "question": "Qual tipo de holder acompanha melhor superfícies curvas?",
+      "answer": "FLEXÍVEL"
+    },
+    {
+      "question": "Qual material identifica o holder rígido mencionado no curso?",
+      "answer": "PAPELÃO"
+    },
+    {
+      "question": "Qual processo químico transforma a imagem latente em visível?",
+      "answer": "REVELAÇÃO"
+    },
+    {
+      "question": "Qual etapa remove haletos de prata não revelados?",
+      "answer": "FIXAÇÃO"
+    },
+    {
+      "question": "Qual etapa posterior à fixação remove resíduos químicos?",
+      "answer": "LAVAGEM"
+    },
+    {
+      "question": "Qual termo define avaliação de indicações frente a limites normativos?",
+      "answer": "ACEITAÇÃO"
+    }
+  ],
+  "status": "revisao-pendente"
+}
