@@ -1,0 +1,396 @@
+{
+  "disciplina": "Medicina Nuclear",
+  "questoes": [
+    {
+      "titulo": "MEDICINA NUCLEAR — 1",
+      "pergunta": "Em uma cintilografia óssea com 99mTc-fosfonato, a captação focal aumentada indica principalmente:",
+      "alternativas": [
+        "Presença obrigatória de fratura aguda",
+        "Redução do remodelamento ósseo",
+        "Aumento local da atividade osteoblástica e perfusão",
+        "Diagnóstico específico de metástase óssea"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Aumento local da atividade osteoblástica e perfusão.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 2",
+      "pergunta": "Em um estudo renal dinâmico, a fase inicial de perfusão deve ser interpretada considerando:",
+      "alternativas": [
+        "Exclusivamente a excreção vesical tardia",
+        "Apenas a meia-vida física do radionuclídeo",
+        "Somente o tamanho renal na imagem estática",
+        "Chegada vascular do traçador aos rins"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Chegada vascular do traçador aos rins.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 3",
+      "pergunta": "Na avaliação de obstrução urinária por renografia diurética, a interpretação adequada exige:",
+      "alternativas": [
+        "Curvas, imagens, função renal e condições de hidratação",
+        "Apenas o tempo de pico isolado",
+        "Somente a atividade acumulada na bexiga",
+        "Exclusivamente o valor máximo de contagens"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Curvas, imagens, função renal e condições de hidratação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 4",
+      "pergunta": "Em um exame SPECT, a principal vantagem da aquisição em múltiplas projeções é:",
+      "alternativas": [
+        "Substituir a colimação por coincidência",
+        "Reconstruir a distribuição tridimensional da atividade",
+        "Medir diretamente a dose absorvida em cada órgão",
+        "Eliminar a necessidade de correção de atenuação"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Reconstruir a distribuição tridimensional da atividade.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 5",
+      "pergunta": "A imagem PET é formada principalmente pela detecção de:",
+      "alternativas": [
+        "Partículas beta diretamente no cristal",
+        "Elétrons Auger detectados externamente",
+        "Pares de fótons de aniquilação em coincidência",
+        "Fótons únicos selecionados por colimador paralelo"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Pares de fótons de aniquilação em coincidência.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 6",
+      "pergunta": "A energia de cada fóton resultante da aniquilação pósitron-elétron é aproximadamente:",
+      "alternativas": [
+        "140 keV",
+        "364 keV",
+        "159 keV",
+        "511 keV"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: 511 keV.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 7",
+      "pergunta": "Na PET com 18F-FDG, hipercaptação pode ocorrer também em:",
+      "alternativas": [
+        "Processos inflamatórios com elevado metabolismo glicolítico",
+        "Apenas tumores malignos confirmados",
+        "Exclusivamente tecidos com ausência de perfusão",
+        "Somente lesões com necrose completa"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Processos inflamatórios com elevado metabolismo glicolítico.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 8",
+      "pergunta": "A captação fisiológica cerebral de 18F-FDG é explicada principalmente por:",
+      "alternativas": [
+        "Ligação específica ao cálcio ósseo",
+        "Alto consumo de glicose pelo tecido nervoso",
+        "Ausência de metabolismo energético cerebral",
+        "Excreção predominante do traçador pela bile"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Alto consumo de glicose pelo tecido nervoso.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 9",
+      "pergunta": "Na gama-câmara, o colimador de furos paralelos tem como função principal:",
+      "alternativas": [
+        "Converter radiação gama em luz",
+        "Determinar a meia-vida biológica",
+        "Selecionar a direção de incidência dos fótons",
+        "Aumentar a energia dos fótons detectados"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Selecionar a direção de incidência dos fótons.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 10",
+      "pergunta": "Uma troca inadequada de colimador pode resultar em:",
+      "alternativas": [
+        "Mudança da meia-vida física do radiofármaco",
+        "Alteração da identidade química do traçador",
+        "Eliminação de espalhamento no paciente",
+        "Perda de resolução ou penetração septal conforme energia"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Perda de resolução ou penetração septal conforme energia.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 11",
+      "pergunta": "O cristal cintilador da gama-câmara tem como função:",
+      "alternativas": [
+        "Converter energia dos fótons incidentes em luz",
+        "Emitir os fótons gama administrados",
+        "Bloquear a emissão de pósitrons no paciente",
+        "Substituir o circuito de posicionamento"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Converter energia dos fótons incidentes em luz.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 12",
+      "pergunta": "A janela energética em SPECT é utilizada para:",
+      "alternativas": [
+        "Eliminar a atenuação por tecidos profundos",
+        "Selecionar eventos próximos ao fotopico do radionuclídeo",
+        "Determinar diretamente a atividade injetada",
+        "Corrigir integralmente o movimento do paciente"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Selecionar eventos próximos ao fotopico do radionuclídeo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 13",
+      "pergunta": "Uma janela energética excessivamente ampla pode:",
+      "alternativas": [
+        "Reduzir a sensibilidade a zero necessariamente",
+        "Melhorar sempre a resolução espacial",
+        "Aumentar a contribuição de fótons espalhados",
+        "Eliminar todos os eventos Compton"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Aumentar a contribuição de fótons espalhados.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 14",
+      "pergunta": "O teste de uniformidade da gama-câmara busca identificar:",
+      "alternativas": [
+        "Somente a concentração do radiofármaco",
+        "A distribuição anatômica do paciente",
+        "Exclusivamente a atividade residual da seringa",
+        "Variações não esperadas na resposta do campo de visão"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Variações não esperadas na resposta do campo de visão.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 15",
+      "pergunta": "O controle de centro de rotação em SPECT é importante porque erros podem:",
+      "alternativas": [
+        "Gerar distorções e artefatos na reconstrução",
+        "Alterar a energia emitida pelo radionuclídeo",
+        "Modificar a meia-vida efetiva do paciente",
+        "Impedir a emissão de fótons gama"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Gerar distorções e artefatos na reconstrução.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 16",
+      "pergunta": "A correção de atenuação em SPECT/PET procura compensar:",
+      "alternativas": [
+        "Excesso de resolução do detector",
+        "Perda de fótons por interação com tecidos",
+        "Aumento espontâneo da atividade administrada",
+        "Degradação química obrigatória do traçador"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Perda de fótons por interação com tecidos.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 17",
+      "pergunta": "O registro incorreto entre CT e PET pode provocar:",
+      "alternativas": [
+        "Mudança da energia de aniquilação",
+        "Redução da meia-vida física do 18F",
+        "Erros de localização e artefatos de correção de atenuação",
+        "Aumento real do metabolismo celular"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Erros de localização e artefatos de correção de atenuação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 18",
+      "pergunta": "A meia-vida efetiva de um radiofármaco no organismo depende de:",
+      "alternativas": [
+        "Apenas da meia-vida física",
+        "Somente da atividade inicial da seringa",
+        "Exclusivamente do volume de injeção",
+        "Decaimento físico e eliminação biológica"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Decaimento físico e eliminação biológica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 19",
+      "pergunta": "Se o radionuclídeo é eliminado biologicamente, a meia-vida efetiva será:",
+      "alternativas": [
+        "Menor ou igual à meia-vida física",
+        "Sempre maior que a meia-vida física",
+        "Independente da meia-vida biológica",
+        "Igual ao dobro da meia-vida física"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Menor ou igual à meia-vida física.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 20",
+      "pergunta": "O tecnécio-99m é amplamente usado em diagnóstico por:",
+      "alternativas": [
+        "Produção exclusiva de pares de aniquilação",
+        "Emissão gama adequada à detecção e meia-vida física relativamente curta",
+        "Emissão alfa predominante para imagem externa",
+        "Meia-vida física de vários anos"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Emissão gama adequada à detecção e meia-vida física relativamente curta.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 21",
+      "pergunta": "Na eluição de gerador 99Mo/99mTc, o produto usualmente coletado é:",
+      "alternativas": [
+        "Fluordesoxiglicose marcada com 18F",
+        "Cloreto de tálio contendo 201Tl",
+        "Pertecnetato de sódio contendo 99mTc",
+        "Iodeto de sódio contendo 131I"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Pertecnetato de sódio contendo 99mTc.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 22",
+      "pergunta": "A verificação de pureza radionuclídica do eluato do gerador busca detectar:",
+      "alternativas": [
+        "Somente alterações do pH",
+        "Apenas o volume do eluato",
+        "Exclusivamente partículas visíveis",
+        "Contaminação por 99Mo acima do limite aceitável"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Contaminação por 99Mo acima do limite aceitável.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 23",
+      "pergunta": "A pureza radioquímica de um radiofármaco indica:",
+      "alternativas": [
+        "Fração da atividade na forma química desejada",
+        "Ausência absoluta de qualquer microrganismo",
+        "Energia máxima dos fótons emitidos",
+        "Tempo de aquisição recomendado"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Fração da atividade na forma química desejada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 24",
+      "pergunta": "Uma marcação radioquímica inadequada pode resultar em:",
+      "alternativas": [
+        "Correção espontânea do exame por software",
+        "Biodistribuição não esperada e prejuízo diagnóstico",
+        "Aumento automático da resolução do sistema",
+        "Redução obrigatória da atividade injetada"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Biodistribuição não esperada e prejuízo diagnóstico.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 25",
+      "pergunta": "Na cintilografia de tireoide, o padrão de captação deve ser interpretado com:",
+      "alternativas": [
+        "Somente a distância entre paciente e detector",
+        "Exclusivamente a idade do equipamento",
+        "História clínica, função tireoidiana e possível interferência medicamentosa",
+        "Apenas a cor da escala de imagem"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: História clínica, função tireoidiana e possível interferência medicamentosa.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 26",
+      "pergunta": "No exame de perfusão miocárdica, a comparação estresse-repouso auxilia a distinguir:",
+      "alternativas": [
+        "Somente alterações da frequência cardíaca",
+        "Exclusivamente o volume ventricular anatômico",
+        "Apenas a concentração plasmática de glicose",
+        "Defeitos reversíveis e persistentes de perfusão"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Defeitos reversíveis e persistentes de perfusão.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 27",
+      "pergunta": "A aquisição gated-SPECT permite avaliar adicionalmente:",
+      "alternativas": [
+        "Movimento parietal e função ventricular",
+        "Apenas a concentração sérica de troponina",
+        "Somente a anatomia coronariana luminal",
+        "Exclusivamente o fluxo coronariano absoluto"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Movimento parietal e função ventricular.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 28",
+      "pergunta": "Em PET, o efeito de volume parcial tende a:",
+      "alternativas": [
+        "Produzir apenas artefatos por movimento",
+        "Subestimar atividade em estruturas pequenas em relação à resolução",
+        "Aumentar sempre o SUV em lesões pequenas",
+        "Eliminar a necessidade de calibração cruzada"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Subestimar atividade em estruturas pequenas em relação à resolução.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 29",
+      "pergunta": "O SUV em PET deve ser interpretado com cautela porque é influenciado por:",
+      "alternativas": [
+        "Somente pela posição da mesa no hospital",
+        "Exclusivamente pelo número de imagens exportadas",
+        "Tempo pós-injeção, glicemia, técnica e reconstrução",
+        "Apenas pelo nome comercial do detector"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Tempo pós-injeção, glicemia, técnica e reconstrução.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "MEDICINA NUCLEAR — 30",
+      "pergunta": "No extravasamento de um radiofármaco durante a injeção, a conduta técnica adequada inclui:",
+      "alternativas": [
+        "Ignorar o local se a aquisição puder iniciar",
+        "Aumentar automaticamente a atividade sem avaliação",
+        "Excluir o registro para evitar viés",
+        "Registrar o evento e avaliar impacto na biodistribuição e quantificação"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Registrar o evento e avaliar impacto na biodistribuição e quantificação.",
+      "dificuldade": "dificil"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
