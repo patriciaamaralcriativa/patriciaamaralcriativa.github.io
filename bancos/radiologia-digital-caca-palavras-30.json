@@ -1,0 +1,126 @@
+{
+  "title": "Radiologia Digital — 30 pistas",
+  "level": "medio",
+  "rows": [
+    {
+      "question": "Pergunta 1: No sistema CR, qual receptor armazena a imagem latente?",
+      "answer": "PLACA"
+    },
+    {
+      "question": "Pergunta 2: No CR, qual etapa libera o sinal armazenado na placa?",
+      "answer": "VARREDURA"
+    },
+    {
+      "question": "Pergunta 3: Após a leitura do CR, por que se apaga a placa?",
+      "answer": "REMOVER"
+    },
+    {
+      "question": "Pergunta 4: Na DR indireta, qual componente transforma raios X em luz?",
+      "answer": "CINTILADOR"
+    },
+    {
+      "question": "Pergunta 5: Na DR direta com selênio amorfo, qual transformação ocorre primeiro?",
+      "answer": "RAIOS"
+    },
+    {
+      "question": "Pergunta 6: Em detectores indiretos, qual material cintilador é frequentemente utilizado?",
+      "answer": "IODETO"
+    },
+    {
+      "question": "Pergunta 7: Qual elemento converte luz do cintilador em sinal elétrico?",
+      "answer": "FOTODIODO"
+    },
+    {
+      "question": "Pergunta 8: O que representa a matriz de imagem digital?",
+      "answer": "ARRANJO"
+    },
+    {
+      "question": "Pergunta 9: Qual propriedade indica o tamanho da região representada por um pixel?",
+      "answer": "ESPAÇAMENTO"
+    },
+    {
+      "question": "Pergunta 10: Qual processo transforma sinal analógico em valores digitais?",
+      "answer": "CONVERSÃO"
+    },
+    {
+      "question": "Pergunta 11: Qual parâmetro descreve a quantidade de níveis de cinza codificáveis?",
+      "answer": "PROFUNDIDADE"
+    },
+    {
+      "question": "Pergunta 12: Qual ferramenta altera a amplitude dos valores de cinza exibidos?",
+      "answer": "LARGURA"
+    },
+    {
+      "question": "Pergunta 13: Qual ferramenta desloca o centro da faixa de valores exibidos?",
+      "answer": "NÍVEL"
+    },
+    {
+      "question": "Pergunta 14: Qual sistema armazena e distribui imagens médicas?",
+      "answer": "PACS"
+    },
+    {
+      "question": "Pergunta 15: Qual padrão organiza comunicação e arquivos de imagens médicas?",
+      "answer": "DICOM"
+    },
+    {
+      "question": "Pergunta 16: Qual sistema gerencia fluxos administrativos e informações radiológicas?",
+      "answer": "RIS"
+    },
+    {
+      "question": "Pergunta 17: Qual propriedade define a capacidade de distinguir detalhes pequenos?",
+      "answer": "RESOLUÇÃO"
+    },
+    {
+      "question": "Pergunta 18: Qual propriedade define a capacidade de distinguir pequenas diferenças de sinal?",
+      "answer": "RESOLUÇÃO"
+    },
+    {
+      "question": "Pergunta 19: Qual fenômeno aparece como granulação em imagens com poucos fótons detectados?",
+      "answer": "RUÍDO"
+    },
+    {
+      "question": "Pergunta 20: Qual prática reduz a exposição fora da anatomia necessária?",
+      "answer": "COLIMAÇÃO"
+    },
+    {
+      "question": "Pergunta 21: Qual conceito descreve aumento gradual de exposição sem necessidade clínica?",
+      "answer": "DOSE"
+    },
+    {
+      "question": "Pergunta 22: Qual recurso automático pode mascarar visualmente superexposição?",
+      "answer": "REESCALONAMENTO"
+    },
+    {
+      "question": "Pergunta 23: Qual recurso auxilia no controle da exposição recebida pelo detector?",
+      "answer": "ÍNDICE"
+    },
+    {
+      "question": "Pergunta 24: Qual cuidado é necessário ao comparar índices de exposição de fabricantes?",
+      "answer": "CONSIDERAR"
+    },
+    {
+      "question": "Pergunta 25: Qual mecanismo pode gerar imagem fantasma por sinal anterior no detector?",
+      "answer": "PERSISTÊNCIA"
+    },
+    {
+      "question": "Pergunta 26: Qual artefato pode surgir por defeito de linha ou coluna do detector?",
+      "answer": "FAIXA"
+    },
+    {
+      "question": "Pergunta 27: Qual procedimento verifica uniformidade e funcionamento do detector?",
+      "answer": "CONTROLE"
+    },
+    {
+      "question": "Pergunta 28: Qual cuidado deve anteceder a aplicação de recorte eletrônico?",
+      "answer": "COLIMAÇÃO"
+    },
+    {
+      "question": "Pergunta 29: Qual recurso permite visualizar diferenças de tons sem nova exposição?",
+      "answer": "AJUSTE"
+    },
+    {
+      "question": "Pergunta 30: Qual prática evita atribuir ao pós-processamento a correção de erro de aquisição?",
+      "answer": "REVISAR"
+    }
+  ]
+}
