@@ -1,0 +1,126 @@
+{
+  "title": "Física das Radiações",
+  "rows": [
+    {
+      "question": "Unidade SI da energia depositada por quilograma",
+      "answer": "GRAY"
+    },
+    {
+      "question": "Unidade SI de desintegrações por segundo",
+      "answer": "BECQUEREL"
+    },
+    {
+      "question": "Unidade SI de dose equivalente",
+      "answer": "SIEVERT"
+    },
+    {
+      "question": "Intervalo de redução da atividade pela metade",
+      "answer": "MEIAVIDA"
+    },
+    {
+      "question": "Quantidade de transformações nucleares por segundo",
+      "answer": "ATIVIDADE"
+    },
+    {
+      "question": "Redução da intensidade ao atravessar matéria",
+      "answer": "ATENUACAO"
+    },
+    {
+      "question": "Fração do feixe que atravessa um material",
+      "answer": "TRANSMISSAO"
+    },
+    {
+      "question": "Espessura que reduz intensidade primária pela metade",
+      "answer": "SEMIRREDUTORA"
+    },
+    {
+      "question": "Emissão contínua causada por desaceleração de elétrons",
+      "answer": "BREMSSTRAHLUNG"
+    },
+    {
+      "question": "Emissão por transição entre camadas eletrônicas",
+      "answer": "CARACTERISTICA"
+    },
+    {
+      "question": "Produto da corrente do tubo pelo tempo",
+      "answer": "MAS"
+    },
+    {
+      "question": "Tensão máxima do tubo",
+      "answer": "KVP"
+    },
+    {
+      "question": "Variação estatística de contagens de fótons",
+      "answer": "POISSON"
+    },
+    {
+      "question": "Flutuação decorrente de número finito de fótons",
+      "answer": "QUANTICO"
+    },
+    {
+      "question": "Grandeza que relaciona energia e frequência do fóton",
+      "answer": "PLANCK"
+    },
+    {
+      "question": "Distância entre cristas sucessivas de uma onda",
+      "answer": "COMPRIMENTO"
+    },
+    {
+      "question": "Número de ciclos por segundo",
+      "answer": "FREQUENCIA"
+    },
+    {
+      "question": "Redução da exposição pela interposição de material",
+      "answer": "BLINDAGEM"
+    },
+    {
+      "question": "Aumento da energia média após filtração",
+      "answer": "ENDURECIMENTO"
+    },
+    {
+      "question": "Remoção preferencial de fótons de baixa energia",
+      "answer": "FILTRACAO"
+    },
+    {
+      "question": "Grandeza medida em watts",
+      "answer": "POTENCIA"
+    },
+    {
+      "question": "Unidade SI de energia",
+      "answer": "JOULE"
+    },
+    {
+      "question": "Unidade SI de corrente elétrica",
+      "answer": "AMPERE"
+    },
+    {
+      "question": "Unidade SI de diferença de potencial",
+      "answer": "VOLT"
+    },
+    {
+      "question": "Unidade de energia comum em física radiológica",
+      "answer": "KEV"
+    },
+    {
+      "question": "Medida de dose por unidade de tempo",
+      "answer": "TAXA"
+    },
+    {
+      "question": "Quantidade de fótons por área",
+      "answer": "FLUENCIA"
+    },
+    {
+      "question": "Interação de fótons com matéria que reduz o feixe primário",
+      "answer": "INTERACAO"
+    },
+    {
+      "question": "Aumento da capacidade de atravessar matéria com maior energia",
+      "answer": "PENETRACAO"
+    },
+    {
+      "question": "Produção de raios X por elétrons acelerados no alvo",
+      "answer": "FRENAGEM"
+    }
+  ],
+  "status": "revisao-editorial-inicial"
+}
