@@ -1,0 +1,427 @@
+{
+  "title": "Física das Radiações",
+  "subject": "Física das Radiações",
+  "questions": [
+    {
+      "prompt": "Um tubo opera a 80 kVp. Qual é a energia máxima possível de um fóton de bremsstrahlung nesse feixe?",
+      "options": [
+        "40 keV",
+        "80 keV",
+        "160 keV",
+        "80 MeV"
+      ],
+      "answer_index": 1,
+      "explanation": "O máximo corresponde à energia adquirida por um elétron através da diferença de potencial de 80 kV.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma corrente de 250 mA atua por 0,08 s. Qual mAs é produzido?",
+      "options": [
+        "31,25 mAs",
+        "200 mAs",
+        "3,125 mAs",
+        "20 mAs"
+      ],
+      "answer_index": 3,
+      "explanation": "250 × 0,08 = 20 mAs.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um protocolo mantém 30 mAs ao passar de 150 para 300 mA. O tempo muda de 0,20 s para:",
+      "options": [
+        "0,10 s",
+        "0,05 s",
+        "0,30 s",
+        "0,40 s"
+      ],
+      "answer_index": 0,
+      "explanation": "30/300 = 0,10 s.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um feixe de 100 unidades atravessa uma camada semiespessura e depois outra idêntica. Qual intensidade permanece?",
+      "options": [
+        "50 unidades",
+        "75 unidades",
+        "25 unidades",
+        "12,5 unidades"
+      ],
+      "answer_index": 2,
+      "explanation": "Cada camada semirredutora reduz a intensidade pela metade: 100→50→25.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma fonte puntiforme fornece 80 µGy/h a 1 m em condições ideais. A 2 m, a taxa será aproximadamente:",
+      "options": [
+        "40 µGy/h",
+        "160 µGy/h",
+        "20 µGy/h",
+        "320 µGy/h"
+      ],
+      "answer_index": 2,
+      "explanation": "Dobrar distância reduz intensidade por fator quatro.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma fonte pontual tem taxa de 36 µSv/h a 2 m. A 3 m, em campo livre, qual valor aproximado?",
+      "options": [
+        "16 µSv/h",
+        "24 µSv/h",
+        "54 µSv/h",
+        "81 µSv/h"
+      ],
+      "answer_index": 0,
+      "explanation": "36 × (2/3)² = 16 µSv/h.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um detector registra 1200 contagens em 4 minutos. Qual taxa média?",
+      "options": [
+        "4800 contagens/min",
+        "200 contagens/min",
+        "1200 contagens/min",
+        "300 contagens/min"
+      ],
+      "answer_index": 3,
+      "explanation": "1200/4 = 300 contagens por minuto.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um radionuclídeo com meia-vida de 6 h inicia com 800 MBq. Após 18 h restam:",
+      "options": [
+        "200 MBq",
+        "100 MBq",
+        "400 MBq",
+        "50 MBq"
+      ],
+      "answer_index": 1,
+      "explanation": "Três meias-vidas: 800→400→200→100 MBq.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um material possui coeficiente de atenuação linear µ=0,2 cm⁻¹. Qual espessura semirredutora aproximada?",
+      "options": [
+        "3,47 cm",
+        "0,14 cm",
+        "5,00 cm",
+        "6,93 cm"
+      ],
+      "answer_index": 0,
+      "explanation": "CSR=ln(2)/µ≈0,693/0,2=3,47 cm.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Se o número de fótons detectados quadruplica e predomina ruído quântico, a relação sinal-ruído melhora por fator aproximado de:",
+      "options": [
+        "4",
+        "8",
+        "2",
+        "16"
+      ],
+      "answer_index": 2,
+      "explanation": "Para estatística de Poisson, SNR cresce aproximadamente com raiz quadrada de N.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um detector registra 400 fótons em média por elemento. O desvio-padrão quântico esperado é próximo de:",
+      "options": [
+        "40",
+        "20",
+        "200",
+        "400"
+      ],
+      "answer_index": 1,
+      "explanation": "Para Poisson, σ≈√400=20.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Qual grandeza expressa energia depositada por unidade de massa?",
+      "options": [
+        "Atividade",
+        "Fluência",
+        "Taxa de contagem",
+        "Dose absorvida"
+      ],
+      "answer_index": 3,
+      "explanation": "Dose absorvida é energia depositada por unidade de massa, em gray.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um tecido absorve 0,02 J em 0,5 kg. Qual dose absorvida média?",
+      "options": [
+        "0,01 Gy",
+        "0,25 Gy",
+        "0,04 Gy",
+        "25 Gy"
+      ],
+      "answer_index": 2,
+      "explanation": "D=0,02/0,5=0,04 J/kg=0,04 Gy.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um radionuclídeo apresenta 1 MBq. Isso corresponde a quantas desintegrações por segundo?",
+      "options": [
+        "1 milhão",
+        "Mil",
+        "Um bilhão",
+        "Uma por minuto"
+      ],
+      "answer_index": 0,
+      "explanation": "1 Bq equivale a uma desintegração por segundo.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Ao elevar kVp mantendo os demais fatores, qual efeito físico é mais esperado no espectro?",
+      "options": [
+        "Mesma energia máxima com apenas mais fótons",
+        "Maior energia máxima e alteração da distribuição de energias",
+        "Redução obrigatória da energia máxima",
+        "Transformação dos fótons em elétrons antes de sair do tubo"
+      ],
+      "answer_index": 1,
+      "explanation": "A energia máxima dos fótons acompanha a tensão de pico aplicada.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma filtração adicional remove preferencialmente fótons de baixa energia. Qual efeito é esperado?",
+      "options": [
+        "Redução da energia média por seleção dos mais energéticos",
+        "Aumento obrigatório do número total de fótons transmitidos",
+        "Eliminação completa da radiação espalhada",
+        "Aumento da energia média do feixe transmitido"
+      ],
+      "answer_index": 3,
+      "explanation": "O endurecimento do feixe aumenta a energia média do espectro transmitido.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "O número de fótons incidentes é 1000 e o transmitido é 300. Qual fração transmitida?",
+      "options": [
+        "0,30",
+        "0,70",
+        "3,33",
+        "0,03"
+      ],
+      "answer_index": 0,
+      "explanation": "Transmissão é 300/1000=0,30.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um feixe tem transmissão de 40% em uma barreira. Qual fração foi removida do feixe primário?",
+      "options": [
+        "40%",
+        "20%",
+        "60%",
+        "140%"
+      ],
+      "answer_index": 2,
+      "explanation": "Se 40% permanece, 60% foi atenuado do feixe primário.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Dois protocolos produzem 10 e 40 mAs, com kVp e condições constantes. Qual razão nominal de quantidade de radiação produzida?",
+      "options": [
+        "1:2",
+        "4:1",
+        "1:16",
+        "1:4"
+      ],
+      "answer_index": 3,
+      "explanation": "A quantidade de radiação produzida é aproximadamente proporcional ao mAs.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma fonte tem atividade inicial de 640 MBq e meia-vida de 2 h. Após 6 h sua atividade é:",
+      "options": [
+        "160 MBq",
+        "80 MBq",
+        "320 MBq",
+        "40 MBq"
+      ],
+      "answer_index": 1,
+      "explanation": "Três meias-vidas reduzem 640 para 80 MBq.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Em um circuito, a tensão é 100 V e a corrente 2 A. Qual potência elétrica?",
+      "options": [
+        "50 W",
+        "102 W",
+        "200 W",
+        "0,02 W"
+      ],
+      "answer_index": 2,
+      "explanation": "P=VI=100×2=200 W.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um aparelho fornece 120 kV e 0,2 A ao tubo por 0,1 s. Qual energia elétrica nominal entregue nesse intervalo?",
+      "options": [
+        "2400 J",
+        "240 J",
+        "24 J",
+        "24 000 J"
+      ],
+      "answer_index": 0,
+      "explanation": "E=VIt=120000×0,2×0,1=2400 J.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um feixe atravessa três camadas semirredutoras. Qual fração primária permanece?",
+      "options": [
+        "1/3",
+        "1/6",
+        "1/16",
+        "1/8"
+      ],
+      "answer_index": 3,
+      "explanation": "A fração é (1/2)³=1/8.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma imagem apresenta maior ruído após redução da exposição, mantendo processamento. Qual mecanismo físico pode explicar?",
+      "options": [
+        "Maior número de fótons e menor ruído quântico",
+        "Menor número de fótons detectados e maior flutuação relativa",
+        "Aumento da energia máxima causado pelo ruído",
+        "Desaparecimento do sinal eletrônico"
+      ],
+      "answer_index": 1,
+      "explanation": "Menos fótons aumentam a flutuação relativa de contagens.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um feixe de 60 keV tem comprimento de onda menor que outro de 30 keV porque:",
+      "options": [
+        "Energia e comprimento de onda são inversamente proporcionais",
+        "A velocidade dos fótons de 60 keV é duas vezes maior",
+        "Fótons de 30 keV não são eletromagnéticos",
+        "A frequência não se relaciona à energia"
+      ],
+      "answer_index": 0,
+      "explanation": "E=hc/λ, portanto maior energia implica menor comprimento de onda.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Um elétron é acelerado por 70 kV e perde toda a energia cinética em uma interação. Qual limite superior de energia de um único fóton gerado?",
+      "options": [
+        "140 keV",
+        "35 keV",
+        "7 MeV",
+        "70 keV"
+      ],
+      "answer_index": 3,
+      "explanation": "A energia do fóton não pode exceder a energia cinética disponível do elétron.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Uma taxa de dose de 12 µSv/h permanece constante por 45 min. Qual dose acumulada aproximada?",
+      "options": [
+        "16 µSv",
+        "27 µSv",
+        "9 µSv",
+        "0,27 µSv"
+      ],
+      "answer_index": 2,
+      "explanation": "45 min=0,75 h; 12×0,75=9 µSv.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "A atividade de uma fonte cai de 400 para 100 MBq em 10 dias. Qual meia-vida física?",
+      "options": [
+        "10 dias",
+        "5 dias",
+        "2,5 dias",
+        "20 dias"
+      ],
+      "answer_index": 1,
+      "explanation": "A redução para um quarto corresponde a duas meias-vidas em 10 dias.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Em uma região com 900 contagens e outra com 100, qual é a razão de contagens entre as regiões?",
+      "options": [
+        "3:1",
+        "1:9",
+        "90:1",
+        "9:1"
+      ],
+      "answer_index": 3,
+      "explanation": "900/100=9.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    },
+    {
+      "prompt": "Em um detector, uma região recebe 1600 fótons e outra 400. Se o ruído for quântico, a razão entre desvios-padrão é:",
+      "options": [
+        "2:1",
+        "4:1",
+        "1:2",
+        "16:1"
+      ],
+      "answer_index": 0,
+      "explanation": "√1600/√400=40/20=2.",
+      "time_limit_seconds": 60,
+      "points": 1000,
+      "topic": "Física das Radiações"
+    }
+  ],
+  "status": "revisao-editorial-inicial"
+}
