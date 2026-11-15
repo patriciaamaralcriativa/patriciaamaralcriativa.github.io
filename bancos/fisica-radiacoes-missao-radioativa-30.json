@@ -1,0 +1,132 @@
+{
+  "disciplina": "Física das Radiações",
+  "jogo": "Missão Radioativa",
+  "sets": [
+    [
+      [
+        "Que propriedade define a energia de um fóton eletromagnético?",
+        "Sua frequência"
+      ],
+      [
+        "O que acontece com o comprimento de onda quando a frequência aumenta no vácuo?",
+        "Diminui"
+      ],
+      [
+        "O que acontece com a energia do fóton quando a frequência aumenta?",
+        "Aumenta"
+      ],
+      [
+        "Que partícula possui massa de repouso nula?",
+        "Fóton"
+      ],
+      [
+        "Que partícula possui carga elétrica elementar negativa?",
+        "Elétron"
+      ],
+      [
+        "Que grandeza se mede em hertz?",
+        "Frequência"
+      ],
+      [
+        "O que se propaga no vácuo sem precisar de meio material?",
+        "Onda eletromagnética"
+      ],
+      [
+        "Qual estrutura atômica abriga prótons e nêutrons?",
+        "Núcleo"
+      ],
+      [
+        "Qual fenômeno ocorre sem retirada de elétron, mas com aumento de seu nível energético?",
+        "Excitação"
+      ],
+      [
+        "Que processo produz um íon ao retirar um elétron?",
+        "Ionização"
+      ]
+    ],
+    [
+      [
+        "Qual interação pode absorver totalmente um fóton e ejetar um elétron ligado?",
+        "Efeito fotoelétrico"
+      ],
+      [
+        "Qual interação espalha um fóton com perda de energia para um elétron?",
+        "Espalhamento Compton"
+      ],
+      [
+        "Qual emissão de raios X decorre da desaceleração de elétrons no alvo?",
+        "Radiação de frenagem"
+      ],
+      [
+        "Qual emissão de raios X decorre de transições entre camadas eletrônicas do alvo?",
+        "Radiação característica"
+      ],
+      [
+        "Qual eletrodo do tubo é o alvo dos elétrons acelerados?",
+        "Ânodo"
+      ],
+      [
+        "Qual eletrodo contém o filamento emissor de elétrons?",
+        "Cátodo"
+      ],
+      [
+        "Que processo libera elétrons do filamento aquecido?",
+        "Emissão termoiônica"
+      ],
+      [
+        "Qual componente limita a extensão geométrica do feixe?",
+        "Colimador"
+      ],
+      [
+        "Que processo remove preferencialmente fótons menos penetrantes?",
+        "Filtração"
+      ],
+      [
+        "Que fenômeno reduz a intensidade do feixe ao atravessar matéria?",
+        "Atenuação"
+      ]
+    ],
+    [
+      [
+        "Qual alteração tende a ocorrer na energia máxima dos fótons ao aumentar a tensão do tubo?",
+        "Aumento"
+      ],
+      [
+        "Qual alteração tende a ocorrer na quantidade de elétrons por unidade de tempo ao elevar a corrente do tubo?",
+        "Aumento"
+      ],
+      [
+        "Qual interação é favorecida pelo maior número atômico do material, nas energias diagnósticas mais baixas?",
+        "Fotoelétrica"
+      ],
+      [
+        "Qual grandeza indica a espessura necessária para reduzir a intensidade do feixe à metade?",
+        "Camada semirredutora"
+      ],
+      [
+        "Qual componente do tubo concentra elétrons em direção ao alvo?",
+        "Copo focalizador"
+      ],
+      [
+        "Qual propriedade do ânodo giratório distribui calor por uma área maior?",
+        "Rotação"
+      ],
+      [
+        "Que tipo de radiação ionizante é emitida pelo tubo de raios X?",
+        "Eletromagnética"
+      ],
+      [
+        "Que fenômeno descreve o desvio de fótons após interação com a matéria?",
+        "Espalhamento"
+      ],
+      [
+        "Que partícula é emitida no decaimento beta menos?",
+        "Elétron"
+      ],
+      [
+        "Qual processo nuclear transforma espontaneamente um núcleo instável?",
+        "Decaimento radioativo"
+      ]
+    ]
+  ]
+}
