@@ -5,14 +5,14 @@
     {
       "prompt": "Um cassete CR é exposto, mas ainda não foi processado. Onde está registrada a informação que dará origem à imagem?",
       "options": [
-        "Intensificador de imagem",
+        "Painel plano de conversão direta",
+        "Matriz de fotodiodos de silício amorfo",
         "Placa de fósforo fotoestimulável",
-        "Painel de selênio amorfo",
-        "Filme convencional"
+        "Cristal cintilador acoplado a TFT"
       ],
-      "answer_index": 1,
-      "explanation": "Resposta: Placa de fósforo fotoestimulável.",
-      "time_limit_seconds": 50,
+      "answer_index": 2,
+      "explanation": "Alternativa correta: Placa de fósforo fotoestimulável.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -20,14 +20,14 @@
     {
       "prompt": "Após a exposição de um cassete CR, qual etapa estimula a emissão de luz proporcional ao sinal armazenado?",
       "options": [
-        "Fixação química",
-        "Aquecimento do chassi",
         "Varredura a laser",
-        "Revelação química"
+        "Estimulação térmica uniforme",
+        "Leitura por fotodiodos sem estimulação",
+        "Descarga por campo elétrico no selênio"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: Varredura a laser.",
-      "time_limit_seconds": 50,
+      "answer_index": 0,
+      "explanation": "Alternativa correta: Varredura a laser.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -35,14 +35,14 @@
     {
       "prompt": "Uma placa CR apresenta vestígios do exame anterior. Qual etapa do ciclo de utilização deve ser investigada?",
       "options": [
-        "Aumentar a tensão do tubo",
-        "Reduzir o tamanho do pixel",
-        "Converter DICOM em JPEG",
+        "Equalizar a resposta do laser de leitura",
+        "Corrigir a atenuação do paciente",
+        "Restaurar a geometria de aquisição",
         "Remover sinal residual"
       ],
       "answer_index": 3,
-      "explanation": "Resposta: Remover sinal residual.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: Remover sinal residual.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -50,14 +50,14 @@
     {
       "prompt": "Um painel DR indireto recebe raios X. Qual componente produz a luz que será convertida em sinal elétrico?",
       "options": [
+        "Camada fotocondutora de selênio amorfo",
         "Cintilador",
-        "Fotodiodo isolado",
-        "Conversor analógico-digital",
-        "Grade antidifusora"
+        "Matriz de fotodiodos de silício amorfo",
+        "Conversor analógico-digital"
       ],
-      "answer_index": 0,
-      "explanation": "Resposta: Cintilador.",
-      "time_limit_seconds": 50,
+      "answer_index": 1,
+      "explanation": "Alternativa correta: Cintilador.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -65,14 +65,14 @@
     {
       "prompt": "Em um painel DR de conversão direta com selênio amorfo, que sinal é gerado inicialmente pela interação dos raios X?",
       "options": [
-        "Elétrons em ultrassom",
+        "Raios X em luz antes da coleta elétrica",
         "Raios X em cargas elétricas",
-        "Raios X em luz visível",
-        "Luz em calor"
+        "Luz incidente em cargas elétricas",
+        "Fótons de raios X em sinais acústicos"
       ],
       "answer_index": 1,
-      "explanation": "Resposta: Raios X em cargas elétricas.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: Raios X em cargas elétricas.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -80,14 +80,14 @@
     {
       "prompt": "Um serviço compara cintiladores para DR indireta. Qual material é empregado em vários painéis clínicos?",
       "options": [
-        "Chumbo puro",
-        "Tungstênio metálico",
-        "Iodeto de césio",
-        "Selênio amorfo"
+        "Selênio amorfo",
+        "Silício amorfo como cintilador",
+        "Telureto de cádmio como cintilador convencional",
+        "Iodeto de césio"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: Iodeto de césio.",
-      "time_limit_seconds": 50,
+      "answer_index": 3,
+      "explanation": "Alternativa correta: Iodeto de césio.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -95,14 +95,14 @@
     {
       "prompt": "Na DR indireta, a luz do cintilador precisa ser transformada em carga elétrica. Qual elemento realiza essa função?",
       "options": [
-        "Colimador",
-        "Filtro adicional",
-        "Tubo de raios X",
-        "Fotodiodo"
+        "Fotodiodo",
+        "Cristal cintilador",
+        "Transistor de película fina isoladamente",
+        "Fotocondutor de selênio amorfo"
       ],
-      "answer_index": 3,
-      "explanation": "Resposta: Fotodiodo.",
-      "time_limit_seconds": 50,
+      "answer_index": 0,
+      "explanation": "Alternativa correta: Fotodiodo.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -110,14 +110,14 @@
     {
       "prompt": "Uma imagem digital é descrita por linhas e colunas de valores numéricos. Como se chama essa organização?",
       "options": [
+        "Distribuição de intensidades em um histograma",
+        "Organização de quadros de uma série temporal",
         "Arranjo de pixels",
-        "Quantidade de exames no PACS",
-        "Tempo de exposição",
-        "Número de detectores de sala"
+        "Tabela de valores do índice de exposição"
       ],
-      "answer_index": 0,
-      "explanation": "Resposta: Arranjo de pixels.",
-      "time_limit_seconds": 50,
+      "answer_index": 2,
+      "explanation": "Alternativa correta: Arranjo de pixels.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -125,14 +125,14 @@
     {
       "prompt": "Dois receptores apresentam espaçamentos de pixel diferentes. Qual grandeza descreve a distância física entre centros de pixels vizinhos?",
       "options": [
-        "Largura de janela",
-        "Espaçamento de pixel",
-        "Tensão do tubo",
-        "Índice de exposição"
+        "Profundidade de bits por pixel",
+        "Dimensão física total do detector",
+        "Largura de janela de exibição",
+        "Espaçamento de pixel"
       ],
-      "answer_index": 1,
-      "explanation": "Resposta: Espaçamento de pixel.",
-      "time_limit_seconds": 50,
+      "answer_index": 3,
+      "explanation": "Alternativa correta: Espaçamento de pixel.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -140,14 +140,14 @@
     {
       "prompt": "Um detector fornece sinal elétrico contínuo que precisa ser representado numericamente. Qual etapa realiza essa transformação?",
       "options": [
-        "Fluorescência",
-        "Filtração",
+        "Amplificação analógica antes da leitura",
         "Conversão analógico-digital",
-        "Colimação"
+        "Conversão de raios X em luz no cintilador",
+        "Normalização de valores após aquisição"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: Conversão analógico-digital.",
-      "time_limit_seconds": 50,
+      "answer_index": 1,
+      "explanation": "Alternativa correta: Conversão analógico-digital.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -155,14 +155,14 @@
     {
       "prompt": "Um sistema passa a registrar mais níveis digitais de cinza. Qual característica de codificação foi ampliada?",
       "options": [
-        "Distância foco-receptor",
-        "Tamanho do campo",
-        "Velocidade do obturador",
-        "Profundidade de bits"
+        "Tamanho do pixel no detector",
+        "Número de projeções adquiridas",
+        "Profundidade de bits",
+        "Faixa de exposição do paciente"
       ],
-      "answer_index": 3,
-      "explanation": "Resposta: Profundidade de bits.",
-      "time_limit_seconds": 50,
+      "answer_index": 2,
+      "explanation": "Alternativa correta: Profundidade de bits.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -171,13 +171,13 @@
       "prompt": "Na estação de trabalho, o operador aumenta a faixa de valores representada na escala de cinza. Que controle foi modificado?",
       "options": [
         "Largura de janela",
-        "Tensão de pico",
-        "Distância foco-receptor",
-        "Tempo de leitura"
+        "Nível de janela",
+        "Profundidade de bits",
+        "Índice de exposição"
       ],
       "answer_index": 0,
-      "explanation": "Resposta: Largura de janela.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: Largura de janela.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -185,14 +185,14 @@
     {
       "prompt": "Um radiologista deseja deslocar o ponto central da faixa de valores exibida sem repetir a exposição. Qual ajuste utiliza?",
       "options": [
-        "Correção de posicionamento",
+        "Largura de janela",
         "Nível de janela",
-        "Colimação física",
-        "Filtração do feixe"
+        "Curva de calibração do detector",
+        "Espaçamento de pixel"
       ],
       "answer_index": 1,
-      "explanation": "Resposta: Nível de janela.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: Nível de janela.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -200,14 +200,14 @@
     {
       "prompt": "Um exame deve ficar disponível para consulta e distribuição entre setores. Qual sistema gerencia esse armazenamento de imagens?",
       "options": [
-        "HIS isoladamente",
-        "AEC",
-        "PACS",
-        "RIS isoladamente"
+        "RIS, responsável pelo fluxo administrativo",
+        "DICOM, padrão de interoperabilidade",
+        "HIS, responsável pela gestão hospitalar",
+        "PACS"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: PACS.",
-      "time_limit_seconds": 50,
+      "answer_index": 3,
+      "explanation": "Alternativa correta: PACS.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -215,14 +215,14 @@
     {
       "prompt": "Uma imagem deve manter dados do exame e interoperabilidade entre equipamentos de fabricantes diferentes. Qual padrão é empregado?",
       "options": [
-        "JPEG como padrão clínico universal",
-        "CSV",
-        "HTML",
-        "DICOM"
+        "PACS, sistema de armazenamento",
+        "RIS, sistema de informação radiológica",
+        "DICOM",
+        "HL7, padrão de troca de informações clínicas"
       ],
-      "answer_index": 3,
-      "explanation": "Resposta: DICOM.",
-      "time_limit_seconds": 50,
+      "answer_index": 2,
+      "explanation": "Alternativa correta: DICOM.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -231,13 +231,13 @@
       "prompt": "Uma equipe precisa integrar agendamento, dados do paciente e fluxo de exames radiológicos. Qual sistema é pertinente?",
       "options": [
         "RIS",
-        "PACS exclusivamente",
-        "Detector DR",
-        "Grade"
+        "PACS, para arquivamento e distribuição",
+        "DICOM, para formato e comunicação de imagens",
+        "HIS, para administração hospitalar geral"
       ],
       "answer_index": 0,
-      "explanation": "Resposta: RIS.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: RIS.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -245,14 +245,14 @@
     {
       "prompt": "Uma imagem apresenta estruturas próximas fundidas apesar do contraste suficiente. Qual propriedade de desempenho está comprometida?",
       "options": [
-        "Dose absorvida",
-        "Resolução espacial",
-        "Brilho do monitor",
-        "Tamanho do arquivo apenas"
+        "Resolução de contraste",
+        "Profundidade de bits",
+        "Uniformidade do detector",
+        "Resolução espacial"
       ],
-      "answer_index": 1,
-      "explanation": "Resposta: Resolução espacial.",
-      "time_limit_seconds": 50,
+      "answer_index": 3,
+      "explanation": "Alternativa correta: Resolução espacial.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -260,14 +260,14 @@
     {
       "prompt": "Dois tecidos produzem diferenças discretas de sinal. Qual capacidade do sistema permite discriminá-los?",
       "options": [
-        "Distância entre salas",
-        "Velocidade de impressão",
+        "Resolução espacial",
         "Resolução de contraste",
-        "Tamanho do chassi"
+        "Frequência espacial de Nyquist isoladamente",
+        "Distância foco-receptor"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: Resolução de contraste.",
-      "time_limit_seconds": 50,
+      "answer_index": 1,
+      "explanation": "Alternativa correta: Resolução de contraste.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -275,14 +275,14 @@
     {
       "prompt": "Uma radiografia digital parece adequadamente brilhante, mas contém granulação por poucas contagens. Qual fenômeno explica o problema?",
       "options": [
-        "Aliasing exclusivamente",
-        "Distorção geométrica",
-        "Persistência de imagem",
-        "Ruído quântico"
+        "Ruído quântico",
+        "Ruído eletrônico de leitura exclusivamente",
+        "Persistência residual do detector",
+        "Desfoque geométrico"
       ],
-      "answer_index": 3,
-      "explanation": "Resposta: Ruído quântico.",
-      "time_limit_seconds": 50,
+      "answer_index": 0,
+      "explanation": "Alternativa correta: Ruído quântico.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -290,14 +290,14 @@
     {
       "prompt": "Um operador abre campo muito maior que a região clínica solicitada. Qual intervenção reduz tecido irradiado e espalhamento?",
       "options": [
+        "Máscara digital de recorte após aquisição",
+        "Ampliação da distância objeto-receptor",
         "Colimação adequada",
-        "Ampliação indiscriminada do campo",
-        "Repetição preventiva",
-        "Retirada da grade em qualquer exame"
+        "Aumento da largura de janela"
       ],
-      "answer_index": 0,
-      "explanation": "Resposta: Colimação adequada.",
-      "time_limit_seconds": 50,
+      "answer_index": 2,
+      "explanation": "Alternativa correta: Colimação adequada.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -305,14 +305,14 @@
     {
       "prompt": "A imagem digital permanece aceitável, mas o serviço aumenta progressivamente os fatores de exposição. Qual problema de otimização ocorre?",
       "options": [
-        "Reconstrução volumétrica",
+        "Ruído quântico",
+        "Saturação do detector",
         "Dose creep",
-        "Fluorescência",
-        "Saturação óptica"
+        "Aliasing espacial"
       ],
-      "answer_index": 1,
-      "explanation": "Resposta: Dose creep.",
-      "time_limit_seconds": 50,
+      "answer_index": 2,
+      "explanation": "Alternativa correta: Dose creep.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -320,14 +320,14 @@
     {
       "prompt": "Uma exposição excessiva produz imagem com brilho aparentemente normal após processamento. Qual recurso pode ocultar o erro?",
       "options": [
-        "Fusão nuclear",
-        "Movimento do paciente",
         "Reescalonamento da imagem",
-        "Revelação química"
+        "Correção de campo plano",
+        "Ajuste de janela apenas",
+        "Compressão sem perdas"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: Reescalonamento da imagem.",
-      "time_limit_seconds": 50,
+      "answer_index": 0,
+      "explanation": "Alternativa correta: Reescalonamento da imagem.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -335,14 +335,14 @@
     {
       "prompt": "Uma imagem parece adequada, mas o operador deseja avaliar se o receptor recebeu exposição dentro da faixa esperada. Qual indicador consulta?",
       "options": [
-        "Tamanho do monitor",
-        "Nome do arquivo",
-        "Cor do chassi",
-        "Índice de exposição"
+        "Valor de pixel apresentado após janela",
+        "Índice de exposição",
+        "Profundidade de bits do arquivo",
+        "Índice de desvio do protocolo isoladamente"
       ],
-      "answer_index": 3,
-      "explanation": "Resposta: Índice de exposição.",
-      "time_limit_seconds": 50,
+      "answer_index": 1,
+      "explanation": "Alternativa correta: Índice de exposição.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -350,14 +350,14 @@
     {
       "prompt": "Dois equipamentos apresentam índices de exposição com escalas diferentes. O que deve ser conferido antes de compará-los?",
       "options": [
-        "Considerar definições e calibração",
-        "Assumir escala universal idêntica",
-        "Ignorar protocolos",
-        "Usar brilho do monitor como dose"
+        "Comparar valores sem verificar definição do indicador",
+        "Utilizar apenas brilho de apresentação",
+        "Converter diretamente índice em dose absorvida",
+        "Considerar definições e calibração"
       ],
-      "answer_index": 0,
-      "explanation": "Resposta: Considerar definições e calibração.",
-      "time_limit_seconds": 50,
+      "answer_index": 3,
+      "explanation": "Alternativa correta: Considerar definições e calibração.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -365,14 +365,14 @@
     {
       "prompt": "Uma sombra de exame anterior persiste no receptor digital, apesar de novo paciente. Qual artefato deve ser considerado?",
       "options": [
-        "Filtração inerente",
         "Persistência de imagem",
-        "Ampliação geométrica",
-        "Movimento voluntário"
+        "Ruído quântico por baixa contagem",
+        "Artefato de movimento",
+        "Aliasing por subamostragem"
       ],
-      "answer_index": 1,
-      "explanation": "Resposta: Persistência de imagem.",
-      "time_limit_seconds": 50,
+      "answer_index": 0,
+      "explanation": "Alternativa correta: Persistência de imagem.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -380,14 +380,14 @@
     {
       "prompt": "Uma radiografia apresenta linha vertical persistente na mesma posição em exames distintos. Qual falha do detector é plausível?",
       "options": [
-        "Rotação do paciente",
-        "Magnificação",
+        "Persistência de imagem",
+        "Ruído quântico distribuído",
         "Faixa linear",
-        "Desfoque por movimento"
+        "Distorção geométrica"
       ],
       "answer_index": 2,
-      "explanation": "Resposta: Faixa linear.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: Faixa linear.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -395,14 +395,14 @@
     {
       "prompt": "Uma área do detector apresenta resposta irregular mesmo com exposição uniforme. Qual rotina técnica permite identificar a falha?",
       "options": [
-        "Aumento automático do mAs",
-        "Recorte estético",
-        "Compressão irreversível",
+        "Verificação de uniformidade apenas por brilho do monitor",
+        "Reprocessamento de imagem como substituto da calibração",
+        "Comparação de tamanho do arquivo",
         "Controle de qualidade"
       ],
       "answer_index": 3,
-      "explanation": "Resposta: Controle de qualidade.",
-      "time_limit_seconds": 50,
+      "explanation": "Alternativa correta: Controle de qualidade.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -410,14 +410,14 @@
     {
       "prompt": "Um operador tenta substituir a delimitação física do feixe por máscara digital. Qual medida continua indispensável na aquisição?",
       "options": [
+        "Recorte eletrônico do campo após exposição",
         "Colimação física correta",
-        "Aumento do campo irradiado",
-        "Dispensa de identificação",
-        "Remoção do marcador anatômico"
+        "Ampliação do campo para facilitar pós-processamento",
+        "Correção de borda por software como substituto da colimação"
       ],
-      "answer_index": 0,
-      "explanation": "Resposta: Colimação física correta.",
-      "time_limit_seconds": 50,
+      "answer_index": 1,
+      "explanation": "Alternativa correta: Colimação física correta.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -425,14 +425,14 @@
     {
       "prompt": "Após adquirir a imagem, o radiologista deseja melhorar a visualização de tons sem irradiar novamente. Qual ferramenta utiliza?",
       "options": [
-        "Troca de colimador",
         "Ajuste de janela",
-        "Nova incidência",
-        "Aumento de mAs"
+        "Ajuste de exposição retroativo",
+        "Mudança da tensão do tubo após aquisição",
+        "Alteração do posicionamento físico por software"
       ],
-      "answer_index": 1,
-      "explanation": "Resposta: Ajuste de janela.",
-      "time_limit_seconds": 50,
+      "answer_index": 0,
+      "explanation": "Alternativa correta: Ajuste de janela.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
@@ -440,18 +440,18 @@
     {
       "prompt": "Uma incidência foi obtida com rotação anatômica inadequada. Qual decisão evita confiar indevidamente em pós-processamento?",
       "options": [
-        "Aumentar contraste indiscriminadamente",
-        "Excluir metadados",
-        "Revisar posicionamento e técnica",
-        "Aplicar nitidez máxima sempre"
+        "Aumento da profundidade de bits",
+        "Reescalonamento de tons para ocultar rotação",
+        "Correção de janela como substituto do posicionamento",
+        "Revisar posicionamento e técnica"
       ],
-      "answer_index": 2,
-      "explanation": "Resposta: Revisar posicionamento e técnica.",
-      "time_limit_seconds": 50,
+      "answer_index": 3,
+      "explanation": "Alternativa correta: Revisar posicionamento e técnica.",
+      "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Digital",
       "image_url": ""
     }
   ],
-  "status": "enunciados-contextualizados-pendente-revisao-de-distratores-e-validacao-em-partida"
+  "status": "30-enunciados-e-90-distratores-revistos-validacao-em-partida-pendente"
 }
