@@ -1,0 +1,126 @@
+{
+  "title": "Mamografia — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual sigla identifica a incidência craniocaudal?",
+      "answer": "CC"
+    },
+    {
+      "question": "Qual sigla identifica a incidência mediolateral oblíqua?",
+      "answer": "MLO"
+    },
+    {
+      "question": "Qual termo designa rastreamento mamográfico em assintomáticas?",
+      "answer": "CRIVAGEM"
+    },
+    {
+      "question": "Qual manobra desloca o implante posteriormente para expor tecido mamário?",
+      "answer": "EKLUND"
+    },
+    {
+      "question": "Qual incidência demonstra prolongamento da mama em direção à axila?",
+      "answer": "AXILAR"
+    },
+    {
+      "question": "Qual incidência ajuda a localizar achados junto à pele?",
+      "answer": "TANGENCIAL"
+    },
+    {
+      "question": "Qual técnica usa afastamento geométrico para detalhar calcificações?",
+      "answer": "MAGNIFICAÇÃO"
+    },
+    {
+      "question": "Qual manobra move tecidos superpostos sem mudar a incidência básica?",
+      "answer": "ENROLADA"
+    },
+    {
+      "question": "Qual procedimento espalha e estabiliza o tecido mamário entre superfícies?",
+      "answer": "COMPRESSÃO"
+    },
+    {
+      "question": "Qual estrutura muscular deve orientar a incidência MLO?",
+      "answer": "PEITORAL"
+    },
+    {
+      "question": "Qual região inferior deve ser aberta e demonstrada na MLO?",
+      "answer": "SULCO"
+    },
+    {
+      "question": "Qual estrutura mamária se estende para a região axilar?",
+      "answer": "CAUDA"
+    },
+    {
+      "question": "Qual tecido mamário é mais radiotransparente que o fibroglandular?",
+      "answer": "ADIPOSO"
+    },
+    {
+      "question": "Qual tecido mamário possui maior atenuação relativa ao adiposo?",
+      "answer": "FIBROGLANDULAR"
+    },
+    {
+      "question": "Qual estrutura transporta secreção produzida nos lóbulos?",
+      "answer": "DUCTO"
+    },
+    {
+      "question": "Qual unidade anatômica mamária contém ácinos secretórios?",
+      "answer": "LÓBULO"
+    },
+    {
+      "question": "Qual ligamento suspensor da mama recebe o nome de seu descritor?",
+      "answer": "COOPER"
+    },
+    {
+      "question": "Qual termo descreve lesão ocupando espaço com forma e margens?",
+      "answer": "MASSA"
+    },
+    {
+      "question": "Qual termo descreve pequenos depósitos de cálcio visíveis na mamografia?",
+      "answer": "MICROCALCIFICAÇÕES"
+    },
+    {
+      "question": "Qual margem radiada de uma massa é considerada suspeita?",
+      "answer": "ESPICULADA"
+    },
+    {
+      "question": "Qual termo descreve calcificações com morfologias variadas?",
+      "answer": "PLEOMÓRFICAS"
+    },
+    {
+      "question": "Qual distribuição de calcificações pode acompanhar um sistema ductal?",
+      "answer": "SEGMENTAR"
+    },
+    {
+      "question": "Qual padrão de calcificação pode acompanhar trajeto de vasos?",
+      "answer": "VASCULAR"
+    },
+    {
+      "question": "Qual termo descreve densidade focal sem características definidas de massa?",
+      "answer": "ASSIMETRIA"
+    },
+    {
+      "question": "Qual estrutura artificial pode limitar inclusão do parênquima na mamografia?",
+      "answer": "PRÓTESE"
+    },
+    {
+      "question": "Qual estrutura fibrosa pode limitar deslocamento de implante?",
+      "answer": "CÁPSULA"
+    },
+    {
+      "question": "Qual categoria BI-RADS descreve achado provavelmente benigno?",
+      "answer": "TRÊS"
+    },
+    {
+      "question": "Qual categoria BI-RADS descreve avaliação incompleta?",
+      "answer": "ZERO"
+    },
+    {
+      "question": "Qual categoria BI-RADS descreve achado altamente sugestivo de malignidade?",
+      "answer": "CINCO"
+    },
+    {
+      "question": "Qual categoria BI-RADS descreve malignidade comprovada?",
+      "answer": "SEIS"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
