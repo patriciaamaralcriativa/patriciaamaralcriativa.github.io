@@ -1,0 +1,132 @@
+{
+  "disciplina": "Densitometria Óssea",
+  "sets": [
+    [
+      [
+        "Método de duas energias usado para medir densidade mineral óssea areal",
+        "DXA"
+      ],
+      [
+        "Escore que compara DMO com adultos jovens de referência",
+        "T-score"
+      ],
+      [
+        "Escore que compara DMO com pessoas de mesma faixa etária",
+        "Z-score"
+      ],
+      [
+        "Densidade mineral óssea medida por área projetada",
+        "DMO"
+      ],
+      [
+        "Conteúdo mineral ósseo em unidade de massa",
+        "BMC"
+      ],
+      [
+        "Região lombar usualmente avaliada em adultos",
+        "L1–L4"
+      ],
+      [
+        "Região proximal do fêmur aceita para classificação",
+        "Colo femoral"
+      ],
+      [
+        "Outra região femoral aceita para classificação",
+        "Quadril total"
+      ],
+      [
+        "Sítio alternativo indicado em condições específicas",
+        "Rádio 33%"
+      ],
+      [
+        "Parâmetro que estima variação mínima estatisticamente significativa",
+        "LSC"
+      ]
+    ],
+    [
+      [
+        "Mudança na DMO que supera o erro de precisão validado",
+        "Mudança significativa"
+      ],
+      [
+        "Interferência óssea degenerativa que pode elevar a DMO lombar",
+        "Osteófito"
+      ],
+      [
+        "Material implantado que pode invalidar a medida local",
+        "Prótese"
+      ],
+      [
+        "Posicionamento que padroniza o colo femoral na DXA",
+        "Rotação interna"
+      ],
+      [
+        "Região de interesse definida para análise",
+        "ROI"
+      ],
+      [
+        "Teste de repetibilidade das medidas do serviço",
+        "Precisão"
+      ],
+      [
+        "Procedimento necessário para comparar aparelhos diferentes",
+        "Calibração cruzada"
+      ],
+      [
+        "Parâmetro derivado de textura lombar complementar à DMO",
+        "TBS"
+      ],
+      [
+        "Ferramenta que estima risco de fratura em dez anos",
+        "FRAX"
+      ],
+      [
+        "Fratura que ocorre após trauma de baixa energia",
+        "Fratura por fragilidade"
+      ]
+    ],
+    [
+      [
+        "T-score igual ou inferior a −2,5 em sítio válido indica",
+        "Osteoporose"
+      ],
+      [
+        "T-score entre −1,0 e −2,5, sem incluir −2,5, indica",
+        "Baixa massa óssea"
+      ],
+      [
+        "Z-score igual ou inferior a −2,0 indica",
+        "Abaixo do esperado para a idade"
+      ],
+      [
+        "Interferência arterial calcificada que pode elevar DMO lombar",
+        "Calcificação vascular"
+      ],
+      [
+        "Avaliação que procura fraturas vertebrais por imagem",
+        "VFA"
+      ],
+      [
+        "Alteração do alinhamento que pode dificultar análise lombar",
+        "Escoliose"
+      ],
+      [
+        "Procedimento que delimita áreas ósseas a analisar",
+        "Segmentação"
+      ],
+      [
+        "Medida de referência para comparar evolução em exames seriados",
+        "DMO em g/cm²"
+      ],
+      [
+        "Fator de risco clínico integrado ao FRAX",
+        "Fratura prévia"
+      ],
+      [
+        "Exame periódico do aparelho para verificar estabilidade",
+        "Controle de qualidade"
+      ]
+    ]
+  ],
+  "status": "rascunho-para-revisao"
+}
