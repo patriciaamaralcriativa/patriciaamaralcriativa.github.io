@@ -21,7 +21,7 @@
       "prompt": "Em aquisição helicoidal com colimação total de 40 mm e avanço de 60 mm por rotação, o pitch é:",
       "options": [
         "1,5",
-        "1,5",
+        "2,0",
         "0,67",
         "1,0"
       ],
@@ -35,7 +35,7 @@
     {
       "prompt": "A escolha de cortes reconstruídos mais finos em TC, mantendo a aquisição, geralmente:",
       "options": [
-        "Melhora a resolução no eixo z, mas aumenta o ruído por imagem",
+        "Melhora a resolução longitudinal e reduz necessariamente o ruído",
         "Reduz o ruído sem alterar a resolução longitudinal",
         "Aumenta o campo de visão anatômico",
         "Melhora a resolução no eixo z, mas aumenta o ruído por imagem"
@@ -50,7 +50,7 @@
     {
       "prompt": "Uma pequena calcificação perde conspicuidade em corte espesso devido principalmente a:",
       "options": [
-        "Efeito de volume parcial",
+        "Artefato de movimento",
         "Efeito de volume parcial",
         "Artefato de endurecimento do feixe",
         "Desalinhamento do centro isocêntrico"
@@ -65,7 +65,7 @@
     {
       "prompt": "Em TC, uma estrutura mede aproximadamente −950 HU. O material mais compatível é:",
       "options": [
-        "Ar",
+        "Músculo esquelético",
         "Gordura",
         "Água",
         "Ar"
@@ -80,7 +80,7 @@
     {
       "prompt": "Para avaliar parênquima pulmonar e mediastino na mesma aquisição, a conduta habitual é:",
       "options": [
-        "Aplicar janelas distintas aos mesmos dados reconstruídos",
+        "Usar uma única janela intermediária para todas as estruturas",
         "Aplicar janelas distintas aos mesmos dados reconstruídos",
         "Repetir sempre a aquisição com kVp diferente",
         "Modificar a concentração do contraste após aquisição"
@@ -96,7 +96,7 @@
       "prompt": "Uma janela muito estreita para estruturas com grande variação de HU tende a:",
       "options": [
         "Aumentar contraste aparente em faixa limitada e saturar valores externos",
-        "Aumentar contraste aparente em faixa limitada e saturar valores externos",
+        "Ampliar a faixa de HU visível, reduzindo a diferenciação de pequenas diferenças",
         "Mostrar toda a amplitude de atenuações com contraste uniforme",
         "Alterar fisicamente o valor HU armazenado"
       ],
@@ -110,7 +110,7 @@
     {
       "prompt": "No exame de abdome, o contraste intravenoso é usado principalmente para:",
       "options": [
-        "Caracterizar realce vascular e parenquimatoso em fases apropriadas",
+        "Uniformizar o realce de todos os órgãos independentemente da fase",
         "Aumentar o HU de todas as estruturas de forma igual",
         "Caracterizar realce vascular e parenquimatoso em fases apropriadas",
         "Eliminar o efeito de volume parcial"
@@ -125,7 +125,7 @@
     {
       "prompt": "Uma aquisição arterial feita tarde demais pode comprometer a avaliação de artérias porque:",
       "options": [
-        "A relação de realce entre artérias e tecidos adjacentes muda com o tempo",
+        "O pico arterial permanece constante até o término do exame",
         "A relação de realce entre artérias e tecidos adjacentes muda com o tempo",
         "O contraste deixa de atenuar raios X após 30 segundos",
         "A matriz do detector passa a ser menor"
@@ -140,7 +140,7 @@
     {
       "prompt": "O bolus tracking permite iniciar a aquisição a partir de:",
       "options": [
-        "Um limiar de atenuação medido em região de interesse vascular",
+        "Um intervalo fixo contado a partir do início do posicionamento",
         "Uma espessura de corte previamente reconstruída",
         "Uma janela mediastinal fixa",
         "Um limiar de atenuação medido em região de interesse vascular"
@@ -155,7 +155,7 @@
     {
       "prompt": "Na angiotomografia pulmonar, uma ROI para disparo costuma ser posicionada:",
       "options": [
-        "No tronco da artéria pulmonar",
+        "Na aorta ascendente",
         "Na veia cava inferior",
         "No tronco da artéria pulmonar",
         "Na aorta abdominal"
@@ -171,7 +171,7 @@
       "prompt": "Para demonstrar planos coronal e sagital com boa definição a partir de TC axial, é vantajoso:",
       "options": [
         "Adquirir dados com voxels próximos do isotrópico",
-        "Adquirir dados com voxels próximos do isotrópico",
+        "Usar voxels muito alongados no eixo longitudinal",
         "Reconstruir apenas cortes axiais muito espessos",
         "Aumentar a largura da janela"
       ],
@@ -185,7 +185,7 @@
     {
       "prompt": "MPR difere de MIP porque:",
       "options": [
-        "MPR reamostra o volume em planos; MIP seleciona valores máximos ao longo de projeções",
+        "MPR seleciona somente voxels de maior HU; MIP mostra um plano anatômico",
         "MPR reamostra o volume em planos; MIP seleciona valores máximos ao longo de projeções",
         "MPR mostra somente vasos contrastados; MIP somente ossos",
         "MPR exige nova irradiação; MIP não"
@@ -200,7 +200,7 @@
     {
       "prompt": "A MIP pode dificultar a análise de vaso opacificado quando há:",
       "options": [
-        "Calcificação densa sobreposta ao trajeto na projeção",
+        "Baixa atenuação homogênea da gordura ao redor",
         "Apenas gordura adjacente de baixa atenuação",
         "Calcificação densa sobreposta ao trajeto na projeção",
         "Água de HU próximo de zero fora do vaso"
@@ -216,7 +216,7 @@
       "prompt": "Para visualizar vias aéreas com reconstrução 3D, a segmentação adequada depende sobretudo de:",
       "options": [
         "Limiares de atenuação e delimitação anatômica coerentes",
-        "Limiares de atenuação e delimitação anatômica coerentes",
+        "Somente da espessura de corte, independentemente da seleção dos tecidos",
         "Apenas aumento da dose de contraste intravenoso",
         "Seleção de janela óssea na tela sem segmentação"
       ],
@@ -230,7 +230,7 @@
     {
       "prompt": "Em TC com contraste, uma história de reação prévia ao mesmo tipo de agente exige:",
       "options": [
-        "Avaliação de risco e conduta segundo protocolo antes da administração",
+        "Trocar automaticamente para maior volume de contraste",
         "Administração automática sem revisão por ser exame de TC",
         "Aumento da velocidade de injeção para reduzir reação",
         "Avaliação de risco e conduta segundo protocolo antes da administração"
@@ -245,7 +245,7 @@
     {
       "prompt": "Em paciente com função renal comprometida, antes de contraste iodado intravenoso deve-se:",
       "options": [
-        "Avaliar indicação, contexto clínico e função renal conforme protocolo",
+        "Ignorar a função renal se o exame for de urgência",
         "Presumir contraindicação absoluta em qualquer alteração de creatinina",
         "Avaliar indicação, contexto clínico e função renal conforme protocolo",
         "Substituir contraste iodado por bário intravenoso"
@@ -260,7 +260,7 @@
     {
       "prompt": "Extravasamento de contraste durante injeção exige inicialmente:",
       "options": [
-        "Interromper injeção e avaliar o local segundo protocolo",
+        "Continuar a infusão até confirmar edema visível",
         "Interromper injeção e avaliar o local segundo protocolo",
         "Aumentar pressão para completar o volume",
         "Manter infusão e apenas reduzir fluxo"
@@ -275,7 +275,7 @@
     {
       "prompt": "A fase portal em TC abdominal é particularmente útil para:",
       "options": [
-        "Avaliar realce parenquimatoso abdominal e sistema porta",
+        "Avaliar exclusivamente o sistema coletor já opacificado",
         "Demonstrar exclusivamente artérias antes de realce venoso",
         "Identificar apenas cálculos sem contraste",
         "Avaliar realce parenquimatoso abdominal e sistema porta"
@@ -291,7 +291,7 @@
       "prompt": "A fase excretora em uro-TC busca principalmente:",
       "options": [
         "Opacificação do sistema coletor e vias urinárias",
-        "Opacificação do sistema coletor e vias urinárias",
+        "Avaliar o parênquima renal antes da chegada do contraste",
         "Máximo realce arterial renal",
         "Ausência completa de contraste nos ureteres"
       ],
@@ -305,7 +305,7 @@
     {
       "prompt": "Um cálculo urinário pode ser avaliado em TC sem contraste porque:",
       "options": [
-        "Sua atenuação pode diferir dos tecidos e da urina circundantes",
+        "Sua detecção depende exclusivamente de realce vascular",
         "Somente contraste intravenoso torna cálculos visíveis",
         "Sua atenuação pode diferir dos tecidos e da urina circundantes",
         "A janela pulmonar converte cálculos em ar"
@@ -320,7 +320,7 @@
     {
       "prompt": "O FOV de reconstrução menor, mantendo matriz 512 × 512, resulta em:",
       "options": [
-        "Pixels menores no plano reconstruído",
+        "Pixels maiores porque a matriz permanece constante",
         "Pixels maiores e menor amostragem espacial",
         "Mais fileiras físicas de detectores",
         "Pixels menores no plano reconstruído"
@@ -335,7 +335,7 @@
     {
       "prompt": "Com FOV de 256 mm e matriz de 512, o pixel no plano mede aproximadamente:",
       "options": [
-        "0,5 mm",
+        "0,25 mm",
         "0,5 mm",
         "2 mm",
         "1 mm"
@@ -351,7 +351,7 @@
       "prompt": "A rotação inadequada da cabeça na TC de crânio pode:",
       "options": [
         "Produzir assimetria de planos e dificultar comparações anatômicas",
-        "Produzir assimetria de planos e dificultar comparações anatômicas",
+        "Corrigir automaticamente artefatos metálicos",
         "Alterar a atenuação física da água",
         "Eliminar a necessidade de reformatação"
       ],
@@ -365,7 +365,7 @@
     {
       "prompt": "Na avaliação de hemorragia intracraniana aguda, a TC sem contraste é frequentemente escolhida porque:",
       "options": [
-        "Sangue agudo costuma apresentar hiperatenuação em relação ao parênquima",
+        "Sangue agudo apresenta sempre a mesma atenuação do líquor",
         "Contraste intravenoso é indispensável para visualizar sangue agudo",
         "Sangue agudo tem sempre HU igual ao ar",
         "Sangue agudo costuma apresentar hiperatenuação em relação ao parênquima"
@@ -381,7 +381,7 @@
       "prompt": "A diferença entre espessura de aquisição e intervalo de reconstrução é que:",
       "options": [
         "O intervalo determina o espaçamento entre imagens, podendo ser menor que a espessura",
-        "O intervalo determina o espaçamento entre imagens, podendo ser menor que a espessura",
+        "O intervalo representa a duração de cada rotação do tubo",
         "São necessariamente iguais em qualquer TC",
         "O intervalo define apenas a energia do tubo"
       ],
@@ -395,7 +395,7 @@
     {
       "prompt": "Reconstruções sobrepostas são úteis para MPR porque:",
       "options": [
-        "Reduzem degraus de amostragem longitudinal entre imagens",
+        "Eliminam por completo artefatos de movimento",
         "Aumentam a dose depois que a aquisição terminou",
         "Reduzem degraus de amostragem longitudinal entre imagens",
         "Diminuem automaticamente a resolução do detector"
@@ -410,7 +410,7 @@
     {
       "prompt": "A correção de heterogeneidade por algoritmos de reconstrução depende de:",
       "options": [
-        "Dados de projeção e modelo matemático aplicado à reconstrução",
+        "Somente da escolha de janela no monitor",
         "Dados de projeção e modelo matemático aplicado à reconstrução",
         "Somente da cor de exibição da imagem",
         "Apenas da espessura física da mesa"
@@ -426,7 +426,7 @@
       "prompt": "Na avaliação de vasos tortuosos, uma reconstrução curva (CPR) permite:",
       "options": [
         "Seguir o eixo do vaso ao longo de seu trajeto",
-        "Seguir o eixo do vaso ao longo de seu trajeto",
+        "Projetar o vaso em linha reta sem acompanhar suas curvas",
         "Eliminar placas calcificadas dos dados originais",
         "Transformar uma imagem sem contraste em angiografia"
       ],
@@ -440,7 +440,7 @@
     {
       "prompt": "Se o paciente se move durante a aquisição, a melhor prevenção técnica envolve:",
       "options": [
-        "Orientação, imobilização apropriada e protocolo compatível com sua capacidade de colaboração",
+        "Corrigir retrospectivamente qualquer movimento ajustando a janela",
         "Aumentar apenas a largura de janela após a aquisição",
         "Reduzir o FOV de reconstrução para corrigir movimento",
         "Orientação, imobilização apropriada e protocolo compatível com sua capacidade de colaboração"
@@ -453,5 +453,5 @@
       "difficulty": "dificil"
     }
   ],
-  "status": "revisado"
+  "status": "revisao-de-alternativas-realizada-pendente-validacao-cientifica-completa"
 }
