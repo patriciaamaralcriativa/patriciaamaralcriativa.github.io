@@ -1,0 +1,396 @@
+{
+  "disciplina": "Densitometria Óssea",
+  "questoes": [
+    {
+      "titulo": "DENSITOMETRIA — 1",
+      "pergunta": "Uma DXA lombar mostra L1–L4 com valores discrepantes e osteófitos em L3. Qual é a melhor primeira conduta?",
+      "alternativas": [
+        "Substituir L3 por T12",
+        "Inspecionar imagem e excluir vértebras afetadas conforme critérios",
+        "Calcular a média sem revisão",
+        "Utilizar apenas o maior T-score"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Inspecionar imagem e excluir vértebras afetadas conforme critérios.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 2",
+      "pergunta": "Após cirurgia com implante metálico em L4, a comparação longitudinal da coluna deve:",
+      "alternativas": [
+        "Usar apenas a imagem colorida",
+        "Ignorar o implante se a idade não mudou",
+        "Reavaliar níveis válidos e comparabilidade das regiões analisadas",
+        "Manter L4 sem ajuste para preservar quatro níveis"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Reavaliar níveis válidos e comparabilidade das regiões analisadas.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 3",
+      "pergunta": "Dois exames DXA têm diferença de 1,5%, mas LSC do serviço é 3%. A conclusão adequada é:",
+      "alternativas": [
+        "Ganho ósseo comprovado",
+        "Perda óssea comprovada",
+        "Falha terapêutica obrigatória",
+        "Variação não demonstrada como significativa"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Variação não demonstrada como significativa.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 4",
+      "pergunta": "Uma paciente tem T-score -2,6 no colo femoral e -1,7 na coluna válida. Qual classificação densitométrica se aplica?",
+      "alternativas": [
+        "Osteoporose pelo menor T-score de sítio diagnóstico válido",
+        "Baixa massa óssea pela média dos sítios",
+        "Normalidade pelo quadril total",
+        "Classificação pelo maior T-score"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Osteoporose pelo menor T-score de sítio diagnóstico válido.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 5",
+      "pergunta": "Em paciente com artrose lombar avançada, DMO lombar elevada e DMO femoral baixa, deve-se:",
+      "alternativas": [
+        "Usar média simples dos T-scores",
+        "Considerar interferência degenerativa na coluna",
+        "Assumir melhora óssea lombar real",
+        "Desconsiderar automaticamente todo quadril"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Considerar interferência degenerativa na coluna.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 6",
+      "pergunta": "Na comparação de DXA entre aparelhos sem calibração cruzada, o principal risco é:",
+      "alternativas": [
+        "Modificar o conteúdo mineral ósseo real",
+        "Impedir a leitura do relatório",
+        "Interpretar diferenças sistemáticas como mudança biológica",
+        "Alterar a idade cronológica do paciente"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Interpretar diferenças sistemáticas como mudança biológica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 7",
+      "pergunta": "Uma paciente apresenta T-score -2,4 e fratura por fragilidade prévia. A avaliação deve:",
+      "alternativas": [
+        "Ignorar a fratura pelo T-score",
+        "Classificar apenas pela média lombar",
+        "Excluir o histórico clínico",
+        "Integrar fratura e risco clínico além da classificação densitométrica"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Integrar fratura e risco clínico além da classificação densitométrica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 8",
+      "pergunta": "Em mulher pré-menopáusica com Z-score -2,2, o laudo deve priorizar:",
+      "alternativas": [
+        "Abaixo do esperado para a idade e investigação contextual",
+        "Osteoporose OMS pelo Z-score",
+        "Osteoporose grave automática",
+        "Normalidade pela idade"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Abaixo do esperado para a idade e investigação contextual.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 9",
+      "pergunta": "Em uma criança de baixa estatura, a interpretação de DXA sem ajuste pode:",
+      "alternativas": [
+        "Equivaler ao T-score adulto",
+        "Subestimar massa óssea relativa ao tamanho corporal",
+        "Aumentar sempre a DMO volumétrica",
+        "Eliminar influência do crescimento"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Subestimar massa óssea relativa ao tamanho corporal.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 10",
+      "pergunta": "Se uma região DXA contém apenas uma vértebra avaliável, o resultado deve:",
+      "alternativas": [
+        "Ser duplicado para duas vértebras",
+        "Ser convertido em TBS",
+        "Não sustentar diagnóstico densitométrico lombar isolado",
+        "Ser usado como média lombar"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Não sustentar diagnóstico densitométrico lombar isolado.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 11",
+      "pergunta": "Na DXA de quadril, rotação externa inadequada pode:",
+      "alternativas": [
+        "Modificar a composição química do osso",
+        "Eliminar toda sobreposição do trocânter",
+        "Aumentar a energia dos fótons",
+        "Alterar projeção e medidas da região femoral"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Alterar projeção e medidas da região femoral.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 12",
+      "pergunta": "Em monitoramento, a troca de ROI entre exames pode:",
+      "alternativas": [
+        "Produzir variação artificial de DMO",
+        "Corrigir automaticamente diferenças de calibração",
+        "Garantir maior precisão",
+        "Substituir estudo de precisão"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Produzir variação artificial de DMO.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 13",
+      "pergunta": "O TBS baixo com DMO não osteoporótica deve ser interpretado como:",
+      "alternativas": [
+        "Indicação automática de cirurgia",
+        "Informação adicional de risco, não diagnóstico isolado",
+        "Osteoporose obrigatória pelo TBS",
+        "Erro definitivo de DXA"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Informação adicional de risco, não diagnóstico isolado.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 14",
+      "pergunta": "Quando o quadril esquerdo possui prótese e o direito está íntegro, o exame diagnóstico deve:",
+      "alternativas": [
+        "Incluir o metal na ROI",
+        "Usar apenas triângulo de Ward",
+        "Usar o quadril direito conforme protocolo",
+        "Analisar ambos e calcular média"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Usar o quadril direito conforme protocolo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 15",
+      "pergunta": "Na avaliação de hiperparatireoidismo, incluir rádio 33% pode ser útil por:",
+      "alternativas": [
+        "Substituir qualquer avaliação clínica",
+        "Medir apenas cartilagem articular",
+        "Eliminar variação de posicionamento",
+        "Avaliar sítio rico em osso cortical"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Avaliar sítio rico em osso cortical.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 16",
+      "pergunta": "Em DXA, a diferença entre DMO areal e volumétrica é importante porque:",
+      "alternativas": [
+        "A medida areal depende da projeção e tamanho ósseo",
+        "A DXA mede sempre volume tridimensional",
+        "A DMO areal independe de geometria",
+        "A DMO volumétrica é medida diretamente na DXA padrão"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: A medida areal depende da projeção e tamanho ósseo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 17",
+      "pergunta": "Em exame lombar, rotação e segmentação incorretas exigem:",
+      "alternativas": [
+        "Aceitação automática pelo software",
+        "Revisão da imagem e ROI antes do laudo",
+        "Ajuste apenas da escala de cores",
+        "Correção pelo T-score femoral"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Revisão da imagem e ROI antes do laudo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 18",
+      "pergunta": "Em paciente com perda de estatura e dor dorsal, a avaliação clínica pode exigir:",
+      "alternativas": [
+        "Somente ajuste de contraste",
+        "Exclusão de avaliação vertebral",
+        "Investigação de fraturas vertebrais",
+        "Apenas repetição do T-score"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Investigação de fraturas vertebrais.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 19",
+      "pergunta": "Um Z-score -1,0 em adulto jovem é interpretado, em geral, como:",
+      "alternativas": [
+        "Osteoporose pela OMS",
+        "Abaixo do esperado para a idade",
+        "Osteoporose grave",
+        "Dentro do esperado para a idade"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Dentro do esperado para a idade.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 20",
+      "pergunta": "A precisão do serviço é avaliada preferencialmente por:",
+      "alternativas": [
+        "Medidas repetidas e análise estatística de erro",
+        "Apenas especificação comercial",
+        "Comparação visual de cores",
+        "Somente número de pacientes atendidos"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Medidas repetidas e análise estatística de erro.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 21",
+      "pergunta": "Ao usar FRAX com DMO, o sítio previsto é:",
+      "alternativas": [
+        "Quadril total exclusivamente",
+        "Colo femoral",
+        "L1 isolada",
+        "Rádio ultradistal"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Colo femoral.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 22",
+      "pergunta": "Uma DXA apresenta artefato de contraste radiopaco intestinal sobre a coluna. A melhor ação é:",
+      "alternativas": [
+        "Corrigir apenas brilho do monitor",
+        "Reduzir a área da ROI aleatoriamente",
+        "Avaliar adiamento ou exclusão de região afetada conforme protocolo",
+        "Aceitar a medida sem inspeção"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Avaliar adiamento ou exclusão de região afetada conforme protocolo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 23",
+      "pergunta": "A classificação OMS em mulher pós-menopáusica não deve usar como sítio diagnóstico:",
+      "alternativas": [
+        "Colo femoral",
+        "Quadril total",
+        "Coluna lombar válida",
+        "Triângulo de Ward isolado"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Triângulo de Ward isolado.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 24",
+      "pergunta": "Na comparação longitudinal, mudar de L1–L4 para L2–L4 sem justificativa pode:",
+      "alternativas": [
+        "Comprometer comparabilidade dos resultados",
+        "Garantir aumento de precisão",
+        "Eliminar erro de posicionamento",
+        "Padronizar todos os aparelhos"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Comprometer comparabilidade dos resultados.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 25",
+      "pergunta": "Em suspeita de fratura vertebral por fragilidade, a DXA isolada deve ser complementada conforme indicação por:",
+      "alternativas": [
+        "Aumento do número de pixels",
+        "Avaliação vertebral por imagem e contexto clínico",
+        "Apenas média dos T-scores",
+        "Somente escore de precisão"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Avaliação vertebral por imagem e contexto clínico.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 26",
+      "pergunta": "A escolha do menor T-score diagnóstico deve considerar:",
+      "alternativas": [
+        "Apenas região com maior área",
+        "Somente a coluna",
+        "Somente sítios aceitos e tecnicamente válidos",
+        "Qualquer ROI disponível no software"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Somente sítios aceitos e tecnicamente válidos.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 27",
+      "pergunta": "O monitoramento após mudança de aparelho requer:",
+      "alternativas": [
+        "Comparação direta irrestrita",
+        "Uso do mesmo T-score como garantia",
+        "Dispensa de controle de qualidade",
+        "Procedimento de calibração cruzada quando aplicável"
+      ],
+      "correta": 3,
+      "explicacao": "Resposta correta: Procedimento de calibração cruzada quando aplicável.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 28",
+      "pergunta": "A presença de espondilose lombar pode gerar:",
+      "alternativas": [
+        "Falsa elevação da DMO lombar",
+        "Queda obrigatória da DMO femoral",
+        "Melhora real do osso trabecular",
+        "Redução da área projetada sempre"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta correta: Falsa elevação da DMO lombar.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 29",
+      "pergunta": "Em DXA pediátrica, qual cuidado é indispensável?",
+      "alternativas": [
+        "Usar FRAX como regra pediátrica",
+        "Considerar idade, sexo e crescimento na interpretação",
+        "Aplicar automaticamente limiares de adulto",
+        "Diagnosticar apenas pelo T-score"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta correta: Considerar idade, sexo e crescimento na interpretação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "DENSITOMETRIA — 30",
+      "pergunta": "Quando uma alteração longitudinal é inferior à LSC, o laudo deve:",
+      "alternativas": [
+        "Confirmar perda óssea",
+        "Alterar o diagnóstico por tendência visual",
+        "Evitar afirmar mudança significativa",
+        "Confirmar ganho terapêutico"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta correta: Evitar afirmar mudança significativa.",
+      "dificuldade": "dificil"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
