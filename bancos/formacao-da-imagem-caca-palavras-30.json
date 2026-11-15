@@ -1,0 +1,126 @@
+{
+  "title": "Formação da Imagem Radiográfica",
+  "rows": [
+    {
+      "question": "Produto da corrente pelo tempo de exposição",
+      "answer": "MAS"
+    },
+    {
+      "question": "Eletrodo emissor de elétrons",
+      "answer": "CATODO"
+    },
+    {
+      "question": "Eletrodo que recebe elétrons acelerados",
+      "answer": "ANODO"
+    },
+    {
+      "question": "Redução da intensidade do feixe ao atravessar matéria",
+      "answer": "ATENUACAO"
+    },
+    {
+      "question": "Passagem do feixe através do paciente",
+      "answer": "TRANSMISSAO"
+    },
+    {
+      "question": "Restrição do campo irradiado",
+      "answer": "COLIMACAO"
+    },
+    {
+      "question": "Aumento geométrico da projeção",
+      "answer": "MAGNIFICACAO"
+    },
+    {
+      "question": "Alteração da forma projetada",
+      "answer": "DISTORCAO"
+    },
+    {
+      "question": "Falta de nitidez por deslocamento durante exposição",
+      "answer": "MOVIMENTO"
+    },
+    {
+      "question": "Efeito que produz luz no detector indireto",
+      "answer": "CINTILACAO"
+    },
+    {
+      "question": "Elemento de imagem digital",
+      "answer": "PIXEL"
+    },
+    {
+      "question": "Grade bidimensional de elementos de imagem",
+      "answer": "MATRIZ"
+    },
+    {
+      "question": "Etapa que torna visível a imagem latente do filme",
+      "answer": "REVELACAO"
+    },
+    {
+      "question": "Etapa que remove cristais não revelados",
+      "answer": "FIXACAO"
+    },
+    {
+      "question": "Etapa final de retirada de umidade do filme",
+      "answer": "SECAGEM"
+    },
+    {
+      "question": "Região do alvo de produção de raios X",
+      "answer": "FOCO"
+    },
+    {
+      "question": "Parte do cátodo aquecida para emitir elétrons",
+      "answer": "FILAMENTO"
+    },
+    {
+      "question": "Receptor fotoestimulável com leitura posterior",
+      "answer": "CR"
+    },
+    {
+      "question": "Sistema de radiografia digital com detector integrado",
+      "answer": "DR"
+    },
+    {
+      "question": "Grandeza elétrica expressa em quilovolts",
+      "answer": "TENSAO"
+    },
+    {
+      "question": "Corrente do tubo expressa em miliampères",
+      "answer": "CORRENTE"
+    },
+    {
+      "question": "Atributo de diferenciação de tonalidades",
+      "answer": "CONTRASTE"
+    },
+    {
+      "question": "Atributo associado à definição de bordas",
+      "answer": "NITIDEZ"
+    },
+    {
+      "question": "Imagem armazenada antes da revelação",
+      "answer": "LATENTE"
+    },
+    {
+      "question": "Material sensível de filme convencional",
+      "answer": "PRATA"
+    },
+    {
+      "question": "Estrutura do ânodo atingida pelos elétrons",
+      "answer": "ALVO"
+    },
+    {
+      "question": "Efeito de projetar estruturas em uma mesma região da imagem",
+      "answer": "SOBREPOSICAO"
+    },
+    {
+      "question": "Fótons produzidos no tubo de radiografia",
+      "answer": "RADIACAO"
+    },
+    {
+      "question": "Material que emite luz após absorver raios X",
+      "answer": "CINTILADOR"
+    },
+    {
+      "question": "Técnica que reduz área irradiada com lâminas móveis",
+      "answer": "DIAFRAGMA"
+    }
+  ],
+  "status": "revisao-editorial-inicial"
+}
