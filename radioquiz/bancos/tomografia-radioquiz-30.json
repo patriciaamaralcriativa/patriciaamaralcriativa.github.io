@@ -5,7 +5,7 @@
     {
       "prompt": "Em TC helicoidal, aumentar o pitch mantendo os demais parâmetros constantes tende a:",
       "options": [
-        "Aumentar o avanço da mesa por rotação em relação à colimação total",
+        "Reduzir a razão entre o avanço da mesa e a colimação total",
         "Aumentar o número de rotações por unidade de comprimento",
         "Aumentar o avanço da mesa por rotação em relação à colimação total",
         "Reduzir o avanço longitudinal por rotação"
