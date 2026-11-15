@@ -24,7 +24,7 @@ Até a aplicação autorizada dessa migração, o editor guarda a aparência nes
 ## Verificação
 
 - 43 verificações locais de PostgreSQL/PGlite, incluindo cinco novas verificações de aparência/autorização.
-- 22 verificações locais da UI administrativa, mantendo a separação entre projetor e ranking.
+- 28 verificações locais da UI administrativa, mantendo a separação entre projetor e ranking.
 - 14 verificações de mascote/efeitos em JSDOM, com áudio simulado: opções, persistência, callback de sincronização, controles de som/movimento e fallback.
 - Build e sintaxe dos módulos passaram.
 - No navegador da prévia: editor abriu, personagem/cor/acessório foram alterados, salvamento local funcionou, controles refletiram som ligado e animação pausada. A cena 3D apareceu pela alternativa SVG porque o navegador na nuvem informou WebGL desabilitado.
@@ -46,3 +46,9 @@ npm run check
 Three.js é fixado em `0.187.0`; o bundle é servido pelo próprio site. Licença em `vendor/LICENSE-three`.
 
 A atualização visual permanece em rascunho até a autorização do banner pessoal e do armazenamento dos mascotes. O endereço público continua na versão básica anterior. A referência ao banner no rascunho será atendida pelo arquivo após a autorização; nenhum substituto com a imagem pessoal foi publicado.
+
+## Convites por QR e link
+
+A prévia inclui PIN, QR gerado localmente e botão de copiar link na sala de espera da professora/projetor. O link contém apenas o endereço do jogo e PIN; parâmetros de professora, identificador de sala e fragmentos de autenticação são removidos. O aluno recebe o PIN preenchido, mas precisa cadastrar a dupla; a validação de entrada continua no servidor. Se a permissão de copiar falhar, o campo é selecionado e a interface explica como copiar. Sem o PIN guardado neste navegador, o convite não é gerado.
+
+Nove verificações específicas passaram, incluindo leitura dos módulos do SVG por um decodificador independente (jsQR) para dois PINs. A tela de entrada por convite também foi conferida no navegador da nuvem. Não houve leitura por câmera física, nem nova migração remota. Biblioteca qrcode 1.5.4 empacotada no próprio site, com licenças preservadas. Total atual: 43 banco local + 28 interface simulada + 14 mascote/efeitos + 9 convites = 94 verificações locais.
