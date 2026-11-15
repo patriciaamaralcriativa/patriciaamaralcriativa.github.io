@@ -41,7 +41,7 @@ As duas salas e o questionário da professora temporária foram removidos, assim
 
 ## Pendências reais
 
-- Salvar a URL pública e o retorno exato da professora no Supabase Auth, que ainda aponta para o endereço local inicial. A configuração está preparada sem salvar; exige confirmação da professora antes da mudança.
+- Concluído após autorização: Site URL público e retorno exato da professora salvos e conferidos no Supabase Auth.
 - Testar o recebimento e uso do link por e-mail pela professora, sem inventar credenciais ou enviar mensagem automaticamente.
 - Publicar a interface de desenvolvimento em `/radioquiz/` após o ajuste e as verificações finais.
 - Validar em computador e celulares físicos distintos, incluindo perda real de internet e capacidade da turma.

@@ -35,12 +35,12 @@ Ver `TESTES.md` para evidências e limites: 38 verificações locais de banco, t
 
 ## Próximo passo concreto
 
-O dashboard Supabase Auth ainda está com Site URL `http://localhost:3000` e nenhuma URL de retorno. Foi preparada, sem salvar:
+A configuração inicial do dashboard Supabase Auth foi substituída, com autorização, pelos endereços exatos:
 
 - Site URL: `https://patriciaamaralcriativa.github.io/radioquiz/`.
 - Retorno autorizado exato: `https://patriciaamaralcriativa.github.io/radioquiz/?view=teacher`.
 
-Aguardar autorização para salvar essa configuração no projeto exclusivo. Depois, testar o fluxo de e-mail, publicar somente `/radioquiz/` e validar a professora e alunos em aparelhos reais. Não declarar entrega integral antes dessas validações. Recursos especiais permanecem na etapa posterior.
+A configuração foi autorizada e salva no projeto exclusivo em 15/11/2026: o retorno exato foi adicionado e o Site URL foi atualizado. Próximo passo: publicar a versão básica somente em `/radioquiz/`, conferir o primeiro acesso por e-mail da professora e validar os alunos em aparelhos reais. Não declarar entrega integral antes dessas validações. Recursos especiais permanecem na etapa posterior.
 
 ## Limites do plano
 

@@ -10,7 +10,7 @@ Frontend estático independente para GitHub Pages, com Supabase Auth, Postgres e
 
 O login administrativo do aplicativo é separado do login do dashboard Supabase. O painel da professora permite criar questionários, selecionar perguntas de vários bancos, configurar tempo/pontos/penalidade, criar salas, controlar questões, bloquear duplas e consultar histórico.
 
-O primeiro acesso pode ser confirmado pelo link no e-mail, sem criar ou lembrar senha. Antes da publicação funcional, conferir no Supabase Auth a URL do site e os redirecionamentos exatos para `https://patriciaamaralcriativa.github.io/radioquiz/`.
+O primeiro acesso pode ser confirmado pelo link no e-mail, sem criar ou lembrar senha. O Site URL e o retorno exato `?view=teacher` foram salvos e conferidos no Supabase Auth, após autorização. O primeiro recebimento do e-mail pela professora ainda deve ser validado.
 
 ## Banco e configuração
 
