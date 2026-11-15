@@ -3,124 +3,124 @@
   "level": "medio",
   "rows": [
     {
-      "question": "Pergunta 1: No sistema CR, qual receptor armazena a imagem latente?",
-      "answer": "PLACA"
+      "question": "Qual material fotoestimulável armazena a imagem latente no CR?",
+      "answer": "FÓSFORO"
     },
     {
-      "question": "Pergunta 2: No CR, qual etapa libera o sinal armazenado na placa?",
-      "answer": "VARREDURA"
+      "question": "Qual recurso óptico realiza a leitura da placa de CR?",
+      "answer": "LASER"
     },
     {
-      "question": "Pergunta 3: Após a leitura do CR, por que se apaga a placa?",
-      "answer": "REMOVER"
+      "question": "Qual etapa remove o sinal residual da placa após a leitura?",
+      "answer": "APAGAMENTO"
     },
     {
-      "question": "Pergunta 4: Na DR indireta, qual componente transforma raios X em luz?",
+      "question": "Qual componente converte raios X em luz na DR indireta?",
       "answer": "CINTILADOR"
     },
     {
-      "question": "Pergunta 5: Na DR direta com selênio amorfo, qual transformação ocorre primeiro?",
-      "answer": "RAIOS"
+      "question": "Qual elemento químico é empregado em detectores DR de conversão direta?",
+      "answer": "SELÊNIO"
     },
     {
-      "question": "Pergunta 6: Em detectores indiretos, qual material cintilador é frequentemente utilizado?",
-      "answer": "IODETO"
+      "question": "Qual elemento integra o iodeto usado em cintiladores de alguns detectores?",
+      "answer": "CÉSIO"
     },
     {
-      "question": "Pergunta 7: Qual elemento converte luz do cintilador em sinal elétrico?",
+      "question": "Qual componente converte a luz do cintilador em sinal elétrico?",
       "answer": "FOTODIODO"
     },
     {
-      "question": "Pergunta 8: O que representa a matriz de imagem digital?",
-      "answer": "ARRANJO"
+      "question": "Qual organização bidimensional reúne os pixels da imagem?",
+      "answer": "MATRIZ"
     },
     {
-      "question": "Pergunta 9: Qual propriedade indica o tamanho da região representada por um pixel?",
-      "answer": "ESPAÇAMENTO"
+      "question": "Qual é a menor unidade endereçável da imagem digital?",
+      "answer": "PIXEL"
     },
     {
-      "question": "Pergunta 10: Qual processo transforma sinal analógico em valores digitais?",
-      "answer": "CONVERSÃO"
+      "question": "Qual processo converte sinais em representação digital?",
+      "answer": "DIGITALIZAÇÃO"
     },
     {
-      "question": "Pergunta 11: Qual parâmetro descreve a quantidade de níveis de cinza codificáveis?",
-      "answer": "PROFUNDIDADE"
+      "question": "Qual unidade indica a profundidade de codificação de tons de cinza?",
+      "answer": "BITS"
     },
     {
-      "question": "Pergunta 12: Qual ferramenta altera a amplitude dos valores de cinza exibidos?",
+      "question": "Qual parâmetro da janela define a extensão dos valores de cinza exibidos?",
       "answer": "LARGURA"
     },
     {
-      "question": "Pergunta 13: Qual ferramenta desloca o centro da faixa de valores exibidos?",
+      "question": "Qual parâmetro da janela define o centro da faixa de valores exibidos?",
       "answer": "NÍVEL"
     },
     {
-      "question": "Pergunta 14: Qual sistema armazena e distribui imagens médicas?",
+      "question": "Qual sigla identifica o sistema de arquivamento e comunicação de imagens?",
       "answer": "PACS"
     },
     {
-      "question": "Pergunta 15: Qual padrão organiza comunicação e arquivos de imagens médicas?",
+      "question": "Qual padrão é usado para arquivos e comunicação de imagens médicas?",
       "answer": "DICOM"
     },
     {
-      "question": "Pergunta 16: Qual sistema gerencia fluxos administrativos e informações radiológicas?",
+      "question": "Qual sigla identifica o sistema de informações radiológicas?",
       "answer": "RIS"
     },
     {
-      "question": "Pergunta 17: Qual propriedade define a capacidade de distinguir detalhes pequenos?",
-      "answer": "RESOLUÇÃO"
+      "question": "Qual propriedade visual está relacionada à definição de bordas e detalhes?",
+      "answer": "NITIDEZ"
     },
     {
-      "question": "Pergunta 18: Qual propriedade define a capacidade de distinguir pequenas diferenças de sinal?",
-      "answer": "RESOLUÇÃO"
+      "question": "Qual propriedade permite distinguir pequenas diferenças de sinal entre regiões?",
+      "answer": "CONTRASTE"
     },
     {
-      "question": "Pergunta 19: Qual fenômeno aparece como granulação em imagens com poucos fótons detectados?",
+      "question": "Qual efeito pode se manifestar como granulação por flutuação estatística de fótons?",
       "answer": "RUÍDO"
     },
     {
-      "question": "Pergunta 20: Qual prática reduz a exposição fora da anatomia necessária?",
+      "question": "Qual procedimento físico limita a área irradiada?",
       "answer": "COLIMAÇÃO"
     },
     {
-      "question": "Pergunta 21: Qual conceito descreve aumento gradual de exposição sem necessidade clínica?",
-      "answer": "DOSE"
+      "question": "Qual termo designa exposição acima da necessária para o exame?",
+      "answer": "SUPEREXPOSIÇÃO"
     },
     {
-      "question": "Pergunta 22: Qual recurso automático pode mascarar visualmente superexposição?",
+      "question": "Qual processo automático pode mascarar variações de exposição na aparência da imagem?",
       "answer": "REESCALONAMENTO"
     },
     {
-      "question": "Pergunta 23: Qual recurso auxilia no controle da exposição recebida pelo detector?",
+      "question": "Qual palavra completa a expressão '___ de exposição' usada na monitoração do receptor?",
       "answer": "ÍNDICE"
     },
     {
-      "question": "Pergunta 24: Qual cuidado é necessário ao comparar índices de exposição de fabricantes?",
-      "answer": "CONSIDERAR"
+      "question": "Qual procedimento ajusta a resposta do detector conforme referência conhecida?",
+      "answer": "CALIBRAÇÃO"
     },
     {
-      "question": "Pergunta 25: Qual mecanismo pode gerar imagem fantasma por sinal anterior no detector?",
+      "question": "Qual fenômeno pode manter vestígios de imagem anterior no detector?",
       "answer": "PERSISTÊNCIA"
     },
     {
-      "question": "Pergunta 26: Qual artefato pode surgir por defeito de linha ou coluna do detector?",
+      "question": "Qual formato de artefato pode aparecer por falha de uma linha do detector?",
       "answer": "FAIXA"
     },
     {
-      "question": "Pergunta 27: Qual procedimento verifica uniformidade e funcionamento do detector?",
-      "answer": "CONTROLE"
+      "question": "Qual propriedade é verificada ao avaliar a homogeneidade da resposta do detector?",
+      "answer": "UNIFORMIDADE"
     },
     {
-      "question": "Pergunta 28: Qual cuidado deve anteceder a aplicação de recorte eletrônico?",
-      "answer": "COLIMAÇÃO"
+      "question": "Qual ferramenta eletrônica limita a área visualizada sem reduzir a área irradiada?",
+      "answer": "RECORTE"
     },
     {
-      "question": "Pergunta 29: Qual recurso permite visualizar diferenças de tons sem nova exposição?",
-      "answer": "AJUSTE"
+      "question": "Qual termo descreve o ajuste da apresentação dos tons de cinza por janela?",
+      "answer": "JANELAMENTO"
     },
     {
-      "question": "Pergunta 30: Qual prática evita atribuir ao pós-processamento a correção de erro de aquisição?",
-      "answer": "REVISAR"
+      "question": "Qual etapa da aquisição precisa estar correta antes do pós-processamento para evitar erros anatômicos?",
+      "answer": "POSICIONAMENTO"
     }
   ]
 }
