@@ -1,0 +1,132 @@
+{
+  "disciplina": "Radiologia Industrial",
+  "sets": [
+    [
+      [
+        "Métodos que avaliam peças sem comprometer seu uso previsto",
+        "Ensaios não destrutivos"
+      ],
+      [
+        "Método radiográfico com feixe gerado em tubo elétrico",
+        "Ensaio por raios X"
+      ],
+      [
+        "Método radiográfico com fótons gama transmitidos pela peça",
+        "Ensaio por raios gama"
+      ],
+      [
+        "END que usa capilaridade em aberturas superficiais",
+        "Líquido penetrante"
+      ],
+      [
+        "END que usa propagação e reflexão de ondas mecânicas",
+        "Ultrassom industrial"
+      ],
+      [
+        "Etapa do penetrante que remove contaminantes superficiais",
+        "Limpeza prévia"
+      ],
+      [
+        "Etapa de permanência do líquido na superfície",
+        "Tempo de penetração"
+      ],
+      [
+        "Etapa que retira excesso sem esvaziar descontinuidades",
+        "Remoção controlada"
+      ],
+      [
+        "Material que favorece retorno do penetrante à superfície",
+        "Revelador"
+      ],
+      [
+        "Indicação de penetrante com formato alongado",
+        "Indicação linear"
+      ]
+    ],
+    [
+      [
+        "Meio que elimina barreira de ar sob transdutor",
+        "Acoplante"
+      ],
+      [
+        "Sinal refletido por interface interna no pulso-eco",
+        "Eco intermediário"
+      ],
+      [
+        "Sinal da parede oposta em inspeção por pulso-eco",
+        "Eco de fundo"
+      ],
+      [
+        "Parâmetro acústico usado com tempo de voo para estimar distância",
+        "Velocidade do som"
+      ],
+      [
+        "Ajuste de equipamento para correspondência entre tempo e distância",
+        "Calibração ultrassônica"
+      ],
+      [
+        "Parâmetro do tubo que controla energia máxima dos raios X",
+        "kVp"
+      ],
+      [
+        "Parâmetro do tubo que controla taxa de produção de fótons",
+        "mA"
+      ],
+      [
+        "Diferença de transmissão de radiação entre regiões da peça",
+        "Atenuação diferencial"
+      ],
+      [
+        "Desfoque decorrente de tamanho do foco e distâncias",
+        "Penumbra geométrica"
+      ],
+      [
+        "Registro fotográfico industrial após exposição e processamento",
+        "Filme radiográfico"
+      ]
+    ],
+    [
+      [
+        "Característica de filme relacionada à dimensão de seus grãos",
+        "Granularidade"
+      ],
+      [
+        "Propriedade do filme relacionada à quantidade de exposição necessária",
+        "Velocidade do filme"
+      ],
+      [
+        "Classificação de sistemas de filme para radiografia industrial",
+        "ISO 11699-1"
+      ],
+      [
+        "Medida logarítmica do enegrecimento de filme",
+        "Densidade óptica"
+      ],
+      [
+        "Recipiente protetor que acondiciona filme e telas",
+        "Cassete"
+      ],
+      [
+        "Suporte adaptável a contornos curvos",
+        "Holder flexível"
+      ],
+      [
+        "Suporte mais rígido para acondicionamento de filme",
+        "Holder de papelão"
+      ],
+      [
+        "Etapa química que torna visível a imagem latente",
+        "Revelação"
+      ],
+      [
+        "Etapa química que remove haletos não expostos",
+        "Fixação"
+      ],
+      [
+        "Critérios usados para julgar indicações do ensaio",
+        "Critérios de aceitação"
+      ]
+    ]
+  ],
+  "status": "revisao-pendente"
+}
