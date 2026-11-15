@@ -1,0 +1,395 @@
+{
+  "disciplina": "Física das Radiações",
+  "questoes": [
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 1",
+      "pergunta": "Uma onda eletromagnética passa do ar para outro meio. Qual grandeza permanece determinada pela fonte?",
+      "alternativas": [
+        "Frequência",
+        "Velocidade",
+        "Comprimento de onda",
+        "Direção de propagação"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Frequência.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 2",
+      "pergunta": "O elétron permanece no átomo após receber energia e muda de nível. Que fenômeno ocorreu?",
+      "alternativas": [
+        "Fissão",
+        "Excitação",
+        "Ionização",
+        "Aniquilação"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Excitação.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 3",
+      "pergunta": "Um fóton transfere toda sua energia a um elétron ligado e desaparece. Qual interação ocorreu?",
+      "alternativas": [
+        "Produção de pares",
+        "Espalhamento coerente",
+        "Efeito fotoelétrico",
+        "Espalhamento Compton"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Efeito fotoelétrico.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 4",
+      "pergunta": "Um fóton muda de direção e transfere parte de sua energia a um elétron. Qual interação ocorreu?",
+      "alternativas": [
+        "Efeito fotoelétrico",
+        "Absorção completa",
+        "Emissão característica",
+        "Espalhamento Compton"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Espalhamento Compton.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 5",
+      "pergunta": "A radiação é produzida pela desaceleração de elétrons próximos ao núcleo do alvo. Qual processo?",
+      "alternativas": [
+        "Frenagem",
+        "Fluorescência óptica",
+        "Decaimento alfa",
+        "Fusão nuclear"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Frenagem.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 6",
+      "pergunta": "Um elétron preenche uma vacância de camada interna do átomo do alvo. Qual radiação pode surgir?",
+      "alternativas": [
+        "Alfa",
+        "Característica",
+        "Cósmica",
+        "Beta menos"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Característica.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 7",
+      "pergunta": "No tubo de raios X, de onde partem os elétrons acelerados?",
+      "alternativas": [
+        "Colimador",
+        "Receptor",
+        "Cátodo",
+        "Ânodo"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Cátodo.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 8",
+      "pergunta": "No tubo de raios X, qual componente recebe o impacto dos elétrons?",
+      "alternativas": [
+        "Filamento",
+        "Copo focalizador",
+        "Filtro",
+        "Ânodo"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Ânodo.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 9",
+      "pergunta": "Ao aumentar a tensão do tubo, o que pode aumentar no espectro produzido?",
+      "alternativas": [
+        "Energia máxima dos fótons",
+        "Massa dos elétrons",
+        "Número atômico do alvo",
+        "Carga do elétron"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Energia máxima dos fótons.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 10",
+      "pergunta": "Ao aumentar a corrente do tubo, mantendo os demais parâmetros, o que aumenta?",
+      "alternativas": [
+        "Velocidade da luz",
+        "Quantidade de elétrons por tempo",
+        "Energia máxima de cada fóton",
+        "Número atômico do alvo"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Quantidade de elétrons por tempo.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 11",
+      "pergunta": "Qual componente remove preferencialmente fótons de baixa energia do feixe?",
+      "alternativas": [
+        "Mesa",
+        "Colimador",
+        "Filtro",
+        "Receptor"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Filtro.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 12",
+      "pergunta": "Qual componente define os limites geométricos do campo irradiado?",
+      "alternativas": [
+        "Filamento",
+        "Ânodo",
+        "Transformador",
+        "Colimador"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Colimador.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 13",
+      "pergunta": "Ao atravessar matéria, o feixe perde intensidade por absorção e espalhamento. Qual processo?",
+      "alternativas": [
+        "Atenuação",
+        "Amplificação",
+        "Refração exclusiva",
+        "Ressonância"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Atenuação.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 14",
+      "pergunta": "Qual propriedade do material favorece a interação fotoelétrica em energias diagnósticas mais baixas?",
+      "alternativas": [
+        "Menor espessura",
+        "Maior número atômico",
+        "Menor densidade eletrônica sempre",
+        "Maior temperatura"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Maior número atômico.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 15",
+      "pergunta": "Qual grandeza expressa a espessura que reduz a intensidade do feixe à metade, em condições definidas?",
+      "alternativas": [
+        "Tempo de exposição",
+        "Corrente do tubo",
+        "Camada semirredutora",
+        "Distância focal"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Camada semirredutora.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 16",
+      "pergunta": "Qual partícula possui carga negativa e participa da formação de raios X no tubo?",
+      "alternativas": [
+        "Próton",
+        "Nêutron",
+        "Fóton",
+        "Elétron"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Elétron.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 17",
+      "pergunta": "Qual partícula do núcleo possui carga positiva?",
+      "alternativas": [
+        "Próton",
+        "Nêutron",
+        "Elétron",
+        "Fóton"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Próton.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 18",
+      "pergunta": "Qual partícula nuclear é eletricamente neutra?",
+      "alternativas": [
+        "Pósitron",
+        "Nêutron",
+        "Próton",
+        "Elétron"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Nêutron.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 19",
+      "pergunta": "Qual grandeza da onda corresponde às oscilações por segundo?",
+      "alternativas": [
+        "Comprimento de onda",
+        "Intensidade",
+        "Frequência",
+        "Amplitude"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Frequência.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 20",
+      "pergunta": "Qual grandeza espacial mede a distância entre cristas consecutivas?",
+      "alternativas": [
+        "Frequência",
+        "Energia",
+        "Período",
+        "Comprimento de onda"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Comprimento de onda.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 21",
+      "pergunta": "No vácuo, quando a frequência aumenta, o comprimento de onda faz o quê?",
+      "alternativas": [
+        "Diminui",
+        "Aumenta",
+        "Permanece necessariamente igual",
+        "Torna-se nulo"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Diminui.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 22",
+      "pergunta": "Qual fenômeno permite que ondas contornem obstáculos?",
+      "alternativas": [
+        "Emissão termoiônica",
+        "Difração",
+        "Ionização",
+        "Absorção fotoelétrica"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Difração.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 23",
+      "pergunta": "Qual fenômeno produz reforço e cancelamento pela superposição de ondas?",
+      "alternativas": [
+        "Ionização",
+        "Filtração",
+        "Interferência",
+        "Atenuação"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Interferência.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 24",
+      "pergunta": "Qual fenômeno consiste no retorno de uma onda ao atingir uma interface?",
+      "alternativas": [
+        "Refração",
+        "Frenagem",
+        "Fluorescência",
+        "Reflexão"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Reflexão.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 25",
+      "pergunta": "Qual fenômeno envolve alteração da direção de propagação ao passar entre meios?",
+      "alternativas": [
+        "Refração",
+        "Reflexão",
+        "Ionização",
+        "Decaimento"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Refração.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 26",
+      "pergunta": "Qual processo libera elétrons de um filamento metálico aquecido?",
+      "alternativas": [
+        "Decaimento beta",
+        "Emissão termoiônica",
+        "Produção de pares",
+        "Espalhamento coerente"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: Emissão termoiônica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 27",
+      "pergunta": "Por que o ânodo giratório ajuda a suportar cargas térmicas?",
+      "alternativas": [
+        "Elimina toda produção de calor",
+        "Impede a radiação característica",
+        "Distribui o calor em área maior",
+        "Reduz a carga do elétron"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito: Distribui o calor em área maior.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 28",
+      "pergunta": "Qual componente ajuda a concentrar o feixe de elétrons em direção ao alvo?",
+      "alternativas": [
+        "Colimador de luz",
+        "Grade antidifusora",
+        "Detector",
+        "Copo focalizador"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito: Copo focalizador.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 29",
+      "pergunta": "Qual fenômeno nuclear pode emitir elétrons no decaimento beta menos?",
+      "alternativas": [
+        "Transformação de nêutron em próton",
+        "Transformação de próton em nêutron",
+        "Captura de fóton óptico",
+        "Fissão obrigatória"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito: Transformação de nêutron em próton.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "FÍSICA DAS RADIAÇÕES 30",
+      "pergunta": "Qual característica distingue raios X de partículas alfa?",
+      "alternativas": [
+        "Possuem massa de repouso elevada",
+        "São radiação eletromagnética",
+        "Possuem carga positiva",
+        "São núcleos de hélio"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito: São radiação eletromagnética.",
+      "dificuldade": "dificil"
+    }
+  ]
+}
