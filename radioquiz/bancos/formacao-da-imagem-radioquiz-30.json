@@ -1,0 +1,427 @@
+{
+  "title": "Formação da Imagem Radiográfica — RADIOQUIZ",
+  "subject": "Formação da Imagem Radiográfica",
+  "questions": [
+    {
+      "prompt": "Um exame usa 200 mA por 0,15 s. Qual é o produto corrente-tempo?",
+      "options": [
+        "13,3 mAs",
+        "200,15 mAs",
+        "30 mAs",
+        "300 mAs"
+      ],
+      "answer_index": 2,
+      "explanation": "mAs é o produto de mA pelo tempo em segundos.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Para manter 24 mAs usando 300 mA, qual tempo selecionar?",
+      "options": [
+        "0,08 s",
+        "0,12 s",
+        "0,24 s",
+        "0,80 s"
+      ],
+      "answer_index": 0,
+      "explanation": "24 dividido por 300 resulta em 0,08 segundo.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Um protocolo de 100 mA por 0,20 s será executado com 200 mA e o mesmo mAs. Qual tempo usar?",
+      "options": [
+        "0,05 s",
+        "0,20 s",
+        "0,40 s",
+        "0,10 s"
+      ],
+      "answer_index": 3,
+      "explanation": "O protocolo original usa 20 mAs; com 200 mA são necessários 0,10 s.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Ao elevar o kV mantendo mAs e geometria, qual tendência é esperada no feixe?",
+      "options": [
+        "Menor energia máxima e maior quantidade de fótons",
+        "Maior energia média e maior capacidade de penetração",
+        "Mesma energia máxima e menor penetração",
+        "Menor energia média e mesma transmissão"
+      ],
+      "answer_index": 1,
+      "explanation": "O kV determina a energia máxima dos fótons e influencia a energia média do espectro.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Qual componente do tubo emite elétrons por emissão termiônica?",
+      "options": [
+        "Alvo do ânodo",
+        "Filamento do cátodo",
+        "Janela do tubo",
+        "Invólucro protetor"
+      ],
+      "answer_index": 1,
+      "explanation": "O aquecimento do filamento libera elétrons que serão acelerados até o ânodo.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Qual é a principal função do ânodo fixo no tubo didático?",
+      "options": [
+        "Acelerar elétrons por aquecimento do filamento",
+        "Retificar a corrente do circuito primário",
+        "Transformar fótons em sinais elétricos no detector",
+        "Receber elétrons e converter parte de sua energia em raios X"
+      ],
+      "answer_index": 3,
+      "explanation": "A interação dos elétrons acelerados com o alvo produz raios X e calor.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Em uma imagem radiográfica convencional, uma região muito radiopaca corresponde, em geral, a:",
+      "options": [
+        "Menor exposição do receptor atrás da estrutura",
+        "Maior transmissão de fótons até o receptor",
+        "Ausência de atenuação no trajeto",
+        "Maior penetração local do feixe"
+      ],
+      "answer_index": 0,
+      "explanation": "Estruturas de maior atenuação deixam menos fótons alcançar o receptor.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Por que o pulmão aerado costuma aparecer mais escuro que o mediastino na radiografia?",
+      "options": [
+        "O ar produz mais raios X dentro do tórax",
+        "O pulmão aerado absorve mais fótons que o osso",
+        "O ar atenua menos o feixe e permite maior transmissão",
+        "O mediastino não recebe exposição durante o exame"
+      ],
+      "answer_index": 2,
+      "explanation": "O tecido pulmonar aerado atenua menos que os tecidos moles do mediastino.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Ao aumentar a espessura de tecido atravessada pelo feixe, mantendo os demais fatores, tende a ocorrer:",
+      "options": [
+        "Maior transmissão e menor atenuação",
+        "Mesma transmissão com menor espalhamento",
+        "Maior energia dos fótons emergentes por geração local",
+        "Menor transmissão e maior atenuação"
+      ],
+      "answer_index": 3,
+      "explanation": "Maior espessura oferece mais oportunidades de interação e reduz a intensidade transmitida.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Um operador duplica o mA e reduz o tempo à metade, mantendo kV. O que acontece com o mAs?",
+      "options": [
+        "Dobra",
+        "Permanece constante",
+        "Cai para um quarto",
+        "Aumenta quatro vezes"
+      ],
+      "answer_index": 1,
+      "explanation": "O produto mA × tempo não se altera.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Um exame realizado a 250 mA durante 0,04 s corresponde a:",
+      "options": [
+        "6,25 mAs",
+        "62,5 mAs",
+        "10 mAs",
+        "100 mAs"
+      ],
+      "answer_index": 2,
+      "explanation": "250 × 0,04 = 10 mAs.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Para obter 15 mAs em 0,05 s, qual corrente é necessária?",
+      "options": [
+        "300 mA",
+        "75 mA",
+        "150 mA",
+        "750 mA"
+      ],
+      "answer_index": 0,
+      "explanation": "15 dividido por 0,05 = 300 mA.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "O aumento do mAs, com kV constante, afeta principalmente:",
+      "options": [
+        "A energia máxima individual dos fótons",
+        "A quantidade de fótons produzidos",
+        "O número atômico do alvo",
+        "A posição do ponto focal"
+      ],
+      "answer_index": 1,
+      "explanation": "O mAs controla predominantemente a quantidade de radiação produzida.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Na radiografia com filme, qual etapa remove os cristais de haleto de prata não revelados?",
+      "options": [
+        "Revelação",
+        "Secagem",
+        "Exposição",
+        "Fixação"
+      ],
+      "answer_index": 3,
+      "explanation": "O fixador remove os cristais não reduzidos, estabilizando a imagem.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Qual sequência representa o processamento manual convencional do filme?",
+      "options": [
+        "Fixação, revelação, secagem, lavagem e exposição",
+        "Revelação, secagem, fixação e lavagem",
+        "Revelação, lavagem intermediária, fixação, lavagem final e secagem",
+        "Lavagem final, fixação, revelação e secagem"
+      ],
+      "answer_index": 2,
+      "explanation": "A sequência inclui revelação, interrupção/lavagem intermediária, fixação, lavagem final e secagem.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "No processamento do filme, a revelação transforma principalmente:",
+      "options": [
+        "Cristais expostos em prata metálica visível",
+        "Prata metálica em cristais não expostos",
+        "Fótons de raios X em luz do negatoscópio",
+        "Gelatina do filme em material radiopaco"
+      ],
+      "answer_index": 0,
+      "explanation": "O revelador reduz os cristais expostos, formando prata metálica escura.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Em um sistema DR indireto, a primeira conversão da energia dos raios X no detector ocorre em:",
+      "options": [
+        "Carga elétrica diretamente no fotocondutor",
+        "Imagem latente no filme químico",
+        "Movimento mecânico de uma placa",
+        "Luz produzida no cintilador"
+      ],
+      "answer_index": 3,
+      "explanation": "Detectores indiretos convertem raios X em luz antes da conversão elétrica.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Em um sistema DR direto com fotocondutor, o sinal é produzido por:",
+      "options": [
+        "Conversão obrigatória em luz por cintilador",
+        "Conversão direta da energia absorvida em cargas elétricas",
+        "Revelação química de prata",
+        "Leitura óptica de filme processado"
+      ],
+      "answer_index": 1,
+      "explanation": "No DR direto, o fotocondutor gera cargas sem etapa intermediária de cintilação.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Uma placa de fósforo fotoestimulável usada em CR precisa de qual etapa para gerar a imagem digital?",
+      "options": [
+        "Leitura por equipamento apropriado após a exposição",
+        "Fixação química em solução",
+        "Impressão em película antes da leitura",
+        "Revelação com prata metálica"
+      ],
+      "answer_index": 0,
+      "explanation": "O sistema CR lê a informação armazenada na placa por estimulação luminosa.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "O que diferencia um sistema CR de um DR com painel plano?",
+      "options": [
+        "O CR dispensa receptor; o DR usa apenas filme",
+        "O CR exige revelação química; o DR exige fixação",
+        "O CR utiliza placa que passa por leitor; o DR adquire o sinal no detector integrado",
+        "O CR gera somente imagem analógica; o DR somente imagem impressa"
+      ],
+      "answer_index": 2,
+      "explanation": "No CR, a placa é levada a um leitor; no DR, o painel integra a aquisição.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Se o receptor for afastado do objeto, mantendo a distância foco-receptor, o que tende a ocorrer?",
+      "options": [
+        "Menor magnificação geométrica",
+        "Ausência de penumbra geométrica",
+        "Maior magnificação geométrica",
+        "Redução obrigatória do tamanho aparente"
+      ],
+      "answer_index": 2,
+      "explanation": "Maior distância objeto-receptor aumenta a magnificação.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Qual ajuste geométrico tende a reduzir a magnificação, mantendo o objeto próximo do receptor?",
+      "options": [
+        "Aumentar a distância foco-receptor",
+        "Diminuir a distância foco-receptor",
+        "Afastar o objeto do receptor",
+        "Aumentar a distância objeto-receptor"
+      ],
+      "answer_index": 0,
+      "explanation": "Maior distância foco-receptor tende a reduzir a magnificação para uma dada distância objeto-receptor.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "O desalinhamento entre objeto e receptor pode provocar principalmente:",
+      "options": [
+        "Aumento do número atômico efetivo",
+        "Distorção de forma",
+        "Mudança do mAs programado",
+        "Conversão de imagem digital em analógica"
+      ],
+      "answer_index": 1,
+      "explanation": "O desalinhamento geométrico pode alongar ou encurtar a projeção.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Qual efeito resulta de movimento do paciente durante a exposição?",
+      "options": [
+        "Aumento do kV selecionado",
+        "Redução automática do ponto focal",
+        "Eliminação da magnificação",
+        "Perda de nitidez espacial"
+      ],
+      "answer_index": 3,
+      "explanation": "O movimento durante a aquisição espalha a representação das bordas.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Qual medida reduz o borramento por movimento sem alterar o mAs?",
+      "options": [
+        "Aumentar o mA e reduzir proporcionalmente o tempo",
+        "Reduzir mA e aumentar proporcionalmente o tempo",
+        "Aumentar o tempo mantendo mA",
+        "Diminuir a distância foco-receptor"
+      ],
+      "answer_index": 0,
+      "explanation": "Menor tempo reduz a oportunidade de movimento, mantendo o produto mAs.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Em uma radiografia digital, o ajuste de brilho e contraste na estação de trabalho:",
+      "options": [
+        "Altera retroativamente a dose absorvida pelo paciente",
+        "Modifica a tensão aplicada durante a exposição anterior",
+        "Modifica a apresentação da imagem, não a exposição já recebida",
+        "Recupera qualquer detalhe perdido por saturação"
+      ],
+      "answer_index": 2,
+      "explanation": "O pós-processamento modifica a visualização, mas não altera a aquisição original.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Por que uma imagem digital visualmente adequada não garante exposição otimizada?",
+      "options": [
+        "O detector impede qualquer exposição excessiva",
+        "O brilho final determina diretamente a dose do paciente",
+        "A imagem digital não depende da radiação transmitida",
+        "O processamento pode compensar a aparência de exposições diferentes"
+      ],
+      "answer_index": 3,
+      "explanation": "A latitude e o processamento digital podem mascarar diferenças de exposição.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Ao atravessar tecidos diferentes, o feixe forma contraste de sujeito principalmente devido a:",
+      "options": [
+        "Igualdade de transmissão entre todos os tecidos",
+        "Diferenças de atenuação entre estruturas",
+        "Produção de raios X pelos tecidos moles",
+        "Rotação do receptor durante a exposição"
+      ],
+      "answer_index": 1,
+      "explanation": "A transmissão desigual do feixe cria diferenças de sinal entre regiões.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "A função da colimação do campo é principalmente:",
+      "options": [
+        "Limitar a área irradiada à região de interesse",
+        "Aumentar a energia máxima dos fótons",
+        "Substituir a seleção de kV e mAs",
+        "Aumentar o tamanho do ponto focal"
+      ],
+      "answer_index": 0,
+      "explanation": "A colimação delimita o campo irradiado e reduz exposição desnecessária fora dele.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    },
+    {
+      "prompt": "Uma imagem convencional fica com pouco contraste entre tecidos de atenuação próxima. Qual fator de exposição influencia diretamente o contraste radiográfico de sujeito?",
+      "options": [
+        "A identificação alfanumérica do exame",
+        "A velocidade do ventilador da sala",
+        "A orientação do monitor de visualização",
+        "A tensão do tubo (kV)"
+      ],
+      "answer_index": 3,
+      "explanation": "O kV influencia a penetração e as diferenças relativas de atenuação no feixe.",
+      "time_limit_seconds": 50,
+      "points": 1000,
+      "topic": "Formação da Imagem Radiográfica"
+    }
+  ],
+  "status": "revisao-editorial-inicial"
+}
