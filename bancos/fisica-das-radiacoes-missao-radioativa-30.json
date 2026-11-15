@@ -57,20 +57,20 @@
         "Corpuscular"
       ],
       [
-        "Radiação formada por fótons",
-        "Eletromagnética"
+        "Tipo de radiação constituída por fótons",
+        "Radiação fotônica"
       ],
       [
-        "Indução associada à variação de fluxo magnético",
-        "Eletromagnetismo"
+        "Fenômeno em que a variação de fluxo magnético induz tensão elétrica",
+        "Indução eletromagnética"
       ],
       [
         "Onda que exige meio material",
         "Mecânica"
       ],
       [
-        "Onda que se propaga no vácuo",
-        "Eletromagnética"
+        "Meio material necessário para propagação da luz no espaço",
+        "Nenhum"
       ],
       [
         "Onda com vibração paralela à propagação",
@@ -103,7 +103,7 @@
         "Refração"
       ],
       [
-        "Retorno de onda à interface",
+        "Retorno de uma onda ao meio de origem ao atingir uma interface",
         "Reflexão"
       ],
       [
@@ -128,5 +128,5 @@
       ]
     ]
   ],
-  "status": "conteudo-reformulado-sem-calculos"
+  "status": "30-associacoes-sem-contas-sem-respostas-duplicadas-na-mesma-rodada"
 }
