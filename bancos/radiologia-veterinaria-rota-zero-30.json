@@ -68,15 +68,15 @@
     },
     {
       "titulo": "Situação clínica 6",
-      "pergunta": "Para descrever uma alteração que separa regiões direita e esquerda do corpo, qual plano anatômico é a referência principal?",
+      "pergunta": "Um corte longitudinal do tronco separa regiões direita e esquerda, mas não passa pela linha média. Qual plano foi utilizado?",
       "alternativas": [
-        "Horizontal",
-        "Sagital",
-        "Transversal",
-        "Dorsal"
+        "Plano dorsal",
+        "Plano sagital",
+        "Plano transversal",
+        "Plano mediano"
       ],
       "correta": 1,
-      "explicacao": "Conceito anatômico ou técnico: Sagital.",
+      "explicacao": "O plano sagital separa direita e esquerda; somente o sagital mediano passa pela linha média.",
       "dificuldade": "normal"
     },
     {
@@ -392,5 +392,5 @@
       "dificuldade": "dificil"
     }
   ],
-  "status": "enunciados-contextualizados-pendente-revisao-alternativas"
+  "status": "revisado-ambiguidade-de-planos-corrigida"
 }
