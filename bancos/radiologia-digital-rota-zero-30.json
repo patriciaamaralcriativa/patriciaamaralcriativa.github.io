@@ -29,15 +29,15 @@
     },
     {
       "titulo": "Caso técnico 3",
-      "pergunta": "Após várias utilizações, uma placa CR apresenta vestígios de exames anteriores. Qual etapa do ciclo deve ser verificada primeiro?",
+      "pergunta": "Uma placa CR mostra vestígios de um exame anterior. Qual etapa do processamento deve ser conferida para evitar a persistência desse sinal?",
       "alternativas": [
-        "Calibração da matriz de pixels",
-        "Ajuste do índice de exposição",
-        "Alteração do intervalo entre exposições",
-        "Remover sinal residual"
+        "Calibração de uniformidade do leitor",
+        "Ajuste de contraste da estação",
+        "Limpeza mecânica da superfície do cassete",
+        "Apagamento da placa após a leitura"
       ],
       "correta": 3,
-      "explicacao": "Resposta: Remover sinal residual.",
+      "explicacao": "O apagamento adequado da placa CR remove o sinal residual antes de sua reutilização.",
       "dificuldade": "normal"
     },
     {
@@ -392,5 +392,5 @@
       "dificuldade": "dificil"
     }
   ],
-  "status": "distratores-revisados-30-pendente-auditoria-cientifica"
+  "status": "revisado-erro-de-etapa-corrigido"
 }
