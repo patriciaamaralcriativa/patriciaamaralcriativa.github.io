@@ -161,10 +161,10 @@
       "titulo": "Caso técnico 13",
       "pergunta": "Em uma estação de trabalho, a faixa de valores exibidos tem amplitude adequada, porém está centrada em intensidade inadequada. Qual controle deve ser ajustado?",
       "alternativas": [
-        "Colimação física",
-        "Filtração do feixe",
+        "Largura de janela",
+        "Correção de ganho do detector",
         "Nível de janela",
-        "Correção de posicionamento"
+        "Reescalonamento automático"
       ],
       "correta": 2,
       "explicacao": "Resposta: Nível de janela.",
@@ -174,10 +174,10 @@
       "titulo": "Caso técnico 14",
       "pergunta": "Uma radiografia foi adquirida corretamente, mas precisa ficar acessível a outros setores da instituição. Qual infraestrutura se destina ao armazenamento e distribuição dessas imagens?",
       "alternativas": [
-        "AEC",
+        "Servidor DICOM sem arquivamento longitudinal",
         "PACS",
-        "RIS isoladamente",
-        "HIS isoladamente"
+        "Sistema de agendamento RIS",
+        "Console de aquisição local"
       ],
       "correta": 1,
       "explicacao": "Resposta: PACS.",
@@ -187,9 +187,9 @@
       "titulo": "Caso técnico 15",
       "pergunta": "Um exame precisa ser transmitido entre equipamentos de fabricantes diferentes preservando atributos e metadados. Qual padrão é apropriado?",
       "alternativas": [
-        "CSV",
-        "HTML",
-        "JPEG como padrão clínico universal",
+        "HL7 para mensagens administrativas",
+        "JPEG sem metadados clínicos",
+        "CSV para exportação de planilhas",
         "DICOM"
       ],
       "correta": 3,
@@ -201,9 +201,9 @@
       "pergunta": "O setor precisa acompanhar solicitações, agenda e laudos, além das imagens armazenadas. Qual sistema atende ao fluxo de informação radiológica?",
       "alternativas": [
         "RIS",
-        "PACS exclusivamente",
-        "Detector DR",
-        "Grade"
+        "PACS como único gerenciador de agendamentos",
+        "Estação de reconstrução",
+        "Console do detector"
       ],
       "correta": 0,
       "explicacao": "Resposta: RIS.",
@@ -213,10 +213,10 @@
       "titulo": "Caso técnico 17",
       "pergunta": "Um detector apresenta dificuldade em separar estruturas muito próximas apesar de bom contraste entre elas. Qual propriedade está mais diretamente limitada?",
       "alternativas": [
-        "Brilho do monitor",
+        "Resolução de contraste",
         "Resolução espacial",
-        "Tamanho do arquivo apenas",
-        "Dose absorvida"
+        "Profundidade de bits",
+        "Amplitude de janela"
       ],
       "correta": 1,
       "explicacao": "Resposta: Resolução espacial.",
@@ -227,9 +227,9 @@
       "pergunta": "Em uma imagem, duas regiões extensas com sinais próximos tornam-se difíceis de diferenciar, embora suas bordas sejam grandes. Qual propriedade deve ser analisada?",
       "alternativas": [
         "Resolução de contraste",
-        "Velocidade de impressão",
-        "Tamanho do chassi",
-        "Distância entre salas"
+        "Resolução espacial",
+        "Resolução temporal",
+        "Espaçamento entre pixels"
       ],
       "correta": 0,
       "explicacao": "Resposta: Resolução de contraste.",
@@ -239,9 +239,9 @@
       "titulo": "Caso técnico 19",
       "pergunta": "Um exame apresenta aspecto granulado quando poucos fótons são registrados. Qual fenômeno explica esse comportamento?",
       "alternativas": [
-        "Distorção geométrica",
+        "Ruído eletrônico fixo",
         "Persistência de imagem",
-        "Aliasing exclusivamente",
+        "Padrão de Moiré",
         "Ruído quântico"
       ],
       "correta": 3,
@@ -252,10 +252,10 @@
       "titulo": "Caso técnico 20",
       "pergunta": "Durante a aquisição, parte extensa do corpo fora da área de interesse é irradiada. Qual medida técnica deve ser corrigida?",
       "alternativas": [
-        "Ampliação indiscriminada do campo",
-        "Repetição preventiva",
+        "Aumentar a área irradiada para facilitar o recorte",
+        "Reduzir apenas o FOV exibido",
         "Colimação adequada",
-        "Retirada da grade em qualquer exame"
+        "Aplicar máscara eletrônica após a aquisição"
       ],
       "correta": 2,
       "explicacao": "Resposta: Colimação adequada.",
@@ -265,9 +265,9 @@
       "titulo": "Caso técnico 21",
       "pergunta": "Um setor observa aumento progressivo dos indicadores de exposição, embora a aparência das imagens permaneça semelhante. Qual fenômeno merece investigação?",
       "alternativas": [
-        "Fluorescência",
-        "Saturação óptica",
-        "Reconstrução volumétrica",
+        "Desvio do nível de janela",
+        "Redução da profundidade de bits",
+        "Aumento de contraste de exibição",
         "Dose creep"
       ],
       "correta": 3,
@@ -278,10 +278,10 @@
       "titulo": "Caso técnico 22",
       "pergunta": "Uma radiografia excessivamente exposta continua visualmente aceitável após processamento automático. Qual mecanismo ajuda a explicar isso?",
       "alternativas": [
-        "Movimento do paciente",
-        "Revelação química",
+        "Correção de campo plano",
+        "Ajuste de nitidez espacial",
         "Reescalonamento da imagem",
-        "Fusão nuclear"
+        "Redução da dose já administrada"
       ],
       "correta": 2,
       "explicacao": "Resposta: Reescalonamento da imagem.",
@@ -292,9 +292,9 @@
       "pergunta": "Uma imagem digital apresenta aparência satisfatória, mas o serviço precisa avaliar a exposição recebida pelo receptor. Qual informação do sistema deve ser consultada?",
       "alternativas": [
         "Índice de exposição",
-        "Nome do arquivo",
-        "Cor do chassi",
-        "Tamanho do monitor"
+        "Largura de janela",
+        "Profundidade de bits",
+        "Matriz do monitor"
       ],
       "correta": 0,
       "explicacao": "Resposta: Índice de exposição.",
@@ -304,10 +304,10 @@
       "titulo": "Caso técnico 24",
       "pergunta": "Dois aparelhos apresentam números de exposição diferentes para situações semelhantes. Antes de compará-los diretamente, qual precaução é indispensável?",
       "alternativas": [
-        "Assumir escala universal idêntica",
+        "Assumir correspondência direta entre valores numéricos",
         "Considerar definições e calibração",
-        "Ignorar protocolos",
-        "Usar brilho do monitor como dose"
+        "Comparar apenas o brilho da imagem",
+        "Usar o mesmo valor-alvo para qualquer anatomia"
       ],
       "correta": 1,
       "explicacao": "Resposta: Considerar definições e calibração.",
@@ -318,9 +318,9 @@
       "pergunta": "Após um exame de alta exposição, uma estrutura do exame anterior reaparece fracamente na imagem seguinte. Qual mecanismo deve ser investigado?",
       "alternativas": [
         "Persistência de imagem",
-        "Ampliação geométrica",
-        "Movimento voluntário",
-        "Filtração inerente"
+        "Ruído quântico",
+        "Artefato de movimento",
+        "Erro de janela"
       ],
       "correta": 0,
       "explicacao": "Resposta: Persistência de imagem.",
@@ -330,9 +330,9 @@
       "titulo": "Caso técnico 26",
       "pergunta": "Uma imagem apresenta uma linha vertical repetitiva no mesmo local do painel em vários exames. Qual manifestação é compatível com falha de linha ou coluna?",
       "alternativas": [
-        "Magnificação",
-        "Desfoque por movimento",
-        "Rotação do paciente",
+        "Artefato de movimento",
+        "Distorção por magnificação",
+        "Padrão de Moiré",
         "Faixa linear"
       ],
       "correta": 3,
@@ -343,10 +343,10 @@
       "titulo": "Caso técnico 27",
       "pergunta": "Uma sequência de exames mostra não uniformidade persistente no detector, mesmo com técnica adequada. Qual rotina técnica deve ser acionada?",
       "alternativas": [
-        "Recorte estético",
+        "Inspeção de brilho da estação",
         "Controle de qualidade",
-        "Compressão irreversível",
-        "Aumento automático do mAs"
+        "Alteração de janela",
+        "Ajuste do índice de exposição"
       ],
       "correta": 1,
       "explicacao": "Resposta: Controle de qualidade.",
@@ -356,10 +356,10 @@
       "titulo": "Caso técnico 28",
       "pergunta": "Um operador usa recorte eletrônico para esconder áreas desnecessárias da imagem. Qual ação física deveria ter sido realizada na aquisição?",
       "alternativas": [
-        "Aumento do campo irradiado",
-        "Dispensa de identificação",
+        "Ampliação eletrônica do campo",
+        "Recorte posterior no PACS",
         "Colimação física correta",
-        "Remoção do marcador anatômico"
+        "Ajuste da largura de janela"
       ],
       "correta": 2,
       "explicacao": "Resposta: Colimação física correta.",
@@ -369,10 +369,10 @@
       "titulo": "Caso técnico 29",
       "pergunta": "Uma radiografia já adquirida precisa ser examinada com diferentes apresentações de contraste sem irradiar novamente o paciente. Qual ferramenta atende a essa necessidade?",
       "alternativas": [
-        "Nova incidência",
-        "Aumento de mAs",
+        "Reprocessamento da matriz de aquisição",
+        "Reconstrução de pixels ausentes",
         "Ajuste de janela",
-        "Troca de colimador"
+        "Repetição automática da exposição"
       ],
       "correta": 2,
       "explicacao": "Resposta: Ajuste de janela.",
@@ -383,14 +383,14 @@
       "pergunta": "Após identificar anatomia cortada na imagem, o operador tenta corrigir somente com processamento digital. Qual conduta é tecnicamente necessária antes de decidir nova aquisição?",
       "alternativas": [
         "Revisar posicionamento e técnica",
-        "Excluir metadados",
-        "Aplicar nitidez máxima sempre",
-        "Aumentar contraste indiscriminadamente"
+        "Aplicar realce de borda",
+        "Alterar o nível de janela",
+        "Aumentar a matriz de exibição"
       ],
       "correta": 0,
       "explicacao": "Resposta: Revisar posicionamento e técnica.",
       "dificuldade": "dificil"
     }
   ],
-  "status": "revisao-parcial-distratores-12-de-30"
+  "status": "distratores-revisados-30-pendente-auditoria-cientifica"
 }
