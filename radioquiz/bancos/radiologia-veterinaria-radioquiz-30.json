@@ -78,15 +78,15 @@
       "image_url": ""
     },
     {
-      "prompt": "Durante o posicionamento, a equipe utiliza um plano que divide o corpo em porções direita e esquerda. Qual é esse plano?",
+      "prompt": "Qual plano anatômico divide o corpo em porções direita e esquerda, sem necessariamente produzir metades iguais?",
       "options": [
-        "Plano dorsal, que separa dorsal e ventral",
-        "Plano transversal, que separa cranial e caudal",
-        "Plano mediano, restrito ao eixo da linha média",
-        "Sagital"
+        "Plano transversal",
+        "Plano sagital",
+        "Plano mediano exclusivamente",
+        "Plano dorsal"
       ],
-      "answer_index": 3,
-      "explanation": "Alternativa correta: Sagital.",
+      "answer_index": 1,
+      "explanation": "Os planos sagitais separam direita e esquerda; o plano mediano é o sagital que passa pela linha média e forma metades.",
       "time_limit_seconds": 55,
       "points": 1000,
       "topic": "Radiologia Veterinária",
@@ -453,5 +453,5 @@
       "image_url": ""
     }
   ],
-  "status": "30-enunciados-e-90-distratores-revistos-validacao-em-partida-pendente"
+  "status": "revisado-ambiguidade-de-planos-corrigida"
 }
