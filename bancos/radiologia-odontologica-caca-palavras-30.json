@@ -1,0 +1,126 @@
+{
+  "title": "Radiologia Odontológica — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual técnica radiográfica intraoral demonstra a região apical dos dentes?",
+      "answer": "PERIAPICAL"
+    },
+    {
+      "question": "Qual técnica intraoral permite examinar contatos proximais de dentes posteriores?",
+      "answer": "INTERPROXIMAL"
+    },
+    {
+      "question": "Qual técnica intraoral cobre área relativamente ampla de uma arcada?",
+      "answer": "OCLUSAL"
+    },
+    {
+      "question": "Qual técnica posiciona o receptor paralelo ao eixo longo do dente?",
+      "answer": "PARALELISMO"
+    },
+    {
+      "question": "Qual referência geométrica é utilizada na técnica da bissetriz?",
+      "answer": "BISSETRIZ"
+    },
+    {
+      "question": "Qual distorção faz o dente parecer mais curto na imagem?",
+      "answer": "ENCURTAMENTO"
+    },
+    {
+      "question": "Qual distorção faz o dente parecer mais longo na imagem?",
+      "answer": "ALONGAMENTO"
+    },
+    {
+      "question": "Qual direção de angulação deve ser corrigida quando contatos proximais estão sobrepostos?",
+      "answer": "HORIZONTAL"
+    },
+    {
+      "question": "Qual exame extraoral registra amplamente maxila e mandíbula em uma aquisição?",
+      "answer": "PANORÂMICA"
+    },
+    {
+      "question": "Qual termo nomeia o borramento por perda de definição da imagem?",
+      "answer": "DESFOQUE"
+    },
+    {
+      "question": "Qual plano cefalométrico é definido por pório e orbitário?",
+      "answer": "FRANKFURT"
+    },
+    {
+      "question": "Qual tecido dentário é geralmente o mais radiopaco?",
+      "answer": "ESMALTE"
+    },
+    {
+      "question": "Qual tecido mineralizado constitui grande parte da estrutura dentária?",
+      "answer": "DENTINA"
+    },
+    {
+      "question": "Qual tecido mineralizado recobre a raiz dentária?",
+      "answer": "CEMENTO"
+    },
+    {
+      "question": "Qual tecido ocupa a cavidade pulpar?",
+      "answer": "POLPA"
+    },
+    {
+      "question": "Qual porção do dente se aloja no alvéolo?",
+      "answer": "RAIZ"
+    },
+    {
+      "question": "Qual porção anatômica do dente é recoberta por esmalte?",
+      "answer": "COROA"
+    },
+    {
+      "question": "Qual estrutura óssea contém os alvéolos dentários?",
+      "answer": "ALVEOLAR"
+    },
+    {
+      "question": "Qual estrutura radiopaca delgada delimita o alvéolo dentário?",
+      "answer": "LÂMINADURA"
+    },
+    {
+      "question": "Qual tecido fibroso ocupa o espaço entre cemento e osso alveolar?",
+      "answer": "PERIODONTO"
+    },
+    {
+      "question": "Qual cavidade óssea abriga a cabeça da mandíbula?",
+      "answer": "FOSSA"
+    },
+    {
+      "question": "Qual projeção extraoral é empregada em análises cefalométricas laterais?",
+      "answer": "TELERRADIOGRAFIA"
+    },
+    {
+      "question": "Qual técnica volumétrica de feixe cônico é identificada pela sigla brasileira?",
+      "answer": "TCFC"
+    },
+    {
+      "question": "Qual processo de ajustar o campo irradiado reduz exposição desnecessária?",
+      "answer": "COLIMAÇÃO"
+    },
+    {
+      "question": "Qual princípio exige indicação clínica antes de uma radiografia?",
+      "answer": "JUSTIFICAÇÃO"
+    },
+    {
+      "question": "Qual princípio orienta a redução da exposição compatível com o objetivo diagnóstico?",
+      "answer": "OTIMIZAÇÃO"
+    },
+    {
+      "question": "Qual característica da imagem permite distinguir pequenos detalhes?",
+      "answer": "RESOLUÇÃO"
+    },
+    {
+      "question": "Qual tipo de artefato surge quando estruturas se projetam umas sobre outras?",
+      "answer": "SOBREPOSIÇÃO"
+    },
+    {
+      "question": "Qual região óssea da mandíbula contém o processo condilar?",
+      "answer": "RAMO"
+    },
+    {
+      "question": "Qual estrutura articular mandibular é avaliada em exames da ATM?",
+      "answer": "CÔNDILO"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
