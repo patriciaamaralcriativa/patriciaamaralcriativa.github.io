@@ -2,8 +2,8 @@
   "disciplina": "Radiologia Digital",
   "questoes": [
     {
-      "titulo": "DESAFIO DIGITAL 1",
-      "pergunta": "No sistema CR, qual receptor armazena a imagem latente?",
+      "titulo": "Caso técnico 1",
+      "pergunta": "Um serviço utiliza cassetes CR e percebe que não surge imagem imediatamente após a exposição. Em qual componente permanece a informação antes da leitura?",
       "alternativas": [
         "Placa de fósforo fotoestimulável",
         "Painel de selênio amorfo",
@@ -15,8 +15,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 2",
-      "pergunta": "No CR, qual etapa libera o sinal armazenado na placa?",
+      "titulo": "Caso técnico 2",
+      "pergunta": "Um cassete CR foi exposto e levado à processadora. Qual operação permite recuperar a informação registrada na placa?",
       "alternativas": [
         "Aquecimento do chassi",
         "Varredura a laser",
@@ -28,8 +28,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 3",
-      "pergunta": "Após a leitura do CR, por que se apaga a placa?",
+      "titulo": "Caso técnico 3",
+      "pergunta": "Após várias utilizações, uma placa CR apresenta vestígios de exames anteriores. Qual etapa do ciclo deve ser verificada primeiro?",
       "alternativas": [
         "Reduzir o tamanho do pixel",
         "Converter DICOM em JPEG",
@@ -41,8 +41,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 4",
-      "pergunta": "Na DR indireta, qual componente transforma raios X em luz?",
+      "titulo": "Caso técnico 4",
+      "pergunta": "Uma equipe compara um painel DR indireto com um detector direto. No painel indireto, qual componente executa a primeira conversão após a absorção dos raios X?",
       "alternativas": [
         "Fotodiodo isolado",
         "Conversor analógico-digital",
@@ -54,8 +54,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 5",
-      "pergunta": "Na DR direta com selênio amorfo, qual transformação ocorre primeiro?",
+      "titulo": "Caso técnico 5",
+      "pergunta": "Um detector de selênio amorfo é instalado para evitar uma etapa intermediária luminosa. Qual conversão física caracteriza sua aquisição?",
       "alternativas": [
         "Raios X em cargas elétricas",
         "Raios X em luz visível",
@@ -67,8 +67,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 6",
-      "pergunta": "Em detectores indiretos, qual material cintilador é frequentemente utilizado?",
+      "titulo": "Caso técnico 6",
+      "pergunta": "Um fabricante especifica detector DR indireto com cristais colunares para condução da luz. Qual material é compatível com essa arquitetura?",
       "alternativas": [
         "Tungstênio metálico",
         "Iodeto de césio",
@@ -80,8 +80,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 7",
-      "pergunta": "Qual elemento converte luz do cintilador em sinal elétrico?",
+      "titulo": "Caso técnico 7",
+      "pergunta": "Em um painel DR indireto, a luz já foi produzida pelo cintilador. Qual dispositivo participa de sua conversão em sinal elétrico?",
       "alternativas": [
         "Filtro adicional",
         "Tubo de raios X",
@@ -93,8 +93,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 8",
-      "pergunta": "O que representa a matriz de imagem digital?",
+      "titulo": "Caso técnico 8",
+      "pergunta": "Um aluno observa uma imagem de 2048 por 2048 elementos. O que esses números descrevem na estrutura da imagem?",
       "alternativas": [
         "Quantidade de exames no PACS",
         "Tempo de exposição",
@@ -106,8 +106,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 9",
-      "pergunta": "Qual propriedade indica o tamanho da região representada por um pixel?",
+      "titulo": "Caso técnico 9",
+      "pergunta": "Dois sistemas usam matriz idêntica, mas cobrem áreas físicas diferentes. Qual propriedade deve ser comparada para estimar a dimensão representada por cada pixel?",
       "alternativas": [
         "Espaçamento de pixel",
         "Tensão do tubo",
@@ -119,8 +119,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 10",
-      "pergunta": "Qual processo transforma sinal analógico em valores digitais?",
+      "titulo": "Caso técnico 10",
+      "pergunta": "Durante a leitura de um detector, a eletrônica recebe um sinal contínuo que precisa ser armazenado numericamente. Qual processo realiza essa etapa?",
       "alternativas": [
         "Filtração",
         "Conversão analógico-digital",
@@ -132,8 +132,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 11",
-      "pergunta": "Qual parâmetro descreve a quantidade de níveis de cinza codificáveis?",
+      "titulo": "Caso técnico 11",
+      "pergunta": "Uma imagem de 12 bits e outra de 16 bits têm dimensões iguais. Qual parâmetro distingue a capacidade de codificação dos valores de sinal?",
       "alternativas": [
         "Tamanho do campo",
         "Velocidade do obturador",
@@ -145,8 +145,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 12",
-      "pergunta": "Qual ferramenta altera a amplitude dos valores de cinza exibidos?",
+      "titulo": "Caso técnico 12",
+      "pergunta": "Uma radiografia contém diferenças sutis, mas o operador deseja exibir uma faixa mais estreita de valores. Qual ajuste deve ser utilizado?",
       "alternativas": [
         "Tensão de pico",
         "Distância foco-receptor",
@@ -158,8 +158,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 13",
-      "pergunta": "Qual ferramenta desloca o centro da faixa de valores exibidos?",
+      "titulo": "Caso técnico 13",
+      "pergunta": "Em uma estação de trabalho, a faixa de valores exibidos tem amplitude adequada, porém está centrada em intensidade inadequada. Qual controle deve ser ajustado?",
       "alternativas": [
         "Nível de janela",
         "Colimação física",
@@ -171,8 +171,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 14",
-      "pergunta": "Qual sistema armazena e distribui imagens médicas?",
+      "titulo": "Caso técnico 14",
+      "pergunta": "Uma radiografia foi adquirida corretamente, mas precisa ficar acessível a outros setores da instituição. Qual infraestrutura se destina ao armazenamento e distribuição dessas imagens?",
       "alternativas": [
         "AEC",
         "PACS",
@@ -184,8 +184,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 15",
-      "pergunta": "Qual padrão organiza comunicação e arquivos de imagens médicas?",
+      "titulo": "Caso técnico 15",
+      "pergunta": "Um exame precisa ser transmitido entre equipamentos de fabricantes diferentes preservando atributos e metadados. Qual padrão é apropriado?",
       "alternativas": [
         "CSV",
         "HTML",
@@ -197,8 +197,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 16",
-      "pergunta": "Qual sistema gerencia fluxos administrativos e informações radiológicas?",
+      "titulo": "Caso técnico 16",
+      "pergunta": "O setor precisa acompanhar solicitações, agenda e laudos, além das imagens armazenadas. Qual sistema atende ao fluxo de informação radiológica?",
       "alternativas": [
         "PACS exclusivamente",
         "Detector DR",
@@ -210,8 +210,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 17",
-      "pergunta": "Qual propriedade define a capacidade de distinguir detalhes pequenos?",
+      "titulo": "Caso técnico 17",
+      "pergunta": "Um detector apresenta dificuldade em separar estruturas muito próximas apesar de bom contraste entre elas. Qual propriedade está mais diretamente limitada?",
       "alternativas": [
         "Resolução espacial",
         "Brilho do monitor",
@@ -223,8 +223,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 18",
-      "pergunta": "Qual propriedade define a capacidade de distinguir pequenas diferenças de sinal?",
+      "titulo": "Caso técnico 18",
+      "pergunta": "Em uma imagem, duas regiões extensas com sinais próximos tornam-se difíceis de diferenciar, embora suas bordas sejam grandes. Qual propriedade deve ser analisada?",
       "alternativas": [
         "Velocidade de impressão",
         "Resolução de contraste",
@@ -236,8 +236,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 19",
-      "pergunta": "Qual fenômeno aparece como granulação em imagens com poucos fótons detectados?",
+      "titulo": "Caso técnico 19",
+      "pergunta": "Um exame apresenta aspecto granulado quando poucos fótons são registrados. Qual fenômeno explica esse comportamento?",
       "alternativas": [
         "Distorção geométrica",
         "Persistência de imagem",
@@ -249,8 +249,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 20",
-      "pergunta": "Qual prática reduz a exposição fora da anatomia necessária?",
+      "titulo": "Caso técnico 20",
+      "pergunta": "Durante a aquisição, parte extensa do corpo fora da área de interesse é irradiada. Qual medida técnica deve ser corrigida?",
       "alternativas": [
         "Ampliação indiscriminada do campo",
         "Repetição preventiva",
@@ -262,8 +262,8 @@
       "dificuldade": "normal"
     },
     {
-      "titulo": "DESAFIO DIGITAL 21",
-      "pergunta": "Qual conceito descreve aumento gradual de exposição sem necessidade clínica?",
+      "titulo": "Caso técnico 21",
+      "pergunta": "Um setor observa aumento progressivo dos indicadores de exposição, embora a aparência das imagens permaneça semelhante. Qual fenômeno merece investigação?",
       "alternativas": [
         "Dose creep",
         "Fluorescência",
@@ -275,8 +275,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 22",
-      "pergunta": "Qual recurso automático pode mascarar visualmente superexposição?",
+      "titulo": "Caso técnico 22",
+      "pergunta": "Uma radiografia excessivamente exposta continua visualmente aceitável após processamento automático. Qual mecanismo ajuda a explicar isso?",
       "alternativas": [
         "Movimento do paciente",
         "Reescalonamento da imagem",
@@ -288,8 +288,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 23",
-      "pergunta": "Qual recurso auxilia no controle da exposição recebida pelo detector?",
+      "titulo": "Caso técnico 23",
+      "pergunta": "Uma imagem digital apresenta aparência satisfatória, mas o serviço precisa avaliar a exposição recebida pelo receptor. Qual informação do sistema deve ser consultada?",
       "alternativas": [
         "Nome do arquivo",
         "Cor do chassi",
@@ -301,8 +301,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 24",
-      "pergunta": "Qual cuidado é necessário ao comparar índices de exposição de fabricantes?",
+      "titulo": "Caso técnico 24",
+      "pergunta": "Dois aparelhos apresentam números de exposição diferentes para situações semelhantes. Antes de compará-los diretamente, qual precaução é indispensável?",
       "alternativas": [
         "Assumir escala universal idêntica",
         "Ignorar protocolos",
@@ -314,8 +314,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 25",
-      "pergunta": "Qual mecanismo pode gerar imagem fantasma por sinal anterior no detector?",
+      "titulo": "Caso técnico 25",
+      "pergunta": "Após um exame de alta exposição, uma estrutura do exame anterior reaparece fracamente na imagem seguinte. Qual mecanismo deve ser investigado?",
       "alternativas": [
         "Persistência de imagem",
         "Ampliação geométrica",
@@ -327,8 +327,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 26",
-      "pergunta": "Qual artefato pode surgir por defeito de linha ou coluna do detector?",
+      "titulo": "Caso técnico 26",
+      "pergunta": "Uma imagem apresenta uma linha vertical repetitiva no mesmo local do painel em vários exames. Qual manifestação é compatível com falha de linha ou coluna?",
       "alternativas": [
         "Magnificação",
         "Faixa linear",
@@ -340,8 +340,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 27",
-      "pergunta": "Qual procedimento verifica uniformidade e funcionamento do detector?",
+      "titulo": "Caso técnico 27",
+      "pergunta": "Uma sequência de exames mostra não uniformidade persistente no detector, mesmo com técnica adequada. Qual rotina técnica deve ser acionada?",
       "alternativas": [
         "Recorte estético",
         "Compressão irreversível",
@@ -353,8 +353,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 28",
-      "pergunta": "Qual cuidado deve anteceder a aplicação de recorte eletrônico?",
+      "titulo": "Caso técnico 28",
+      "pergunta": "Um operador usa recorte eletrônico para esconder áreas desnecessárias da imagem. Qual ação física deveria ter sido realizada na aquisição?",
       "alternativas": [
         "Aumento do campo irradiado",
         "Dispensa de identificação",
@@ -366,8 +366,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 29",
-      "pergunta": "Qual recurso permite visualizar diferenças de tons sem nova exposição?",
+      "titulo": "Caso técnico 29",
+      "pergunta": "Uma radiografia já adquirida precisa ser examinada com diferentes apresentações de contraste sem irradiar novamente o paciente. Qual ferramenta atende a essa necessidade?",
       "alternativas": [
         "Ajuste de janela",
         "Nova incidência",
@@ -379,8 +379,8 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "DESAFIO DIGITAL 30",
-      "pergunta": "Qual prática evita atribuir ao pós-processamento a correção de erro de aquisição?",
+      "titulo": "Caso técnico 30",
+      "pergunta": "Após identificar anatomia cortada na imagem, o operador tenta corrigir somente com processamento digital. Qual conduta é tecnicamente necessária antes de decidir nova aquisição?",
       "alternativas": [
         "Excluir metadados",
         "Revisar posicionamento e técnica",
@@ -391,5 +391,6 @@
       "explicacao": "Resposta: Revisar posicionamento e técnica.",
       "dificuldade": "dificil"
     }
-  ]
+  ],
+  "status": "enunciados-contextualizados-pendente-revisao-distratores"
 }
