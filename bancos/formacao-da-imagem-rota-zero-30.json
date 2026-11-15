@@ -132,265 +132,265 @@
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Situação 11",
-      "pergunta": "Um exame realizado a 250 mA durante 0,04 s corresponde a:",
+      "titulo": "Aplicação técnica 11",
+      "pergunta": "Um protocolo prevê 24 mAs com 400 mA. O equipamento limita o tempo mínimo a 0,08 s. Qual escolha mantém 24 mAs sem violar esse limite?",
       "alternativas": [
-        "6,25 mAs",
-        "62,5 mAs",
-        "10 mAs",
-        "100 mAs"
+        "400 mA e 0,06 s",
+        "200 mA e 0,08 s",
+        "300 mA e 0,08 s",
+        "500 mA e 0,08 s"
       ],
       "correta": 2,
-      "explicacao": "250 × 0,04 = 10 mAs.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 12",
-      "pergunta": "Para obter 15 mAs em 0,05 s, qual corrente é necessária?",
-      "alternativas": [
-        "300 mA",
-        "75 mA",
-        "150 mA",
-        "750 mA"
-      ],
-      "correta": 0,
-      "explicacao": "15 dividido por 0,05 = 300 mA.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 13",
-      "pergunta": "O aumento do mAs, com kV constante, afeta principalmente:",
-      "alternativas": [
-        "A energia máxima individual dos fótons",
-        "A quantidade de fótons produzidos",
-        "O número atômico do alvo",
-        "A posição do ponto focal"
-      ],
-      "correta": 1,
-      "explicacao": "O mAs controla predominantemente a quantidade de radiação produzida.",
+      "explicacao": "300 × 0,08 = 24 mAs; 400 mA exigiria 0,06 s, abaixo do limite.",
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Situação 14",
-      "pergunta": "Na radiografia com filme, qual etapa remove os cristais de haleto de prata não revelados?",
+      "titulo": "Aplicação técnica 12",
+      "pergunta": "Ao aumentar a distância foco-receptor de 100 para 150 cm, mantendo objeto junto ao receptor, qual efeito geométrico é esperado?",
       "alternativas": [
-        "Revelação",
-        "Secagem",
-        "Exposição",
-        "Fixação"
-      ],
-      "correta": 3,
-      "explicacao": "O fixador remove os cristais não reduzidos, estabilizando a imagem.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 15",
-      "pergunta": "Qual sequência representa o processamento manual convencional do filme?",
-      "alternativas": [
-        "Fixação, revelação, secagem, lavagem e exposição",
-        "Revelação, secagem, fixação e lavagem",
-        "Revelação, lavagem intermediária, fixação, lavagem final e secagem",
-        "Lavagem final, fixação, revelação e secagem"
-      ],
-      "correta": 2,
-      "explicacao": "A sequência inclui revelação, interrupção/lavagem intermediária, fixação, lavagem final e secagem.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 16",
-      "pergunta": "No processamento do filme, a revelação transforma principalmente:",
-      "alternativas": [
-        "Cristais expostos em prata metálica visível",
-        "Prata metálica em cristais não expostos",
-        "Fótons de raios X em luz do negatoscópio",
-        "Gelatina do filme em material radiopaco"
+        "Menor magnificação e menor penumbra geométrica",
+        "Maior magnificação e maior penumbra",
+        "Menor magnificação e maior distorção obrigatória",
+        "Mesma magnificação independentemente da distância"
       ],
       "correta": 0,
-      "explicacao": "O revelador reduz os cristais expostos, formando prata metálica escura.",
+      "explicacao": "A maior distância foco-receptor reduz a divergência relativa do feixe para o objeto próximo ao receptor.",
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Situação 17",
-      "pergunta": "Em um sistema DR indireto, a primeira conversão da energia dos raios X no detector ocorre em:",
+      "titulo": "Aplicação técnica 13",
+      "pergunta": "O tecnólogo observa que uma estrutura longa aparece encurtada. O objeto estava inclinado em relação ao receptor. Qual medida é mais apropriada?",
       "alternativas": [
-        "Carga elétrica diretamente no fotocondutor",
-        "Imagem latente no filme químico",
-        "Movimento mecânico de uma placa",
-        "Luz produzida no cintilador"
-      ],
-      "correta": 3,
-      "explicacao": "Detectores indiretos convertem raios X em luz antes da conversão elétrica.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 18",
-      "pergunta": "Em um sistema DR direto com fotocondutor, o sinal é produzido por:",
-      "alternativas": [
-        "Conversão obrigatória em luz por cintilador",
-        "Conversão direta da energia absorvida em cargas elétricas",
-        "Revelação química de prata",
-        "Leitura óptica de filme processado"
-      ],
-      "correta": 1,
-      "explicacao": "No DR direto, o fotocondutor gera cargas sem etapa intermediária de cintilação.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 19",
-      "pergunta": "Uma placa de fósforo fotoestimulável usada em CR precisa de qual etapa para gerar a imagem digital?",
-      "alternativas": [
-        "Leitura por equipamento apropriado após a exposição",
-        "Fixação química em solução",
-        "Impressão em película antes da leitura",
-        "Revelação com prata metálica"
-      ],
-      "correta": 0,
-      "explicacao": "O sistema CR lê a informação armazenada na placa por estimulação luminosa.",
-      "dificuldade": "dificil"
-    },
-    {
-      "titulo": "Situação 20",
-      "pergunta": "O que diferencia um sistema CR de um DR com painel plano?",
-      "alternativas": [
-        "O CR dispensa receptor; o DR usa apenas filme",
-        "O CR exige revelação química; o DR exige fixação",
-        "O CR utiliza placa que passa por leitor; o DR adquire o sinal no detector integrado",
-        "O CR gera somente imagem analógica; o DR somente imagem impressa"
-      ],
-      "correta": 2,
-      "explicacao": "No CR, a placa é levada a um leitor; no DR, o painel integra a aquisição.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 21",
-      "pergunta": "Se o receptor for afastado do objeto, mantendo a distância foco-receptor, o que tende a ocorrer?",
-      "alternativas": [
-        "Menor magnificação geométrica",
-        "Ausência de penumbra geométrica",
-        "Maior magnificação geométrica",
-        "Redução obrigatória do tamanho aparente"
-      ],
-      "correta": 2,
-      "explicacao": "Maior distância objeto-receptor aumenta a magnificação.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 22",
-      "pergunta": "Qual ajuste geométrico tende a reduzir a magnificação, mantendo o objeto próximo do receptor?",
-      "alternativas": [
-        "Aumentar a distância foco-receptor",
+        "Elevar o mAs para compensar a projeção",
+        "Alterar apenas a janela digital",
         "Diminuir a distância foco-receptor",
-        "Afastar o objeto do receptor",
+        "Rever o alinhamento entre objeto, receptor e feixe central"
+      ],
+      "correta": 3,
+      "explicacao": "A distorção de forma decorre da geometria; aumentar exposição não a corrige.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 14",
+      "pergunta": "Uma imagem apresenta boa aparência após processamento digital, mas o indicador de exposição está fora da faixa-alvo do serviço. Qual conduta é tecnicamente adequada?",
+      "alternativas": [
+        "Aceitar o brilho como prova de exposição otimizada",
+        "Avaliar o indicador segundo a calibração e o protocolo do equipamento",
+        "Ajustar apenas o brilho e apagar o indicador",
+        "Aumentar o kV de todos os exames seguintes"
+      ],
+      "correta": 1,
+      "explicacao": "A apresentação digital pode mascarar diferenças de exposição; o indicador deve ser interpretado no contexto do sistema.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 15",
+      "pergunta": "Um paciente não consegue sustentar a apneia. Entre técnicas com 20 mAs, qual reduz mais a chance de borramento?",
+      "alternativas": [
+        "100 mA por 0,20 s",
+        "200 mA por 0,10 s",
+        "400 mA por 0,05 s",
+        "250 mA por 0,08 s"
+      ],
+      "correta": 2,
+      "explicacao": "Todas fornecem 20 mAs; 0,05 s é o menor tempo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 16",
+      "pergunta": "Uma área de tecido mais espesso e outra mais fina recebem o mesmo feixe incidente. Sem outros fatores, qual área tende a produzir menor sinal de transmissão?",
+      "alternativas": [
+        "A mais espessa, por oferecer mais oportunidades de atenuação",
+        "A mais fina, por produzir mais interações",
+        "Ambas transmitem obrigatoriamente a mesma intensidade",
+        "A mais espessa, por gerar novos fótons diagnósticos"
+      ],
+      "correta": 0,
+      "explicacao": "A espessura adicional aumenta a atenuação, reduzindo a intensidade transmitida.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 17",
+      "pergunta": "Ao passar de 100 mA e 0,30 s para 150 mA e 0,20 s, mantendo kV, qual comparação está correta?",
+      "alternativas": [
+        "A segunda técnica aumenta 50% o mAs",
+        "A segunda técnica reduz 33% o mAs",
+        "A primeira produz 45 mAs",
+        "Ambas produzem 30 mAs"
+      ],
+      "correta": 3,
+      "explicacao": "100 × 0,30 e 150 × 0,20 correspondem a 30 mAs.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 18",
+      "pergunta": "Uma radiografia digital foi adquirida com campo muito amplo. Qual correção deve ser priorizada em uma nova exposição clinicamente indicada?",
+      "alternativas": [
+        "Aumentar o brilho da imagem",
+        "Colimar adequadamente a região de interesse",
+        "Elevar o mAs para compensar a área maior",
+        "Reduzir a matriz de visualização"
+      ],
+      "correta": 1,
+      "explicacao": "A colimação deve restringir a área irradiada ao necessário, conforme a indicação e o protocolo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 19",
+      "pergunta": "O processamento convencional mostrou filme com resíduos de químicos após secagem. Qual falha anterior pode explicar o problema?",
+      "alternativas": [
+        "Excesso de distância foco-receptor",
+        "Menor kV do exame",
+        "Lavagem final insuficiente",
+        "Colimação estreita"
+      ],
+      "correta": 2,
+      "explicacao": "Lavagem final inadequada pode deixar resíduos do processamento no filme.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 20",
+      "pergunta": "Um detector DR indireto apresenta falha na etapa de cintilação. Qual etapa da cadeia de sinal fica diretamente comprometida?",
+      "alternativas": [
+        "Produção de luz a partir dos raios X absorvidos",
+        "Aceleração dos elétrons no tubo",
+        "Definição do ponto focal do ânodo",
+        "Colimação mecânica do feixe"
+      ],
+      "correta": 0,
+      "explicacao": "O cintilador converte a energia dos raios X em luz antes da leitura elétrica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 21",
+      "pergunta": "Em uma aquisição CR, a placa foi exposta, mas o operador tentou visualizá-la sem leitura. Por que não há imagem disponível?",
+      "alternativas": [
+        "A placa depende de fixação química",
+        "A placa precisa ser posicionada junto ao ânodo",
+        "A leitura só ocorre após nova exposição",
+        "O sinal latente precisa ser extraído pelo leitor apropriado"
+      ],
+      "correta": 3,
+      "explicacao": "A placa fotoestimulável armazena informação que deve ser lida para formar a imagem digital.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 22",
+      "pergunta": "Um operador confunde kV e mAs ao revisar técnica. Qual afirmação diferencia corretamente as grandezas?",
+      "alternativas": [
+        "O mAs define diretamente a energia máxima de cada fóton",
+        "O kV influencia a energia do espectro; o mAs controla predominantemente a quantidade produzida",
+        "O kV representa o tempo de exposição",
+        "O mAs é a distância entre foco e receptor"
+      ],
+      "correta": 1,
+      "explicacao": "kV relaciona-se à tensão de aceleração e ao espectro; mAs é corrente multiplicada pelo tempo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 23",
+      "pergunta": "Para reduzir magnificação em uma radiografia, sem mudar a distância foco-receptor, qual alteração geométrica é mais apropriada?",
+      "alternativas": [
+        "Aumentar a distância objeto-receptor",
+        "Inclinar mais o objeto",
+        "Aproximar o objeto do receptor",
+        "Aumentar o tempo de exposição"
+      ],
+      "correta": 2,
+      "explicacao": "Reduzir a distância objeto-receptor diminui a magnificação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 24",
+      "pergunta": "Uma imagem de filme fica suscetível a alterações após revelação, pois ainda contém cristais não revelados. Qual etapa deve estabilizá-la?",
+      "alternativas": [
+        "Fixação",
+        "Secagem isolada",
+        "Exposição complementar",
+        "Colimação"
+      ],
+      "correta": 0,
+      "explicacao": "O fixador remove haletos de prata não revelados, estabilizando a imagem.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 25",
+      "pergunta": "Uma região de osso e uma de tecido mole projetam-se sobre o mesmo receptor. O que fundamenta a diferença de sinal entre elas?",
+      "alternativas": [
+        "A produção de fótons adicionais pelo osso",
+        "A mudança do mAs ao atravessar o paciente",
+        "A alteração da matriz física do detector",
+        "As diferenças de atenuação e transmissão do feixe"
+      ],
+      "correta": 3,
+      "explicacao": "O contraste de sujeito decorre das diferenças de atenuação entre materiais.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 26",
+      "pergunta": "O técnico precisa preservar 18 mAs, mas deseja tempo máximo de 0,06 s. Qual corrente mínima atende ao requisito?",
+      "alternativas": [
+        "180 mA",
+        "300 mA",
+        "200 mA",
+        "120 mA"
+      ],
+      "correta": 1,
+      "explicacao": "18/0,06 = 300 mA.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 27",
+      "pergunta": "Uma imagem tem perda de definição nas bordas após movimentação do paciente. Qual medida atua diretamente sobre a causa?",
+      "alternativas": [
+        "Alterar o contraste de exibição",
+        "Aumentar a magnificação",
+        "Reduzir o tempo e orientar/imobilizar adequadamente o paciente",
         "Aumentar a distância objeto-receptor"
       ],
-      "correta": 0,
-      "explicacao": "Maior distância foco-receptor tende a reduzir a magnificação para uma dada distância objeto-receptor.",
-      "dificuldade": "dificil"
-    },
-    {
-      "titulo": "Situação 23",
-      "pergunta": "O desalinhamento entre objeto e receptor pode provocar principalmente:",
-      "alternativas": [
-        "Aumento do número atômico efetivo",
-        "Distorção de forma",
-        "Mudança do mAs programado",
-        "Conversão de imagem digital em analógica"
-      ],
-      "correta": 1,
-      "explicacao": "O desalinhamento geométrico pode alongar ou encurtar a projeção.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 24",
-      "pergunta": "Qual efeito resulta de movimento do paciente durante a exposição?",
-      "alternativas": [
-        "Aumento do kV selecionado",
-        "Redução automática do ponto focal",
-        "Eliminação da magnificação",
-        "Perda de nitidez espacial"
-      ],
-      "correta": 3,
-      "explicacao": "O movimento durante a aquisição espalha a representação das bordas.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 25",
-      "pergunta": "Qual medida reduz o borramento por movimento sem alterar o mAs?",
-      "alternativas": [
-        "Aumentar o mA e reduzir proporcionalmente o tempo",
-        "Reduzir mA e aumentar proporcionalmente o tempo",
-        "Aumentar o tempo mantendo mA",
-        "Diminuir a distância foco-receptor"
-      ],
-      "correta": 0,
-      "explicacao": "Menor tempo reduz a oportunidade de movimento, mantendo o produto mAs.",
-      "dificuldade": "dificil"
-    },
-    {
-      "titulo": "Situação 26",
-      "pergunta": "Em uma radiografia digital, o ajuste de brilho e contraste na estação de trabalho:",
-      "alternativas": [
-        "Altera retroativamente a dose absorvida pelo paciente",
-        "Modifica a tensão aplicada durante a exposição anterior",
-        "Modifica a apresentação da imagem, não a exposição já recebida",
-        "Recupera qualquer detalhe perdido por saturação"
-      ],
       "correta": 2,
-      "explicacao": "O pós-processamento modifica a visualização, mas não altera a aquisição original.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 27",
-      "pergunta": "Por que uma imagem digital visualmente adequada não garante exposição otimizada?",
-      "alternativas": [
-        "O detector impede qualquer exposição excessiva",
-        "O brilho final determina diretamente a dose do paciente",
-        "A imagem digital não depende da radiação transmitida",
-        "O processamento pode compensar a aparência de exposições diferentes"
-      ],
-      "correta": 3,
-      "explicacao": "A latitude e o processamento digital podem mascarar diferenças de exposição.",
-      "dificuldade": "normal"
-    },
-    {
-      "titulo": "Situação 28",
-      "pergunta": "Ao atravessar tecidos diferentes, o feixe forma contraste de sujeito principalmente devido a:",
-      "alternativas": [
-        "Igualdade de transmissão entre todos os tecidos",
-        "Diferenças de atenuação entre estruturas",
-        "Produção de raios X pelos tecidos moles",
-        "Rotação do receptor durante a exposição"
-      ],
-      "correta": 1,
-      "explicacao": "A transmissão desigual do feixe cria diferenças de sinal entre regiões.",
+      "explicacao": "O movimento durante a exposição gera borramento; tempo menor e estabilização adequada ajudam a preveni-lo.",
       "dificuldade": "dificil"
     },
     {
-      "titulo": "Situação 29",
-      "pergunta": "A função da colimação do campo é principalmente:",
+      "titulo": "Aplicação técnica 28",
+      "pergunta": "Na comparação de dois sistemas DR, um usa cintilador e outro fotocondutor. Qual distinção é correta?",
       "alternativas": [
-        "Limitar a área irradiada à região de interesse",
-        "Aumentar a energia máxima dos fótons",
-        "Substituir a seleção de kV e mAs",
-        "Aumentar o tamanho do ponto focal"
+        "O primeiro converte raios X em luz antes do sinal elétrico; o segundo pode gerar cargas diretamente",
+        "Ambos exigem revelação e fixação química",
+        "O segundo utiliza obrigatoriamente filme convencional",
+        "O primeiro não recebe radiação transmitida"
       ],
       "correta": 0,
-      "explicacao": "A colimação delimita o campo irradiado e reduz exposição desnecessária fora dele.",
-      "dificuldade": "normal"
+      "explicacao": "DR indireto usa etapa luminosa; DR direto usa conversão direta em cargas no fotocondutor.",
+      "dificuldade": "dificil"
     },
     {
-      "titulo": "Situação 30",
-      "pergunta": "Uma imagem convencional fica com pouco contraste entre tecidos de atenuação próxima. Qual fator de exposição influencia diretamente o contraste radiográfico de sujeito?",
+      "titulo": "Aplicação técnica 29",
+      "pergunta": "Um exame usa 125 mA durante 0,16 s. Para obter o mesmo mAs em 0,10 s, qual corrente selecionar?",
       "alternativas": [
-        "A identificação alfanumérica do exame",
-        "A velocidade do ventilador da sala",
-        "A orientação do monitor de visualização",
-        "A tensão do tubo (kV)"
+        "125 mA",
+        "160 mA",
+        "180 mA",
+        "200 mA"
       ],
       "correta": 3,
-      "explicacao": "O kV influencia a penetração e as diferenças relativas de atenuação no feixe.",
-      "dificuldade": "normal"
+      "explicacao": "125 × 0,16 = 20 mAs; 20/0,10 = 200 mA.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Aplicação técnica 30",
+      "pergunta": "Uma projeção mostra distorção de forma, embora a exposição e a nitidez do receptor estejam adequadas. Qual hipótese deve ser investigada primeiro?",
+      "alternativas": [
+        "Ausência de revelador no detector DR",
+        "Desalinhamento entre objeto, receptor e feixe",
+        "Quantidade insuficiente de pixels no monitor, obrigatoriamente",
+        "Redução de kV após a exposição"
+      ],
+      "correta": 1,
+      "explicacao": "A distorção de forma é primariamente uma questão de geometria de projeção.",
+      "dificuldade": "dificil"
     }
   ],
-  "status": "revisao-parcial-10-questoes-originais-20-pendentes"
+  "status": "revisao-editorial-30-questoes-distintas"
 }
