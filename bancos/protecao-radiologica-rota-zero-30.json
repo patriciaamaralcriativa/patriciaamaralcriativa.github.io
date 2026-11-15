@@ -5,38 +5,38 @@
       "titulo": "Caso de proteção 1",
       "pergunta": "Um pedido sem indicação clínica clara chega ao setor. Que princípio deve ser verificado antes da exposição?",
       "alternativas": [
-        "Aplicar recorte digital após a exposição",
-        "Aumentar o mAs para melhorar o contraste",
-        "Restringir fisicamente a colimação à área de interesse",
-        "Ampliar o campo e reduzir o brilho"
+        "Otimização do processamento",
+        "Justificação da exposição",
+        "Controle do brilho da imagem",
+        "Ampliação automática do campo"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Restringir fisicamente a colimação à área de interesse.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Justificação da exposição.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 2",
       "pergunta": "Dois protocolos atendem à finalidade clínica, mas um aumenta dose sem ganho útil. Que princípio orienta a escolha?",
       "alternativas": [
-        "Aumentar o tempo de permanência",
-        "Afastar-se da fonte de espalhamento e usar barreira apropriada",
-        "Aproximar-se do paciente para enxergar o receptor",
-        "Retirar a barreira para facilitar comunicação"
+        "Otimização da proteção",
+        "Aumento da dose para reduzir ruído a qualquer custo",
+        "Repetição sistemática do exame",
+        "Substituição da indicação clínica por técnica fixa"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Afastar-se da fonte de espalhamento e usar barreira apropriada.",
+      "correta": 0,
+      "explicacao": "Resposta correta: Otimização da proteção.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 3",
       "pergunta": "Em campo livre, a distância a uma fonte puntiforme é duplicada. Qual fração aproximada da intensidade original permanece?",
       "alternativas": [
+        "Metade",
         "O dobro",
-        "Um quarto",
         "Quatro vezes",
-        "Metade"
+        "Um quarto"
       ],
-      "correta": 1,
+      "correta": 3,
       "explicacao": "Resposta correta: Um quarto.",
       "dificuldade": "dificil"
     },
@@ -44,65 +44,65 @@
       "titulo": "Caso de proteção 4",
       "pergunta": "Um profissional permanece desnecessariamente ao lado do paciente durante exposições. Qual variável pode reduzir sua dose?",
       "alternativas": [
-        "Aumentar kV sem reavaliar o paciente",
-        "Repetir com o mesmo posicionamento",
-        "Usar processamento para corrigir qualquer rotação",
-        "Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário"
+        "Aumentar o tempo junto à fonte",
+        "Aumentar o campo irradiado",
+        "Reduzir o tempo de permanência",
+        "Diminuir a distância da fonte"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Reduzir o tempo de permanência.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 5",
       "pergunta": "Uma equipe dispõe de controle remoto em ponto mais afastado da fonte de espalhamento. Qual variável protetora pode aproveitar?",
       "alternativas": [
-        "Limitação ocupacional",
-        "Justificação",
-        "Controle de qualidade do monitor",
-        "Aumento da dose para evitar ruído"
+        "Aproximar-se do paciente durante a exposição",
+        "Aumentar a distância da fonte de espalhamento",
+        "Permanecer no eixo do feixe primário",
+        "Aumentar a permanência no ambiente"
       ],
       "correta": 1,
-      "explicacao": "Resposta correta: Justificação.",
+      "explicacao": "Resposta correta: Aumentar a distância da fonte de espalhamento.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 6",
       "pergunta": "Uma divisória não oferece atenuação suficiente ao regime de operação. Que medida estrutural deve ser reavaliada?",
       "alternativas": [
-        "Otimização da proteção",
-        "Substituir a indicação clínica",
-        "Ignorar a exposição se a imagem for digital",
-        "Aumentar dose até eliminar todo ruído"
+        "Adequação da blindagem estrutural",
+        "Correção do brilho do monitor",
+        "Ampliação digital da imagem",
+        "Aumento do tempo de exposição"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: Otimização da proteção.",
+      "explicacao": "Resposta correta: Adequação da blindagem estrutural.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 7",
       "pergunta": "Um relatório precisa expressar energia depositada por massa. Que unidade é adequada?",
       "alternativas": [
-        "São limites rígidos de dose para todo paciente",
-        "Devem ser iguais aos de trabalhadores",
-        "Não são aplicados como limites de dose ao paciente; valem justificação e otimização",
-        "Proíbem qualquer exame repetido"
+        "Sievert (Sv)",
+        "Becquerel (Bq)",
+        "Coulomb por quilograma (C/kg)",
+        "Gray (Gy)"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Não são aplicados como limites de dose ao paciente; valem justificação e otimização.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Gray (Gy).",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 8",
       "pergunta": "Uma planilha registra dose equivalente em gray. Qual unidade do SI deveria empregar?",
       "alternativas": [
-        "Segurar o receptor com as mãos",
-        "Dispensar proteção por ser exposição breve",
-        "Permanecer no feixe primário",
-        "Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados"
+        "Gray (Gy)",
+        "Becquerel (Bq)",
+        "Sievert (Sv)",
+        "Hertz (Hz)"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Sievert (Sv).",
       "dificuldade": "dificil"
     },
     {
@@ -110,11 +110,11 @@
       "pergunta": "Uma taxa de dose constante de 20 µSv/h atua por 15 minutos. Qual dose acumulada é estimada?",
       "alternativas": [
         "20 µSv",
+        "5 µSv",
         "80 µSv",
-        "300 µSv",
-        "5 µSv"
+        "0,75 µSv"
       ],
-      "correta": 3,
+      "correta": 1,
       "explicacao": "Resposta correta: 5 µSv.",
       "dificuldade": "dificil"
     },
@@ -122,273 +122,273 @@
       "titulo": "Caso de proteção 10",
       "pergunta": "Há emissão do cabeçote fora da abertura útil do colimador. Como classificar essa componente?",
       "alternativas": [
-        "O registro deixa de representar a exposição ocupacional durante o trabalho",
-        "O dosímetro mede dose do paciente",
-        "A taxa de dose da sala aumenta",
-        "O dosímetro passa a medir apenas energia do tubo"
+        "Radiação de fuga",
+        "Radiação espalhada pelo paciente",
+        "Feixe primário útil",
+        "Radiação transmitida pelo receptor"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: O registro deixa de representar a exposição ocupacional durante o trabalho.",
+      "explicacao": "Resposta correta: Radiação de fuga.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 11",
       "pergunta": "Um acompanhante recebe fótons desviados ao interagirem com o paciente. Como classificar essa radiação?",
       "alternativas": [
-        "Somente no avental do operador",
-        "No paciente e no receptor alinhados ao feixe",
-        "Na parede de proteção secundária obrigatoriamente",
-        "Exclusivamente no dosímetro individual"
+        "Radiação de fuga do cabeçote",
+        "Feixe primário não atenuado",
+        "Radiação de fundo natural exclusivamente",
+        "Radiação espalhada"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: No paciente e no receptor alinhados ao feixe.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Radiação espalhada.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 12",
       "pergunta": "Uma parede pode receber o feixe útil diretamente. Qual tipo de barreira deve ser considerada?",
       "alternativas": [
+        "Barreira secundária exclusivamente",
+        "Blindagem apenas contra luz visível",
         "Barreira primária",
-        "Barreira de contenção de líquidos",
-        "Blindagem de contato",
-        "Barreira secundária"
+        "Barreira dispensável em qualquer condição"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Barreira secundária.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Barreira primária.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 13",
       "pergunta": "Uma parede recebe radiação espalhada e de fuga, sem feixe útil direto. Qual tipo de barreira é pertinente?",
       "alternativas": [
-        "Redução automática da dose absorvida",
-        "Exposição desnecessariamente elevada sem ganho clínico proporcional",
-        "Eliminação de toda necessidade de colimação",
-        "Conversão de raios X em radiação não ionizante"
+        "Barreira primária para feixe útil direto",
+        "Barreira secundária",
+        "Nenhuma proteção por não haver feixe útil",
+        "Somente proteção do monitor"
       ],
       "correta": 1,
-      "explicacao": "Resposta correta: Exposição desnecessariamente elevada sem ganho clínico proporcional.",
+      "explicacao": "Resposta correta: Barreira secundária.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 14",
       "pergunta": "Um trabalhador deixa seu dispositivo pessoal de monitoramento fora da sala. Que instrumento deixou de usar corretamente?",
       "alternativas": [
-        "Gray",
-        "Sievert por hora",
-        "Coulomb por quilograma exclusivamente",
-        "Becquerel"
+        "Dosímetro individual",
+        "Monitor de brilho",
+        "Indicador de exposição do receptor",
+        "Medidor de tensão elétrica"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: Gray.",
+      "explicacao": "Resposta correta: Dosímetro individual.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 15",
       "pergunta": "Após manutenção, a saída do tubo pode ter mudado. Qual rotina verifica desempenho e segurança?",
       "alternativas": [
-        "Becquerel",
-        "Sievert",
-        "Gray por segundo",
-        "Watt"
+        "Ajuste estético das imagens",
+        "Substituição do registro dosimétrico",
+        "Ampliação digital do campo",
+        "Controle de qualidade do equipamento"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Sievert.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Controle de qualidade do equipamento.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 16",
       "pergunta": "Uma instalação altera o arranjo do equipamento. Que avaliação verifica taxas de dose em pontos representativos?",
       "alternativas": [
-        "Ignorar porque a blindagem permanece",
-        "Trocar por aviso verbal informal",
-        "Desligar apenas o monitor da sala",
-        "Comunicar e seguir o procedimento institucional de segurança e manutenção"
+        "Calibração de cor do monitor",
+        "Avaliação do tamanho do arquivo",
+        "Levantamento radiométrico",
+        "Ajuste de contraste do software"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Comunicar e seguir o procedimento institucional de segurança e manutenção.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Levantamento radiométrico.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 17",
       "pergunta": "Uma análise revela repetições por erro de posicionamento. Qual rotina ajuda a quantificar e prevenir o problema?",
       "alternativas": [
-        "Realizar o exame e discutir depois",
-        "Aumentar a dose para garantir qualidade",
-        "Substituir o exame por qualquer incidência disponível",
-        "Esclarecer a indicação com o responsável e verificar a justificação"
+        "Aumento automático do mAs",
+        "Análise de rejeições e repetições",
+        "Eliminação dos registros de erro",
+        "Ampliação do campo para todas as incidências"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Esclarecer a indicação com o responsável e verificar a justificação.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Análise de rejeições e repetições.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 18",
       "pergunta": "Os indicadores de exposição sobem gradualmente, mas as imagens mantêm brilho semelhante. Qual fenômeno deve ser investigado?",
       "alternativas": [
-        "Análise de rejeição e repetição por motivo",
-        "Quantidade de computadores do setor",
-        "Tamanho da tela de visualização",
-        "Número de impressoras"
+        "Dose creep (aumento gradual da exposição)",
+        "Diminuição obrigatória da dose",
+        "Redução do número de pixels",
+        "Desaparecimento da radiação espalhada"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: Análise de rejeição e repetição por motivo.",
+      "explicacao": "Resposta correta: Dose creep (aumento gradual da exposição).",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 19",
       "pergunta": "Um familiar precisa ajudar paciente incapaz de permanecer imóvel. Qual categoria descreve essa pessoa na sala?",
       "alternativas": [
-        "Solicitar que segure o feixe central",
-        "Considerar a exposição irrelevante",
-        "Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo",
-        "Dispensar avaliação por não ser trabalhador"
+        "Trabalhador ocupacionalmente exposto por definição",
+        "Paciente submetido ao exame",
+        "Integrante obrigatório da equipe técnica",
+        "Acompanhante ou pessoa que presta apoio ao paciente"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Acompanhante ou pessoa que presta apoio ao paciente.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 20",
       "pergunta": "Um aviso luminoso de exposição deixa de funcionar. Qual elemento de segurança ficou comprometido?",
       "alternativas": [
-        "Aumento da energia do feixe",
-        "Eliminação da radiação espalhada",
-        "Aumento do contraste do receptor",
-        "Redução da exposição à radiação dispersa com maior distância"
+        "Resolução espacial do receptor",
+        "Capacidade de armazenamento",
+        "Sinalização luminosa de exposição",
+        "Alinhamento do cursor no monitor"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Redução da exposição à radiação dispersa com maior distância.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Sinalização luminosa de exposição.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 21",
       "pergunta": "Uma solicitação não permite determinar a finalidade clínica do exame. Qual decisão deve ser tomada antes da aquisição?",
       "alternativas": [
-        "Fótons desviados exclusivamente no paciente",
-        "Luz produzida no detector",
-        "Radiação que escapa do conjunto do tubo fora do feixe útil",
-        "Radiação emitida somente após desligar o tubo"
+        "Realizar a exposição sem esclarecimentos",
+        "Esclarecer a indicação e verificar a justificação",
+        "Aumentar a dose para compensar a dúvida",
+        "Substituir a solicitação por qualquer incidência"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Radiação que escapa do conjunto do tubo fora do feixe útil.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Esclarecer a indicação e verificar a justificação.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 22",
       "pergunta": "Um serviço acompanha sistematicamente exposições ocupacionais. Qual processo realiza esse controle?",
       "alternativas": [
-        "A dose fora do recorte desaparece",
-        "O recorte altera a exibição, mas não desfaz a irradiação",
-        "A colimação física torna-se desnecessária",
-        "A dose do paciente é sempre reduzida à metade"
+        "Monitoração individual ocupacional",
+        "Ajuste de contraste",
+        "Recorte digital posterior",
+        "Contagem de imagens no computador"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: O recorte altera a exibição, mas não desfaz a irradiação.",
+      "correta": 0,
+      "explicacao": "Resposta correta: Monitoração individual ocupacional.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 23",
       "pergunta": "Uma blindagem reduz a intensidade dos fótons transmitidos. Qual processo físico fundamenta seu efeito?",
       "alternativas": [
-        "Aumentar o tempo para compensar movimento",
-        "Manter sempre a técnica adulta",
-        "Adequar técnica e campo ao tamanho e à indicação clínica",
-        "Usar repetição de rotina para confirmar o resultado"
+        "Ampliação geométrica",
+        "Ionização do monitor",
+        "Reflexão da luz ambiente",
+        "Atenuação da radiação"
       ],
-      "correta": 2,
-      "explicacao": "Resposta correta: Adequar técnica e campo ao tamanho e à indicação clínica.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Atenuação da radiação.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 24",
       "pergunta": "Um feixe útil está desalinhado com a região de interesse. Que componente da exposição deve ser corrigido?",
       "alternativas": [
-        "Para estimar apenas a dose do paciente",
-        "Para eliminar a necessidade de calibração",
-        "Para permitir interpretação e comparação reprodutíveis dos resultados",
-        "Para substituir toda avaliação do equipamento"
+        "Aumento da área irradiada",
+        "Recorte digital após exposição como única medida",
+        "Alinhamento e colimação do feixe à área de interesse",
+        "Alteração apenas da cor da imagem"
       ],
       "correta": 2,
-      "explicacao": "Resposta correta: Para permitir interpretação e comparação reprodutíveis dos resultados.",
+      "explicacao": "Resposta correta: Alinhamento e colimação do feixe à área de interesse.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 25",
       "pergunta": "Um campo excessivo é reduzido somente no software após irradiar. Qual componente físico deveria ter sido ajustado?",
       "alternativas": [
-        "O monitoramento ocupacional não substitui a estimativa de dose do paciente",
-        "O dosímetro altera a energia do feixe",
-        "Todo dosímetro mede apenas atividade",
-        "A dose do paciente é sempre igual à do operador"
+        "Corte da imagem apenas no software",
+        "Colimação física antes da exposição",
+        "Aumento da dose no pós-processamento",
+        "Ampliação da janela de visualização"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: O monitoramento ocupacional não substitui a estimativa de dose do paciente.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Colimação física antes da exposição.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 26",
       "pergunta": "Uma radiografia é repetida sem corrigir o erro inicial. Qual ação preventiva deveria anteceder nova aquisição?",
       "alternativas": [
-        "Solicitar avaliação da integridade e adequação da blindagem",
-        "Ignorar se a sala tiver dosímetros",
-        "Aumentar o kV para atravessar a abertura",
-        "Reduzir o brilho do monitor"
+        "Identificar e corrigir a causa da rejeição",
+        "Repetir com os mesmos parâmetros sem revisão",
+        "Aumentar o mAs em todos os casos",
+        "Eliminar a avaliação do posicionamento"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: Solicitar avaliação da integridade e adequação da blindagem.",
+      "explicacao": "Resposta correta: Identificar e corrigir a causa da rejeição.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 27",
       "pergunta": "Em campo livre, dobrar a distância de fonte puntiforme reduz a taxa a um quarto. Que relação explica isso?",
       "alternativas": [
-        "Corrente, tensão e tempo de leitura",
-        "Tempo, distância e blindagem",
-        "Revelação, fixação e secagem",
-        "Brilho, contraste e matriz"
+        "Lei da reflexão especular",
+        "Princípio de Arquimedes",
+        "Lei de conservação da massa apenas",
+        "Lei do inverso do quadrado da distância"
       ],
-      "correta": 1,
-      "explicacao": "Resposta correta: Tempo, distância e blindagem.",
+      "correta": 3,
+      "explicacao": "Resposta correta: Lei do inverso do quadrado da distância.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 28",
       "pergunta": "Um procedimento requer proteção adicional indicada pelo protocolo. Qual equipamento de proteção pode ser selecionado?",
       "alternativas": [
-        "Repetir ambos por rotina",
-        "Preferir sempre maior dose",
-        "Ignorar disponibilidade e contexto clínico",
-        "Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição"
+        "Aumento do tempo de exposição",
+        "Recorte digital posterior",
+        "Equipamento de proteção individual adequado ao procedimento",
+        "Retirada das barreiras existentes"
       ],
-      "correta": 3,
-      "explicacao": "Resposta correta: Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição.",
+      "correta": 2,
+      "explicacao": "Resposta correta: Equipamento de proteção individual adequado ao procedimento.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 29",
       "pergunta": "Um profissional trabalha sem seguir instruções de segurança do serviço. Qual função operacional é responsável pelo cumprimento delas?",
       "alternativas": [
-        "Ensaios e verificações pertinentes de desempenho e segurança",
-        "Somente a aparência externa do console",
-        "A preferência visual do operador",
-        "A troca do nome da sala"
+        "Alteração livre dos protocolos sem avaliação",
+        "Cumprimento dos procedimentos de proteção radiológica do serviço",
+        "Dispensa da monitoração ocupacional",
+        "Substituição de treinamento por experiência informal"
       ],
-      "correta": 0,
-      "explicacao": "Resposta correta: Ensaios e verificações pertinentes de desempenho e segurança.",
+      "correta": 1,
+      "explicacao": "Resposta correta: Cumprimento dos procedimentos de proteção radiológica do serviço.",
       "dificuldade": "dificil"
     },
     {
       "titulo": "Caso de proteção 30",
       "pergunta": "Um exame rejeitado será repetido. Qual providência reduz o risco de repetir a mesma falha?",
       "alternativas": [
-        "O otimizado que atende à finalidade clínica",
-        "Ambos obrigatoriamente na mesma sessão",
-        "O que gera o maior arquivo digital",
-        "O de maior dose por padrão"
+        "Rever a causa da rejeição e corrigir técnica ou posicionamento",
+        "Repetir imediatamente sem ajustes",
+        "Aumentar sempre a dose independentemente do erro",
+        "Ampliar o campo para dispensar posicionamento"
       ],
       "correta": 0,
-      "explicacao": "Resposta correta: O otimizado que atende à finalidade clínica.",
+      "explicacao": "Resposta correta: Rever a causa da rejeição e corrigir técnica ou posicionamento.",
       "dificuldade": "dificil"
     }
   ],
