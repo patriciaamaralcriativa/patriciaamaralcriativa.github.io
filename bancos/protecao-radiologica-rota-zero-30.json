@@ -1,0 +1,396 @@
+{
+  "disciplina": "Proteção Radiológica",
+  "questoes": [
+    {
+      "titulo": "Decisão técnica 1",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Uma equipe vai repetir radiografia porque o campo incluiu região desnecessária. Qual ação reduz exposição sem comprometer a anatomia solicitada?",
+      "alternativas": [
+        "Aplicar recorte digital após a exposição",
+        "Aumentar o mAs para melhorar o contraste",
+        "Restringir fisicamente a colimação à área de interesse",
+        "Ampliar o campo e reduzir o brilho"
+      ],
+      "correta": 2,
+      "explicacao": "Colimação física limita a área irradiada; recorte eletrônico não reduz a exposição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 2",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um trabalhador permanece ao lado do equipamento durante exposições repetidas. Qual medida reduz a dose por radiação dispersa?",
+      "alternativas": [
+        "Aumentar o tempo de permanência",
+        "Afastar-se da fonte de espalhamento e usar barreira apropriada",
+        "Aproximar-se do paciente para enxergar o receptor",
+        "Retirar a barreira para facilitar comunicação"
+      ],
+      "correta": 0,
+      "explicacao": "Distância e blindagem reduzem exposição ocupacional à radiação espalhada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 3",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Um técnico dobra sua distância de uma fonte puntiforme, mantendo geometria livre e demais condições. Qual é a intensidade aproximada?",
+      "alternativas": [
+        "O dobro",
+        "Um quarto",
+        "Quatro vezes",
+        "Metade"
+      ],
+      "correta": 3,
+      "explicacao": "Pela lei do inverso do quadrado, a intensidade cai a um quarto.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 4",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Uma radiografia foi rejeitada por rotação. Qual decisão melhor evita dose adicional?",
+      "alternativas": [
+        "Aumentar kV sem reavaliar o paciente",
+        "Repetir com o mesmo posicionamento",
+        "Usar processamento para corrigir qualquer rotação",
+        "Identificar a causa, corrigir o posicionamento e só repetir se clinicamente necessário"
+      ],
+      "correta": 1,
+      "explicacao": "Repetições devem ser justificadas e o erro de aquisição corrigido.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 5",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um paciente pergunta por que recebeu proteção e explicação antes do exame. Qual princípio exige que o benefício esperado supere o detrimento potencial?",
+      "alternativas": [
+        "Limitação ocupacional",
+        "Justificação",
+        "Controle de qualidade do monitor",
+        "Aumento da dose para evitar ruído"
+      ],
+      "correta": 1,
+      "explicacao": "A justificação compara benefício clínico esperado e risco da exposição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 6",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Em um exame justificado, o profissional escolhe parâmetros que produzam qualidade suficiente com exposição adequada. Qual princípio está aplicando?",
+      "alternativas": [
+        "Otimização da proteção",
+        "Substituir a indicação clínica",
+        "Ignorar a exposição se a imagem for digital",
+        "Aumentar dose até eliminar todo ruído"
+      ],
+      "correta": 3,
+      "explicacao": "Otimização busca qualidade diagnóstica adequada sem exposição desnecessária.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 7",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um paciente precisa de exame diagnóstico. Como se aplicam limites de dose ocupacional a essa exposição médica?",
+      "alternativas": [
+        "São limites rígidos de dose para todo paciente",
+        "Devem ser iguais aos de trabalhadores",
+        "Não são aplicados como limites de dose ao paciente; valem justificação e otimização",
+        "Proíbem qualquer exame repetido"
+      ],
+      "correta": 0,
+      "explicacao": "Exposições médicas de pacientes não são controladas pelos limites ocupacionais de dose.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 8",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um profissional acompanha paciente durante exposição e não pode deixar a sala. Qual conduta é adequada?",
+      "alternativas": [
+        "Segurar o receptor com as mãos",
+        "Dispensar proteção por ser exposição breve",
+        "Permanecer no feixe primário",
+        "Avaliar necessidade, posicionar-se fora do feixe e usar proteção e procedimentos apropriados"
+      ],
+      "correta": 2,
+      "explicacao": "A permanência deve ser excepcional e com medidas de proteção adequadas.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 9",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: A taxa de dose ambiente é 20 µSv/h em determinado ponto. Permanecer 15 minutos nesse ponto, com taxa constante, corresponde a:",
+      "alternativas": [
+        "20 µSv",
+        "80 µSv",
+        "300 µSv",
+        "5 µSv"
+      ],
+      "correta": 3,
+      "explicacao": "0,25 h × 20 µSv/h = 5 µSv.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 10",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um setor usa dosímetro individual, mas o trabalhador o deixa no armário durante procedimentos. Qual é o principal problema?",
+      "alternativas": [
+        "O registro deixa de representar a exposição ocupacional durante o trabalho",
+        "O dosímetro mede dose do paciente",
+        "A taxa de dose da sala aumenta",
+        "O dosímetro passa a medir apenas energia do tubo"
+      ],
+      "correta": 1,
+      "explicacao": "O monitoramento individual exige uso conforme o programa de proteção radiológica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 11",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Em radiografia, o feixe primário incide diretamente em qual elemento durante o exame?",
+      "alternativas": [
+        "Somente no avental do operador",
+        "No paciente e no receptor alinhados ao feixe",
+        "Na parede de proteção secundária obrigatoriamente",
+        "Exclusivamente no dosímetro individual"
+      ],
+      "correta": 2,
+      "explicacao": "O feixe útil é direcionado à região examinada e ao receptor.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 12",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Uma barreira é projetada para radiação espalhada e de fuga, não para o feixe útil direto. Como ela é classificada?",
+      "alternativas": [
+        "Barreira primária",
+        "Barreira de contenção de líquidos",
+        "Blindagem de contato",
+        "Barreira secundária"
+      ],
+      "correta": 0,
+      "explicacao": "Barreiras secundárias são dimensionadas para radiação espalhada e de fuga.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 13",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: A equipe pretende usar sempre o maior mAs disponível para reduzir ruído. Qual risco técnico deve ser considerado?",
+      "alternativas": [
+        "Redução automática da dose absorvida",
+        "Exposição desnecessariamente elevada sem ganho clínico proporcional",
+        "Eliminação de toda necessidade de colimação",
+        "Conversão de raios X em radiação não ionizante"
+      ],
+      "correta": 1,
+      "explicacao": "Mais mAs pode aumentar exposição sem benefício diagnóstico justificável.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 14",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um operador confunde atividade de fonte com dose absorvida. Qual unidade expressa dose absorvida?",
+      "alternativas": [
+        "Gray",
+        "Sievert por hora",
+        "Coulomb por quilograma exclusivamente",
+        "Becquerel"
+      ],
+      "correta": 3,
+      "explicacao": "Gray corresponde a joule por quilograma de energia depositada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 15",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Em um relatório, uma dose equivalente é expressa em qual unidade do SI?",
+      "alternativas": [
+        "Becquerel",
+        "Sievert",
+        "Gray por segundo",
+        "Watt"
+      ],
+      "correta": 2,
+      "explicacao": "O sievert é a unidade SI para dose equivalente e efetiva.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 16",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Uma sala tem sinalização luminosa de exposição defeituosa. Qual ação é adequada antes de operar normalmente?",
+      "alternativas": [
+        "Ignorar porque a blindagem permanece",
+        "Trocar por aviso verbal informal",
+        "Desligar apenas o monitor da sala",
+        "Comunicar e seguir o procedimento institucional de segurança e manutenção"
+      ],
+      "correta": 0,
+      "explicacao": "Sistemas de sinalização e segurança devem funcionar conforme o programa e normas aplicáveis.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 17",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um exame foi solicitado sem indicação clínica clara. Qual é a melhor providência antes da exposição?",
+      "alternativas": [
+        "Realizar o exame e discutir depois",
+        "Aumentar a dose para garantir qualidade",
+        "Substituir o exame por qualquer incidência disponível",
+        "Esclarecer a indicação com o responsável e verificar a justificação"
+      ],
+      "correta": 3,
+      "explicacao": "A indicação deve ser esclarecida antes da exposição.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 18",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Em um serviço com elevado índice de repetição, qual indicador ajuda a identificar causas evitáveis?",
+      "alternativas": [
+        "Análise de rejeição e repetição por motivo",
+        "Quantidade de computadores do setor",
+        "Tamanho da tela de visualização",
+        "Número de impressoras"
+      ],
+      "correta": 1,
+      "explicacao": "A análise sistemática de rejeições orienta correções de posicionamento e técnica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 19",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um acompanhante precisa permanecer para auxiliar um paciente dependente. Qual abordagem é mais adequada?",
+      "alternativas": [
+        "Solicitar que segure o feixe central",
+        "Considerar a exposição irrelevante",
+        "Avaliar alternativa, informar riscos e adotar proteção apropriada conforme protocolo",
+        "Dispensar avaliação por não ser trabalhador"
+      ],
+      "correta": 0,
+      "explicacao": "A presença deve ser necessária e protegida, conforme as normas e protocolos.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 20",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Em exame portátil, o operador pode ficar mais distante do paciente mantendo controle do equipamento. Qual benefício principal?",
+      "alternativas": [
+        "Aumento da energia do feixe",
+        "Eliminação da radiação espalhada",
+        "Aumento do contraste do receptor",
+        "Redução da exposição à radiação dispersa com maior distância"
+      ],
+      "correta": 2,
+      "explicacao": "A distância reduz a exposição à radiação espalhada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 21",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Um estudante confunde radiação de fuga com espalhada. Qual origem caracteriza a radiação de fuga?",
+      "alternativas": [
+        "Fótons desviados exclusivamente no paciente",
+        "Luz produzida no detector",
+        "Radiação que escapa do conjunto do tubo fora do feixe útil",
+        "Radiação emitida somente após desligar o tubo"
+      ],
+      "correta": 2,
+      "explicacao": "Radiação de fuga provém do conjunto do tubo fora da abertura útil.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 22",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: O tecnólogo ajusta o campo por recorte eletrônico após irradiar área excessiva. Qual conclusão é correta?",
+      "alternativas": [
+        "A dose fora do recorte desaparece",
+        "O recorte altera a exibição, mas não desfaz a irradiação",
+        "A colimação física torna-se desnecessária",
+        "A dose do paciente é sempre reduzida à metade"
+      ],
+      "correta": 0,
+      "explicacao": "O recorte posterior não altera a exposição já realizada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 23",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um protocolo pediátrico usa parâmetros de adulto sem adaptação. Qual conduta é mais adequada?",
+      "alternativas": [
+        "Aumentar o tempo para compensar movimento",
+        "Manter sempre a técnica adulta",
+        "Adequar técnica e campo ao tamanho e à indicação clínica",
+        "Usar repetição de rotina para confirmar o resultado"
+      ],
+      "correta": 1,
+      "explicacao": "A otimização pediátrica requer adaptação da técnica e colimação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 24",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Em um levantamento radiométrico, por que registrar condições de operação e localização da medida?",
+      "alternativas": [
+        "Para estimar apenas a dose do paciente",
+        "Para eliminar a necessidade de calibração",
+        "Para permitir interpretação e comparação reprodutíveis dos resultados",
+        "Para substituir toda avaliação do equipamento"
+      ],
+      "correta": 3,
+      "explicacao": "Contexto de operação e geometria são essenciais à interpretação de medições.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 25",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um profissional tenta usar um dosímetro individual para medir diretamente a dose de um paciente. Qual é o problema?",
+      "alternativas": [
+        "O monitoramento ocupacional não substitui a estimativa de dose do paciente",
+        "O dosímetro altera a energia do feixe",
+        "Todo dosímetro mede apenas atividade",
+        "A dose do paciente é sempre igual à do operador"
+      ],
+      "correta": 0,
+      "explicacao": "São grandezas e métodos de avaliação com finalidades distintas.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 26",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Uma barreira de chumbo apresenta abertura não prevista no projeto. Qual medida é apropriada?",
+      "alternativas": [
+        "Solicitar avaliação da integridade e adequação da blindagem",
+        "Ignorar se a sala tiver dosímetros",
+        "Aumentar o kV para atravessar a abertura",
+        "Reduzir o brilho do monitor"
+      ],
+      "correta": 2,
+      "explicacao": "Descontinuidades podem comprometer a proteção projetada.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 27",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Ao planejar trabalho próximo a uma fonte, qual combinação traduz as medidas clássicas de proteção externa?",
+      "alternativas": [
+        "Corrente, tensão e tempo de leitura",
+        "Tempo, distância e blindagem",
+        "Revelação, fixação e secagem",
+        "Brilho, contraste e matriz"
+      ],
+      "correta": 3,
+      "explicacao": "Reduzir tempo, aumentar distância e interpor blindagem adequada limita exposição externa.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 28",
+      "pergunta": "Durante uma discussão de protocolo, a equipe precisa justificar a seguinte decisão: Um procedimento usa radiação ionizante, mas sua indicação pode ser atendida por método sem radiação com eficácia equivalente. O que deve orientar a escolha?",
+      "alternativas": [
+        "Repetir ambos por rotina",
+        "Preferir sempre maior dose",
+        "Ignorar disponibilidade e contexto clínico",
+        "Comparar adequação diagnóstica, benefícios e riscos para justificar a exposição"
+      ],
+      "correta": 1,
+      "explicacao": "A seleção do método considera a questão clínica e alternativas disponíveis.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 29",
+      "pergunta": "Em uma situação prática, o profissional precisa interpretar: Um equipamento é submetido a manutenção que pode alterar parâmetros de exposição. Antes do uso clínico regular, o que deve ser avaliado?",
+      "alternativas": [
+        "Ensaios e verificações pertinentes de desempenho e segurança",
+        "Somente a aparência externa do console",
+        "A preferência visual do operador",
+        "A troca do nome da sala"
+      ],
+      "correta": 0,
+      "explicacao": "Mudanças técnicas podem exigir verificações de qualidade e segurança.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "Decisão técnica 30",
+      "pergunta": "Na revisão de um exame, surge a questão técnica: Uma equipe compara dois protocolos: um produz imagem com qualidade suficiente e menor exposição; outro aumenta dose sem melhorar a decisão clínica. Qual deve ser preferido?",
+      "alternativas": [
+        "O otimizado que atende à finalidade clínica",
+        "Ambos obrigatoriamente na mesma sessão",
+        "O que gera o maior arquivo digital",
+        "O de maior dose por padrão"
+      ],
+      "correta": 3,
+      "explicacao": "A otimização favorece qualidade suficiente com exposição tão baixa quanto razoavelmente possível.",
+      "dificuldade": "dificil"
+    }
+  ],
+  "status": "rascunho-questoes-sobrepostas-ao-radioquiz-revisao-obrigatoria"
+}
