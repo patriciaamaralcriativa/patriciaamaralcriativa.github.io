@@ -22,6 +22,19 @@ const seletor=document.createElement('select');seletor.id='disciplina-missao';se
 seletor.innerHTML='<option value="rejeitos">Gerenciamento de Rejeitos</option><option value="protecao">Proteção Radiológica</option>';
 seletor.style.cssText='width:100%;padding:10px;border-radius:9px;background:#fff;color:#17183b;font-weight:700';
 document.querySelector('aside')?.insertBefore(seletor,document.querySelector('aside').children[1]);
-seletor.addEventListener('change',()=>{sets=seletor.value==='protecao'?protecaoSets:rejeitosSets;level=0;build()});
+const bancosMissao={mamografia:'mamografia',tomografia:'tomografia','radiologia-industrial':'radiologia-industrial'};
+for(const [id,label] of [['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial']]){const option=document.createElement('option');option.value=id;option.textContent=label;seletor.appendChild(option);}
+const conjuntosOriginais={rejeitos:rejeitosSets,protecao:protecaoSets};
+seletor.addEventListener('change',async()=>{
+ const escolha=seletor.value;
+ try{
+  if(conjuntosOriginais[escolha]){sets=conjuntosOriginais[escolha];level=0;build();return;}
+  const resp=await fetch('/bancos/'+bancosMissao[escolha]+'-missao-radioativa-30.json',{cache:'no-store'});
+  if(!resp.ok)throw new Error('Banco não encontrado');
+  const dados=await resp.json();
+  if(!Array.isArray(dados.sets)||dados.sets.length!==3||dados.sets.some(grupo=>!Array.isArray(grupo)||grupo.length!==10||grupo.some(par=>!Array.isArray(par)||par.length!==2)))throw new Error('Banco incompleto');
+  sets=dados.sets;level=0;build();
+ }catch(err){feedback('Não foi possível carregar a disciplina: '+err.message,'fail');seletor.value='rejeitos';sets=rejeitosSets;level=0;build();}
+});
 document.addEventListener('keydown',e=>{if(e.key==='Enter')check();if(e.code==='Space'){e.preventDefault();turnBack()}});build();
 </script></html>
