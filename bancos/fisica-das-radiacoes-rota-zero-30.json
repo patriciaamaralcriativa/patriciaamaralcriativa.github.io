@@ -2,395 +2,395 @@
   "disciplina": "Física das Radiações",
   "questoes": [
     {
-      "titulo": "Problema aplicado 1",
-      "pergunta": "Um equipamento passa de 70 para 90 kVp. Qual grandeza do espectro tem limite superior diretamente relacionado à tensão aplicada?",
+      "titulo": "Física aplicada — 1",
+      "pergunta": "Um átomo apresenta carga positiva após perder elétrons. Como se classifica?",
       "alternativas": [
-        "40 keV",
-        "80 keV",
-        "160 keV",
-        "80 MeV"
+        "Ânion",
+        "Cátion",
+        "Isótopo",
+        "Nêutron"
       ],
       "correta": 1,
-      "explicacao": "O máximo corresponde à energia adquirida por um elétron através da diferença de potencial de 80 kV.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Cátion.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 2",
-      "pergunta": "Um protocolo fornece 240 mA durante 0,125 s. Qual é o produto corrente-tempo?",
+      "titulo": "Física aplicada — 2",
+      "pergunta": "Dois átomos do mesmo elemento diferem em nêutrons. Como são chamados?",
       "alternativas": [
-        "31,25 mAs",
-        "200 mAs",
-        "3,125 mAs",
-        "20 mAs"
+        "Isóbaros",
+        "Íons",
+        "Isótonos",
+        "Isótopos"
       ],
       "correta": 3,
-      "explicacao": "250 × 0,08 = 20 mAs.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Isótopos.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 3",
-      "pergunta": "Para manter 24 mAs, o operador troca 120 mA por 300 mA. Qual tempo deve selecionar?",
+      "titulo": "Física aplicada — 3",
+      "pergunta": "Qual partícula nuclear define a identidade de um elemento?",
       "alternativas": [
-        "0,10 s",
-        "0,05 s",
-        "0,30 s",
-        "0,40 s"
+        "Próton",
+        "Elétron",
+        "Nêutron",
+        "Fóton"
       ],
       "correta": 0,
-      "explicacao": "30/300 = 0,10 s.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Próton.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 4",
-      "pergunta": "Um feixe atravessa duas camadas semirredutoras sucessivas. Qual fração da intensidade primária resta?",
+      "titulo": "Física aplicada — 4",
+      "pergunta": "Que grandeza inteira soma prótons e nêutrons de um nuclídeo?",
       "alternativas": [
-        "50 unidades",
-        "75 unidades",
-        "25 unidades",
-        "12,5 unidades"
+        "Número atômico",
+        "Carga elétrica",
+        "Número de massa",
+        "Frequência"
       ],
       "correta": 2,
-      "explicacao": "Cada camada semirredutora reduz a intensidade pela metade: 100→50→25.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Número de massa.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 5",
-      "pergunta": "Em condições de fonte puntiforme e campo livre, qual mudança é esperada ao dobrar a distância?",
+      "titulo": "Física aplicada — 5",
+      "pergunta": "Qual partícula tem carga elétrica negativa e participa da eletrosfera?",
       "alternativas": [
-        "40 µGy/h",
-        "160 µGy/h",
-        "20 µGy/h",
-        "320 µGy/h"
+        "Próton",
+        "Nêutron",
+        "Elétron",
+        "Fóton"
       ],
       "correta": 2,
-      "explicacao": "Dobrar distância reduz intensidade por fator quatro.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Elétron.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 6",
-      "pergunta": "Uma fonte pontual fornece taxa de 36 µSv/h a 2 m. Qual taxa aproximada a 3 m?",
+      "titulo": "Física aplicada — 6",
+      "pergunta": "Qual íon resulta do ganho de elétrons?",
       "alternativas": [
-        "16 µSv/h",
-        "24 µSv/h",
-        "54 µSv/h",
-        "81 µSv/h"
+        "Ânion",
+        "Cátion",
+        "Isótopo",
+        "Núcleo"
       ],
       "correta": 0,
-      "explicacao": "36 × (2/3)² = 16 µSv/h.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Ânion.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 7",
-      "pergunta": "Um contador registra 1200 eventos em quatro minutos. Qual é a taxa média por minuto?",
+      "titulo": "Física aplicada — 7",
+      "pergunta": "Que emissão nuclear é composta por dois prótons e dois nêutrons?",
       "alternativas": [
-        "4800 contagens/min",
-        "200 contagens/min",
-        "1200 contagens/min",
-        "300 contagens/min"
+        "Beta",
+        "Gama",
+        "Raios X",
+        "Alfa"
       ],
       "correta": 3,
-      "explicacao": "1200/4 = 300 contagens por minuto.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Alfa.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 8",
-      "pergunta": "Uma amostra de 800 MBq tem meia-vida física de 6 h. Qual atividade resta após 18 h?",
+      "titulo": "Física aplicada — 8",
+      "pergunta": "Que radiação nuclear é constituída por fótons?",
       "alternativas": [
-        "200 MBq",
-        "100 MBq",
-        "400 MBq",
-        "50 MBq"
+        "Alfa",
+        "Gama",
+        "Beta menos",
+        "Nêutrons"
       ],
       "correta": 1,
-      "explicacao": "Três meias-vidas: 800→400→200→100 MBq.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Gama.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 9",
-      "pergunta": "Um material apresenta coeficiente linear de atenuação de 0,2 cm⁻¹. Qual é sua camada semirredutora aproximada?",
+      "titulo": "Física aplicada — 9",
+      "pergunta": "Qual emissão beta envolve um elétron originado no decaimento nuclear?",
       "alternativas": [
-        "3,47 cm",
-        "0,14 cm",
-        "5,00 cm",
-        "6,93 cm"
+        "Beta menos",
+        "Alfa",
+        "Gama",
+        "Próton"
       ],
       "correta": 0,
-      "explicacao": "CSR=ln(2)/µ≈0,693/0,2=3,47 cm.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Beta menos.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 10",
-      "pergunta": "Se a contagem média de fótons detectados quadruplica e domina ruído quântico, como varia a relação sinal-ruído?",
+      "titulo": "Física aplicada — 10",
+      "pergunta": "Qual radiação eletromagnética pode ter origem em transições nucleares?",
       "alternativas": [
-        "4",
-        "8",
-        "2",
-        "16"
+        "Beta menos",
+        "Alfa",
+        "Gama",
+        "Som"
       ],
       "correta": 2,
-      "explicacao": "Para estatística de Poisson, SNR cresce aproximadamente com raiz quadrada de N.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Gama.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 11",
-      "pergunta": "Um elemento do detector recebe, em média, 400 fótons. Qual desvio-padrão quântico é esperado?",
+      "titulo": "Física aplicada — 11",
+      "pergunta": "Qual processo divide um núcleo pesado em fragmentos menores?",
       "alternativas": [
-        "40",
-        "20",
-        "200",
-        "400"
+        "Fusão",
+        "Fissão",
+        "Ionização",
+        "Refração"
       ],
       "correta": 1,
-      "explicacao": "Para Poisson, σ≈√400=20.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Fissão.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 12",
-      "pergunta": "Um relatório registra energia depositada em uma massa de tecido. Qual grandeza física descreve essa razão?",
+      "titulo": "Física aplicada — 12",
+      "pergunta": "Qual processo une núcleos leves em núcleo mais pesado?",
       "alternativas": [
-        "Atividade",
-        "Fluência",
-        "Taxa de contagem",
-        "Dose absorvida"
+        "Fissão",
+        "Difração",
+        "Reflexão",
+        "Fusão"
       ],
       "correta": 3,
-      "explicacao": "Dose absorvida é energia depositada por unidade de massa, em gray.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Fusão.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 13",
-      "pergunta": "Uma amostra de 0,5 kg absorve 0,02 J. Qual dose absorvida média?",
+      "titulo": "Física aplicada — 13",
+      "pergunta": "Que fenômeno relaciona variação de fluxo magnético à indução de força eletromotriz?",
       "alternativas": [
-        "0,01 Gy",
-        "0,25 Gy",
-        "0,04 Gy",
-        "25 Gy"
+        "Decaimento alfa",
+        "Fissão nuclear",
+        "Indução eletromagnética",
+        "Refração"
       ],
       "correta": 2,
-      "explicacao": "D=0,02/0,5=0,04 J/kg=0,04 Gy.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Indução eletromagnética.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 14",
-      "pergunta": "Um radionuclídeo apresenta atividade de 1 MBq. Quantas transformações por segundo isso representa?",
+      "titulo": "Física aplicada — 14",
+      "pergunta": "Qual tipo de onda precisa de meio material?",
       "alternativas": [
-        "1 milhão",
-        "Mil",
-        "Um bilhão",
-        "Uma por minuto"
+        "Mecânica",
+        "Eletromagnética",
+        "Gama",
+        "Fóton"
       ],
       "correta": 0,
-      "explicacao": "1 Bq equivale a uma desintegração por segundo.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Mecânica.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 15",
-      "pergunta": "Um técnico aumenta kVp sem mudar o material do alvo. Qual tendência ocorre no limite superior do espectro de raios X?",
+      "titulo": "Física aplicada — 15",
+      "pergunta": "Que tipo de onda pode propagar-se no vácuo?",
       "alternativas": [
-        "Mesma energia máxima com apenas mais fótons",
-        "Maior energia máxima e alteração da distribuição de energias",
-        "Redução obrigatória da energia máxima",
-        "Transformação dos fótons em elétrons antes de sair do tubo"
+        "Mecânica",
+        "Eletromagnética",
+        "Sonora",
+        "Material"
       ],
       "correta": 1,
-      "explicacao": "A energia máxima dos fótons acompanha a tensão de pico aplicada.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Eletromagnética.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 16",
-      "pergunta": "Uma filtragem adicional remove preferencialmente fótons de baixa energia. Como tende a mudar a energia média do feixe transmitido?",
+      "titulo": "Física aplicada — 16",
+      "pergunta": "Como se classifica uma onda cuja oscilação é perpendicular à propagação?",
       "alternativas": [
-        "Redução da energia média por seleção dos mais energéticos",
-        "Aumento obrigatório do número total de fótons transmitidos",
-        "Eliminação completa da radiação espalhada",
-        "Aumento da energia média do feixe transmitido"
+        "Longitudinal",
+        "Estacionária",
+        "Mecânica",
+        "Transversal"
       ],
       "correta": 3,
-      "explicacao": "O endurecimento do feixe aumenta a energia média do espectro transmitido.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Transversal.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 17",
-      "pergunta": "Em um experimento, 1000 fótons atingem a barreira e 300 a atravessam. Qual é a transmissão?",
+      "titulo": "Física aplicada — 17",
+      "pergunta": "Como se classifica uma onda cuja oscilação é paralela à propagação?",
       "alternativas": [
-        "0,30",
-        "0,70",
-        "3,33",
-        "0,03"
+        "Longitudinal",
+        "Transversal",
+        "Eletromagnética",
+        "Gama"
       ],
       "correta": 0,
-      "explicacao": "Transmissão é 300/1000=0,30.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Longitudinal.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 18",
-      "pergunta": "Uma barreira permite passar 40% do feixe primário. Que fração foi atenuada?",
+      "titulo": "Física aplicada — 18",
+      "pergunta": "Qual fenômeno ondulatório explica o espalhamento após uma abertura?",
       "alternativas": [
-        "40%",
-        "20%",
-        "60%",
-        "140%"
+        "Reflexão",
+        "Refração",
+        "Difração",
+        "Fusão"
       ],
       "correta": 2,
-      "explicacao": "Se 40% permanece, 60% foi atenuado do feixe primário.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Difração.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 19",
-      "pergunta": "Dois protocolos utilizam 10 e 40 mAs sob o mesmo kVp. Qual é a razão aproximada de quantidade de radiação produzida?",
+      "titulo": "Física aplicada — 19",
+      "pergunta": "Qual fenômeno pode mudar a direção da luz ao atravessar meios distintos?",
       "alternativas": [
-        "1:2",
-        "4:1",
-        "1:16",
-        "1:4"
+        "Reflexão",
+        "Difração",
+        "Fissão",
+        "Refração"
       ],
       "correta": 3,
-      "explicacao": "A quantidade de radiação produzida é aproximadamente proporcional ao mAs.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Refração.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 20",
-      "pergunta": "Uma fonte de 640 MBq passa por três meias-vidas. Qual é sua atividade remanescente?",
+      "titulo": "Física aplicada — 20",
+      "pergunta": "Qual fenômeno faz a luz retornar ao meio de origem ao atingir um espelho?",
       "alternativas": [
-        "160 MBq",
-        "80 MBq",
-        "320 MBq",
-        "40 MBq"
+        "Refração",
+        "Reflexão",
+        "Difração",
+        "Ionização"
       ],
       "correta": 1,
-      "explicacao": "Três meias-vidas reduzem 640 para 80 MBq.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Reflexão.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 21",
-      "pergunta": "Um circuito mantém 100 V e 2 A. Qual é sua potência elétrica?",
+      "titulo": "Física aplicada — 21",
+      "pergunta": "Qual grandeza indica o número de oscilações por segundo?",
       "alternativas": [
-        "50 W",
-        "102 W",
-        "200 W",
-        "0,02 W"
+        "Amplitude",
+        "Comprimento de onda",
+        "Frequência",
+        "Intensidade"
       ],
       "correta": 2,
-      "explicacao": "P=VI=100×2=200 W.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Frequência.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 22",
-      "pergunta": "Um tubo recebe 120 kV e 0,2 A por 0,1 s. Qual energia elétrica nominal foi fornecida?",
+      "titulo": "Física aplicada — 22",
+      "pergunta": "Qual grandeza descreve a distância espacial entre cristas consecutivas?",
       "alternativas": [
-        "2400 J",
-        "240 J",
-        "24 J",
-        "24 000 J"
+        "Comprimento de onda",
+        "Frequência",
+        "Amplitude",
+        "Período"
       ],
       "correta": 0,
-      "explicacao": "E=VIt=120000×0,2×0,1=2400 J.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Comprimento de onda.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 23",
-      "pergunta": "Um feixe atravessa três camadas semirredutoras. Que fração primária resta?",
+      "titulo": "Física aplicada — 23",
+      "pergunta": "Qual grandeza caracteriza a magnitude máxima da oscilação?",
       "alternativas": [
-        "1/3",
-        "1/6",
-        "1/16",
-        "1/8"
-      ],
-      "correta": 3,
-      "explicacao": "A fração é (1/2)³=1/8.",
-      "dificuldade": "dificil"
-    },
-    {
-      "titulo": "Problema aplicado 24",
-      "pergunta": "Um detector recebe menos fótons por pixel após redução da exposição. Qual efeito estatístico tende a aumentar relativamente?",
-      "alternativas": [
-        "Maior número de fótons e menor ruído quântico",
-        "Menor número de fótons detectados e maior flutuação relativa",
-        "Aumento da energia máxima causado pelo ruído",
-        "Desaparecimento do sinal eletrônico"
+        "Frequência",
+        "Amplitude",
+        "Período",
+        "Comprimento de onda"
       ],
       "correta": 1,
-      "explicacao": "Menos fótons aumentam a flutuação relativa de contagens.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Amplitude.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 25",
-      "pergunta": "Dois fótons têm energias de 60 e 30 keV. Qual relação existe entre suas energias e comprimentos de onda?",
+      "titulo": "Física aplicada — 24",
+      "pergunta": "Qual região do espectro fica entre infravermelho e ultravioleta?",
       "alternativas": [
-        "Energia e comprimento de onda são inversamente proporcionais",
-        "A velocidade dos fótons de 60 keV é duas vezes maior",
-        "Fótons de 30 keV não são eletromagnéticos",
-        "A frequência não se relaciona à energia"
-      ],
-      "correta": 0,
-      "explicacao": "E=hc/λ, portanto maior energia implica menor comprimento de onda.",
-      "dificuldade": "dificil"
-    },
-    {
-      "titulo": "Problema aplicado 26",
-      "pergunta": "Um elétron acelerado por 70 kV converte toda sua energia em um fóton. Qual limite máximo de energia do fóton?",
-      "alternativas": [
-        "140 keV",
-        "35 keV",
-        "7 MeV",
-        "70 keV"
+        "Raios X",
+        "Micro-ondas",
+        "Gama",
+        "Luz visível"
       ],
       "correta": 3,
-      "explicacao": "A energia do fóton não pode exceder a energia cinética disponível do elétron.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Luz visível.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 27",
-      "pergunta": "Uma pessoa permanece 45 minutos em local de taxa constante de 12 µSv/h. Qual dose acumulada?",
+      "titulo": "Física aplicada — 25",
+      "pergunta": "Qual interação absorve um fóton e ejeta um elétron?",
       "alternativas": [
-        "16 µSv",
-        "27 µSv",
-        "9 µSv",
-        "0,27 µSv"
+        "Efeito fotoelétrico",
+        "Compton",
+        "Fissão",
+        "Refração"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta: Efeito fotoelétrico.",
+      "dificuldade": "medio"
+    },
+    {
+      "titulo": "Física aplicada — 26",
+      "pergunta": "Qual interação espalha fóton com perda de energia para elétron?",
+      "alternativas": [
+        "Fotoelétrico",
+        "Fusão",
+        "Efeito Compton",
+        "Reflexão"
       ],
       "correta": 2,
-      "explicacao": "45 min=0,75 h; 12×0,75=9 µSv.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Efeito Compton.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 28",
-      "pergunta": "A atividade de uma fonte cai de 400 para 100 MBq em dez dias. Qual é sua meia-vida?",
+      "titulo": "Física aplicada — 27",
+      "pergunta": "Que conceito reúne interferência da luz e sua interação em fótons?",
       "alternativas": [
-        "10 dias",
-        "5 dias",
-        "2,5 dias",
-        "20 dias"
-      ],
-      "correta": 1,
-      "explicacao": "A redução para um quarto corresponde a duas meias-vidas em 10 dias.",
-      "dificuldade": "dificil"
-    },
-    {
-      "titulo": "Problema aplicado 29",
-      "pergunta": "Uma região do detector recebe 900 contagens e outra 100. Qual razão entre as contagens?",
-      "alternativas": [
-        "3:1",
-        "1:9",
-        "90:1",
-        "9:1"
+        "Fissão",
+        "Refração",
+        "Ionização",
+        "Dualidade onda-partícula"
       ],
       "correta": 3,
-      "explicacao": "900/100=9.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Dualidade onda-partícula.",
+      "dificuldade": "medio"
     },
     {
-      "titulo": "Problema aplicado 30",
-      "pergunta": "Duas regiões recebem 1600 e 400 fótons. Se o ruído é quântico, qual a razão entre os desvios-padrão?",
+      "titulo": "Física aplicada — 28",
+      "pergunta": "Como se chama a emissão de fóton por transição eletrônica para nível inferior?",
       "alternativas": [
-        "2:1",
-        "4:1",
-        "1:2",
-        "16:1"
+        "Fissão nuclear",
+        "Emissão atômica",
+        "Emissão alfa",
+        "Refração"
+      ],
+      "correta": 1,
+      "explicacao": "Resposta: Emissão atômica.",
+      "dificuldade": "medio"
+    },
+    {
+      "titulo": "Física aplicada — 29",
+      "pergunta": "Como se classifica um feixe de elétrons em movimento?",
+      "alternativas": [
+        "Radiação corpuscular",
+        "Radiação eletromagnética",
+        "Onda sonora",
+        "Radiação gama"
       ],
       "correta": 0,
-      "explicacao": "√1600/√400=40/20=2.",
-      "dificuldade": "dificil"
+      "explicacao": "Resposta: Radiação corpuscular.",
+      "dificuldade": "medio"
+    },
+    {
+      "titulo": "Física aplicada — 30",
+      "pergunta": "Qual propriedade das ondas explica a mudança de direção na interface entre meios?",
+      "alternativas": [
+        "Reflexão",
+        "Fissão",
+        "Refração",
+        "Ionização"
+      ],
+      "correta": 2,
+      "explicacao": "Resposta: Refração.",
+      "dificuldade": "medio"
     }
   ],
-  "status": "30-problemas-reformulados-pendente-originalidade-e-distratores"
+  "status": "conteudo-corrigido-sem-calculos-pendente-revisao-de-distratores"
 }
