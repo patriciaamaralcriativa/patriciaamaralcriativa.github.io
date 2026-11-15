@@ -1,0 +1,456 @@
+{
+  "title": "Radiologia Digital — RADIOQUIZ",
+  "subject": "Radiologia Digital",
+  "questions": [
+    {
+      "prompt": "No sistema CR, qual receptor armazena a imagem latente?",
+      "options": [
+        "Intensificador de imagem",
+        "Placa de fósforo fotoestimulável",
+        "Painel de selênio amorfo",
+        "Filme convencional"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Placa de fósforo fotoestimulável.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "No CR, qual etapa libera o sinal armazenado na placa?",
+      "options": [
+        "Fixação química",
+        "Aquecimento do chassi",
+        "Varredura a laser",
+        "Revelação química"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Varredura a laser.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Após a leitura do CR, por que se apaga a placa?",
+      "options": [
+        "Aumentar a tensão do tubo",
+        "Reduzir o tamanho do pixel",
+        "Converter DICOM em JPEG",
+        "Remover sinal residual"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Remover sinal residual.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na DR indireta, qual componente transforma raios X em luz?",
+      "options": [
+        "Cintilador",
+        "Fotodiodo isolado",
+        "Conversor analógico-digital",
+        "Grade antidifusora"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Cintilador.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Na DR direta com selênio amorfo, qual transformação ocorre primeiro?",
+      "options": [
+        "Elétrons em ultrassom",
+        "Raios X em cargas elétricas",
+        "Raios X em luz visível",
+        "Luz em calor"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Raios X em cargas elétricas.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Em detectores indiretos, qual material cintilador é frequentemente utilizado?",
+      "options": [
+        "Chumbo puro",
+        "Tungstênio metálico",
+        "Iodeto de césio",
+        "Selênio amorfo"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Iodeto de césio.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual elemento converte luz do cintilador em sinal elétrico?",
+      "options": [
+        "Colimador",
+        "Filtro adicional",
+        "Tubo de raios X",
+        "Fotodiodo"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Fotodiodo.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "O que representa a matriz de imagem digital?",
+      "options": [
+        "Arranjo de pixels",
+        "Quantidade de exames no PACS",
+        "Tempo de exposição",
+        "Número de detectores de sala"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Arranjo de pixels.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual propriedade indica o tamanho da região representada por um pixel?",
+      "options": [
+        "Largura de janela",
+        "Espaçamento de pixel",
+        "Tensão do tubo",
+        "Índice de exposição"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Espaçamento de pixel.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual processo transforma sinal analógico em valores digitais?",
+      "options": [
+        "Fluorescência",
+        "Filtração",
+        "Conversão analógico-digital",
+        "Colimação"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Conversão analógico-digital.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual parâmetro descreve a quantidade de níveis de cinza codificáveis?",
+      "options": [
+        "Distância foco-receptor",
+        "Tamanho do campo",
+        "Velocidade do obturador",
+        "Profundidade de bits"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Profundidade de bits.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual ferramenta altera a amplitude dos valores de cinza exibidos?",
+      "options": [
+        "Largura de janela",
+        "Tensão de pico",
+        "Distância foco-receptor",
+        "Tempo de leitura"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Largura de janela.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual ferramenta desloca o centro da faixa de valores exibidos?",
+      "options": [
+        "Correção de posicionamento",
+        "Nível de janela",
+        "Colimação física",
+        "Filtração do feixe"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Nível de janela.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual sistema armazena e distribui imagens médicas?",
+      "options": [
+        "HIS isoladamente",
+        "AEC",
+        "PACS",
+        "RIS isoladamente"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: PACS.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual padrão organiza comunicação e arquivos de imagens médicas?",
+      "options": [
+        "JPEG como padrão clínico universal",
+        "CSV",
+        "HTML",
+        "DICOM"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: DICOM.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual sistema gerencia fluxos administrativos e informações radiológicas?",
+      "options": [
+        "RIS",
+        "PACS exclusivamente",
+        "Detector DR",
+        "Grade"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: RIS.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual propriedade define a capacidade de distinguir detalhes pequenos?",
+      "options": [
+        "Dose absorvida",
+        "Resolução espacial",
+        "Brilho do monitor",
+        "Tamanho do arquivo apenas"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Resolução espacial.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual propriedade define a capacidade de distinguir pequenas diferenças de sinal?",
+      "options": [
+        "Distância entre salas",
+        "Velocidade de impressão",
+        "Resolução de contraste",
+        "Tamanho do chassi"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Resolução de contraste.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual fenômeno aparece como granulação em imagens com poucos fótons detectados?",
+      "options": [
+        "Aliasing exclusivamente",
+        "Distorção geométrica",
+        "Persistência de imagem",
+        "Ruído quântico"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Ruído quântico.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual prática reduz a exposição fora da anatomia necessária?",
+      "options": [
+        "Colimação adequada",
+        "Ampliação indiscriminada do campo",
+        "Repetição preventiva",
+        "Retirada da grade em qualquer exame"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Colimação adequada.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual conceito descreve aumento gradual de exposição sem necessidade clínica?",
+      "options": [
+        "Reconstrução volumétrica",
+        "Dose creep",
+        "Fluorescência",
+        "Saturação óptica"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Dose creep.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual recurso automático pode mascarar visualmente superexposição?",
+      "options": [
+        "Fusão nuclear",
+        "Movimento do paciente",
+        "Reescalonamento da imagem",
+        "Revelação química"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Reescalonamento da imagem.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual recurso auxilia no controle da exposição recebida pelo detector?",
+      "options": [
+        "Tamanho do monitor",
+        "Nome do arquivo",
+        "Cor do chassi",
+        "Índice de exposição"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Índice de exposição.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual cuidado é necessário ao comparar índices de exposição de fabricantes?",
+      "options": [
+        "Considerar definições e calibração",
+        "Assumir escala universal idêntica",
+        "Ignorar protocolos",
+        "Usar brilho do monitor como dose"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Considerar definições e calibração.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual mecanismo pode gerar imagem fantasma por sinal anterior no detector?",
+      "options": [
+        "Filtração inerente",
+        "Persistência de imagem",
+        "Ampliação geométrica",
+        "Movimento voluntário"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Persistência de imagem.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual artefato pode surgir por defeito de linha ou coluna do detector?",
+      "options": [
+        "Rotação do paciente",
+        "Magnificação",
+        "Faixa linear",
+        "Desfoque por movimento"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Faixa linear.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual procedimento verifica uniformidade e funcionamento do detector?",
+      "options": [
+        "Aumento automático do mAs",
+        "Recorte estético",
+        "Compressão irreversível",
+        "Controle de qualidade"
+      ],
+      "answer_index": 3,
+      "explanation": "Resposta: Controle de qualidade.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual cuidado deve anteceder a aplicação de recorte eletrônico?",
+      "options": [
+        "Colimação física correta",
+        "Aumento do campo irradiado",
+        "Dispensa de identificação",
+        "Remoção do marcador anatômico"
+      ],
+      "answer_index": 0,
+      "explanation": "Resposta: Colimação física correta.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual recurso permite visualizar diferenças de tons sem nova exposição?",
+      "options": [
+        "Troca de colimador",
+        "Ajuste de janela",
+        "Nova incidência",
+        "Aumento de mAs"
+      ],
+      "answer_index": 1,
+      "explanation": "Resposta: Ajuste de janela.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    },
+    {
+      "prompt": "Qual prática evita atribuir ao pós-processamento a correção de erro de aquisição?",
+      "options": [
+        "Aumentar contraste indiscriminadamente",
+        "Excluir metadados",
+        "Revisar posicionamento e técnica",
+        "Aplicar nitidez máxima sempre"
+      ],
+      "answer_index": 2,
+      "explanation": "Resposta: Revisar posicionamento e técnica.",
+      "time_limit_seconds": 30,
+      "points": 1000,
+      "topic": "Radiologia Digital",
+      "image_url": ""
+    }
+  ]
+}
