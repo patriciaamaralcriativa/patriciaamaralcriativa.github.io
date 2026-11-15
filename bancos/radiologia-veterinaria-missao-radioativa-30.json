@@ -1,0 +1,131 @@
+{
+  "disciplina": "Radiologia Veterinária",
+  "sets": [
+    [
+      [
+        "Em qual decúbito o animal fica com o dorso apoiado na mesa?",
+        "Dorsal"
+      ],
+      [
+        "Em qual decúbito o animal fica apoiado sobre o esterno?",
+        "Esternal"
+      ],
+      [
+        "Na projeção ventrodorsal, por onde o feixe entra?",
+        "Face ventral"
+      ],
+      [
+        "Na projeção dorsoventral, por onde o feixe entra?",
+        "Face dorsal"
+      ],
+      [
+        "Em uma projeção laterolateral direita, qual lado do animal fica junto ao receptor?",
+        "Direito"
+      ],
+      [
+        "Qual plano divide o corpo em porções direita e esquerda?",
+        "Sagital"
+      ],
+      [
+        "Qual plano divide o corpo em porções cranial e caudal?",
+        "Transversal"
+      ],
+      [
+        "Qual termo indica direção voltada à cabeça do animal?",
+        "Cranial"
+      ],
+      [
+        "Qual termo indica direção voltada à cauda?",
+        "Caudal"
+      ],
+      [
+        "Nos membros, qual termo indica proximidade da origem do membro?",
+        "Proximal"
+      ]
+    ],
+    [
+      [
+        "Nos membros, qual termo indica afastamento da origem do membro?",
+        "Distal"
+      ],
+      [
+        "Na extremidade distal do membro torácico, qual termo indica a superfície oposta à dorsal?",
+        "Palmar"
+      ],
+      [
+        "Na extremidade distal do membro pélvico, qual termo indica a superfície oposta à dorsal?",
+        "Plantar"
+      ],
+      [
+        "Qual osso forma a maior parte do braço do cão?",
+        "Úmero"
+      ],
+      [
+        "Qual osso longo da coxa articula-se com o acetábulo?",
+        "Fêmur"
+      ],
+      [
+        "Qual estrutura óssea articula-se com a cabeça do fêmur?",
+        "Acetábulo"
+      ],
+      [
+        "Qual osso contém o olécrano?",
+        "Ulna"
+      ],
+      [
+        "Qual osso participa diretamente da articulação femorotibiopatelar?",
+        "Patela"
+      ],
+      [
+        "Qual osso forma a principal superfície de sustentação da perna do cão?",
+        "Tíbia"
+      ],
+      [
+        "Qual região anatômica abriga os pulmões?",
+        "Tórax"
+      ]
+    ],
+    [
+      [
+        "Qual músculo separa as cavidades torácica e abdominal?",
+        "Diafragma"
+      ],
+      [
+        "Qual órgão abdominal aparece frequentemente como silhueta de tecido mole cranial no abdome?",
+        "Fígado"
+      ],
+      [
+        "Qual órgão oco é identificado caudoventralmente quando distendido por urina?",
+        "Bexiga"
+      ],
+      [
+        "Qual estrutura tubular conduz ar da laringe aos brônquios?",
+        "Traqueia"
+      ],
+      [
+        "Qual projeção torácica exige atenção à fase respiratória para melhor avaliação pulmonar?",
+        "Inspiratória"
+      ],
+      [
+        "Qual fator pode gerar borramento das estruturas durante a exposição?",
+        "Movimento"
+      ],
+      [
+        "Qual recurso reduz a área irradiada sem mudar a projeção?",
+        "Colimação"
+      ],
+      [
+        "Qual marcador deve indicar o lado anatômico em uma projeção lateral?",
+        "Lateralidade"
+      ],
+      [
+        "Qual procedimento é preferível à contenção manual quando tecnicamente viável?",
+        "Imobilização mecânica"
+      ],
+      [
+        "Qual profissional deve definir a necessidade de sedação e sua condução clínica?",
+        "Médico-veterinário"
+      ]
+    ]
+  ]
+}
