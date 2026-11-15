@@ -1,0 +1,427 @@
+{
+  "title": "Radioterapia — RADIOQUIZ",
+  "subject": "Radioterapia",
+  "questions": [
+    {
+      "prompt": "Em planejamento de radioterapia conformacional 3D, qual informação é indispensável para delimitar o volume-alvo e os órgãos de risco?",
+      "options": [
+        "Imagens de planejamento em posição de tratamento",
+        "Radiografia diagnóstica sem referência espacial",
+        "Imagem pós-tratamento sem registro",
+        "Imagem obtida em posicionamento não reprodutível"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Imagens de planejamento em posição de tratamento.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A margem de CTV para PTV é aplicada principalmente para considerar:",
+      "options": [
+        "Heterogeneidade histológica isolada",
+        "Incertezas geométricas de posicionamento e movimento",
+        "Extensão microscópica tumoral já incorporada ao CTV",
+        "Dose de fuga do cabeçote"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Incertezas geométricas de posicionamento e movimento.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "O CTV diferencia-se do GTV por incluir:",
+      "options": [
+        "Toda a área exposta ao feixe",
+        "A margem de posicionamento diário",
+        "Doença microscópica presumida de relevância clínica",
+        "Somente o tumor visível em imagem"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Doença microscópica presumida de relevância clínica.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A IMRT permite modular fluência entre segmentos para:",
+      "options": [
+        "Eliminar toda dose fora do PTV",
+        "Dispensar controle de qualidade específico",
+        "Impedir movimento intrafração",
+        "Melhorar conformação de dose e poupar órgãos de risco"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Melhorar conformação de dose e poupar órgãos de risco.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Na VMAT, a modulação ocorre durante:",
+      "options": [
+        "Rotação do gantry com variação de parâmetros de entrega",
+        "Apenas feixes estáticos de campo único",
+        "Movimento do paciente sobre a mesa",
+        "Troca manual de acessórios entre cada segmento"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Rotação do gantry com variação de parâmetros de entrega.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "O principal papel da IGRT antes de uma fração é:",
+      "options": [
+        "Eliminar a necessidade de imobilização",
+        "Verificar geometria e orientar correções de posicionamento",
+        "Substituir a prescrição clínica",
+        "Medir resposta biológica tumoral imediata"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Verificar geometria e orientar correções de posicionamento.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Uma CBCT diária mostra deslocamento sistemático em relação ao planejamento. A ação apropriada é:",
+      "options": [
+        "Ignorar o deslocamento se o paciente estiver confortável",
+        "Reduzir a margem do PTV sem replanejamento",
+        "Avaliar e corrigir conforme protocolo de registro e tolerâncias",
+        "Aumentar a dose prescrita para compensar"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Avaliar e corrigir conforme protocolo de registro e tolerâncias.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Em radioterapia de cabeça e pescoço, a máscara termoplástica contribui para:",
+      "options": [
+        "Blindagem integral das glândulas salivares",
+        "Correção automática da heterogeneidade",
+        "Redução da energia nominal do feixe",
+        "Reprodutibilidade e redução de deslocamentos"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Reprodutibilidade e redução de deslocamentos.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Na radioterapia mamária com inspiração profunda sustentada, o benefício dosimétrico pode decorrer de:",
+      "options": [
+        "Afastamento relativo do coração do volume irradiado",
+        "Aumento obrigatório da dose cardíaca",
+        "Eliminação da necessidade de verificação respiratória",
+        "Redução universal da dose pulmonar a zero"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Afastamento relativo do coração do volume irradiado.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "O uso de bolus sobre a pele é indicado quando se deseja:",
+      "options": [
+        "Corrigir deslocamento ósseo no IGRT",
+        "Aumentar a dose superficial em região-alvo específica",
+        "Aumentar a profundidade de dose máxima",
+        "Reduzir toda dose na superfície"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Aumentar a dose superficial em região-alvo específica.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Em feixes de fótons de megavoltagem, o efeito de build-up significa:",
+      "options": [
+        "Ausência de elétrons secundários",
+        "Aumento contínuo da dose com a profundidade",
+        "Aumento inicial da dose até a região de dose máxima",
+        "Máximo de dose invariavelmente na superfície"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Aumento inicial da dose até a região de dose máxima.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Para tratar uma lesão superficial com elétrons, a escolha da energia considera sobretudo:",
+      "options": [
+        "Somente o tamanho do campo luminoso",
+        "Apenas o número de frações",
+        "Exclusivamente a distância do isocentro",
+        "Profundidade do alvo e queda distal de dose"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Profundidade do alvo e queda distal de dose.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Na braquiterapia HDR, o carregamento remoto posterior favorece:",
+      "options": [
+        "Redução da exposição ocupacional durante a entrega",
+        "Eliminação de toda exposição do paciente",
+        "Ausência de necessidade de verificação do aplicador",
+        "Dispensa de controle da fonte"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Redução da exposição ocupacional durante a entrega.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Em braquiterapia, variações de posição do aplicador entre planejamento e tratamento podem:",
+      "options": [
+        "Reduzir automaticamente a dose em órgãos de risco",
+        "Alterar significativamente a distribuição de dose",
+        "Modificar a meia-vida física da fonte",
+        "Garantir cobertura equivalente do alvo"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Alterar significativamente a distribuição de dose.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A radiocirurgia estereotáxica exige particularmente:",
+      "options": [
+        "Fracionamento convencional obrigatório",
+        "Uso exclusivo de fonte intracavitária",
+        "Alta precisão geométrica e gradiente de dose acentuado",
+        "Margens amplas sem verificação de imagem"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Alta precisão geométrica e gradiente de dose acentuado.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Em SBRT pulmonar, o movimento respiratório deve ser considerado porque:",
+      "options": [
+        "Altera a energia nominal dos fótons",
+        "Dispensa margens internas de movimento",
+        "Só afeta imagens após a última fração",
+        "Pode deslocar o alvo durante a aquisição e a entrega"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Pode deslocar o alvo durante a aquisição e a entrega.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A tomografia 4D no planejamento torácico é utilizada para:",
+      "options": [
+        "Caracterizar variações anatômicas relacionadas ao ciclo respiratório",
+        "Medir diretamente a radiossensibilidade celular",
+        "Substituir toda verificação diária de imagem",
+        "Calcular dose sem dados de densidade"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Caracterizar variações anatômicas relacionadas ao ciclo respiratório.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A prescrição de dose para um PTV deve ser avaliada juntamente com:",
+      "options": [
+        "Exclusivamente a área do campo luminoso",
+        "Cobertura do alvo e restrições dos órgãos de risco",
+        "Apenas a dose máxima em um voxel",
+        "Somente o tempo de permanência na sala"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Cobertura do alvo e restrições dos órgãos de risco.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Um DVH cumulativo informa principalmente:",
+      "options": [
+        "Trajetória de cada fóton individual",
+        "Tempo de tratamento em cada fração",
+        "Fração ou volume de estrutura que recebe ao menos determinada dose",
+        "Localização espacial exata de cada ponto quente"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Fração ou volume de estrutura que recebe ao menos determinada dose.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Dois planos têm DVH semelhante, mas distribuições espaciais distintas. Qual conduta é adequada?",
+      "options": [
+        "Escolher apenas pelo número de segmentos",
+        "Assumir equivalência espacial integral",
+        "Dispensar avaliação de órgãos seriados",
+        "Revisar também cortes de dose e localização dos pontos críticos"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Revisar também cortes de dose e localização dos pontos críticos.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "O índice de conformidade busca expressar:",
+      "options": [
+        "Relação entre volume irradiado em nível prescrito e volume-alvo",
+        "Quantidade de imagens adquiridas por fração",
+        "Tempo total de imobilização",
+        "Razão entre dose de entrada e saída exclusivamente"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Relação entre volume irradiado em nível prescrito e volume-alvo.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Uma estrutura seriada, como a medula espinhal, exige atenção especial a:",
+      "options": [
+        "Exclusivamente a dose integral do PTV",
+        "Dose máxima ou quase máxima segundo protocolo",
+        "Somente dose média global",
+        "Apenas volume de baixa dose"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Dose máxima ou quase máxima segundo protocolo.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Em uma estrutura paralela, como pulmão, a avaliação costuma considerar:",
+      "options": [
+        "Apenas posição do isocentro",
+        "Somente número de arcos",
+        "Métricas de dose-volume e dose média conforme protocolo",
+        "Somente dose máxima em um ponto"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Métricas de dose-volume e dose média conforme protocolo.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "O QA específico do paciente em IMRT/VMAT visa:",
+      "options": [
+        "Confirmar resposta clínica antes da primeira fração",
+        "Substituir calibração de referência do acelerador",
+        "Determinar extensão microscópica do tumor",
+        "Verificar concordância entre entrega medida e cálculo planejado"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Verificar concordância entre entrega medida e cálculo planejado.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Uma falha de QA pré-tratamento acima da tolerância exige:",
+      "options": [
+        "Investigação e resolução antes de liberar a entrega",
+        "Prosseguir se o DVH parecer adequado",
+        "Aumentar o número de unidades monitoras",
+        "Reduzir o tempo de imagem sem análise"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Investigação e resolução antes de liberar a entrega.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "O MLC em acelerador linear permite:",
+      "options": [
+        "Eliminar integralmente a penumbra",
+        "Conformar e modular a abertura do feixe",
+        "Medir diretamente a atividade de uma fonte selada",
+        "Alterar a energia dos elétrons do alvo"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Conformar e modular a abertura do feixe.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A diferença entre radioterapia adjuvante e neoadjuvante é definida por:",
+      "options": [
+        "Número de campos usados no plano",
+        "Tipo de imobilizador",
+        "Relação temporal com o tratamento principal, como cirurgia",
+        "Energia de fótons empregada"
+      ],
+      "answer_index": 2,
+      "explanation": "Gabarito: Relação temporal com o tratamento principal, como cirurgia.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Em reirradiação, a avaliação do risco de toxicidade deve incluir:",
+      "options": [
+        "Somente dose da nova prescrição",
+        "Apenas a idade do acelerador",
+        "Exclusivamente o número de imagens de verificação",
+        "Dose prévia, intervalo e dose cumulativa em tecidos normais"
+      ],
+      "answer_index": 3,
+      "explanation": "Gabarito: Dose prévia, intervalo e dose cumulativa em tecidos normais.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "Um erro de lateralidade detectado na conferência pré-tratamento exige:",
+      "options": [
+        "Interrupção do fluxo e reconciliação com prescrição e identificação",
+        "Correção apenas do nome do arquivo de imagem",
+        "Entrega de fração reduzida como teste",
+        "Prosseguimento com registro posterior"
+      ],
+      "answer_index": 0,
+      "explanation": "Gabarito: Interrupção do fluxo e reconciliação com prescrição e identificação.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    },
+    {
+      "prompt": "A avaliação de plano com hotspot próximo a órgão de risco deve considerar:",
+      "options": [
+        "Exclusivamente o número de frações",
+        "Magnitude e localização espacial da dose, além de restrições",
+        "Somente o valor de cobertura média do PTV",
+        "Apenas a aparência da curva de isodose escolhida"
+      ],
+      "answer_index": 1,
+      "explanation": "Gabarito: Magnitude e localização espacial da dose, além de restrições.",
+      "topic": "Radioterapia",
+      "time_limit_seconds": 45,
+      "points": 1000
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
