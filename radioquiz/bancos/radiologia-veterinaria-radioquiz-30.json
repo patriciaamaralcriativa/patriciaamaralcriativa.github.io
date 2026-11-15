@@ -3,7 +3,7 @@
   "subject": "Radiologia Veterinária",
   "questions": [
     {
-      "prompt": "Em qual decúbito o animal fica com o dorso apoiado na mesa?",
+      "prompt": "Para uma radiografia ventrodorsal do abdome de um cão, a equipe apoia o dorso do animal na mesa. Qual decúbito está sendo utilizado?",
       "options": [
         "Esternal",
         "Dorsal",
@@ -12,13 +12,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Dorsal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Em qual decúbito o animal fica apoiado sobre o esterno?",
+      "prompt": "Para uma projeção dorsoventral torácica, o cão é apoiado sobre o esterno. Qual decúbito foi adotado?",
       "options": [
         "Lateral esquerdo",
         "Oblíquo",
@@ -27,13 +27,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Esternal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Na projeção ventrodorsal, por onde o feixe entra?",
+      "prompt": "Um exame de abdome é solicitado em projeção ventrodorsal. Por qual superfície anatômica o feixe deve entrar?",
       "options": [
         "Face dorsal",
         "Lado direito",
@@ -42,13 +42,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Face ventral.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Na projeção dorsoventral, por onde o feixe entra?",
+      "prompt": "Em um tórax dorsoventral, por qual superfície o feixe entra antes de alcançar o receptor?",
       "options": [
         "Face dorsal",
         "Face ventral",
@@ -57,13 +57,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Face dorsal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Em uma projeção laterolateral direita, qual lado do animal fica junto ao receptor?",
+      "prompt": "Um laudo solicita laterolateral direita do tórax canino. Qual lado do paciente deve ficar apoiado no receptor?",
       "options": [
         "Ventral",
         "Direito",
@@ -72,13 +72,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Direito.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual plano divide o corpo em porções direita e esquerda?",
+      "prompt": "Durante o posicionamento, a equipe utiliza um plano que divide o corpo em porções direita e esquerda. Qual é esse plano?",
       "options": [
         "Dorsal",
         "Horizontal",
@@ -87,13 +87,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Sagital.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual plano divide o corpo em porções cranial e caudal?",
+      "prompt": "Para descrever uma secção que separa regiões cranial e caudal do corpo, qual plano anatômico é utilizado?",
       "options": [
         "Sagital",
         "Mediano",
@@ -102,13 +102,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Transversal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual termo indica direção voltada à cabeça do animal?",
+      "prompt": "Uma lesão é descrita como localizada em direção à cabeça do cão. Qual termo direcional expressa isso?",
       "options": [
         "Cranial",
         "Caudal",
@@ -117,13 +117,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Cranial.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual termo indica direção voltada à cauda?",
+      "prompt": "Uma estrutura é descrita como mais próxima da cauda que outra. Qual termo direcional corresponde?",
       "options": [
         "Palmar",
         "Caudal",
@@ -132,13 +132,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Caudal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Nos membros, qual termo indica proximidade da origem do membro?",
+      "prompt": "Uma fratura está mais próxima da raiz do membro torácico. Qual termo descreve essa posição?",
       "options": [
         "Caudal",
         "Plantar",
@@ -147,13 +147,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Proximal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Nos membros, qual termo indica afastamento da origem do membro?",
+      "prompt": "Uma lesão está mais afastada da origem do membro pélvico. Qual termo direcional é adequado?",
       "options": [
         "Proximal",
         "Cranial",
@@ -162,13 +162,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Distal.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Na extremidade distal do membro torácico, qual termo indica a superfície oposta à dorsal?",
+      "prompt": "Na avaliação da extremidade distal do membro torácico, qual superfície se opõe à dorsal?",
       "options": [
         "Palmar",
         "Plantar",
@@ -177,13 +177,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Palmar.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Na extremidade distal do membro pélvico, qual termo indica a superfície oposta à dorsal?",
+      "prompt": "Na avaliação da extremidade distal do membro pélvico, qual superfície se opõe à dorsal?",
       "options": [
         "Lateral",
         "Plantar",
@@ -192,13 +192,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Plantar.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual osso forma a maior parte do braço do cão?",
+      "prompt": "Uma radiografia mostra fratura do principal osso longo do braço canino. Qual osso deve ser identificado?",
       "options": [
         "Ulna",
         "Fêmur",
@@ -207,13 +207,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Úmero.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual osso longo da coxa articula-se com o acetábulo?",
+      "prompt": "Uma imagem da coxa revela fratura no osso cuja cabeça articula com a pelve. Qual osso é esse?",
       "options": [
         "Tíbia",
         "Úmero",
@@ -222,13 +222,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Fêmur.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual estrutura óssea articula-se com a cabeça do fêmur?",
+      "prompt": "Em uma avaliação coxofemoral, a cabeça do fêmur deve estar relacionada a qual estrutura da pelve?",
       "options": [
         "Acetábulo",
         "Olécrano",
@@ -237,13 +237,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Acetábulo.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual osso contém o olécrano?",
+      "prompt": "Um trauma envolve o olécrano e a articulação do cotovelo. A qual osso pertence o olécrano?",
       "options": [
         "Tíbia",
         "Ulna",
@@ -252,13 +252,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Ulna.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual osso participa diretamente da articulação femorotibiopatelar?",
+      "prompt": "Na articulação do joelho do cão, qual osso sesamoide está relacionado ao mecanismo extensor?",
       "options": [
         "Carpo",
         "Calcâneo",
@@ -267,13 +267,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Patela.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual osso forma a principal superfície de sustentação da perna do cão?",
+      "prompt": "Uma fratura acomete o principal osso de sustentação da perna canina. Qual osso é esse?",
       "options": [
         "Fíbula",
         "Fêmur",
@@ -282,13 +282,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Tíbia.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual região anatômica abriga os pulmões?",
+      "prompt": "Uma radiografia demonstra silhueta cardíaca e campos pulmonares. Qual região anatômica está sendo examinada?",
       "options": [
         "Tórax",
         "Abdome",
@@ -297,13 +297,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Tórax.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual músculo separa as cavidades torácica e abdominal?",
+      "prompt": "Na avaliação torácica, qual músculo forma o limite entre tórax e abdome?",
       "options": [
         "Bíceps femoral",
         "Diafragma",
@@ -312,13 +312,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Diafragma.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual órgão abdominal aparece frequentemente como silhueta de tecido mole cranial no abdome?",
+      "prompt": "Em uma imagem abdominal, uma grande silhueta de tecido mole ocupa a porção cranial, caudal ao diafragma. Qual órgão é provável?",
       "options": [
         "Rim esquerdo",
         "Cólon",
@@ -327,13 +327,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Fígado.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual órgão oco é identificado caudoventralmente quando distendido por urina?",
+      "prompt": "Uma estrutura de tecido mole distendida por urina é observada caudoventralmente no abdome. Qual órgão é esse?",
       "options": [
         "Estômago",
         "Baço",
@@ -342,13 +342,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Bexiga.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual estrutura tubular conduz ar da laringe aos brônquios?",
+      "prompt": "Uma imagem do pescoço mostra estrutura aérea que liga a laringe aos brônquios. Qual estrutura está representada?",
       "options": [
         "Traqueia",
         "Esôfago",
@@ -357,13 +357,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Traqueia.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual projeção torácica exige atenção à fase respiratória para melhor avaliação pulmonar?",
+      "prompt": "Para melhorar a avaliação pulmonar em uma radiografia torácica, em que fase da respiração se procura realizar a exposição?",
       "options": [
         "Deglutição",
         "Inspiratória",
@@ -372,13 +372,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Inspiratória.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual fator pode gerar borramento das estruturas durante a exposição?",
+      "prompt": "Um cão inquieto se desloca durante a exposição, e os contornos ficam borrados. Qual fator explica esse artefato?",
       "options": [
         "Identificação lateral",
         "Imobilização correta",
@@ -387,13 +387,13 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Movimento.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual recurso reduz a área irradiada sem mudar a projeção?",
+      "prompt": "A equipe deseja limitar o campo de exposição sem alterar a incidência prescrita. Qual recurso físico deve utilizar?",
       "options": [
         "Ampliação do campo",
         "Repetição",
@@ -402,13 +402,13 @@
       ],
       "answer_index": 3,
       "explanation": "Resposta: Colimação.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual marcador deve indicar o lado anatômico em uma projeção lateral?",
+      "prompt": "Em uma projeção laterolateral, qual informação precisa constar no marcador para indicar o lado apoiado?",
       "options": [
         "Lateralidade",
         "Número do aparelho",
@@ -417,13 +417,13 @@
       ],
       "answer_index": 0,
       "explanation": "Resposta: Lateralidade.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual procedimento é preferível à contenção manual quando tecnicamente viável?",
+      "prompt": "Um paciente veterinário não consegue permanecer imóvel. Qual estratégia de contenção deve ser preferida quando viável e segura, antes de recorrer à contenção manual?",
       "options": [
         "Repetir a exposição",
         "Imobilização mecânica",
@@ -432,13 +432,13 @@
       ],
       "answer_index": 1,
       "explanation": "Resposta: Imobilização mecânica.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     },
     {
-      "prompt": "Qual profissional deve definir a necessidade de sedação e sua condução clínica?",
+      "prompt": "Um animal pode necessitar sedação para exame, mas a decisão envolve riscos clínicos. Quem deve avaliar e conduzir essa indicação?",
       "options": [
         "Tutor do animal",
         "Recepcionista",
@@ -447,10 +447,11 @@
       ],
       "answer_index": 2,
       "explanation": "Resposta: Médico-veterinário.",
-      "time_limit_seconds": 30,
+      "time_limit_seconds": 50,
       "points": 1000,
       "topic": "Radiologia Veterinária",
       "image_url": ""
     }
-  ]
+  ],
+  "status": "enunciados-contextualizados-pendente-revisao-de-distratores-e-validacao-em-partida"
 }
