@@ -1,0 +1,395 @@
+{
+  "disciplina": "Radiologia Veterinária",
+  "questoes": [
+    {
+      "titulo": "VETERINÁRIA — 1",
+      "pergunta": "Em qual decúbito o animal fica com o dorso apoiado na mesa?",
+      "alternativas": [
+        "Dorsal",
+        "Ventral",
+        "Lateral direito",
+        "Esternal"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Dorsal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 2",
+      "pergunta": "Em qual decúbito o animal fica apoiado sobre o esterno?",
+      "alternativas": [
+        "Oblíquo",
+        "Esternal",
+        "Dorsal",
+        "Lateral esquerdo"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Esternal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 3",
+      "pergunta": "Na projeção ventrodorsal, por onde o feixe entra?",
+      "alternativas": [
+        "Lado direito",
+        "Lado esquerdo",
+        "Face ventral",
+        "Face dorsal"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Face ventral.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 4",
+      "pergunta": "Na projeção dorsoventral, por onde o feixe entra?",
+      "alternativas": [
+        "Face ventral",
+        "Lado direito",
+        "Lado esquerdo",
+        "Face dorsal"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Face dorsal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 5",
+      "pergunta": "Em uma projeção laterolateral direita, qual lado do animal fica junto ao receptor?",
+      "alternativas": [
+        "Direito",
+        "Esquerdo",
+        "Dorsal",
+        "Ventral"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Direito.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 6",
+      "pergunta": "Qual plano divide o corpo em porções direita e esquerda?",
+      "alternativas": [
+        "Horizontal",
+        "Sagital",
+        "Transversal",
+        "Dorsal"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Sagital.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 7",
+      "pergunta": "Qual plano divide o corpo em porções cranial e caudal?",
+      "alternativas": [
+        "Mediano",
+        "Dorsal",
+        "Transversal",
+        "Sagital"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Transversal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 8",
+      "pergunta": "Qual termo indica direção voltada à cabeça do animal?",
+      "alternativas": [
+        "Caudal",
+        "Distal",
+        "Plantar",
+        "Cranial"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Cranial.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 9",
+      "pergunta": "Qual termo indica direção voltada à cauda?",
+      "alternativas": [
+        "Caudal",
+        "Cranial",
+        "Proximal",
+        "Palmar"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Caudal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 10",
+      "pergunta": "Nos membros, qual termo indica proximidade da origem do membro?",
+      "alternativas": [
+        "Plantar",
+        "Proximal",
+        "Distal",
+        "Caudal"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Proximal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 11",
+      "pergunta": "Nos membros, qual termo indica afastamento da origem do membro?",
+      "alternativas": [
+        "Cranial",
+        "Dorsal",
+        "Distal",
+        "Proximal"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Distal.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 12",
+      "pergunta": "Na extremidade distal do membro torácico, qual termo indica a superfície oposta à dorsal?",
+      "alternativas": [
+        "Plantar",
+        "Cranial",
+        "Medial",
+        "Palmar"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Palmar.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 13",
+      "pergunta": "Na extremidade distal do membro pélvico, qual termo indica a superfície oposta à dorsal?",
+      "alternativas": [
+        "Plantar",
+        "Palmar",
+        "Cranial",
+        "Lateral"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Plantar.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 14",
+      "pergunta": "Qual osso forma a maior parte do braço do cão?",
+      "alternativas": [
+        "Fêmur",
+        "Úmero",
+        "Rádio",
+        "Ulna"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Úmero.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 15",
+      "pergunta": "Qual osso longo da coxa articula-se com o acetábulo?",
+      "alternativas": [
+        "Úmero",
+        "Fíbula",
+        "Fêmur",
+        "Tíbia"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Fêmur.",
+      "dificuldade": "normal"
+    },
+    {
+      "titulo": "VETERINÁRIA — 16",
+      "pergunta": "Qual estrutura óssea articula-se com a cabeça do fêmur?",
+      "alternativas": [
+        "Olécrano",
+        "Escápula",
+        "Esterno",
+        "Acetábulo"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Acetábulo.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 17",
+      "pergunta": "Qual osso contém o olécrano?",
+      "alternativas": [
+        "Ulna",
+        "Rádio",
+        "Úmero",
+        "Tíbia"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Ulna.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 18",
+      "pergunta": "Qual osso participa diretamente da articulação femorotibiopatelar?",
+      "alternativas": [
+        "Calcâneo",
+        "Patela",
+        "Escápula",
+        "Carpo"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Patela.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 19",
+      "pergunta": "Qual osso forma a principal superfície de sustentação da perna do cão?",
+      "alternativas": [
+        "Fêmur",
+        "Ulna",
+        "Tíbia",
+        "Fíbula"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Tíbia.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 20",
+      "pergunta": "Qual região anatômica abriga os pulmões?",
+      "alternativas": [
+        "Abdome",
+        "Pelve",
+        "Crânio",
+        "Tórax"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Tórax.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 21",
+      "pergunta": "Qual músculo separa as cavidades torácica e abdominal?",
+      "alternativas": [
+        "Diafragma",
+        "Intercostal externo",
+        "Masseter",
+        "Bíceps femoral"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Diafragma.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 22",
+      "pergunta": "Qual órgão abdominal aparece frequentemente como silhueta de tecido mole cranial no abdome?",
+      "alternativas": [
+        "Cólon",
+        "Fígado",
+        "Bexiga",
+        "Rim esquerdo"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Fígado.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 23",
+      "pergunta": "Qual órgão oco é identificado caudoventralmente quando distendido por urina?",
+      "alternativas": [
+        "Baço",
+        "Vesícula biliar",
+        "Bexiga",
+        "Estômago"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Bexiga.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 24",
+      "pergunta": "Qual estrutura tubular conduz ar da laringe aos brônquios?",
+      "alternativas": [
+        "Esôfago",
+        "Aorta",
+        "Veia cava",
+        "Traqueia"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Traqueia.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 25",
+      "pergunta": "Qual projeção torácica exige atenção à fase respiratória para melhor avaliação pulmonar?",
+      "alternativas": [
+        "Inspiratória",
+        "Expiratória obrigatória",
+        "Apneia após tosse",
+        "Deglutição"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Inspiratória.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 26",
+      "pergunta": "Qual fator pode gerar borramento das estruturas durante a exposição?",
+      "alternativas": [
+        "Imobilização correta",
+        "Movimento",
+        "Colimação adequada",
+        "Identificação lateral"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Movimento.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 27",
+      "pergunta": "Qual recurso reduz a área irradiada sem mudar a projeção?",
+      "alternativas": [
+        "Repetição",
+        "Aumento do tempo",
+        "Colimação",
+        "Ampliação do campo"
+      ],
+      "correta": 2,
+      "explicacao": "Conceito anatômico ou técnico: Colimação.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 28",
+      "pergunta": "Qual marcador deve indicar o lado anatômico em uma projeção lateral?",
+      "alternativas": [
+        "Número do aparelho",
+        "Nome do fabricante",
+        "Espessura da mesa",
+        "Lateralidade"
+      ],
+      "correta": 3,
+      "explicacao": "Conceito anatômico ou técnico: Lateralidade.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 29",
+      "pergunta": "Qual procedimento é preferível à contenção manual quando tecnicamente viável?",
+      "alternativas": [
+        "Imobilização mecânica",
+        "Segurar com as mãos no feixe",
+        "Dispensar planejamento",
+        "Repetir a exposição"
+      ],
+      "correta": 0,
+      "explicacao": "Conceito anatômico ou técnico: Imobilização mecânica.",
+      "dificuldade": "dificil"
+    },
+    {
+      "titulo": "VETERINÁRIA — 30",
+      "pergunta": "Qual profissional deve definir a necessidade de sedação e sua condução clínica?",
+      "alternativas": [
+        "Recepcionista",
+        "Médico-veterinário",
+        "Operador sem prescrição",
+        "Tutor do animal"
+      ],
+      "correta": 1,
+      "explicacao": "Conceito anatômico ou técnico: Médico-veterinário.",
+      "dificuldade": "dificil"
+    }
+  ]
+}
