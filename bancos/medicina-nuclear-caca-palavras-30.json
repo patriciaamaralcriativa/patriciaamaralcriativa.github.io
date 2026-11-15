@@ -1,0 +1,126 @@
+{
+  "title": "Medicina Nuclear — 30 pistas",
+  "rows": [
+    {
+      "question": "Qual modalidade tomográfica usa detecção de fótons únicos com colimador?",
+      "answer": "SPECT"
+    },
+    {
+      "question": "Qual modalidade utiliza detecção em coincidência de fótons de aniquilação?",
+      "answer": "PET"
+    },
+    {
+      "question": "Qual componente limita direções de incidência na gama-câmara?",
+      "answer": "COLIMADOR"
+    },
+    {
+      "question": "Qual material converte radiação em luz em detectores cintiladores?",
+      "answer": "CRISTAL"
+    },
+    {
+      "question": "Qual interação produz fóton espalhado com menor energia?",
+      "answer": "COMPTON"
+    },
+    {
+      "question": "Qual interação absorve integralmente um fóton incidente?",
+      "answer": "FOTOELÉTRICO"
+    },
+    {
+      "question": "Qual evento produz dois fótons de 511 keV?",
+      "answer": "ANIQUILAÇÃO"
+    },
+    {
+      "question": "Qual antipartícula do elétron participa do decaimento beta positivo?",
+      "answer": "PÓSITRON"
+    },
+    {
+      "question": "Qual radionuclídeo metaestável é amplamente usado em cintilografia?",
+      "answer": "TECNÉCIO"
+    },
+    {
+      "question": "Qual elemento é o radionuclídeo pai do gerador de tecnécio?",
+      "answer": "MOLIBDÊNIO"
+    },
+    {
+      "question": "Qual ânion contém o tecnécio eluído do gerador?",
+      "answer": "PERTECNETATO"
+    },
+    {
+      "question": "Qual propriedade do detector deve ser homogênea no campo de visão?",
+      "answer": "UNIFORMIDADE"
+    },
+    {
+      "question": "Qual fenômeno causa redução da intensidade de fótons através dos tecidos?",
+      "answer": "ATENUAÇÃO"
+    },
+    {
+      "question": "Qual tipo de erro decorre de desalinhamento entre PET e CT?",
+      "answer": "DESREGISTRO"
+    },
+    {
+      "question": "Qual processo produz imagens tomográficas a partir das projeções?",
+      "answer": "RECONSTRUÇÃO"
+    },
+    {
+      "question": "Qual termo descreve a distribuição do radiofármaco pelos tecidos?",
+      "answer": "BIODISTRIBUIÇÃO"
+    },
+    {
+      "question": "Qual termo designa perda de atividade por transformação nuclear espontânea?",
+      "answer": "DECAIMENTO"
+    },
+    {
+      "question": "Qual tipo de pureza expressa a fração do radiofármaco na forma química desejada?",
+      "answer": "RADIOQUÍMICA"
+    },
+    {
+      "question": "Qual tipo de pureza controla a presença de radionuclídeos contaminantes?",
+      "answer": "RADIONUCLÍDICA"
+    },
+    {
+      "question": "Qual termo descreve saída do radiofármaco do vaso no local da injeção?",
+      "answer": "EXTRAVASAMENTO"
+    },
+    {
+      "question": "Qual radionuclídeo marca a fluordesoxiglicose em PET?",
+      "answer": "FLÚOR"
+    },
+    {
+      "question": "Qual sigla designa a medida semiquantitativa de captação normalizada em PET?",
+      "answer": "SUV"
+    },
+    {
+      "question": "Qual fase da renografia mostra chegada vascular do radiofármaco aos rins?",
+      "answer": "PERFUSÃO"
+    },
+    {
+      "question": "Qual exame dinâmico avalia função e drenagem renais?",
+      "answer": "RENOGRAFIA"
+    },
+    {
+      "question": "Qual processo remove o radiofármaco do organismo por vias fisiológicas?",
+      "answer": "EXCREÇÃO"
+    },
+    {
+      "question": "Qual estrutura da gama-câmara transforma luz em sinal elétrico nos modelos clássicos?",
+      "answer": "FOTOMULTIPLICADORA"
+    },
+    {
+      "question": "Qual técnica sincroniza aquisição cardíaca com o eletrocardiograma?",
+      "answer": "GATING"
+    },
+    {
+      "question": "Qual processo estima a localização tridimensional de atividade em SPECT?",
+      "answer": "TOMOGRAFIA"
+    },
+    {
+      "question": "Qual grandeza representa o número de transformações nucleares por segundo?",
+      "answer": "ATIVIDADE"
+    },
+    {
+      "question": "Qual princípio da proteção radiológica exige benefício esperado para o exame?",
+      "answer": "JUSTIFICAÇÃO"
+    }
+  ],
+  "status": "rascunho-para-revisao"
+}
