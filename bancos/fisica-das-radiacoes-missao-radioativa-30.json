@@ -3,130 +3,130 @@
   "sets": [
     [
       [
-        "Energia por unidade de massa depositada em material",
-        "Dose absorvida"
+        "Partícula positiva que determina o número atômico",
+        "Próton"
       ],
       [
-        "Unidade SI da dose absorvida",
-        "Gray"
+        "Partícula nuclear sem carga elétrica",
+        "Nêutron"
       ],
       [
-        "Unidade SI da atividade de radionuclídeo",
-        "Becquerel"
+        "Partícula negativa da eletrosfera",
+        "Elétron"
       ],
       [
-        "Grandeza associada à desintegração nuclear por unidade de tempo",
-        "Atividade"
+        "Átomo que perde elétrons",
+        "Cátion"
       ],
       [
-        "Intervalo para redução de atividade à metade",
-        "Meia-vida"
+        "Átomo que ganha elétrons",
+        "Ânion"
       ],
       [
-        "Grandeza que relaciona fótons por unidade de área",
-        "Fluência"
+        "Átomos de mesmo elemento com diferentes nêutrons",
+        "Isótopos"
       ],
       [
-        "Redução exponencial da intensidade ao atravessar matéria",
-        "Atenuação"
+        "Soma de prótons e nêutrons de um nuclídeo",
+        "Número de massa"
       ],
       [
-        "Espessura que reduz a intensidade primária à metade",
-        "Camada semirredutora"
+        "Emissão nuclear de núcleo de hélio",
+        "Alfa"
       ],
       [
-        "Coeficiente que descreve probabilidade de interação por unidade de percurso",
-        "Coeficiente de atenuação linear"
+        "Emissão nuclear de elétron e antineutrino",
+        "Beta menos"
       ],
       [
-        "Relação geométrica da intensidade de fonte puntiforme com distância",
-        "Inverso do quadrado"
+        "Radiação nuclear eletromagnética",
+        "Gama"
       ]
     ],
     [
       [
-        "Fótons gerados por desaceleração de elétrons no alvo",
-        "Bremsstrahlung"
+        "Divisão de núcleo pesado",
+        "Fissão"
       ],
       [
-        "Radiação de energias discretas por transições eletrônicas atômicas",
-        "Radiação característica"
+        "União de núcleos leves",
+        "Fusão"
       ],
       [
-        "Unidade de energia usada para fótons diagnósticos",
-        "Quiloelétron-volt"
+        "Radiação constituída por partículas materiais",
+        "Corpuscular"
       ],
       [
-        "Produto de corrente do tubo e tempo",
-        "mAs"
+        "Radiação formada por fótons",
+        "Eletromagnética"
       ],
       [
-        "Tensão máxima aplicada ao tubo",
-        "kVp"
+        "Indução associada à variação de fluxo magnético",
+        "Eletromagnetismo"
       ],
       [
-        "Quantidade de eventos registrada por intervalo de tempo",
-        "Taxa de contagem"
+        "Onda que exige meio material",
+        "Mecânica"
       ],
       [
-        "Distribuição estatística que descreve contagens independentes",
-        "Poisson"
+        "Onda que se propaga no vácuo",
+        "Eletromagnética"
       ],
       [
-        "Variação estatística relativa por quantidade finita de fótons",
-        "Ruído quântico"
+        "Onda com vibração paralela à propagação",
+        "Longitudinal"
       ],
       [
-        "Relação entre sinal médio e variação do ruído",
-        "Relação sinal-ruído"
+        "Onda com vibração perpendicular à propagação",
+        "Transversal"
       ],
       [
-        "Aumento da energia média após remoção de fótons menos energéticos",
-        "Endurecimento do feixe"
+        "Número de oscilações por segundo",
+        "Frequência"
       ]
     ],
     [
       [
-        "Processo que reduz fótons de baixa energia do feixe",
-        "Filtração"
-      ],
-      [
-        "Fração do feixe incidente que atravessa o material",
-        "Transmissão"
-      ],
-      [
-        "Razão entre potência e tempo de fornecimento de energia",
-        "Energia"
-      ],
-      [
-        "Produto da tensão pela corrente",
-        "Potência elétrica"
-      ],
-      [
-        "Energia de um fóton proporcional à sua frequência",
-        "Relação de Planck"
-      ],
-      [
-        "Grandeza inversamente proporcional à energia do fóton",
+        "Distância entre pontos equivalentes sucessivos da onda",
         "Comprimento de onda"
       ],
       [
-        "Energia máxima de fóton no tubo limitada pela energia do elétron",
-        "Energia de corte"
+        "Deslocamento máximo em relação ao equilíbrio",
+        "Amplitude"
       ],
       [
-        "Intensidade medida por unidade de tempo de exposição",
-        "Taxa de dose"
+        "Espalhamento de ondas em aberturas",
+        "Difração"
       ],
       [
-        "Propriedade de fótons de maior energia atravessarem mais facilmente certos materiais",
-        "Penetração"
+        "Mudança de direção ao passar entre meios",
+        "Refração"
       ],
       [
-        "Material que absorve parte do feixe para proteção",
-        "Blindagem"
+        "Retorno de onda à interface",
+        "Reflexão"
+      ],
+      [
+        "Faixa do espectro percebida pelo olho humano",
+        "Luz visível"
+      ],
+      [
+        "Absorção de fóton com ejeção de elétron",
+        "Efeito fotoelétrico"
+      ],
+      [
+        "Espalhamento de fóton com transferência de energia a elétron",
+        "Efeito Compton"
+      ],
+      [
+        "Comportamentos ondulatório e corpuscular da luz",
+        "Dualidade"
+      ],
+      [
+        "Emissão por transição eletrônica para nível inferior",
+        "Fóton"
       ]
     ]
   ],
-  "status": "revisao-editorial-inicial"
+  "status": "conteudo-reformulado-sem-calculos"
 }
