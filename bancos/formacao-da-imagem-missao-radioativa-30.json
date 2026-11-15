@@ -1,0 +1,132 @@
+{
+  "disciplina": "Formação da Imagem Radiográfica",
+  "sets": [
+    [
+      [
+        "Grandeza obtida multiplicando corrente do tubo pelo tempo de exposição",
+        "mAs"
+      ],
+      [
+        "Grandeza que influencia a energia máxima dos fótons produzidos",
+        "kV"
+      ],
+      [
+        "Eletrodo que contém o filamento emissor de elétrons",
+        "Cátodo"
+      ],
+      [
+        "Eletrodo que recebe os elétrons acelerados",
+        "Ânodo"
+      ],
+      [
+        "Processo de emissão de elétrons pelo filamento aquecido",
+        "Emissão termiônica"
+      ],
+      [
+        "Interação que reduz a intensidade do feixe ao atravessar a matéria",
+        "Atenuação"
+      ],
+      [
+        "Parcela do feixe que atravessa o objeto e alcança o receptor",
+        "Transmissão"
+      ],
+      [
+        "Diferença de atenuação entre tecidos que contribui para a imagem",
+        "Contraste de sujeito"
+      ],
+      [
+        "Projeção aumentada do objeto em razão da geometria",
+        "Magnificação"
+      ],
+      [
+        "Perda de nitidez causada pelo deslocamento durante a exposição",
+        "Borramento por movimento"
+      ]
+    ],
+    [
+      [
+        "Distância entre o foco do tubo e o receptor de imagem",
+        "Distância foco-receptor"
+      ],
+      [
+        "Restrição da área irradiada ao campo necessário",
+        "Colimação"
+      ],
+      [
+        "Conversão de raios X em luz no detector digital indireto",
+        "Cintilação"
+      ],
+      [
+        "Conversão de energia absorvida diretamente em cargas no DR direto",
+        "Fotocondução"
+      ],
+      [
+        "Sistema digital que exige leitura posterior da placa fotoestimulável",
+        "CR"
+      ],
+      [
+        "Sistema digital que utiliza detector integrado para aquisição",
+        "DR"
+      ],
+      [
+        "Material sensível que armazena a imagem latente no filme convencional",
+        "Haleto de prata"
+      ],
+      [
+        "Etapa química que torna visível a imagem latente do filme",
+        "Revelação"
+      ],
+      [
+        "Etapa que remove haletos de prata não revelados",
+        "Fixação"
+      ],
+      [
+        "Etapa final que retira a umidade do filme processado",
+        "Secagem"
+      ]
+    ],
+    [
+      [
+        "Redução de distorção geométrica ao manter objeto paralelo ao receptor",
+        "Paralelismo"
+      ],
+      [
+        "Representação dos níveis de sinal em imagem digital",
+        "Escala de cinza"
+      ],
+      [
+        "Parâmetro que representa dimensões da grade de pixels",
+        "Matriz"
+      ],
+      [
+        "Unidade básica bidimensional de uma imagem digital",
+        "Pixel"
+      ],
+      [
+        "Estrutura do tubo em que os elétrons colidem para produzir raios X",
+        "Alvo"
+      ],
+      [
+        "Região efetiva de origem do feixe de raios X",
+        "Ponto focal"
+      ],
+      [
+        "Material de proteção que envolve o conjunto do tubo",
+        "Invólucro"
+      ],
+      [
+        "Tensão elétrica que acelera os elétrons entre os eletrodos",
+        "Diferença de potencial"
+      ],
+      [
+        "Informação armazenada antes do processamento químico do filme",
+        "Imagem latente"
+      ],
+      [
+        "Alteração de forma causada por desalinhamento geométrico",
+        "Distorção"
+      ]
+    ]
+  ],
+  "status": "revisao-editorial-inicial"
+}
