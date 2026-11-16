@@ -1,0 +1,25 @@
+.pinned-workspace{position:sticky!important;top:8px!important;display:grid!important;grid-template-columns:minmax(260px,30%) minmax(0,1fr)!important;align-items:stretch!important;gap:14px;height:calc(100dvh - 16px);min-height:0;scroll-margin-top:8px}
+.pinned-workspace>.pinned-reading{height:100%;min-height:0;max-height:none!important;overflow:auto!important;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:6px}
+.pinned-workspace>.pinned-image{position:relative!important;top:auto!important;display:flex;flex-direction:column;min-height:0;min-width:0;height:100%;max-height:none!important;overflow:hidden!important;margin:0}
+.pinned-image>.toolbar,.pinned-image>h2,.pinned-image>p,.pinned-image>[role=status]{flex-shrink:0}
+.pinned-image>.screens,.pinned-image>.viewer{flex:1;min-height:0}
+.pinned-image>.viewer,.pinned-image .screen{display:flex;flex-direction:column;min-height:0}
+.pinned-image .viewport,.pinned-image .view,.pinned-image .dbt-viewport{flex:1;height:auto!important;min-height:0!important;max-height:none}
+.pinned-image .screen h3,.pinned-image .viewer h3{flex-shrink:0}
+.pinned-image>.dbt-viewport{flex:1}
+.pinned-reading .edu-grid{grid-template-columns:minmax(0,1fr)}
+.pinned-reading .edu-card{overflow-x:auto}
+.pinned-reading table{min-width:240px}
+.screens:fullscreen{height:100dvh;background:#02060b}
+@media(max-width:800px){
+ .pinned-workspace{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(0,44%) minmax(0,1fr);gap:8px}
+ .pinned-workspace>.pinned-image{grid-row:1;padding:8px}
+ .pinned-workspace>.pinned-reading{grid-row:2;padding-right:2px}
+ .pinned-image .screens{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pinned-image .toolbar{gap:4px;margin-bottom:6px}
+ .pinned-image button{padding:5px;font-size:.85rem}
+ .pinned-image .screen h3,.pinned-image .viewer h3{padding:5px;font-size:.8rem}
+ .pinned-image>h2{margin-bottom:5px;font-size:1rem}
+ .pinned-image>p{margin:4px 0;font-size:.8rem;line-height:1.3;min-height:0}
+}
+@media print{.pinned-workspace{position:static!important;height:auto;display:block!important}.pinned-workspace>.pinned-reading,.pinned-workspace>.pinned-image{height:auto;overflow:visible!important}.pinned-image .viewport,.pinned-image .view,.pinned-image .dbt-viewport{height:400px!important}}
