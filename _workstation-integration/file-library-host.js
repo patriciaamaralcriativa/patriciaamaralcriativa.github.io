@@ -15,7 +15,8 @@
     let p=document.getElementById('ar-library-message');
     if(!p){p=make('p');p.id='ar-library-message';p.className='ar-library-message';p.setAttribute('role','status');
       const viewport=document.getElementById('realViewport');
-      if(viewport)viewport.before(p);else (document.querySelector('main')||document.body).prepend(p);
+      const reading=document.querySelector('.pinned-reading');
+      if(reading)reading.prepend(p);else if(viewport)viewport.before(p);else (document.querySelector('main')||document.body).prepend(p);
     }
     p.textContent=text;return p;
   }
@@ -40,7 +41,7 @@
     if(!input||input.disabled)throw Error('Leia e confirme os avisos do leitor antes de usar o arquivo da biblioteca.');
     if(!files?.length||files.some(f=>!(f instanceof Blob)))throw Error('Seleção de arquivos inválida.');
     const dt=new DataTransfer();for(const f of(input.multiple?files:files.slice(0,1)))dt.items.add(new File([f],f.name,{type:f.type}));input.files=dt.files;input.dispatchEvent(new Event('change',{bubbles:true}));
-    notify('Arquivo(s) recebido(s) da biblioteca. Confira o resultado e os avisos do próprio leitor. O arquivamento não comprova validação DICOM.');
+    notify('Material recebido da biblioteca. Confira a imagem e o resultado do leitor.');
   }
   function deliver(options,files,modality){
     if(options.frame){frame.contentWindow.postMessage({type:'amaral-library-files',target:options.target,files,modality},'*');return;}

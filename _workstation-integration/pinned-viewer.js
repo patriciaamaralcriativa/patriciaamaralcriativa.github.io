@@ -10,6 +10,8 @@
   for(const node of [...column.children])if(node!==image)reading.append(node);
   const details=image.querySelector(':scope > details');
   if(details){const card=document.createElement('section');card.className='dbt-card';card.append(details);reading.append(card);}
+  const sourceWarning=image.querySelector('#realSourceWarning');
+  if(sourceWarning){const card=document.createElement('section');card.className='dbt-card';card.append(sourceWarning);reading.append(card);}
   for(let node=root.nextElementSibling;node;){const next=node.nextElementSibling;reading.append(node);node=next;}
   column.replaceWith(image);
   reading.classList.add('pinned-reading');reading.tabIndex=0;
