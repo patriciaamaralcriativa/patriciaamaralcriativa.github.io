@@ -43,7 +43,7 @@ async function pickerTest(local,modality,dicom,count){
   await hostTest(source+' DBT sai de RX para leitor correto',{source,modality:'dbt',dicom:true,frame:true,expectPage:'dbt-validacao-real.html'});
   await hostTest(source+' MG sai de TC para leitor correto',{source,modality:'mg',dicom:false,frame:true,expectPage:'mamografia-digital-preview.html'});
   await hostTest(source+' RX sai de MG para workstation',{source,modality:'rx',dicom:false,path:'/mamografia-digital-preview.html',expectPage:source==='cloud'?'sala-de-aulas.html':'amaral-rad.html'});
-  await hostTest(source+' RX DICOM incompatível informa limite',{source,modality:'rx',dicom:true,frame:true,reject:true});
+  await hostTest(source+' RX DICOM abre no leitor radiográfico',{source,modality:'rx',dicom:true,frame:true,expectTarget:'file',expectCount:1});
   await hostTest(source+' TC PNG incompatível informa limite',{source,modality:'ct',dicom:false,frame:true,reject:true});
  }
  for(const local of [true,false])for(const [modality,dicom,count] of [['rx',false,1],['ct',true,20],['mg',false,1],['mg',true,1],['dbt',false,29],['dbt',true,1]])await pickerTest(local,modality,dicom,count);

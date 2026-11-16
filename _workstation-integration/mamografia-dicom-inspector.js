@@ -21,7 +21,28 @@ const d=new DataView(buffer), bytes=new Uint8Array(buffer);
 if(bytes.length<132||String.fromCharCode(...bytes.slice(128,132))!=="DICM")throw Error("Arquivo sem preâmbulo DICOM Part 10; não é possível validar este formato.");
 const decoder=new TextDecoder("ascii"),out={transferSyntaxUID:null,metadata:{},warnings:[],pixelDataPresent:false,pixelDataOffset:null,pixelDataLength:null,functionalGroupsPresent:false,imageType:"unknown",frameSummary:null,geometryAttributes:{imagePositionPatient:null,imageOrientationPatient:null,spacingBetweenSlices:null,sliceThickness:null},functionalGroupSummary:{sharedPresent:false,perFramePresent:false,sharedLength:null,perFrameLength:null,sharedItems:null,perFrameItems:null,sharedStructureValidated:false,perFrameStructureValidated:false,sharedItemHeaders:[],perFrameItemHeaders:[],parsed:false}};
 let pos=132,syntax="1.2.840.10008.1.2.1",sawSyntax=false;
-function element(p,explicit){
+let sequenceSteps=0;
+// Sequências de metadados podem ter comprimento indefinido, mesmo quando
+// os pixels são nativos. Percorrer os delimitadores estruturais, sem procurar
+// padrões de bytes dentro de valores, mantém o alinhamento dos elementos.
+function skipUndefined(p,explicit,delimiter,depth=0){
+if(depth>32)throw Error("Sequência DICOM profunda demais.");
+while(p+8<=bytes.length&&++sequenceSteps<100000){
+const g=d.getUint16(p,true),e=d.getUint16(p+2,true);
+if(g===0xfffe){
+const len=d.getUint32(p+4,true);
+if(e===delimiter){if(len!==0)throw Error("Delimitador DICOM inválido.");return p+8;}
+if(e!==0xe000)throw Error("Item ou delimitador DICOM inesperado.");
+if(len===0xffffffff)p=skipUndefined(p+8,explicit,0xe00d,depth+1);
+else{if(len>bytes.length-p-8)throw Error("Item DICOM incompleto.");p+=8+len;}
+}else{
+if(delimiter===0xe0dd)throw Error("Sequência DICOM sem cabeçalho de item.");
+const nested=element(p,explicit,depth+1);if(!nested)break;p=nested.next;
+}
+}
+throw Error("Sequência DICOM sem delimitador válido.");
+}
+function element(p,explicit,depth=0){
 if(p+8>bytes.length)return null;
 const group=d.getUint16(p,true),element=d.getUint16(p+2,true);
 let vr=null,length,head=8;
@@ -31,7 +52,11 @@ if(!/^[A-Z]{2}$/.test(vr))throw Error("VR DICOM inválido na posição "+p);
 if(LONG.has(vr)){if(p+12>bytes.length)return null;length=d.getUint32(p+8,true);head=12;}
 else length=d.getUint16(p+6,true);
 }else length=d.getUint32(p+4,true);
-if(length===0xffffffff)throw Error("Elemento de comprimento indefinido: leitura interrompida com segurança.");
+if(length===0xffffffff){
+if(group===0x7fe0||group===0x5200||(explicit&&vr!=="SQ"))throw Error("Pixels encapsulados ou sequência funcional de comprimento indefinido: formato não suportado nesta prévia.");
+const next=skipUndefined(p+head,explicit,0xe0dd,depth+1);
+return {group,element,vr,length:next-p-head-8,start:p+head,next};
+}
 if(length>bytes.length-p-head)throw Error("Comprimento de elemento DICOM excede o arquivo.");
 return {group,element,vr,length,start:p+head,next:p+head+length};
 }

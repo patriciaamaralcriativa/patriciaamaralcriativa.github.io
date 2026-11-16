@@ -14,7 +14,6 @@
     if(picker){
       parent.postMessage({type:'amaral-library-open-module',token,modality:entry.modality,dicom,entryId:entry.id,entrySource:'local',index},location.origin);return;
     }
-    if(entry.modality==='rx'&&dicom)return status('O visualizador de Raio-X atual aceita PNG/JPEG. Este DICOM pode ser arquivado e baixado, mas sua abertura neste módulo está indisponível.');
     if(entry.modality==='ct'&&!dicom)return status('O módulo de séries de TC recebe DICOM. PNG/JPEG não contém uma série espacial validada; use a importação de imagens do visualizador geral para referências 2D.');
     const route=entry.modality==='mg'?'mamografia-digital-preview.html':entry.modality==='dbt'?(dicom?'dbt-validacao-real.html':'tomossintese-mamaria-preview.html'):'amaral-rad.html';
     location.href=route+'?libraryEntry='+encodeURIComponent(entry.id)+'&libraryFile='+index;
