@@ -2,7 +2,7 @@
 'use strict';
 (()=>{
   const origin=location.origin,base=new URL('../',document.currentScript.src),frame=document.getElementById('app')||document.getElementById('ws-frame');
-  let dialog,picker,request=null,pendingFrame=null,pendingCloud=null,frameGeneration=0;
+  let dialog,picker,request=null,pendingFrame=null,pendingCloud=null,frameGeneration=0,pendingInputCleanup=null;
   const make=(tag,text)=>{const e=document.createElement(tag);if(text)e.textContent=text;return e;};
   const sheet=make('style');sheet.textContent='.ar-library-button{font:inherit;min-height:44px;padding:8px 12px;margin:6px;border:1px solid #71bacb;border-radius:6px;background:#163c54;color:#fff;cursor:pointer}.ar-library-dialog{width:min(1100px,96vw);height:92vh;padding:8px;border:1px solid #71bacb;background:#081526;color:#fff;max-width:96vw;max-height:96vh}.ar-library-dialog::backdrop{background:#000b}.ar-library-dialog iframe{width:100%;height:calc(100% - 54px);border:0}.ar-library-dialog button{min-height:44px;margin-bottom:6px}.ar-library-message{padding:12px;background:#153c53;color:#fff;border:1px solid #71bacb}';document.head.append(sheet);
   function close(){if(dialog?.open)dialog.close();request=null;picker?.removeAttribute('src');}
@@ -11,7 +11,31 @@
     if(!dialog){dialog=make('dialog');dialog.className='ar-library-dialog';dialog.setAttribute('aria-label','Escolher na Biblioteca de arquivos');const end=make('button','Voltar ao visualizador');end.type='button';end.onclick=close;picker=make('iframe');picker.title='Biblioteca de arquivos';dialog.append(end,picker);dialog.addEventListener('cancel',close);document.body.append(dialog);}
     const u=new URL('biblioteca-arquivos.html',base);u.search=new URLSearchParams({picker:'1',token:request.token,modality:options.modality||'all',accept:options.accept||'all',multi:options.multi?'1':'0'});picker.src=u.href;dialog.showModal();
   }
-  function notify(text){let p=document.getElementById('ar-library-message');if(!p){p=make('p');p.id='ar-library-message';p.className='ar-library-message';p.setAttribute('role','status');(document.querySelector('main')||document.body).prepend(p);}p.textContent=text;return p;}
+  function notify(text){
+    let p=document.getElementById('ar-library-message');
+    if(!p){p=make('p');p.id='ar-library-message';p.className='ar-library-message';p.setAttribute('role','status');
+      const viewport=document.getElementById('realViewport');
+      if(viewport)viewport.before(p);else (document.querySelector('main')||document.body).prepend(p);
+    }
+    p.textContent=text;return p;
+  }
+  function offerSelection(input,load){
+    if(!input)throw Error('O campo de carregamento deste leitor não foi encontrado.');
+    pendingInputCleanup?.();
+    let started=false,observer;
+    const p=notify(input.disabled?'Material selecionado. Confirme o aviso ao lado para carregar a imagem.':'Carregando o material selecionado…');
+    const retry=make('button','Carregar material selecionado');retry.className='ar-library-button';retry.type='button';p.append(' ',retry);
+    const start=async()=>{
+      if(started)return;
+      if(input.disabled){retry.textContent='Confirme o aviso para carregar';return;}
+      started=true;observer?.disconnect();retry.disabled=true;
+      try{await load();retry.hidden=true;}catch(error){started=false;const message=notify('Não foi possível carregar a imagem: '+error.message);retry.disabled=false;retry.textContent='Tentar carregar novamente';message.append(' ',retry);}
+    };
+    retry.onclick=start;
+    observer=new MutationObserver(()=>{if(!input.disabled)void start()});observer.observe(input,{attributes:true,attributeFilter:['disabled']});
+    pendingInputCleanup=()=>{started=true;observer.disconnect()};
+    void start();
+  }
   function apply(input,files){
     if(!input||input.disabled)throw Error('Leia e confirme os avisos do leitor antes de usar o arquivo da biblioteca.');
     if(!files?.length||files.some(f=>!(f instanceof Blob)))throw Error('Seleção de arquivos inválida.');
@@ -20,7 +44,7 @@
   }
   function deliver(options,files,modality){
     if(options.frame){frame.contentWindow.postMessage({type:'amaral-library-files',target:options.target,files,modality},'*');return;}
-    try{apply(document.getElementById(options.target),files);}catch(e){notify(e.message);}
+    apply(document.getElementById(options.target),files);
   }
   window.addEventListener('message',e=>{
     if(frame&&e.source===frame.contentWindow&&e.origin==='null'){
@@ -40,8 +64,11 @@
       const sameReader=frame&&['rx','ct'].includes(modality)||!frame&&location.pathname.endsWith(page);
       const target=modality==='rx'?'file':modality==='ct'?'dicomSeriesFiles':modality==='mg'?(dicom?'dicomFile':['left','right'].includes(request.target)?request.target:'left'):dicom?'realDicom':'files';
       const options={frame:!!frame,target},input=!frame&&document.getElementById(target);
-      if(sameReader&&(frame||input&&!input.disabled)){
-        close();receiveSelection({entryId,entrySource,index,modality,dicom,options}).catch(err=>notify(err.message));return;
+      if(sameReader&&(frame||input)){
+        close();
+        const load=()=>receiveSelection({entryId,entrySource,index,modality,dicom,options});
+        if(frame)load().catch(err=>notify(err.message));else offerSelection(input,load);
+        return;
       }
       const url=new URL(page,base);url.searchParams.set(entrySource==='cloud'?'cloudEntry':'libraryEntry',entryId);url.searchParams.set(entrySource==='cloud'?'cloudFile':'libraryFile',index);
       close();location.href=url.href;return;
@@ -58,7 +85,7 @@
     const generation=frameGeneration,whole=modality==='ct'||modality==='dbt'&&!dicom;
     let files;
     if(entrySource==='cloud'){
-      const result=await window.AmaralCloudLibrary.download(entryId,whole?null:index);
+      const result=await window.AmaralCloudLibrary.download(entryId,whole?null:index,(n,total)=>notify('Recebendo imagem da biblioteca: '+Math.round(n/total*100)+'%…'));
       if(result.entry.modalidade!==modality)throw Error('A modalidade do conjunto mudou. Escolha novamente.');
       files=result.files;
     }else{
@@ -98,6 +125,7 @@
     Object.defineProperty(frame,'srcdoc',{configurable:true,get(){return descriptor.get.call(this);},set(value){close();frameGeneration++;if(!value)pendingCloud=null;const content=String(value);descriptor.set.call(this,content&&content.includes('dicomSeriesFiles')?content+'<script data-amaral-file-library>('+frameExtension.toString()+')();<\/script>':content);}});
   }
   function setup(){
+    document.getElementById('realClear')?.addEventListener('click',()=>{pendingInputCleanup?.();pendingInputCleanup=null;notify('Seleção da biblioteca removida. Escolha um conjunto para abrir outra imagem.');});
     if(!frame){
       const dbt=location.pathname.endsWith('dbt-validacao-real.html'),mg=location.pathname.endsWith('mamografia-digital-preview.html');
       const ids=dbt?['realDicom']:mg?['left','right','dicomFile']:['files','dicomFile'];
@@ -123,8 +151,8 @@
     }
     const mg=location.pathname.endsWith('mamografia-digital-preview.html'),real=location.pathname.endsWith('dbt-validacao-real.html');
     if((mg&&entry.modalidade!=='mg')||(!mg&&entry.modalidade!=='dbt'))throw Error('Modalidade incompatível com este módulo.');
-    const target=real?'realDicom':dicom?'dicomFile':mg?'left':'files',input=document.getElementById(target),p=notify('Material compartilhado encontrado. Leia os avisos antes de carregar.');
-    const use=make('button','Usar arquivo da turma');use.className='ar-library-button';use.onclick=async()=>{if(input?.disabled){use.textContent='Confirme o aviso do leitor e clique novamente';return;}use.disabled=true;try{const r=await window.AmaralCloudLibrary.download(id,input.multiple?null:index,(n,total)=>{use.textContent='Recebendo: '+Math.round(n/total*100)+'%';});deliver({target},r.files,entry.modalidade);}catch(e){notify(e.message);}finally{use.disabled=false;use.textContent='Usar arquivo da turma';}};p.append(' ',use);
+    const target=real?'realDicom':dicom?'dicomFile':mg?'left':'files',input=document.getElementById(target);
+    offerSelection(input,()=>receiveSelection({entryId:id,entrySource:'cloud',index,modality:entry.modalidade,dicom,options:{target}}));
   }
   async function openEntry(){
     const q=new URLSearchParams(location.search),id=q.get('libraryEntry');if(!id)return;
@@ -141,8 +169,7 @@
     const mg=location.pathname.endsWith('mamografia-digital-preview.html'),real=location.pathname.endsWith('dbt-validacao-real.html');
     if((mg&&entry.modality!=='mg')||(!mg&&entry.modality!=='dbt'))throw Error('Modalidade incompatível com este módulo.');
     const target=real?'realDicom':dicom?'dicomFile':mg?'left':'files',input=document.getElementById(target);
-    const selected=input?.multiple?files:[files[index]],p=notify('Conjunto encontrado na biblioteca. Leia os avisos e clique em Usar arquivo.');
-    const use=make('button','Usar arquivo da biblioteca');use.className='ar-library-button';use.onclick=()=>deliver({target},selected,entry.modality);p.append(' ',use);
+    offerSelection(input,()=>receiveSelection({entryId:id,entrySource:'local',index,modality:entry.modality,dicom,options:{target}}));
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
 })();
