@@ -113,11 +113,12 @@
       if(rx){
         rx.accept='image/png,image/jpeg,.dcm,application/dicom';
         const status=document.createElement('p');status.id='ar-rx-status';status.setAttribute('role','status');rx.after(status);
+        const focusImage=()=>requestAnimationFrame(()=>{const toggle=document.getElementById('ar-focus-toggle');if(toggle&&toggle.getAttribute('aria-pressed')!=='true')toggle.click();});
         let generation=0;
         rx.addEventListener('change',async event=>{
           const current=++generation,file=rx.files?.[0];
           if(!file)return;
-          if(file.type!=='application/dicom'&&!/\.dcm$/i.test(file.name)){status.textContent='';return;}
+          if(file.type!=='application/dicom'&&!/\.dcm$/i.test(file.name)){status.textContent='';focusImage();return;}
           event.stopImmediatePropagation();status.textContent='Abrindo radiografia DICOM…';
           try{
             if(file.size>150*1024*1024)throw Error('Arquivo maior que 150 MB.');
@@ -145,6 +146,7 @@
             context.putImageData(image,0,0);
             if(current!==generation)return;
             abrirImagem(canvas.toDataURL('image/png'));
+            focusImage();
             status.textContent='Radiografia DICOM aberta: '+canvas.width+' × '+canvas.height+'. Brilho, contraste, zoom e demais ferramentas disponíveis. Prévia educacional.';
           }catch(error){if(current===generation)status.textContent='Não foi possível abrir a radiografia: '+error.message;}
         },true);
