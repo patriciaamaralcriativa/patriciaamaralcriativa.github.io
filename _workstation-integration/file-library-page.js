@@ -8,10 +8,11 @@
   function node(tag,text){const e=document.createElement(tag);e.textContent=text;return e;}
   function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
   async function task(fn){if(busy)return;busy=true;document.querySelectorAll('form button,#importPackage,#exportAll').forEach(e=>e.disabled=true);try{await fn();}catch(e){status(e.message);}finally{busy=false;document.querySelectorAll('form button,#importPackage,#exportAll').forEach(e=>e.disabled=false);}}
-  function compatible(entry){const d=entry.files[0]?.type==='application/dicom';return accept==='all'||(accept==='dicom'?d:!d);}
+  function compatible(entry){const d=entry.files[0]?.type==='application/dicom';return ['mg','dbt'].includes(entry.modality)||accept==='all'||(accept==='dicom'?d:!d);}
   function choose(entry,index){
     const f=entry.files[index],dicom=f.type==='application/dicom';
     if(picker){
+      if(['mg','dbt'].includes(entry.modality)){parent.postMessage({type:'amaral-library-open-module',token,modality:entry.modality,dicom,entryId:entry.id,entrySource:'local',index},location.origin);return;}
       if(!compatible(entry))return status('O campo de destino não aceita este formato.');
       parent.postMessage({type:'amaral-library-pick',token,modality:entry.modality,files:multi?L.asFiles(entry):[L.asFiles(entry)[index]]},location.origin);
       return;

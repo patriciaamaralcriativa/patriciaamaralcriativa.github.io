@@ -32,6 +32,13 @@
     if(request&&e.source===picker?.contentWindow&&e.origin===origin&&e.data?.type==='amaral-library-auth-changed'){
       if(e.data.uid!==request.uid){close();location.reload();}return;
     }
+    if(request&&e.source===picker?.contentWindow&&e.origin===origin&&e.data?.type==='amaral-library-open-module'&&e.data.token===request.token){
+      const {modality,dicom,entryId,entrySource,index}=e.data;
+      if(!['mg','dbt'].includes(modality)||!['local','cloud'].includes(entrySource)||typeof entryId!=='string'||!/^[a-zA-Z0-9-]{1,100}$/.test(entryId)||!Number.isInteger(index)||index<0)return;
+      const page=modality==='mg'?'mamografia-digital-preview.html':dicom?'dbt-validacao-real.html':'tomossintese-mamaria-preview.html';
+      const url=new URL(page,base);url.searchParams.set(entrySource==='cloud'?'cloudEntry':'libraryEntry',entryId);url.searchParams.set(entrySource==='cloud'?'cloudFile':'libraryFile',index);
+      close();location.href=url.href;return;
+    }
     if(!request||e.source!==picker?.contentWindow||e.origin!==origin||e.data?.type!=='amaral-library-pick'||e.data.token!==request.token)return;
     const r=request,files=e.data.files,modality=e.data.modality;if(!Array.isArray(files)||!files.length||files.length>1000)return;
     close();deliver(r,files,modality);
