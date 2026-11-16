@@ -107,6 +107,52 @@
       function open(target){parent.postMessage({type:'amaral-library-open',target},'*');}
       function button(text,target,id){const b=document.createElement('button');b.type='button';b.textContent=text;if(id)b.id=id;b.onclick=()=>open(target);b.style.minHeight='44px';return b;}
       nav.append(button('Biblioteca de arquivos','file','ar-files-tab'));
+      // Anatomia: preservar os modelos e seus eventos; só separar o palco dos comandos.
+      const anatomyStyle=document.createElement('style');anatomyStyle.textContent=`
+        #ar-skeleton-dialog{width:98vw!important;height:96dvh!important;padding:12px!important}
+        #ar-skeleton-dialog[open]{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(280px,24%);grid-template-rows:auto minmax(0,1fr)!important;gap:12px!important}
+        #ar-skeleton-dialog>header{grid-column:1/-1}
+        #ar-skeleton-host{grid-column:1;grid-row:2;min-height:0!important;overflow:hidden!important;height:100%}
+        #ar-skeleton-host .ar-skeleton-mount{min-height:0!important;height:100%;overflow:hidden!important}
+        #ar-skeleton-host .ar-stage{flex:1 1 0!important;min-height:0!important;height:100%!important;max-height:none!important;width:100%!important}
+        .ar-anatomy-command-pane{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;padding:4px 8px 12px 2px;line-height:1.5}
+        .ar-anatomy-command-pane button{min-height:42px!important;white-space:normal}
+        #ar-skeleton-regions{display:grid!important;grid-template-columns:1fr 1fr;max-height:none!important;overflow:visible!important}
+        #ar-skeleton-dialog .ar-anatomy-command-pane footer{max-height:none!important;overflow:visible!important}
+        #ar-skeleton-dialog .ar-controls{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+        #ar-anatomy-expanded{width:98vw!important;max-width:none!important;height:96dvh!important;max-height:none!important;box-sizing:border-box;padding:12px!important;overflow:hidden!important}
+        #ar-anatomy-expanded[open]{display:grid!important;grid-template-rows:auto minmax(0,1fr);gap:10px}
+        #ar-anatomy-expanded>button{justify-self:end;margin:0;min-height:42px}
+        #ar-anatomy-expanded #ar-human-anatomy{max-width:none!important;width:100%;height:100%;min-height:0;margin:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,26%);gap:16px;overflow:hidden}
+        #ar-anatomy-expanded .ar-human-model-pane{min-width:0;min-height:0;height:100%;display:flex;align-items:center;justify-content:center;background:#071a28;border:1px solid #3a718e;border-radius:12px;overflow:hidden}
+        #ar-anatomy-expanded .ar-human-figure{height:100%!important;width:auto!important;max-width:100%!important;aspect-ratio:421/761;margin:0!important;border:0;border-radius:0;flex-shrink:1}
+        #ar-anatomy-expanded .ar-human-figure img{width:100%!important;height:100%!important;object-fit:fill}
+        #ar-anatomy-expanded #regions{max-height:none!important;overflow:visible!important}
+        @media(max-width:700px){#ar-skeleton-dialog[open]{grid-template-columns:1fr;grid-template-rows:auto minmax(0,62%) minmax(0,1fr)!important}#ar-skeleton-host{grid-row:2}#ar-skeleton-dialog>.ar-anatomy-command-pane{grid-row:3;grid-column:1}#ar-anatomy-expanded #ar-human-anatomy{grid-template-columns:1fr;grid-template-rows:62% minmax(0,1fr);gap:8px}.ar-anatomy-command-pane{padding:4px}#ar-skeleton-regions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+      `;document.head.append(anatomyStyle);
+      function arrangeAnatomy(){
+        const skeleton=document.getElementById('ar-skeleton-dialog');
+        if(skeleton&&!skeleton.querySelector(':scope > .ar-anatomy-command-pane')){
+          const commands=document.createElement('aside');commands.className='ar-anatomy-command-pane';commands.setAttribute('aria-label','Comandos do esqueleto — rolagem independente');
+          const explanation=skeleton.querySelector(':scope > p'),regions=skeleton.querySelector('#ar-skeleton-regions'),footer=skeleton.querySelector('footer'),host=skeleton.querySelector('#ar-skeleton-host'),sceneCommands=document.createElement('div');
+          if(explanation)commands.append(explanation);commands.append(sceneCommands);if(regions)commands.append(regions);if(footer)commands.append(footer);skeleton.append(commands);
+          let previousMount=null;
+          const move=()=>{const mount=host?.querySelector('.ar-skeleton-mount');if(mount!==previousMount){sceneCommands.replaceChildren();previousMount=mount;}for(const element of [...host.querySelectorAll('.ar-controls,.ar-skeleton-selection')])sceneCommands.append(element);};
+          if(host){new MutationObserver(move).observe(host,{childList:true,subtree:true});move();}
+        }
+        const human=document.getElementById('ar-human-anatomy'),figure=human?.querySelector('.ar-human-figure');
+        if(human&&figure&&!human.querySelector('.ar-human-model-pane')){
+          const model=document.createElement('div'),commands=document.createElement('aside');model.className='ar-human-model-pane';commands.className='ar-anatomy-command-pane';commands.setAttribute('aria-label','Seleção anatômica e comandos — rolagem independente');
+          for(const child of [...human.childNodes])if(child!==figure)commands.append(child);model.append(figure);human.append(model,commands);
+        }
+      }
+      arrangeAnatomy();
+      // Alguns complementos da Workstation inicializam após o documento principal.
+      const anatomyArrival=new MutationObserver(()=>{arrangeAnatomy();if(document.querySelector('#ar-skeleton-dialog>.ar-anatomy-command-pane')&&document.querySelector('#ar-human-anatomy .ar-human-model-pane'))anatomyArrival.disconnect();});anatomyArrival.observe(document.body,{childList:true,subtree:true});
+      document.addEventListener('click',event=>{
+        const control=event.target.closest('button');if(!control)return;
+        if(['Anatomia humana','Treinar no esqueleto'].includes(control.textContent.trim()))setTimeout(()=>document.getElementById('ar-anatomy-enlarge')?.click(),0);
+      });
       // O carregador radiográfico original lê apenas PNG/JPEG. Interceptar DICOM
       // antes dele evita apresentar o arquivo como uma imagem raster inválida.
       const rx=document.getElementById('file');
