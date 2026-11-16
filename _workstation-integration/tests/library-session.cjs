@@ -1,0 +1,9 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+async function test(name,{user=false,expired=false,switchAccount=false,inactive=false}){
+ let saved={access_token:'fixture-token',refresh_token:'fixture-refresh',expires_at:expired?1:9999999999,...(user?{user:{id:'teacher'}}:{})},calls=[];
+ const ctx={window:{},location:{origin:'https://example.test'},sessionStorage:{getItem:()=>JSON.stringify(saved),setItem(k,v){saved=JSON.parse(v)}},fetch:async(url,opts)=>{calls.push(url);let data;if(url.includes('grant_type=refresh_token'))data={access_token:'renewed-fixture',refresh_token:'renewed-refresh',expires_in:3600,user:{id:'teacher'}};else if(url.endsWith('/auth/v1/user')){data={id:'teacher'};if(switchAccount)saved={...saved,access_token:'other-fixture'};}else if(url.includes('sala_membros'))data=[{papel:'administradora',ativo:!inactive}];else throw Error('unexpected route');return {ok:true,status:200,json:async()=>data};},console,Blob,File,crypto,AbortController};ctx.parent=ctx.window;vm.createContext(ctx);vm.runInContext(fs.readFileSync('_workstation-integration/file-library-cloud.js','utf8'),ctx);
+ if(switchAccount||inactive)await assert.rejects(ctx.window.AmaralCloudLibrary.context(),switchAccount?/acesso mudou/:/autorizado/);
+ else{const result=await ctx.window.AmaralCloudLibrary.context();assert.equal(result.uid,'teacher');assert.equal(result.teacher,true);assert.equal(saved.user.id,'teacher');if(expired)assert.equal(saved.access_token,'renewed-fixture');}
+ console.log('PASS '+name);
+}
+(async()=>{await test('sessão da sala sem user.id',{user:false});await test('sessão da biblioteca com user.id',{user:true});await test('renovação de sessão da sala expirada',{expired:true});await test('mudança de conta durante verificação bloqueada',{switchAccount:true});await test('cadastro inativo continua bloqueado',{inactive:true});})().catch(e=>{console.error(e);process.exitCode=1});

@@ -5,6 +5,7 @@ window.AmaralCloudLibrary=(()=>{
  const SETS='workstation_biblioteca_v2',FILES='workstation_biblioteca_arquivos_v2',BUCKET='workstation-biblioteca-v2',CHUNK=4194304;
  let identity=null,refreshing=null;
  const stored=()=>{try{return JSON.parse(sessionStorage.getItem(SESSION)||'null');}catch{return null;}};
+ function assertSession(snapshot){if(stored()?.access_token!==snapshot.access_token)throw Error('O acesso mudou. Entre novamente antes de continuar.');}
  function assertUser(uid){if(stored()?.user?.id!==uid)throw Error('O acesso mudou. Entre novamente antes de continuar.');}
  async function call(route,{method='GET',body,raw=false,uid,signal}={}){
   let s=stored();if(uid)assertUser(uid);const headers={apikey:KEY};if(s?.access_token)headers.Authorization='Bearer '+s.access_token;
@@ -18,10 +19,13 @@ window.AmaralCloudLibrary=(()=>{
  async function context(){
   let s=stored();if(!s?.access_token){identity=null;return null;}
   if(Number(s.expires_at||0)<Date.now()/1000+60){
-   if(!refreshing)refreshing=(async()=>{const old=s.user.id,r=await call('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:{refresh_token:s.refresh_token}});assertUser(old);r.expires_at=Date.now()/1000+r.expires_in;sessionStorage.setItem(SESSION,JSON.stringify(r));return r;})().finally(()=>refreshing=null);
+   if(!refreshing)refreshing=(async()=>{const previous=s,old=s.user?.id,r=await call('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:{refresh_token:s.refresh_token}});assertSession(previous);if(old&&r.user?.id!==old)throw Error('A conta mudou durante a renovação. Entre novamente.');r.expires_at=Date.now()/1000+r.expires_in;sessionStorage.setItem(SESSION,JSON.stringify(r));return r;})().finally(()=>refreshing=null);
    s=await refreshing;
   }
-  const user=await call('/auth/v1/user',{uid:s.user.id});const rows=await call('/rest/v1/sala_membros?select=papel,ativo&user_id=eq.'+encodeURIComponent(user.id),{uid:user.id});
+  const snapshot=s,user=await call('/auth/v1/user');assertSession(snapshot);
+  if(!user?.id||s.user?.id&&s.user.id!==user.id)throw Error('A conta mudou. Entre novamente.');
+  if(!s.user?.id){s={...s,user:{id:user.id}};sessionStorage.setItem(SESSION,JSON.stringify(s));}
+  const rows=await call('/rest/v1/sala_membros?select=papel,ativo&user_id=eq.'+encodeURIComponent(user.id),{uid:user.id});
   if(!rows?.[0]?.ativo)throw Error('Este cadastro ainda não está autorizado pela professora.');
   identity={uid:user.id,teacher:rows[0].papel==='administradora'};return {...identity};
  }
