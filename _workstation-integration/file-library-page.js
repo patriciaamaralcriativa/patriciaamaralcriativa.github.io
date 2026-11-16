@@ -1,21 +1,18 @@
 'use strict';
 (async()=>{
   const L=window.AmaralFileLibrary,$=id=>document.getElementById(id),params=new URLSearchParams(location.search);
-  const picker=params.get('picker')==='1',token=params.get('token'),accept=params.get('accept')||'all',multi=params.get('multi')==='1';
+  const picker=params.get('picker')==='1',token=params.get('token');
   let mode=L.modalities[params.get('modality')]?params.get('modality'):'all',entries=[],busy=false;
   const status=t=>{$('status').textContent=t;};
   const bytes=n=>n<1048576?(n/1024).toFixed(1)+' KB':(n/1048576).toFixed(1)+' MB';
   function node(tag,text){const e=document.createElement(tag);e.textContent=text;return e;}
   function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
   async function task(fn){if(busy)return;busy=true;document.querySelectorAll('form button,#importPackage,#exportAll').forEach(e=>e.disabled=true);try{await fn();}catch(e){status(e.message);}finally{busy=false;document.querySelectorAll('form button,#importPackage,#exportAll').forEach(e=>e.disabled=false);}}
-  function compatible(entry){const d=entry.files[0]?.type==='application/dicom';return ['mg','dbt'].includes(entry.modality)||accept==='all'||(accept==='dicom'?d:!d);}
+  function compatible(entry){return ['rx','ct','mg','dbt'].includes(entry.modality);}
   function choose(entry,index){
     const f=entry.files[index],dicom=f.type==='application/dicom';
     if(picker){
-      if(['mg','dbt'].includes(entry.modality)){parent.postMessage({type:'amaral-library-open-module',token,modality:entry.modality,dicom,entryId:entry.id,entrySource:'local',index},location.origin);return;}
-      if(!compatible(entry))return status('O campo de destino não aceita este formato.');
-      parent.postMessage({type:'amaral-library-pick',token,modality:entry.modality,files:multi?L.asFiles(entry):[L.asFiles(entry)[index]]},location.origin);
-      return;
+      parent.postMessage({type:'amaral-library-open-module',token,modality:entry.modality,dicom,entryId:entry.id,entrySource:'local',index},location.origin);return;
     }
     if(entry.modality==='rx'&&dicom)return status('O visualizador de Raio-X atual aceita PNG/JPEG. Este DICOM pode ser arquivado e baixado, mas sua abertura neste módulo está indisponível.');
     if(entry.modality==='ct'&&!dicom)return status('O módulo de séries de TC recebe DICOM. PNG/JPEG não contém uma série espacial validada; use a importação de imagens do visualizador geral para referências 2D.');
@@ -33,7 +30,7 @@
       const label=node('label','Arquivo do conjunto'),select=node('select','');select.setAttribute('aria-label','Arquivo de '+entry.title);
       entry.files.forEach((f,i)=>{const o=node('option',(i+1)+'. '+f.name);o.value=i;select.append(o);});label.append(select);card.append(label);
       const actions=node('div','');actions.className='actions';
-      const open=node('button',picker?(multi?'Usar conjunto':'Usar arquivo selecionado'):'Abrir no visualizador');open.type='button';open.onclick=()=>choose(entry,Number(select.value));actions.append(open);
+      const open=node('button',picker?(entry.modality==='ct'||entry.modality==='dbt'&&entry.files[0]?.type!=='application/dicom'?'Usar conjunto':'Usar arquivo selecionado'):'Abrir no visualizador');open.type='button';open.onclick=()=>choose(entry,Number(select.value));actions.append(open);
       if(!picker){
         const save=node('button','Baixar arquivo original');save.onclick=()=>{const f=entry.files[Number(select.value)];download(f.blob,f.name);};
         const pack=node('button','Exportar conjunto');pack.onclick=()=>task(async()=>{if(!confirm('Este pacote contém os arquivos originais. Confirma que a privacidade e a permissão de compartilhamento foram revisadas?'))return;download(await L.exportPackage([entry]),'amaral-rad-conjunto.arlib');status('Pacote gerado. Guarde uma cópia em local seguro.');});

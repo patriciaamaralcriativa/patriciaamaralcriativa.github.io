@@ -34,15 +34,43 @@
     }
     if(request&&e.source===picker?.contentWindow&&e.origin===origin&&e.data?.type==='amaral-library-open-module'&&e.data.token===request.token){
       const {modality,dicom,entryId,entrySource,index}=e.data;
-      if(!['mg','dbt'].includes(modality)||!['local','cloud'].includes(entrySource)||typeof entryId!=='string'||!/^[a-zA-Z0-9-]{1,100}$/.test(entryId)||!Number.isInteger(index)||index<0)return;
-      const page=modality==='mg'?'mamografia-digital-preview.html':dicom?'dbt-validacao-real.html':'tomossintese-mamaria-preview.html';
+      if(!['rx','ct','mg','dbt'].includes(modality)||!['local','cloud'].includes(entrySource)||typeof entryId!=='string'||!/^[a-zA-Z0-9-]{1,100}$/.test(entryId)||!Number.isInteger(index)||index<0||typeof dicom!=='boolean')return;
+      if((modality==='rx'&&dicom)||(modality==='ct'&&!dicom)){notify(modality==='rx'?'O leitor de Raio-X aceita PNG/JPEG; este DICOM não é suportado.':'O leitor de tomografia exige uma série DICOM.');return;}
+      const page=modality==='mg'?'mamografia-digital-preview.html':modality==='dbt'?(dicom?'dbt-validacao-real.html':'tomossintese-mamaria-preview.html'):(entrySource==='cloud'?'sala-de-aulas.html':'amaral-rad.html');
+      const sameReader=frame&&['rx','ct'].includes(modality)||!frame&&location.pathname.endsWith(page);
+      const target=modality==='rx'?'file':modality==='ct'?'dicomSeriesFiles':modality==='mg'?(dicom?'dicomFile':['left','right'].includes(request.target)?request.target:'left'):dicom?'realDicom':'files';
+      const options={frame:!!frame,target},input=!frame&&document.getElementById(target);
+      if(sameReader&&(frame||input&&!input.disabled)){
+        close();receiveSelection({entryId,entrySource,index,modality,dicom,options}).catch(err=>notify(err.message));return;
+      }
       const url=new URL(page,base);url.searchParams.set(entrySource==='cloud'?'cloudEntry':'libraryEntry',entryId);url.searchParams.set(entrySource==='cloud'?'cloudFile':'libraryFile',index);
       close();location.href=url.href;return;
     }
     if(!request||e.source!==picker?.contentWindow||e.origin!==origin||e.data?.type!=='amaral-library-pick'||e.data.token!==request.token)return;
     const r=request,files=e.data.files,modality=e.data.modality;if(!Array.isArray(files)||!files.length||files.length>1000)return;
-    close();deliver(r,files,modality);
+    if(!r.frame||!['rx','ct'].includes(modality)){notify('Atualize a biblioteca e escolha o conjunto novamente.');return;}
+    const dicom=files.every(f=>f.type==='application/dicom');
+    if((modality==='ct'&&!dicom)||(modality==='rx'&&files.some(f=>f.type==='application/dicom'))){notify('Formato incompatível com a modalidade selecionada.');return;}
+    close();deliver({...r,target:modality==='ct'?'dicomSeriesFiles':'file'},modality==='rx'?files.slice(0,1):files,modality);
   });
+  async function receiveSelection({entryId,entrySource,index,modality,dicom,options}){
+    notify('Carregando o material selecionado na biblioteca…');
+    const generation=frameGeneration,whole=modality==='ct'||modality==='dbt'&&!dicom;
+    let files;
+    if(entrySource==='cloud'){
+      const result=await window.AmaralCloudLibrary.download(entryId,whole?null:index);
+      if(result.entry.modalidade!==modality)throw Error('A modalidade do conjunto mudou. Escolha novamente.');
+      files=result.files;
+    }else{
+      const entry=await window.AmaralFileLibrary.get(entryId);
+      if(!entry||entry.modality!==modality)throw Error('Conjunto não encontrado nesta modalidade.');
+      const all=window.AmaralFileLibrary.asFiles(entry);files=whole?all:[all[index]];
+    }
+    if(generation!==frameGeneration)throw Error('O visualizador mudou. Escolha o conjunto novamente.');
+    if(!files.length||files.some(f=>!(f instanceof Blob)||(f.type==='application/dicom')!==dicom))throw Error('Formato incompatível no conjunto.');
+    deliver(options,files,modality);
+    if(options.frame)notify('Material recebido no visualizador de '+(modality==='ct'?'tomografia':'Raio-X')+'. Confira o resultado do leitor.');
+  }
   // Acrescenta um adaptador ao documento da Workstation sem modificar seus scripts.
   function frameExtension(){
     const init=()=>{

@@ -1,7 +1,7 @@
 'use strict';
 (async()=>{
  const C=window.AmaralCloudLibrary,L=window.AmaralFileLibrary,$=id=>document.getElementById(id),q=new URLSearchParams(location.search);
- const picker=q.get('picker')==='1',accept=q.get('accept')||'all',multi=q.get('multi')==='1';let mode=L.modalities[q.get('modality')]?q.get('modality'):'all',rows=[],who=null,busy=false;
+ const picker=q.get('picker')==='1';let mode=L.modalities[q.get('modality')]?q.get('modality'):'all',rows=[],who=null,busy=false;
  const note=t=>{$('cloudStatus').textContent=t;},node=(tag,text)=>{const e=document.createElement(tag);e.textContent=text;return e;};
  const size=n=>(n/1048576).toFixed(1)+' MB';
  async function run(fn){if(busy)return;busy=true;$('cloudUploadButton').disabled=true;try{await fn();}catch(e){note(e.message);}finally{busy=false;$('cloudUploadButton').disabled=false;}}
@@ -13,13 +13,12 @@
   for(const b of filtered){const card=node('article','');card.className='entry cloud-entry';card.dataset.id=b.id;
    card.append(node('h3',b.titulo),node('p',L.modalities[b.modalidade]+' · '+b.quantidade+' arquivo(s) · '+size(b.tamanho)),node('p',b.publicado?'Liberado para a turma':'Rascunho — oculto aos alunos'),node('p','Origem: '+b.origem),node('p','Permissão: '+b.licenca));
    if(b.modalidade==='dbt')card.append(node('p','Um arquivo DICOM pode conter vários planos. Abra no visualizador de tomossíntese para percorrer os quadros ou reproduzi-los.'));
-   const actions=node('div','');actions.className='actions';const open=node('button',picker?'Escolher este conjunto':'Escolher arquivo / abrir');open.type='button';open.onclick=()=>run(async()=>{const d=await C.details(b.id),dicom=d.files[0]?.mime==='application/dicom';if(picker&&!['mg','dbt'].includes(b.modalidade)&&((accept==='dicom'&&!dicom)||(accept==='images'&&dicom)))throw Error('Este formato não é aceito pelo campo de importação atual.');
-    if(picker&&['mg','dbt'].includes(b.modalidade)&&d.files.length===1){parent.postMessage({type:'amaral-library-open-module',token:q.get('token'),modality:b.modalidade,dicom,entryId:b.id,entrySource:'cloud',index:0},location.origin);return;}
+   const actions=node('div','');actions.className='actions';const open=node('button',picker?'Escolher este conjunto':'Escolher arquivo / abrir');open.type='button';open.onclick=()=>run(async()=>{const d=await C.details(b.id),dicom=d.files[0]?.mime==='application/dicom';if(picker&&d.files.length===1){parent.postMessage({type:'amaral-library-open-module',token:q.get('token'),modality:b.modalidade,dicom,entryId:b.id,entrySource:'cloud',index:0},location.origin);return;}
     let fileList=card.querySelector('.cloud-file-list');if(fileList){fileList.remove();return;}
     fileList=node('div','');fileList.className='cloud-file-list';const label=node('label','Arquivo do conjunto'),select=node('select','');select.setAttribute('aria-label','Arquivo de '+b.titulo);d.files.forEach((f,i)=>{const o=node('option',(i+1)+'. '+f.nome);o.value=i;select.append(o);});label.append(select);fileList.append(label);
-    const use=node('button',picker?(multi?'Usar conjunto':'Usar arquivo selecionado'):'Abrir no visualizador');use.onclick=()=>run(async()=>{
+    const use=node('button',picker?(b.modalidade==='ct'||b.modalidade==='dbt'&&!dicom?'Usar conjunto':'Usar arquivo selecionado'):'Abrir no visualizador');use.onclick=()=>run(async()=>{
       const index=Number(select.value);
-      if(picker){if(['mg','dbt'].includes(b.modalidade)){parent.postMessage({type:'amaral-library-open-module',token:q.get('token'),modality:b.modalidade,dicom,entryId:b.id,entrySource:'cloud',index},location.origin);return;}const result=await C.download(b.id,multi?null:index,(n,total)=>note('Recebendo arquivo da turma: '+Math.round(n/total*100)+'%'));parent.postMessage({type:'amaral-library-pick',token:q.get('token'),modality:b.modalidade,files:result.files},location.origin);return;}
+      if(picker){parent.postMessage({type:'amaral-library-open-module',token:q.get('token'),modality:b.modalidade,dicom,entryId:b.id,entrySource:'cloud',index},location.origin);return;}
       if(b.modalidade==='rx'&&dicom)throw Error('O leitor de Raio-X atual aceita PNG/JPEG. Este DICOM não é renderizado nesse módulo.');
       if(b.modalidade==='ct'&&!dicom)throw Error('O leitor de séries de TC exige DICOM; PNG/JPEG não comprova geometria de volume.');
       const route=b.modalidade==='mg'?'mamografia-digital-preview.html':b.modalidade==='dbt'?(dicom?'dbt-validacao-real.html':'tomossintese-mamaria-preview.html'):'sala-de-aulas.html';location.href=route+'?cloudEntry='+encodeURIComponent(b.id)+'&cloudFile='+index;
