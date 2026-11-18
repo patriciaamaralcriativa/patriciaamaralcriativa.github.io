@@ -46,6 +46,151 @@ $('share').onclick=async()=>{try{const seed=crypto.getRandomValues(new Uint32Arr
 const disciplinasPublicadas=[['mamografia','Mamografia'],['tomografia','Tomografia Computadorizada'],['radiologia-industrial','Radiologia Industrial'],['formacao-da-imagem','Formação da Imagem Radiográfica'],['protecao-radiologica','Proteção Radiológica'],['fisica-das-radiacoes','Física das Radiações'],['radiologia-digital','Radiologia Digital'],['radiologia-veterinaria','Radiologia Veterinária'],['radiologia-odontologica','Radiologia Odontológica'],['medicina-nuclear','Medicina Nuclear'],['densitometria-ossea','Densitometria Óssea'],['radioterapia','Radioterapia']];
 const controleDisciplinas=document.createElement('div');controleDisciplinas.className='toolbar';
 for(const [slug,nome] of disciplinasPublicadas){for(let rodada=0;rodada<2;rodada++){const botao=document.createElement('button');botao.type='button';botao.className='secondary';botao.textContent=nome+' — rodada '+(rodada+1);botao.addEventListener('click',()=>safe(async()=>{const resp=await fetch('/bancos/'+slug+'-caca-palavras-30.json',{cache:'no-store'});if(!resp.ok)throw Error('Banco indisponível');const dados=await resp.json();if(!Array.isArray(dados.rows)||dados.rows.length!==30)throw Error('Banco incompleto');const q={title:nome+' — rodada '+(rodada+1),level:'medio',rows:validate(dados.rows.slice(rodada*15,(rodada+1)*15))};setEditor(q);start(q);}));controleDisciplinas.appendChild(botao);}}
+const rodadasPosicionamentoVeterinario = [
+  {
+    "title": "Veterinária: Posicionamento e Contenção — Médio",
+    "level": "medio",
+    "rows": [
+      {
+        "question": "Como se chama a posição em que o animal permanece em pé, com o peso apoiado nos membros?",
+        "answer": "Estação"
+      },
+      {
+        "question": "Qual movimento diminui o ângulo entre o braço e o antebraço para obter uma incidência com o cotovelo dobrado?",
+        "answer": "Flexão"
+      },
+      {
+        "question": "Qual movimento aumenta o ângulo do joelho ao se passar da posição dobrada para a posição estendida?",
+        "answer": "Extensão"
+      },
+      {
+        "question": "Ao afastar um membro do plano mediano para posicioná-lo, qual movimento está sendo realizado?",
+        "answer": "Abdução"
+      },
+      {
+        "question": "Ao aproximar um membro do plano mediano sem dobrar sua articulação, qual movimento está sendo realizado?",
+        "answer": "Adução"
+      },
+      {
+        "question": "Qual incidência complementar pode mudar a projeção das estruturas quando a lateral e a frontal deixam uma região encoberta?",
+        "answer": "Oblíqua"
+      },
+      {
+        "question": "Em relação ao plano mediano, qual termo descreve a face de um membro voltada para o membro oposto?",
+        "answer": "Medial"
+      },
+      {
+        "question": "Em uma incidência que atravessa o membro da face interna para a externa, qual termo anatômico descreve a face de saída?",
+        "answer": "Lateral"
+      },
+      {
+        "question": "Que tipo de suporte permite a passagem dos raios X com baixa atenuação quando precisa ficar sob a região examinada?",
+        "answer": "Radiolúcido"
+      },
+      {
+        "question": "Ao preparar apoios para um gato, qual característica deve ter a superfície que evita que as patas deslizem?",
+        "answer": "Antiderrapante"
+      },
+      {
+        "question": "Qual sensação deve ser investigada quando um cão tolera o toque em repouso, mas vocaliza ao movimentar um membro lesionado?",
+        "answer": "Dor"
+      },
+      {
+        "question": "Qual substantivo descreve o desvio lateral do tronco em relação à mesa quando um dos lados fica mais elevado que o outro?",
+        "answer": "Inclinação"
+      },
+      {
+        "question": "Que etapa consiste em alinhar o raio central ao ponto anatômico definido para a incidência?",
+        "answer": "Centralização"
+      },
+      {
+        "question": "Qual propriedade da imagem é prejudicada quando o animal se mexe e as margens ósseas ficam indistintas?",
+        "answer": "Nitidez"
+      },
+      {
+        "question": "Qual termo descreve manter a região lesionada apoiada e estável antes de ajustar o restante do corpo?",
+        "answer": "Estabilização"
+      }
+    ]
+  },
+  {
+    "title": "Veterinária: Posicionamento e Contenção — Difícil",
+    "level": "dificil",
+    "rows": [
+      {
+        "question": "Para radiografar o ombro sem cortar a articulação, complete o nome da cavidade da escápula que deve ser incluída junto à cabeça umeral: cavidade ___.",
+        "answer": "Glenoide"
+      },
+      {
+        "question": "Em uma lateral do cotovelo, qual projeção proximal da ulna, palpável na ponta do cotovelo, serve como referência anatômica?",
+        "answer": "Olécrano"
+      },
+      {
+        "question": "Na lateral de um osso longo, qual região central deve aparecer inteira entre as extremidades quando o pedido é avaliar o osso em toda a sua extensão?",
+        "answer": "Diáfise"
+      },
+      {
+        "question": "Ao verificar o alinhamento de uma lateral do joelho, quais proeminências articulares distais do fêmur devem ficar aproximadamente uma sobre a outra?",
+        "answer": "Côndilos"
+      },
+      {
+        "question": "Na incidência ventrodorsal da pelve, quais orifícios pares entre o púbis e o ísquio ajudam a reconhecer um posicionamento assimétrico? Complete: forames ___.",
+        "answer": "Obturadores"
+      },
+      {
+        "question": "Na lateral do abdome, quais cristas ósseas palpáveis na região da bacia ajudam a verificar o alinhamento do tronco? Complete: cristas ___.",
+        "answer": "Ilíacas"
+      },
+      {
+        "question": "Na lateral do crânio, qual osso apresenta uma protuberância externa palpável na região caudodorsal, útil para conferir o alinhamento?",
+        "answer": "Occipital"
+      },
+      {
+        "question": "No posicionamento lateral do tórax de um cão de peito profundo, qual osso mediano pode precisar de apoio para ficar no mesmo plano horizontal da coluna?",
+        "answer": "Esterno"
+      },
+      {
+        "question": "Na nomenclatura das incidências veterinárias, qual termo indica que o feixe entra pela face caudal e sai pela cranial?",
+        "answer": "Caudocranial"
+      },
+      {
+        "question": "Na avaliação do carpo, qual nome indica que o feixe entra pela face dorsal e sai pela palmar?",
+        "answer": "Dorsopalmar"
+      },
+      {
+        "question": "Na avaliação do tarso, qual nome indica que o feixe entra pela face dorsal e sai pela plantar?",
+        "answer": "Dorsoplantar"
+      },
+      {
+        "question": "Qual modalidade de contenção farmacológica produz inconsciência controlada sob responsabilidade do médico-veterinário? Use o substantivo de uma palavra.",
+        "answer": "Anestesia"
+      },
+      {
+        "question": "Qual característica deve ter a contenção de um gato quando se aplica apenas a força indispensável para uma tarefa tolerada pelo paciente?",
+        "answer": "Mínima"
+      },
+      {
+        "question": "Qual reação defensiva com os dentes pode ocorrer quando a contenção de um gato assustado é intensificada à força?",
+        "answer": "Mordida"
+      },
+      {
+        "question": "Qual cuidado deve ser mantido durante a contenção farmacológica para acompanhar continuamente a respiração e os demais sinais do paciente?",
+        "answer": "Monitorização"
+      }
+    ]
+  }
+];
+for(const rodada of rodadasPosicionamentoVeterinario){
+ const botao=document.createElement('button');
+ botao.type='button';
+ botao.className='secondary';
+ botao.textContent=rodada.title;
+ botao.addEventListener('click',()=>safe(()=>{
+  setEditor(rodada);
+  start(rodada);
+ }));
+ controleDisciplinas.appendChild(botao);
+}
 document.querySelector('#editor .toolbar')?.before(controleDisciplinas);
 refresh();safe(()=>{if(location.hash.startsWith('#jogo=')){for(const id of ['editor','answers','printKey','edit','share'])$(id).classList.add('hidden');if(location.hash.length>60000)throw Error('Link muito longo.');const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(decodeURIComponent(location.hash.slice(6))),c=>c.charCodeAt(0))));const q={title:String(data.title||'Caça-palavras').slice(0,100),rows:validate(data.rows),level:['facil','medio','dificil'].includes(data.level)?data.level:'medio'};setEditor(q);start(q,Number(data.seed)>>>0);}else start(currentQuiz());});
 </script></body></html>
