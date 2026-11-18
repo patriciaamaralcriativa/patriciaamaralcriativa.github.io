@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forca da Paty</title>
+<style>
+*{box-sizing:border-box}
+:root{color-scheme:light;--ink:#2b1853;--violet:#6435c6;--muted:#584776}
+body{margin:0;min-height:100vh;color:var(--ink);font:16px system-ui,sans-serif;background:radial-gradient(ellipse at 4% 15%,#ffcce6,transparent 37%),radial-gradient(ellipse at 96% 58%,#c8fff5,transparent 39%),#f3eaff}
+main{max-width:1060px;margin:auto;padding:24px 16px 40px}
+header{position:relative;isolation:isolate;overflow:hidden;padding:29px clamp(22px,6vw,60px);border-radius:30px;background:linear-gradient(120deg,#392081,#6532c7 57%,#973dbf);color:white;box-shadow:0 10px 0 #391b7f,0 20px 35px #4b279331}
+header::after{content:"";position:absolute;z-index:-1;right:5%;top:-35%;width:34%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 28%,#ffb7e0,#b64cdd 54%,#6c28a9 76%);box-shadow:20px 30px 35px #26105766}
+h1{margin:0;font-size:clamp(2.4rem,7vw,5rem);line-height:1;letter-spacing:-.055em;text-shadow:0 4px #3c1c7d}
+header p{margin:12px 0 0;font-weight:600}p{line-height:1.5}
+.card{background:#fffdfd;border:1px solid #dec9f5;border-radius:24px;margin:21px 0;padding:clamp(14px,3vw,24px);box-shadow:0 6px 0 #dac6ee,0 12px 25px #51288d13}
+label{font-weight:750}select,button{font:inherit;border-radius:13px;padding:10px 14px;border:1px solid #bd9fe7}
+select{max-width:100%;background:#f7efff;color:var(--ink)}
+button{background:linear-gradient(#7946da,#5b2ab8);border-color:#5b2ab8;color:white;cursor:pointer;font-weight:750;box-shadow:0 3px #422088}
+button:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px #422088}
+button:disabled{background:#eee8f5;border-color:#e1d8eb;color:#64576e;box-shadow:none;cursor:default}
+button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #9742ec;outline-offset:3px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:10px 0}
+.play{display:grid;grid-template-columns:minmax(200px,34%) minmax(0,1fr);gap:clamp(15px,4vw,38px);align-items:center}
+.stage{position:relative;aspect-ratio:1;overflow:hidden;isolation:isolate;border-radius:24px;background:radial-gradient(ellipse at 50% 18%,#fff4c0,#ffdb92 55%,#ffb181);box-shadow:inset 0 0 0 2px #ffda91}
+.stage::before{content:"";position:absolute;inset:70% -20% -25%;border-radius:50% 50% 0 0;background:linear-gradient(#ffaaab,#fd8b9d)}
+.stage i{position:absolute;display:block}
+.platform{left:11%;top:79%;width:76%;height:14%;border-radius:50%;background:linear-gradient(#c0fddd 0 25%,#51cba6 58%,#2a9e8d);box-shadow:0 9px 14px #94435a54}
+.post,.beam{border-radius:20px;background:linear-gradient(90deg,#8443da,#ba78ff 33%,#a760ec 61%,#6230a5);box-shadow:4px 4px 6px #8c461a44}
+.post{left:22%;top:13%;width:8%;height:70%}
+.beam{left:22%;top:12%;width:54%;height:8%;background:linear-gradient(#ca8dff,#a460ed 52%,#6331ac)}
+.rope{left:66%;top:18%;width:2.1%;height:16%;border-radius:10px;background:repeating-linear-gradient(135deg,#98501e 0 3px,#f0af58 3px 6px)}
+.puppet{position:absolute;inset:0;transform-origin:67% 30%;transform:rotate(0)}
+.stage.six .puppet{animation:wobble .65s ease-out}
+.part{visibility:hidden}
+.part.visible{visibility:visible;animation:pop .32s cubic-bezier(.15,.8,.35,1.35) both}
+.head{left:55%;top:30%;width:24%;height:23%;border-radius:48%;z-index:3;background:radial-gradient(circle at 35% 24%,#fff0b0,#ffad55 56%,#d66a32 92%);box-shadow:3px 5px 8px #9a411b49}
+.head::before{content:"";position:absolute;left:25%;top:40%;width:13%;height:17%;border-radius:50%;background:#382050;box-shadow:1.12em 0 #382050;font-size:clamp(9px,1.65vw,17px)}
+.head::after{content:"";position:absolute;left:40%;top:61%;width:24%;height:12%;border-radius:0 0 100% 100%;background:#9b3c62}
+.torso{left:58%;top:49%;width:18%;height:22%;border-radius:35% 35% 42% 42%;z-index:2;background:radial-gradient(circle at 32% 22%,#9fffee,#2acdc7 57%,#16817f 94%);box-shadow:2px 4px 6px #76449355}
+.limb{width:7%;height:17%;border-radius:30px;background:linear-gradient(90deg,#fff0b0,#ffb459 44%,#d16b31);box-shadow:2px 3px 5px #8b4f4f42}
+.arm-left{left:54%;top:51%;rotate:33deg}.arm-right{left:73%;top:51%;rotate:-33deg}
+.leg-left,.leg-right{top:64%;height:18%;background:linear-gradient(90deg,#d1a6ff,#9252e1 45%,#58298c)}
+.leg-left{left:59%;rotate:19deg}.leg-right{left:69%;rotate:-19deg}
+@keyframes pop{from{opacity:0;transform:scale(.35) translateY(-12px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes wobble{30%{transform:rotate(8deg)}65%{transform:rotate(-5deg)}}
+#question{font-size:clamp(1.12rem,3.2vw,1.7rem);margin:.4em 0}
+#word{display:flex;gap:6px;flex-wrap:wrap;margin:15px 0}
+.letter{display:grid;place-items:center;min-width:31px;height:39px;padding:0 5px;border-radius:9px;background:#f2e8ff;border-bottom:3px solid #c197ee;font-size:1.3rem;font-weight:850}
+.letter.revealed{background:#bdf7e6;border-color:#65d7b2;color:#145850}
+.keys{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:8px;margin-top:17px}
+.keys button{padding:8px 0;min-height:43px;background:linear-gradient(#fff,#eedaff);color:#472376;box-shadow:0 3px #be96e7}
+.keys button:disabled{background:#f0edf6;color:#655a71;box-shadow:none}
+.keys button[data-mark="hit"]{background:#bdf7e6;color:#145850;border-color:#78cbb2}
+.keys button[data-mark="miss"]{background:#ffd0e5;color:#751748;border-color:#ef91bc}
+.muted{color:var(--muted)}pre{white-space:pre-wrap;overflow-wrap:anywhere}summary{cursor:pointer;font-weight:650}
+@media(max-width:630px){.play{grid-template-columns:1fr}.stage{width:min(100%,240px);justify-self:center}.keys{grid-template-columns:repeat(7,minmax(0,1fr))}.head::before{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
+header .sound{margin-top:14px;background:#fff4ff;color:#422078;border-color:#dcc1fd;box-shadow:0 3px #532390}
+.stage{perspective:600px}
+.puppet{transform-style:preserve-3d}
+.stage.six .puppet{animation:finalSwing .95s cubic-bezier(.2,.7,.35,1) both}
+.stage.six::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 44px #8e2c9a4c;border-radius:inherit}
+.stage.won .platform{animation:platformWin .75s ease-out}
+.stage.won{background:radial-gradient(ellipse at 50% 18%,#fffbcd,#92f7d2 75%)}
+.confetti{position:absolute;inset:0;pointer-events:none;z-index:5;overflow:hidden}
+.confetti b{position:absolute;left:50%;top:45%;width:9px;height:14px;border-radius:3px;background:var(--color);animation:celebrate .95s cubic-bezier(.17,.6,.4,1) both;animation-delay:var(--delay)}
+@keyframes finalSwing{0%{transform:translateY(-5%) rotateY(-32deg)}24%{transform:translateY(5%) rotateZ(14deg) rotateY(32deg)}47%{transform:rotateZ(-11deg) rotateY(-23deg)}70%{transform:rotateZ(6deg) rotateY(14deg)}100%{transform:rotateZ(-2deg)}}
+@keyframes platformWin{40%{transform:translateY(-12%) rotateX(24deg) scale(1.12)}}
+@keyframes celebrate{from{opacity:1;transform:translate3d(0,0,50px) rotate(0)}to{opacity:0;transform:translate3d(var(--x),var(--y),-50px) rotate(var(--spin))}}
+#status.victory{color:#096648;font-weight:800}
+#status.defeat{color:#7a2152;font-weight:800}
+</style>
+<main>
+<header><h1>Forca da Paty</h1><p>Descubra o termo de Radiologia a partir da pergunta.</p><button class="sound" id="sound" type="button" aria-pressed="true">Som ligado</button></header>
+<section class="card">
+<label for="bank">Questionário da rodada</label>
+<div class="row"><select id="bank"></select><button id="start" type="button">Usar questionário</button></div>
+<details><summary>Importar meu questionário</summary>
+<label for="upload">Arquivo JSON</label> <input id="upload" type="file" accept=".json,application/json">
+<p class="muted">Cada pergunta deve ter uma resposta de uma palavra. Ao importar, o questionário entra na lista e fica selecionado.</p>
+<pre>{"titulo":"Minha revisão","perguntas":[{"pergunta":"Qual estrutura protege o encéfalo?","resposta":"Crânio"}]}</pre>
+</details>
+<p id="setup" role="status"></p>
+</section>
+<section class="card" aria-label="Partida">
+<div class="play"><div class="stage" id="drawing" role="img" aria-label="Bonequinho com 0 de 6 partes">
+<div class="confetti" id="confetti" aria-hidden="true"></div><i class="platform"></i><i class="post"></i><i class="beam"></i><i class="rope"></i>
+<div class="puppet" aria-hidden="true"><i class="part head"></i><i class="part torso"></i><i class="part limb arm-left"></i><i class="part limb arm-right"></i><i class="part limb leg-left"></i><i class="part limb leg-right"></i></div>
+</div>
+<div><p id="progress" class="muted"></p><h2 id="question"></h2><div id="word" aria-label="Palavra"></div>
+<p id="status" role="status"></p><div class="row"><button id="hint" type="button">Dica · primeira letra</button><button id="next" type="button">Próxima pergunta</button></div></div></div>
+<div class="keys" id="keys" aria-label="Letras"></div>
+</section>
+</main>
+<script>
+'use strict';
+const banks=[
+ ['Anatomia Radiográfica',[
+ ['Qual osso plano da cintura escapular contém a cavidade glenoidal?','Escápula'],
+ ['Qual osso do antebraço apresenta o olécrano?','Ulna'],
+ ['Qual osso do tarso forma a maior parte do calcanhar?','Calcâneo'],
+ ['Qual osso sesamoide se encontra no tendão do quadríceps, à frente do joelho?','Patela'],
+ ['Qual osso da perna, localizado lateralmente, forma o maléolo lateral?','Fíbula']]],
+ ['Física das Radiações',[
+ ['Como se chama a partícula associada a um quantum de radiação eletromagnética?','Fóton'],
+ ['Qual fenômeno explica a mudança de direção de uma onda ao passar obliquamente entre meios com velocidades de propagação diferentes?','Refração'],
+ ['Qual interação com raios X ejeta um elétron e produz um fóton espalhado de menor energia?','Compton'],
+ ['Como se chama a divisão de um núcleo pesado em fragmentos menores?','Fissão'],
+ ['Como se chama a união de núcleos leves para formar um núcleo mais pesado?','Fusão']]],
+ ['Radiologia Digital',[
+ ['Como se chama o menor elemento de uma imagem digital bidimensional?','Pixel'],
+ ['Que tipo de processamento ajusta o intervalo de valores exibidos em escala de cinza?','Janelamento'],
+ ['Qual sigla identifica o padrão de comunicação e armazenamento de imagens médicas?','DICOM'],
+ ['Qual sigla identifica o sistema que arquiva e distribui imagens médicas?','PACS'],
+ ['Como se chama a disposição retangular de linhas e colunas de pixels?','Matriz']]],
+ ['Medicina Nuclear',[
+ ['Como se chama a partícula emitida pelo radiofármaco que, ao se aniquilar com um elétron, dá origem aos fótons detectados na PET?','Pósitron'],
+ ['Que componente da gama-câmara seleciona a direção dos fótons que chegam ao detector?','Colimador'],
+ ['Qual é o nome da forma de imagem que registra a distribuição de um radiofármaco no organismo com uma gama-câmara?','Cintilografia']]],
+ ['Dosimetria',[
+ ['Qual instrumento é utilizado para acompanhar a dose ocupacional acumulada de um trabalhador?','Dosímetro'],
+ ['Qual termo indica que a resposta de um instrumento é comparada com uma referência conhecida?','Calibração'],
+ ['Qual método dosimétrico utiliza a luz liberada quando um material previamente irradiado é aquecido?','Termoluminescência']]],
+ ['Radioterapia',[
+ ['Qual técnica posiciona a fonte de radiação dentro ou perto da região a ser tratada?','Braquiterapia'],
+ ['Qual sigla identifica o volume tumoral macroscópico visível ou detectável no planejamento?','GTV'],
+ ['Qual termo descreve a divisão da dose planejada em várias sessões?','Fracionamento']]],
+ ['Radiologia Industrial',[
+ ['Qual ensaio usa ondas mecânicas para detectar descontinuidades no interior de materiais?','Ultrassom'],
+ ['Que fenômeno permite que um líquido penetrante entre em uma descontinuidade aberta à superfície?','Capilaridade'],
+ ['Qual etapa do ensaio por líquido penetrante ajuda a trazer o líquido retido de volta à superfície para formar uma indicação?','Revelação']]],
+ ['Processamento de Filmes Radiográficos',[
+ ['Em qual etapa os cristais sensibilizados pela exposição são convertidos em prata metálica?','Revelação'],
+ ['Qual etapa remove os cristais de haleto de prata que não foram revelados?','Fixação'],
+ ['Qual etapa retira resíduos de fixador do filme antes da secagem?','Lavagem']]],
+ ['Proteção Radiológica',[
+ ['Qual princípio exige que o benefício de uma prática com radiação supere o detrimento associado?','Justificação'],
+ ['Qual princípio orienta a reduzir exposições tanto quanto razoavelmente possível nas condições da prática?','Otimização'],
+ ['Como se chama a presença indesejada de material radioativo em uma superfície ou no organismo?','Contaminação']]],
+ ['Radiologia Veterinária',[
+ ['Nas incidências laterais do tórax, qual termo descreve a posição do animal deitado sobre um dos lados?','Decúbito'],
+ ['Que termo identifica uma posição deitada sobre o dorso, com a região ventral voltada para cima?','Dorsal'],
+ ['Qual músculo separa o tórax do abdome em cães e pode ser delimitado na radiografia torácica?','Diafragma']]],
+ ['Mamografia',[
+ ['Qual sigla identifica a incidência craniocaudal?','CC'],
+ ['Qual manobra desloca a prótese posteriormente para permitir melhor demonstração do tecido mamário anterior?','Eklund'],
+ ['Qual recurso reduz a espessura da mama e ajuda a limitar o movimento durante a exposição?','Compressão']]],
+ ['Radiologia Odontológica',[
+ ['Qual técnica intraoral demonstra a coroa, a raiz e a região ao redor do ápice dentário?','Periapical'],
+ ['Qual técnica extraoral fornece uma visão geral dos arcos dentários e dos maxilares em uma imagem?','Panorâmica'],
+ ['Qual técnica intraoral é usada para examinar as faces proximais das coroas e a crista óssea alveolar?','Interproximal']]],
+ ['Densitometria Óssea',[
+ ['Qual sigla identifica a absorciometria por raios X de dupla energia?','DXA'],
+ ['Como se denomina a categoria densitométrica de baixa massa óssea entre as faixas de normalidade e osteoporose, quando aplicáveis os critérios pelo T-score?','Osteopenia'],
+ ['Qual osso do antebraço é avaliado quando se mede o sítio de um terço do antebraço pela DXA?','Rádio']]],
+ ['Tomografia Computadorizada',[
+ ['Qual plano divide o corpo em porções superior e inferior?','Axial'],
+ ['Qual termo designa o elemento de volume de uma imagem tomográfica?','Voxel'],
+ ['Como se chama a aquisição em que a mesa avança enquanto o tubo gira continuamente?','Helicoidal']]],
+ ['Formação da Imagem Radiográfica',[
+ ['Qual eletrodo recebe os elétrons acelerados no tubo de raios X?','Ânodo'],
+ ['Qual componente limita o campo de raios X ao tamanho necessário para o exame?','Colimador'],
+ ['Qual estrutura do cátodo é aquecida para liberar elétrons por emissão termiônica?','Filamento']]],
+ ['Gerenciamento de Rejeitos Radioativos',[
+ ['Como se chama a separação dos rejeitos em grupos conforme suas características?','Segregação'],
+ ['Qual processo físico reduz a atividade de um rejeito radioativo ao longo do tempo?','Decaimento'],
+ ['Como se chama o acompanhamento sistemático dos níveis de radiação ou contaminação de uma área?','Monitoração']]]
+
+];
+const $=id=>document.getElementById(id);
+const plain=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toUpperCase();
+const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let selected, order=[], position=0, score=0, errors=0, guessed, finished=false, hintUsed=false;
+const keys=new Map();
+const melodies={
+ hit:[[523,.09],[659,.12]],
+ miss:[[247,.12],[185,.14]],
+ win:[[523,.1],[659,.1],[784,.12],[1047,.24]],
+ loss:[[330,.16],[247,.17],[175,.32]]
+};
+let audio,soundOn=true;
+function playSound(name){
+ if(!soundOn)return;
+ const Audio=window.AudioContext||window.webkitAudioContext;
+ if(!Audio)return;
+ try{
+  audio??=new Audio();
+  if(audio.state==='suspended')void audio.resume().catch(()=>{});
+  let when=audio.currentTime+.015;
+  for(const [pitch,length] of melodies[name]){
+   const note=audio.createOscillator(),volume=audio.createGain();
+   note.type=name==='loss'?'sine':'triangle';
+   note.frequency.value=pitch;volume.gain.setValueAtTime(.001,when);
+   volume.gain.exponentialRampToValueAtTime(.11,when+.018);
+   volume.gain.exponentialRampToValueAtTime(.001,when+length);
+   note.connect(volume);volume.connect(audio.destination);
+   note.start(when);note.stop(when+length+.01);when+=length+.025;
+  }
+ }catch{}
+}
+$('sound').onclick=()=>{
+ soundOn=!soundOn;
+ $('sound').setAttribute('aria-pressed',String(soundOn));
+ $('sound').textContent=soundOn?'Som ligado':'Som desligado';
+ if(soundOn)playSound('hit');
+};
+function celebrate(){
+ $('drawing').classList.add('won');
+ if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)return;
+ const palette=['#f62983','#913cef','#09a965','#f48c17','#3272dd'];
+ for(let index=0;index<24;index++){
+  const piece=document.createElement('b'),angle=index*Math.PI*2/24;
+  const distance=75+(index%5)*15;
+  piece.style.setProperty('--x',Math.round(Math.cos(angle)*distance)+'px');
+  piece.style.setProperty('--y',Math.round(Math.sin(angle)*distance)+'px');
+  piece.style.setProperty('--spin',String(80+index*23)+'deg');
+  piece.style.setProperty('--color',palette[index%palette.length]);
+  piece.style.setProperty('--delay',String(index%4*30)+'ms');
+  $('confetti').append(piece);
+ }
+}
+const parts=document.querySelectorAll(".puppet .part");
+for(const letter of alphabet){
+ const key=document.createElement('button');
+ key.type='button';key.textContent=letter;key.onclick=()=>guess(letter);
+ keys.set(letter,key);$('keys').append(key);
+}
+function addOption(title,index){
+ const option=document.createElement('option');option.value=index;option.textContent=title;$('bank').append(option);
+}
+banks.forEach(([title],index)=>addOption(title,index));
+function start(){
+ selected=banks[Number($('bank').value)];
+ order=[...selected[1]];
+ for(let index=order.length-1;index>0;index--){
+  const pick=Math.floor(Math.random()*(index+1));
+  [order[index],order[pick]]=[order[pick],order[index]];
+ }
+ position=0;score=0;load();
+ $('setup').textContent='Questionário ativo: '+selected[0]+'.';
+}
+function load(){
+ guessed=new Set();errors=0;finished=false;hintUsed=false;
+ $('drawing').classList.remove('won');
+ $('confetti').replaceChildren();
+ $('status').className='';
+ $('status').textContent='Escolha uma letra.';
+ render();
+}
+function render(){
+ const [question,answer]=order[position];
+ $('question').textContent=question;
+ $('progress').textContent=selected[0]+' · Pergunta '+(position+1)+' de '+order.length+' · Acertos '+score+' · Erros '+errors+'/6';
+ $('word').replaceChildren();
+ const visible=[];
+ for(const letter of answer.toUpperCase()){
+  const symbol=guessed.has(plain(letter))?letter:'_';
+  const cell=document.createElement('span');cell.className=symbol==='_'?'letter':'letter revealed';cell.textContent=symbol;
+  $('word').append(cell);visible.push(symbol==='_'?'em branco':symbol);
+ }
+ $('word').setAttribute('aria-label',visible.join(', '));
+ for(const [letter,key] of keys){
+  key.disabled=finished||guessed.has(letter);
+  key.dataset.mark=guessed.has(letter)?(plain(answer).includes(letter)?'hit':'miss'):'';
+ }
+ $('hint').disabled=finished||hintUsed||guessed.has(plain(answer[0]));
+ $('next').disabled=!finished;
+ $('next').textContent=position+1===order.length?'Jogar novamente':'Próxima pergunta';
+ draw();
+}
+function draw(){
+ const stage=$('drawing');
+ parts.forEach((part,index)=>part.classList.toggle('visible',index<errors));
+ stage.classList.toggle('six',errors===parts.length);
+ stage.setAttribute('aria-label','Bonequinho com '+errors+' de '+parts.length+' partes');
+}
+function guess(letter){
+ if(finished||guessed.has(letter))return;
+ const answer=order[position][1],normalized=plain(answer);
+ guessed.add(letter);
+ if(!normalized.includes(letter))errors++;
+ const won=[...normalized].every(value=>guessed.has(value));
+ finished=won||errors===6;
+ if(won){score++;celebrate();}
+ $('status').className=won?'victory':finished?'defeat':'';
+ playSound(won?'win':finished?'loss':normalized.includes(letter)?'hit':'miss');
+ const final=finished&&position+1===order.length?' Fim da rodada. Placar: '+score+' de '+order.length+'.':'';
+ $('status').textContent=(won?'Acertou! '+answer+'.':finished?'A resposta era '+answer+'.':normalized.includes(letter)?'Essa letra está na palavra.':'Essa letra não está na palavra.')+final;
+ render();
+}
+$('start').onclick=start;
+$('hint').onclick=()=>{hintUsed=true;guess(plain(order[position][1][0]));};
+$('next').onclick=()=>{if(!finished)return;if(position+1<order.length){position++;load();}else start();};
+document.addEventListener('keydown',event=>{
+ if(event.ctrlKey||event.altKey||event.metaKey||event.repeat||/^(INPUT|SELECT|TEXTAREA)$/.test(event.target.tagName))return;
+ const letter=plain(event.key);
+ if(letter.length===1&&keys.has(letter))guess(letter);
+});
+function parseBank(data){
+ const title=typeof data?.titulo==='string'?data.titulo.trim():'';
+ if(!title||!Array.isArray(data.perguntas)||!data.perguntas.length)throw Error('Informe um título e pelo menos uma pergunta.');
+ return [title,data.perguntas.map((item,index)=>{
+  const question=typeof item?.pergunta==='string'?item.pergunta.trim():'';
+  const answer=typeof item?.resposta==='string'?item.resposta.trim().normalize('NFC'):'';
+  if(!question||!/^[A-Za-zÀ-ÿ]+$/u.test(answer)||!/^[A-Z]+$/.test(plain(answer)))throw Error('Revise a pergunta '+(index+1)+'. A resposta deve ter uma palavra, sem números ou espaços.');
+  return [question,answer];
+ })];
+}
+$('upload').onchange=async event=>{
+ const input=event.currentTarget,file=input.files[0];
+ if(!file)return;
+ input.disabled=true;
+ try{
+  if(file.size>1024*1024)throw Error('Escolha um JSON de até 1 MB.');
+  const bank=parseBank(JSON.parse(await file.text()));
+  banks.push(bank);addOption(bank[0],banks.length-1);
+  $('bank').value=String(banks.length-1);start();
+ }catch(error){$('setup').textContent=error instanceof SyntaxError?'O arquivo não contém um JSON válido.':error.message;}
+ finally{input.value='';input.disabled=false;}
+};
+$('bank').value='0';start();
+</script>
+</html>
