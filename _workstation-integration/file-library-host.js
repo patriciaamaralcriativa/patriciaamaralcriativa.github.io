@@ -24,7 +24,7 @@
     if(!input)throw Error('O campo de carregamento deste leitor não foi encontrado.');
     pendingInputCleanup?.();
     let started=false,observer;
-    const p=notify(input.disabled?'Material selecionado. Confirme o aviso ao lado para carregar a imagem.':'Carregando o material selecionado…');
+    const p=notify(input.disabled?'Material selecionado. Marque a confirmação do aviso (acima ou ao lado, conforme a tela) para carregar a imagem.':'Carregando o material selecionado…');
     const retry=make('button','Carregar material selecionado');retry.className='ar-library-button';retry.type='button';p.append(' ',retry);
     const start=async()=>{
       if(started)return;
